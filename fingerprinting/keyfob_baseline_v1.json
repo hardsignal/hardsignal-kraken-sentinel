@@ -1,0 +1,21 @@
+{
+  "baseline": "KEYFOB_BASELINE_V1",
+  "source": "owned_controlled_keyfob",
+  "captures": 4,
+  "long_regions": 44,
+  "vfo_center_hz": 433631424,
+  "iq_sample_rate_hz": 25000,
+
+  "timing": {
+    "long_duration_median_ms": 26.760,
+    "long_duration_std_ms": 0.026,
+    "recurrence_median_ms": 286.000,
+    "recurrence_std_ms": 0.094
+  },
+
+  "spectral": {
+    "dominant_offset_median_hz": 523.17,
+    "dominant_offset_min_hz": 486.53,
+    "dominant_offset_max_hz": 561.38
+  }
+}

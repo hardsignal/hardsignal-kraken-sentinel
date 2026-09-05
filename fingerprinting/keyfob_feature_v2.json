@@ -1,0 +1,26 @@
+{
+  "baseline": "KEYFOB_FEATURE_V2",
+  "source": "owned_controlled_keyfob",
+  "features": {
+    "long_duration_ms": {
+      "median": 26.76,
+      "std": 0.026
+    },
+    "recurrence_ms": {
+      "median": 286.0,
+      "std": 0.094
+    },
+    "relative_spacing_hz": {
+      "median": -4121.57,
+      "std": 17.53,
+      "min": -4143.08,
+      "max": -4088.37
+    }
+  },
+  "excluded_identity_features": [
+    "absolute_carrier_offset_hz",
+    "absolute_phase_state_hz",
+    "received_power",
+    "doa"
+  ]
+}
