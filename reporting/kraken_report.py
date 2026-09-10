@@ -455,6 +455,7 @@ print("DIRECTIONAL ANALYSIS")
 print()
 
 total_candidates = 0
+directional_states = defaultdict(list)
 
 for frequency in sorted(frequency_groups):
 
@@ -568,6 +569,21 @@ for frequency in sorted(frequency_groups):
             else "n/a"
         )
 
+        state_width = median(nearby_widths) if nearby_widths else None
+        state_peaks = median(nearby_peaks) if nearby_peaks else None
+
+        directional_states[frequency].append({
+            "bearing": mean_bearing,
+            "hits": len(nearby),
+            "width": state_width,
+            "peaks": state_peaks,
+            "quality": (
+                "COHERENT"
+                if state_peaks is not None and state_peaks <= 1.0
+                else "AMBIGUOUS"
+            ),
+        })
+
         print(
             f"{status:10s} | "
             f"{mean_bearing:6.1f}° | "
@@ -584,6 +600,45 @@ for frequency in sorted(frequency_groups):
 
 print(f"Candidates classified: {total_candidates}")
 print()
+
+print("DIRECTIONAL STATES")
+print()
+
+for frequency in sorted(directional_states):
+    print(f"FREQUENCY: {frequency:.6f} MHz")
+
+    for i, state in enumerate(directional_states[frequency], 1):
+        width = f"{state['width']:.1f}°" if state["width"] is not None else "n/a"
+        peaks = f"{state['peaks']:.1f}" if state["peaks"] is not None else "n/a"
+
+        print(f"  State {i}")
+        print(f"    centroid:     {state['bearing']:.1f}°")
+        print(f"    hits:         {state['hits']}")
+        print(f"    median width: {width}")
+        print(f"    median peaks: {peaks}")
+        print(f"    quality:      {state['quality']}")
+
+    raw_group = [
+        r for r in session_rows
+        if r["frequency_mhz"] == frequency
+    ]
+
+    multi_peak = [
+        r for r in raw_group
+        if r.get("median_doa_peaks") is not None
+        and r["median_doa_peaks"] > 1.0
+    ]
+
+    multi_peak_fraction = (
+        100.0 * len(multi_peak) / len(raw_group)
+        if raw_group else 0.0
+    )
+
+    print("  Ambiguity diagnostics")
+    print(f"    raw observations:        {len(raw_group)}")
+    print(f"    multi-peak observations: {len(multi_peak)}")
+    print(f"    multi-peak fraction:     {multi_peak_fraction:.1f}%")
+    print()
 
 print("CROSS-SESSION ANALYSIS")
 print()
