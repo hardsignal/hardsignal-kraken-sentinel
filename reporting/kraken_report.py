@@ -85,7 +85,7 @@ qualified = [
     and r["samples"] >= 3
 ]
 
-report_time = datetime.now()
+report_time = datetime.now().astimezone()
 
 session_start_time = None
 session_end_time = None
