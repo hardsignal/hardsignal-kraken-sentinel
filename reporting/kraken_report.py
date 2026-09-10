@@ -634,10 +634,43 @@ for frequency in sorted(directional_states):
         if raw_group else 0.0
     )
 
+    ambiguity_windows = []
+
+    for r in sorted(multi_peak, key=lambda x: x["time"]):
+        if (
+            not ambiguity_windows
+            or (r["time"] - ambiguity_windows[-1][-1]["time"]).total_seconds() > 60
+        ):
+            ambiguity_windows.append([r])
+        else:
+            ambiguity_windows[-1].append(r)
+
     print("  Ambiguity diagnostics")
     print(f"    raw observations:        {len(raw_group)}")
     print(f"    multi-peak observations: {len(multi_peak)}")
     print(f"    multi-peak fraction:     {multi_peak_fraction:.1f}%")
+
+    for i, window in enumerate(ambiguity_windows, 1):
+        start = window[0]["time"]
+        end = window[-1]["time"]
+        duration = (end - start).total_seconds()
+
+        max_peaks = max(r["median_doa_peaks"] for r in window)
+        max_width = max(
+            r["doa_width"] for r in window
+            if r.get("doa_width") is not None
+        )
+        min_conf = min(r["confidence"] for r in window)
+
+        print(f"    window {i}:")
+        print(f"      start:          {start:%H:%M:%S}")
+        print(f"      end:            {end:%H:%M:%S}")
+        print(f"      duration:       {duration:.0f}s")
+        print(f"      observations:   {len(window)}")
+        print(f"      max peaks:      {max_peaks:.1f}")
+        print(f"      max width:      {max_width:.1f}°")
+        print(f"      min confidence: {min_conf:.2f}")
+
     print()
 
 print("CROSS-SESSION ANALYSIS")
