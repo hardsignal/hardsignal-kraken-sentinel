@@ -710,8 +710,26 @@ for frequency in sorted(directional_states):
             print(f"        recovery delay:     {recovery_delay:.0f}s")
             print(f"        coherent samples:   {len(recovery_rows)}")
             print(f"        recovered centroid: {recovery_bearing:.1f}°")
+
+            transition_duration = (
+                first_recovery["time"] - start
+            ).total_seconds()
+
+            print("      state transitions:")
+            print(f"        COHERENT -> AMBIGUOUS: {start:%H:%M:%S}")
+            print(
+                f"        AMBIGUOUS -> COHERENT: "
+                f"{first_recovery['time']:%H:%M:%S}"
+            )
+            print(
+                f"        time to confirmed recovery: "
+                f"{transition_duration:.0f}s"
+            )
         else:
             print("      recovery:             not observed")
+            print("      state transitions:")
+            print(f"        COHERENT -> AMBIGUOUS: {start:%H:%M:%S}")
+            print("        AMBIGUOUS -> COHERENT: not observed")
 
     print()
 
