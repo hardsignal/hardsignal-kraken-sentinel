@@ -662,6 +662,22 @@ for frequency in sorted(directional_states):
         )
         min_conf = min(r["confidence"] for r in window)
 
+        next_start = (
+            ambiguity_windows[i][0]["time"]
+            if i < len(ambiguity_windows)
+            else None
+        )
+
+        recovery_rows = [
+            r for r in sorted(raw_group, key=lambda x: x["time"])
+            if r["time"] > end
+            and (next_start is None or r["time"] < next_start)
+            and r["confidence"] >= 3.0
+            and r["samples"] >= 3
+            and r.get("median_doa_peaks") is not None
+            and r["median_doa_peaks"] <= 1.0
+        ]
+
         print(f"    window {i}:")
         print(f"      start:          {start:%H:%M:%S}")
         print(f"      end:            {end:%H:%M:%S}")
@@ -670,6 +686,32 @@ for frequency in sorted(directional_states):
         print(f"      max peaks:      {max_peaks:.1f}")
         print(f"      max width:      {max_width:.1f}°")
         print(f"      min confidence: {min_conf:.2f}")
+
+        if recovery_rows:
+            first_recovery = recovery_rows[0]
+            recovery_delay = (
+                first_recovery["time"] - end
+            ).total_seconds()
+
+            angles = [
+                math.radians(r["bearing"])
+                for r in recovery_rows
+            ]
+
+            recovery_bearing = math.degrees(
+                math.atan2(
+                    sum(math.sin(a) for a in angles),
+                    sum(math.cos(a) for a in angles)
+                )
+            ) % 360
+
+            print("      recovery:")
+            print(f"        coherent resumed:   {first_recovery['time']:%H:%M:%S}")
+            print(f"        recovery delay:     {recovery_delay:.0f}s")
+            print(f"        coherent samples:   {len(recovery_rows)}")
+            print(f"        recovered centroid: {recovery_bearing:.1f}°")
+        else:
+            print("      recovery:             not observed")
 
     print()
 
