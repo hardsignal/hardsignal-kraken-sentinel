@@ -795,6 +795,85 @@ for frequency in sorted(directional_states):
     print(f"    classification:           {stability_class}")
     print()
 
+def extract_directional_states(rows):
+    """
+    Reproduce the session directional-state classifier for an arbitrary
+    historical group without changing the main classifier.
+    """
+
+    qualified_rows = [
+        r for r in rows
+        if r["confidence"] >= 3.0
+        and r["samples"] >= 3
+    ]
+
+    if not qualified_rows:
+        return []
+
+    bins = [0] * 36
+
+    for r in qualified_rows:
+        bins[int(r["bearing"] // 10)] += 1
+
+    peaks = []
+
+    for i, count in enumerate(bins):
+        left = bins[(i - 1) % 36]
+        right = bins[(i + 1) % 36]
+
+        if count >= 3 and count > left and count >= right:
+            peaks.append((count, i * 10))
+
+    peaks.sort(reverse=True)
+
+    states = []
+
+    for count, centre in peaks:
+        nearby = [
+            r for r in qualified_rows
+            if min(
+                abs(r["bearing"] - centre),
+                360 - abs(r["bearing"] - centre)
+            ) <= 10
+        ]
+
+        if not nearby:
+            continue
+
+        angles = [
+            math.radians(r["bearing"])
+            for r in nearby
+        ]
+
+        mean_bearing = math.degrees(
+            math.atan2(
+                sum(math.sin(a) for a in angles),
+                sum(math.cos(a) for a in angles)
+            )
+        ) % 360
+
+        widths = [
+            r["doa_width"]
+            for r in nearby
+            if r.get("doa_width") is not None
+        ]
+
+        peak_counts = [
+            r["median_doa_peaks"]
+            for r in nearby
+            if r.get("median_doa_peaks") is not None
+        ]
+
+        states.append({
+            "bearing": mean_bearing,
+            "hits": len(nearby),
+            "width": median(widths) if widths else None,
+            "peaks": median(peak_counts) if peak_counts else None,
+        })
+
+    return states
+
+
 print("CROSS-SESSION ANALYSIS")
 print()
 
@@ -882,6 +961,112 @@ for frequency in sorted({
             f" | concentration={concentration:.3f}"
             f" | {evidence}"
         )
+
+    print()
+
+print("CROSS-SESSION DIRECTIONAL STATES")
+print()
+
+for frequency in sorted({
+    round(r["frequency_mhz"], 6)
+    for r in all_rows
+}):
+    session_groups = {}
+
+    for r in all_rows:
+        if round(r["frequency_mhz"], 6) != frequency:
+            continue
+
+        sid = r.get("session_id")
+        if not sid:
+            continue
+
+        session_groups.setdefault(sid, []).append(r)
+
+    matched_sessions = []
+
+    for sid in sorted(session_groups):
+        states = extract_directional_states(session_groups[sid])
+
+        if not states:
+            continue
+
+        dominant = max(states, key=lambda x: x["hits"])
+
+        matched_sessions.append({
+            "session_id": sid,
+            "bearing": dominant["bearing"],
+            "hits": dominant["hits"],
+            "width": dominant["width"],
+            "peaks": dominant["peaks"],
+        })
+
+    if len(matched_sessions) < 2:
+        continue
+
+    print(f"{frequency:.6f} MHz")
+
+    for state in matched_sessions:
+        width_text = (
+            f"{state['width']:.1f}°"
+            if state["width"] is not None
+            else "n/a"
+        )
+
+        peaks_text = (
+            f"{state['peaks']:.1f}"
+            if state["peaks"] is not None
+            else "n/a"
+        )
+
+        print(
+            f"  session {state['session_id']}: "
+            f"dominant={state['bearing']:.1f}°"
+            f" | hits={state['hits']}"
+            f" | width={width_text}"
+            f" | peaks={peaks_text}"
+        )
+
+    print("  consecutive state shifts:")
+
+    for previous, current in zip(
+        matched_sessions,
+        matched_sessions[1:]
+    ):
+        shift = abs(
+            (
+                current["bearing"]
+                - previous["bearing"]
+                + 180.0
+            ) % 360.0 - 180.0
+        )
+
+        print(
+            f"    {previous['session_id']} -> "
+            f"{current['session_id']}: "
+            f"{shift:.1f}°"
+        )
+
+    first_state = matched_sessions[0]
+    last_state = matched_sessions[-1]
+
+    return_error = abs(
+        (
+            last_state["bearing"]
+            - first_state["bearing"]
+            + 180.0
+        ) % 360.0 - 180.0
+    )
+
+    print(f"  first -> last state error: {return_error:.1f}°")
+
+    if len(matched_sessions) >= 3:
+        if return_error <= 10.0:
+            return_match = "YES"
+        else:
+            return_match = "NO"
+
+        print(f"  return-state match: {return_match}")
 
     print()
 
