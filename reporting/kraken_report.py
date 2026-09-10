@@ -635,6 +635,7 @@ for frequency in sorted(directional_states):
     )
 
     ambiguity_windows = []
+    recovery_summaries = []
 
     for r in sorted(multi_peak, key=lambda x: x["time"]):
         if (
@@ -715,6 +716,13 @@ for frequency in sorted(directional_states):
                 first_recovery["time"] - start
             ).total_seconds()
 
+            recovery_summaries.append({
+                "delay": recovery_delay,
+                "bearing": recovery_bearing,
+                "samples": len(recovery_rows),
+                "time": first_recovery["time"],
+            })
+
             print("      state transitions:")
             print(f"        COHERENT -> AMBIGUOUS: {start:%H:%M:%S}")
             print(
@@ -731,6 +739,60 @@ for frequency in sorted(directional_states):
             print(f"        COHERENT -> AMBIGUOUS: {start:%H:%M:%S}")
             print("        AMBIGUOUS -> COHERENT: not observed")
 
+    states = directional_states[frequency]
+    dominant_state = (
+        max(states, key=lambda x: x["hits"])
+        if states else None
+    )
+
+    single_peak_count = len(raw_group) - len(multi_peak)
+
+    print("  DoA stability")
+    print(f"    single-peak observations: {single_peak_count}/{len(raw_group)}")
+    print(f"    multi-peak fraction:      {multi_peak_fraction:.1f}%")
+
+    if dominant_state is not None:
+        print(f"    dominant state:           {dominant_state['bearing']:.1f}°")
+        print(f"    dominant state hits:      {dominant_state['hits']}")
+
+    if ambiguity_windows:
+        print(
+            f"    recoveries observed:      "
+            f"{len(recovery_summaries)}/{len(ambiguity_windows)}"
+        )
+    else:
+        print("    recoveries observed:      n/a")
+
+    if recovery_summaries and dominant_state is not None:
+        latest_recovery = recovery_summaries[-1]
+
+        centroid_error = abs(
+            (
+                latest_recovery["bearing"]
+                - dominant_state["bearing"]
+                + 180.0
+            ) % 360.0 - 180.0
+        )
+
+        print(f"    recovery delay:           {latest_recovery['delay']:.0f}s")
+        print(f"    recovered centroid:       {latest_recovery['bearing']:.1f}°")
+        print(f"    centroid error:           {centroid_error:.1f}°")
+
+        if centroid_error <= 10.0:
+            stability_class = "MIXED / RECOVERING"
+        else:
+            stability_class = "MIXED / SHIFTED"
+
+    elif ambiguity_windows:
+        stability_class = "MIXED / UNRESOLVED"
+
+    elif dominant_state is not None:
+        stability_class = "STABLE / NO AMBIGUITY"
+
+    else:
+        stability_class = "INSUFFICIENT DATA"
+
+    print(f"    classification:           {stability_class}")
     print()
 
 print("CROSS-SESSION ANALYSIS")
