@@ -104,6 +104,60 @@ Session `20260910-041951` produced a dominant coherent state of:
 The restored dominant coherent state was within **6.7°** of the original
 classified state (**227.7° → 221.0°**).
 
+### Automated Cross-Session State Matching
+
+The reporting pipeline was extended to extract dominant directional states from
+historical sessions using the same qualification, 10° binning, local-peak, and
+±10° neighbourhood rules used by the session directional classifier.
+
+For 433.999392 MHz, the automated comparison recovered:
+
+- Session `20260910-034827`: **227.7°**, 22 hits, median width 44°, median peaks 1
+- Session `20260910-040627`: **122.8°**, 18 hits, median width 36°, median peaks 1
+- Session `20260910-041951`: **221.0°**, 13 hits, median width 46°, median peaks 1
+
+The automatically calculated state changes were:
+
+- first → second session: **104.8°**
+- second → third session: **98.2°**
+- first → final state error: **6.7°**
+- return-state match: **YES**
+
+The comparison operates on classified directional states rather than forcing
+low-sample sessions into the analysis.
+
+### Ambiguity, Recovery, and Stability
+
+The restored-orientation session also contained a temporary period of
+multi-peak directional ambiguity.
+
+The reporter identified:
+
+- raw observations: **19**
+- multi-peak observations: **9**
+- multi-peak fraction: **47.4%**
+- ambiguity window: **04:21:14–04:24:00**
+- ambiguity-window duration: **166 s**
+- maximum observed peak count: **3**
+- maximum DoA width: **144.5°**
+- minimum confidence: **1.70**
+
+A coherent solution subsequently resumed at **04:24:13**, giving:
+
+- recovery delay after the final multi-peak observation: **13 s**
+- coherent recovery samples: **7**
+- recovered centroid: **220.9°**
+- dominant classified state: **221.0°**
+- recovery centroid error: **0.1°**
+
+The state-transition sequence was therefore:
+
+**COHERENT → AMBIGUOUS → COHERENT**
+
+The interval from the beginning of the ambiguity window to confirmed coherent
+recovery was **179 s**. The session-level stability classifier reported
+**MIXED / RECOVERING**.
+
 ### Interpretation
 
 The A → B → A experiment demonstrated a repeatable orientation-dependent DoA
@@ -121,9 +175,25 @@ identity or physical location of the observed transmitter.
 
 ## Phase 1 Conclusion
 
-Phase 1 established a repeatable RF/DoA baseline at 433.868160 MHz.
+Phase 1 established a repeatable passive RF/DoA observation baseline around
+433.868160 MHz and subsequently produced a controlled directional-validation
+candidate at 433.999392 MHz.
 
-The KrakenSDR successfully produced stable directional estimates from repeated RF activity. The measurements also demonstrated the importance of controlled geometry and environmental conditions when attempting to associate RF observations with individual devices.
+For the 433.999392 MHz candidate, the A → B → A' experiment demonstrated that
+changing array orientation produced a substantial change in the dominant
+classified DoA state, while restoring the original orientation returned the
+dominant state to within 6.7° of its original value.
+
+The analysis pipeline also demonstrated that a single aggregate bearing can
+hide meaningful behaviour. Directional-state extraction exposed coherent
+states, multi-peak ambiguity, state transitions, recovery latency, and
+cross-session return-state matching.
+
+These results establish repeatability of the measured KrakenSDR directional
+response under the tested conditions. They do not establish transmitter
+identity or physical transmitter location, and the non-ideal response to array
+rotation remains consistent with significant environmental and multipath
+influence.
 
 ## Transition to Phase 2
 

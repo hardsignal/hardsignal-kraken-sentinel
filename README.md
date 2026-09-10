@@ -25,7 +25,13 @@ Current validated work includes:
 - session integrity checks
 - RF persistence analysis
 - directional stability analysis
+- directional-state extraction and classification
+- multi-peak ambiguity-window detection
+- coherent-state recovery and transition analysis
+- session-level DoA stability classification
 - cross-session recurrence analysis
+- cross-session dominant-state matching
+- controlled A → B → A' array-orientation validation
 - IQ capture workflow
 - burst timing and spectral feature extraction
 - same-device feature repeatability testing
