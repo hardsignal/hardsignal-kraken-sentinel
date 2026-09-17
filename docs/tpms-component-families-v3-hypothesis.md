@@ -554,3 +554,43 @@ No V3 threshold, tolerance, extractor, or validation rule was changed.
 ## Identity claim
 
     NONE
+
+---
+
+# S4-A2 Validation Result
+
+Date: 17 September 2026
+
+S4-A2 was a sufficient validation capture under the frozen protocol.
+
+- IQ files: 6
+- V1 candidate short events: 5
+- Development-selected family: 18679.81 Hz
+- Frozen tolerance: +/-50 Hz
+- Matching events: 1/5
+- Recurrence: 20.0%
+
+The single matching spacing was:
+
+    18667.60 Hz
+
+This is within the frozen +/-50 Hz family tolerance.
+
+Therefore:
+
+    S4-A2: PASS
+
+The pre-defined unseen-sensor specificity threshold was:
+
+    recurrence <40%
+
+No V3 parameter, threshold, tolerance, extractor, or family-selection
+rule was changed.
+
+This result supports only out-of-development specificity of the
+pre-selected candidate under the tested conditions. It does not
+establish unique sensor identity.
+
+S4-A2 result SHA256:
+
+    6274ee372d802da6461c633b9ef47beac4ec460451c8c6cf815e704aa728b242
