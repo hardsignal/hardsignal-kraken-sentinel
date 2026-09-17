@@ -138,3 +138,100 @@ PRE-REGISTERED — implementation not yet frozen.
 
 No Sensor 3 / Sensor 4 validation data has been used to construct this
 hypothesis.
+
+---
+
+# Development Result
+
+Date: 17 September 2026
+
+## Frozen implementation
+
+V2 extractor:
+
+`fingerprinting/tpms_topology_v2.py`
+
+SHA-256:
+
+`047c40aa89faf8ebe5639ab61085b67c859ef13bcd1bfcff7c42ca7eb71ba492`
+
+The implementation was frozen in Git before the development dataset was
+processed.
+
+## Development dataset
+
+The pre-registered development set contained:
+
+| Capture | Short events |
+|---|---:|
+| Sensor 1 A | 5 |
+| Sensor 1 B | 7 |
+| Sensor 2 A | 5 |
+| Sensor 2 B | 8 |
+| Sensor 2 C | 5 |
+
+Total: 30 candidate short events.
+
+Derived V2 result:
+
+`fingerprinting/results/v2/tpms_s1_s2_development.json`
+
+SHA-256:
+
+`2ee5e915dc43bcdc2aa3e4644dd13ed8f4c52dccf98448b2ec21bf41a32c8923`
+
+## Observations
+
+The dominant-to-P2 median offsets were:
+
+| Capture | Median offset |
+|---|---:|
+| Sensor 1 A | 12088.0 Hz |
+| Sensor 1 B | 12088.0 Hz |
+| Sensor 2 A | 12085.0 Hz |
+| Sensor 2 B | 12086.5 Hz |
+| Sensor 2 C | 12089.5 Hz |
+
+These values substantially overlap between Sensor 1 and Sensor 2.
+
+The P3 median offsets also occupied a common region across the five
+captures.
+
+For later-ranked components, large median absolute deviations and wide
+ranges were observed. Secondary spectral components changed amplitude
+rank between events, so comparison of P4 with P4, P5 with P5, and so on
+did not provide a stable topology representation.
+
+This behaviour is consistent with the instability already observed in
+the V1 second-highest-peak measurement.
+
+## Development conclusion
+
+The pre-registered V2 representation did not satisfy the required
+between-sensor separation criterion for Sensor 1 and Sensor 2.
+
+Recurring spectral structure remains observable and repeatable, but
+amplitude-rank-based relative topology substantially overlaps between
+the two controlled sensors in this development dataset.
+
+Therefore V2 is classified as non-discriminating for the tested
+Sensor 1 / Sensor 2 comparison.
+
+No V2 parameters or features will be modified to improve this result.
+
+## Reserved validation data
+
+Sensor 3 and Sensor 4 remain unused by V2.
+
+Because V2 did not satisfy its discrimination criterion on the
+development sensors, Sensor 3 and Sensor 4 are retained as unseen data
+for a separately pre-registered future method rather than being used to
+rescue or tune V2.
+
+## Status
+
+**TPMS Spectral Topology V2 — DEVELOPMENT COMPLETE / NON-DISCRIMINATING**
+
+A future method may test rank-independent recurring component families
+or other pre-defined spectral relationships, but such work must be
+treated as a new experimental version.
