@@ -514,3 +514,43 @@ conditions would be required before stronger fingerprinting claims.
     PROTOCOL FROZEN
     S3 NOT EXAMINED
     S4 NOT EXAMINED
+
+---
+
+# S3 Validation Result
+
+Date: 17 September 2026
+
+## S3 acquisition status
+
+Five S3 validation attempts were made under the frozen protocol.
+
+| Attempt | IQ files | V1 candidate events | Status |
+|---|---:|---:|---|
+| S3-A | 6 | 4 | Insufficient |
+| S3-A2 | 6 | 4 | Insufficient |
+| S3-A3 | 5 | 4 | Insufficient |
+| S3-A4 | 6 | 4 | Insufficient |
+| S3-A5 | 0 | — | No capture |
+
+The pre-defined requirement was >=5 candidate short events per
+independent validation capture.
+
+No S3 capture satisfied that requirement.
+
+An accidental six-file IQ burst occurred before the S3-A5 marker. It
+was not assigned to S3-A5 and was not used for V3 validation.
+
+## S3 conclusion
+
+S3 validation is:
+
+    INCONCLUSIVE — INSUFFICIENT QUALIFYING CAPTURE
+
+The V3 candidate was not classified as PASS or FAIL on S3.
+
+No V3 threshold, tolerance, extractor, or validation rule was changed.
+
+## Identity claim
+
+    NONE
