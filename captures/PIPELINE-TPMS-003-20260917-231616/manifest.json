@@ -1,0 +1,44 @@
+{
+  "capture_id": "PIPELINE-TPMS-003-20260917-231616",
+  "changed_preexisting_iq_files": [],
+  "files": [
+    {
+      "name": "17-Sep-2026_23h17m41s,IQ_433.868MHz,DOA_242.0.iq",
+      "path": "/home/maciejduranczyk/krakensdr_doa/_share/records/iq/17-Sep-2026_23h17m41s,IQ_433.868MHz,DOA_242.0.iq",
+      "sha256": "1060c55b1d234e02b4740ea6e41db74b7c99750c0c798e26238696bdcf9044c8",
+      "size_bytes": 174768
+    }
+  ],
+  "finished_at": "2026-09-17T23:19:51.747983+01:00",
+  "format": "HARDSIGNAL_KRAKEN_CAPTURE_MANIFEST_V1",
+  "git_head_at_finish": "d77edca8bd214fa34aeff5cd4d02a6bfd2200203",
+  "git_head_at_start": "d77edca8bd214fa34aeff5cd4d02a6bfd2200203",
+  "iq_count_after": 625,
+  "iq_count_before": 624,
+  "iq_directory": "/home/maciejduranczyk/krakensdr_doa/_share/records/iq",
+  "new_iq_file_count": 1,
+  "note": "Controlled owned TPMS source \u2014 unseen validation of frozen Episode Grouping V1 using frozen operator logger",
+  "settings_at_finish": {
+    "settings_file": "/home/maciejduranczyk/krakensdr_doa/_share/settings.json",
+    "settings_sha256": "8f7b52c0b0923cae1e9781878c743bdfd309cc4e52659c1c07815507e53574c9",
+    "values": {
+      "vfo_bw_0": 25000,
+      "vfo_freq_0": 433868160.0,
+      "vfo_iq_0": "True",
+      "vfo_squelch_0": -45,
+      "vfo_squelch_mode_0": "Manual"
+    }
+  },
+  "settings_at_start": {
+    "settings_file": "/home/maciejduranczyk/krakensdr_doa/_share/settings.json",
+    "settings_sha256": "8f7b52c0b0923cae1e9781878c743bdfd309cc4e52659c1c07815507e53574c9",
+    "values": {
+      "vfo_bw_0": 25000,
+      "vfo_freq_0": 433868160.0,
+      "vfo_iq_0": "True",
+      "vfo_squelch_0": -45,
+      "vfo_squelch_mode_0": "Manual"
+    }
+  },
+  "started_at": "2026-09-17T23:16:16.571490+01:00"
+}
