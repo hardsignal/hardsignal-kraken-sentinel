@@ -594,3 +594,66 @@ establish unique sensor identity.
 S4-A2 result SHA256:
 
     6274ee372d802da6461c633b9ef47beac4ec460451c8c6cf815e704aa728b242
+
+---
+
+# S4-C Validation Result
+
+Date: 17 September 2026
+
+S4-C was a sufficient independent validation capture under the frozen
+protocol.
+
+- IQ files: 5
+- V1 candidate short events: 6
+- Development-selected family: 18679.81 Hz
+- Frozen tolerance: +/-50 Hz
+- Matching events: 0/6
+- Recurrence: 0.0%
+
+Therefore:
+
+    S4-C: PASS
+
+The pre-defined unseen-sensor specificity threshold was:
+
+    recurrence <40%
+
+No V3 parameter, threshold, tolerance, extractor, family definition,
+or validation rule was changed.
+
+S4-C result SHA256:
+
+    bb8de89e444bc2a22ce2959cb1836b40e4d27b98ffe1e9e2c31559768854339b
+
+## S4 validation summary
+
+Two independent sufficient S4 captures were obtained:
+
+- S4-A2: 1/5 matches = 20.0% — PASS
+- S4-C:  0/6 matches = 0.0%  — PASS
+
+S4-B was retained as insufficient with four V1 candidate events and
+was not used for the primary validation decision.
+
+The development-selected 18679.81 Hz +/-50 Hz family therefore
+satisfied the frozen <40% specificity criterion in every sufficient
+S4 validation capture.
+
+This supports out-of-development specificity against Sensor 4 under
+the tested conditions.
+
+It does not establish a unique sensor fingerprint.
+
+S3 validation remained inconclusive because no S3 capture satisfied
+the pre-defined minimum of five V1 candidate events.
+
+## Overall V3 validation status
+
+    S4: PASS
+    S3: INCONCLUSIVE
+    OVERALL V3: PARTIAL VALIDATION / INCONCLUSIVE
+
+Identity claim:
+
+    NONE
