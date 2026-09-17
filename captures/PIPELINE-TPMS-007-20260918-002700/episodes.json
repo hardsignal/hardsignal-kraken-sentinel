@@ -1,0 +1,385 @@
+{
+  "format": "HARDSIGNAL_KRAKEN_EPISODES_V1",
+  "capture_id": "PIPELINE-TPMS-007-20260918-002700",
+  "source_manifest_format": "HARDSIGNAL_KRAKEN_CAPTURE_MANIFEST_V1",
+  "episode_gap_seconds": 4.0,
+  "comparison": ">",
+  "episode_count": 8,
+  "file_count": 42,
+  "episodes": [
+    {
+      "episode": 1,
+      "file_count": 5,
+      "start_time": "2026-09-18T00:29:30.358947+01:00",
+      "end_time": "2026-09-18T00:29:34.726109+01:00",
+      "span_seconds": 4.367161169,
+      "preceding_gap_seconds": null,
+      "files": [
+        {
+          "path": "/home/maciejduranczyk/krakensdr_doa/_share/records/iq/18-Sep-2026_00h29m30s,IQ_433.868MHz,DOA_236.5.iq",
+          "name": "18-Sep-2026_00h29m30s,IQ_433.868MHz,DOA_236.5.iq",
+          "mtime_ns": 1789687770358947405,
+          "size_bytes": 699072,
+          "sha256": "9190931c44230b36dd4a7dba57b3e8fa9b616cd20e0f18f45257c2afdf6688ed"
+        },
+        {
+          "path": "/home/maciejduranczyk/krakensdr_doa/_share/records/iq/18-Sep-2026_00h29m31s,IQ_433.868MHz,DOA_236.0.iq",
+          "name": "18-Sep-2026_00h29m31s,IQ_433.868MHz,DOA_236.0.iq",
+          "mtime_ns": 1789687771219788654,
+          "size_bytes": 174768,
+          "sha256": "556480f7c100a818410aafcd0349c7b1bda0e283d4bcafe0ea5a2d5e2aebde94"
+        },
+        {
+          "path": "/home/maciejduranczyk/krakensdr_doa/_share/records/iq/18-Sep-2026_00h29m32s,IQ_433.868MHz,DOA_236.0.iq",
+          "name": "18-Sep-2026_00h29m32s,IQ_433.868MHz,DOA_236.0.iq",
+          "mtime_ns": 1789687772109827090,
+          "size_bytes": 174768,
+          "sha256": "cd9e9be1cb7e26fee86e4752d0c2c726a8f17088c3016aa9f231a846c568ebaf"
+        },
+        {
+          "path": "/home/maciejduranczyk/krakensdr_doa/_share/records/iq/18-Sep-2026_00h29m33s,IQ_433.868MHz,DOA_236.0.iq",
+          "name": "18-Sep-2026_00h29m33s,IQ_433.868MHz,DOA_236.0.iq",
+          "mtime_ns": 1789687773433050576,
+          "size_bytes": 174768,
+          "sha256": "e5107c217b99ece078551c3b2016a10343f2525208fcc0cbb86f1b76b8e9e730"
+        },
+        {
+          "path": "/home/maciejduranczyk/krakensdr_doa/_share/records/iq/18-Sep-2026_00h29m34s,IQ_433.868MHz,DOA_236.5.iq",
+          "name": "18-Sep-2026_00h29m34s,IQ_433.868MHz,DOA_236.5.iq",
+          "mtime_ns": 1789687774726108574,
+          "size_bytes": 349536,
+          "sha256": "f7ccb7f1c59eb7420a3df6630863f9e4bbae196922a98c5984e9d96539a6f6e5"
+        }
+      ]
+    },
+    {
+      "episode": 2,
+      "file_count": 5,
+      "start_time": "2026-09-18T00:29:48.279231+01:00",
+      "end_time": "2026-09-18T00:29:52.642746+01:00",
+      "span_seconds": 4.363514706,
+      "preceding_gap_seconds": 13.553122684,
+      "files": [
+        {
+          "path": "/home/maciejduranczyk/krakensdr_doa/_share/records/iq/18-Sep-2026_00h29m48s,IQ_433.868MHz,DOA_236.5.iq",
+          "name": "18-Sep-2026_00h29m48s,IQ_433.868MHz,DOA_236.5.iq",
+          "mtime_ns": 1789687788279231258,
+          "size_bytes": 699072,
+          "sha256": "445cee281af49694ae4fca6169e03509d2cf823c7224bc5a07670541dff03864"
+        },
+        {
+          "path": "/home/maciejduranczyk/krakensdr_doa/_share/records/iq/18-Sep-2026_00h29m49s,IQ_433.868MHz,DOA_236.0.iq",
+          "name": "18-Sep-2026_00h29m49s,IQ_433.868MHz,DOA_236.0.iq",
+          "mtime_ns": 1789687789149297173,
+          "size_bytes": 174768,
+          "sha256": "f0e02217ac27942af0241097cb2a43118e0063b34f84cf87d31912dee66719b5"
+        },
+        {
+          "path": "/home/maciejduranczyk/krakensdr_doa/_share/records/iq/18-Sep-2026_00h29m50s,IQ_433.868MHz,DOA_236.0.iq",
+          "name": "18-Sep-2026_00h29m50s,IQ_433.868MHz,DOA_236.0.iq",
+          "mtime_ns": 1789687790021217927,
+          "size_bytes": 174768,
+          "sha256": "f0512e98680fce6268db4c959e5a51c14912f4e78082773d991b0e5e726db957"
+        },
+        {
+          "path": "/home/maciejduranczyk/krakensdr_doa/_share/records/iq/18-Sep-2026_00h29m51s,IQ_433.868MHz,DOA_236.0.iq",
+          "name": "18-Sep-2026_00h29m51s,IQ_433.868MHz,DOA_236.0.iq",
+          "mtime_ns": 1789687791334626782,
+          "size_bytes": 174768,
+          "sha256": "59272efa1915d4e5949a6b2017ee60c540fe0a85ec84846b5d67d27269355a6f"
+        },
+        {
+          "path": "/home/maciejduranczyk/krakensdr_doa/_share/records/iq/18-Sep-2026_00h29m52s,IQ_433.868MHz,DOA_238.5.iq",
+          "name": "18-Sep-2026_00h29m52s,IQ_433.868MHz,DOA_238.5.iq",
+          "mtime_ns": 1789687792642745964,
+          "size_bytes": 349536,
+          "sha256": "3f26b356d478784a58d3cfcb11d15c1522f5439eab191bc6b15fd7c9318b3752"
+        }
+      ]
+    },
+    {
+      "episode": 3,
+      "file_count": 6,
+      "start_time": "2026-09-18T00:30:03.126451+01:00",
+      "end_time": "2026-09-18T00:30:08.798160+01:00",
+      "span_seconds": 5.67170851,
+      "preceding_gap_seconds": 10.483705096,
+      "files": [
+        {
+          "path": "/home/maciejduranczyk/krakensdr_doa/_share/records/iq/18-Sep-2026_00h30m03s,IQ_433.868MHz,DOA_237.0.iq",
+          "name": "18-Sep-2026_00h30m03s,IQ_433.868MHz,DOA_237.0.iq",
+          "mtime_ns": 1789687803126451060,
+          "size_bytes": 174768,
+          "sha256": "a9cf92186a9ec4bf106e22dea58593f6cd2488494f7f617e5d8c6c9774a9bba2"
+        },
+        {
+          "path": "/home/maciejduranczyk/krakensdr_doa/_share/records/iq/18-Sep-2026_00h30m04s,IQ_433.868MHz,DOA_236.0.iq",
+          "name": "18-Sep-2026_00h30m04s,IQ_433.868MHz,DOA_236.0.iq",
+          "mtime_ns": 1789687804443309219,
+          "size_bytes": 349536,
+          "sha256": "d9e2886bd53cefe32bf65cfd5f86bb7f1e3548d3573526c8d4d0c1054b98b7e9"
+        },
+        {
+          "path": "/home/maciejduranczyk/krakensdr_doa/_share/records/iq/18-Sep-2026_00h30m05s,IQ_433.868MHz,DOA_236.0.iq",
+          "name": "18-Sep-2026_00h30m05s,IQ_433.868MHz,DOA_236.0.iq",
+          "mtime_ns": 1789687805316747999,
+          "size_bytes": 174768,
+          "sha256": "c1351a3af889f259146a52dc4a34ee34d2368ab307599704793a279c6a98c3bc"
+        },
+        {
+          "path": "/home/maciejduranczyk/krakensdr_doa/_share/records/iq/18-Sep-2026_00h30m06s,IQ_433.868MHz,DOA_236.0.iq",
+          "name": "18-Sep-2026_00h30m06s,IQ_433.868MHz,DOA_236.0.iq",
+          "mtime_ns": 1789687806636176691,
+          "size_bytes": 174768,
+          "sha256": "9e58f7904cfe5f79b114adbe3fb6e844f692275cd8d65ac87bc48c7887b3d90a"
+        },
+        {
+          "path": "/home/maciejduranczyk/krakensdr_doa/_share/records/iq/18-Sep-2026_00h30m07s,IQ_433.868MHz,DOA_236.0.iq",
+          "name": "18-Sep-2026_00h30m07s,IQ_433.868MHz,DOA_236.0.iq",
+          "mtime_ns": 1789687807503411989,
+          "size_bytes": 174768,
+          "sha256": "f539febc4d242884df4df11748f8b7a7e34ce88d4306bd8f3cd5b81fecff6194"
+        },
+        {
+          "path": "/home/maciejduranczyk/krakensdr_doa/_share/records/iq/18-Sep-2026_00h30m08s,IQ_433.868MHz,DOA_235.5.iq",
+          "name": "18-Sep-2026_00h30m08s,IQ_433.868MHz,DOA_235.5.iq",
+          "mtime_ns": 1789687808798159570,
+          "size_bytes": 349536,
+          "sha256": "e3c7cdf01abcf60f469a4830c360ffa05fba8860cab760a5cbc0e25d8c776e5a"
+        }
+      ]
+    },
+    {
+      "episode": 4,
+      "file_count": 5,
+      "start_time": "2026-09-18T00:30:20.601428+01:00",
+      "end_time": "2026-09-18T00:30:24.957167+01:00",
+      "span_seconds": 4.35573911,
+      "preceding_gap_seconds": 11.80326784,
+      "files": [
+        {
+          "path": "/home/maciejduranczyk/krakensdr_doa/_share/records/iq/18-Sep-2026_00h30m20s,IQ_433.868MHz,DOA_237.0.iq",
+          "name": "18-Sep-2026_00h30m20s,IQ_433.868MHz,DOA_237.0.iq",
+          "mtime_ns": 1789687820601427410,
+          "size_bytes": 699072,
+          "sha256": "c5a50740cc3e421640b5549bcbaa31146c9ee452a8b34e1401289b9640790141"
+        },
+        {
+          "path": "/home/maciejduranczyk/krakensdr_doa/_share/records/iq/18-Sep-2026_00h30m21s,IQ_433.868MHz,DOA_237.0.iq",
+          "name": "18-Sep-2026_00h30m21s,IQ_433.868MHz,DOA_237.0.iq",
+          "mtime_ns": 1789687821474429323,
+          "size_bytes": 174768,
+          "sha256": "986a4a2e854d4e31ca9db6fff0bfb0f630908451438c5c5207dca73681178c81"
+        },
+        {
+          "path": "/home/maciejduranczyk/krakensdr_doa/_share/records/iq/18-Sep-2026_00h30m22s,IQ_433.868MHz,DOA_237.0.iq",
+          "name": "18-Sep-2026_00h30m22s,IQ_433.868MHz,DOA_237.0.iq",
+          "mtime_ns": 1789687822784696771,
+          "size_bytes": 174768,
+          "sha256": "e8127c79e42ee27a5a56c2af1f402591bb7084b94b440f0a5d09750590b3efdf"
+        },
+        {
+          "path": "/home/maciejduranczyk/krakensdr_doa/_share/records/iq/18-Sep-2026_00h30m23s,IQ_433.868MHz,DOA_237.0.iq",
+          "name": "18-Sep-2026_00h30m23s,IQ_433.868MHz,DOA_237.0.iq",
+          "mtime_ns": 1789687823643056121,
+          "size_bytes": 174768,
+          "sha256": "eae4299758a3ce8df16c5bbf200e28507edddcc47d9cd21b4880d21ebea15049"
+        },
+        {
+          "path": "/home/maciejduranczyk/krakensdr_doa/_share/records/iq/18-Sep-2026_00h30m24s,IQ_433.868MHz,DOA_236.5.iq",
+          "name": "18-Sep-2026_00h30m24s,IQ_433.868MHz,DOA_236.5.iq",
+          "mtime_ns": 1789687824957166520,
+          "size_bytes": 349536,
+          "sha256": "9eef7eb2c56927fb1c9966b316e41b2ea3cc8f8d91ae36472e2d3f9fed903b39"
+        }
+      ]
+    },
+    {
+      "episode": 5,
+      "file_count": 6,
+      "start_time": "2026-09-18T00:30:35.895694+01:00",
+      "end_time": "2026-09-18T00:30:41.565745+01:00",
+      "span_seconds": 5.670050122,
+      "preceding_gap_seconds": 10.938527999,
+      "files": [
+        {
+          "path": "/home/maciejduranczyk/krakensdr_doa/_share/records/iq/18-Sep-2026_00h30m35s,IQ_433.868MHz,DOA_236.0.iq",
+          "name": "18-Sep-2026_00h30m35s,IQ_433.868MHz,DOA_236.0.iq",
+          "mtime_ns": 1789687835895694519,
+          "size_bytes": 174768,
+          "sha256": "9f2efb081358e66e49bd7b86b7f1f8ccce9e34a04d3d353bbfa95d643406f8d5"
+        },
+        {
+          "path": "/home/maciejduranczyk/krakensdr_doa/_share/records/iq/18-Sep-2026_00h30m37s,IQ_433.868MHz,DOA_236.0.iq",
+          "name": "18-Sep-2026_00h30m37s,IQ_433.868MHz,DOA_236.0.iq",
+          "mtime_ns": 1789687837204749715,
+          "size_bytes": 349536,
+          "sha256": "19f888249f5ed9a5330660724a7b3cb55d609d86c3e7812af29ac7fa646c8ae8"
+        },
+        {
+          "path": "/home/maciejduranczyk/krakensdr_doa/_share/records/iq/18-Sep-2026_00h30m38s,IQ_433.868MHz,DOA_236.0.iq",
+          "name": "18-Sep-2026_00h30m38s,IQ_433.868MHz,DOA_236.0.iq",
+          "mtime_ns": 1789687838510442277,
+          "size_bytes": 174768,
+          "sha256": "1118f047bb30a0b184e2cd25f7778b04b2248c6d4201f99c107b92e57315a15f"
+        },
+        {
+          "path": "/home/maciejduranczyk/krakensdr_doa/_share/records/iq/18-Sep-2026_00h30m39s,IQ_433.868MHz,DOA_236.0.iq",
+          "name": "18-Sep-2026_00h30m39s,IQ_433.868MHz,DOA_236.0.iq",
+          "mtime_ns": 1789687839394456722,
+          "size_bytes": 174768,
+          "sha256": "3ef8b05bf57cf0ad8711e74c199d039854536975f7a39848ba58986fd3b13e30"
+        },
+        {
+          "path": "/home/maciejduranczyk/krakensdr_doa/_share/records/iq/18-Sep-2026_00h30m40s,IQ_433.868MHz,DOA_237.0.iq",
+          "name": "18-Sep-2026_00h30m40s,IQ_433.868MHz,DOA_237.0.iq",
+          "mtime_ns": 1789687840260289919,
+          "size_bytes": 174768,
+          "sha256": "b591cf2c760a61935d74e83821f6db580f5211f9af144e93d08265b4fd54f18c"
+        },
+        {
+          "path": "/home/maciejduranczyk/krakensdr_doa/_share/records/iq/18-Sep-2026_00h30m41s,IQ_433.868MHz,DOA_236.0.iq",
+          "name": "18-Sep-2026_00h30m41s,IQ_433.868MHz,DOA_236.0.iq",
+          "mtime_ns": 1789687841565744641,
+          "size_bytes": 174768,
+          "sha256": "95b31195a402cc2f28cecc26a1e5c642c69070527b18551765e9d0162780a040"
+        }
+      ]
+    },
+    {
+      "episode": 6,
+      "file_count": 6,
+      "start_time": "2026-09-18T00:30:52.921965+01:00",
+      "end_time": "2026-09-18T00:30:58.621554+01:00",
+      "span_seconds": 5.699589028,
+      "preceding_gap_seconds": 11.356220413,
+      "files": [
+        {
+          "path": "/home/maciejduranczyk/krakensdr_doa/_share/records/iq/18-Sep-2026_00h30m52s,IQ_433.868MHz,DOA_236.0.iq",
+          "name": "18-Sep-2026_00h30m52s,IQ_433.868MHz,DOA_236.0.iq",
+          "mtime_ns": 1789687852921965054,
+          "size_bytes": 174768,
+          "sha256": "9af54554425f0c73508d691a13d38a351705b299b871932fe3daa6c37699429d"
+        },
+        {
+          "path": "/home/maciejduranczyk/krakensdr_doa/_share/records/iq/18-Sep-2026_00h30m54s,IQ_433.868MHz,DOA_235.0.iq",
+          "name": "18-Sep-2026_00h30m54s,IQ_433.868MHz,DOA_235.0.iq",
+          "mtime_ns": 1789687854252306958,
+          "size_bytes": 349536,
+          "sha256": "7f5c69b36401bce9025a9f59bb689c64c6fdf7184436fa295606c434f490644b"
+        },
+        {
+          "path": "/home/maciejduranczyk/krakensdr_doa/_share/records/iq/18-Sep-2026_00h30m55s,IQ_433.868MHz,DOA_235.0.iq",
+          "name": "18-Sep-2026_00h30m55s,IQ_433.868MHz,DOA_235.0.iq",
+          "mtime_ns": 1789687855102060901,
+          "size_bytes": 174768,
+          "sha256": "d27e845937f6e0c7ee327239fe862d95108cedd69527ad66b9451a02536c010e"
+        },
+        {
+          "path": "/home/maciejduranczyk/krakensdr_doa/_share/records/iq/18-Sep-2026_00h30m56s,IQ_433.868MHz,DOA_235.0.iq",
+          "name": "18-Sep-2026_00h30m56s,IQ_433.868MHz,DOA_235.0.iq",
+          "mtime_ns": 1789687856431503965,
+          "size_bytes": 174768,
+          "sha256": "0c756dc6aff583bc154988052a25b50d86349c4ffa884213b5b7453099f1bf5f"
+        },
+        {
+          "path": "/home/maciejduranczyk/krakensdr_doa/_share/records/iq/18-Sep-2026_00h30m57s,IQ_433.868MHz,DOA_235.0.iq",
+          "name": "18-Sep-2026_00h30m57s,IQ_433.868MHz,DOA_235.0.iq",
+          "mtime_ns": 1789687857305882282,
+          "size_bytes": 174768,
+          "sha256": "35cb192c53b63b51765d4e718913ad8e4c2151c26383bdf56b2741c9cfd00f40"
+        },
+        {
+          "path": "/home/maciejduranczyk/krakensdr_doa/_share/records/iq/18-Sep-2026_00h30m58s,IQ_433.868MHz,DOA_235.0.iq",
+          "name": "18-Sep-2026_00h30m58s,IQ_433.868MHz,DOA_235.0.iq",
+          "mtime_ns": 1789687858621554082,
+          "size_bytes": 349536,
+          "sha256": "5ac4b243c196b3c485a35c1da606a6523643c2b1820ccbf3e8fb9d76ffcaf059"
+        }
+      ]
+    },
+    {
+      "episode": 7,
+      "file_count": 5,
+      "start_time": "2026-09-18T00:31:11.283786+01:00",
+      "end_time": "2026-09-18T00:31:15.201187+01:00",
+      "span_seconds": 3.917401211,
+      "preceding_gap_seconds": 12.662231702,
+      "files": [
+        {
+          "path": "/home/maciejduranczyk/krakensdr_doa/_share/records/iq/18-Sep-2026_00h31m11s,IQ_433.868MHz,DOA_236.0.iq",
+          "name": "18-Sep-2026_00h31m11s,IQ_433.868MHz,DOA_236.0.iq",
+          "mtime_ns": 1789687871283785784,
+          "size_bytes": 699072,
+          "sha256": "7941aab9f02408658dfcce807a4e6d320272108729aa4760dc2e91cfa7672959"
+        },
+        {
+          "path": "/home/maciejduranczyk/krakensdr_doa/_share/records/iq/18-Sep-2026_00h31m12s,IQ_433.868MHz,DOA_235.0.iq",
+          "name": "18-Sep-2026_00h31m12s,IQ_433.868MHz,DOA_235.0.iq",
+          "mtime_ns": 1789687872158023964,
+          "size_bytes": 174768,
+          "sha256": "2bc7e4d6ad8d25c2da2e4e4fa00bf5211dd4bd295c13d28c28f48938c4cb0656"
+        },
+        {
+          "path": "/home/maciejduranczyk/krakensdr_doa/_share/records/iq/18-Sep-2026_00h31m13s,IQ_433.868MHz,DOA_235.0.iq",
+          "name": "18-Sep-2026_00h31m13s,IQ_433.868MHz,DOA_235.0.iq",
+          "mtime_ns": 1789687873032495209,
+          "size_bytes": 174768,
+          "sha256": "eb0cdf5032286878aa99827c7284619568898e6c204394da44fc987add3a771a"
+        },
+        {
+          "path": "/home/maciejduranczyk/krakensdr_doa/_share/records/iq/18-Sep-2026_00h31m14s,IQ_433.868MHz,DOA_235.0.iq",
+          "name": "18-Sep-2026_00h31m14s,IQ_433.868MHz,DOA_235.0.iq",
+          "mtime_ns": 1789687874350729129,
+          "size_bytes": 349536,
+          "sha256": "2d6f43e17a012389adb90bc078f4e113fb697d118e334c7962c7cab1c8e12226"
+        },
+        {
+          "path": "/home/maciejduranczyk/krakensdr_doa/_share/records/iq/18-Sep-2026_00h31m15s,IQ_433.868MHz,DOA_234.0.iq",
+          "name": "18-Sep-2026_00h31m15s,IQ_433.868MHz,DOA_234.0.iq",
+          "mtime_ns": 1789687875201186995,
+          "size_bytes": 174768,
+          "sha256": "253791b23bfb5c09a25f86843758901760479a70b4fa07bc47d1d55a2d59cdc1"
+        }
+      ]
+    },
+    {
+      "episode": 8,
+      "file_count": 4,
+      "start_time": "2026-09-18T00:31:29.190033+01:00",
+      "end_time": "2026-09-18T00:31:33.124817+01:00",
+      "span_seconds": 3.934783672,
+      "preceding_gap_seconds": 13.988846438,
+      "files": [
+        {
+          "path": "/home/maciejduranczyk/krakensdr_doa/_share/records/iq/18-Sep-2026_00h31m29s,IQ_433.868MHz,DOA_235.5.iq",
+          "name": "18-Sep-2026_00h31m29s,IQ_433.868MHz,DOA_235.5.iq",
+          "mtime_ns": 1789687889190033433,
+          "size_bytes": 699072,
+          "sha256": "4c494cd545939fbe7c72f2daffdfb7d5f4e5c95e4c3d043b0930ef52eddd34e9"
+        },
+        {
+          "path": "/home/maciejduranczyk/krakensdr_doa/_share/records/iq/18-Sep-2026_00h31m30s,IQ_433.868MHz,DOA_235.0.iq",
+          "name": "18-Sep-2026_00h31m30s,IQ_433.868MHz,DOA_235.0.iq",
+          "mtime_ns": 1789687890951120582,
+          "size_bytes": 174768,
+          "sha256": "ebc1c13058319319d587f6fce007c41e71f1ed67814572322344687ba889042b"
+        },
+        {
+          "path": "/home/maciejduranczyk/krakensdr_doa/_share/records/iq/18-Sep-2026_00h31m32s,IQ_433.868MHz,DOA_236.0.iq",
+          "name": "18-Sep-2026_00h31m32s,IQ_433.868MHz,DOA_236.0.iq",
+          "mtime_ns": 1789687892251396662,
+          "size_bytes": 174768,
+          "sha256": "c0c6ad4831766e6b381954bbc6e0326ed09cbde85e183c2c43e91786eb201283"
+        },
+        {
+          "path": "/home/maciejduranczyk/krakensdr_doa/_share/records/iq/18-Sep-2026_00h31m33s,IQ_433.868MHz,DOA_235.0.iq",
+          "name": "18-Sep-2026_00h31m33s,IQ_433.868MHz,DOA_235.0.iq",
+          "mtime_ns": 1789687893124817105,
+          "size_bytes": 174768,
+          "sha256": "0e52faf2816733d0aa4c0ba0d6f1cacbeb41629c32ee68d0e96b6329bae7e4e7"
+        }
+      ]
+    }
+  ]
+}
