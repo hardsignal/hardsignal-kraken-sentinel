@@ -164,3 +164,103 @@ experimental version.
 PRE-REGISTERED — implementation not yet created.
 
 Sensor 3 and Sensor 4 remain unseen by V3.
+
+---
+
+# Development Rule Selection
+
+Date: 17 September 2026
+
+The following parameters were selected using only the pre-registered
+Sensor 1 / Sensor 2 development dataset. Sensor 3 and Sensor 4 remained
+unseen.
+
+## Development observations
+
+The development set contained 30 candidate short events and 840
+pairwise spectral-spacing measurements.
+
+Nearest spacing to a measurement from another event showed:
+
+- median: 4.58 Hz
+- 75th percentile: 10.68 Hz
+- 90th percentile: 25.94 Hz
+- 95th percentile: 44.25 Hz
+- maximum: 218.20 Hz
+
+Major recurring spacing families were substantially shared by Sensor 1
+and Sensor 2. Examples included families near:
+
+- 1.372 kHz
+- 5.779 kHz
+- 7.129 kHz
+- 12.088 kHz
+- 12.901 kHz
+- 13.450 kHz
+- 18.787 kHz
+- 19.226 kHz
+
+These shared families may describe common signal structure and are not,
+by themselves, sensor-discriminating features.
+
+## Frozen family matching tolerance
+
+V3 family matching tolerance:
+
+    +/- 50 Hz
+
+The tolerance is fixed before Sensor 3 / Sensor 4 exposure.
+
+It is slightly larger than the observed 95th-percentile nearest-event
+spacing difference of 44.25 Hz.
+
+## Frozen within-sensor recurrence rule
+
+A spacing family is repeatable for a sensor only if it occurs in:
+
+    >= 60% of candidate short events
+
+in every independent development capture available for that sensor.
+
+For Sensor 1 this requirement must hold independently in both S1-A and
+S1-B.
+
+For Sensor 2 it must hold independently in S2-A, S2-B and S2-C.
+
+Pooling events across captures is not sufficient.
+
+## Frozen between-sensor discrimination rule
+
+A family is a candidate sensor-discriminating feature only if:
+
+1. it satisfies the >=60% repeatability requirement in every capture of
+   one sensor, and
+2. its recurrence remains <40% in every development capture of the
+   other sensor.
+
+Values between 40% and 60% are treated as an indeterminate overlap
+region and do not support discrimination.
+
+## Development interpretation rule
+
+Families satisfying the within-sensor criterion for both sensors are
+classified as shared signal structure.
+
+Families satisfying neither sensor's within-sensor criterion are
+classified as insufficiently repeatable.
+
+A family must not be promoted as discriminating merely because its
+pooled Sensor 1 and Sensor 2 recurrence percentages differ.
+
+## Methodological lock
+
+These tolerance and recurrence rules are now part of V3.
+
+They must not be changed after Sensor 3 or Sensor 4 is examined.
+
+If development analysis under these frozen rules produces no
+discriminating family, V3 will retain that negative development result
+rather than changing the thresholds.
+
+Any materially different family-matching or discrimination rule requires
+a new experimental version.
