@@ -370,3 +370,147 @@ Validation:
 Identity claim:
 
     NONE
+
+---
+
+# V3 Validation Protocol
+
+Date: 17 September 2026
+
+This protocol was defined before Sensor 3 or Sensor 4 was examined by
+the V3 method.
+
+## Validation target
+
+Only the development-selected family will be tested:
+
+    centre:     18679.81 Hz
+    tolerance:  +/- 50 Hz
+
+No additional spacing family may be selected from Sensor 3 or Sensor 4
+under V3.
+
+## Purpose of Sensor 3 and Sensor 4
+
+Sensor 3 and Sensor 4 are previously unseen negative/specificity
+validation sensors.
+
+They do not test repeatability of Sensor 1 itself.
+
+They test whether the S1 development candidate remains uncommon in
+previously unseen sensors.
+
+Therefore successful S3/S4 validation supports only out-of-development
+specificity of the candidate under the tested conditions. It does not
+establish unique device identity.
+
+## Acquisition structure
+
+For each validation sensor:
+
+    Sensor 3: two independent captures
+    Sensor 4: two independent captures
+
+Target:
+
+    >= 5 candidate short events per capture
+
+The existing frozen V1 event definition remains authoritative.
+
+Captures must not be combined merely to satisfy the event-count target.
+
+If a capture contains fewer than 5 candidate short events, it is
+insufficient for the primary V3 validation decision and may be repeated
+as a new capture without changing the V3 rules.
+
+All usable observations are retained.
+
+## Frozen validation decision rule
+
+For each independently acquired S3/S4 capture, calculate recurrence of
+the already-selected 18679.81 Hz family using the already-frozen
++/-50 Hz matching tolerance.
+
+The candidate passes the unseen-sensor specificity test only if:
+
+    recurrence < 40%
+
+in every sufficient S3 and S4 validation capture.
+
+The threshold is strict.
+
+Examples:
+
+    0/5 =  0%  -> below threshold
+    1/5 = 20%  -> below threshold
+    2/5 = 40%  -> NOT below threshold
+
+With other event counts, the percentage rule remains authoritative.
+
+## Validation outcomes
+
+PASS:
+
+The 18679.81 Hz family remains below 40% recurrence in every sufficient
+S3 and S4 validation capture.
+
+Interpretation:
+
+The development-selected candidate demonstrated out-of-development
+specificity against the two reserved sensors under the tested
+conditions.
+
+This does not establish unique sensor identity.
+
+FAIL:
+
+The family reaches or exceeds 40% recurrence in any sufficient S3 or S4
+validation capture.
+
+Interpretation:
+
+The candidate failed the pre-defined unseen-sensor specificity test.
+
+The negative result is retained without modifying V3.
+
+INCONCLUSIVE:
+
+One or more required validation captures contains fewer than 5
+candidate short events and no sufficient replacement capture has yet
+been obtained.
+
+No pass/fail conclusion is made until the acquisition requirement is
+satisfied or the experiment is explicitly closed as incomplete.
+
+## Prohibited post-validation changes
+
+After the first S3 or S4 V3 result is examined, V3 must not change:
+
+- 18679.81 Hz candidate centre
+- +/-50 Hz tolerance
+- 40% unseen-sensor threshold
+- V1 event definition
+- V3 extractor
+- family construction method
+- validation interpretation rule
+
+Any materially changed method becomes a new experimental version.
+
+## Identity limitation
+
+Even a validation PASS does not demonstrate a unique RF fingerprint.
+
+The result would show only that one pre-selected relative spectral
+family separated S1 development captures from S2 development captures
+and remained uncommon in the reserved S3/S4 sensors under the tested
+conditions.
+
+Further positive repeatability testing of S1 across independently
+acquired sessions and broader testing across additional sensors and
+conditions would be required before stronger fingerprinting claims.
+
+## Validation status
+
+    PROTOCOL FROZEN
+    S3 NOT EXAMINED
+    S4 NOT EXAMINED
