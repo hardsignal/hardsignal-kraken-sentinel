@@ -1,0 +1,1671 @@
+{
+  "capture_id": "PIPELINE-TPMS-005-20260917-235439",
+  "episode_count": 5,
+  "episodes": [
+    {
+      "episode": 1,
+      "filesystem_span_seconds": 4.373811401,
+      "fragment_count": 5,
+      "fragment_duration_seconds": {
+        "iqr": 0.43692,
+        "mad": 0.0,
+        "max": 1.74768,
+        "median": 0.43692,
+        "min": 0.43692,
+        "range": 1.31076
+      },
+      "fragments": [
+        {
+          "adjacent_peak_spacings_hz": [
+            16.78466796875,
+            4.57763671875,
+            28.99169921875,
+            4.57763671875
+          ],
+          "duration_seconds": 1.74768,
+          "nfft": 16384,
+          "normalized_spectral_entropy": 0.8380452782694527,
+          "occupied_width_90_hz": 20500.183105468746,
+          "path": "/home/maciejduranczyk/krakensdr_doa/_share/records/iq/17-Sep-2026_23h56m21s,IQ_433.868MHz,DOA_237.5.iq",
+          "peaks": [
+            {
+              "frequency_hz": -5186.462402343749,
+              "normalized_power": 0.004301909181926597
+            },
+            {
+              "frequency_hz": -5191.040039062499,
+              "normalized_power": 0.004060767104358017
+            },
+            {
+              "frequency_hz": -5207.824707031249,
+              "normalized_power": 0.0038637324316985982
+            },
+            {
+              "frequency_hz": -5152.893066406249,
+              "normalized_power": 0.0038299121310516756
+            },
+            {
+              "frequency_hz": -5157.470703124999,
+              "normalized_power": 0.003786369752964425
+            }
+          ],
+          "relative_peak_offsets_hz": [
+            -21.3623046875,
+            -4.57763671875,
+            28.99169921875,
+            33.5693359375
+          ],
+          "samples": 43692,
+          "selected_peak_count": 5,
+          "size_bytes": 699072,
+          "spectral_centroid_hz": -1929.226549900959,
+          "spectral_spread_hz": 6038.226043868513,
+          "strongest_peak_frequency_hz": -5186.462402343749,
+          "strongest_peak_normalized_power": 0.004301909181926597
+        },
+        {
+          "adjacent_peak_spacings_hz": [
+            7.62939453125,
+            10.68115234375,
+            10.68115234375,
+            9.1552734375
+          ],
+          "duration_seconds": 0.43692,
+          "nfft": 16384,
+          "normalized_spectral_entropy": 0.7261627251480839,
+          "occupied_width_90_hz": 17481.994628906246,
+          "path": "/home/maciejduranczyk/krakensdr_doa/_share/records/iq/17-Sep-2026_23h56m22s,IQ_433.868MHz,DOA_238.0.iq",
+          "peaks": [
+            {
+              "frequency_hz": -5178.833007812499,
+              "normalized_power": 0.006148314857185866
+            },
+            {
+              "frequency_hz": -5189.514160156249,
+              "normalized_power": 0.006139715185925064
+            },
+            {
+              "frequency_hz": -5169.677734374999,
+              "normalized_power": 0.006038837211613152
+            },
+            {
+              "frequency_hz": -5200.195312499999,
+              "normalized_power": 0.006028559209726256
+            },
+            {
+              "frequency_hz": -5207.824707031249,
+              "normalized_power": 0.005945138865515377
+            }
+          ],
+          "relative_peak_offsets_hz": [
+            -28.99169921875,
+            -21.3623046875,
+            -10.68115234375,
+            9.1552734375
+          ],
+          "samples": 10923,
+          "selected_peak_count": 5,
+          "size_bytes": 174768,
+          "spectral_centroid_hz": -3179.811992808563,
+          "spectral_spread_hz": 5175.879993399908,
+          "strongest_peak_frequency_hz": -5178.833007812499,
+          "strongest_peak_normalized_power": 0.006148314857185866
+        },
+        {
+          "adjacent_peak_spacings_hz": [
+            12.20703125,
+            4.57763671875,
+            4.57763671875,
+            4.57763671875
+          ],
+          "duration_seconds": 0.43692,
+          "nfft": 16384,
+          "normalized_spectral_entropy": 0.8256968404585188,
+          "occupied_width_90_hz": 20700.073242187496,
+          "path": "/home/maciejduranczyk/krakensdr_doa/_share/records/iq/17-Sep-2026_23h56m23s,IQ_433.868MHz,DOA_237.0.iq",
+          "peaks": [
+            {
+              "frequency_hz": -5192.565917968749,
+              "normalized_power": 0.00504013034238205
+            },
+            {
+              "frequency_hz": -5187.988281249999,
+              "normalized_power": 0.00491828869581558
+            },
+            {
+              "frequency_hz": -5197.143554687499,
+              "normalized_power": 0.004821529024400944
+            },
+            {
+              "frequency_hz": -5209.350585937499,
+              "normalized_power": 0.0047935479251100446
+            },
+            {
+              "frequency_hz": -5183.410644531249,
+              "normalized_power": 0.004668237930196303
+            }
+          ],
+          "relative_peak_offsets_hz": [
+            -16.78466796875,
+            -4.57763671875,
+            4.57763671875,
+            9.1552734375
+          ],
+          "samples": 10923,
+          "selected_peak_count": 5,
+          "size_bytes": 174768,
+          "spectral_centroid_hz": -2136.8773496642125,
+          "spectral_spread_hz": 6003.12406851705,
+          "strongest_peak_frequency_hz": -5192.565917968749,
+          "strongest_peak_normalized_power": 0.00504013034238205
+        },
+        {
+          "adjacent_peak_spacings_hz": [
+            4.57763671875,
+            4.57763671875,
+            6.103515625,
+            9.1552734375
+          ],
+          "duration_seconds": 0.43692,
+          "nfft": 16384,
+          "normalized_spectral_entropy": 0.7329191144176951,
+          "occupied_width_90_hz": 19680.786132812496,
+          "path": "/home/maciejduranczyk/krakensdr_doa/_share/records/iq/17-Sep-2026_23h56m24s,IQ_433.868MHz,DOA_237.0.iq",
+          "peaks": [
+            {
+              "frequency_hz": -5191.040039062499,
+              "normalized_power": 0.00617137953795836
+            },
+            {
+              "frequency_hz": -5184.936523437499,
+              "normalized_power": 0.006135992712013412
+            },
+            {
+              "frequency_hz": -5195.617675781249,
+              "normalized_power": 0.006127469038147773
+            },
+            {
+              "frequency_hz": -5200.195312499999,
+              "normalized_power": 0.006039611357493734
+            },
+            {
+              "frequency_hz": -5175.781249999999,
+              "normalized_power": 0.005967240555669822
+            }
+          ],
+          "relative_peak_offsets_hz": [
+            -9.1552734375,
+            -4.57763671875,
+            6.103515625,
+            15.2587890625
+          ],
+          "samples": 10923,
+          "selected_peak_count": 5,
+          "size_bytes": 174768,
+          "spectral_centroid_hz": -3119.2670444059977,
+          "spectral_spread_hz": 5319.361751243139,
+          "strongest_peak_frequency_hz": -5191.040039062499,
+          "strongest_peak_normalized_power": 0.00617137953795836
+        },
+        {
+          "adjacent_peak_spacings_hz": [
+            18.310546875,
+            15.2587890625,
+            16.78466796875,
+            16.78466796875
+          ],
+          "duration_seconds": 0.87384,
+          "nfft": 16384,
+          "normalized_spectral_entropy": 0.6608512665797314,
+          "occupied_width_90_hz": 19256.591796874996,
+          "path": "/home/maciejduranczyk/krakensdr_doa/_share/records/iq/17-Sep-2026_23h56m25s,IQ_433.868MHz,DOA_237.0.iq",
+          "peaks": [
+            {
+              "frequency_hz": -5184.936523437499,
+              "normalized_power": 0.029052204116614355
+            },
+            {
+              "frequency_hz": -5168.151855468749,
+              "normalized_power": 0.027926116382212908
+            },
+            {
+              "frequency_hz": -5200.195312499999,
+              "normalized_power": 0.022934831343683067
+            },
+            {
+              "frequency_hz": -5151.367187499999,
+              "normalized_power": 0.013695634101029646
+            },
+            {
+              "frequency_hz": -5218.505859374999,
+              "normalized_power": 0.012976585032585667
+            }
+          ],
+          "relative_peak_offsets_hz": [
+            -33.5693359375,
+            -15.2587890625,
+            16.78466796875,
+            33.5693359375
+          ],
+          "samples": 21846,
+          "selected_peak_count": 5,
+          "size_bytes": 349536,
+          "spectral_centroid_hz": -3727.1363902750013,
+          "spectral_spread_hz": 4918.4541074874805,
+          "strongest_peak_frequency_hz": -5184.936523437499,
+          "strongest_peak_normalized_power": 0.029052204116614355
+        }
+      ],
+      "inter_fragment_gap_seconds": {
+        "iqr": 0.42575364674999994,
+        "mad": 0.21140067149999997,
+        "max": 1.326295011,
+        "median": 1.0873544019999999,
+        "min": 0.872807586,
+        "range": 0.45348742500000006
+      },
+      "median_adjacent_peak_spacing_hz": {
+        "iqr": 5.340576171875,
+        "mad": 4.57763671875,
+        "max": 16.78466796875,
+        "median": 9.918212890625,
+        "min": 4.57763671875,
+        "range": 12.20703125
+      },
+      "nearest_relative_peak_offset_abs_hz": {
+        "iqr": 4.57763671875,
+        "mad": 0.0,
+        "max": 15.2587890625,
+        "median": 4.57763671875,
+        "min": 4.57763671875,
+        "range": 10.68115234375
+      },
+      "normalized_spectral_entropy": {
+        "iqr": 0.09953411531043488,
+        "mad": 0.07206784783796372,
+        "max": 0.8380452782694527,
+        "median": 0.7329191144176951,
+        "min": 0.6608512665797314,
+        "range": 0.17719401168972138
+      },
+      "occupied_width_90_hz": {
+        "iqr": 1243.59130859375,
+        "mad": 819.39697265625,
+        "max": 20700.073242187496,
+        "median": 19680.786132812496,
+        "min": 17481.994628906246,
+        "range": 3218.07861328125
+      },
+      "preceding_gap_seconds": null,
+      "spectral_centroid_hz": {
+        "iqr": 1042.9346431443505,
+        "mad": 607.8693458690036,
+        "max": -1929.226549900959,
+        "median": -3119.2670444059977,
+        "min": -3727.1363902750013,
+        "range": 1797.9098403740422
+      },
+      "spectral_spread_hz": {
+        "iqr": 827.2440751171416,
+        "mad": 400.9076437556587,
+        "max": 6038.226043868513,
+        "median": 5319.361751243139,
+        "min": 4918.4541074874805,
+        "range": 1119.771936381033
+      },
+      "strongest_peak_normalized_power": {
+        "iqr": 0.0011312491955763103,
+        "mad": 0.0011081845148038158,
+        "max": 0.029052204116614355,
+        "median": 0.006148314857185866,
+        "min": 0.004301909181926597,
+        "range": 0.024750294934687757
+      },
+      "total_iq_duration_seconds": 3.9322799999999996,
+      "total_samples": 98307
+    },
+    {
+      "episode": 2,
+      "filesystem_span_seconds": 3.932344092,
+      "fragment_count": 5,
+      "fragment_duration_seconds": {
+        "iqr": 0.0,
+        "mad": 0.0,
+        "max": 1.74768,
+        "median": 0.43692,
+        "min": 0.43692,
+        "range": 1.31076
+      },
+      "fragments": [
+        {
+          "adjacent_peak_spacings_hz": [
+            48.828125,
+            7.62939453125,
+            6.103515625,
+            15.2587890625
+          ],
+          "duration_seconds": 1.74768,
+          "nfft": 16384,
+          "normalized_spectral_entropy": 0.9298219688408879,
+          "occupied_width_90_hz": 21545.410156249996,
+          "path": "/home/maciejduranczyk/krakensdr_doa/_share/records/iq/17-Sep-2026_23h56m39s,IQ_433.868MHz,DOA_237.5.iq",
+          "peaks": [
+            {
+              "frequency_hz": -5169.677734374999,
+              "normalized_power": 0.002080647219177761
+            },
+            {
+              "frequency_hz": -5191.040039062499,
+              "normalized_power": 0.0019897913434076676
+            },
+            {
+              "frequency_hz": -5198.669433593749,
+              "normalized_power": 0.001983468448965885
+            },
+            {
+              "frequency_hz": -5184.936523437499,
+              "normalized_power": 0.001969406521983891
+            },
+            {
+              "frequency_hz": -5247.497558593749,
+              "normalized_power": 0.0018514639520493346
+            }
+          ],
+          "relative_peak_offsets_hz": [
+            -77.81982421875,
+            -28.99169921875,
+            -21.3623046875,
+            -15.2587890625
+          ],
+          "samples": 43692,
+          "selected_peak_count": 5,
+          "size_bytes": 699072,
+          "spectral_centroid_hz": -647.5260690185955,
+          "spectral_spread_hz": 6653.682644080539,
+          "strongest_peak_frequency_hz": -5169.677734374999,
+          "strongest_peak_normalized_power": 0.002080647219177761
+        },
+        {
+          "adjacent_peak_spacings_hz": [
+            9.1552734375,
+            7.62939453125,
+            9.1552734375,
+            256.34765625
+          ],
+          "duration_seconds": 0.43692,
+          "nfft": 16384,
+          "normalized_spectral_entropy": 0.7241930398538116,
+          "occupied_width_90_hz": 18572.998046874996,
+          "path": "/home/maciejduranczyk/krakensdr_doa/_share/records/iq/17-Sep-2026_23h56m40s,IQ_433.868MHz,DOA_238.0.iq",
+          "peaks": [
+            {
+              "frequency_hz": -5186.462402343749,
+              "normalized_power": 0.006236448747118111
+            },
+            {
+              "frequency_hz": -5194.091796874999,
+              "normalized_power": 0.006162190407973315
+            },
+            {
+              "frequency_hz": -5203.247070312499,
+              "normalized_power": 0.0061230338577375615
+            },
+            {
+              "frequency_hz": -5177.307128906249,
+              "normalized_power": 0.006096918210777804
+            },
+            {
+              "frequency_hz": -4920.959472656249,
+              "normalized_power": 0.00037878722643949303
+            }
+          ],
+          "relative_peak_offsets_hz": [
+            -16.78466796875,
+            -7.62939453125,
+            9.1552734375,
+            265.5029296875
+          ],
+          "samples": 10923,
+          "selected_peak_count": 5,
+          "size_bytes": 174768,
+          "spectral_centroid_hz": -3439.4739892598927,
+          "spectral_spread_hz": 5024.96691376605,
+          "strongest_peak_frequency_hz": -5186.462402343749,
+          "strongest_peak_normalized_power": 0.006236448747118111
+        },
+        {
+          "adjacent_peak_spacings_hz": [
+            13.73291015625,
+            4.57763671875,
+            12.20703125,
+            6.103515625
+          ],
+          "duration_seconds": 0.43692,
+          "nfft": 16384,
+          "normalized_spectral_entropy": 0.742699469703803,
+          "occupied_width_90_hz": 18850.708007812496,
+          "path": "/home/maciejduranczyk/krakensdr_doa/_share/records/iq/17-Sep-2026_23h56m41s,IQ_433.868MHz,DOA_238.0.iq",
+          "peaks": [
+            {
+              "frequency_hz": -5195.617675781249,
+              "normalized_power": 0.00604523839869369
+            },
+            {
+              "frequency_hz": -5178.833007812499,
+              "normalized_power": 0.006044777001683616
+            },
+            {
+              "frequency_hz": -5191.040039062499,
+              "normalized_power": 0.005950135542485119
+            },
+            {
+              "frequency_hz": -5172.729492187499,
+              "normalized_power": 0.005886321096103164
+            },
+            {
+              "frequency_hz": -5209.350585937499,
+              "normalized_power": 0.005787661169870677
+            }
+          ],
+          "relative_peak_offsets_hz": [
+            -13.73291015625,
+            4.57763671875,
+            16.78466796875,
+            22.88818359375
+          ],
+          "samples": 10923,
+          "selected_peak_count": 5,
+          "size_bytes": 174768,
+          "spectral_centroid_hz": -2833.2387664936787,
+          "spectral_spread_hz": 5502.502777546464,
+          "strongest_peak_frequency_hz": -5195.617675781249,
+          "strongest_peak_normalized_power": 0.00604523839869369
+        },
+        {
+          "adjacent_peak_spacings_hz": [
+            10.68115234375,
+            4.57763671875,
+            6.103515625,
+            7.62939453125
+          ],
+          "duration_seconds": 0.43692,
+          "nfft": 16384,
+          "normalized_spectral_entropy": 0.7790537951754815,
+          "occupied_width_90_hz": 19223.022460937496,
+          "path": "/home/maciejduranczyk/krakensdr_doa/_share/records/iq/17-Sep-2026_23h56m42s,IQ_433.868MHz,DOA_238.0.iq",
+          "peaks": [
+            {
+              "frequency_hz": -5186.462402343749,
+              "normalized_power": 0.005747277193017427
+            },
+            {
+              "frequency_hz": -5180.358886718749,
+              "normalized_power": 0.005737838854674178
+            },
+            {
+              "frequency_hz": -5172.729492187499,
+              "normalized_power": 0.005609261946306124
+            },
+            {
+              "frequency_hz": -5201.721191406249,
+              "normalized_power": 0.005527417128252495
+            },
+            {
+              "frequency_hz": -5191.040039062499,
+              "normalized_power": 0.0054089517223529365
+            }
+          ],
+          "relative_peak_offsets_hz": [
+            -15.2587890625,
+            -4.57763671875,
+            6.103515625,
+            13.73291015625
+          ],
+          "samples": 10923,
+          "selected_peak_count": 5,
+          "size_bytes": 174768,
+          "spectral_centroid_hz": -2910.010026791159,
+          "spectral_spread_hz": 5483.145598807838,
+          "strongest_peak_frequency_hz": -5186.462402343749,
+          "strongest_peak_normalized_power": 0.005747277193017427
+        },
+        {
+          "adjacent_peak_spacings_hz": [
+            15.2587890625,
+            15.2587890625,
+            15.2587890625,
+            15.2587890625
+          ],
+          "duration_seconds": 0.43692,
+          "nfft": 16384,
+          "normalized_spectral_entropy": 0.6229087750825414,
+          "occupied_width_90_hz": 19175.720214843746,
+          "path": "/home/maciejduranczyk/krakensdr_doa/_share/records/iq/17-Sep-2026_23h56m43s,IQ_433.868MHz,DOA_238.0.iq",
+          "peaks": [
+            {
+              "frequency_hz": -5198.669433593749,
+              "normalized_power": 0.03705122498676439
+            },
+            {
+              "frequency_hz": -5183.410644531249,
+              "normalized_power": 0.035738250612131164
+            },
+            {
+              "frequency_hz": -5213.928222656249,
+              "normalized_power": 0.03049319611016381
+            },
+            {
+              "frequency_hz": -5168.151855468749,
+              "normalized_power": 0.027728449600340342
+            },
+            {
+              "frequency_hz": -5229.187011718749,
+              "normalized_power": 0.019437936226041317
+            }
+          ],
+          "relative_peak_offsets_hz": [
+            -30.517578125,
+            -15.2587890625,
+            15.2587890625,
+            30.517578125
+          ],
+          "samples": 10923,
+          "selected_peak_count": 5,
+          "size_bytes": 174768,
+          "spectral_centroid_hz": -3969.0788890737003,
+          "spectral_spread_hz": 4755.958741213334,
+          "strongest_peak_frequency_hz": -5198.669433593749,
+          "strongest_peak_normalized_power": 0.03705122498676439
+        }
+      ],
+      "inter_fragment_gap_seconds": {
+        "iqr": 0.111915828,
+        "mad": 0.007870325000000011,
+        "max": 1.3106632,
+        "median": 0.8791155155,
+        "min": 0.863449861,
+        "range": 0.44721333900000004
+      },
+      "median_adjacent_peak_spacing_hz": {
+        "iqr": 2.288818359375,
+        "mad": 2.288818359375,
+        "max": 15.2587890625,
+        "median": 9.1552734375,
+        "min": 6.866455078125,
+        "range": 8.392333984375
+      },
+      "nearest_relative_peak_offset_abs_hz": {
+        "iqr": 10.68115234375,
+        "mad": 3.0517578125,
+        "max": 15.2587890625,
+        "median": 7.62939453125,
+        "min": 4.57763671875,
+        "range": 10.68115234375
+      },
+      "normalized_spectral_entropy": {
+        "iqr": 0.054860755321669896,
+        "mad": 0.036354325471678495,
+        "max": 0.9298219688408879,
+        "median": 0.742699469703803,
+        "min": 0.6229087750825414,
+        "range": 0.30691319375834647
+      },
+      "occupied_width_90_hz": {
+        "iqr": 372.314453125,
+        "mad": 325.01220703125,
+        "max": 21545.410156249996,
+        "median": 19175.720214843746,
+        "min": 18572.998046874996,
+        "range": 2972.412109375
+      },
+      "preceding_gap_seconds": 13.543119933,
+      "spectral_centroid_hz": {
+        "iqr": 606.2352227662141,
+        "mad": 529.4639624687338,
+        "max": -647.5260690185955,
+        "median": -2910.010026791159,
+        "min": -3969.0788890737003,
+        "range": 3321.552820055105
+      },
+      "spectral_spread_hz": {
+        "iqr": 477.5358637804138,
+        "mad": 458.1786850417875,
+        "max": 6653.682644080539,
+        "median": 5483.145598807838,
+        "min": 4755.958741213334,
+        "range": 1897.7239028672047
+      },
+      "strongest_peak_normalized_power": {
+        "iqr": 0.0004891715541006838,
+        "mad": 0.0002979612056762627,
+        "max": 0.03705122498676439,
+        "median": 0.00604523839869369,
+        "min": 0.002080647219177761,
+        "range": 0.03497057776758663
+      },
+      "total_iq_duration_seconds": 3.49536,
+      "total_samples": 87384
+    },
+    {
+      "episode": 3,
+      "filesystem_span_seconds": 4.353053683,
+      "fragment_count": 5,
+      "fragment_duration_seconds": {
+        "iqr": 0.43692,
+        "mad": 0.0,
+        "max": 1.74768,
+        "median": 0.43692,
+        "min": 0.43692,
+        "range": 1.31076
+      },
+      "fragments": [
+        {
+          "adjacent_peak_spacings_hz": [
+            27.4658203125,
+            6.103515625,
+            7.62939453125,
+            4.57763671875
+          ],
+          "duration_seconds": 1.74768,
+          "nfft": 16384,
+          "normalized_spectral_entropy": 0.8727688201924917,
+          "occupied_width_90_hz": 21023.559570312496,
+          "path": "/home/maciejduranczyk/krakensdr_doa/_share/records/iq/17-Sep-2026_23h56m57s,IQ_433.868MHz,DOA_237.5.iq",
+          "peaks": [
+            {
+              "frequency_hz": -5177.307128906249,
+              "normalized_power": 0.003502310524757387
+            },
+            {
+              "frequency_hz": -5189.514160156249,
+              "normalized_power": 0.0033798764859279394
+            },
+            {
+              "frequency_hz": -5195.617675781249,
+              "normalized_power": 0.0033210831872858273
+            },
+            {
+              "frequency_hz": -5223.083496093749,
+              "normalized_power": 0.0032606647154713674
+            },
+            {
+              "frequency_hz": -5181.884765624999,
+              "normalized_power": 0.003219789353893787
+            }
+          ],
+          "relative_peak_offsets_hz": [
+            -45.7763671875,
+            -18.310546875,
+            -12.20703125,
+            -4.57763671875
+          ],
+          "samples": 43692,
+          "selected_peak_count": 5,
+          "size_bytes": 699072,
+          "spectral_centroid_hz": -1469.1474661557945,
+          "spectral_spread_hz": 6360.053333583243,
+          "strongest_peak_frequency_hz": -5177.307128906249,
+          "strongest_peak_normalized_power": 0.003502310524757387
+        },
+        {
+          "adjacent_peak_spacings_hz": [
+            9.1552734375,
+            10.68115234375,
+            6.103515625,
+            12.20703125
+          ],
+          "duration_seconds": 0.43692,
+          "nfft": 16384,
+          "normalized_spectral_entropy": 0.7252486443126405,
+          "occupied_width_90_hz": 18104.553222656246,
+          "path": "/home/maciejduranczyk/krakensdr_doa/_share/records/iq/17-Sep-2026_23h56m58s,IQ_433.868MHz,DOA_238.0.iq",
+          "peaks": [
+            {
+              "frequency_hz": -5194.091796874999,
+              "normalized_power": 0.0061917895561147416
+            },
+            {
+              "frequency_hz": -5204.772949218749,
+              "normalized_power": 0.006126321185454782
+            },
+            {
+              "frequency_hz": -5187.988281249999,
+              "normalized_power": 0.0060683473817921725
+            },
+            {
+              "frequency_hz": -5213.928222656249,
+              "normalized_power": 0.005954269925042839
+            },
+            {
+              "frequency_hz": -5175.781249999999,
+              "normalized_power": 0.005917202911195829
+            }
+          ],
+          "relative_peak_offsets_hz": [
+            -19.83642578125,
+            -10.68115234375,
+            6.103515625,
+            18.310546875
+          ],
+          "samples": 10923,
+          "selected_peak_count": 5,
+          "size_bytes": 174768,
+          "spectral_centroid_hz": -3455.5991512447736,
+          "spectral_spread_hz": 4969.260948295283,
+          "strongest_peak_frequency_hz": -5194.091796874999,
+          "strongest_peak_normalized_power": 0.0061917895561147416
+        },
+        {
+          "adjacent_peak_spacings_hz": [
+            7.62939453125,
+            10.68115234375,
+            19.83642578125,
+            25.93994140625
+          ],
+          "duration_seconds": 0.43692,
+          "nfft": 16384,
+          "normalized_spectral_entropy": 0.8892109770618978,
+          "occupied_width_90_hz": 21325.683593749996,
+          "path": "/home/maciejduranczyk/krakensdr_doa/_share/records/iq/17-Sep-2026_23h56m59s,IQ_433.868MHz,DOA_238.0.iq",
+          "peaks": [
+            {
+              "frequency_hz": -5226.135253906249,
+              "normalized_power": 0.0036777351987227766
+            },
+            {
+              "frequency_hz": -5218.505859374999,
+              "normalized_power": 0.0035835421459174312
+            },
+            {
+              "frequency_hz": -5162.048339843749,
+              "normalized_power": 0.003434700738171385
+            },
+            {
+              "frequency_hz": -5207.824707031249,
+              "normalized_power": 0.003422550056173252
+            },
+            {
+              "frequency_hz": -5187.988281249999,
+              "normalized_power": 0.0033677959649806273
+            }
+          ],
+          "relative_peak_offsets_hz": [
+            7.62939453125,
+            18.310546875,
+            38.14697265625,
+            64.0869140625
+          ],
+          "samples": 10923,
+          "selected_peak_count": 5,
+          "size_bytes": 174768,
+          "spectral_centroid_hz": -1366.2787208161653,
+          "spectral_spread_hz": 6415.881096440992,
+          "strongest_peak_frequency_hz": -5226.135253906249,
+          "strongest_peak_normalized_power": 0.0036777351987227766
+        },
+        {
+          "adjacent_peak_spacings_hz": [
+            7.62939453125,
+            12.20703125,
+            4.57763671875,
+            6.103515625
+          ],
+          "duration_seconds": 0.43692,
+          "nfft": 16384,
+          "normalized_spectral_entropy": 0.7318780950801805,
+          "occupied_width_90_hz": 18321.228027343746,
+          "path": "/home/maciejduranczyk/krakensdr_doa/_share/records/iq/17-Sep-2026_23h57m00s,IQ_433.868MHz,DOA_238.0.iq",
+          "peaks": [
+            {
+              "frequency_hz": -5187.988281249999,
+              "normalized_power": 0.006204242666396659
+            },
+            {
+              "frequency_hz": -5200.195312499999,
+              "normalized_power": 0.0061959797021912824
+            },
+            {
+              "frequency_hz": -5207.824707031249,
+              "normalized_power": 0.006061104510667477
+            },
+            {
+              "frequency_hz": -5177.307128906249,
+              "normalized_power": 0.006049990621131143
+            },
+            {
+              "frequency_hz": -5183.410644531249,
+              "normalized_power": 0.00600333193484099
+            }
+          ],
+          "relative_peak_offsets_hz": [
+            -19.83642578125,
+            -12.20703125,
+            4.57763671875,
+            10.68115234375
+          ],
+          "samples": 10923,
+          "selected_peak_count": 5,
+          "size_bytes": 174768,
+          "spectral_centroid_hz": -3462.072408712049,
+          "spectral_spread_hz": 5013.681361440269,
+          "strongest_peak_frequency_hz": -5187.988281249999,
+          "strongest_peak_normalized_power": 0.006204242666396659
+        },
+        {
+          "adjacent_peak_spacings_hz": [
+            16.78466796875,
+            13.73291015625,
+            15.2587890625,
+            16.78466796875
+          ],
+          "duration_seconds": 0.87384,
+          "nfft": 16384,
+          "normalized_spectral_entropy": 0.6323593385292047,
+          "occupied_width_90_hz": 19233.703613281246,
+          "path": "/home/maciejduranczyk/krakensdr_doa/_share/records/iq/17-Sep-2026_23h57m01s,IQ_433.868MHz,DOA_238.5.iq",
+          "peaks": [
+            {
+              "frequency_hz": -5178.833007812499,
+              "normalized_power": 0.04172397891877514
+            },
+            {
+              "frequency_hz": -5194.091796874999,
+              "normalized_power": 0.03664401078110125
+            },
+            {
+              "frequency_hz": -5162.048339843749,
+              "normalized_power": 0.03300714979517105
+            },
+            {
+              "frequency_hz": -5224.609374999999,
+              "normalized_power": 0.02778900037569405
+            },
+            {
+              "frequency_hz": -5207.824707031249,
+              "normalized_power": 0.027209965754300475
+            }
+          ],
+          "relative_peak_offsets_hz": [
+            -45.7763671875,
+            -28.99169921875,
+            -15.2587890625,
+            16.78466796875
+          ],
+          "samples": 21846,
+          "selected_peak_count": 5,
+          "size_bytes": 349536,
+          "spectral_centroid_hz": -3699.671038915518,
+          "spectral_spread_hz": 4925.191851883476,
+          "strongest_peak_frequency_hz": -5178.833007812499,
+          "strongest_peak_normalized_power": 0.04172397891877514
+        }
+      ],
+      "inter_fragment_gap_seconds": {
+        "iqr": 0.4354420162500001,
+        "mad": 0.21850189199999998,
+        "max": 1.314635353,
+        "median": 1.091417557,
+        "min": 0.855583216,
+        "range": 0.4590521369999999
+      },
+      "median_adjacent_peak_spacing_hz": {
+        "iqr": 8.392333984375,
+        "mad": 3.0517578125,
+        "max": 16.021728515625,
+        "median": 9.918212890625,
+        "min": 6.866455078125,
+        "range": 9.1552734375
+      },
+      "nearest_relative_peak_offset_abs_hz": {
+        "iqr": 3.0517578125,
+        "mad": 1.52587890625,
+        "max": 15.2587890625,
+        "median": 6.103515625,
+        "min": 4.57763671875,
+        "range": 10.68115234375
+      },
+      "normalized_spectral_entropy": {
+        "iqr": 0.14752017587985122,
+        "mad": 0.09951875655097586,
+        "max": 0.8892109770618978,
+        "median": 0.7318780950801805,
+        "min": 0.6323593385292047,
+        "range": 0.2568516385326931
+      },
+      "occupied_width_90_hz": {
+        "iqr": 2702.33154296875,
+        "mad": 1129.150390625,
+        "max": 21325.683593749996,
+        "median": 19233.703613281246,
+        "min": 18104.553222656246,
+        "range": 3221.13037109375
+      },
+      "preceding_gap_seconds": 13.997092701,
+      "spectral_centroid_hz": {
+        "iqr": 1992.9249425562543,
+        "mad": 244.07188767074422,
+        "max": -1366.2787208161653,
+        "median": -3455.5991512447736,
+        "min": -3699.671038915518,
+        "range": 2333.3923180993525
+      },
+      "spectral_spread_hz": {
+        "iqr": 1390.7923852879603,
+        "mad": 88.48950955679265,
+        "max": 6415.881096440992,
+        "median": 5013.681361440269,
+        "min": 4925.191851883476,
+        "range": 1490.6892445575158
+      },
+      "strongest_peak_normalized_power": {
+        "iqr": 0.002526507467673882,
+        "mad": 0.002514054357391965,
+        "max": 0.04172397891877514,
+        "median": 0.0061917895561147416,
+        "min": 0.003502310524757387,
+        "range": 0.038221668394017756
+      },
+      "total_iq_duration_seconds": 3.9322799999999996,
+      "total_samples": 98307
+    },
+    {
+      "episode": 4,
+      "filesystem_span_seconds": 5.633113148,
+      "fragment_count": 6,
+      "fragment_duration_seconds": {
+        "iqr": 0.32769000000000004,
+        "mad": 0.0,
+        "max": 0.87384,
+        "median": 0.43692,
+        "min": 0.43692,
+        "range": 0.43692
+      },
+      "fragments": [
+        {
+          "adjacent_peak_spacings_hz": [
+            6.103515625,
+            12.20703125,
+            12.20703125,
+            9.1552734375
+          ],
+          "duration_seconds": 0.43692,
+          "nfft": 16384,
+          "normalized_spectral_entropy": 0.7371961607025584,
+          "occupied_width_90_hz": 18548.583984374996,
+          "path": "/home/maciejduranczyk/krakensdr_doa/_share/records/iq/17-Sep-2026_23h57m14s,IQ_433.868MHz,DOA_236.0.iq",
+          "peaks": [
+            {
+              "frequency_hz": -5200.195312499999,
+              "normalized_power": 0.005264586606718443
+            },
+            {
+              "frequency_hz": -5218.505859374999,
+              "normalized_power": 0.005114890622896681
+            },
+            {
+              "frequency_hz": -5212.402343749999,
+              "normalized_power": 0.005098797521032838
+            },
+            {
+              "frequency_hz": -5187.988281249999,
+              "normalized_power": 0.005065501876176076
+            },
+            {
+              "frequency_hz": -5178.833007812499,
+              "normalized_power": 0.005008686816474129
+            }
+          ],
+          "relative_peak_offsets_hz": [
+            -18.310546875,
+            -12.20703125,
+            12.20703125,
+            21.3623046875
+          ],
+          "samples": 10923,
+          "selected_peak_count": 5,
+          "size_bytes": 174768,
+          "spectral_centroid_hz": -3463.243710688361,
+          "spectral_spread_hz": 4970.916926816833,
+          "strongest_peak_frequency_hz": -5200.195312499999,
+          "strongest_peak_normalized_power": 0.005264586606718443
+        },
+        {
+          "adjacent_peak_spacings_hz": [
+            10.68115234375,
+            7.62939453125,
+            10.68115234375,
+            16.78466796875
+          ],
+          "duration_seconds": 0.87384,
+          "nfft": 16384,
+          "normalized_spectral_entropy": 0.6569599098771223,
+          "occupied_width_90_hz": 19384.765624999996,
+          "path": "/home/maciejduranczyk/krakensdr_doa/_share/records/iq/17-Sep-2026_23h57m15s,IQ_433.868MHz,DOA_235.5.iq",
+          "peaks": [
+            {
+              "frequency_hz": -5194.091796874999,
+              "normalized_power": 0.03745075859136317
+            },
+            {
+              "frequency_hz": -5212.402343749999,
+              "normalized_power": 0.027804821576260116
+            },
+            {
+              "frequency_hz": -5177.307128906249,
+              "normalized_power": 0.026386255787883877
+            },
+            {
+              "frequency_hz": -5223.083496093749,
+              "normalized_power": 0.0201733696167363
+            },
+            {
+              "frequency_hz": -5204.772949218749,
+              "normalized_power": 0.019108937858542365
+            }
+          ],
+          "relative_peak_offsets_hz": [
+            -28.99169921875,
+            -18.310546875,
+            -10.68115234375,
+            16.78466796875
+          ],
+          "samples": 21846,
+          "selected_peak_count": 5,
+          "size_bytes": 349536,
+          "spectral_centroid_hz": -3432.6386626361054,
+          "spectral_spread_hz": 5102.10989875186,
+          "strongest_peak_frequency_hz": -5194.091796874999,
+          "strongest_peak_normalized_power": 0.03745075859136317
+        },
+        {
+          "adjacent_peak_spacings_hz": [
+            4.57763671875,
+            16.78466796875,
+            6.103515625,
+            18.310546875
+          ],
+          "duration_seconds": 0.43692,
+          "nfft": 16384,
+          "normalized_spectral_entropy": 0.7809962638947462,
+          "occupied_width_90_hz": 20549.011230468746,
+          "path": "/home/maciejduranczyk/krakensdr_doa/_share/records/iq/17-Sep-2026_23h57m16s,IQ_433.868MHz,DOA_236.0.iq",
+          "peaks": [
+            {
+              "frequency_hz": -5194.091796874999,
+              "normalized_power": 0.005940902089397038
+            },
+            {
+              "frequency_hz": -5221.557617187499,
+              "normalized_power": 0.00557625913032677
+            },
+            {
+              "frequency_hz": -5200.195312499999,
+              "normalized_power": 0.005450158034621905
+            },
+            {
+              "frequency_hz": -5175.781249999999,
+              "normalized_power": 0.005395839065263867
+            },
+            {
+              "frequency_hz": -5216.979980468749,
+              "normalized_power": 0.00537880462759087
+            }
+          ],
+          "relative_peak_offsets_hz": [
+            -27.4658203125,
+            -22.88818359375,
+            -6.103515625,
+            18.310546875
+          ],
+          "samples": 10923,
+          "selected_peak_count": 5,
+          "size_bytes": 174768,
+          "spectral_centroid_hz": -2704.01084730621,
+          "spectral_spread_hz": 5662.451541978799,
+          "strongest_peak_frequency_hz": -5194.091796874999,
+          "strongest_peak_normalized_power": 0.005940902089397038
+        },
+        {
+          "adjacent_peak_spacings_hz": [
+            10.68115234375,
+            9.1552734375,
+            9.1552734375,
+            4.57763671875
+          ],
+          "duration_seconds": 0.43692,
+          "nfft": 16384,
+          "normalized_spectral_entropy": 0.7743073696096453,
+          "occupied_width_90_hz": 19400.024414062496,
+          "path": "/home/maciejduranczyk/krakensdr_doa/_share/records/iq/17-Sep-2026_23h57m17s,IQ_433.868MHz,DOA_236.0.iq",
+          "peaks": [
+            {
+              "frequency_hz": -5203.247070312499,
+              "normalized_power": 0.005772509794553646
+            },
+            {
+              "frequency_hz": -5194.091796874999,
+              "normalized_power": 0.005757455437663719
+            },
+            {
+              "frequency_hz": -5212.402343749999,
+              "normalized_power": 0.005560578788135653
+            },
+            {
+              "frequency_hz": -5189.514160156249,
+              "normalized_power": 0.005440373456205689
+            },
+            {
+              "frequency_hz": -5223.083496093749,
+              "normalized_power": 0.005269699411441831
+            }
+          ],
+          "relative_peak_offsets_hz": [
+            -19.83642578125,
+            -9.1552734375,
+            9.1552734375,
+            13.73291015625
+          ],
+          "samples": 10923,
+          "selected_peak_count": 5,
+          "size_bytes": 174768,
+          "spectral_centroid_hz": -2748.917200434368,
+          "spectral_spread_hz": 5545.0570862137365,
+          "strongest_peak_frequency_hz": -5203.247070312499,
+          "strongest_peak_normalized_power": 0.005772509794553646
+        },
+        {
+          "adjacent_peak_spacings_hz": [
+            9.1552734375,
+            15.2587890625,
+            15.2587890625,
+            7.62939453125
+          ],
+          "duration_seconds": 0.43692,
+          "nfft": 16384,
+          "normalized_spectral_entropy": 0.7276530819685482,
+          "occupied_width_90_hz": 18569.946289062496,
+          "path": "/home/maciejduranczyk/krakensdr_doa/_share/records/iq/17-Sep-2026_23h57m18s,IQ_433.868MHz,DOA_236.0.iq",
+          "peaks": [
+            {
+              "frequency_hz": -5200.195312499999,
+              "normalized_power": 0.00610066416981456
+            },
+            {
+              "frequency_hz": -5215.454101562499,
+              "normalized_power": 0.006094079909900584
+            },
+            {
+              "frequency_hz": -5184.936523437499,
+              "normalized_power": 0.005972317896042833
+            },
+            {
+              "frequency_hz": -5177.307128906249,
+              "normalized_power": 0.005880828770465048
+            },
+            {
+              "frequency_hz": -5224.609374999999,
+              "normalized_power": 0.005663265380302996
+            }
+          ],
+          "relative_peak_offsets_hz": [
+            -24.4140625,
+            -15.2587890625,
+            15.2587890625,
+            22.88818359375
+          ],
+          "samples": 10923,
+          "selected_peak_count": 5,
+          "size_bytes": 174768,
+          "spectral_centroid_hz": -3368.20103760618,
+          "spectral_spread_hz": 5107.988355335444,
+          "strongest_peak_frequency_hz": -5200.195312499999,
+          "strongest_peak_normalized_power": 0.00610066416981456
+        },
+        {
+          "adjacent_peak_spacings_hz": [
+            16.78466796875,
+            15.2587890625,
+            15.2587890625,
+            15.2587890625
+          ],
+          "duration_seconds": 0.87384,
+          "nfft": 16384,
+          "normalized_spectral_entropy": 0.6367542852728043,
+          "occupied_width_90_hz": 19084.167480468746,
+          "path": "/home/maciejduranczyk/krakensdr_doa/_share/records/iq/17-Sep-2026_23h57m20s,IQ_433.868MHz,DOA_236.5.iq",
+          "peaks": [
+            {
+              "frequency_hz": -5207.824707031249,
+              "normalized_power": 0.03819472111556154
+            },
+            {
+              "frequency_hz": -5192.565917968749,
+              "normalized_power": 0.036569101441920604
+            },
+            {
+              "frequency_hz": -5224.609374999999,
+              "normalized_power": 0.029560436273087624
+            },
+            {
+              "frequency_hz": -5177.307128906249,
+              "normalized_power": 0.0236285478501801
+            },
+            {
+              "frequency_hz": -5162.048339843749,
+              "normalized_power": 0.018658496808878055
+            }
+          ],
+          "relative_peak_offsets_hz": [
+            -16.78466796875,
+            15.2587890625,
+            30.517578125,
+            45.7763671875
+          ],
+          "samples": 21846,
+          "selected_peak_count": 5,
+          "size_bytes": 349536,
+          "spectral_centroid_hz": -3874.368408927485,
+          "spectral_spread_hz": 4802.062269561246,
+          "strongest_peak_frequency_hz": -5207.824707031249,
+          "strongest_peak_normalized_power": 0.03819472111556154
+        }
+      ],
+      "inter_fragment_gap_seconds": {
+        "iqr": 0.4036984989999999,
+        "mad": 0.019886721999999857,
+        "max": 1.29884092,
+        "median": 1.278954198,
+        "min": 0.881167789,
+        "range": 0.4176731309999999
+      },
+      "median_adjacent_peak_spacing_hz": {
+        "iqr": 1.33514404296875,
+        "mad": 0.762939453125,
+        "max": 15.2587890625,
+        "median": 11.0626220703125,
+        "min": 9.1552734375,
+        "range": 6.103515625
+      },
+      "nearest_relative_peak_offset_abs_hz": {
+        "iqr": 4.9591064453125,
+        "mad": 3.0517578125,
+        "max": 15.2587890625,
+        "median": 11.444091796875,
+        "min": 6.103515625,
+        "range": 9.1552734375
+      },
+      "normalized_spectral_entropy": {
+        "iqr": 0.09039636448289479,
+        "mad": 0.04522719541664244,
+        "max": 0.7809962638947462,
+        "median": 0.7324246213355533,
+        "min": 0.6367542852728043,
+        "range": 0.14424197862194188
+      },
+      "occupied_width_90_hz": {
+        "iqr": 697.7081298828125,
+        "mad": 415.0390625,
+        "max": 20549.011230468746,
+        "median": 19234.46655273437,
+        "min": 18548.583984374996,
+        "range": 2000.42724609375
+      },
+      "preceding_gap_seconds": 12.68764303,
+      "spectral_centroid_hz": {
+        "iqr": 551.8542889479759,
+        "mad": 268.38620968678015,
+        "max": -2704.01084730621,
+        "median": -3400.4198501211426,
+        "min": -3874.368408927485,
+        "range": 1170.3575616212747
+      },
+      "spectral_spread_hz": {
+        "iqr": 432.07473369357376,
+        "mad": 218.55952885461284,
+        "max": 5662.451541978799,
+        "median": 5105.049127043652,
+        "min": 4802.062269561246,
+        "range": 860.389272417553
+      },
+      "strongest_peak_normalized_power": {
+        "iqr": 0.02379862711771152,
+        "mad": 0.0005022349289697547,
+        "max": 0.03819472111556154,
+        "median": 0.006020783129605799,
+        "min": 0.005264586606718443,
+        "range": 0.0329301345088431
+      },
+      "total_iq_duration_seconds": 3.49536,
+      "total_samples": 87384
+    },
+    {
+      "episode": 5,
+      "filesystem_span_seconds": 4.379871305,
+      "fragment_count": 5,
+      "fragment_duration_seconds": {
+        "iqr": 0.43692,
+        "mad": 0.0,
+        "max": 1.74768,
+        "median": 0.43692,
+        "min": 0.43692,
+        "range": 1.31076
+      },
+      "fragments": [
+        {
+          "adjacent_peak_spacings_hz": [
+            10.68115234375,
+            6.103515625,
+            6.103515625,
+            28.99169921875
+          ],
+          "duration_seconds": 1.74768,
+          "nfft": 16384,
+          "normalized_spectral_entropy": 0.7812673660963588,
+          "occupied_width_90_hz": 19129.943847656246,
+          "path": "/home/maciejduranczyk/krakensdr_doa/_share/records/iq/17-Sep-2026_23h57m32s,IQ_433.868MHz,DOA_237.5.iq",
+          "peaks": [
+            {
+              "frequency_hz": -5213.928222656249,
+              "normalized_power": 0.004959968825650472
+            },
+            {
+              "frequency_hz": -5207.824707031249,
+              "normalized_power": 0.004933417601054999
+            },
+            {
+              "frequency_hz": -5201.721191406249,
+              "normalized_power": 0.004907756636017846
+            },
+            {
+              "frequency_hz": -5224.609374999999,
+              "normalized_power": 0.004778756341040834
+            },
+            {
+              "frequency_hz": -5172.729492187499,
+              "normalized_power": 0.004679188745462946
+            }
+          ],
+          "relative_peak_offsets_hz": [
+            -10.68115234375,
+            6.103515625,
+            12.20703125,
+            41.19873046875
+          ],
+          "samples": 43692,
+          "selected_peak_count": 5,
+          "size_bytes": 699072,
+          "spectral_centroid_hz": -2614.5771382638814,
+          "spectral_spread_hz": 5562.4366950406375,
+          "strongest_peak_frequency_hz": -5213.928222656249,
+          "strongest_peak_normalized_power": 0.004959968825650472
+        },
+        {
+          "adjacent_peak_spacings_hz": [
+            12.20703125,
+            6.103515625,
+            10.68115234375,
+            7.62939453125
+          ],
+          "duration_seconds": 0.43692,
+          "nfft": 16384,
+          "normalized_spectral_entropy": 0.7493993639056536,
+          "occupied_width_90_hz": 18890.380859374996,
+          "path": "/home/maciejduranczyk/krakensdr_doa/_share/records/iq/17-Sep-2026_23h57m33s,IQ_433.868MHz,DOA_237.0.iq",
+          "peaks": [
+            {
+              "frequency_hz": -5181.884765624999,
+              "normalized_power": 0.006164474654327896
+            },
+            {
+              "frequency_hz": -5189.514160156249,
+              "normalized_power": 0.006101739339052822
+            },
+            {
+              "frequency_hz": -5218.505859374999,
+              "normalized_power": 0.005804858231742162
+            },
+            {
+              "frequency_hz": -5206.298828124999,
+              "normalized_power": 0.005745224327808746
+            },
+            {
+              "frequency_hz": -5200.195312499999,
+              "normalized_power": 0.005707112496159368
+            }
+          ],
+          "relative_peak_offsets_hz": [
+            -36.62109375,
+            -24.4140625,
+            -18.310546875,
+            -7.62939453125
+          ],
+          "samples": 10923,
+          "selected_peak_count": 5,
+          "size_bytes": 174768,
+          "spectral_centroid_hz": -2750.630290848236,
+          "spectral_spread_hz": 5553.8163243505705,
+          "strongest_peak_frequency_hz": -5181.884765624999,
+          "strongest_peak_normalized_power": 0.006164474654327896
+        },
+        {
+          "adjacent_peak_spacings_hz": [
+            22.88818359375,
+            9.1552734375,
+            13.73291015625,
+            4.57763671875
+          ],
+          "duration_seconds": 0.43692,
+          "nfft": 16384,
+          "normalized_spectral_entropy": 0.8169996113837125,
+          "occupied_width_90_hz": 20506.286621093746,
+          "path": "/home/maciejduranczyk/krakensdr_doa/_share/records/iq/17-Sep-2026_23h57m34s,IQ_433.868MHz,DOA_237.0.iq",
+          "peaks": [
+            {
+              "frequency_hz": -5206.298828124999,
+              "normalized_power": 0.0049189020559929466
+            },
+            {
+              "frequency_hz": -5238.342285156249,
+              "normalized_power": 0.004887065951696059
+            },
+            {
+              "frequency_hz": -5187.988281249999,
+              "normalized_power": 0.004667769963194108
+            },
+            {
+              "frequency_hz": -5192.565917968749,
+              "normalized_power": 0.00466241364946558
+            },
+            {
+              "frequency_hz": -5215.454101562499,
+              "normalized_power": 0.004660334599002777
+            }
+          ],
+          "relative_peak_offsets_hz": [
+            -32.04345703125,
+            -9.1552734375,
+            13.73291015625,
+            18.310546875
+          ],
+          "samples": 10923,
+          "selected_peak_count": 5,
+          "size_bytes": 174768,
+          "spectral_centroid_hz": -2261.671856207503,
+          "spectral_spread_hz": 5889.313409550218,
+          "strongest_peak_frequency_hz": -5206.298828124999,
+          "strongest_peak_normalized_power": 0.0049189020559929466
+        },
+        {
+          "adjacent_peak_spacings_hz": [
+            16.78466796875,
+            6.103515625,
+            6.103515625,
+            7.62939453125
+          ],
+          "duration_seconds": 0.43692,
+          "nfft": 16384,
+          "normalized_spectral_entropy": 0.7244668363394192,
+          "occupied_width_90_hz": 18612.670898437496,
+          "path": "/home/maciejduranczyk/krakensdr_doa/_share/records/iq/17-Sep-2026_23h57m35s,IQ_433.868MHz,DOA_238.0.iq",
+          "peaks": [
+            {
+              "frequency_hz": -5206.298828124999,
+              "normalized_power": 0.006172391105873477
+            },
+            {
+              "frequency_hz": -5200.195312499999,
+              "normalized_power": 0.006146629990555616
+            },
+            {
+              "frequency_hz": -5194.091796874999,
+              "normalized_power": 0.006102611775785803
+            },
+            {
+              "frequency_hz": -5186.462402343749,
+              "normalized_power": 0.0060881062069533635
+            },
+            {
+              "frequency_hz": -5223.083496093749,
+              "normalized_power": 0.006006155625534166
+            }
+          ],
+          "relative_peak_offsets_hz": [
+            -16.78466796875,
+            6.103515625,
+            12.20703125,
+            19.83642578125
+          ],
+          "samples": 10923,
+          "selected_peak_count": 5,
+          "size_bytes": 174768,
+          "spectral_centroid_hz": -3446.913166221255,
+          "spectral_spread_hz": 5082.489845326922,
+          "strongest_peak_frequency_hz": -5206.298828124999,
+          "strongest_peak_normalized_power": 0.006172391105873477
+        },
+        {
+          "adjacent_peak_spacings_hz": [
+            4.57763671875,
+            10.68115234375,
+            4.57763671875,
+            12.20703125
+          ],
+          "duration_seconds": 0.87384,
+          "nfft": 16384,
+          "normalized_spectral_entropy": 0.6664262414371098,
+          "occupied_width_90_hz": 19152.832031249996,
+          "path": "/home/maciejduranczyk/krakensdr_doa/_share/records/iq/17-Sep-2026_23h57m36s,IQ_433.868MHz,DOA_238.5.iq",
+          "peaks": [
+            {
+              "frequency_hz": -5169.677734374999,
+              "normalized_power": 0.022408829833546896
+            },
+            {
+              "frequency_hz": -5186.462402343749,
+              "normalized_power": 0.021874427889160577
+            },
+            {
+              "frequency_hz": -5201.721191406249,
+              "normalized_power": 0.01991157625230534
+            },
+            {
+              "frequency_hz": -5197.143554687499,
+              "normalized_power": 0.017595546410563233
+            },
+            {
+              "frequency_hz": -5181.884765624999,
+              "normalized_power": 0.016405632151703965
+            }
+          ],
+          "relative_peak_offsets_hz": [
+            -32.04345703125,
+            -27.4658203125,
+            -16.78466796875,
+            -12.20703125
+          ],
+          "samples": 21846,
+          "selected_peak_count": 5,
+          "size_bytes": 349536,
+          "spectral_centroid_hz": -3840.5066075573122,
+          "spectral_spread_hz": 4844.360448281065,
+          "strongest_peak_frequency_hz": -5169.677734374999,
+          "strongest_peak_normalized_power": 0.022408829833546896
+        }
+      ],
+      "inter_fragment_gap_seconds": {
+        "iqr": 0.45325523724999994,
+        "mad": 0.22813822150000007,
+        "max": 1.326574451,
+        "median": 1.0951914249999999,
+        "min": 0.862914004,
+        "range": 0.463660447
+      },
+      "median_adjacent_peak_spacing_hz": {
+        "iqr": 1.52587890625,
+        "mad": 0.762939453125,
+        "max": 11.444091796875,
+        "median": 8.392333984375,
+        "min": 6.866455078125,
+        "range": 4.57763671875
+      },
+      "nearest_relative_peak_offset_abs_hz": {
+        "iqr": 3.0517578125,
+        "mad": 1.52587890625,
+        "max": 12.20703125,
+        "median": 7.62939453125,
+        "min": 6.103515625,
+        "range": 6.103515625
+      },
+      "normalized_spectral_entropy": {
+        "iqr": 0.05680052975693961,
+        "mad": 0.03186800219070518,
+        "max": 0.8169996113837125,
+        "median": 0.7493993639056536,
+        "min": 0.6664262414371098,
+        "range": 0.15057336994660264
+      },
+      "occupied_width_90_hz": {
+        "iqr": 262.451171875,
+        "mad": 239.56298828125,
+        "max": 20506.286621093746,
+        "median": 19129.943847656246,
+        "min": 18612.670898437496,
+        "range": 1893.61572265625
+      },
+      "preceding_gap_seconds": 12.260383182,
+      "spectral_centroid_hz": {
+        "iqr": 832.3360279573735,
+        "mad": 488.95843464073323,
+        "max": -2261.671856207503,
+        "median": -2750.630290848236,
+        "min": -3840.5066075573122,
+        "range": 1578.8347513498093
+      },
+      "spectral_spread_hz": {
+        "iqr": 479.9468497137159,
+        "mad": 335.4970851996477,
+        "max": 5889.313409550218,
+        "median": 5553.8163243505705,
+        "min": 4844.360448281065,
+        "range": 1044.952961269153
+      },
+      "strongest_peak_normalized_power": {
+        "iqr": 0.0012124222802230048,
+        "mad": 0.0012045058286774242,
+        "max": 0.022408829833546896,
+        "median": 0.006164474654327896,
+        "min": 0.0049189020559929466,
+        "range": 0.01748992777755395
+      },
+      "total_iq_duration_seconds": 3.9322799999999996,
+      "total_samples": 98307
+    }
+  ],
+  "format": "HARDSIGNAL_KRAKEN_EPISODE_FEATURES_V2_DEVELOPMENT",
+  "iq_dtype": "complex128",
+  "minimum_peak_separation_bins": 3,
+  "nfft": 16384,
+  "occupied_fraction": 0.9,
+  "peak_count": 5,
+  "sample_rate_hz": 25000.0
+}
