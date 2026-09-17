@@ -264,3 +264,109 @@ rather than changing the thresholds.
 
 Any materially different family-matching or discrimination rule requires
 a new experimental version.
+
+---
+
+# V3 Development Result
+
+Date: 17 September 2026
+
+The frozen V3 implementation was executed against the complete
+pre-registered S1/S2 development dataset only.
+
+Sensor 3 and Sensor 4 remained unseen.
+
+## Frozen artifacts
+
+Development result:
+
+    fingerprinting/results/v3/tpms_s1_s2_development.json
+
+Result SHA256:
+
+    10a3b1ceef2fd1da831f2639364af4cee0fb8dcba409f4a9d8c4078daca8469a
+
+V3 extractor SHA256:
+
+    faf8411528a86e18447ed2ecc86c17dfb99b842048da7996f08f4557db87a487
+
+Frozen V3 method/rules document SHA256 before this result section was
+added:
+
+    0d92f90edc7ecbec1d8fcccec07a602e218c51ad88f7b0c6ad7a20c02fc1d32a
+
+## Development classification
+
+The frozen extractor evaluated:
+
+- 776 observed candidate centres
+- 113 consolidated spacing families
+
+Classification:
+
+- shared signal structure: 4
+- candidate S1-discriminating: 1
+- candidate S2-discriminating: 0
+- insufficient or overlapping: 108
+
+## Development candidate
+
+One spacing family satisfied the pre-defined S1 development
+discrimination rule:
+
+    centre:     18679.81 Hz
+    tolerance:  +/- 50 Hz
+
+Per-capture recurrence:
+
+    S1-A: 3/5 = 60.0%
+    S1-B: 5/7 = 71.4%
+
+    S2-A: 1/5 = 20.0%
+    S2-B: 3/8 = 37.5%
+    S2-C: 1/5 = 20.0%
+
+The family therefore met the frozen development criteria:
+
+- >=60% recurrence in every S1 development capture
+- <40% recurrence in every S2 development capture
+
+No S2-discriminating family satisfied the frozen criteria.
+
+## Interpretation
+
+The 18679.81 Hz family is a development-set candidate only.
+
+It is not evidence of unique device identity and is not yet a validated
+sensor fingerprint.
+
+The result is based on small event counts, and S1-A lies exactly at the
+pre-defined 60% repeatability boundary.
+
+The candidate must therefore be treated as provisional until evaluated
+using the separately reserved Sensor 3 and Sensor 4 data under a
+validation protocol frozen before those sensors are examined.
+
+The development thresholds, family tolerance and extractor must not be
+modified in response to Sensor 3 or Sensor 4 results.
+
+A failure to validate this candidate will be retained as a negative
+result rather than followed by post-validation tuning under V3.
+
+## Development status
+
+TPMS Component Families V3:
+
+    DEVELOPMENT COMPLETE
+
+Candidate:
+
+    18679.81 Hz +/- 50 Hz
+
+Validation:
+
+    NOT YET PERFORMED
+
+Identity claim:
+
+    NONE
