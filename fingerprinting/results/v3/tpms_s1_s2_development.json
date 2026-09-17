@@ -1,0 +1,6175 @@
+{
+  "format": "HARDSIGNAL_TPMS_COMPONENT_FAMILIES_V3",
+  "method": {
+    "rank_independent": true,
+    "family_tolerance_hz": 50.0,
+    "within_sensor_min_fraction_per_capture": 0.6,
+    "opposite_sensor_max_fraction_per_capture_exclusive": 0.4,
+    "pairwise_spacing": "absolute",
+    "candidate_centres": "all observed development spacings",
+    "family_membership": "direct distance to fixed centre; no linkage chaining",
+    "excluded_identity_features": [
+      "absolute_carrier_offset_hz",
+      "received_power",
+      "doa",
+      "absolute_physical_position"
+    ]
+  },
+  "captures": [
+    {
+      "label": "S1-A",
+      "sensor": "S1",
+      "source": "fingerprinting/results/tpms_s1_capture_a.json",
+      "source_sha256": "1d9c70ec7fb5284d09549273f4b1205bd1ea96621377d15f31200f04df7912f9",
+      "event_count": 5,
+      "duration_median_ms": 4.6
+    },
+    {
+      "label": "S1-B",
+      "sensor": "S1",
+      "source": "fingerprinting/results/tpms_s1_capture_b.json",
+      "source_sha256": "a05793b81f4401ea3e65f3177b267041df86277f0010c1168a136fc4f0205999",
+      "event_count": 7,
+      "duration_median_ms": 4.64
+    },
+    {
+      "label": "S2-A",
+      "sensor": "S2",
+      "source": "fingerprinting/results/tpms_s2_capture_a.json",
+      "source_sha256": "6769f3e1036738bc2ec9f73e91b67f5aeaca50c6e2d16b49c26869d7e9d0a6fc",
+      "event_count": 5,
+      "duration_median_ms": 4.6
+    },
+    {
+      "label": "S2-B",
+      "sensor": "S2",
+      "source": "fingerprinting/results/tpms_s2_capture_b.json",
+      "source_sha256": "7c978c287d5356c5116c417a547281948b9d7518183536b19fa2f414782452e8",
+      "event_count": 8,
+      "duration_median_ms": 5.0
+    },
+    {
+      "label": "S2-C",
+      "sensor": "S2",
+      "source": "fingerprinting/results/tpms_s2_capture_c.json",
+      "source_sha256": "5827c0a59c5edce56a92e427eb746c999a08d932d86e01c8a9235a7f21e150f1",
+      "event_count": 5,
+      "duration_median_ms": 4.6
+    }
+  ],
+  "candidate_centre_count": 776,
+  "consolidated_family_count": 113,
+  "classification_counts": {
+    "shared_signal_structure": 4,
+    "candidate_s1_discriminating": 1,
+    "candidate_s2_discriminating": 0,
+    "insufficient_or_overlapping": 108
+  },
+  "families": [
+    {
+      "centre_hz": 346.37451171875,
+      "tolerance_hz": 50.0,
+      "capture_recurrence": {
+        "S1-A": {
+          "hits": 0,
+          "events": 5,
+          "fraction": 0.0,
+          "percent": 0.0
+        },
+        "S1-B": {
+          "hits": 6,
+          "events": 7,
+          "fraction": 0.8571428571428571,
+          "percent": 85.71428571428571
+        },
+        "S2-A": {
+          "hits": 3,
+          "events": 5,
+          "fraction": 0.6,
+          "percent": 60.0
+        },
+        "S2-B": {
+          "hits": 5,
+          "events": 8,
+          "fraction": 0.625,
+          "percent": 62.5
+        },
+        "S2-C": {
+          "hits": 3,
+          "events": 5,
+          "fraction": 0.6,
+          "percent": 60.0
+        }
+      },
+      "sensor_repeatability": {
+        "S1": {
+          "repeatable_in_every_capture": false,
+          "captures": [
+            "S1-A",
+            "S1-B"
+          ]
+        },
+        "S2": {
+          "repeatable_in_every_capture": true,
+          "captures": [
+            "S2-A",
+            "S2-B",
+            "S2-C"
+          ]
+        }
+      },
+      "classification": "insufficient_or_overlapping"
+    },
+    {
+      "centre_hz": 509.6435546875,
+      "tolerance_hz": 50.0,
+      "capture_recurrence": {
+        "S1-A": {
+          "hits": 3,
+          "events": 5,
+          "fraction": 0.6,
+          "percent": 60.0
+        },
+        "S1-B": {
+          "hits": 4,
+          "events": 7,
+          "fraction": 0.5714285714285714,
+          "percent": 57.142857142857146
+        },
+        "S2-A": {
+          "hits": 3,
+          "events": 5,
+          "fraction": 0.6,
+          "percent": 60.0
+        },
+        "S2-B": {
+          "hits": 4,
+          "events": 8,
+          "fraction": 0.5,
+          "percent": 50.0
+        },
+        "S2-C": {
+          "hits": 2,
+          "events": 5,
+          "fraction": 0.4,
+          "percent": 40.0
+        }
+      },
+      "sensor_repeatability": {
+        "S1": {
+          "repeatable_in_every_capture": false,
+          "captures": [
+            "S1-A",
+            "S1-B"
+          ]
+        },
+        "S2": {
+          "repeatable_in_every_capture": false,
+          "captures": [
+            "S2-A",
+            "S2-B",
+            "S2-C"
+          ]
+        }
+      },
+      "classification": "insufficient_or_overlapping"
+    },
+    {
+      "centre_hz": 625.6103515625,
+      "tolerance_hz": 50.0,
+      "capture_recurrence": {
+        "S1-A": {
+          "hits": 0,
+          "events": 5,
+          "fraction": 0.0,
+          "percent": 0.0
+        },
+        "S1-B": {
+          "hits": 1,
+          "events": 7,
+          "fraction": 0.14285714285714285,
+          "percent": 14.285714285714286
+        },
+        "S2-A": {
+          "hits": 1,
+          "events": 5,
+          "fraction": 0.2,
+          "percent": 20.0
+        },
+        "S2-B": {
+          "hits": 0,
+          "events": 8,
+          "fraction": 0.0,
+          "percent": 0.0
+        },
+        "S2-C": {
+          "hits": 1,
+          "events": 5,
+          "fraction": 0.2,
+          "percent": 20.0
+        }
+      },
+      "sensor_repeatability": {
+        "S1": {
+          "repeatable_in_every_capture": false,
+          "captures": [
+            "S1-A",
+            "S1-B"
+          ]
+        },
+        "S2": {
+          "repeatable_in_every_capture": false,
+          "captures": [
+            "S2-A",
+            "S2-B",
+            "S2-C"
+          ]
+        }
+      },
+      "classification": "insufficient_or_overlapping"
+    },
+    {
+      "centre_hz": 807.18994140625,
+      "tolerance_hz": 50.0,
+      "capture_recurrence": {
+        "S1-A": {
+          "hits": 3,
+          "events": 5,
+          "fraction": 0.6,
+          "percent": 60.0
+        },
+        "S1-B": {
+          "hits": 5,
+          "events": 7,
+          "fraction": 0.7142857142857143,
+          "percent": 71.42857142857143
+        },
+        "S2-A": {
+          "hits": 4,
+          "events": 5,
+          "fraction": 0.8,
+          "percent": 80.0
+        },
+        "S2-B": {
+          "hits": 4,
+          "events": 8,
+          "fraction": 0.5,
+          "percent": 50.0
+        },
+        "S2-C": {
+          "hits": 1,
+          "events": 5,
+          "fraction": 0.2,
+          "percent": 20.0
+        }
+      },
+      "sensor_repeatability": {
+        "S1": {
+          "repeatable_in_every_capture": true,
+          "captures": [
+            "S1-A",
+            "S1-B"
+          ]
+        },
+        "S2": {
+          "repeatable_in_every_capture": false,
+          "captures": [
+            "S2-A",
+            "S2-B",
+            "S2-C"
+          ]
+        }
+      },
+      "classification": "insufficient_or_overlapping"
+    },
+    {
+      "centre_hz": 987.24365234375,
+      "tolerance_hz": 50.0,
+      "capture_recurrence": {
+        "S1-A": {
+          "hits": 1,
+          "events": 5,
+          "fraction": 0.2,
+          "percent": 20.0
+        },
+        "S1-B": {
+          "hits": 2,
+          "events": 7,
+          "fraction": 0.2857142857142857,
+          "percent": 28.571428571428573
+        },
+        "S2-A": {
+          "hits": 1,
+          "events": 5,
+          "fraction": 0.2,
+          "percent": 20.0
+        },
+        "S2-B": {
+          "hits": 1,
+          "events": 8,
+          "fraction": 0.125,
+          "percent": 12.5
+        },
+        "S2-C": {
+          "hits": 2,
+          "events": 5,
+          "fraction": 0.4,
+          "percent": 40.0
+        }
+      },
+      "sensor_repeatability": {
+        "S1": {
+          "repeatable_in_every_capture": false,
+          "captures": [
+            "S1-A",
+            "S1-B"
+          ]
+        },
+        "S2": {
+          "repeatable_in_every_capture": false,
+          "captures": [
+            "S2-A",
+            "S2-B",
+            "S2-C"
+          ]
+        }
+      },
+      "classification": "insufficient_or_overlapping"
+    },
+    {
+      "centre_hz": 1264.95361328125,
+      "tolerance_hz": 50.0,
+      "capture_recurrence": {
+        "S1-A": {
+          "hits": 2,
+          "events": 5,
+          "fraction": 0.4,
+          "percent": 40.0
+        },
+        "S1-B": {
+          "hits": 4,
+          "events": 7,
+          "fraction": 0.5714285714285714,
+          "percent": 57.142857142857146
+        },
+        "S2-A": {
+          "hits": 1,
+          "events": 5,
+          "fraction": 0.2,
+          "percent": 20.0
+        },
+        "S2-B": {
+          "hits": 2,
+          "events": 8,
+          "fraction": 0.25,
+          "percent": 25.0
+        },
+        "S2-C": {
+          "hits": 2,
+          "events": 5,
+          "fraction": 0.4,
+          "percent": 40.0
+        }
+      },
+      "sensor_repeatability": {
+        "S1": {
+          "repeatable_in_every_capture": false,
+          "captures": [
+            "S1-A",
+            "S1-B"
+          ]
+        },
+        "S2": {
+          "repeatable_in_every_capture": false,
+          "captures": [
+            "S2-A",
+            "S2-B",
+            "S2-C"
+          ]
+        }
+      },
+      "classification": "insufficient_or_overlapping"
+    },
+    {
+      "centre_hz": 1387.02392578125,
+      "tolerance_hz": 50.0,
+      "capture_recurrence": {
+        "S1-A": {
+          "hits": 4,
+          "events": 5,
+          "fraction": 0.8,
+          "percent": 80.0
+        },
+        "S1-B": {
+          "hits": 4,
+          "events": 7,
+          "fraction": 0.5714285714285714,
+          "percent": 57.142857142857146
+        },
+        "S2-A": {
+          "hits": 4,
+          "events": 5,
+          "fraction": 0.8,
+          "percent": 80.0
+        },
+        "S2-B": {
+          "hits": 4,
+          "events": 8,
+          "fraction": 0.5,
+          "percent": 50.0
+        },
+        "S2-C": {
+          "hits": 4,
+          "events": 5,
+          "fraction": 0.8,
+          "percent": 80.0
+        }
+      },
+      "sensor_repeatability": {
+        "S1": {
+          "repeatable_in_every_capture": false,
+          "captures": [
+            "S1-A",
+            "S1-B"
+          ]
+        },
+        "S2": {
+          "repeatable_in_every_capture": false,
+          "captures": [
+            "S2-A",
+            "S2-B",
+            "S2-C"
+          ]
+        }
+      },
+      "classification": "insufficient_or_overlapping"
+    },
+    {
+      "centre_hz": 1573.18115234375,
+      "tolerance_hz": 50.0,
+      "capture_recurrence": {
+        "S1-A": {
+          "hits": 1,
+          "events": 5,
+          "fraction": 0.2,
+          "percent": 20.0
+        },
+        "S1-B": {
+          "hits": 1,
+          "events": 7,
+          "fraction": 0.14285714285714285,
+          "percent": 14.285714285714286
+        },
+        "S2-A": {
+          "hits": 0,
+          "events": 5,
+          "fraction": 0.0,
+          "percent": 0.0
+        },
+        "S2-B": {
+          "hits": 2,
+          "events": 8,
+          "fraction": 0.25,
+          "percent": 25.0
+        },
+        "S2-C": {
+          "hits": 1,
+          "events": 5,
+          "fraction": 0.2,
+          "percent": 20.0
+        }
+      },
+      "sensor_repeatability": {
+        "S1": {
+          "repeatable_in_every_capture": false,
+          "captures": [
+            "S1-A",
+            "S1-B"
+          ]
+        },
+        "S2": {
+          "repeatable_in_every_capture": false,
+          "captures": [
+            "S2-A",
+            "S2-B",
+            "S2-C"
+          ]
+        }
+      },
+      "classification": "insufficient_or_overlapping"
+    },
+    {
+      "centre_hz": 1719.66552734375,
+      "tolerance_hz": 50.0,
+      "capture_recurrence": {
+        "S1-A": {
+          "hits": 1,
+          "events": 5,
+          "fraction": 0.2,
+          "percent": 20.0
+        },
+        "S1-B": {
+          "hits": 2,
+          "events": 7,
+          "fraction": 0.2857142857142857,
+          "percent": 28.571428571428573
+        },
+        "S2-A": {
+          "hits": 1,
+          "events": 5,
+          "fraction": 0.2,
+          "percent": 20.0
+        },
+        "S2-B": {
+          "hits": 1,
+          "events": 8,
+          "fraction": 0.125,
+          "percent": 12.5
+        },
+        "S2-C": {
+          "hits": 2,
+          "events": 5,
+          "fraction": 0.4,
+          "percent": 40.0
+        }
+      },
+      "sensor_repeatability": {
+        "S1": {
+          "repeatable_in_every_capture": false,
+          "captures": [
+            "S1-A",
+            "S1-B"
+          ]
+        },
+        "S2": {
+          "repeatable_in_every_capture": false,
+          "captures": [
+            "S2-A",
+            "S2-B",
+            "S2-C"
+          ]
+        }
+      },
+      "classification": "insufficient_or_overlapping"
+    },
+    {
+      "centre_hz": 1823.42529296875,
+      "tolerance_hz": 50.0,
+      "capture_recurrence": {
+        "S1-A": {
+          "hits": 0,
+          "events": 5,
+          "fraction": 0.0,
+          "percent": 0.0
+        },
+        "S1-B": {
+          "hits": 1,
+          "events": 7,
+          "fraction": 0.14285714285714285,
+          "percent": 14.285714285714286
+        },
+        "S2-A": {
+          "hits": 1,
+          "events": 5,
+          "fraction": 0.2,
+          "percent": 20.0
+        },
+        "S2-B": {
+          "hits": 1,
+          "events": 8,
+          "fraction": 0.125,
+          "percent": 12.5
+        },
+        "S2-C": {
+          "hits": 0,
+          "events": 5,
+          "fraction": 0.0,
+          "percent": 0.0
+        }
+      },
+      "sensor_repeatability": {
+        "S1": {
+          "repeatable_in_every_capture": false,
+          "captures": [
+            "S1-A",
+            "S1-B"
+          ]
+        },
+        "S2": {
+          "repeatable_in_every_capture": false,
+          "captures": [
+            "S2-A",
+            "S2-B",
+            "S2-C"
+          ]
+        }
+      },
+      "classification": "insufficient_or_overlapping"
+    },
+    {
+      "centre_hz": 2117.919921874999,
+      "tolerance_hz": 50.0,
+      "capture_recurrence": {
+        "S1-A": {
+          "hits": 2,
+          "events": 5,
+          "fraction": 0.4,
+          "percent": 40.0
+        },
+        "S1-B": {
+          "hits": 1,
+          "events": 7,
+          "fraction": 0.14285714285714285,
+          "percent": 14.285714285714286
+        },
+        "S2-A": {
+          "hits": 1,
+          "events": 5,
+          "fraction": 0.2,
+          "percent": 20.0
+        },
+        "S2-B": {
+          "hits": 0,
+          "events": 8,
+          "fraction": 0.0,
+          "percent": 0.0
+        },
+        "S2-C": {
+          "hits": 0,
+          "events": 5,
+          "fraction": 0.0,
+          "percent": 0.0
+        }
+      },
+      "sensor_repeatability": {
+        "S1": {
+          "repeatable_in_every_capture": false,
+          "captures": [
+            "S1-A",
+            "S1-B"
+          ]
+        },
+        "S2": {
+          "repeatable_in_every_capture": false,
+          "captures": [
+            "S2-A",
+            "S2-B",
+            "S2-C"
+          ]
+        }
+      },
+      "classification": "insufficient_or_overlapping"
+    },
+    {
+      "centre_hz": 2220.15380859375,
+      "tolerance_hz": 50.0,
+      "capture_recurrence": {
+        "S1-A": {
+          "hits": 1,
+          "events": 5,
+          "fraction": 0.2,
+          "percent": 20.0
+        },
+        "S1-B": {
+          "hits": 0,
+          "events": 7,
+          "fraction": 0.0,
+          "percent": 0.0
+        },
+        "S2-A": {
+          "hits": 1,
+          "events": 5,
+          "fraction": 0.2,
+          "percent": 20.0
+        },
+        "S2-B": {
+          "hits": 0,
+          "events": 8,
+          "fraction": 0.0,
+          "percent": 0.0
+        },
+        "S2-C": {
+          "hits": 1,
+          "events": 5,
+          "fraction": 0.2,
+          "percent": 20.0
+        }
+      },
+      "sensor_repeatability": {
+        "S1": {
+          "repeatable_in_every_capture": false,
+          "captures": [
+            "S1-A",
+            "S1-B"
+          ]
+        },
+        "S2": {
+          "repeatable_in_every_capture": false,
+          "captures": [
+            "S2-A",
+            "S2-B",
+            "S2-C"
+          ]
+        }
+      },
+      "classification": "insufficient_or_overlapping"
+    },
+    {
+      "centre_hz": 2429.199218749999,
+      "tolerance_hz": 50.0,
+      "capture_recurrence": {
+        "S1-A": {
+          "hits": 1,
+          "events": 5,
+          "fraction": 0.2,
+          "percent": 20.0
+        },
+        "S1-B": {
+          "hits": 0,
+          "events": 7,
+          "fraction": 0.0,
+          "percent": 0.0
+        },
+        "S2-A": {
+          "hits": 0,
+          "events": 5,
+          "fraction": 0.0,
+          "percent": 0.0
+        },
+        "S2-B": {
+          "hits": 1,
+          "events": 8,
+          "fraction": 0.125,
+          "percent": 12.5
+        },
+        "S2-C": {
+          "hits": 0,
+          "events": 5,
+          "fraction": 0.0,
+          "percent": 0.0
+        }
+      },
+      "sensor_repeatability": {
+        "S1": {
+          "repeatable_in_every_capture": false,
+          "captures": [
+            "S1-A",
+            "S1-B"
+          ]
+        },
+        "S2": {
+          "repeatable_in_every_capture": false,
+          "captures": [
+            "S2-A",
+            "S2-B",
+            "S2-C"
+          ]
+        }
+      },
+      "classification": "insufficient_or_overlapping"
+    },
+    {
+      "centre_hz": 2668.762207031249,
+      "tolerance_hz": 50.0,
+      "capture_recurrence": {
+        "S1-A": {
+          "hits": 1,
+          "events": 5,
+          "fraction": 0.2,
+          "percent": 20.0
+        },
+        "S1-B": {
+          "hits": 1,
+          "events": 7,
+          "fraction": 0.14285714285714285,
+          "percent": 14.285714285714286
+        },
+        "S2-A": {
+          "hits": 1,
+          "events": 5,
+          "fraction": 0.2,
+          "percent": 20.0
+        },
+        "S2-B": {
+          "hits": 1,
+          "events": 8,
+          "fraction": 0.125,
+          "percent": 12.5
+        },
+        "S2-C": {
+          "hits": 1,
+          "events": 5,
+          "fraction": 0.2,
+          "percent": 20.0
+        }
+      },
+      "sensor_repeatability": {
+        "S1": {
+          "repeatable_in_every_capture": false,
+          "captures": [
+            "S1-A",
+            "S1-B"
+          ]
+        },
+        "S2": {
+          "repeatable_in_every_capture": false,
+          "captures": [
+            "S2-A",
+            "S2-B",
+            "S2-C"
+          ]
+        }
+      },
+      "classification": "insufficient_or_overlapping"
+    },
+    {
+      "centre_hz": 2769.47021484375,
+      "tolerance_hz": 50.0,
+      "capture_recurrence": {
+        "S1-A": {
+          "hits": 0,
+          "events": 5,
+          "fraction": 0.0,
+          "percent": 0.0
+        },
+        "S1-B": {
+          "hits": 0,
+          "events": 7,
+          "fraction": 0.0,
+          "percent": 0.0
+        },
+        "S2-A": {
+          "hits": 1,
+          "events": 5,
+          "fraction": 0.2,
+          "percent": 20.0
+        },
+        "S2-B": {
+          "hits": 0,
+          "events": 8,
+          "fraction": 0.0,
+          "percent": 0.0
+        },
+        "S2-C": {
+          "hits": 2,
+          "events": 5,
+          "fraction": 0.4,
+          "percent": 40.0
+        }
+      },
+      "sensor_repeatability": {
+        "S1": {
+          "repeatable_in_every_capture": false,
+          "captures": [
+            "S1-A",
+            "S1-B"
+          ]
+        },
+        "S2": {
+          "repeatable_in_every_capture": false,
+          "captures": [
+            "S2-A",
+            "S2-B",
+            "S2-C"
+          ]
+        }
+      },
+      "classification": "insufficient_or_overlapping"
+    },
+    {
+      "centre_hz": 3083.80126953125,
+      "tolerance_hz": 50.0,
+      "capture_recurrence": {
+        "S1-A": {
+          "hits": 0,
+          "events": 5,
+          "fraction": 0.0,
+          "percent": 0.0
+        },
+        "S1-B": {
+          "hits": 1,
+          "events": 7,
+          "fraction": 0.14285714285714285,
+          "percent": 14.285714285714286
+        },
+        "S2-A": {
+          "hits": 1,
+          "events": 5,
+          "fraction": 0.2,
+          "percent": 20.0
+        },
+        "S2-B": {
+          "hits": 0,
+          "events": 8,
+          "fraction": 0.0,
+          "percent": 0.0
+        },
+        "S2-C": {
+          "hits": 1,
+          "events": 5,
+          "fraction": 0.2,
+          "percent": 20.0
+        }
+      },
+      "sensor_repeatability": {
+        "S1": {
+          "repeatable_in_every_capture": false,
+          "captures": [
+            "S1-A",
+            "S1-B"
+          ]
+        },
+        "S2": {
+          "repeatable_in_every_capture": false,
+          "captures": [
+            "S2-A",
+            "S2-B",
+            "S2-C"
+          ]
+        }
+      },
+      "classification": "insufficient_or_overlapping"
+    },
+    {
+      "centre_hz": 3254.69970703125,
+      "tolerance_hz": 50.0,
+      "capture_recurrence": {
+        "S1-A": {
+          "hits": 0,
+          "events": 5,
+          "fraction": 0.0,
+          "percent": 0.0
+        },
+        "S1-B": {
+          "hits": 0,
+          "events": 7,
+          "fraction": 0.0,
+          "percent": 0.0
+        },
+        "S2-A": {
+          "hits": 0,
+          "events": 5,
+          "fraction": 0.0,
+          "percent": 0.0
+        },
+        "S2-B": {
+          "hits": 2,
+          "events": 8,
+          "fraction": 0.25,
+          "percent": 25.0
+        },
+        "S2-C": {
+          "hits": 2,
+          "events": 5,
+          "fraction": 0.4,
+          "percent": 40.0
+        }
+      },
+      "sensor_repeatability": {
+        "S1": {
+          "repeatable_in_every_capture": false,
+          "captures": [
+            "S1-A",
+            "S1-B"
+          ]
+        },
+        "S2": {
+          "repeatable_in_every_capture": false,
+          "captures": [
+            "S2-A",
+            "S2-B",
+            "S2-C"
+          ]
+        }
+      },
+      "classification": "insufficient_or_overlapping"
+    },
+    {
+      "centre_hz": 3356.93359375,
+      "tolerance_hz": 50.0,
+      "capture_recurrence": {
+        "S1-A": {
+          "hits": 1,
+          "events": 5,
+          "fraction": 0.2,
+          "percent": 20.0
+        },
+        "S1-B": {
+          "hits": 1,
+          "events": 7,
+          "fraction": 0.14285714285714285,
+          "percent": 14.285714285714286
+        },
+        "S2-A": {
+          "hits": 0,
+          "events": 5,
+          "fraction": 0.0,
+          "percent": 0.0
+        },
+        "S2-B": {
+          "hits": 1,
+          "events": 8,
+          "fraction": 0.125,
+          "percent": 12.5
+        },
+        "S2-C": {
+          "hits": 0,
+          "events": 5,
+          "fraction": 0.0,
+          "percent": 0.0
+        }
+      },
+      "sensor_repeatability": {
+        "S1": {
+          "repeatable_in_every_capture": false,
+          "captures": [
+            "S1-A",
+            "S1-B"
+          ]
+        },
+        "S2": {
+          "repeatable_in_every_capture": false,
+          "captures": [
+            "S2-A",
+            "S2-B",
+            "S2-C"
+          ]
+        }
+      },
+      "classification": "insufficient_or_overlapping"
+    },
+    {
+      "centre_hz": 3556.823730468749,
+      "tolerance_hz": 50.0,
+      "capture_recurrence": {
+        "S1-A": {
+          "hits": 1,
+          "events": 5,
+          "fraction": 0.2,
+          "percent": 20.0
+        },
+        "S1-B": {
+          "hits": 1,
+          "events": 7,
+          "fraction": 0.14285714285714285,
+          "percent": 14.285714285714286
+        },
+        "S2-A": {
+          "hits": 2,
+          "events": 5,
+          "fraction": 0.4,
+          "percent": 40.0
+        },
+        "S2-B": {
+          "hits": 4,
+          "events": 8,
+          "fraction": 0.5,
+          "percent": 50.0
+        },
+        "S2-C": {
+          "hits": 1,
+          "events": 5,
+          "fraction": 0.2,
+          "percent": 20.0
+        }
+      },
+      "sensor_repeatability": {
+        "S1": {
+          "repeatable_in_every_capture": false,
+          "captures": [
+            "S1-A",
+            "S1-B"
+          ]
+        },
+        "S2": {
+          "repeatable_in_every_capture": false,
+          "captures": [
+            "S2-A",
+            "S2-B",
+            "S2-C"
+          ]
+        }
+      },
+      "classification": "insufficient_or_overlapping"
+    },
+    {
+      "centre_hz": 3698.730468749999,
+      "tolerance_hz": 50.0,
+      "capture_recurrence": {
+        "S1-A": {
+          "hits": 0,
+          "events": 5,
+          "fraction": 0.0,
+          "percent": 0.0
+        },
+        "S1-B": {
+          "hits": 1,
+          "events": 7,
+          "fraction": 0.14285714285714285,
+          "percent": 14.285714285714286
+        },
+        "S2-A": {
+          "hits": 0,
+          "events": 5,
+          "fraction": 0.0,
+          "percent": 0.0
+        },
+        "S2-B": {
+          "hits": 0,
+          "events": 8,
+          "fraction": 0.0,
+          "percent": 0.0
+        },
+        "S2-C": {
+          "hits": 1,
+          "events": 5,
+          "fraction": 0.2,
+          "percent": 20.0
+        }
+      },
+      "sensor_repeatability": {
+        "S1": {
+          "repeatable_in_every_capture": false,
+          "captures": [
+            "S1-A",
+            "S1-B"
+          ]
+        },
+        "S2": {
+          "repeatable_in_every_capture": false,
+          "captures": [
+            "S2-A",
+            "S2-B",
+            "S2-C"
+          ]
+        }
+      },
+      "classification": "insufficient_or_overlapping"
+    },
+    {
+      "centre_hz": 3886.41357421875,
+      "tolerance_hz": 50.0,
+      "capture_recurrence": {
+        "S1-A": {
+          "hits": 1,
+          "events": 5,
+          "fraction": 0.2,
+          "percent": 20.0
+        },
+        "S1-B": {
+          "hits": 1,
+          "events": 7,
+          "fraction": 0.14285714285714285,
+          "percent": 14.285714285714286
+        },
+        "S2-A": {
+          "hits": 1,
+          "events": 5,
+          "fraction": 0.2,
+          "percent": 20.0
+        },
+        "S2-B": {
+          "hits": 1,
+          "events": 8,
+          "fraction": 0.125,
+          "percent": 12.5
+        },
+        "S2-C": {
+          "hits": 0,
+          "events": 5,
+          "fraction": 0.0,
+          "percent": 0.0
+        }
+      },
+      "sensor_repeatability": {
+        "S1": {
+          "repeatable_in_every_capture": false,
+          "captures": [
+            "S1-A",
+            "S1-B"
+          ]
+        },
+        "S2": {
+          "repeatable_in_every_capture": false,
+          "captures": [
+            "S2-A",
+            "S2-B",
+            "S2-C"
+          ]
+        }
+      },
+      "classification": "insufficient_or_overlapping"
+    },
+    {
+      "centre_hz": 4093.933105468749,
+      "tolerance_hz": 50.0,
+      "capture_recurrence": {
+        "S1-A": {
+          "hits": 1,
+          "events": 5,
+          "fraction": 0.2,
+          "percent": 20.0
+        },
+        "S1-B": {
+          "hits": 0,
+          "events": 7,
+          "fraction": 0.0,
+          "percent": 0.0
+        },
+        "S2-A": {
+          "hits": 0,
+          "events": 5,
+          "fraction": 0.0,
+          "percent": 0.0
+        },
+        "S2-B": {
+          "hits": 1,
+          "events": 8,
+          "fraction": 0.125,
+          "percent": 12.5
+        },
+        "S2-C": {
+          "hits": 1,
+          "events": 5,
+          "fraction": 0.2,
+          "percent": 20.0
+        }
+      },
+      "sensor_repeatability": {
+        "S1": {
+          "repeatable_in_every_capture": false,
+          "captures": [
+            "S1-A",
+            "S1-B"
+          ]
+        },
+        "S2": {
+          "repeatable_in_every_capture": false,
+          "captures": [
+            "S2-A",
+            "S2-B",
+            "S2-C"
+          ]
+        }
+      },
+      "classification": "insufficient_or_overlapping"
+    },
+    {
+      "centre_hz": 4432.678222656249,
+      "tolerance_hz": 50.0,
+      "capture_recurrence": {
+        "S1-A": {
+          "hits": 0,
+          "events": 5,
+          "fraction": 0.0,
+          "percent": 0.0
+        },
+        "S1-B": {
+          "hits": 1,
+          "events": 7,
+          "fraction": 0.14285714285714285,
+          "percent": 14.285714285714286
+        },
+        "S2-A": {
+          "hits": 1,
+          "events": 5,
+          "fraction": 0.2,
+          "percent": 20.0
+        },
+        "S2-B": {
+          "hits": 1,
+          "events": 8,
+          "fraction": 0.125,
+          "percent": 12.5
+        },
+        "S2-C": {
+          "hits": 1,
+          "events": 5,
+          "fraction": 0.2,
+          "percent": 20.0
+        }
+      },
+      "sensor_repeatability": {
+        "S1": {
+          "repeatable_in_every_capture": false,
+          "captures": [
+            "S1-A",
+            "S1-B"
+          ]
+        },
+        "S2": {
+          "repeatable_in_every_capture": false,
+          "captures": [
+            "S2-A",
+            "S2-B",
+            "S2-C"
+          ]
+        }
+      },
+      "classification": "insufficient_or_overlapping"
+    },
+    {
+      "centre_hz": 4627.990722656249,
+      "tolerance_hz": 50.0,
+      "capture_recurrence": {
+        "S1-A": {
+          "hits": 1,
+          "events": 5,
+          "fraction": 0.2,
+          "percent": 20.0
+        },
+        "S1-B": {
+          "hits": 0,
+          "events": 7,
+          "fraction": 0.0,
+          "percent": 0.0
+        },
+        "S2-A": {
+          "hits": 0,
+          "events": 5,
+          "fraction": 0.0,
+          "percent": 0.0
+        },
+        "S2-B": {
+          "hits": 2,
+          "events": 8,
+          "fraction": 0.25,
+          "percent": 25.0
+        },
+        "S2-C": {
+          "hits": 0,
+          "events": 5,
+          "fraction": 0.0,
+          "percent": 0.0
+        }
+      },
+      "sensor_repeatability": {
+        "S1": {
+          "repeatable_in_every_capture": false,
+          "captures": [
+            "S1-A",
+            "S1-B"
+          ]
+        },
+        "S2": {
+          "repeatable_in_every_capture": false,
+          "captures": [
+            "S2-A",
+            "S2-B",
+            "S2-C"
+          ]
+        }
+      },
+      "classification": "insufficient_or_overlapping"
+    },
+    {
+      "centre_hz": 4782.104492187499,
+      "tolerance_hz": 50.0,
+      "capture_recurrence": {
+        "S1-A": {
+          "hits": 0,
+          "events": 5,
+          "fraction": 0.0,
+          "percent": 0.0
+        },
+        "S1-B": {
+          "hits": 1,
+          "events": 7,
+          "fraction": 0.14285714285714285,
+          "percent": 14.285714285714286
+        },
+        "S2-A": {
+          "hits": 0,
+          "events": 5,
+          "fraction": 0.0,
+          "percent": 0.0
+        },
+        "S2-B": {
+          "hits": 1,
+          "events": 8,
+          "fraction": 0.125,
+          "percent": 12.5
+        },
+        "S2-C": {
+          "hits": 1,
+          "events": 5,
+          "fraction": 0.2,
+          "percent": 20.0
+        }
+      },
+      "sensor_repeatability": {
+        "S1": {
+          "repeatable_in_every_capture": false,
+          "captures": [
+            "S1-A",
+            "S1-B"
+          ]
+        },
+        "S2": {
+          "repeatable_in_every_capture": false,
+          "captures": [
+            "S2-A",
+            "S2-B",
+            "S2-C"
+          ]
+        }
+      },
+      "classification": "insufficient_or_overlapping"
+    },
+    {
+      "centre_hz": 4971.313476562499,
+      "tolerance_hz": 50.0,
+      "capture_recurrence": {
+        "S1-A": {
+          "hits": 2,
+          "events": 5,
+          "fraction": 0.4,
+          "percent": 40.0
+        },
+        "S1-B": {
+          "hits": 4,
+          "events": 7,
+          "fraction": 0.5714285714285714,
+          "percent": 57.142857142857146
+        },
+        "S2-A": {
+          "hits": 5,
+          "events": 5,
+          "fraction": 1.0,
+          "percent": 100.0
+        },
+        "S2-B": {
+          "hits": 5,
+          "events": 8,
+          "fraction": 0.625,
+          "percent": 62.5
+        },
+        "S2-C": {
+          "hits": 1,
+          "events": 5,
+          "fraction": 0.2,
+          "percent": 20.0
+        }
+      },
+      "sensor_repeatability": {
+        "S1": {
+          "repeatable_in_every_capture": false,
+          "captures": [
+            "S1-A",
+            "S1-B"
+          ]
+        },
+        "S2": {
+          "repeatable_in_every_capture": false,
+          "captures": [
+            "S2-A",
+            "S2-B",
+            "S2-C"
+          ]
+        }
+      },
+      "classification": "insufficient_or_overlapping"
+    },
+    {
+      "centre_hz": 5229.187011718748,
+      "tolerance_hz": 50.0,
+      "capture_recurrence": {
+        "S1-A": {
+          "hits": 0,
+          "events": 5,
+          "fraction": 0.0,
+          "percent": 0.0
+        },
+        "S1-B": {
+          "hits": 1,
+          "events": 7,
+          "fraction": 0.14285714285714285,
+          "percent": 14.285714285714286
+        },
+        "S2-A": {
+          "hits": 0,
+          "events": 5,
+          "fraction": 0.0,
+          "percent": 0.0
+        },
+        "S2-B": {
+          "hits": 0,
+          "events": 8,
+          "fraction": 0.0,
+          "percent": 0.0
+        },
+        "S2-C": {
+          "hits": 0,
+          "events": 5,
+          "fraction": 0.0,
+          "percent": 0.0
+        }
+      },
+      "sensor_repeatability": {
+        "S1": {
+          "repeatable_in_every_capture": false,
+          "captures": [
+            "S1-A",
+            "S1-B"
+          ]
+        },
+        "S2": {
+          "repeatable_in_every_capture": false,
+          "captures": [
+            "S2-A",
+            "S2-B",
+            "S2-C"
+          ]
+        }
+      },
+      "classification": "insufficient_or_overlapping"
+    },
+    {
+      "centre_hz": 5415.344238281248,
+      "tolerance_hz": 50.0,
+      "capture_recurrence": {
+        "S1-A": {
+          "hits": 1,
+          "events": 5,
+          "fraction": 0.2,
+          "percent": 20.0
+        },
+        "S1-B": {
+          "hits": 1,
+          "events": 7,
+          "fraction": 0.14285714285714285,
+          "percent": 14.285714285714286
+        },
+        "S2-A": {
+          "hits": 1,
+          "events": 5,
+          "fraction": 0.2,
+          "percent": 20.0
+        },
+        "S2-B": {
+          "hits": 2,
+          "events": 8,
+          "fraction": 0.25,
+          "percent": 25.0
+        },
+        "S2-C": {
+          "hits": 1,
+          "events": 5,
+          "fraction": 0.2,
+          "percent": 20.0
+        }
+      },
+      "sensor_repeatability": {
+        "S1": {
+          "repeatable_in_every_capture": false,
+          "captures": [
+            "S1-A",
+            "S1-B"
+          ]
+        },
+        "S2": {
+          "repeatable_in_every_capture": false,
+          "captures": [
+            "S2-A",
+            "S2-B",
+            "S2-C"
+          ]
+        }
+      },
+      "classification": "insufficient_or_overlapping"
+    },
+    {
+      "centre_hz": 5554.199218749998,
+      "tolerance_hz": 50.0,
+      "capture_recurrence": {
+        "S1-A": {
+          "hits": 0,
+          "events": 5,
+          "fraction": 0.0,
+          "percent": 0.0
+        },
+        "S1-B": {
+          "hits": 1,
+          "events": 7,
+          "fraction": 0.14285714285714285,
+          "percent": 14.285714285714286
+        },
+        "S2-A": {
+          "hits": 0,
+          "events": 5,
+          "fraction": 0.0,
+          "percent": 0.0
+        },
+        "S2-B": {
+          "hits": 1,
+          "events": 8,
+          "fraction": 0.125,
+          "percent": 12.5
+        },
+        "S2-C": {
+          "hits": 0,
+          "events": 5,
+          "fraction": 0.0,
+          "percent": 0.0
+        }
+      },
+      "sensor_repeatability": {
+        "S1": {
+          "repeatable_in_every_capture": false,
+          "captures": [
+            "S1-A",
+            "S1-B"
+          ]
+        },
+        "S2": {
+          "repeatable_in_every_capture": false,
+          "captures": [
+            "S2-A",
+            "S2-B",
+            "S2-C"
+          ]
+        }
+      },
+      "classification": "insufficient_or_overlapping"
+    },
+    {
+      "centre_hz": 5746.459960937498,
+      "tolerance_hz": 50.0,
+      "capture_recurrence": {
+        "S1-A": {
+          "hits": 4,
+          "events": 5,
+          "fraction": 0.8,
+          "percent": 80.0
+        },
+        "S1-B": {
+          "hits": 5,
+          "events": 7,
+          "fraction": 0.7142857142857143,
+          "percent": 71.42857142857143
+        },
+        "S2-A": {
+          "hits": 4,
+          "events": 5,
+          "fraction": 0.8,
+          "percent": 80.0
+        },
+        "S2-B": {
+          "hits": 5,
+          "events": 8,
+          "fraction": 0.625,
+          "percent": 62.5
+        },
+        "S2-C": {
+          "hits": 4,
+          "events": 5,
+          "fraction": 0.8,
+          "percent": 80.0
+        }
+      },
+      "sensor_repeatability": {
+        "S1": {
+          "repeatable_in_every_capture": true,
+          "captures": [
+            "S1-A",
+            "S1-B"
+          ]
+        },
+        "S2": {
+          "repeatable_in_every_capture": true,
+          "captures": [
+            "S2-A",
+            "S2-B",
+            "S2-C"
+          ]
+        }
+      },
+      "classification": "shared_signal_structure"
+    },
+    {
+      "centre_hz": 5747.985839843749,
+      "tolerance_hz": 50.0,
+      "capture_recurrence": {
+        "S1-A": {
+          "hits": 4,
+          "events": 5,
+          "fraction": 0.8,
+          "percent": 80.0
+        },
+        "S1-B": {
+          "hits": 4,
+          "events": 7,
+          "fraction": 0.5714285714285714,
+          "percent": 57.142857142857146
+        },
+        "S2-A": {
+          "hits": 4,
+          "events": 5,
+          "fraction": 0.8,
+          "percent": 80.0
+        },
+        "S2-B": {
+          "hits": 5,
+          "events": 8,
+          "fraction": 0.625,
+          "percent": 62.5
+        },
+        "S2-C": {
+          "hits": 4,
+          "events": 5,
+          "fraction": 0.8,
+          "percent": 80.0
+        }
+      },
+      "sensor_repeatability": {
+        "S1": {
+          "repeatable_in_every_capture": false,
+          "captures": [
+            "S1-A",
+            "S1-B"
+          ]
+        },
+        "S2": {
+          "repeatable_in_every_capture": true,
+          "captures": [
+            "S2-A",
+            "S2-B",
+            "S2-C"
+          ]
+        }
+      },
+      "classification": "insufficient_or_overlapping"
+    },
+    {
+      "centre_hz": 5853.271484374998,
+      "tolerance_hz": 50.0,
+      "capture_recurrence": {
+        "S1-A": {
+          "hits": 1,
+          "events": 5,
+          "fraction": 0.2,
+          "percent": 20.0
+        },
+        "S1-B": {
+          "hits": 0,
+          "events": 7,
+          "fraction": 0.0,
+          "percent": 0.0
+        },
+        "S2-A": {
+          "hits": 1,
+          "events": 5,
+          "fraction": 0.2,
+          "percent": 20.0
+        },
+        "S2-B": {
+          "hits": 5,
+          "events": 8,
+          "fraction": 0.625,
+          "percent": 62.5
+        },
+        "S2-C": {
+          "hits": 1,
+          "events": 5,
+          "fraction": 0.2,
+          "percent": 20.0
+        }
+      },
+      "sensor_repeatability": {
+        "S1": {
+          "repeatable_in_every_capture": false,
+          "captures": [
+            "S1-A",
+            "S1-B"
+          ]
+        },
+        "S2": {
+          "repeatable_in_every_capture": false,
+          "captures": [
+            "S2-A",
+            "S2-B",
+            "S2-C"
+          ]
+        }
+      },
+      "classification": "insufficient_or_overlapping"
+    },
+    {
+      "centre_hz": 6037.902832031248,
+      "tolerance_hz": 50.0,
+      "capture_recurrence": {
+        "S1-A": {
+          "hits": 2,
+          "events": 5,
+          "fraction": 0.4,
+          "percent": 40.0
+        },
+        "S1-B": {
+          "hits": 1,
+          "events": 7,
+          "fraction": 0.14285714285714285,
+          "percent": 14.285714285714286
+        },
+        "S2-A": {
+          "hits": 1,
+          "events": 5,
+          "fraction": 0.2,
+          "percent": 20.0
+        },
+        "S2-B": {
+          "hits": 1,
+          "events": 8,
+          "fraction": 0.125,
+          "percent": 12.5
+        },
+        "S2-C": {
+          "hits": 0,
+          "events": 5,
+          "fraction": 0.0,
+          "percent": 0.0
+        }
+      },
+      "sensor_repeatability": {
+        "S1": {
+          "repeatable_in_every_capture": false,
+          "captures": [
+            "S1-A",
+            "S1-B"
+          ]
+        },
+        "S2": {
+          "repeatable_in_every_capture": false,
+          "captures": [
+            "S2-A",
+            "S2-B",
+            "S2-C"
+          ]
+        }
+      },
+      "classification": "insufficient_or_overlapping"
+    },
+    {
+      "centre_hz": 6141.662597656248,
+      "tolerance_hz": 50.0,
+      "capture_recurrence": {
+        "S1-A": {
+          "hits": 0,
+          "events": 5,
+          "fraction": 0.0,
+          "percent": 0.0
+        },
+        "S1-B": {
+          "hits": 3,
+          "events": 7,
+          "fraction": 0.42857142857142855,
+          "percent": 42.857142857142854
+        },
+        "S2-A": {
+          "hits": 1,
+          "events": 5,
+          "fraction": 0.2,
+          "percent": 20.0
+        },
+        "S2-B": {
+          "hits": 1,
+          "events": 8,
+          "fraction": 0.125,
+          "percent": 12.5
+        },
+        "S2-C": {
+          "hits": 3,
+          "events": 5,
+          "fraction": 0.6,
+          "percent": 60.0
+        }
+      },
+      "sensor_repeatability": {
+        "S1": {
+          "repeatable_in_every_capture": false,
+          "captures": [
+            "S1-A",
+            "S1-B"
+          ]
+        },
+        "S2": {
+          "repeatable_in_every_capture": false,
+          "captures": [
+            "S2-A",
+            "S2-B",
+            "S2-C"
+          ]
+        }
+      },
+      "classification": "insufficient_or_overlapping"
+    },
+    {
+      "centre_hz": 6303.405761718749,
+      "tolerance_hz": 50.0,
+      "capture_recurrence": {
+        "S1-A": {
+          "hits": 4,
+          "events": 5,
+          "fraction": 0.8,
+          "percent": 80.0
+        },
+        "S1-B": {
+          "hits": 3,
+          "events": 7,
+          "fraction": 0.42857142857142855,
+          "percent": 42.857142857142854
+        },
+        "S2-A": {
+          "hits": 3,
+          "events": 5,
+          "fraction": 0.6,
+          "percent": 60.0
+        },
+        "S2-B": {
+          "hits": 6,
+          "events": 8,
+          "fraction": 0.75,
+          "percent": 75.0
+        },
+        "S2-C": {
+          "hits": 2,
+          "events": 5,
+          "fraction": 0.4,
+          "percent": 40.0
+        }
+      },
+      "sensor_repeatability": {
+        "S1": {
+          "repeatable_in_every_capture": false,
+          "captures": [
+            "S1-A",
+            "S1-B"
+          ]
+        },
+        "S2": {
+          "repeatable_in_every_capture": false,
+          "captures": [
+            "S2-A",
+            "S2-B",
+            "S2-C"
+          ]
+        }
+      },
+      "classification": "insufficient_or_overlapping"
+    },
+    {
+      "centre_hz": 6561.279296874999,
+      "tolerance_hz": 50.0,
+      "capture_recurrence": {
+        "S1-A": {
+          "hits": 0,
+          "events": 5,
+          "fraction": 0.0,
+          "percent": 0.0
+        },
+        "S1-B": {
+          "hits": 0,
+          "events": 7,
+          "fraction": 0.0,
+          "percent": 0.0
+        },
+        "S2-A": {
+          "hits": 1,
+          "events": 5,
+          "fraction": 0.2,
+          "percent": 20.0
+        },
+        "S2-B": {
+          "hits": 1,
+          "events": 8,
+          "fraction": 0.125,
+          "percent": 12.5
+        },
+        "S2-C": {
+          "hits": 0,
+          "events": 5,
+          "fraction": 0.0,
+          "percent": 0.0
+        }
+      },
+      "sensor_repeatability": {
+        "S1": {
+          "repeatable_in_every_capture": false,
+          "captures": [
+            "S1-A",
+            "S1-B"
+          ]
+        },
+        "S2": {
+          "repeatable_in_every_capture": false,
+          "captures": [
+            "S2-A",
+            "S2-B",
+            "S2-C"
+          ]
+        }
+      },
+      "classification": "insufficient_or_overlapping"
+    },
+    {
+      "centre_hz": 7095.336914062498,
+      "tolerance_hz": 50.0,
+      "capture_recurrence": {
+        "S1-A": {
+          "hits": 3,
+          "events": 5,
+          "fraction": 0.6,
+          "percent": 60.0
+        },
+        "S1-B": {
+          "hits": 3,
+          "events": 7,
+          "fraction": 0.42857142857142855,
+          "percent": 42.857142857142854
+        },
+        "S2-A": {
+          "hits": 3,
+          "events": 5,
+          "fraction": 0.6,
+          "percent": 60.0
+        },
+        "S2-B": {
+          "hits": 4,
+          "events": 8,
+          "fraction": 0.5,
+          "percent": 50.0
+        },
+        "S2-C": {
+          "hits": 2,
+          "events": 5,
+          "fraction": 0.4,
+          "percent": 40.0
+        }
+      },
+      "sensor_repeatability": {
+        "S1": {
+          "repeatable_in_every_capture": false,
+          "captures": [
+            "S1-A",
+            "S1-B"
+          ]
+        },
+        "S2": {
+          "repeatable_in_every_capture": false,
+          "captures": [
+            "S2-A",
+            "S2-B",
+            "S2-C"
+          ]
+        }
+      },
+      "classification": "insufficient_or_overlapping"
+    },
+    {
+      "centre_hz": 7153.320312499998,
+      "tolerance_hz": 50.0,
+      "capture_recurrence": {
+        "S1-A": {
+          "hits": 3,
+          "events": 5,
+          "fraction": 0.6,
+          "percent": 60.0
+        },
+        "S1-B": {
+          "hits": 5,
+          "events": 7,
+          "fraction": 0.7142857142857143,
+          "percent": 71.42857142857143
+        },
+        "S2-A": {
+          "hits": 5,
+          "events": 5,
+          "fraction": 1.0,
+          "percent": 100.0
+        },
+        "S2-B": {
+          "hits": 5,
+          "events": 8,
+          "fraction": 0.625,
+          "percent": 62.5
+        },
+        "S2-C": {
+          "hits": 4,
+          "events": 5,
+          "fraction": 0.8,
+          "percent": 80.0
+        }
+      },
+      "sensor_repeatability": {
+        "S1": {
+          "repeatable_in_every_capture": true,
+          "captures": [
+            "S1-A",
+            "S1-B"
+          ]
+        },
+        "S2": {
+          "repeatable_in_every_capture": true,
+          "captures": [
+            "S2-A",
+            "S2-B",
+            "S2-C"
+          ]
+        }
+      },
+      "classification": "shared_signal_structure"
+    },
+    {
+      "centre_hz": 7199.096679687498,
+      "tolerance_hz": 50.0,
+      "capture_recurrence": {
+        "S1-A": {
+          "hits": 1,
+          "events": 5,
+          "fraction": 0.2,
+          "percent": 20.0
+        },
+        "S1-B": {
+          "hits": 2,
+          "events": 7,
+          "fraction": 0.2857142857142857,
+          "percent": 28.571428571428573
+        },
+        "S2-A": {
+          "hits": 2,
+          "events": 5,
+          "fraction": 0.4,
+          "percent": 40.0
+        },
+        "S2-B": {
+          "hits": 4,
+          "events": 8,
+          "fraction": 0.5,
+          "percent": 50.0
+        },
+        "S2-C": {
+          "hits": 2,
+          "events": 5,
+          "fraction": 0.4,
+          "percent": 40.0
+        }
+      },
+      "sensor_repeatability": {
+        "S1": {
+          "repeatable_in_every_capture": false,
+          "captures": [
+            "S1-A",
+            "S1-B"
+          ]
+        },
+        "S2": {
+          "repeatable_in_every_capture": false,
+          "captures": [
+            "S2-A",
+            "S2-B",
+            "S2-C"
+          ]
+        }
+      },
+      "classification": "insufficient_or_overlapping"
+    },
+    {
+      "centre_hz": 7411.193847656248,
+      "tolerance_hz": 50.0,
+      "capture_recurrence": {
+        "S1-A": {
+          "hits": 0,
+          "events": 5,
+          "fraction": 0.0,
+          "percent": 0.0
+        },
+        "S1-B": {
+          "hits": 1,
+          "events": 7,
+          "fraction": 0.14285714285714285,
+          "percent": 14.285714285714286
+        },
+        "S2-A": {
+          "hits": 1,
+          "events": 5,
+          "fraction": 0.2,
+          "percent": 20.0
+        },
+        "S2-B": {
+          "hits": 1,
+          "events": 8,
+          "fraction": 0.125,
+          "percent": 12.5
+        },
+        "S2-C": {
+          "hits": 0,
+          "events": 5,
+          "fraction": 0.0,
+          "percent": 0.0
+        }
+      },
+      "sensor_repeatability": {
+        "S1": {
+          "repeatable_in_every_capture": false,
+          "captures": [
+            "S1-A",
+            "S1-B"
+          ]
+        },
+        "S2": {
+          "repeatable_in_every_capture": false,
+          "captures": [
+            "S2-A",
+            "S2-B",
+            "S2-C"
+          ]
+        }
+      },
+      "classification": "insufficient_or_overlapping"
+    },
+    {
+      "centre_hz": 7653.808593749998,
+      "tolerance_hz": 50.0,
+      "capture_recurrence": {
+        "S1-A": {
+          "hits": 1,
+          "events": 5,
+          "fraction": 0.2,
+          "percent": 20.0
+        },
+        "S1-B": {
+          "hits": 0,
+          "events": 7,
+          "fraction": 0.0,
+          "percent": 0.0
+        },
+        "S2-A": {
+          "hits": 1,
+          "events": 5,
+          "fraction": 0.2,
+          "percent": 20.0
+        },
+        "S2-B": {
+          "hits": 1,
+          "events": 8,
+          "fraction": 0.125,
+          "percent": 12.5
+        },
+        "S2-C": {
+          "hits": 0,
+          "events": 5,
+          "fraction": 0.0,
+          "percent": 0.0
+        }
+      },
+      "sensor_repeatability": {
+        "S1": {
+          "repeatable_in_every_capture": false,
+          "captures": [
+            "S1-A",
+            "S1-B"
+          ]
+        },
+        "S2": {
+          "repeatable_in_every_capture": false,
+          "captures": [
+            "S2-A",
+            "S2-B",
+            "S2-C"
+          ]
+        }
+      },
+      "classification": "insufficient_or_overlapping"
+    },
+    {
+      "centre_hz": 7937.622070312499,
+      "tolerance_hz": 50.0,
+      "capture_recurrence": {
+        "S1-A": {
+          "hits": 1,
+          "events": 5,
+          "fraction": 0.2,
+          "percent": 20.0
+        },
+        "S1-B": {
+          "hits": 0,
+          "events": 7,
+          "fraction": 0.0,
+          "percent": 0.0
+        },
+        "S2-A": {
+          "hits": 0,
+          "events": 5,
+          "fraction": 0.0,
+          "percent": 0.0
+        },
+        "S2-B": {
+          "hits": 0,
+          "events": 8,
+          "fraction": 0.0,
+          "percent": 0.0
+        },
+        "S2-C": {
+          "hits": 0,
+          "events": 5,
+          "fraction": 0.0,
+          "percent": 0.0
+        }
+      },
+      "sensor_repeatability": {
+        "S1": {
+          "repeatable_in_every_capture": false,
+          "captures": [
+            "S1-A",
+            "S1-B"
+          ]
+        },
+        "S2": {
+          "repeatable_in_every_capture": false,
+          "captures": [
+            "S2-A",
+            "S2-B",
+            "S2-C"
+          ]
+        }
+      },
+      "classification": "insufficient_or_overlapping"
+    },
+    {
+      "centre_hz": 8039.855957031249,
+      "tolerance_hz": 50.0,
+      "capture_recurrence": {
+        "S1-A": {
+          "hits": 0,
+          "events": 5,
+          "fraction": 0.0,
+          "percent": 0.0
+        },
+        "S1-B": {
+          "hits": 0,
+          "events": 7,
+          "fraction": 0.0,
+          "percent": 0.0
+        },
+        "S2-A": {
+          "hits": 0,
+          "events": 5,
+          "fraction": 0.0,
+          "percent": 0.0
+        },
+        "S2-B": {
+          "hits": 0,
+          "events": 8,
+          "fraction": 0.0,
+          "percent": 0.0
+        },
+        "S2-C": {
+          "hits": 1,
+          "events": 5,
+          "fraction": 0.2,
+          "percent": 20.0
+        }
+      },
+      "sensor_repeatability": {
+        "S1": {
+          "repeatable_in_every_capture": false,
+          "captures": [
+            "S1-A",
+            "S1-B"
+          ]
+        },
+        "S2": {
+          "repeatable_in_every_capture": false,
+          "captures": [
+            "S2-A",
+            "S2-B",
+            "S2-C"
+          ]
+        }
+      },
+      "classification": "insufficient_or_overlapping"
+    },
+    {
+      "centre_hz": 8467.102050781248,
+      "tolerance_hz": 50.0,
+      "capture_recurrence": {
+        "S1-A": {
+          "hits": 0,
+          "events": 5,
+          "fraction": 0.0,
+          "percent": 0.0
+        },
+        "S1-B": {
+          "hits": 1,
+          "events": 7,
+          "fraction": 0.14285714285714285,
+          "percent": 14.285714285714286
+        },
+        "S2-A": {
+          "hits": 0,
+          "events": 5,
+          "fraction": 0.0,
+          "percent": 0.0
+        },
+        "S2-B": {
+          "hits": 0,
+          "events": 8,
+          "fraction": 0.0,
+          "percent": 0.0
+        },
+        "S2-C": {
+          "hits": 0,
+          "events": 5,
+          "fraction": 0.0,
+          "percent": 0.0
+        }
+      },
+      "sensor_repeatability": {
+        "S1": {
+          "repeatable_in_every_capture": false,
+          "captures": [
+            "S1-A",
+            "S1-B"
+          ]
+        },
+        "S2": {
+          "repeatable_in_every_capture": false,
+          "captures": [
+            "S2-A",
+            "S2-B",
+            "S2-C"
+          ]
+        }
+      },
+      "classification": "insufficient_or_overlapping"
+    },
+    {
+      "centre_hz": 8584.594726562498,
+      "tolerance_hz": 50.0,
+      "capture_recurrence": {
+        "S1-A": {
+          "hits": 0,
+          "events": 5,
+          "fraction": 0.0,
+          "percent": 0.0
+        },
+        "S1-B": {
+          "hits": 0,
+          "events": 7,
+          "fraction": 0.0,
+          "percent": 0.0
+        },
+        "S2-A": {
+          "hits": 1,
+          "events": 5,
+          "fraction": 0.2,
+          "percent": 20.0
+        },
+        "S2-B": {
+          "hits": 0,
+          "events": 8,
+          "fraction": 0.0,
+          "percent": 0.0
+        },
+        "S2-C": {
+          "hits": 0,
+          "events": 5,
+          "fraction": 0.0,
+          "percent": 0.0
+        }
+      },
+      "sensor_repeatability": {
+        "S1": {
+          "repeatable_in_every_capture": false,
+          "captures": [
+            "S1-A",
+            "S1-B"
+          ]
+        },
+        "S2": {
+          "repeatable_in_every_capture": false,
+          "captures": [
+            "S2-A",
+            "S2-B",
+            "S2-C"
+          ]
+        }
+      },
+      "classification": "insufficient_or_overlapping"
+    },
+    {
+      "centre_hz": 8767.700195312498,
+      "tolerance_hz": 50.0,
+      "capture_recurrence": {
+        "S1-A": {
+          "hits": 0,
+          "events": 5,
+          "fraction": 0.0,
+          "percent": 0.0
+        },
+        "S1-B": {
+          "hits": 1,
+          "events": 7,
+          "fraction": 0.14285714285714285,
+          "percent": 14.285714285714286
+        },
+        "S2-A": {
+          "hits": 0,
+          "events": 5,
+          "fraction": 0.0,
+          "percent": 0.0
+        },
+        "S2-B": {
+          "hits": 0,
+          "events": 8,
+          "fraction": 0.0,
+          "percent": 0.0
+        },
+        "S2-C": {
+          "hits": 0,
+          "events": 5,
+          "fraction": 0.0,
+          "percent": 0.0
+        }
+      },
+      "sensor_repeatability": {
+        "S1": {
+          "repeatable_in_every_capture": false,
+          "captures": [
+            "S1-A",
+            "S1-B"
+          ]
+        },
+        "S2": {
+          "repeatable_in_every_capture": false,
+          "captures": [
+            "S2-A",
+            "S2-B",
+            "S2-C"
+          ]
+        }
+      },
+      "classification": "insufficient_or_overlapping"
+    },
+    {
+      "centre_hz": 9049.987792968748,
+      "tolerance_hz": 50.0,
+      "capture_recurrence": {
+        "S1-A": {
+          "hits": 0,
+          "events": 5,
+          "fraction": 0.0,
+          "percent": 0.0
+        },
+        "S1-B": {
+          "hits": 1,
+          "events": 7,
+          "fraction": 0.14285714285714285,
+          "percent": 14.285714285714286
+        },
+        "S2-A": {
+          "hits": 1,
+          "events": 5,
+          "fraction": 0.2,
+          "percent": 20.0
+        },
+        "S2-B": {
+          "hits": 3,
+          "events": 8,
+          "fraction": 0.375,
+          "percent": 37.5
+        },
+        "S2-C": {
+          "hits": 1,
+          "events": 5,
+          "fraction": 0.2,
+          "percent": 20.0
+        }
+      },
+      "sensor_repeatability": {
+        "S1": {
+          "repeatable_in_every_capture": false,
+          "captures": [
+            "S1-A",
+            "S1-B"
+          ]
+        },
+        "S2": {
+          "repeatable_in_every_capture": false,
+          "captures": [
+            "S2-A",
+            "S2-B",
+            "S2-C"
+          ]
+        }
+      },
+      "classification": "insufficient_or_overlapping"
+    },
+    {
+      "centre_hz": 9381.103515624998,
+      "tolerance_hz": 50.0,
+      "capture_recurrence": {
+        "S1-A": {
+          "hits": 2,
+          "events": 5,
+          "fraction": 0.4,
+          "percent": 40.0
+        },
+        "S1-B": {
+          "hits": 1,
+          "events": 7,
+          "fraction": 0.14285714285714285,
+          "percent": 14.285714285714286
+        },
+        "S2-A": {
+          "hits": 1,
+          "events": 5,
+          "fraction": 0.2,
+          "percent": 20.0
+        },
+        "S2-B": {
+          "hits": 2,
+          "events": 8,
+          "fraction": 0.25,
+          "percent": 25.0
+        },
+        "S2-C": {
+          "hits": 1,
+          "events": 5,
+          "fraction": 0.2,
+          "percent": 20.0
+        }
+      },
+      "sensor_repeatability": {
+        "S1": {
+          "repeatable_in_every_capture": false,
+          "captures": [
+            "S1-A",
+            "S1-B"
+          ]
+        },
+        "S2": {
+          "repeatable_in_every_capture": false,
+          "captures": [
+            "S2-A",
+            "S2-B",
+            "S2-C"
+          ]
+        }
+      },
+      "classification": "insufficient_or_overlapping"
+    },
+    {
+      "centre_hz": 9497.070312499998,
+      "tolerance_hz": 50.0,
+      "capture_recurrence": {
+        "S1-A": {
+          "hits": 0,
+          "events": 5,
+          "fraction": 0.0,
+          "percent": 0.0
+        },
+        "S1-B": {
+          "hits": 1,
+          "events": 7,
+          "fraction": 0.14285714285714285,
+          "percent": 14.285714285714286
+        },
+        "S2-A": {
+          "hits": 0,
+          "events": 5,
+          "fraction": 0.0,
+          "percent": 0.0
+        },
+        "S2-B": {
+          "hits": 0,
+          "events": 8,
+          "fraction": 0.0,
+          "percent": 0.0
+        },
+        "S2-C": {
+          "hits": 0,
+          "events": 5,
+          "fraction": 0.0,
+          "percent": 0.0
+        }
+      },
+      "sensor_repeatability": {
+        "S1": {
+          "repeatable_in_every_capture": false,
+          "captures": [
+            "S1-A",
+            "S1-B"
+          ]
+        },
+        "S2": {
+          "repeatable_in_every_capture": false,
+          "captures": [
+            "S2-A",
+            "S2-B",
+            "S2-C"
+          ]
+        }
+      },
+      "classification": "insufficient_or_overlapping"
+    },
+    {
+      "centre_hz": 9814.453124999998,
+      "tolerance_hz": 50.0,
+      "capture_recurrence": {
+        "S1-A": {
+          "hits": 0,
+          "events": 5,
+          "fraction": 0.0,
+          "percent": 0.0
+        },
+        "S1-B": {
+          "hits": 0,
+          "events": 7,
+          "fraction": 0.0,
+          "percent": 0.0
+        },
+        "S2-A": {
+          "hits": 0,
+          "events": 5,
+          "fraction": 0.0,
+          "percent": 0.0
+        },
+        "S2-B": {
+          "hits": 1,
+          "events": 8,
+          "fraction": 0.125,
+          "percent": 12.5
+        },
+        "S2-C": {
+          "hits": 1,
+          "events": 5,
+          "fraction": 0.2,
+          "percent": 20.0
+        }
+      },
+      "sensor_repeatability": {
+        "S1": {
+          "repeatable_in_every_capture": false,
+          "captures": [
+            "S1-A",
+            "S1-B"
+          ]
+        },
+        "S2": {
+          "repeatable_in_every_capture": false,
+          "captures": [
+            "S2-A",
+            "S2-B",
+            "S2-C"
+          ]
+        }
+      },
+      "classification": "insufficient_or_overlapping"
+    },
+    {
+      "centre_hz": 10690.307617187498,
+      "tolerance_hz": 50.0,
+      "capture_recurrence": {
+        "S1-A": {
+          "hits": 0,
+          "events": 5,
+          "fraction": 0.0,
+          "percent": 0.0
+        },
+        "S1-B": {
+          "hits": 0,
+          "events": 7,
+          "fraction": 0.0,
+          "percent": 0.0
+        },
+        "S2-A": {
+          "hits": 1,
+          "events": 5,
+          "fraction": 0.2,
+          "percent": 20.0
+        },
+        "S2-B": {
+          "hits": 1,
+          "events": 8,
+          "fraction": 0.125,
+          "percent": 12.5
+        },
+        "S2-C": {
+          "hits": 1,
+          "events": 5,
+          "fraction": 0.2,
+          "percent": 20.0
+        }
+      },
+      "sensor_repeatability": {
+        "S1": {
+          "repeatable_in_every_capture": false,
+          "captures": [
+            "S1-A",
+            "S1-B"
+          ]
+        },
+        "S2": {
+          "repeatable_in_every_capture": false,
+          "captures": [
+            "S2-A",
+            "S2-B",
+            "S2-C"
+          ]
+        }
+      },
+      "classification": "insufficient_or_overlapping"
+    },
+    {
+      "centre_hz": 11135.864257812498,
+      "tolerance_hz": 50.0,
+      "capture_recurrence": {
+        "S1-A": {
+          "hits": 0,
+          "events": 5,
+          "fraction": 0.0,
+          "percent": 0.0
+        },
+        "S1-B": {
+          "hits": 0,
+          "events": 7,
+          "fraction": 0.0,
+          "percent": 0.0
+        },
+        "S2-A": {
+          "hits": 1,
+          "events": 5,
+          "fraction": 0.2,
+          "percent": 20.0
+        },
+        "S2-B": {
+          "hits": 0,
+          "events": 8,
+          "fraction": 0.0,
+          "percent": 0.0
+        },
+        "S2-C": {
+          "hits": 0,
+          "events": 5,
+          "fraction": 0.0,
+          "percent": 0.0
+        }
+      },
+      "sensor_repeatability": {
+        "S1": {
+          "repeatable_in_every_capture": false,
+          "captures": [
+            "S1-A",
+            "S1-B"
+          ]
+        },
+        "S2": {
+          "repeatable_in_every_capture": false,
+          "captures": [
+            "S2-A",
+            "S2-B",
+            "S2-C"
+          ]
+        }
+      },
+      "classification": "insufficient_or_overlapping"
+    },
+    {
+      "centre_hz": 11259.460449218748,
+      "tolerance_hz": 50.0,
+      "capture_recurrence": {
+        "S1-A": {
+          "hits": 0,
+          "events": 5,
+          "fraction": 0.0,
+          "percent": 0.0
+        },
+        "S1-B": {
+          "hits": 0,
+          "events": 7,
+          "fraction": 0.0,
+          "percent": 0.0
+        },
+        "S2-A": {
+          "hits": 0,
+          "events": 5,
+          "fraction": 0.0,
+          "percent": 0.0
+        },
+        "S2-B": {
+          "hits": 1,
+          "events": 8,
+          "fraction": 0.125,
+          "percent": 12.5
+        },
+        "S2-C": {
+          "hits": 0,
+          "events": 5,
+          "fraction": 0.0,
+          "percent": 0.0
+        }
+      },
+      "sensor_repeatability": {
+        "S1": {
+          "repeatable_in_every_capture": false,
+          "captures": [
+            "S1-A",
+            "S1-B"
+          ]
+        },
+        "S2": {
+          "repeatable_in_every_capture": false,
+          "captures": [
+            "S2-A",
+            "S2-B",
+            "S2-C"
+          ]
+        }
+      },
+      "classification": "insufficient_or_overlapping"
+    },
+    {
+      "centre_hz": 11486.816406249998,
+      "tolerance_hz": 50.0,
+      "capture_recurrence": {
+        "S1-A": {
+          "hits": 0,
+          "events": 5,
+          "fraction": 0.0,
+          "percent": 0.0
+        },
+        "S1-B": {
+          "hits": 0,
+          "events": 7,
+          "fraction": 0.0,
+          "percent": 0.0
+        },
+        "S2-A": {
+          "hits": 0,
+          "events": 5,
+          "fraction": 0.0,
+          "percent": 0.0
+        },
+        "S2-B": {
+          "hits": 1,
+          "events": 8,
+          "fraction": 0.125,
+          "percent": 12.5
+        },
+        "S2-C": {
+          "hits": 0,
+          "events": 5,
+          "fraction": 0.0,
+          "percent": 0.0
+        }
+      },
+      "sensor_repeatability": {
+        "S1": {
+          "repeatable_in_every_capture": false,
+          "captures": [
+            "S1-A",
+            "S1-B"
+          ]
+        },
+        "S2": {
+          "repeatable_in_every_capture": false,
+          "captures": [
+            "S2-A",
+            "S2-B",
+            "S2-C"
+          ]
+        }
+      },
+      "classification": "insufficient_or_overlapping"
+    },
+    {
+      "centre_hz": 11633.300781249998,
+      "tolerance_hz": 50.0,
+      "capture_recurrence": {
+        "S1-A": {
+          "hits": 2,
+          "events": 5,
+          "fraction": 0.4,
+          "percent": 40.0
+        },
+        "S1-B": {
+          "hits": 2,
+          "events": 7,
+          "fraction": 0.2857142857142857,
+          "percent": 28.571428571428573
+        },
+        "S2-A": {
+          "hits": 1,
+          "events": 5,
+          "fraction": 0.2,
+          "percent": 20.0
+        },
+        "S2-B": {
+          "hits": 1,
+          "events": 8,
+          "fraction": 0.125,
+          "percent": 12.5
+        },
+        "S2-C": {
+          "hits": 0,
+          "events": 5,
+          "fraction": 0.0,
+          "percent": 0.0
+        }
+      },
+      "sensor_repeatability": {
+        "S1": {
+          "repeatable_in_every_capture": false,
+          "captures": [
+            "S1-A",
+            "S1-B"
+          ]
+        },
+        "S2": {
+          "repeatable_in_every_capture": false,
+          "captures": [
+            "S2-A",
+            "S2-B",
+            "S2-C"
+          ]
+        }
+      },
+      "classification": "insufficient_or_overlapping"
+    },
+    {
+      "centre_hz": 11816.406249999998,
+      "tolerance_hz": 50.0,
+      "capture_recurrence": {
+        "S1-A": {
+          "hits": 2,
+          "events": 5,
+          "fraction": 0.4,
+          "percent": 40.0
+        },
+        "S1-B": {
+          "hits": 1,
+          "events": 7,
+          "fraction": 0.14285714285714285,
+          "percent": 14.285714285714286
+        },
+        "S2-A": {
+          "hits": 1,
+          "events": 5,
+          "fraction": 0.2,
+          "percent": 20.0
+        },
+        "S2-B": {
+          "hits": 1,
+          "events": 8,
+          "fraction": 0.125,
+          "percent": 12.5
+        },
+        "S2-C": {
+          "hits": 0,
+          "events": 5,
+          "fraction": 0.0,
+          "percent": 0.0
+        }
+      },
+      "sensor_repeatability": {
+        "S1": {
+          "repeatable_in_every_capture": false,
+          "captures": [
+            "S1-A",
+            "S1-B"
+          ]
+        },
+        "S2": {
+          "repeatable_in_every_capture": false,
+          "captures": [
+            "S2-A",
+            "S2-B",
+            "S2-C"
+          ]
+        }
+      },
+      "classification": "insufficient_or_overlapping"
+    },
+    {
+      "centre_hz": 11991.882324218748,
+      "tolerance_hz": 50.0,
+      "capture_recurrence": {
+        "S1-A": {
+          "hits": 0,
+          "events": 5,
+          "fraction": 0.0,
+          "percent": 0.0
+        },
+        "S1-B": {
+          "hits": 1,
+          "events": 7,
+          "fraction": 0.14285714285714285,
+          "percent": 14.285714285714286
+        },
+        "S2-A": {
+          "hits": 0,
+          "events": 5,
+          "fraction": 0.0,
+          "percent": 0.0
+        },
+        "S2-B": {
+          "hits": 1,
+          "events": 8,
+          "fraction": 0.125,
+          "percent": 12.5
+        },
+        "S2-C": {
+          "hits": 1,
+          "events": 5,
+          "fraction": 0.2,
+          "percent": 20.0
+        }
+      },
+      "sensor_repeatability": {
+        "S1": {
+          "repeatable_in_every_capture": false,
+          "captures": [
+            "S1-A",
+            "S1-B"
+          ]
+        },
+        "S2": {
+          "repeatable_in_every_capture": false,
+          "captures": [
+            "S2-A",
+            "S2-B",
+            "S2-C"
+          ]
+        }
+      },
+      "classification": "insufficient_or_overlapping"
+    },
+    {
+      "centre_hz": 12086.486816406248,
+      "tolerance_hz": 50.0,
+      "capture_recurrence": {
+        "S1-A": {
+          "hits": 3,
+          "events": 5,
+          "fraction": 0.6,
+          "percent": 60.0
+        },
+        "S1-B": {
+          "hits": 7,
+          "events": 7,
+          "fraction": 1.0,
+          "percent": 100.0
+        },
+        "S2-A": {
+          "hits": 5,
+          "events": 5,
+          "fraction": 1.0,
+          "percent": 100.0
+        },
+        "S2-B": {
+          "hits": 5,
+          "events": 8,
+          "fraction": 0.625,
+          "percent": 62.5
+        },
+        "S2-C": {
+          "hits": 3,
+          "events": 5,
+          "fraction": 0.6,
+          "percent": 60.0
+        }
+      },
+      "sensor_repeatability": {
+        "S1": {
+          "repeatable_in_every_capture": true,
+          "captures": [
+            "S1-A",
+            "S1-B"
+          ]
+        },
+        "S2": {
+          "repeatable_in_every_capture": true,
+          "captures": [
+            "S2-A",
+            "S2-B",
+            "S2-C"
+          ]
+        }
+      },
+      "classification": "shared_signal_structure"
+    },
+    {
+      "centre_hz": 12135.314941406248,
+      "tolerance_hz": 50.0,
+      "capture_recurrence": {
+        "S1-A": {
+          "hits": 3,
+          "events": 5,
+          "fraction": 0.6,
+          "percent": 60.0
+        },
+        "S1-B": {
+          "hits": 4,
+          "events": 7,
+          "fraction": 0.5714285714285714,
+          "percent": 57.142857142857146
+        },
+        "S2-A": {
+          "hits": 1,
+          "events": 5,
+          "fraction": 0.2,
+          "percent": 20.0
+        },
+        "S2-B": {
+          "hits": 4,
+          "events": 8,
+          "fraction": 0.5,
+          "percent": 50.0
+        },
+        "S2-C": {
+          "hits": 3,
+          "events": 5,
+          "fraction": 0.6,
+          "percent": 60.0
+        }
+      },
+      "sensor_repeatability": {
+        "S1": {
+          "repeatable_in_every_capture": false,
+          "captures": [
+            "S1-A",
+            "S1-B"
+          ]
+        },
+        "S2": {
+          "repeatable_in_every_capture": false,
+          "captures": [
+            "S2-A",
+            "S2-B",
+            "S2-C"
+          ]
+        }
+      },
+      "classification": "insufficient_or_overlapping"
+    },
+    {
+      "centre_hz": 12365.722656249998,
+      "tolerance_hz": 50.0,
+      "capture_recurrence": {
+        "S1-A": {
+          "hits": 0,
+          "events": 5,
+          "fraction": 0.0,
+          "percent": 0.0
+        },
+        "S1-B": {
+          "hits": 1,
+          "events": 7,
+          "fraction": 0.14285714285714285,
+          "percent": 14.285714285714286
+        },
+        "S2-A": {
+          "hits": 0,
+          "events": 5,
+          "fraction": 0.0,
+          "percent": 0.0
+        },
+        "S2-B": {
+          "hits": 0,
+          "events": 8,
+          "fraction": 0.0,
+          "percent": 0.0
+        },
+        "S2-C": {
+          "hits": 0,
+          "events": 5,
+          "fraction": 0.0,
+          "percent": 0.0
+        }
+      },
+      "sensor_repeatability": {
+        "S1": {
+          "repeatable_in_every_capture": false,
+          "captures": [
+            "S1-A",
+            "S1-B"
+          ]
+        },
+        "S2": {
+          "repeatable_in_every_capture": false,
+          "captures": [
+            "S2-A",
+            "S2-B",
+            "S2-C"
+          ]
+        }
+      },
+      "classification": "insufficient_or_overlapping"
+    },
+    {
+      "centre_hz": 12663.269042968746,
+      "tolerance_hz": 50.0,
+      "capture_recurrence": {
+        "S1-A": {
+          "hits": 1,
+          "events": 5,
+          "fraction": 0.2,
+          "percent": 20.0
+        },
+        "S1-B": {
+          "hits": 1,
+          "events": 7,
+          "fraction": 0.14285714285714285,
+          "percent": 14.285714285714286
+        },
+        "S2-A": {
+          "hits": 1,
+          "events": 5,
+          "fraction": 0.2,
+          "percent": 20.0
+        },
+        "S2-B": {
+          "hits": 2,
+          "events": 8,
+          "fraction": 0.25,
+          "percent": 25.0
+        },
+        "S2-C": {
+          "hits": 0,
+          "events": 5,
+          "fraction": 0.0,
+          "percent": 0.0
+        }
+      },
+      "sensor_repeatability": {
+        "S1": {
+          "repeatable_in_every_capture": false,
+          "captures": [
+            "S1-A",
+            "S1-B"
+          ]
+        },
+        "S2": {
+          "repeatable_in_every_capture": false,
+          "captures": [
+            "S2-A",
+            "S2-B",
+            "S2-C"
+          ]
+        }
+      },
+      "classification": "insufficient_or_overlapping"
+    },
+    {
+      "centre_hz": 12867.736816406246,
+      "tolerance_hz": 50.0,
+      "capture_recurrence": {
+        "S1-A": {
+          "hits": 3,
+          "events": 5,
+          "fraction": 0.6,
+          "percent": 60.0
+        },
+        "S1-B": {
+          "hits": 5,
+          "events": 7,
+          "fraction": 0.7142857142857143,
+          "percent": 71.42857142857143
+        },
+        "S2-A": {
+          "hits": 4,
+          "events": 5,
+          "fraction": 0.8,
+          "percent": 80.0
+        },
+        "S2-B": {
+          "hits": 4,
+          "events": 8,
+          "fraction": 0.5,
+          "percent": 50.0
+        },
+        "S2-C": {
+          "hits": 2,
+          "events": 5,
+          "fraction": 0.4,
+          "percent": 40.0
+        }
+      },
+      "sensor_repeatability": {
+        "S1": {
+          "repeatable_in_every_capture": true,
+          "captures": [
+            "S1-A",
+            "S1-B"
+          ]
+        },
+        "S2": {
+          "repeatable_in_every_capture": false,
+          "captures": [
+            "S2-A",
+            "S2-B",
+            "S2-C"
+          ]
+        }
+      },
+      "classification": "insufficient_or_overlapping"
+    },
+    {
+      "centre_hz": 12985.229492187496,
+      "tolerance_hz": 50.0,
+      "capture_recurrence": {
+        "S1-A": {
+          "hits": 1,
+          "events": 5,
+          "fraction": 0.2,
+          "percent": 20.0
+        },
+        "S1-B": {
+          "hits": 2,
+          "events": 7,
+          "fraction": 0.2857142857142857,
+          "percent": 28.571428571428573
+        },
+        "S2-A": {
+          "hits": 0,
+          "events": 5,
+          "fraction": 0.0,
+          "percent": 0.0
+        },
+        "S2-B": {
+          "hits": 3,
+          "events": 8,
+          "fraction": 0.375,
+          "percent": 37.5
+        },
+        "S2-C": {
+          "hits": 1,
+          "events": 5,
+          "fraction": 0.2,
+          "percent": 20.0
+        }
+      },
+      "sensor_repeatability": {
+        "S1": {
+          "repeatable_in_every_capture": false,
+          "captures": [
+            "S1-A",
+            "S1-B"
+          ]
+        },
+        "S2": {
+          "repeatable_in_every_capture": false,
+          "captures": [
+            "S2-A",
+            "S2-B",
+            "S2-C"
+          ]
+        }
+      },
+      "classification": "insufficient_or_overlapping"
+    },
+    {
+      "centre_hz": 13098.144531249998,
+      "tolerance_hz": 50.0,
+      "capture_recurrence": {
+        "S1-A": {
+          "hits": 0,
+          "events": 5,
+          "fraction": 0.0,
+          "percent": 0.0
+        },
+        "S1-B": {
+          "hits": 0,
+          "events": 7,
+          "fraction": 0.0,
+          "percent": 0.0
+        },
+        "S2-A": {
+          "hits": 0,
+          "events": 5,
+          "fraction": 0.0,
+          "percent": 0.0
+        },
+        "S2-B": {
+          "hits": 2,
+          "events": 8,
+          "fraction": 0.25,
+          "percent": 25.0
+        },
+        "S2-C": {
+          "hits": 1,
+          "events": 5,
+          "fraction": 0.2,
+          "percent": 20.0
+        }
+      },
+      "sensor_repeatability": {
+        "S1": {
+          "repeatable_in_every_capture": false,
+          "captures": [
+            "S1-A",
+            "S1-B"
+          ]
+        },
+        "S2": {
+          "repeatable_in_every_capture": false,
+          "captures": [
+            "S2-A",
+            "S2-B",
+            "S2-C"
+          ]
+        }
+      },
+      "classification": "insufficient_or_overlapping"
+    },
+    {
+      "centre_hz": 13229.370117187496,
+      "tolerance_hz": 50.0,
+      "capture_recurrence": {
+        "S1-A": {
+          "hits": 1,
+          "events": 5,
+          "fraction": 0.2,
+          "percent": 20.0
+        },
+        "S1-B": {
+          "hits": 2,
+          "events": 7,
+          "fraction": 0.2857142857142857,
+          "percent": 28.571428571428573
+        },
+        "S2-A": {
+          "hits": 2,
+          "events": 5,
+          "fraction": 0.4,
+          "percent": 40.0
+        },
+        "S2-B": {
+          "hits": 0,
+          "events": 8,
+          "fraction": 0.0,
+          "percent": 0.0
+        },
+        "S2-C": {
+          "hits": 1,
+          "events": 5,
+          "fraction": 0.2,
+          "percent": 20.0
+        }
+      },
+      "sensor_repeatability": {
+        "S1": {
+          "repeatable_in_every_capture": false,
+          "captures": [
+            "S1-A",
+            "S1-B"
+          ]
+        },
+        "S2": {
+          "repeatable_in_every_capture": false,
+          "captures": [
+            "S2-A",
+            "S2-B",
+            "S2-C"
+          ]
+        }
+      },
+      "classification": "insufficient_or_overlapping"
+    },
+    {
+      "centre_hz": 13427.734374999998,
+      "tolerance_hz": 50.0,
+      "capture_recurrence": {
+        "S1-A": {
+          "hits": 3,
+          "events": 5,
+          "fraction": 0.6,
+          "percent": 60.0
+        },
+        "S1-B": {
+          "hits": 4,
+          "events": 7,
+          "fraction": 0.5714285714285714,
+          "percent": 57.142857142857146
+        },
+        "S2-A": {
+          "hits": 4,
+          "events": 5,
+          "fraction": 0.8,
+          "percent": 80.0
+        },
+        "S2-B": {
+          "hits": 4,
+          "events": 8,
+          "fraction": 0.5,
+          "percent": 50.0
+        },
+        "S2-C": {
+          "hits": 2,
+          "events": 5,
+          "fraction": 0.4,
+          "percent": 40.0
+        }
+      },
+      "sensor_repeatability": {
+        "S1": {
+          "repeatable_in_every_capture": false,
+          "captures": [
+            "S1-A",
+            "S1-B"
+          ]
+        },
+        "S2": {
+          "repeatable_in_every_capture": false,
+          "captures": [
+            "S2-A",
+            "S2-B",
+            "S2-C"
+          ]
+        }
+      },
+      "classification": "insufficient_or_overlapping"
+    },
+    {
+      "centre_hz": 13447.570800781248,
+      "tolerance_hz": 50.0,
+      "capture_recurrence": {
+        "S1-A": {
+          "hits": 3,
+          "events": 5,
+          "fraction": 0.6,
+          "percent": 60.0
+        },
+        "S1-B": {
+          "hits": 5,
+          "events": 7,
+          "fraction": 0.7142857142857143,
+          "percent": 71.42857142857143
+        },
+        "S2-A": {
+          "hits": 4,
+          "events": 5,
+          "fraction": 0.8,
+          "percent": 80.0
+        },
+        "S2-B": {
+          "hits": 5,
+          "events": 8,
+          "fraction": 0.625,
+          "percent": 62.5
+        },
+        "S2-C": {
+          "hits": 4,
+          "events": 5,
+          "fraction": 0.8,
+          "percent": 80.0
+        }
+      },
+      "sensor_repeatability": {
+        "S1": {
+          "repeatable_in_every_capture": true,
+          "captures": [
+            "S1-A",
+            "S1-B"
+          ]
+        },
+        "S2": {
+          "repeatable_in_every_capture": true,
+          "captures": [
+            "S2-A",
+            "S2-B",
+            "S2-C"
+          ]
+        }
+      },
+      "classification": "shared_signal_structure"
+    },
+    {
+      "centre_hz": 13537.597656249998,
+      "tolerance_hz": 50.0,
+      "capture_recurrence": {
+        "S1-A": {
+          "hits": 1,
+          "events": 5,
+          "fraction": 0.2,
+          "percent": 20.0
+        },
+        "S1-B": {
+          "hits": 0,
+          "events": 7,
+          "fraction": 0.0,
+          "percent": 0.0
+        },
+        "S2-A": {
+          "hits": 1,
+          "events": 5,
+          "fraction": 0.2,
+          "percent": 20.0
+        },
+        "S2-B": {
+          "hits": 0,
+          "events": 8,
+          "fraction": 0.0,
+          "percent": 0.0
+        },
+        "S2-C": {
+          "hits": 2,
+          "events": 5,
+          "fraction": 0.4,
+          "percent": 40.0
+        }
+      },
+      "sensor_repeatability": {
+        "S1": {
+          "repeatable_in_every_capture": false,
+          "captures": [
+            "S1-A",
+            "S1-B"
+          ]
+        },
+        "S2": {
+          "repeatable_in_every_capture": false,
+          "captures": [
+            "S2-A",
+            "S2-B",
+            "S2-C"
+          ]
+        }
+      },
+      "classification": "insufficient_or_overlapping"
+    },
+    {
+      "centre_hz": 13714.599609374998,
+      "tolerance_hz": 50.0,
+      "capture_recurrence": {
+        "S1-A": {
+          "hits": 0,
+          "events": 5,
+          "fraction": 0.0,
+          "percent": 0.0
+        },
+        "S1-B": {
+          "hits": 1,
+          "events": 7,
+          "fraction": 0.14285714285714285,
+          "percent": 14.285714285714286
+        },
+        "S2-A": {
+          "hits": 1,
+          "events": 5,
+          "fraction": 0.2,
+          "percent": 20.0
+        },
+        "S2-B": {
+          "hits": 1,
+          "events": 8,
+          "fraction": 0.125,
+          "percent": 12.5
+        },
+        "S2-C": {
+          "hits": 0,
+          "events": 5,
+          "fraction": 0.0,
+          "percent": 0.0
+        }
+      },
+      "sensor_repeatability": {
+        "S1": {
+          "repeatable_in_every_capture": false,
+          "captures": [
+            "S1-A",
+            "S1-B"
+          ]
+        },
+        "S2": {
+          "repeatable_in_every_capture": false,
+          "captures": [
+            "S2-A",
+            "S2-B",
+            "S2-C"
+          ]
+        }
+      },
+      "classification": "insufficient_or_overlapping"
+    },
+    {
+      "centre_hz": 14031.982421874998,
+      "tolerance_hz": 50.0,
+      "capture_recurrence": {
+        "S1-A": {
+          "hits": 0,
+          "events": 5,
+          "fraction": 0.0,
+          "percent": 0.0
+        },
+        "S1-B": {
+          "hits": 1,
+          "events": 7,
+          "fraction": 0.14285714285714285,
+          "percent": 14.285714285714286
+        },
+        "S2-A": {
+          "hits": 0,
+          "events": 5,
+          "fraction": 0.0,
+          "percent": 0.0
+        },
+        "S2-B": {
+          "hits": 0,
+          "events": 8,
+          "fraction": 0.0,
+          "percent": 0.0
+        },
+        "S2-C": {
+          "hits": 0,
+          "events": 5,
+          "fraction": 0.0,
+          "percent": 0.0
+        }
+      },
+      "sensor_repeatability": {
+        "S1": {
+          "repeatable_in_every_capture": false,
+          "captures": [
+            "S1-A",
+            "S1-B"
+          ]
+        },
+        "S2": {
+          "repeatable_in_every_capture": false,
+          "captures": [
+            "S2-A",
+            "S2-B",
+            "S2-C"
+          ]
+        }
+      },
+      "classification": "insufficient_or_overlapping"
+    },
+    {
+      "centre_hz": 14198.303222656246,
+      "tolerance_hz": 50.0,
+      "capture_recurrence": {
+        "S1-A": {
+          "hits": 2,
+          "events": 5,
+          "fraction": 0.4,
+          "percent": 40.0
+        },
+        "S1-B": {
+          "hits": 3,
+          "events": 7,
+          "fraction": 0.42857142857142855,
+          "percent": 42.857142857142854
+        },
+        "S2-A": {
+          "hits": 2,
+          "events": 5,
+          "fraction": 0.4,
+          "percent": 40.0
+        },
+        "S2-B": {
+          "hits": 2,
+          "events": 8,
+          "fraction": 0.25,
+          "percent": 25.0
+        },
+        "S2-C": {
+          "hits": 1,
+          "events": 5,
+          "fraction": 0.2,
+          "percent": 20.0
+        }
+      },
+      "sensor_repeatability": {
+        "S1": {
+          "repeatable_in_every_capture": false,
+          "captures": [
+            "S1-A",
+            "S1-B"
+          ]
+        },
+        "S2": {
+          "repeatable_in_every_capture": false,
+          "captures": [
+            "S2-A",
+            "S2-B",
+            "S2-C"
+          ]
+        }
+      },
+      "classification": "insufficient_or_overlapping"
+    },
+    {
+      "centre_hz": 14305.114746093748,
+      "tolerance_hz": 50.0,
+      "capture_recurrence": {
+        "S1-A": {
+          "hits": 0,
+          "events": 5,
+          "fraction": 0.0,
+          "percent": 0.0
+        },
+        "S1-B": {
+          "hits": 0,
+          "events": 7,
+          "fraction": 0.0,
+          "percent": 0.0
+        },
+        "S2-A": {
+          "hits": 1,
+          "events": 5,
+          "fraction": 0.2,
+          "percent": 20.0
+        },
+        "S2-B": {
+          "hits": 0,
+          "events": 8,
+          "fraction": 0.0,
+          "percent": 0.0
+        },
+        "S2-C": {
+          "hits": 1,
+          "events": 5,
+          "fraction": 0.2,
+          "percent": 20.0
+        }
+      },
+      "sensor_repeatability": {
+        "S1": {
+          "repeatable_in_every_capture": false,
+          "captures": [
+            "S1-A",
+            "S1-B"
+          ]
+        },
+        "S2": {
+          "repeatable_in_every_capture": false,
+          "captures": [
+            "S2-A",
+            "S2-B",
+            "S2-C"
+          ]
+        }
+      },
+      "classification": "insufficient_or_overlapping"
+    },
+    {
+      "centre_hz": 14419.555664062496,
+      "tolerance_hz": 50.0,
+      "capture_recurrence": {
+        "S1-A": {
+          "hits": 1,
+          "events": 5,
+          "fraction": 0.2,
+          "percent": 20.0
+        },
+        "S1-B": {
+          "hits": 1,
+          "events": 7,
+          "fraction": 0.14285714285714285,
+          "percent": 14.285714285714286
+        },
+        "S2-A": {
+          "hits": 0,
+          "events": 5,
+          "fraction": 0.0,
+          "percent": 0.0
+        },
+        "S2-B": {
+          "hits": 0,
+          "events": 8,
+          "fraction": 0.0,
+          "percent": 0.0
+        },
+        "S2-C": {
+          "hits": 0,
+          "events": 5,
+          "fraction": 0.0,
+          "percent": 0.0
+        }
+      },
+      "sensor_repeatability": {
+        "S1": {
+          "repeatable_in_every_capture": false,
+          "captures": [
+            "S1-A",
+            "S1-B"
+          ]
+        },
+        "S2": {
+          "repeatable_in_every_capture": false,
+          "captures": [
+            "S2-A",
+            "S2-B",
+            "S2-C"
+          ]
+        }
+      },
+      "classification": "insufficient_or_overlapping"
+    },
+    {
+      "centre_hz": 14555.358886718746,
+      "tolerance_hz": 50.0,
+      "capture_recurrence": {
+        "S1-A": {
+          "hits": 0,
+          "events": 5,
+          "fraction": 0.0,
+          "percent": 0.0
+        },
+        "S1-B": {
+          "hits": 1,
+          "events": 7,
+          "fraction": 0.14285714285714285,
+          "percent": 14.285714285714286
+        },
+        "S2-A": {
+          "hits": 1,
+          "events": 5,
+          "fraction": 0.2,
+          "percent": 20.0
+        },
+        "S2-B": {
+          "hits": 3,
+          "events": 8,
+          "fraction": 0.375,
+          "percent": 37.5
+        },
+        "S2-C": {
+          "hits": 0,
+          "events": 5,
+          "fraction": 0.0,
+          "percent": 0.0
+        }
+      },
+      "sensor_repeatability": {
+        "S1": {
+          "repeatable_in_every_capture": false,
+          "captures": [
+            "S1-A",
+            "S1-B"
+          ]
+        },
+        "S2": {
+          "repeatable_in_every_capture": false,
+          "captures": [
+            "S2-A",
+            "S2-B",
+            "S2-C"
+          ]
+        }
+      },
+      "classification": "insufficient_or_overlapping"
+    },
+    {
+      "centre_hz": 14762.878417968748,
+      "tolerance_hz": 50.0,
+      "capture_recurrence": {
+        "S1-A": {
+          "hits": 0,
+          "events": 5,
+          "fraction": 0.0,
+          "percent": 0.0
+        },
+        "S1-B": {
+          "hits": 0,
+          "events": 7,
+          "fraction": 0.0,
+          "percent": 0.0
+        },
+        "S2-A": {
+          "hits": 0,
+          "events": 5,
+          "fraction": 0.0,
+          "percent": 0.0
+        },
+        "S2-B": {
+          "hits": 0,
+          "events": 8,
+          "fraction": 0.0,
+          "percent": 0.0
+        },
+        "S2-C": {
+          "hits": 1,
+          "events": 5,
+          "fraction": 0.2,
+          "percent": 20.0
+        }
+      },
+      "sensor_repeatability": {
+        "S1": {
+          "repeatable_in_every_capture": false,
+          "captures": [
+            "S1-A",
+            "S1-B"
+          ]
+        },
+        "S2": {
+          "repeatable_in_every_capture": false,
+          "captures": [
+            "S2-A",
+            "S2-B",
+            "S2-C"
+          ]
+        }
+      },
+      "classification": "insufficient_or_overlapping"
+    },
+    {
+      "centre_hz": 15193.176269531246,
+      "tolerance_hz": 50.0,
+      "capture_recurrence": {
+        "S1-A": {
+          "hits": 2,
+          "events": 5,
+          "fraction": 0.4,
+          "percent": 40.0
+        },
+        "S1-B": {
+          "hits": 1,
+          "events": 7,
+          "fraction": 0.14285714285714285,
+          "percent": 14.285714285714286
+        },
+        "S2-A": {
+          "hits": 0,
+          "events": 5,
+          "fraction": 0.0,
+          "percent": 0.0
+        },
+        "S2-B": {
+          "hits": 0,
+          "events": 8,
+          "fraction": 0.0,
+          "percent": 0.0
+        },
+        "S2-C": {
+          "hits": 3,
+          "events": 5,
+          "fraction": 0.6,
+          "percent": 60.0
+        }
+      },
+      "sensor_repeatability": {
+        "S1": {
+          "repeatable_in_every_capture": false,
+          "captures": [
+            "S1-A",
+            "S1-B"
+          ]
+        },
+        "S2": {
+          "repeatable_in_every_capture": false,
+          "captures": [
+            "S2-A",
+            "S2-B",
+            "S2-C"
+          ]
+        }
+      },
+      "classification": "insufficient_or_overlapping"
+    },
+    {
+      "centre_hz": 15568.542480468746,
+      "tolerance_hz": 50.0,
+      "capture_recurrence": {
+        "S1-A": {
+          "hits": 0,
+          "events": 5,
+          "fraction": 0.0,
+          "percent": 0.0
+        },
+        "S1-B": {
+          "hits": 0,
+          "events": 7,
+          "fraction": 0.0,
+          "percent": 0.0
+        },
+        "S2-A": {
+          "hits": 0,
+          "events": 5,
+          "fraction": 0.0,
+          "percent": 0.0
+        },
+        "S2-B": {
+          "hits": 0,
+          "events": 8,
+          "fraction": 0.0,
+          "percent": 0.0
+        },
+        "S2-C": {
+          "hits": 1,
+          "events": 5,
+          "fraction": 0.2,
+          "percent": 20.0
+        }
+      },
+      "sensor_repeatability": {
+        "S1": {
+          "repeatable_in_every_capture": false,
+          "captures": [
+            "S1-A",
+            "S1-B"
+          ]
+        },
+        "S2": {
+          "repeatable_in_every_capture": false,
+          "captures": [
+            "S2-A",
+            "S2-B",
+            "S2-C"
+          ]
+        }
+      },
+      "classification": "insufficient_or_overlapping"
+    },
+    {
+      "centre_hz": 16186.523437499996,
+      "tolerance_hz": 50.0,
+      "capture_recurrence": {
+        "S1-A": {
+          "hits": 0,
+          "events": 5,
+          "fraction": 0.0,
+          "percent": 0.0
+        },
+        "S1-B": {
+          "hits": 0,
+          "events": 7,
+          "fraction": 0.0,
+          "percent": 0.0
+        },
+        "S2-A": {
+          "hits": 1,
+          "events": 5,
+          "fraction": 0.2,
+          "percent": 20.0
+        },
+        "S2-B": {
+          "hits": 3,
+          "events": 8,
+          "fraction": 0.375,
+          "percent": 37.5
+        },
+        "S2-C": {
+          "hits": 2,
+          "events": 5,
+          "fraction": 0.4,
+          "percent": 40.0
+        }
+      },
+      "sensor_repeatability": {
+        "S1": {
+          "repeatable_in_every_capture": false,
+          "captures": [
+            "S1-A",
+            "S1-B"
+          ]
+        },
+        "S2": {
+          "repeatable_in_every_capture": false,
+          "captures": [
+            "S2-A",
+            "S2-B",
+            "S2-C"
+          ]
+        }
+      },
+      "classification": "insufficient_or_overlapping"
+    },
+    {
+      "centre_hz": 16532.897949218746,
+      "tolerance_hz": 50.0,
+      "capture_recurrence": {
+        "S1-A": {
+          "hits": 0,
+          "events": 5,
+          "fraction": 0.0,
+          "percent": 0.0
+        },
+        "S1-B": {
+          "hits": 1,
+          "events": 7,
+          "fraction": 0.14285714285714285,
+          "percent": 14.285714285714286
+        },
+        "S2-A": {
+          "hits": 1,
+          "events": 5,
+          "fraction": 0.2,
+          "percent": 20.0
+        },
+        "S2-B": {
+          "hits": 1,
+          "events": 8,
+          "fraction": 0.125,
+          "percent": 12.5
+        },
+        "S2-C": {
+          "hits": 0,
+          "events": 5,
+          "fraction": 0.0,
+          "percent": 0.0
+        }
+      },
+      "sensor_repeatability": {
+        "S1": {
+          "repeatable_in_every_capture": false,
+          "captures": [
+            "S1-A",
+            "S1-B"
+          ]
+        },
+        "S2": {
+          "repeatable_in_every_capture": false,
+          "captures": [
+            "S2-A",
+            "S2-B",
+            "S2-C"
+          ]
+        }
+      },
+      "classification": "insufficient_or_overlapping"
+    },
+    {
+      "centre_hz": 16638.183593749996,
+      "tolerance_hz": 50.0,
+      "capture_recurrence": {
+        "S1-A": {
+          "hits": 1,
+          "events": 5,
+          "fraction": 0.2,
+          "percent": 20.0
+        },
+        "S1-B": {
+          "hits": 0,
+          "events": 7,
+          "fraction": 0.0,
+          "percent": 0.0
+        },
+        "S2-A": {
+          "hits": 0,
+          "events": 5,
+          "fraction": 0.0,
+          "percent": 0.0
+        },
+        "S2-B": {
+          "hits": 1,
+          "events": 8,
+          "fraction": 0.125,
+          "percent": 12.5
+        },
+        "S2-C": {
+          "hits": 1,
+          "events": 5,
+          "fraction": 0.2,
+          "percent": 20.0
+        }
+      },
+      "sensor_repeatability": {
+        "S1": {
+          "repeatable_in_every_capture": false,
+          "captures": [
+            "S1-A",
+            "S1-B"
+          ]
+        },
+        "S2": {
+          "repeatable_in_every_capture": false,
+          "captures": [
+            "S2-A",
+            "S2-B",
+            "S2-C"
+          ]
+        }
+      },
+      "classification": "insufficient_or_overlapping"
+    },
+    {
+      "centre_hz": 16769.409179687496,
+      "tolerance_hz": 50.0,
+      "capture_recurrence": {
+        "S1-A": {
+          "hits": 0,
+          "events": 5,
+          "fraction": 0.0,
+          "percent": 0.0
+        },
+        "S1-B": {
+          "hits": 0,
+          "events": 7,
+          "fraction": 0.0,
+          "percent": 0.0
+        },
+        "S2-A": {
+          "hits": 0,
+          "events": 5,
+          "fraction": 0.0,
+          "percent": 0.0
+        },
+        "S2-B": {
+          "hits": 2,
+          "events": 8,
+          "fraction": 0.25,
+          "percent": 25.0
+        },
+        "S2-C": {
+          "hits": 0,
+          "events": 5,
+          "fraction": 0.0,
+          "percent": 0.0
+        }
+      },
+      "sensor_repeatability": {
+        "S1": {
+          "repeatable_in_every_capture": false,
+          "captures": [
+            "S1-A",
+            "S1-B"
+          ]
+        },
+        "S2": {
+          "repeatable_in_every_capture": false,
+          "captures": [
+            "S2-A",
+            "S2-B",
+            "S2-C"
+          ]
+        }
+      },
+      "classification": "insufficient_or_overlapping"
+    },
+    {
+      "centre_hz": 16899.108886718746,
+      "tolerance_hz": 50.0,
+      "capture_recurrence": {
+        "S1-A": {
+          "hits": 0,
+          "events": 5,
+          "fraction": 0.0,
+          "percent": 0.0
+        },
+        "S1-B": {
+          "hits": 1,
+          "events": 7,
+          "fraction": 0.14285714285714285,
+          "percent": 14.285714285714286
+        },
+        "S2-A": {
+          "hits": 0,
+          "events": 5,
+          "fraction": 0.0,
+          "percent": 0.0
+        },
+        "S2-B": {
+          "hits": 0,
+          "events": 8,
+          "fraction": 0.0,
+          "percent": 0.0
+        },
+        "S2-C": {
+          "hits": 0,
+          "events": 5,
+          "fraction": 0.0,
+          "percent": 0.0
+        }
+      },
+      "sensor_repeatability": {
+        "S1": {
+          "repeatable_in_every_capture": false,
+          "captures": [
+            "S1-A",
+            "S1-B"
+          ]
+        },
+        "S2": {
+          "repeatable_in_every_capture": false,
+          "captures": [
+            "S2-A",
+            "S2-B",
+            "S2-C"
+          ]
+        }
+      },
+      "classification": "insufficient_or_overlapping"
+    },
+    {
+      "centre_hz": 17280.578613281246,
+      "tolerance_hz": 50.0,
+      "capture_recurrence": {
+        "S1-A": {
+          "hits": 1,
+          "events": 5,
+          "fraction": 0.2,
+          "percent": 20.0
+        },
+        "S1-B": {
+          "hits": 1,
+          "events": 7,
+          "fraction": 0.14285714285714285,
+          "percent": 14.285714285714286
+        },
+        "S2-A": {
+          "hits": 0,
+          "events": 5,
+          "fraction": 0.0,
+          "percent": 0.0
+        },
+        "S2-B": {
+          "hits": 1,
+          "events": 8,
+          "fraction": 0.125,
+          "percent": 12.5
+        },
+        "S2-C": {
+          "hits": 0,
+          "events": 5,
+          "fraction": 0.0,
+          "percent": 0.0
+        }
+      },
+      "sensor_repeatability": {
+        "S1": {
+          "repeatable_in_every_capture": false,
+          "captures": [
+            "S1-A",
+            "S1-B"
+          ]
+        },
+        "S2": {
+          "repeatable_in_every_capture": false,
+          "captures": [
+            "S2-A",
+            "S2-B",
+            "S2-C"
+          ]
+        }
+      },
+      "classification": "insufficient_or_overlapping"
+    },
+    {
+      "centre_hz": 17556.762695312496,
+      "tolerance_hz": 50.0,
+      "capture_recurrence": {
+        "S1-A": {
+          "hits": 0,
+          "events": 5,
+          "fraction": 0.0,
+          "percent": 0.0
+        },
+        "S1-B": {
+          "hits": 2,
+          "events": 7,
+          "fraction": 0.2857142857142857,
+          "percent": 28.571428571428573
+        },
+        "S2-A": {
+          "hits": 1,
+          "events": 5,
+          "fraction": 0.2,
+          "percent": 20.0
+        },
+        "S2-B": {
+          "hits": 2,
+          "events": 8,
+          "fraction": 0.25,
+          "percent": 25.0
+        },
+        "S2-C": {
+          "hits": 1,
+          "events": 5,
+          "fraction": 0.2,
+          "percent": 20.0
+        }
+      },
+      "sensor_repeatability": {
+        "S1": {
+          "repeatable_in_every_capture": false,
+          "captures": [
+            "S1-A",
+            "S1-B"
+          ]
+        },
+        "S2": {
+          "repeatable_in_every_capture": false,
+          "captures": [
+            "S2-A",
+            "S2-B",
+            "S2-C"
+          ]
+        }
+      },
+      "classification": "insufficient_or_overlapping"
+    },
+    {
+      "centre_hz": 17713.928222656246,
+      "tolerance_hz": 50.0,
+      "capture_recurrence": {
+        "S1-A": {
+          "hits": 2,
+          "events": 5,
+          "fraction": 0.4,
+          "percent": 40.0
+        },
+        "S1-B": {
+          "hits": 2,
+          "events": 7,
+          "fraction": 0.2857142857142857,
+          "percent": 28.571428571428573
+        },
+        "S2-A": {
+          "hits": 1,
+          "events": 5,
+          "fraction": 0.2,
+          "percent": 20.0
+        },
+        "S2-B": {
+          "hits": 2,
+          "events": 8,
+          "fraction": 0.25,
+          "percent": 25.0
+        },
+        "S2-C": {
+          "hits": 1,
+          "events": 5,
+          "fraction": 0.2,
+          "percent": 20.0
+        }
+      },
+      "sensor_repeatability": {
+        "S1": {
+          "repeatable_in_every_capture": false,
+          "captures": [
+            "S1-A",
+            "S1-B"
+          ]
+        },
+        "S2": {
+          "repeatable_in_every_capture": false,
+          "captures": [
+            "S2-A",
+            "S2-B",
+            "S2-C"
+          ]
+        }
+      },
+      "classification": "insufficient_or_overlapping"
+    },
+    {
+      "centre_hz": 17848.205566406246,
+      "tolerance_hz": 50.0,
+      "capture_recurrence": {
+        "S1-A": {
+          "hits": 2,
+          "events": 5,
+          "fraction": 0.4,
+          "percent": 40.0
+        },
+        "S1-B": {
+          "hits": 4,
+          "events": 7,
+          "fraction": 0.5714285714285714,
+          "percent": 57.142857142857146
+        },
+        "S2-A": {
+          "hits": 2,
+          "events": 5,
+          "fraction": 0.4,
+          "percent": 40.0
+        },
+        "S2-B": {
+          "hits": 4,
+          "events": 8,
+          "fraction": 0.5,
+          "percent": 50.0
+        },
+        "S2-C": {
+          "hits": 2,
+          "events": 5,
+          "fraction": 0.4,
+          "percent": 40.0
+        }
+      },
+      "sensor_repeatability": {
+        "S1": {
+          "repeatable_in_every_capture": false,
+          "captures": [
+            "S1-A",
+            "S1-B"
+          ]
+        },
+        "S2": {
+          "repeatable_in_every_capture": false,
+          "captures": [
+            "S2-A",
+            "S2-B",
+            "S2-C"
+          ]
+        }
+      },
+      "classification": "insufficient_or_overlapping"
+    },
+    {
+      "centre_hz": 18089.294433593746,
+      "tolerance_hz": 50.0,
+      "capture_recurrence": {
+        "S1-A": {
+          "hits": 0,
+          "events": 5,
+          "fraction": 0.0,
+          "percent": 0.0
+        },
+        "S1-B": {
+          "hits": 1,
+          "events": 7,
+          "fraction": 0.14285714285714285,
+          "percent": 14.285714285714286
+        },
+        "S2-A": {
+          "hits": 0,
+          "events": 5,
+          "fraction": 0.0,
+          "percent": 0.0
+        },
+        "S2-B": {
+          "hits": 1,
+          "events": 8,
+          "fraction": 0.125,
+          "percent": 12.5
+        },
+        "S2-C": {
+          "hits": 2,
+          "events": 5,
+          "fraction": 0.4,
+          "percent": 40.0
+        }
+      },
+      "sensor_repeatability": {
+        "S1": {
+          "repeatable_in_every_capture": false,
+          "captures": [
+            "S1-A",
+            "S1-B"
+          ]
+        },
+        "S2": {
+          "repeatable_in_every_capture": false,
+          "captures": [
+            "S2-A",
+            "S2-B",
+            "S2-C"
+          ]
+        }
+      },
+      "classification": "insufficient_or_overlapping"
+    },
+    {
+      "centre_hz": 18200.683593749996,
+      "tolerance_hz": 50.0,
+      "capture_recurrence": {
+        "S1-A": {
+          "hits": 1,
+          "events": 5,
+          "fraction": 0.2,
+          "percent": 20.0
+        },
+        "S1-B": {
+          "hits": 2,
+          "events": 7,
+          "fraction": 0.2857142857142857,
+          "percent": 28.571428571428573
+        },
+        "S2-A": {
+          "hits": 2,
+          "events": 5,
+          "fraction": 0.4,
+          "percent": 40.0
+        },
+        "S2-B": {
+          "hits": 1,
+          "events": 8,
+          "fraction": 0.125,
+          "percent": 12.5
+        },
+        "S2-C": {
+          "hits": 1,
+          "events": 5,
+          "fraction": 0.2,
+          "percent": 20.0
+        }
+      },
+      "sensor_repeatability": {
+        "S1": {
+          "repeatable_in_every_capture": false,
+          "captures": [
+            "S1-A",
+            "S1-B"
+          ]
+        },
+        "S2": {
+          "repeatable_in_every_capture": false,
+          "captures": [
+            "S2-A",
+            "S2-B",
+            "S2-C"
+          ]
+        }
+      },
+      "classification": "insufficient_or_overlapping"
+    },
+    {
+      "centre_hz": 18370.056152343746,
+      "tolerance_hz": 50.0,
+      "capture_recurrence": {
+        "S1-A": {
+          "hits": 1,
+          "events": 5,
+          "fraction": 0.2,
+          "percent": 20.0
+        },
+        "S1-B": {
+          "hits": 0,
+          "events": 7,
+          "fraction": 0.0,
+          "percent": 0.0
+        },
+        "S2-A": {
+          "hits": 1,
+          "events": 5,
+          "fraction": 0.2,
+          "percent": 20.0
+        },
+        "S2-B": {
+          "hits": 1,
+          "events": 8,
+          "fraction": 0.125,
+          "percent": 12.5
+        },
+        "S2-C": {
+          "hits": 1,
+          "events": 5,
+          "fraction": 0.2,
+          "percent": 20.0
+        }
+      },
+      "sensor_repeatability": {
+        "S1": {
+          "repeatable_in_every_capture": false,
+          "captures": [
+            "S1-A",
+            "S1-B"
+          ]
+        },
+        "S2": {
+          "repeatable_in_every_capture": false,
+          "captures": [
+            "S2-A",
+            "S2-B",
+            "S2-C"
+          ]
+        }
+      },
+      "classification": "insufficient_or_overlapping"
+    },
+    {
+      "centre_hz": 18679.809570312496,
+      "tolerance_hz": 50.0,
+      "capture_recurrence": {
+        "S1-A": {
+          "hits": 3,
+          "events": 5,
+          "fraction": 0.6,
+          "percent": 60.0
+        },
+        "S1-B": {
+          "hits": 5,
+          "events": 7,
+          "fraction": 0.7142857142857143,
+          "percent": 71.42857142857143
+        },
+        "S2-A": {
+          "hits": 1,
+          "events": 5,
+          "fraction": 0.2,
+          "percent": 20.0
+        },
+        "S2-B": {
+          "hits": 3,
+          "events": 8,
+          "fraction": 0.375,
+          "percent": 37.5
+        },
+        "S2-C": {
+          "hits": 1,
+          "events": 5,
+          "fraction": 0.2,
+          "percent": 20.0
+        }
+      },
+      "sensor_repeatability": {
+        "S1": {
+          "repeatable_in_every_capture": true,
+          "captures": [
+            "S1-A",
+            "S1-B"
+          ]
+        },
+        "S2": {
+          "repeatable_in_every_capture": false,
+          "captures": [
+            "S2-A",
+            "S2-B",
+            "S2-C"
+          ]
+        }
+      },
+      "classification": "candidate_s1_discriminating"
+    },
+    {
+      "centre_hz": 18682.861328124996,
+      "tolerance_hz": 50.0,
+      "capture_recurrence": {
+        "S1-A": {
+          "hits": 3,
+          "events": 5,
+          "fraction": 0.6,
+          "percent": 60.0
+        },
+        "S1-B": {
+          "hits": 4,
+          "events": 7,
+          "fraction": 0.5714285714285714,
+          "percent": 57.142857142857146
+        },
+        "S2-A": {
+          "hits": 1,
+          "events": 5,
+          "fraction": 0.2,
+          "percent": 20.0
+        },
+        "S2-B": {
+          "hits": 4,
+          "events": 8,
+          "fraction": 0.5,
+          "percent": 50.0
+        },
+        "S2-C": {
+          "hits": 1,
+          "events": 5,
+          "fraction": 0.2,
+          "percent": 20.0
+        }
+      },
+      "sensor_repeatability": {
+        "S1": {
+          "repeatable_in_every_capture": false,
+          "captures": [
+            "S1-A",
+            "S1-B"
+          ]
+        },
+        "S2": {
+          "repeatable_in_every_capture": false,
+          "captures": [
+            "S2-A",
+            "S2-B",
+            "S2-C"
+          ]
+        }
+      },
+      "classification": "insufficient_or_overlapping"
+    },
+    {
+      "centre_hz": 18803.405761718746,
+      "tolerance_hz": 50.0,
+      "capture_recurrence": {
+        "S1-A": {
+          "hits": 2,
+          "events": 5,
+          "fraction": 0.4,
+          "percent": 40.0
+        },
+        "S1-B": {
+          "hits": 1,
+          "events": 7,
+          "fraction": 0.14285714285714285,
+          "percent": 14.285714285714286
+        },
+        "S2-A": {
+          "hits": 1,
+          "events": 5,
+          "fraction": 0.2,
+          "percent": 20.0
+        },
+        "S2-B": {
+          "hits": 2,
+          "events": 8,
+          "fraction": 0.25,
+          "percent": 25.0
+        },
+        "S2-C": {
+          "hits": 1,
+          "events": 5,
+          "fraction": 0.2,
+          "percent": 20.0
+        }
+      },
+      "sensor_repeatability": {
+        "S1": {
+          "repeatable_in_every_capture": false,
+          "captures": [
+            "S1-A",
+            "S1-B"
+          ]
+        },
+        "S2": {
+          "repeatable_in_every_capture": false,
+          "captures": [
+            "S2-A",
+            "S2-B",
+            "S2-C"
+          ]
+        }
+      },
+      "classification": "insufficient_or_overlapping"
+    },
+    {
+      "centre_hz": 18939.208984374996,
+      "tolerance_hz": 50.0,
+      "capture_recurrence": {
+        "S1-A": {
+          "hits": 1,
+          "events": 5,
+          "fraction": 0.2,
+          "percent": 20.0
+        },
+        "S1-B": {
+          "hits": 2,
+          "events": 7,
+          "fraction": 0.2857142857142857,
+          "percent": 28.571428571428573
+        },
+        "S2-A": {
+          "hits": 2,
+          "events": 5,
+          "fraction": 0.4,
+          "percent": 40.0
+        },
+        "S2-B": {
+          "hits": 2,
+          "events": 8,
+          "fraction": 0.25,
+          "percent": 25.0
+        },
+        "S2-C": {
+          "hits": 2,
+          "events": 5,
+          "fraction": 0.4,
+          "percent": 40.0
+        }
+      },
+      "sensor_repeatability": {
+        "S1": {
+          "repeatable_in_every_capture": false,
+          "captures": [
+            "S1-A",
+            "S1-B"
+          ]
+        },
+        "S2": {
+          "repeatable_in_every_capture": false,
+          "captures": [
+            "S2-A",
+            "S2-B",
+            "S2-C"
+          ]
+        }
+      },
+      "classification": "insufficient_or_overlapping"
+    },
+    {
+      "centre_hz": 19131.469726562496,
+      "tolerance_hz": 50.0,
+      "capture_recurrence": {
+        "S1-A": {
+          "hits": 3,
+          "events": 5,
+          "fraction": 0.6,
+          "percent": 60.0
+        },
+        "S1-B": {
+          "hits": 0,
+          "events": 7,
+          "fraction": 0.0,
+          "percent": 0.0
+        },
+        "S2-A": {
+          "hits": 0,
+          "events": 5,
+          "fraction": 0.0,
+          "percent": 0.0
+        },
+        "S2-B": {
+          "hits": 1,
+          "events": 8,
+          "fraction": 0.125,
+          "percent": 12.5
+        },
+        "S2-C": {
+          "hits": 1,
+          "events": 5,
+          "fraction": 0.2,
+          "percent": 20.0
+        }
+      },
+      "sensor_repeatability": {
+        "S1": {
+          "repeatable_in_every_capture": false,
+          "captures": [
+            "S1-A",
+            "S1-B"
+          ]
+        },
+        "S2": {
+          "repeatable_in_every_capture": false,
+          "captures": [
+            "S2-A",
+            "S2-B",
+            "S2-C"
+          ]
+        }
+      },
+      "classification": "insufficient_or_overlapping"
+    },
+    {
+      "centre_hz": 19233.703613281246,
+      "tolerance_hz": 50.0,
+      "capture_recurrence": {
+        "S1-A": {
+          "hits": 1,
+          "events": 5,
+          "fraction": 0.2,
+          "percent": 20.0
+        },
+        "S1-B": {
+          "hits": 5,
+          "events": 7,
+          "fraction": 0.7142857142857143,
+          "percent": 71.42857142857143
+        },
+        "S2-A": {
+          "hits": 3,
+          "events": 5,
+          "fraction": 0.6,
+          "percent": 60.0
+        },
+        "S2-B": {
+          "hits": 8,
+          "events": 8,
+          "fraction": 1.0,
+          "percent": 100.0
+        },
+        "S2-C": {
+          "hits": 3,
+          "events": 5,
+          "fraction": 0.6,
+          "percent": 60.0
+        }
+      },
+      "sensor_repeatability": {
+        "S1": {
+          "repeatable_in_every_capture": false,
+          "captures": [
+            "S1-A",
+            "S1-B"
+          ]
+        },
+        "S2": {
+          "repeatable_in_every_capture": true,
+          "captures": [
+            "S2-A",
+            "S2-B",
+            "S2-C"
+          ]
+        }
+      },
+      "classification": "insufficient_or_overlapping"
+    },
+    {
+      "centre_hz": 19349.670410156246,
+      "tolerance_hz": 50.0,
+      "capture_recurrence": {
+        "S1-A": {
+          "hits": 1,
+          "events": 5,
+          "fraction": 0.2,
+          "percent": 20.0
+        },
+        "S1-B": {
+          "hits": 0,
+          "events": 7,
+          "fraction": 0.0,
+          "percent": 0.0
+        },
+        "S2-A": {
+          "hits": 0,
+          "events": 5,
+          "fraction": 0.0,
+          "percent": 0.0
+        },
+        "S2-B": {
+          "hits": 2,
+          "events": 8,
+          "fraction": 0.25,
+          "percent": 25.0
+        },
+        "S2-C": {
+          "hits": 1,
+          "events": 5,
+          "fraction": 0.2,
+          "percent": 20.0
+        }
+      },
+      "sensor_repeatability": {
+        "S1": {
+          "repeatable_in_every_capture": false,
+          "captures": [
+            "S1-A",
+            "S1-B"
+          ]
+        },
+        "S2": {
+          "repeatable_in_every_capture": false,
+          "captures": [
+            "S2-A",
+            "S2-B",
+            "S2-C"
+          ]
+        }
+      },
+      "classification": "insufficient_or_overlapping"
+    },
+    {
+      "centre_hz": 19549.560546874996,
+      "tolerance_hz": 50.0,
+      "capture_recurrence": {
+        "S1-A": {
+          "hits": 0,
+          "events": 5,
+          "fraction": 0.0,
+          "percent": 0.0
+        },
+        "S1-B": {
+          "hits": 4,
+          "events": 7,
+          "fraction": 0.5714285714285714,
+          "percent": 57.142857142857146
+        },
+        "S2-A": {
+          "hits": 2,
+          "events": 5,
+          "fraction": 0.4,
+          "percent": 40.0
+        },
+        "S2-B": {
+          "hits": 2,
+          "events": 8,
+          "fraction": 0.25,
+          "percent": 25.0
+        },
+        "S2-C": {
+          "hits": 1,
+          "events": 5,
+          "fraction": 0.2,
+          "percent": 20.0
+        }
+      },
+      "sensor_repeatability": {
+        "S1": {
+          "repeatable_in_every_capture": false,
+          "captures": [
+            "S1-A",
+            "S1-B"
+          ]
+        },
+        "S2": {
+          "repeatable_in_every_capture": false,
+          "captures": [
+            "S2-A",
+            "S2-B",
+            "S2-C"
+          ]
+        }
+      },
+      "classification": "insufficient_or_overlapping"
+    },
+    {
+      "centre_hz": 19662.475585937496,
+      "tolerance_hz": 50.0,
+      "capture_recurrence": {
+        "S1-A": {
+          "hits": 0,
+          "events": 5,
+          "fraction": 0.0,
+          "percent": 0.0
+        },
+        "S1-B": {
+          "hits": 0,
+          "events": 7,
+          "fraction": 0.0,
+          "percent": 0.0
+        },
+        "S2-A": {
+          "hits": 1,
+          "events": 5,
+          "fraction": 0.2,
+          "percent": 20.0
+        },
+        "S2-B": {
+          "hits": 1,
+          "events": 8,
+          "fraction": 0.125,
+          "percent": 12.5
+        },
+        "S2-C": {
+          "hits": 3,
+          "events": 5,
+          "fraction": 0.6,
+          "percent": 60.0
+        }
+      },
+      "sensor_repeatability": {
+        "S1": {
+          "repeatable_in_every_capture": false,
+          "captures": [
+            "S1-A",
+            "S1-B"
+          ]
+        },
+        "S2": {
+          "repeatable_in_every_capture": false,
+          "captures": [
+            "S2-A",
+            "S2-B",
+            "S2-C"
+          ]
+        }
+      },
+      "classification": "insufficient_or_overlapping"
+    },
+    {
+      "centre_hz": 19985.961914062496,
+      "tolerance_hz": 50.0,
+      "capture_recurrence": {
+        "S1-A": {
+          "hits": 2,
+          "events": 5,
+          "fraction": 0.4,
+          "percent": 40.0
+        },
+        "S1-B": {
+          "hits": 2,
+          "events": 7,
+          "fraction": 0.2857142857142857,
+          "percent": 28.571428571428573
+        },
+        "S2-A": {
+          "hits": 3,
+          "events": 5,
+          "fraction": 0.6,
+          "percent": 60.0
+        },
+        "S2-B": {
+          "hits": 1,
+          "events": 8,
+          "fraction": 0.125,
+          "percent": 12.5
+        },
+        "S2-C": {
+          "hits": 0,
+          "events": 5,
+          "fraction": 0.0,
+          "percent": 0.0
+        }
+      },
+      "sensor_repeatability": {
+        "S1": {
+          "repeatable_in_every_capture": false,
+          "captures": [
+            "S1-A",
+            "S1-B"
+          ]
+        },
+        "S2": {
+          "repeatable_in_every_capture": false,
+          "captures": [
+            "S2-A",
+            "S2-B",
+            "S2-C"
+          ]
+        }
+      },
+      "classification": "insufficient_or_overlapping"
+    },
+    {
+      "centre_hz": 20336.914062499996,
+      "tolerance_hz": 50.0,
+      "capture_recurrence": {
+        "S1-A": {
+          "hits": 0,
+          "events": 5,
+          "fraction": 0.0,
+          "percent": 0.0
+        },
+        "S1-B": {
+          "hits": 2,
+          "events": 7,
+          "fraction": 0.2857142857142857,
+          "percent": 28.571428571428573
+        },
+        "S2-A": {
+          "hits": 1,
+          "events": 5,
+          "fraction": 0.2,
+          "percent": 20.0
+        },
+        "S2-B": {
+          "hits": 4,
+          "events": 8,
+          "fraction": 0.5,
+          "percent": 50.0
+        },
+        "S2-C": {
+          "hits": 1,
+          "events": 5,
+          "fraction": 0.2,
+          "percent": 20.0
+        }
+      },
+      "sensor_repeatability": {
+        "S1": {
+          "repeatable_in_every_capture": false,
+          "captures": [
+            "S1-A",
+            "S1-B"
+          ]
+        },
+        "S2": {
+          "repeatable_in_every_capture": false,
+          "captures": [
+            "S2-A",
+            "S2-B",
+            "S2-C"
+          ]
+        }
+      },
+      "classification": "insufficient_or_overlapping"
+    },
+    {
+      "centre_hz": 20527.648925781246,
+      "tolerance_hz": 50.0,
+      "capture_recurrence": {
+        "S1-A": {
+          "hits": 2,
+          "events": 5,
+          "fraction": 0.4,
+          "percent": 40.0
+        },
+        "S1-B": {
+          "hits": 2,
+          "events": 7,
+          "fraction": 0.2857142857142857,
+          "percent": 28.571428571428573
+        },
+        "S2-A": {
+          "hits": 0,
+          "events": 5,
+          "fraction": 0.0,
+          "percent": 0.0
+        },
+        "S2-B": {
+          "hits": 1,
+          "events": 8,
+          "fraction": 0.125,
+          "percent": 12.5
+        },
+        "S2-C": {
+          "hits": 2,
+          "events": 5,
+          "fraction": 0.4,
+          "percent": 40.0
+        }
+      },
+      "sensor_repeatability": {
+        "S1": {
+          "repeatable_in_every_capture": false,
+          "captures": [
+            "S1-A",
+            "S1-B"
+          ]
+        },
+        "S2": {
+          "repeatable_in_every_capture": false,
+          "captures": [
+            "S2-A",
+            "S2-B",
+            "S2-C"
+          ]
+        }
+      },
+      "classification": "insufficient_or_overlapping"
+    },
+    {
+      "centre_hz": 20637.512207031246,
+      "tolerance_hz": 50.0,
+      "capture_recurrence": {
+        "S1-A": {
+          "hits": 1,
+          "events": 5,
+          "fraction": 0.2,
+          "percent": 20.0
+        },
+        "S1-B": {
+          "hits": 2,
+          "events": 7,
+          "fraction": 0.2857142857142857,
+          "percent": 28.571428571428573
+        },
+        "S2-A": {
+          "hits": 1,
+          "events": 5,
+          "fraction": 0.2,
+          "percent": 20.0
+        },
+        "S2-B": {
+          "hits": 1,
+          "events": 8,
+          "fraction": 0.125,
+          "percent": 12.5
+        },
+        "S2-C": {
+          "hits": 1,
+          "events": 5,
+          "fraction": 0.2,
+          "percent": 20.0
+        }
+      },
+      "sensor_repeatability": {
+        "S1": {
+          "repeatable_in_every_capture": false,
+          "captures": [
+            "S1-A",
+            "S1-B"
+          ]
+        },
+        "S2": {
+          "repeatable_in_every_capture": false,
+          "captures": [
+            "S2-A",
+            "S2-B",
+            "S2-C"
+          ]
+        }
+      },
+      "classification": "insufficient_or_overlapping"
+    },
+    {
+      "centre_hz": 20863.342285156246,
+      "tolerance_hz": 50.0,
+      "capture_recurrence": {
+        "S1-A": {
+          "hits": 0,
+          "events": 5,
+          "fraction": 0.0,
+          "percent": 0.0
+        },
+        "S1-B": {
+          "hits": 1,
+          "events": 7,
+          "fraction": 0.14285714285714285,
+          "percent": 14.285714285714286
+        },
+        "S2-A": {
+          "hits": 0,
+          "events": 5,
+          "fraction": 0.0,
+          "percent": 0.0
+        },
+        "S2-B": {
+          "hits": 1,
+          "events": 8,
+          "fraction": 0.125,
+          "percent": 12.5
+        },
+        "S2-C": {
+          "hits": 1,
+          "events": 5,
+          "fraction": 0.2,
+          "percent": 20.0
+        }
+      },
+      "sensor_repeatability": {
+        "S1": {
+          "repeatable_in_every_capture": false,
+          "captures": [
+            "S1-A",
+            "S1-B"
+          ]
+        },
+        "S2": {
+          "repeatable_in_every_capture": false,
+          "captures": [
+            "S2-A",
+            "S2-B",
+            "S2-C"
+          ]
+        }
+      },
+      "classification": "insufficient_or_overlapping"
+    },
+    {
+      "centre_hz": 21124.267578124996,
+      "tolerance_hz": 50.0,
+      "capture_recurrence": {
+        "S1-A": {
+          "hits": 0,
+          "events": 5,
+          "fraction": 0.0,
+          "percent": 0.0
+        },
+        "S1-B": {
+          "hits": 2,
+          "events": 7,
+          "fraction": 0.2857142857142857,
+          "percent": 28.571428571428573
+        },
+        "S2-A": {
+          "hits": 1,
+          "events": 5,
+          "fraction": 0.2,
+          "percent": 20.0
+        },
+        "S2-B": {
+          "hits": 3,
+          "events": 8,
+          "fraction": 0.375,
+          "percent": 37.5
+        },
+        "S2-C": {
+          "hits": 1,
+          "events": 5,
+          "fraction": 0.2,
+          "percent": 20.0
+        }
+      },
+      "sensor_repeatability": {
+        "S1": {
+          "repeatable_in_every_capture": false,
+          "captures": [
+            "S1-A",
+            "S1-B"
+          ]
+        },
+        "S2": {
+          "repeatable_in_every_capture": false,
+          "captures": [
+            "S2-A",
+            "S2-B",
+            "S2-C"
+          ]
+        }
+      },
+      "classification": "insufficient_or_overlapping"
+    },
+    {
+      "centre_hz": 21278.381347656246,
+      "tolerance_hz": 50.0,
+      "capture_recurrence": {
+        "S1-A": {
+          "hits": 1,
+          "events": 5,
+          "fraction": 0.2,
+          "percent": 20.0
+        },
+        "S1-B": {
+          "hits": 0,
+          "events": 7,
+          "fraction": 0.0,
+          "percent": 0.0
+        },
+        "S2-A": {
+          "hits": 0,
+          "events": 5,
+          "fraction": 0.0,
+          "percent": 0.0
+        },
+        "S2-B": {
+          "hits": 1,
+          "events": 8,
+          "fraction": 0.125,
+          "percent": 12.5
+        },
+        "S2-C": {
+          "hits": 0,
+          "events": 5,
+          "fraction": 0.0,
+          "percent": 0.0
+        }
+      },
+      "sensor_repeatability": {
+        "S1": {
+          "repeatable_in_every_capture": false,
+          "captures": [
+            "S1-A",
+            "S1-B"
+          ]
+        },
+        "S2": {
+          "repeatable_in_every_capture": false,
+          "captures": [
+            "S2-A",
+            "S2-B",
+            "S2-C"
+          ]
+        }
+      },
+      "classification": "insufficient_or_overlapping"
+    },
+    {
+      "centre_hz": 21466.064453124996,
+      "tolerance_hz": 50.0,
+      "capture_recurrence": {
+        "S1-A": {
+          "hits": 0,
+          "events": 5,
+          "fraction": 0.0,
+          "percent": 0.0
+        },
+        "S1-B": {
+          "hits": 1,
+          "events": 7,
+          "fraction": 0.14285714285714285,
+          "percent": 14.285714285714286
+        },
+        "S2-A": {
+          "hits": 1,
+          "events": 5,
+          "fraction": 0.2,
+          "percent": 20.0
+        },
+        "S2-B": {
+          "hits": 1,
+          "events": 8,
+          "fraction": 0.125,
+          "percent": 12.5
+        },
+        "S2-C": {
+          "hits": 0,
+          "events": 5,
+          "fraction": 0.0,
+          "percent": 0.0
+        }
+      },
+      "sensor_repeatability": {
+        "S1": {
+          "repeatable_in_every_capture": false,
+          "captures": [
+            "S1-A",
+            "S1-B"
+          ]
+        },
+        "S2": {
+          "repeatable_in_every_capture": false,
+          "captures": [
+            "S2-A",
+            "S2-B",
+            "S2-C"
+          ]
+        }
+      },
+      "classification": "insufficient_or_overlapping"
+    },
+    {
+      "centre_hz": 21984.863281249996,
+      "tolerance_hz": 50.0,
+      "capture_recurrence": {
+        "S1-A": {
+          "hits": 0,
+          "events": 5,
+          "fraction": 0.0,
+          "percent": 0.0
+        },
+        "S1-B": {
+          "hits": 0,
+          "events": 7,
+          "fraction": 0.0,
+          "percent": 0.0
+        },
+        "S2-A": {
+          "hits": 0,
+          "events": 5,
+          "fraction": 0.0,
+          "percent": 0.0
+        },
+        "S2-B": {
+          "hits": 2,
+          "events": 8,
+          "fraction": 0.25,
+          "percent": 25.0
+        },
+        "S2-C": {
+          "hits": 1,
+          "events": 5,
+          "fraction": 0.2,
+          "percent": 20.0
+        }
+      },
+      "sensor_repeatability": {
+        "S1": {
+          "repeatable_in_every_capture": false,
+          "captures": [
+            "S1-A",
+            "S1-B"
+          ]
+        },
+        "S2": {
+          "repeatable_in_every_capture": false,
+          "captures": [
+            "S2-A",
+            "S2-B",
+            "S2-C"
+          ]
+        }
+      },
+      "classification": "insufficient_or_overlapping"
+    },
+    {
+      "centre_hz": 22521.972656249996,
+      "tolerance_hz": 50.0,
+      "capture_recurrence": {
+        "S1-A": {
+          "hits": 0,
+          "events": 5,
+          "fraction": 0.0,
+          "percent": 0.0
+        },
+        "S1-B": {
+          "hits": 1,
+          "events": 7,
+          "fraction": 0.14285714285714285,
+          "percent": 14.285714285714286
+        },
+        "S2-A": {
+          "hits": 0,
+          "events": 5,
+          "fraction": 0.0,
+          "percent": 0.0
+        },
+        "S2-B": {
+          "hits": 3,
+          "events": 8,
+          "fraction": 0.375,
+          "percent": 37.5
+        },
+        "S2-C": {
+          "hits": 1,
+          "events": 5,
+          "fraction": 0.2,
+          "percent": 20.0
+        }
+      },
+      "sensor_repeatability": {
+        "S1": {
+          "repeatable_in_every_capture": false,
+          "captures": [
+            "S1-A",
+            "S1-B"
+          ]
+        },
+        "S2": {
+          "repeatable_in_every_capture": false,
+          "captures": [
+            "S2-A",
+            "S2-B",
+            "S2-C"
+          ]
+        }
+      },
+      "classification": "insufficient_or_overlapping"
+    },
+    {
+      "centre_hz": 22714.233398437496,
+      "tolerance_hz": 50.0,
+      "capture_recurrence": {
+        "S1-A": {
+          "hits": 1,
+          "events": 5,
+          "fraction": 0.2,
+          "percent": 20.0
+        },
+        "S1-B": {
+          "hits": 1,
+          "events": 7,
+          "fraction": 0.14285714285714285,
+          "percent": 14.285714285714286
+        },
+        "S2-A": {
+          "hits": 0,
+          "events": 5,
+          "fraction": 0.0,
+          "percent": 0.0
+        },
+        "S2-B": {
+          "hits": 0,
+          "events": 8,
+          "fraction": 0.0,
+          "percent": 0.0
+        },
+        "S2-C": {
+          "hits": 0,
+          "events": 5,
+          "fraction": 0.0,
+          "percent": 0.0
+        }
+      },
+      "sensor_repeatability": {
+        "S1": {
+          "repeatable_in_every_capture": false,
+          "captures": [
+            "S1-A",
+            "S1-B"
+          ]
+        },
+        "S2": {
+          "repeatable_in_every_capture": false,
+          "captures": [
+            "S2-A",
+            "S2-B",
+            "S2-C"
+          ]
+        }
+      },
+      "classification": "insufficient_or_overlapping"
+    },
+    {
+      "centre_hz": 22955.322265624996,
+      "tolerance_hz": 50.0,
+      "capture_recurrence": {
+        "S1-A": {
+          "hits": 1,
+          "events": 5,
+          "fraction": 0.2,
+          "percent": 20.0
+        },
+        "S1-B": {
+          "hits": 0,
+          "events": 7,
+          "fraction": 0.0,
+          "percent": 0.0
+        },
+        "S2-A": {
+          "hits": 0,
+          "events": 5,
+          "fraction": 0.0,
+          "percent": 0.0
+        },
+        "S2-B": {
+          "hits": 0,
+          "events": 8,
+          "fraction": 0.0,
+          "percent": 0.0
+        },
+        "S2-C": {
+          "hits": 0,
+          "events": 5,
+          "fraction": 0.0,
+          "percent": 0.0
+        }
+      },
+      "sensor_repeatability": {
+        "S1": {
+          "repeatable_in_every_capture": false,
+          "captures": [
+            "S1-A",
+            "S1-B"
+          ]
+        },
+        "S2": {
+          "repeatable_in_every_capture": false,
+          "captures": [
+            "S2-A",
+            "S2-B",
+            "S2-C"
+          ]
+        }
+      },
+      "classification": "insufficient_or_overlapping"
+    },
+    {
+      "centre_hz": 23095.703124999996,
+      "tolerance_hz": 50.0,
+      "capture_recurrence": {
+        "S1-A": {
+          "hits": 0,
+          "events": 5,
+          "fraction": 0.0,
+          "percent": 0.0
+        },
+        "S1-B": {
+          "hits": 0,
+          "events": 7,
+          "fraction": 0.0,
+          "percent": 0.0
+        },
+        "S2-A": {
+          "hits": 1,
+          "events": 5,
+          "fraction": 0.2,
+          "percent": 20.0
+        },
+        "S2-B": {
+          "hits": 1,
+          "events": 8,
+          "fraction": 0.125,
+          "percent": 12.5
+        },
+        "S2-C": {
+          "hits": 0,
+          "events": 5,
+          "fraction": 0.0,
+          "percent": 0.0
+        }
+      },
+      "sensor_repeatability": {
+        "S1": {
+          "repeatable_in_every_capture": false,
+          "captures": [
+            "S1-A",
+            "S1-B"
+          ]
+        },
+        "S2": {
+          "repeatable_in_every_capture": false,
+          "captures": [
+            "S2-A",
+            "S2-B",
+            "S2-C"
+          ]
+        }
+      },
+      "classification": "insufficient_or_overlapping"
+    },
+    {
+      "centre_hz": 24537.658691406246,
+      "tolerance_hz": 50.0,
+      "capture_recurrence": {
+        "S1-A": {
+          "hits": 0,
+          "events": 5,
+          "fraction": 0.0,
+          "percent": 0.0
+        },
+        "S1-B": {
+          "hits": 1,
+          "events": 7,
+          "fraction": 0.14285714285714285,
+          "percent": 14.285714285714286
+        },
+        "S2-A": {
+          "hits": 0,
+          "events": 5,
+          "fraction": 0.0,
+          "percent": 0.0
+        },
+        "S2-B": {
+          "hits": 0,
+          "events": 8,
+          "fraction": 0.0,
+          "percent": 0.0
+        },
+        "S2-C": {
+          "hits": 0,
+          "events": 5,
+          "fraction": 0.0,
+          "percent": 0.0
+        }
+      },
+      "sensor_repeatability": {
+        "S1": {
+          "repeatable_in_every_capture": false,
+          "captures": [
+            "S1-A",
+            "S1-B"
+          ]
+        },
+        "S2": {
+          "repeatable_in_every_capture": false,
+          "captures": [
+            "S2-A",
+            "S2-B",
+            "S2-C"
+          ]
+        }
+      },
+      "classification": "insufficient_or_overlapping"
+    },
+    {
+      "centre_hz": 24639.892578124996,
+      "tolerance_hz": 50.0,
+      "capture_recurrence": {
+        "S1-A": {
+          "hits": 1,
+          "events": 5,
+          "fraction": 0.2,
+          "percent": 20.0
+        },
+        "S1-B": {
+          "hits": 0,
+          "events": 7,
+          "fraction": 0.0,
+          "percent": 0.0
+        },
+        "S2-A": {
+          "hits": 0,
+          "events": 5,
+          "fraction": 0.0,
+          "percent": 0.0
+        },
+        "S2-B": {
+          "hits": 0,
+          "events": 8,
+          "fraction": 0.0,
+          "percent": 0.0
+        },
+        "S2-C": {
+          "hits": 0,
+          "events": 5,
+          "fraction": 0.0,
+          "percent": 0.0
+        }
+      },
+      "sensor_repeatability": {
+        "S1": {
+          "repeatable_in_every_capture": false,
+          "captures": [
+            "S1-A",
+            "S1-B"
+          ]
+        },
+        "S2": {
+          "repeatable_in_every_capture": false,
+          "captures": [
+            "S2-A",
+            "S2-B",
+            "S2-C"
+          ]
+        }
+      },
+      "classification": "insufficient_or_overlapping"
+    }
+  ],
+  "development_only": true,
+  "validation_sensors_used": [],
+  "identity_claim": false
+}
