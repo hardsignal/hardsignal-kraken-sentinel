@@ -1,0 +1,777 @@
+{
+  "format": "HARDSIGNAL_TPMS_IQ_FEATURES_V1",
+  "acquisition": {
+    "sample_rate_complex_sps": 25000,
+    "dtype": "complex128"
+  },
+  "parameters": {
+    "envelope_threshold": 0.05,
+    "join_gap_samples": 25,
+    "minimum_event_samples": 5,
+    "spectral_padding_samples": 25,
+    "fft_size": 16384,
+    "center_ignore_hz": 100,
+    "peak_separation_hz": 300,
+    "short_event_min_ms": 4.5,
+    "short_event_max_ms": 5.4
+  },
+  "excluded_identity_features": [
+    "absolute_carrier_offset_hz",
+    "received_power",
+    "doa"
+  ],
+  "summary": {
+    "short_event_count": 4,
+    "duration_ms": {
+      "median": 4.58,
+      "mean": 4.58,
+      "min": 4.56,
+      "max": 4.6
+    },
+    "p1_p2_spacing_hz": {
+      "median": 13082.122802734373,
+      "mean": 11276.62658691406,
+      "std": 3159.619654298006,
+      "min": 5804.443359374998,
+      "max": 13137.817382812498,
+      "mad": 51.116943359375
+    }
+  },
+  "files": [
+    {
+      "file": "17-Sep-2026_20h00m01s,IQ_433.868MHz,DOA_35.0.iq",
+      "samples": 10923,
+      "recorder_span_ms": 436.91999999999996,
+      "events": [
+        {
+          "event": 1,
+          "start_ms": 299.84,
+          "end_ms": 304.44,
+          "duration_ms": 4.6,
+          "short_event_candidate": true,
+          "p1_p2_spacing_hz": 13128.662109374998,
+          "spectral_peaks": [
+            {
+              "rank": 1,
+              "frequency_hz": -3962.7075195312495,
+              "relative_db": 0.0
+            },
+            {
+              "rank": 2,
+              "frequency_hz": 9165.954589843748,
+              "relative_db": -13.799651762121062
+            },
+            {
+              "rank": 3,
+              "frequency_hz": -9776.306152343748,
+              "relative_db": -15.354553819008721
+            },
+            {
+              "rank": 4,
+              "frequency_hz": 8085.632324218749,
+              "relative_db": -15.449563155066151
+            },
+            {
+              "rank": 5,
+              "frequency_hz": 11611.938476562498,
+              "relative_db": -16.72138170560132
+            },
+            {
+              "rank": 6,
+              "frequency_hz": 8865.356445312498,
+              "relative_db": -17.116652261057673
+            },
+            {
+              "rank": 7,
+              "frequency_hz": 7785.034179687499,
+              "relative_db": -18.40358945835228
+            },
+            {
+              "rank": 8,
+              "frequency_hz": 1960.7543945312498,
+              "relative_db": -19.22936322586541
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "file": "17-Sep-2026_20h00m02s,IQ_433.868MHz,DOA_35.5.iq",
+      "samples": 21846,
+      "recorder_span_ms": 873.8399999999999,
+      "events": [
+        {
+          "event": 1,
+          "start_ms": 12.72,
+          "end_ms": 17.28,
+          "duration_ms": 4.56,
+          "short_event_candidate": true,
+          "p1_p2_spacing_hz": 5804.443359374998,
+          "spectral_peaks": [
+            {
+              "rank": 1,
+              "frequency_hz": -3964.2333984374995,
+              "relative_db": 0.0
+            },
+            {
+              "rank": 2,
+              "frequency_hz": -9768.676757812498,
+              "relative_db": -15.006087691280843
+            },
+            {
+              "rank": 3,
+              "frequency_hz": 9187.316894531248,
+              "relative_db": -15.109526867253493
+            },
+            {
+              "rank": 4,
+              "frequency_hz": 11676.025390624998,
+              "relative_db": -17.08281485127963
+            },
+            {
+              "rank": 5,
+              "frequency_hz": 8886.718749999998,
+              "relative_db": -17.936437543263818
+            },
+            {
+              "rank": 6,
+              "frequency_hz": 8076.477050781249,
+              "relative_db": -18.399091194797755
+            },
+            {
+              "rank": 7,
+              "frequency_hz": 11235.046386718748,
+              "relative_db": -19.48456962743644
+            },
+            {
+              "rank": 8,
+              "frequency_hz": 10778.808593749998,
+              "relative_db": -19.729708993238887
+            }
+          ]
+        },
+        {
+          "event": 2,
+          "start_ms": 410.71999999999997,
+          "end_ms": 415.28,
+          "duration_ms": 4.56,
+          "short_event_candidate": true,
+          "p1_p2_spacing_hz": 13137.817382812498,
+          "spectral_peaks": [
+            {
+              "rank": 1,
+              "frequency_hz": -3962.7075195312495,
+              "relative_db": 0.0
+            },
+            {
+              "rank": 2,
+              "frequency_hz": 9175.109863281248,
+              "relative_db": -13.610721331022477
+            },
+            {
+              "rank": 3,
+              "frequency_hz": 11636.352539062498,
+              "relative_db": -15.498196483130954
+            },
+            {
+              "rank": 4,
+              "frequency_hz": 5438.232421874999,
+              "relative_db": -16.051918359034055
+            },
+            {
+              "rank": 5,
+              "frequency_hz": -9777.832031249998,
+              "relative_db": -16.321221119046918
+            },
+            {
+              "rank": 6,
+              "frequency_hz": 7920.837402343749,
+              "relative_db": -16.881463748723796
+            },
+            {
+              "rank": 7,
+              "frequency_hz": 5848.693847656249,
+              "relative_db": -17.036972933154473
+            },
+            {
+              "rank": 8,
+              "frequency_hz": 11241.149902343748,
+              "relative_db": -18.86545594525323
+            }
+          ]
+        },
+        {
+          "event": 3,
+          "start_ms": 461.76,
+          "end_ms": 471.36,
+          "duration_ms": 9.6,
+          "short_event_candidate": false,
+          "p1_p2_spacing_hz": 5757.141113281248,
+          "spectral_peaks": [
+            {
+              "rank": 1,
+              "frequency_hz": -3965.7592773437495,
+              "relative_db": 0.0
+            },
+            {
+              "rank": 2,
+              "frequency_hz": -9722.900390624998,
+              "relative_db": -18.117629682624745
+            },
+            {
+              "rank": 3,
+              "frequency_hz": 8984.374999999998,
+              "relative_db": -19.763918779545005
+            },
+            {
+              "rank": 4,
+              "frequency_hz": 5856.323242187499,
+              "relative_db": -19.972994887642365
+            },
+            {
+              "rank": 5,
+              "frequency_hz": 9513.854980468748,
+              "relative_db": -20.369063063973208
+            },
+            {
+              "rank": 6,
+              "frequency_hz": 5465.698242187499,
+              "relative_db": -20.502096220799068
+            },
+            {
+              "rank": 7,
+              "frequency_hz": -12222.290039062498,
+              "relative_db": -20.536879180440465
+            },
+            {
+              "rank": 8,
+              "frequency_hz": 11602.783203124998,
+              "relative_db": -20.706047560846258
+            }
+          ]
+        },
+        {
+          "event": 4,
+          "start_ms": 524.5999999999999,
+          "end_ms": 536.28,
+          "duration_ms": 11.68,
+          "short_event_candidate": false,
+          "p1_p2_spacing_hz": 14395.141601562498,
+          "spectral_peaks": [
+            {
+              "rank": 1,
+              "frequency_hz": -3965.7592773437495,
+              "relative_db": 0.0
+            },
+            {
+              "rank": 2,
+              "frequency_hz": 10429.382324218748,
+              "relative_db": -17.569883312959732
+            },
+            {
+              "rank": 3,
+              "frequency_hz": 11062.622070312498,
+              "relative_db": -19.72212474826127
+            },
+            {
+              "rank": 4,
+              "frequency_hz": 5993.652343749999,
+              "relative_db": -19.919039185480035
+            },
+            {
+              "rank": 5,
+              "frequency_hz": -10034.179687499998,
+              "relative_db": -20.38060847820026
+            },
+            {
+              "rank": 6,
+              "frequency_hz": 9208.679199218748,
+              "relative_db": -20.4923820115952
+            },
+            {
+              "rank": 7,
+              "frequency_hz": -9733.581542968748,
+              "relative_db": -20.760859735810747
+            },
+            {
+              "rank": 8,
+              "frequency_hz": 6631.469726562499,
+              "relative_db": -21.524199011255515
+            }
+          ]
+        },
+        {
+          "event": 5,
+          "start_ms": 628.7199999999999,
+          "end_ms": 639.9599999999999,
+          "duration_ms": 11.24,
+          "short_event_candidate": false,
+          "p1_p2_spacing_hz": 5767.822265624998,
+          "spectral_peaks": [
+            {
+              "rank": 1,
+              "frequency_hz": -3967.2851562499995,
+              "relative_db": 0.0
+            },
+            {
+              "rank": 2,
+              "frequency_hz": -9735.107421874998,
+              "relative_db": -14.163828154139026
+            },
+            {
+              "rank": 3,
+              "frequency_hz": 9132.385253906248,
+              "relative_db": -20.50221348019217
+            },
+            {
+              "rank": 4,
+              "frequency_hz": 5531.311035156249,
+              "relative_db": -21.23736609991561
+            },
+            {
+              "rank": 5,
+              "frequency_hz": 11669.921874999998,
+              "relative_db": -22.54432321561382
+            },
+            {
+              "rank": 6,
+              "frequency_hz": -10043.334960937498,
+              "relative_db": -23.145260678655248
+            },
+            {
+              "rank": 7,
+              "frequency_hz": 12313.842773437498,
+              "relative_db": -23.32515864569411
+            },
+            {
+              "rank": 8,
+              "frequency_hz": 7931.518554687499,
+              "relative_db": -23.36756157323063
+            }
+          ]
+        },
+        {
+          "event": 6,
+          "start_ms": 716.16,
+          "end_ms": 721.6,
+          "duration_ms": 5.44,
+          "short_event_candidate": false,
+          "p1_p2_spacing_hz": 13026.428222656248,
+          "spectral_peaks": [
+            {
+              "rank": 1,
+              "frequency_hz": -3964.2333984374995,
+              "relative_db": 0.0
+            },
+            {
+              "rank": 2,
+              "frequency_hz": 9062.194824218748,
+              "relative_db": -14.224691458320713
+            },
+            {
+              "rank": 3,
+              "frequency_hz": 8094.787597656249,
+              "relative_db": -16.001827585453185
+            },
+            {
+              "rank": 4,
+              "frequency_hz": -10183.715820312498,
+              "relative_db": -18.04556298294328
+            },
+            {
+              "rank": 5,
+              "frequency_hz": 5299.377441406249,
+              "relative_db": -18.240155913501614
+            },
+            {
+              "rank": 6,
+              "frequency_hz": -9767.150878906248,
+              "relative_db": -18.433780364729266
+            },
+            {
+              "rank": 7,
+              "frequency_hz": 2229.3090820312495,
+              "relative_db": -18.593336774280363
+            },
+            {
+              "rank": 8,
+              "frequency_hz": 11726.379394531248,
+              "relative_db": -18.622307630621233
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "file": "17-Sep-2026_20h00m03s,IQ_433.868MHz,DOA_36.0.iq",
+      "samples": 10923,
+      "recorder_span_ms": 436.91999999999996,
+      "events": [
+        {
+          "event": 1,
+          "start_ms": 415.92,
+          "end_ms": 421.36,
+          "duration_ms": 5.44,
+          "short_event_candidate": false,
+          "p1_p2_spacing_hz": 13162.231445312498,
+          "spectral_peaks": [
+            {
+              "rank": 1,
+              "frequency_hz": -3962.7075195312495,
+              "relative_db": 0.0
+            },
+            {
+              "rank": 2,
+              "frequency_hz": 9199.523925781248,
+              "relative_db": -16.15261114030242
+            },
+            {
+              "rank": 3,
+              "frequency_hz": -10012.817382812498,
+              "relative_db": -17.539608808292222
+            },
+            {
+              "rank": 4,
+              "frequency_hz": -11102.294921874998,
+              "relative_db": -18.253011323308378
+            },
+            {
+              "rank": 5,
+              "frequency_hz": 2137.7563476562495,
+              "relative_db": -18.633580853127796
+            },
+            {
+              "rank": 6,
+              "frequency_hz": 3175.3540039062495,
+              "relative_db": -19.008020276462755
+            },
+            {
+              "rank": 7,
+              "frequency_hz": 7598.876953124999,
+              "relative_db": -19.010410511405603
+            },
+            {
+              "rank": 8,
+              "frequency_hz": 6033.325195312499,
+              "relative_db": -19.26187431368685
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "file": "17-Sep-2026_20h00m05s,IQ_433.868MHz,DOA_34.0.iq",
+      "samples": 10923,
+      "recorder_span_ms": 436.91999999999996,
+      "events": [
+        {
+          "event": 1,
+          "start_ms": 250.96,
+          "end_ms": 256.40000000000003,
+          "duration_ms": 5.44,
+          "short_event_candidate": false,
+          "p1_p2_spacing_hz": 13159.179687499998,
+          "spectral_peaks": [
+            {
+              "rank": 1,
+              "frequency_hz": -3964.2333984374995,
+              "relative_db": 0.0
+            },
+            {
+              "rank": 2,
+              "frequency_hz": 9194.946289062498,
+              "relative_db": -15.723264149635447
+            },
+            {
+              "rank": 3,
+              "frequency_hz": 11738.586425781248,
+              "relative_db": -16.284261540076784
+            },
+            {
+              "rank": 4,
+              "frequency_hz": 7855.224609374999,
+              "relative_db": -18.035320915956497
+            },
+            {
+              "rank": 5,
+              "frequency_hz": 5288.696289062499,
+              "relative_db": -18.391797802188115
+            },
+            {
+              "rank": 6,
+              "frequency_hz": 8894.348144531248,
+              "relative_db": -18.519176404827498
+            },
+            {
+              "rank": 7,
+              "frequency_hz": 8155.822753906249,
+              "relative_db": -18.87100773611245
+            },
+            {
+              "rank": 8,
+              "frequency_hz": 6921.386718749999,
+              "relative_db": -19.48771505640703
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "file": "17-Sep-2026_20h00m07s,IQ_433.868MHz,DOA_35.0.iq",
+      "samples": 21846,
+      "recorder_span_ms": 873.8399999999999,
+      "events": [
+        {
+          "event": 1,
+          "start_ms": 364.64000000000004,
+          "end_ms": 376.28000000000003,
+          "duration_ms": 11.639999999999999,
+          "short_event_candidate": false,
+          "p1_p2_spacing_hz": 5940.246582031248,
+          "spectral_peaks": [
+            {
+              "rank": 1,
+              "frequency_hz": -3964.2333984374995,
+              "relative_db": 0.0
+            },
+            {
+              "rank": 2,
+              "frequency_hz": -9904.479980468748,
+              "relative_db": -17.583500962385067
+            },
+            {
+              "rank": 3,
+              "frequency_hz": -9603.881835937498,
+              "relative_db": -20.75054736901468
+            },
+            {
+              "rank": 4,
+              "frequency_hz": 9173.583984374998,
+              "relative_db": -21.567517502374727
+            },
+            {
+              "rank": 5,
+              "frequency_hz": -10208.129882812498,
+              "relative_db": -21.79345252567884
+            },
+            {
+              "rank": 6,
+              "frequency_hz": 6501.770019531249,
+              "relative_db": -22.4030548011616
+            },
+            {
+              "rank": 7,
+              "frequency_hz": -9284.973144531248,
+              "relative_db": -22.616211519261018
+            },
+            {
+              "rank": 8,
+              "frequency_hz": 2137.7563476562495,
+              "relative_db": -23.182189705482116
+            }
+          ]
+        },
+        {
+          "event": 2,
+          "start_ms": 429.56,
+          "end_ms": 441.24,
+          "duration_ms": 11.68,
+          "short_event_candidate": false,
+          "p1_p2_spacing_hz": 300.59814453124955,
+          "spectral_peaks": [
+            {
+              "rank": 1,
+              "frequency_hz": -3924.5605468749995,
+              "relative_db": 0.0
+            },
+            {
+              "rank": 2,
+              "frequency_hz": -4225.158691406249,
+              "relative_db": -15.81799561493191
+            },
+            {
+              "rank": 3,
+              "frequency_hz": -3623.9624023437495,
+              "relative_db": -17.95183485705284
+            },
+            {
+              "rank": 4,
+              "frequency_hz": 10514.831542968748,
+              "relative_db": -18.36325851203248
+            },
+            {
+              "rank": 5,
+              "frequency_hz": 8566.284179687498,
+              "relative_db": -18.809760227630573
+            },
+            {
+              "rank": 6,
+              "frequency_hz": -9771.728515624998,
+              "relative_db": -18.942028844303984
+            },
+            {
+              "rank": 7,
+              "frequency_hz": 11769.104003906248,
+              "relative_db": -19.085716221225205
+            },
+            {
+              "rank": 8,
+              "frequency_hz": 11283.874511718748,
+              "relative_db": -19.580659242423962
+            }
+          ]
+        },
+        {
+          "event": 3,
+          "start_ms": 494.56,
+          "end_ms": 506.2,
+          "duration_ms": 11.639999999999999,
+          "short_event_candidate": false,
+          "p1_p2_spacing_hz": 5804.443359374998,
+          "spectral_peaks": [
+            {
+              "rank": 1,
+              "frequency_hz": -3962.7075195312495,
+              "relative_db": 0.0
+            },
+            {
+              "rank": 2,
+              "frequency_hz": -9767.150878906248,
+              "relative_db": -12.811165509590225
+            },
+            {
+              "rank": 3,
+              "frequency_hz": 11639.404296874998,
+              "relative_db": -22.910545369900525
+            },
+            {
+              "rank": 4,
+              "frequency_hz": 1852.4169921874998,
+              "relative_db": -23.08676532179776
+            },
+            {
+              "rank": 5,
+              "frequency_hz": 9170.532226562498,
+              "relative_db": -25.153286121601155
+            },
+            {
+              "rank": 6,
+              "frequency_hz": 5329.895019531249,
+              "relative_db": -26.12649044928345
+            },
+            {
+              "rank": 7,
+              "frequency_hz": -10255.432128906248,
+              "relative_db": -26.432199774337125
+            },
+            {
+              "rank": 8,
+              "frequency_hz": -9466.552734374998,
+              "relative_db": -27.01345426586741
+            }
+          ]
+        },
+        {
+          "event": 4,
+          "start_ms": 559.64,
+          "end_ms": 567.12,
+          "duration_ms": 7.4799999999999995,
+          "short_event_candidate": false,
+          "p1_p2_spacing_hz": 13095.092773437498,
+          "spectral_peaks": [
+            {
+              "rank": 1,
+              "frequency_hz": -3964.2333984374995,
+              "relative_db": 0.0
+            },
+            {
+              "rank": 2,
+              "frequency_hz": 9130.859374999998,
+              "relative_db": -16.79386688221128
+            },
+            {
+              "rank": 3,
+              "frequency_hz": 5374.145507812499,
+              "relative_db": -17.271657627106837
+            },
+            {
+              "rank": 4,
+              "frequency_hz": 8830.261230468748,
+              "relative_db": -17.79117391892082
+            },
+            {
+              "rank": 5,
+              "frequency_hz": 11747.741699218748,
+              "relative_db": -18.032880631656937
+            },
+            {
+              "rank": 6,
+              "frequency_hz": -9785.461425781248,
+              "relative_db": -18.203005405096675
+            },
+            {
+              "rank": 7,
+              "frequency_hz": -10086.059570312498,
+              "relative_db": -18.961281973195156
+            },
+            {
+              "rank": 8,
+              "frequency_hz": 5920.410156249999,
+              "relative_db": -19.33010529914742
+            }
+          ]
+        },
+        {
+          "event": 5,
+          "start_ms": 613.52,
+          "end_ms": 618.12,
+          "duration_ms": 4.6,
+          "short_event_candidate": true,
+          "p1_p2_spacing_hz": 13035.583496093748,
+          "spectral_peaks": [
+            {
+              "rank": 1,
+              "frequency_hz": -3965.7592773437495,
+              "relative_db": 0.0
+            },
+            {
+              "rank": 2,
+              "frequency_hz": 9069.824218749998,
+              "relative_db": -14.173328632295572
+            },
+            {
+              "rank": 3,
+              "frequency_hz": -10069.274902343748,
+              "relative_db": -14.630938180575281
+            },
+            {
+              "rank": 4,
+              "frequency_hz": 8050.537109374999,
+              "relative_db": -17.184966812125595
+            },
+            {
+              "rank": 5,
+              "frequency_hz": 2134.7045898437495,
+              "relative_db": -17.699136965908767
+            },
+            {
+              "rank": 6,
+              "frequency_hz": 8653.259277343748,
+              "relative_db": -18.341304155937767
+            },
+            {
+              "rank": 7,
+              "frequency_hz": -9724.426269531248,
+              "relative_db": -18.402729865020802
+            },
+            {
+              "rank": 8,
+              "frequency_hz": 5427.551269531249,
+              "relative_db": -18.56006192861083
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
