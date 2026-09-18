@@ -273,11 +273,28 @@ def main() -> int:
     ):
         errors.append("Monotonic finish is not after start")
 
-    # Controlled acquisitions additionally record the exact HackRF
-    # transfer interval. Activation markers must fall inside it.
-    controlled_mode = bool(
-        manifest.get("controlled_mode", False)
+    # Controlled acquisitions are identified by the activation log.
+    # Process launch/exit timestamps bracket the receiver process;
+    # they are not exact first/last RF-sample timestamps.
+    controlled_from_activations = (
+        declared_count is not None and declared_count > 0
     )
+
+    controlled_field = manifest.get("controlled_mode")
+
+    if controlled_field is not None and not isinstance(
+        controlled_field, bool
+    ):
+        errors.append("controlled_mode is not a boolean")
+
+    if controlled_from_activations:
+        if controlled_field is not True:
+            errors.append(
+                "Controlled activation log requires controlled_mode=true"
+            )
+        controlled_mode = True
+    else:
+        controlled_mode = controlled_field is True
 
     transfer_launch_mono = manifest.get(
         "transfer_launch_monotonic_ns"
@@ -314,6 +331,9 @@ def main() -> int:
                     value.split("monotonic_ns=", 1)[1].split()[0]
                 )
             except (ValueError, IndexError):
+                errors.append(
+                    f"Invalid activation monotonic timestamp: {label}"
+                )
                 continue
 
             marker_times.append((label, marker_mono))
