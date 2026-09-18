@@ -216,3 +216,104 @@ wider-IQ acquisition mechanism.
 
 That mechanism becomes part of the frozen V1 protocol before the first
 development capture.
+
+## Acquisition mechanism selection
+
+The V1 acquisition mechanism was selected prospectively after engineering
+validation and before collection of S1 or S2 Wider-IQ V1 development data.
+
+Selected receiver:
+
+- independent HackRF One;
+- HackRF operates independently of the running KrakenSDR acquisition chain;
+- KrakenSDR remains unchanged and continues to provide the characterized
+  25 kS/s baseline path.
+
+Selected wider-IQ settings:
+
+- center frequency: 433.868160 MHz;
+- complex sample rate: 2,000,000 samples/s;
+- baseband filter bandwidth: 1,750,000 Hz;
+- representation: interleaved signed 8-bit I,Q (CS8);
+- RF amplifier: OFF;
+- RX LNA gain: 32 dB;
+- RX VGA gain: 32 dB.
+
+The selected HackRF sample rate is 80 times the sample rate of the existing
+25 kS/s VFO-IQ representation. This ratio describes sample rates only and
+does not imply an 80-fold increase in usable information or discrimination
+performance.
+
+## Engineering validation supporting selection
+
+The mechanism was validated before S1/S2 V1 collection.
+
+A 2 MS/s receive-only transport test produced exactly 4,000,000 complex
+samples over 2 seconds, represented by exactly 8,000,000 CS8 bytes.
+
+An explicit-filter ambient gain comparison tested:
+
+- LNA/VGA 16/16 dB;
+- LNA/VGA 24/24 dB;
+- LNA/VGA 32/32 dB.
+
+The 32/32 dB configuration increased ADC-code utilization without observed
+full-scale clipping in that engineering comparison.
+
+A subsequent 10-second controlled engineering capture used S4 only, which
+is outside the S1/S2 V1 development comparison and the reserved S3 V1
+validation stage.
+
+That capture produced:
+
+- 20,000,000 complex samples;
+- 40,000,000 bytes;
+- zero observed full-scale clipped I/Q values;
+- substantial remaining ADC headroom.
+
+A controlled S4 activation was attempted during the capture. Because no
+activation timestamp was recorded for that engineering run, individual
+signal peaks are not attributed to S4.
+
+These engineering captures are not Wider-IQ V1 development evidence.
+
+## Hardware provenance note
+
+The HackRF used for V1 reports:
+
+- Board ID: HackRF One;
+- hardware revision: r9;
+- firmware: v2.0.1, API 1.08.
+
+The installed HackRF utility additionally reports that the hardware does
+not appear to have been manufactured by Great Scott Gadgets.
+
+This observation is retained as acquisition provenance and does not by
+itself invalidate the engineering captures.
+
+## Frozen acquisition boundary
+
+For Wider-IQ Acquisition V1, the settings above are frozen before the first
+S1 development activation.
+
+Do not alter center frequency, sample rate, baseband filter, RF-amplifier
+state, LNA gain, VGA gain, sample representation, or receiver hardware
+between S1 and S2 development captures.
+
+If a required acquisition-setting change is discovered after V1 data
+collection begins, stop the current V1 comparison and document the change
+rather than silently combining incompatible captures.
+
+The existing Kraken 25 kS/s acquisition configuration remains unchanged.
+
+## Next prerequisite after mechanism selection
+
+Before the first S1 Wider-IQ V1 capture, implement and validate provenance
+for the new HackRF CS8 acquisition path.
+
+That provenance must record the frozen receiver settings, timestamps,
+sensor label, Git HEAD, acquisition-tool version, output size, SHA-256,
+and operator activation log.
+
+No S1 or S2 Wider-IQ V1 development capture may begin until that provenance
+path has been validated.
