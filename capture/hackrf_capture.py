@@ -114,6 +114,12 @@ def main() -> int:
     parser.add_argument("--activations", type=int, default=0)
     parser.add_argument("--quiet", type=float, default=5.0)
     parser.add_argument(
+        "--post-roll",
+        type=float,
+        default=2.0,
+        help="Seconds to record after final controlled activation.",
+    )
+    parser.add_argument(
         "--engineering-only",
         action="store_true",
         help="Required by this implementation version.",
@@ -133,6 +139,11 @@ def main() -> int:
 
     if args.quiet < 0:
         raise SystemExit("ERROR: --quiet must be >= 0")
+
+    if args.post_roll < 0:
+        raise SystemExit("ERROR: --post-roll must be >= 0")
+
+    controlled_mode = args.activations > 0
 
     expected_samples_float = SAMPLE_RATE * args.seconds
 
@@ -185,7 +196,12 @@ def main() -> int:
         "-f", str(FREQ_HZ),
         "-s", str(SAMPLE_RATE),
         "-b", str(BASEBAND_FILTER_HZ),
-        "-n", str(expected_samples),
+    ]
+
+    if expected_samples is not None:
+        command += ["-n", str(expected_samples)]
+
+    command += [
         "-a", str(RF_AMP),
         "-p", str(ANTENNA_POWER),
         "-l", str(LNA_DB),
@@ -204,7 +220,15 @@ def main() -> int:
     print(" ".join(command))
     print()
 
+    transfer_launch_wall = None
+    transfer_launch_mono = None
+    transfer_exit_wall = None
+    transfer_exit_mono = None
+
     with transfer_log.open("x", encoding="utf-8") as log:
+        transfer_launch_wall = wall_utc()
+        transfer_launch_mono = time.monotonic_ns()
+
         proc = subprocess.Popen(
             command,
             stdout=log,
@@ -213,15 +237,34 @@ def main() -> int:
         )
 
         try:
-            if args.activations:
-                # Give the receiver time to enter streaming state.
+            if controlled_mode:
+                print("CONTROLLED MODE ARMED", flush=True)
+                print(
+                    "Prepare the trigger now. Recording has started.",
+                    flush=True,
+                )
+
+                # Allow the receiver to enter streaming state.
                 time.sleep(1.0)
 
                 for index in range(1, args.activations + 1):
+                    if proc.poll() is not None:
+                        raise RuntimeError(
+                            "HackRF capture ended before controlled activation "
+                            f"A{index}"
+                        )
+
                     input(
                         f"A{index} READY — press ENTER and trigger "
                         f"{args.sensor} now: "
                     )
+
+                    if proc.poll() is not None:
+                        raise RuntimeError(
+                            "HackRF capture ended while waiting for controlled "
+                            f"activation A{index}"
+                        )
+
                     append_activation(
                         activation_log,
                         f"A{index}",
@@ -233,17 +276,36 @@ def main() -> int:
                             flush=True,
                         )
                         time.sleep(args.quiet)
+                        if proc.poll() is not None:
+                            raise RuntimeError(
+                                "HackRF capture ended during required quiet interval"
+                            )
                         print("QUIET COMPLETE", flush=True)
+
+                if args.post_roll:
+                    print(
+                        f"POST-ROLL {args.post_roll:.3f} seconds...",
+                        flush=True,
+                    )
+                    time.sleep(args.post_roll)
+                    if proc.poll() is not None:
+                        raise RuntimeError(
+                            "HackRF capture ended during required post-roll"
+                        )
 
             transfer_exit = proc.wait()
 
+            transfer_exit_mono = time.monotonic_ns()
+            transfer_exit_wall = wall_utc()
+
         except BaseException:
-            proc.terminate()
-            try:
-                proc.wait(timeout=3)
-            except subprocess.TimeoutExpired:
-                proc.kill()
-                proc.wait()
+            if proc.poll() is None:
+                proc.terminate()
+                try:
+                    proc.wait(timeout=3)
+                except subprocess.TimeoutExpired:
+                    proc.kill()
+                    proc.wait()
             raise
 
     finish_mono = time.monotonic_ns()
@@ -266,6 +328,11 @@ def main() -> int:
         "finished_wall_utc": finish_wall,
         "started_monotonic_ns": start_mono,
         "finished_monotonic_ns": finish_mono,
+        "controlled_mode": controlled_mode,
+        "transfer_launch_wall_utc": transfer_launch_wall,
+        "transfer_launch_monotonic_ns": transfer_launch_mono,
+        "transfer_exit_wall_utc": transfer_exit_wall,
+        "transfer_exit_monotonic_ns": transfer_exit_mono,
         "git_head_at_start": git_start,
         "git_head_at_finish": git_finish,
         "receiver": {

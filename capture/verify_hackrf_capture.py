@@ -117,6 +117,12 @@ def main() -> int:
     expected_samples = manifest.get("expected_complex_samples")
     expected_bytes = manifest.get("expected_size_bytes")
 
+    if not isinstance(expected_samples, int) or expected_samples <= 0:
+        errors.append("expected_complex_samples must be a positive integer")
+
+    if not isinstance(expected_bytes, int) or expected_bytes <= 0:
+        errors.append("expected_size_bytes must be a positive integer")
+
     if (
         isinstance(expected_samples, int)
         and expected_bytes != expected_samples * 2
@@ -266,6 +272,76 @@ def main() -> int:
         and finish_mono <= start_mono
     ):
         errors.append("Monotonic finish is not after start")
+
+    # Controlled acquisitions additionally record the exact HackRF
+    # transfer interval. Activation markers must fall inside it.
+    controlled_mode = bool(
+        manifest.get("controlled_mode", False)
+    )
+
+    transfer_launch_mono = manifest.get(
+        "transfer_launch_monotonic_ns"
+    )
+    transfer_exit_mono = manifest.get(
+        "transfer_exit_monotonic_ns"
+    )
+
+    if controlled_mode:
+        if not isinstance(transfer_launch_mono, int):
+            errors.append(
+                "Missing transfer_launch_monotonic_ns"
+            )
+
+        if not isinstance(transfer_exit_mono, int):
+            errors.append(
+                "Missing transfer_exit_monotonic_ns"
+            )
+
+        if (
+            isinstance(transfer_launch_mono, int)
+            and isinstance(transfer_exit_mono, int)
+            and transfer_exit_mono <= transfer_launch_mono
+        ):
+            errors.append(
+                "Transfer exit is not after transfer launch"
+            )
+
+        marker_times = []
+
+        for label, value in markers:
+            try:
+                marker_mono = int(
+                    value.split("monotonic_ns=", 1)[1].split()[0]
+                )
+            except (ValueError, IndexError):
+                continue
+
+            marker_times.append((label, marker_mono))
+
+            if (
+                isinstance(transfer_launch_mono, int)
+                and marker_mono < transfer_launch_mono
+            ):
+                errors.append(
+                    f"Activation marker before transfer launch: {label}"
+                )
+
+            if (
+                isinstance(transfer_exit_mono, int)
+                and marker_mono > transfer_exit_mono
+            ):
+                errors.append(
+                    f"Activation marker after transfer exit: {label}"
+                )
+
+        for previous, current in zip(
+            marker_times,
+            marker_times[1:]
+        ):
+            if current[1] <= previous[1]:
+                errors.append(
+                    "Activation monotonic timestamps are not ordered"
+                )
 
     hashes_path = bundle / "files.sha256"
 
