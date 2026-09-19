@@ -16,34 +16,24 @@ The current research scope uses owned, controlled, authorised, or consented RF s
 
 ## Current status
 
-Stages 1–34 complete.
+Work through 2026-09-19 includes the platform and same-device studies in
+Stages 1–34, followed by controlled TPMS acquisition and descriptive
+between-device testing:
 
-Current validated work includes:
+- Capture manifests, configuration records, and IQ size/SHA-256 provenance verification.
+- Acquisition-completeness validation using a fixed activation-to-recorder observation window.
+- Frozen Episode Grouping V1 and Episode Features V1 analysis.
+- Between-Device Discrimination V1 held-out testing and an independent replication.
 
-- KrakenSDR DoA observation handling
-- event aggregation and logging
-- session integrity checks
-- RF persistence analysis
-- directional stability analysis
-- directional-state extraction and classification
-- multi-peak ambiguity-window detection
-- coherent-state recovery and transition analysis
-- session-level DoA stability classification
-- cross-session recurrence analysis
-- cross-session dominant-state matching
-- controlled A → B → A' array-orientation validation
-- IQ capture workflow
-- burst timing and spectral feature extraction
-- same-device feature repeatability testing
-- RF Feature Vector V2
+The September 19 captures passed capture provenance verification and showed
+descriptive capture-level separation under the tested conditions. The earlier
+negative held-out result remains part of the evidence. Replication episode E07
+was retained without post-hoc outlier removal.
 
-Feature Vector V2 currently uses:
-
-- long-burst duration
-- burst recurrence interval
-- relative phase-state to spectral-component spacing
-
-Absolute carrier offset, received power, and DoA are excluded from the identity score.
+See the [stage history](docs/stages.md),
+[held-out result](notes/BETWEEN-DEVICE-V1/between_device_v1.md),
+[replication](notes/BETWEEN-DEVICE-V1/between_device_replication_v1.md), and
+[replication acquisition completeness](captures/BETWEEN-DEVICE-REPL-V1-20260919-024341/acquisition-completeness-v1.md).
 
 ## Roadmap
 
@@ -51,7 +41,8 @@ Absolute carrier offset, received power, and DoA are excluded from the identity 
 - Stages 23–32: measurement integrity and DoA methodology
 - Stage 33: RF feature construction
 - Stage 34: same-device repeatability validation
-- Stage 35+: between-device discrimination
+- Stage 35: controlled TPMS acquisition and between-device descriptive testing, including replication
+- Further work: independent validation across sources and sessions
 - Stage 60: Kraken RF Sentinel v1
 
 ## Project structure
@@ -59,9 +50,16 @@ Absolute carrier offset, received power, and DoA are excluded from the identity 
 - `watcher/` — RF event monitoring and aggregation
 - `reporting/` — session, persistence, and DoA analysis
 - `fingerprinting/` — RF feature extraction and baselines
+- `capture/` — acquisition provenance, verification, activation logging, and episode grouping
+- `analysis/` — versioned episode and passband analysis
+- `captures/` and `notes/` — provenance bundles and recorded research results; raw IQ remains external
 - `docs/` — architecture, methodology, validation, and stage history
 - `examples/` — example outputs and usage
 
 ## Research note
 
-RF fingerprint features are treated as experimental evidence, not assumed identifiers. Features are tested for repeatability and rejected or revised when they fail validation.
+These results do not establish unique device identification, production
+fingerprinting, or a universal same-device/different-device discrimination
+threshold. Between-Device Discrimination V1 defines no numerical discrimination
+PASS/FAIL threshold. Frozen methods and historical results are retained;
+methodological changes require a new version.
