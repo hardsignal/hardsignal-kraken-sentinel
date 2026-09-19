@@ -1,0 +1,2 @@
+# Preserve the frozen CSV writer's original CRLF bytes for hash verification.
+arms.csv -text whitespace=cr-at-eol

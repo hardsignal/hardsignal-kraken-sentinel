@@ -1,5 +1,6 @@
 {
   "artifact_hashes_verified": true,
+  "artifact_hashes_verified_scope": "Current canonical bundle after the documented provenance-only repair; files.sha256 excludes itself.",
   "experiment_exit_code": 2,
   "full_matrix_completed": false,
   "git_diff_check_passed": true,
@@ -13,6 +14,56 @@
   ],
   "native_control_fragments_verified": 210,
   "new_source_whitespace_check_passed": true,
+  "provenance_repair": {
+    "attribution_limit": "Available Git history, current configuration/attributes, shell history and session log do not identify the converting command or its exact timestamp. No evidence attributes it specifically to Git normalization.",
+    "baseline_commit": "51861e1a9ef264f9edf9a902f38e9d3aff0acfb9",
+    "canonical_csv_line_endings": "CRLF",
+    "conversion_actor_or_command": null,
+    "conversion_evidence": "The original CRLF digest is reproduced by inserting one CR before each of the 161 LF bytes in the committed CSV. The local session log records a successful bundle hash check before the first commit.",
+    "csv_sha256_after": "af5cff213682d14696a2c8a2880b1082861ea92b3ce051359b5600b2b72ac904",
+    "csv_sha256_before": "cbb5dc963ccd8234eb190a7485c2b94a080a96d8c29c8d072108da72babbe721",
+    "execution_code_spec_test_hashes_reverified": 4,
+    "execution_input_hashes_reverified": 42,
+    "experiment_rerun": false,
+    "failure_preserved": {
+      "candidates": 73,
+      "feasible_paths": 412,
+      "limit": 200000,
+      "phase": "real_matrix",
+      "reason": "exact partition DP state limit",
+      "visited_states": 200001
+    },
+    "first_inconsistent_commit_time_utc": "2026-09-19T23:13:31Z",
+    "git_byte_preservation": ".gitattributes: arms.csv -text whitespace=cr-at-eol",
+    "historical_validation_scope": "Existing unit-test, source/input-hash, native-control and original git-status fields describe the initial execution validation; they do not claim a new experiment run.",
+    "last_successful_original_hash_check_utc": "2026-09-19T23:09:50.990Z",
+    "line_endings_restored": 161,
+    "manifest_entries_verified": 11,
+    "modified_files": [
+      ".gitattributes (new)",
+      "arms.csv",
+      "files.sha256",
+      "review.md",
+      "validation.json"
+    ],
+    "numerical_results_unchanged": true,
+    "original_file_sha256": {
+      "arms.csv": "cbb5dc963ccd8234eb190a7485c2b94a080a96d8c29c8d072108da72babbe721",
+      "files.sha256": "35a10bbb2b2847903eeb86efd2978bfbb02f49ac30d107cb419753d603cbe9eb",
+      "review.md": "93eff2e813a70985415d316854b185a685a38b4c6f9967bfd2905f0ee1bacfaa",
+      "validation.json": "0d888d05771dbd6a5ebbd7c474efaa1b7fde06e72aec7158c0dfed3720b128fc"
+    },
+    "original_recorded_csv_sha256": "af5cff213682d14696a2c8a2880b1082861ea92b3ce051359b5600b2b72ac904",
+    "parsed_csv_records_unchanged": true,
+    "real_arms": {
+      "COMPLETE": 1,
+      "COMPUTATION_UNRESOLVED": 1,
+      "NOT_RUN": 158
+    },
+    "reason": "Restore the exact original generated CSV bytes and recorded SHA-256; the frozen writer and all numerical fields remain unchanged.",
+    "spectral_fixture_matrix": "NOT_STARTED",
+    "unit_tests_rerun": false
+  },
   "source_hash_verified": true,
   "tracked_files_modified": [],
   "unit_tests": {

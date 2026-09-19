@@ -31,6 +31,44 @@ All four anomalous fragments are explicit diagnostics in the completed control a
 
 The measured noise and crossing gates fail for all three path-association arms. The full representation/association decision gates cannot be evaluated because the real matrix and spectral fixtures are incomplete. No parameter set is selected and no discrimination or identification claim is made.
 
-All committed-input hashes and generated-artifact hashes verified. git diff --check and additional whitespace checks of the new untracked source files passed. git diff is empty for tracked files; git status contains only the new Draft 2 implementation, specification, tests and result directory.
+At initial execution validation, all committed-input hashes and generated-artifact hashes verified; git diff --check and source whitespace checks passed. The statements about untracked new files below describe that original pre-commit validation. The later CSV line-ending mismatch and its repair are documented separately below.
 
 New files: analysis/episode_component_tracking_v2_draft2_experiment.py; docs/episode-component-tracking-v2-draft2-experiment.md; tests/test_episode_component_tracking_v2_draft2_experiment.py; this separate Draft 2 result directory. No historical file was modified.
+
+## Provenance-only repair (2026-09-20)
+
+The initial CSV writer uses the default csv.DictWriter dialect with newline='',
+which emits CRLF. The successful local-session hash check completed at
+2026-09-19 23:09:50.990 UTC (2026-09-20 00:09:50.990 BST). The first Draft 2
+commit, 51861e1a9ef264f9edf9a902f38e9d3aff0acfb9, at 23:13:31 UTC
+(00:13:31 BST), contains LF bytes but the earlier CRLF hash. The exact byte
+transformation was removal of all 161 CR bytes preceding LF. Available history
+bounds the conversion to that interval but does not record its command, actor
+or exact timestamp. Current Git configuration and attributes do not establish
+that Git performed the conversion; that attribution would be speculation.
+
+Canonical arms.csv is deliberately restored to the original generated CRLF
+bytes. Reconstructing CRLF exactly reproduces the original recorded SHA-256:
+
+- Before repair (committed LF): cbb5dc963ccd8234eb190a7485c2b94a080a96d8c29c8d072108da72babbe721
+- After repair (original CRLF): af5cff213682d14696a2c8a2880b1082861ea92b3ce051359b5600b2b72ac904
+
+The parsed CSV records are identical. A scoped .gitattributes entry disables
+Git text conversion for this CSV and recognizes CR at end of line for whitespace
+checking. The frozen writer, methodology, parameters, solver and all numerical
+results are unchanged. files.sha256 is regenerated only because canonical
+artifact bytes and provenance metadata were intentionally changed; its arms.csv
+entry remains the original hash. It covers every bundle file except itself,
+including the new .gitattributes. Prior metadata hashes are retained in
+validation.json under provenance_repair.original_file_sha256.
+
+Verification covers all 11 bundle entries, all 42 execution-input hashes and
+the four recorded implementation/control/specification/test hashes. CSV/JSON
+arm records agree. git diff --check passes. These are provenance checks; the
+18 recorded unit tests were not rerun and the experiment was not rerun.
+
+Execution remains incomplete: 1/160 real arms COMPLETE, the next arm
+COMPUTATION_UNRESOLVED at the exact solver's 200,000-state limit, 158 arms
+NOT_RUN, and the spectral fixture matrix NOT_STARTED. run.json, arms.json,
+summary.md and numerical result files remain byte-for-byte unchanged.
+No RF capture, exact-cover implementation, commit or push was performed.
