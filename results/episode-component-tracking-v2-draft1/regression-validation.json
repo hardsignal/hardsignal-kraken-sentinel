@@ -1,0 +1,71 @@
+{
+  "captures": [
+    {
+      "capture_id": "PIPELINE-TPMS-004-20260917-233423",
+      "episode_count": 6,
+      "raw_and_input_integrity_after_runs": "PASS",
+      "repeat_all_seven_artifacts_byte_identical": true,
+      "status_counts": {
+        "AMBIGUOUS_ASSOCIATION": 6
+      }
+    },
+    {
+      "capture_id": "PIPELINE-TPMS-005-20260917-235439",
+      "episode_count": 5,
+      "raw_and_input_integrity_after_runs": "PASS",
+      "repeat_all_seven_artifacts_byte_identical": true,
+      "status_counts": {
+        "AMBIGUOUS_ASSOCIATION": 5
+      }
+    },
+    {
+      "capture_id": "PIPELINE-TPMS-007-20260918-002700",
+      "episode_count": 8,
+      "raw_and_input_integrity_after_runs": "PASS",
+      "repeat_all_seven_artifacts_byte_identical": true,
+      "status_counts": {
+        "AMBIGUOUS_ASSOCIATION": 7,
+        "INSUFFICIENT_SUPPORT": 1
+      }
+    },
+    {
+      "capture_id": "PIPELINE-TPMS-008-20260918-003900",
+      "episode_count": 8,
+      "raw_and_input_integrity_after_runs": "PASS",
+      "repeat_all_seven_artifacts_byte_identical": true,
+      "status_counts": {
+        "AMBIGUOUS_ASSOCIATION": 8
+      }
+    },
+    {
+      "capture_id": "BETWEEN-DEVICE-V1-20260919-022917",
+      "episode_count": 7,
+      "raw_and_input_integrity_after_runs": "PASS",
+      "repeat_all_seven_artifacts_byte_identical": true,
+      "status_counts": {
+        "AMBIGUOUS_ASSOCIATION": 6,
+        "INSUFFICIENT_SUPPORT": 1
+      }
+    },
+    {
+      "capture_id": "BETWEEN-DEVICE-REPL-V1-20260919-024341",
+      "episode_count": 7,
+      "raw_and_input_integrity_after_runs": "PASS",
+      "repeat_all_seven_artifacts_byte_identical": true,
+      "status_counts": {
+        "AMBIGUOUS_ASSOCIATION": 6,
+        "INSUFFICIENT_SUPPORT": 1
+      }
+    }
+  ],
+  "determinism_scope": "identical source/environment/repository provenance declaration",
+  "format": "HARDSIGNAL_COMPONENT_TRACKING_V2_DRAFT1_REGRESSION",
+  "historical_tracked_files_unchanged": true,
+  "status_counts": {
+    "AMBIGUOUS_ASSOCIATION": 38,
+    "INSUFFICIENT_SUPPORT": 3
+  },
+  "tracked_file_count": 145,
+  "tracked_snapshot_sha256_after": "21773710900f0c7915bbd9bfb5a2d990a9b01163202f16045b50d2e63ca537de",
+  "tracked_snapshot_sha256_before": "21773710900f0c7915bbd9bfb5a2d990a9b01163202f16045b50d2e63ca537de"
+}

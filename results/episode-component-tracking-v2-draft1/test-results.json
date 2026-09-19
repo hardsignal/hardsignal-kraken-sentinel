@@ -1,0 +1,12 @@
+{
+  "command": "python3 -B -m unittest discover -s tests -p test_episode_component_tracking_v2_draft1.py -v",
+  "errors": 0,
+  "exit_code": 0,
+  "extractor_sha256": "a24a5617ca9f4129c6970fd0a9743f8b78610c58567e8a557f21dee2a055f66c",
+  "failures": 0,
+  "initial_failed_expectation": "Synthetic test wrongly assumed unique primary despite another persistent group; amended to assert target retention and explicit ambiguity. Method unchanged.",
+  "protocol_sha256": "017a4bf9dde31c745ba9765827378e8dd9c6e6af175bd0cddf594b22f08ac004",
+  "test_file": "tests/test_episode_component_tracking_v2_draft1.py",
+  "test_sha256": "1a480fa0d8b6120a823872e644fbdbe1a1d70cdbb402c3377a7225204e461dfe",
+  "tests_run": 20
+}

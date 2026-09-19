@@ -1,0 +1,72 @@
+{
+  "association_flags": {
+    "MULTIPLE_CANDIDATES_SAME_FRAGMENT": 128,
+    "ONE_FRAGMENT_GAP": 85,
+    "SINGLE_OBSERVATION": 7310,
+    "TRACK_RANGE_EXCEEDED": 14
+  },
+  "captures": [
+    {
+      "capture_id": "PIPELINE-TPMS-004-20260917-233423",
+      "draft1_primary_median_hz": null,
+      "status_counts": {
+        "AMBIGUOUS_ASSOCIATION": 6
+      },
+      "v1_capture_median_hz": -5203.469742744666
+    },
+    {
+      "capture_id": "PIPELINE-TPMS-005-20260917-235439",
+      "draft1_primary_median_hz": null,
+      "status_counts": {
+        "AMBIGUOUS_ASSOCIATION": 5
+      },
+      "v1_capture_median_hz": -5193.170374439256
+    },
+    {
+      "capture_id": "PIPELINE-TPMS-007-20260918-002700",
+      "draft1_primary_median_hz": null,
+      "status_counts": {
+        "AMBIGUOUS_ASSOCIATION": 7,
+        "INSUFFICIENT_SUPPORT": 1
+      },
+      "v1_capture_median_hz": -5201.1809942323525
+    },
+    {
+      "capture_id": "PIPELINE-TPMS-008-20260918-003900",
+      "draft1_primary_median_hz": null,
+      "status_counts": {
+        "AMBIGUOUS_ASSOCIATION": 8
+      },
+      "v1_capture_median_hz": -5204.328023436784
+    },
+    {
+      "capture_id": "BETWEEN-DEVICE-V1-20260919-022917",
+      "draft1_primary_median_hz": null,
+      "status_counts": {
+        "AMBIGUOUS_ASSOCIATION": 6,
+        "INSUFFICIENT_SUPPORT": 1
+      },
+      "v1_capture_median_hz": -5419.756477158289
+    },
+    {
+      "capture_id": "BETWEEN-DEVICE-REPL-V1-20260919-024341",
+      "draft1_primary_median_hz": null,
+      "status_counts": {
+        "AMBIGUOUS_ASSOCIATION": 6,
+        "INSUFFICIENT_SUPPORT": 1
+      },
+      "v1_capture_median_hz": -5341.9390277396315
+    }
+  ],
+  "component_flags": {
+    "BROAD_COMPONENT": 135,
+    "MULTIPLE_LOCAL_MAXIMA": 2384,
+    "REGION_BOUNDARY_COMPONENT": 2
+  },
+  "format": "HARDSIGNAL_KRAKEN_EPISODE_COMPONENT_TRACKING_V2_DRAFT1",
+  "fragment_flags": {
+    "GLOBAL_MAX_IN_EDGE_EXCLUSION": 1
+  },
+  "total_detected_components": 8681,
+  "total_fragments": 210
+}

@@ -1,0 +1,200 @@
+{
+  "capture_id": "PIPELINE-TPMS-005-20260917-235439",
+  "episode_count": 5,
+  "format": "HARDSIGNAL_KRAKEN_EPISODE_COMPONENT_TRACKING_V2_DRAFT1",
+  "input_artifact_sha256": {
+    "episode-features-v1.json": "124e1b9d4d133ff317607dd37368ced7201292f5531d4294e17f270e27bad686",
+    "episodes.json": "4722d958b952683bf3a7af08873a7068bd21b17533e0590ad4492a7bf8e2db19",
+    "files.sha256": "c8e29382cc31a876f3c97485f1bef922067619e088840c36c97986319d9f20bc",
+    "manifest.json": "3f1e64587c281f0e71fa13a286026b6c93e41f32fb15ae5bf4025f51f9edc90b"
+  },
+  "parameters": {
+    "association_fragment_index_differences": [
+      1,
+      2
+    ],
+    "association_maximum_frequency_difference_hz": 50.0,
+    "background_minimum_bins": 32,
+    "background_separation_hz": [
+      50,
+      500
+    ],
+    "competing_group_minimum_support": 2,
+    "component_max_contrast_db": 10.0,
+    "component_run_contrast_db": 6.0,
+    "dtype": "<c16",
+    "eligible_abs_frequency_hz": [
+      100,
+      11500
+    ],
+    "fft_length": "N",
+    "frequency_estimator": "largest-power component bin; lower-frequency tie",
+    "maximum_component_width_hz": 200.0,
+    "maximum_track_range_hz": 100.0,
+    "minimum_samples": 4,
+    "minimum_track_coverage": 0.6,
+    "minimum_track_support": 3,
+    "normalization": "abs(FFT)**2/(N*sum(window**2))",
+    "primary_selection": "unique persistent track; no recurring competitor or ambiguous group",
+    "sample_rate_hz": 25000,
+    "summary_weighting": "equal per supporting fragment",
+    "window": "numpy.hanning(N)",
+    "zero_padding": false
+  },
+  "processing_status": "COMPLETED",
+  "provenance": {
+    "dirty_or_untracked": true,
+    "extractor_file": "analysis/episode_component_tracking_v2_draft1.py",
+    "extractor_sha256": "a24a5617ca9f4129c6970fd0a9743f8b78610c58567e8a557f21dee2a055f66c",
+    "git_commit": "b3edee7a894fb70a50159d5881d2ad4c4f9498a8",
+    "numpy_byteorder": "little",
+    "numpy_version": "1.26.4",
+    "protocol_file": "docs/episode-component-tracking-v2-draft1.md",
+    "protocol_sha256": "017a4bf9dde31c745ba9765827378e8dd9c6e6af175bd0cddf594b22f08ac004",
+    "python_version": "3.12.3",
+    "tracked_changes": [],
+    "tracked_dirty": false,
+    "untracked_at_batch_start": [
+      "analysis/episode_component_tracking_v2_draft1.py",
+      "docs/episode-component-tracking-v2-draft1.md",
+      "tests/test_episode_component_tracking_v2_draft1.py"
+    ]
+  },
+  "raw_inventory": [
+    {
+      "path": "/home/maciejduranczyk/krakensdr_doa/_share/records/iq/17-Sep-2026_23h56m21s,IQ_433.868MHz,DOA_237.5.iq",
+      "sha256": "009bb48b7651c10f57fb0f1ef34f5e431c3459efd6808bce65734cb0c483a4f5",
+      "size_bytes": 699072
+    },
+    {
+      "path": "/home/maciejduranczyk/krakensdr_doa/_share/records/iq/17-Sep-2026_23h56m22s,IQ_433.868MHz,DOA_238.0.iq",
+      "sha256": "6b715f67c4042856255541fb88e0c1d468d322fefe6d70b77ea346fe8f718f15",
+      "size_bytes": 174768
+    },
+    {
+      "path": "/home/maciejduranczyk/krakensdr_doa/_share/records/iq/17-Sep-2026_23h56m23s,IQ_433.868MHz,DOA_237.0.iq",
+      "sha256": "9f7289275f2f73406307ce991baf144e5cb77b90abe925be2ca45e2bd7f5eda7",
+      "size_bytes": 174768
+    },
+    {
+      "path": "/home/maciejduranczyk/krakensdr_doa/_share/records/iq/17-Sep-2026_23h56m24s,IQ_433.868MHz,DOA_237.0.iq",
+      "sha256": "54b5813508200f3767aed9066d52dd7dc0a8ca8fc7eabc32b2f77636ade79f2a",
+      "size_bytes": 174768
+    },
+    {
+      "path": "/home/maciejduranczyk/krakensdr_doa/_share/records/iq/17-Sep-2026_23h56m25s,IQ_433.868MHz,DOA_237.0.iq",
+      "sha256": "d6c2e70154a39e86229325709adcd7052d57f4b894f330868f7d925f64f4aaaa",
+      "size_bytes": 349536
+    },
+    {
+      "path": "/home/maciejduranczyk/krakensdr_doa/_share/records/iq/17-Sep-2026_23h56m39s,IQ_433.868MHz,DOA_237.5.iq",
+      "sha256": "1ef27b9a914cdf842c6798a3f3451edd4322714aeafe8b0655fd2a715bff855f",
+      "size_bytes": 699072
+    },
+    {
+      "path": "/home/maciejduranczyk/krakensdr_doa/_share/records/iq/17-Sep-2026_23h56m40s,IQ_433.868MHz,DOA_238.0.iq",
+      "sha256": "68cd225249a032006a2d94beaf06680f281d200b3dc34996e2d0137ace4974fa",
+      "size_bytes": 174768
+    },
+    {
+      "path": "/home/maciejduranczyk/krakensdr_doa/_share/records/iq/17-Sep-2026_23h56m41s,IQ_433.868MHz,DOA_238.0.iq",
+      "sha256": "dbc419e178179838f5b115bd2ea749fe12fc3d4581df1b0a3e2146cb83e9e858",
+      "size_bytes": 174768
+    },
+    {
+      "path": "/home/maciejduranczyk/krakensdr_doa/_share/records/iq/17-Sep-2026_23h56m42s,IQ_433.868MHz,DOA_238.0.iq",
+      "sha256": "e945e855553a0bfee55a95b2dd98e5a0e56c775a1c6f36966155edab846d75aa",
+      "size_bytes": 174768
+    },
+    {
+      "path": "/home/maciejduranczyk/krakensdr_doa/_share/records/iq/17-Sep-2026_23h56m43s,IQ_433.868MHz,DOA_238.0.iq",
+      "sha256": "e14f230169a7299b141479fe50e355d62c83f668842bb899d1d0092884a9140e",
+      "size_bytes": 174768
+    },
+    {
+      "path": "/home/maciejduranczyk/krakensdr_doa/_share/records/iq/17-Sep-2026_23h56m57s,IQ_433.868MHz,DOA_237.5.iq",
+      "sha256": "7166052dfe1dfc97568b179181d7e779c5e32fb00f0f27eafabbe94088e2e129",
+      "size_bytes": 699072
+    },
+    {
+      "path": "/home/maciejduranczyk/krakensdr_doa/_share/records/iq/17-Sep-2026_23h56m58s,IQ_433.868MHz,DOA_238.0.iq",
+      "sha256": "f225c0ede330e757e0676ae99a3889f785673211d225beaa47be56df839b5856",
+      "size_bytes": 174768
+    },
+    {
+      "path": "/home/maciejduranczyk/krakensdr_doa/_share/records/iq/17-Sep-2026_23h56m59s,IQ_433.868MHz,DOA_238.0.iq",
+      "sha256": "7220da9ecfa71a5650336e8663732d145463aad991fdf01038e418428cf42648",
+      "size_bytes": 174768
+    },
+    {
+      "path": "/home/maciejduranczyk/krakensdr_doa/_share/records/iq/17-Sep-2026_23h57m00s,IQ_433.868MHz,DOA_238.0.iq",
+      "sha256": "feea80410e6d271603cb5cfe35f44fc0f85e297e65b1c8a7d9355ec4242d90d6",
+      "size_bytes": 174768
+    },
+    {
+      "path": "/home/maciejduranczyk/krakensdr_doa/_share/records/iq/17-Sep-2026_23h57m01s,IQ_433.868MHz,DOA_238.5.iq",
+      "sha256": "e2dddba57680aefa97e38374af871c5a9c88c2b739109d59b594eb87c81ccced",
+      "size_bytes": 349536
+    },
+    {
+      "path": "/home/maciejduranczyk/krakensdr_doa/_share/records/iq/17-Sep-2026_23h57m14s,IQ_433.868MHz,DOA_236.0.iq",
+      "sha256": "43ae5e4a7ee78ae67132a68ff0869fbf1cf0cb54d0e002f9133170ba1285127b",
+      "size_bytes": 174768
+    },
+    {
+      "path": "/home/maciejduranczyk/krakensdr_doa/_share/records/iq/17-Sep-2026_23h57m15s,IQ_433.868MHz,DOA_235.5.iq",
+      "sha256": "794496e99fda46b80c0cb8a71839be1f83b8f6601cea46ec7f8195c8b6ea0f58",
+      "size_bytes": 349536
+    },
+    {
+      "path": "/home/maciejduranczyk/krakensdr_doa/_share/records/iq/17-Sep-2026_23h57m16s,IQ_433.868MHz,DOA_236.0.iq",
+      "sha256": "38374e8616254d1c01bf8d692183de511ffe00c21d409f31fdbbf409c5d548f2",
+      "size_bytes": 174768
+    },
+    {
+      "path": "/home/maciejduranczyk/krakensdr_doa/_share/records/iq/17-Sep-2026_23h57m17s,IQ_433.868MHz,DOA_236.0.iq",
+      "sha256": "0b2a2950c8429229da03ad5a00308fe3c5895e70f26683784f3336abbba47954",
+      "size_bytes": 174768
+    },
+    {
+      "path": "/home/maciejduranczyk/krakensdr_doa/_share/records/iq/17-Sep-2026_23h57m18s,IQ_433.868MHz,DOA_236.0.iq",
+      "sha256": "4a21ccf18a6b3a8c74eb73dfc85b49fa34fba470a01387e10d00c93345a39868",
+      "size_bytes": 174768
+    },
+    {
+      "path": "/home/maciejduranczyk/krakensdr_doa/_share/records/iq/17-Sep-2026_23h57m20s,IQ_433.868MHz,DOA_236.5.iq",
+      "sha256": "3e44e4655b33bb839cbf2089f86674d2411e2ee466ccab3156c6d02af448644a",
+      "size_bytes": 349536
+    },
+    {
+      "path": "/home/maciejduranczyk/krakensdr_doa/_share/records/iq/17-Sep-2026_23h57m32s,IQ_433.868MHz,DOA_237.5.iq",
+      "sha256": "6dbca7157dfc06ed1e678c4b8be416e86cb7a0fe12f6b363163dcae9e14cb3cd",
+      "size_bytes": 699072
+    },
+    {
+      "path": "/home/maciejduranczyk/krakensdr_doa/_share/records/iq/17-Sep-2026_23h57m33s,IQ_433.868MHz,DOA_237.0.iq",
+      "sha256": "1ab8906bb209d5d1a4b8621fc77cc68333f5ba2486ed33248bb9bf871df5755f",
+      "size_bytes": 174768
+    },
+    {
+      "path": "/home/maciejduranczyk/krakensdr_doa/_share/records/iq/17-Sep-2026_23h57m34s,IQ_433.868MHz,DOA_237.0.iq",
+      "sha256": "6316567f76df650ac6991584137c8c316043331c7176c4723e49fb83f79782de",
+      "size_bytes": 174768
+    },
+    {
+      "path": "/home/maciejduranczyk/krakensdr_doa/_share/records/iq/17-Sep-2026_23h57m35s,IQ_433.868MHz,DOA_238.0.iq",
+      "sha256": "c0a32db638d7c16bc999531276debc270f04fca7818170ce5f3953a3dc8fbe9a",
+      "size_bytes": 174768
+    },
+    {
+      "path": "/home/maciejduranczyk/krakensdr_doa/_share/records/iq/17-Sep-2026_23h57m36s,IQ_433.868MHz,DOA_238.5.iq",
+      "sha256": "eae081e00a45a5e4a9df77b82774d58f98eb5dc4699841b72801e5789e58d0eb",
+      "size_bytes": 349536
+    }
+  ],
+  "revision": "draft1",
+  "scope": "development/regression; not independent validation",
+  "status_counts": {
+    "AMBIGUOUS_ASSOCIATION": 5
+  }
+}
