@@ -22,9 +22,13 @@ rather than another post-hoc feature search over the same 25 kS/s evidence.
 
 ## Research question
 
-Does a wider synchronized RF representation preserve repeatable
-device-dependent structure that is absent or insufficiently represented
-after the existing 25 kS/s VFO channelization?
+Does a wider independent single-channel RF representation preserve
+repeatable device-dependent structure that is absent or insufficiently
+represented after the existing 25 kS/s Kraken VFO channelization?
+
+The HackRF wider-IQ representation is independent of KrakenSDR. No shared
+sample clock, phase synchronization, sample alignment, or absolute time
+synchronization between HackRF and Kraken is assumed.
 
 ## Null interpretation
 
@@ -49,7 +53,10 @@ Existing captures are not reclassified as wider-IQ captures.
 
 ## Acquisition representation
 
-The exact V1 wider-IQ acquisition mechanism is NOT YET SELECTED.
+The V1 wider-IQ acquisition mechanism was selected prospectively after
+engineering validation and before collection of S1 or S2 development data.
+The selected mechanism is the independent HackRF receiver documented in
+the Acquisition mechanism selection section below.
 
 It must satisfy all of the following before V1 collection begins:
 
@@ -86,14 +93,22 @@ S1 and S2 must be tested under the same controlled geometry.
 The following must remain fixed during a comparison session:
 
 - Kraken antenna-array position and orientation;
+- HackRF receive-antenna position and orientation;
+- HackRF receive-antenna type and connection;
 - sensor activation position;
 - sensor orientation;
-- approximate sensor-to-array distance;
+- approximate sensor-to-HackRF-antenna distance;
+- approximate sensor-to-Kraken-array distance;
 - target frequency configuration;
 - receiver gain configuration;
 - acquisition representation and sample rate.
 
-Any intentional geometry change creates a separate experimental condition.
+For Wider-IQ V1, the HackRF receive antenna is part of the frozen acquisition
+geometry. Its position, orientation, connection, and sensor distance must be
+recorded for each session. An intentional change to any of these creates a
+separate experimental condition.
+
+An intentional change to any of these creates a separate experimental condition.
 
 ## Activation plan
 
@@ -131,13 +146,18 @@ Raw IQ must remain outside Git.
 
 The intended development order is:
 
-1. collect S1 wider-IQ evidence;
-2. independently repeat S1 if required to establish within-device
-   repeatability;
-3. collect S2 under the same controlled condition;
-4. compare within-S1 variation against S1/S2 variation;
-5. select candidate features only from S1/S2 development evidence;
-6. freeze any advancing feature before inspecting S3 with that feature.
+1. collect one controlled S1 wider-IQ session;
+2. collect an independent second S1 session under the same frozen condition;
+3. collect one controlled S2 wider-IQ session;
+4. collect an independent second S2 session under the same frozen condition;
+5. compare within-device variation both within and between sessions against
+   S1/S2 variation;
+6. select candidate features only from S1/S2 development evidence;
+7. freeze any advancing feature before inspecting S3 with that feature.
+
+Each independent session must use a separate acquisition run. The frozen
+receiver settings and controlled geometry must be restored for each session.
+The acquisition order above is fixed prospectively for Wider-IQ V1.
 
 ## Primary comparison
 
@@ -146,15 +166,22 @@ S1 and S2.
 
 A candidate feature must show:
 
-1. repeatability within S1;
-2. repeatability within S2 when sufficient data exist;
-3. S1/S2 separation larger than ordinary within-device variation;
-4. no dependence on a single extreme event;
+1. repeatability within S1 across the pre-declared independent sessions;
+2. repeatability within S2 across the pre-declared independent sessions;
+3. S1/S2 separation larger than ordinary within-device and between-session
+   variation;
+4. no dependence on a single extreme event or single session;
 5. a physically interpretable relationship to the wider-IQ signal
    representation.
 
 Absolute received power and DoA are contextual measurements and are not
 treated as device-identity features.
+
+Absolute carrier-frequency offset measured by the independent HackRF is also
+contextual for Wider-IQ V1 and must not be treated as a device-identity
+feature unless a receiver-frequency reference/correction procedure is
+defined and frozen prospectively before the relevant data are collected.
+No such correction is assumed by the present protocol.
 
 ## Advancement rule
 
@@ -238,6 +265,18 @@ Selected wider-IQ settings:
 - RF amplifier: OFF;
 - RX LNA gain: 32 dB;
 - RX VGA gain: 32 dB.
+
+The 2,000,000 complex samples/s rate defines a digital Nyquist span of
+±1,000,000 Hz around the configured center frequency. The 1,750,000 Hz
+baseband-filter setting is a receiver configuration parameter and is not,
+by itself, a declaration that the full nominal filter span is suitable for
+analysis.
+
+The usable Wider-IQ V1 analysis passband, including any DC exclusion and
+edge exclusions, must be established by engineering characterization and
+frozen before the first S1 or S2 development capture. Until that interval
+is documented, S1/S2 collection remains locked. No post-hoc passband
+selection based on S1/S2 discrimination results is permitted.
 
 The selected HackRF sample rate is 80 times the sample rate of the existing
 25 kS/s VFO-IQ representation. This ratio describes sample rates only and

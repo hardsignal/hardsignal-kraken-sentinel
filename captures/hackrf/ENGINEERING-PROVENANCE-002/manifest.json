@@ -1,0 +1,61 @@
+{
+  "acquisition": {
+    "antenna_power": 0,
+    "baseband_filter_hz": 1750000,
+    "center_frequency_hz": 433868160,
+    "lna_db": 32,
+    "representation": "CS8_INTERLEAVED_SIGNED_INT8_IQ",
+    "rf_amp": 0,
+    "sample_rate_complex_sps": 2000000,
+    "vga_db": 32
+  },
+  "activation_log": "/home/maciejduranczyk/hardsignal-kraken-sentinel/captures/hackrf/ENGINEERING-PROVENANCE-002/activation.log",
+  "actual_size_bytes": 8000000,
+  "capture_id": "ENGINEERING-PROVENANCE-002",
+  "command": [
+    "hackrf_transfer",
+    "-r",
+    "/home/maciejduranczyk/hardsignal-data/hackrf/ENGINEERING-PROVENANCE-002/ENGINEERING-PROVENANCE-002.cs8",
+    "-f",
+    "433868160",
+    "-s",
+    "2000000",
+    "-b",
+    "1750000",
+    "-n",
+    "4000000",
+    "-a",
+    "0",
+    "-p",
+    "0",
+    "-l",
+    "32",
+    "-g",
+    "32"
+  ],
+  "engineering_only": true,
+  "expected_complex_samples": 4000000,
+  "expected_size_bytes": 8000000,
+  "finished_monotonic_ns": 26039934569192,
+  "finished_wall_utc": "2026-09-18T00:57:29.871557+00:00",
+  "format": "HARDSIGNAL_HACKRF_CAPTURE_MANIFEST_V1",
+  "git_head_at_finish": "f31ad036fe2c40f3685c53945aa361c487c80556",
+  "git_head_at_start": "f31ad036fe2c40f3685c53945aa361c487c80556",
+  "raw_file": "/home/maciejduranczyk/hardsignal-data/hackrf/ENGINEERING-PROVENANCE-002/ENGINEERING-PROVENANCE-002.cs8",
+  "receiver": {
+    "hackrf_info_log": "/home/maciejduranczyk/hardsignal-kraken-sentinel/captures/hackrf/ENGINEERING-PROVENANCE-002/hackrf_info.log"
+  },
+  "sensor_label": "AMBIENT",
+  "sha256": "25cdd9b3ac7986b017d0e586ebee05a3aeecc4420b320be7bd16ed34874e6acd",
+  "started_monotonic_ns": 26037889579957,
+  "started_wall_utc": "2026-09-18T00:57:27.826552+00:00",
+  "tool_versions": {
+    "hackrf_transfer_header": [
+      "specify one of: -t, -c, -r, -w",
+      "Usage:",
+      "\t-h # this help"
+    ]
+  },
+  "transfer_exit_code": 0,
+  "transfer_log": "/home/maciejduranczyk/hardsignal-kraken-sentinel/captures/hackrf/ENGINEERING-PROVENANCE-002/hackrf_transfer.log"
+}
