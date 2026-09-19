@@ -1,0 +1,37 @@
+{
+  "capture_id": "BETWEEN-DEVICE-V1-20260919-022809",
+  "changed_preexisting_iq_files": [],
+  "files": [],
+  "finished_at": "2026-09-19T02:28:24.672519+01:00",
+  "format": "HARDSIGNAL_KRAKEN_CAPTURE_MANIFEST_V1",
+  "git_head_at_finish": "e9cb88714ce15277ac676e6fcc7073bd9ad89d3e",
+  "git_head_at_start": "e9cb88714ce15277ac676e6fcc7073bd9ad89d3e",
+  "iq_count_after": 911,
+  "iq_count_before": 911,
+  "iq_directory": "/home/maciejduranczyk/krakensdr_doa/_share/records/iq",
+  "new_iq_file_count": 0,
+  "note": "Kraken Sentinel V1 \u2014 Held-out between-device descriptive experiment \u2014 8 controlled activations",
+  "settings_at_finish": {
+    "settings_file": "/home/maciejduranczyk/krakensdr_doa/_share/settings.json",
+    "settings_sha256": "fccb9eaddb10467ee04128686d50e5a8586276ae09cb631a83925c9343269b4a",
+    "values": {
+      "vfo_bw_0": 25000,
+      "vfo_freq_0": 433868160,
+      "vfo_iq_0": "True",
+      "vfo_squelch_0": -45,
+      "vfo_squelch_mode_0": "Manual"
+    }
+  },
+  "settings_at_start": {
+    "settings_file": "/home/maciejduranczyk/krakensdr_doa/_share/settings.json",
+    "settings_sha256": "fccb9eaddb10467ee04128686d50e5a8586276ae09cb631a83925c9343269b4a",
+    "values": {
+      "vfo_bw_0": 25000,
+      "vfo_freq_0": 433868160,
+      "vfo_iq_0": "True",
+      "vfo_squelch_0": -45,
+      "vfo_squelch_mode_0": "Manual"
+    }
+  },
+  "started_at": "2026-09-19T02:28:09.902927+01:00"
+}
