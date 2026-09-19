@@ -1,0 +1,25 @@
+{
+  "artifact_hashes_verified": true,
+  "experiment_exit_code": 2,
+  "full_matrix_completed": false,
+  "git_diff_check_passed": true,
+  "input_hashes_reverified": 42,
+  "native_control_fields": [
+    "candidate_id",
+    "frequency_hz",
+    "width_hz",
+    "eligible_for_tracking",
+    "ineligibility_reasons"
+  ],
+  "native_control_fragments_verified": 210,
+  "new_source_whitespace_check_passed": true,
+  "source_hash_verified": true,
+  "tracked_files_modified": [],
+  "unit_tests": {
+    "command": "python3 -B -m unittest discover -s tests -p test_episode_component_tracking_v2_draft2_experiment.py -v",
+    "errors": 0,
+    "failures": 0,
+    "passed": true,
+    "tests": 18
+  }
+}

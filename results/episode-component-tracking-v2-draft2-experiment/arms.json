@@ -1,0 +1,1485 @@
+[
+  {
+    "arm_id": "native__w200__connected",
+    "association": "connected",
+    "failure": null,
+    "metrics": {
+      "detection_count": 8681,
+      "diagnostic_dominant_denominator": 204,
+      "diagnostic_dominant_retained": 83,
+      "null_primary_episodes": 41,
+      "persistent_tracks": 2,
+      "primary_tracks": 0,
+      "resolution_dependence": {
+        "10923": {
+          "detections": 1563,
+          "fragments": 143
+        },
+        "21846": {
+          "detections": 3120,
+          "fragments": 44
+        },
+        "43692": {
+          "detections": 3853,
+          "fragments": 22
+        },
+        "54615": {
+          "detections": 145,
+          "fragments": 1
+        }
+      },
+      "status_transitions": {
+        "AMBIGUOUS_ASSOCIATION -> AMBIGUOUS_ASSOCIATION": 38,
+        "INSUFFICIENT_SUPPORT -> INSUFFICIENT_SUPPORT": 3
+      },
+      "statuses": {
+        "AMBIGUOUS_ASSOCIATION": 38,
+        "INSUFFICIENT_SUPPORT": 3
+      },
+      "structural_constraint_violations": 0,
+      "width_rejection": 135
+    },
+    "representation": "native",
+    "state": "COMPLETE",
+    "width_hz": 200
+  },
+  {
+    "arm_id": "native__w200__paths_margin0",
+    "association": "paths_margin0",
+    "failure": {
+      "candidates": 73,
+      "capture": "PIPELINE-TPMS-008-20260918-003900",
+      "episode": 8,
+      "feasible_paths": 412,
+      "limit": 200000,
+      "reason": "exact partition DP state limit",
+      "visited_states": 200001
+    },
+    "metrics": null,
+    "representation": "native",
+    "state": "COMPUTATION_UNRESOLVED",
+    "width_hz": 200
+  },
+  {
+    "arm_id": "native__w200__paths_margin0.25",
+    "association": "paths_margin0.25",
+    "failure": null,
+    "metrics": null,
+    "representation": "native",
+    "state": "NOT_RUN",
+    "width_hz": 200
+  },
+  {
+    "arm_id": "native__w200__paths_margin1",
+    "association": "paths_margin1",
+    "failure": null,
+    "metrics": null,
+    "representation": "native",
+    "state": "NOT_RUN",
+    "width_hz": 200
+  },
+  {
+    "arm_id": "native__w225__connected",
+    "association": "connected",
+    "failure": null,
+    "metrics": null,
+    "representation": "native",
+    "state": "NOT_RUN",
+    "width_hz": 225
+  },
+  {
+    "arm_id": "native__w225__paths_margin0",
+    "association": "paths_margin0",
+    "failure": null,
+    "metrics": null,
+    "representation": "native",
+    "state": "NOT_RUN",
+    "width_hz": 225
+  },
+  {
+    "arm_id": "native__w225__paths_margin0.25",
+    "association": "paths_margin0.25",
+    "failure": null,
+    "metrics": null,
+    "representation": "native",
+    "state": "NOT_RUN",
+    "width_hz": 225
+  },
+  {
+    "arm_id": "native__w225__paths_margin1",
+    "association": "paths_margin1",
+    "failure": null,
+    "metrics": null,
+    "representation": "native",
+    "state": "NOT_RUN",
+    "width_hz": 225
+  },
+  {
+    "arm_id": "native__w250__connected",
+    "association": "connected",
+    "failure": null,
+    "metrics": null,
+    "representation": "native",
+    "state": "NOT_RUN",
+    "width_hz": 250
+  },
+  {
+    "arm_id": "native__w250__paths_margin0",
+    "association": "paths_margin0",
+    "failure": null,
+    "metrics": null,
+    "representation": "native",
+    "state": "NOT_RUN",
+    "width_hz": 250
+  },
+  {
+    "arm_id": "native__w250__paths_margin0.25",
+    "association": "paths_margin0.25",
+    "failure": null,
+    "metrics": null,
+    "representation": "native",
+    "state": "NOT_RUN",
+    "width_hz": 250
+  },
+  {
+    "arm_id": "native__w250__paths_margin1",
+    "association": "paths_margin1",
+    "failure": null,
+    "metrics": null,
+    "representation": "native",
+    "state": "NOT_RUN",
+    "width_hz": 250
+  },
+  {
+    "arm_id": "native__w275__connected",
+    "association": "connected",
+    "failure": null,
+    "metrics": null,
+    "representation": "native",
+    "state": "NOT_RUN",
+    "width_hz": 275
+  },
+  {
+    "arm_id": "native__w275__paths_margin0",
+    "association": "paths_margin0",
+    "failure": null,
+    "metrics": null,
+    "representation": "native",
+    "state": "NOT_RUN",
+    "width_hz": 275
+  },
+  {
+    "arm_id": "native__w275__paths_margin0.25",
+    "association": "paths_margin0.25",
+    "failure": null,
+    "metrics": null,
+    "representation": "native",
+    "state": "NOT_RUN",
+    "width_hz": 275
+  },
+  {
+    "arm_id": "native__w275__paths_margin1",
+    "association": "paths_margin1",
+    "failure": null,
+    "metrics": null,
+    "representation": "native",
+    "state": "NOT_RUN",
+    "width_hz": 275
+  },
+  {
+    "arm_id": "native__w300__connected",
+    "association": "connected",
+    "failure": null,
+    "metrics": null,
+    "representation": "native",
+    "state": "NOT_RUN",
+    "width_hz": 300
+  },
+  {
+    "arm_id": "native__w300__paths_margin0",
+    "association": "paths_margin0",
+    "failure": null,
+    "metrics": null,
+    "representation": "native",
+    "state": "NOT_RUN",
+    "width_hz": 300
+  },
+  {
+    "arm_id": "native__w300__paths_margin0.25",
+    "association": "paths_margin0.25",
+    "failure": null,
+    "metrics": null,
+    "representation": "native",
+    "state": "NOT_RUN",
+    "width_hz": 300
+  },
+  {
+    "arm_id": "native__w300__paths_margin1",
+    "association": "paths_margin1",
+    "failure": null,
+    "metrics": null,
+    "representation": "native",
+    "state": "NOT_RUN",
+    "width_hz": 300
+  },
+  {
+    "arm_id": "native__w325__connected",
+    "association": "connected",
+    "failure": null,
+    "metrics": null,
+    "representation": "native",
+    "state": "NOT_RUN",
+    "width_hz": 325
+  },
+  {
+    "arm_id": "native__w325__paths_margin0",
+    "association": "paths_margin0",
+    "failure": null,
+    "metrics": null,
+    "representation": "native",
+    "state": "NOT_RUN",
+    "width_hz": 325
+  },
+  {
+    "arm_id": "native__w325__paths_margin0.25",
+    "association": "paths_margin0.25",
+    "failure": null,
+    "metrics": null,
+    "representation": "native",
+    "state": "NOT_RUN",
+    "width_hz": 325
+  },
+  {
+    "arm_id": "native__w325__paths_margin1",
+    "association": "paths_margin1",
+    "failure": null,
+    "metrics": null,
+    "representation": "native",
+    "state": "NOT_RUN",
+    "width_hz": 325
+  },
+  {
+    "arm_id": "native__w350__connected",
+    "association": "connected",
+    "failure": null,
+    "metrics": null,
+    "representation": "native",
+    "state": "NOT_RUN",
+    "width_hz": 350
+  },
+  {
+    "arm_id": "native__w350__paths_margin0",
+    "association": "paths_margin0",
+    "failure": null,
+    "metrics": null,
+    "representation": "native",
+    "state": "NOT_RUN",
+    "width_hz": 350
+  },
+  {
+    "arm_id": "native__w350__paths_margin0.25",
+    "association": "paths_margin0.25",
+    "failure": null,
+    "metrics": null,
+    "representation": "native",
+    "state": "NOT_RUN",
+    "width_hz": 350
+  },
+  {
+    "arm_id": "native__w350__paths_margin1",
+    "association": "paths_margin1",
+    "failure": null,
+    "metrics": null,
+    "representation": "native",
+    "state": "NOT_RUN",
+    "width_hz": 350
+  },
+  {
+    "arm_id": "native__wunlimited__connected",
+    "association": "connected",
+    "failure": null,
+    "metrics": null,
+    "representation": "native",
+    "state": "NOT_RUN",
+    "width_hz": null
+  },
+  {
+    "arm_id": "native__wunlimited__paths_margin0",
+    "association": "paths_margin0",
+    "failure": null,
+    "metrics": null,
+    "representation": "native",
+    "state": "NOT_RUN",
+    "width_hz": null
+  },
+  {
+    "arm_id": "native__wunlimited__paths_margin0.25",
+    "association": "paths_margin0.25",
+    "failure": null,
+    "metrics": null,
+    "representation": "native",
+    "state": "NOT_RUN",
+    "width_hz": null
+  },
+  {
+    "arm_id": "native__wunlimited__paths_margin1",
+    "association": "paths_margin1",
+    "failure": null,
+    "metrics": null,
+    "representation": "native",
+    "state": "NOT_RUN",
+    "width_hz": null
+  },
+  {
+    "arm_id": "grid_sigma0__w200__connected",
+    "association": "connected",
+    "failure": null,
+    "metrics": null,
+    "representation": "grid_sigma0",
+    "state": "NOT_RUN",
+    "width_hz": 200
+  },
+  {
+    "arm_id": "grid_sigma0__w200__paths_margin0",
+    "association": "paths_margin0",
+    "failure": null,
+    "metrics": null,
+    "representation": "grid_sigma0",
+    "state": "NOT_RUN",
+    "width_hz": 200
+  },
+  {
+    "arm_id": "grid_sigma0__w200__paths_margin0.25",
+    "association": "paths_margin0.25",
+    "failure": null,
+    "metrics": null,
+    "representation": "grid_sigma0",
+    "state": "NOT_RUN",
+    "width_hz": 200
+  },
+  {
+    "arm_id": "grid_sigma0__w200__paths_margin1",
+    "association": "paths_margin1",
+    "failure": null,
+    "metrics": null,
+    "representation": "grid_sigma0",
+    "state": "NOT_RUN",
+    "width_hz": 200
+  },
+  {
+    "arm_id": "grid_sigma0__w225__connected",
+    "association": "connected",
+    "failure": null,
+    "metrics": null,
+    "representation": "grid_sigma0",
+    "state": "NOT_RUN",
+    "width_hz": 225
+  },
+  {
+    "arm_id": "grid_sigma0__w225__paths_margin0",
+    "association": "paths_margin0",
+    "failure": null,
+    "metrics": null,
+    "representation": "grid_sigma0",
+    "state": "NOT_RUN",
+    "width_hz": 225
+  },
+  {
+    "arm_id": "grid_sigma0__w225__paths_margin0.25",
+    "association": "paths_margin0.25",
+    "failure": null,
+    "metrics": null,
+    "representation": "grid_sigma0",
+    "state": "NOT_RUN",
+    "width_hz": 225
+  },
+  {
+    "arm_id": "grid_sigma0__w225__paths_margin1",
+    "association": "paths_margin1",
+    "failure": null,
+    "metrics": null,
+    "representation": "grid_sigma0",
+    "state": "NOT_RUN",
+    "width_hz": 225
+  },
+  {
+    "arm_id": "grid_sigma0__w250__connected",
+    "association": "connected",
+    "failure": null,
+    "metrics": null,
+    "representation": "grid_sigma0",
+    "state": "NOT_RUN",
+    "width_hz": 250
+  },
+  {
+    "arm_id": "grid_sigma0__w250__paths_margin0",
+    "association": "paths_margin0",
+    "failure": null,
+    "metrics": null,
+    "representation": "grid_sigma0",
+    "state": "NOT_RUN",
+    "width_hz": 250
+  },
+  {
+    "arm_id": "grid_sigma0__w250__paths_margin0.25",
+    "association": "paths_margin0.25",
+    "failure": null,
+    "metrics": null,
+    "representation": "grid_sigma0",
+    "state": "NOT_RUN",
+    "width_hz": 250
+  },
+  {
+    "arm_id": "grid_sigma0__w250__paths_margin1",
+    "association": "paths_margin1",
+    "failure": null,
+    "metrics": null,
+    "representation": "grid_sigma0",
+    "state": "NOT_RUN",
+    "width_hz": 250
+  },
+  {
+    "arm_id": "grid_sigma0__w275__connected",
+    "association": "connected",
+    "failure": null,
+    "metrics": null,
+    "representation": "grid_sigma0",
+    "state": "NOT_RUN",
+    "width_hz": 275
+  },
+  {
+    "arm_id": "grid_sigma0__w275__paths_margin0",
+    "association": "paths_margin0",
+    "failure": null,
+    "metrics": null,
+    "representation": "grid_sigma0",
+    "state": "NOT_RUN",
+    "width_hz": 275
+  },
+  {
+    "arm_id": "grid_sigma0__w275__paths_margin0.25",
+    "association": "paths_margin0.25",
+    "failure": null,
+    "metrics": null,
+    "representation": "grid_sigma0",
+    "state": "NOT_RUN",
+    "width_hz": 275
+  },
+  {
+    "arm_id": "grid_sigma0__w275__paths_margin1",
+    "association": "paths_margin1",
+    "failure": null,
+    "metrics": null,
+    "representation": "grid_sigma0",
+    "state": "NOT_RUN",
+    "width_hz": 275
+  },
+  {
+    "arm_id": "grid_sigma0__w300__connected",
+    "association": "connected",
+    "failure": null,
+    "metrics": null,
+    "representation": "grid_sigma0",
+    "state": "NOT_RUN",
+    "width_hz": 300
+  },
+  {
+    "arm_id": "grid_sigma0__w300__paths_margin0",
+    "association": "paths_margin0",
+    "failure": null,
+    "metrics": null,
+    "representation": "grid_sigma0",
+    "state": "NOT_RUN",
+    "width_hz": 300
+  },
+  {
+    "arm_id": "grid_sigma0__w300__paths_margin0.25",
+    "association": "paths_margin0.25",
+    "failure": null,
+    "metrics": null,
+    "representation": "grid_sigma0",
+    "state": "NOT_RUN",
+    "width_hz": 300
+  },
+  {
+    "arm_id": "grid_sigma0__w300__paths_margin1",
+    "association": "paths_margin1",
+    "failure": null,
+    "metrics": null,
+    "representation": "grid_sigma0",
+    "state": "NOT_RUN",
+    "width_hz": 300
+  },
+  {
+    "arm_id": "grid_sigma0__w325__connected",
+    "association": "connected",
+    "failure": null,
+    "metrics": null,
+    "representation": "grid_sigma0",
+    "state": "NOT_RUN",
+    "width_hz": 325
+  },
+  {
+    "arm_id": "grid_sigma0__w325__paths_margin0",
+    "association": "paths_margin0",
+    "failure": null,
+    "metrics": null,
+    "representation": "grid_sigma0",
+    "state": "NOT_RUN",
+    "width_hz": 325
+  },
+  {
+    "arm_id": "grid_sigma0__w325__paths_margin0.25",
+    "association": "paths_margin0.25",
+    "failure": null,
+    "metrics": null,
+    "representation": "grid_sigma0",
+    "state": "NOT_RUN",
+    "width_hz": 325
+  },
+  {
+    "arm_id": "grid_sigma0__w325__paths_margin1",
+    "association": "paths_margin1",
+    "failure": null,
+    "metrics": null,
+    "representation": "grid_sigma0",
+    "state": "NOT_RUN",
+    "width_hz": 325
+  },
+  {
+    "arm_id": "grid_sigma0__w350__connected",
+    "association": "connected",
+    "failure": null,
+    "metrics": null,
+    "representation": "grid_sigma0",
+    "state": "NOT_RUN",
+    "width_hz": 350
+  },
+  {
+    "arm_id": "grid_sigma0__w350__paths_margin0",
+    "association": "paths_margin0",
+    "failure": null,
+    "metrics": null,
+    "representation": "grid_sigma0",
+    "state": "NOT_RUN",
+    "width_hz": 350
+  },
+  {
+    "arm_id": "grid_sigma0__w350__paths_margin0.25",
+    "association": "paths_margin0.25",
+    "failure": null,
+    "metrics": null,
+    "representation": "grid_sigma0",
+    "state": "NOT_RUN",
+    "width_hz": 350
+  },
+  {
+    "arm_id": "grid_sigma0__w350__paths_margin1",
+    "association": "paths_margin1",
+    "failure": null,
+    "metrics": null,
+    "representation": "grid_sigma0",
+    "state": "NOT_RUN",
+    "width_hz": 350
+  },
+  {
+    "arm_id": "grid_sigma0__wunlimited__connected",
+    "association": "connected",
+    "failure": null,
+    "metrics": null,
+    "representation": "grid_sigma0",
+    "state": "NOT_RUN",
+    "width_hz": null
+  },
+  {
+    "arm_id": "grid_sigma0__wunlimited__paths_margin0",
+    "association": "paths_margin0",
+    "failure": null,
+    "metrics": null,
+    "representation": "grid_sigma0",
+    "state": "NOT_RUN",
+    "width_hz": null
+  },
+  {
+    "arm_id": "grid_sigma0__wunlimited__paths_margin0.25",
+    "association": "paths_margin0.25",
+    "failure": null,
+    "metrics": null,
+    "representation": "grid_sigma0",
+    "state": "NOT_RUN",
+    "width_hz": null
+  },
+  {
+    "arm_id": "grid_sigma0__wunlimited__paths_margin1",
+    "association": "paths_margin1",
+    "failure": null,
+    "metrics": null,
+    "representation": "grid_sigma0",
+    "state": "NOT_RUN",
+    "width_hz": null
+  },
+  {
+    "arm_id": "grid_sigma5__w200__connected",
+    "association": "connected",
+    "failure": null,
+    "metrics": null,
+    "representation": "grid_sigma5",
+    "state": "NOT_RUN",
+    "width_hz": 200
+  },
+  {
+    "arm_id": "grid_sigma5__w200__paths_margin0",
+    "association": "paths_margin0",
+    "failure": null,
+    "metrics": null,
+    "representation": "grid_sigma5",
+    "state": "NOT_RUN",
+    "width_hz": 200
+  },
+  {
+    "arm_id": "grid_sigma5__w200__paths_margin0.25",
+    "association": "paths_margin0.25",
+    "failure": null,
+    "metrics": null,
+    "representation": "grid_sigma5",
+    "state": "NOT_RUN",
+    "width_hz": 200
+  },
+  {
+    "arm_id": "grid_sigma5__w200__paths_margin1",
+    "association": "paths_margin1",
+    "failure": null,
+    "metrics": null,
+    "representation": "grid_sigma5",
+    "state": "NOT_RUN",
+    "width_hz": 200
+  },
+  {
+    "arm_id": "grid_sigma5__w225__connected",
+    "association": "connected",
+    "failure": null,
+    "metrics": null,
+    "representation": "grid_sigma5",
+    "state": "NOT_RUN",
+    "width_hz": 225
+  },
+  {
+    "arm_id": "grid_sigma5__w225__paths_margin0",
+    "association": "paths_margin0",
+    "failure": null,
+    "metrics": null,
+    "representation": "grid_sigma5",
+    "state": "NOT_RUN",
+    "width_hz": 225
+  },
+  {
+    "arm_id": "grid_sigma5__w225__paths_margin0.25",
+    "association": "paths_margin0.25",
+    "failure": null,
+    "metrics": null,
+    "representation": "grid_sigma5",
+    "state": "NOT_RUN",
+    "width_hz": 225
+  },
+  {
+    "arm_id": "grid_sigma5__w225__paths_margin1",
+    "association": "paths_margin1",
+    "failure": null,
+    "metrics": null,
+    "representation": "grid_sigma5",
+    "state": "NOT_RUN",
+    "width_hz": 225
+  },
+  {
+    "arm_id": "grid_sigma5__w250__connected",
+    "association": "connected",
+    "failure": null,
+    "metrics": null,
+    "representation": "grid_sigma5",
+    "state": "NOT_RUN",
+    "width_hz": 250
+  },
+  {
+    "arm_id": "grid_sigma5__w250__paths_margin0",
+    "association": "paths_margin0",
+    "failure": null,
+    "metrics": null,
+    "representation": "grid_sigma5",
+    "state": "NOT_RUN",
+    "width_hz": 250
+  },
+  {
+    "arm_id": "grid_sigma5__w250__paths_margin0.25",
+    "association": "paths_margin0.25",
+    "failure": null,
+    "metrics": null,
+    "representation": "grid_sigma5",
+    "state": "NOT_RUN",
+    "width_hz": 250
+  },
+  {
+    "arm_id": "grid_sigma5__w250__paths_margin1",
+    "association": "paths_margin1",
+    "failure": null,
+    "metrics": null,
+    "representation": "grid_sigma5",
+    "state": "NOT_RUN",
+    "width_hz": 250
+  },
+  {
+    "arm_id": "grid_sigma5__w275__connected",
+    "association": "connected",
+    "failure": null,
+    "metrics": null,
+    "representation": "grid_sigma5",
+    "state": "NOT_RUN",
+    "width_hz": 275
+  },
+  {
+    "arm_id": "grid_sigma5__w275__paths_margin0",
+    "association": "paths_margin0",
+    "failure": null,
+    "metrics": null,
+    "representation": "grid_sigma5",
+    "state": "NOT_RUN",
+    "width_hz": 275
+  },
+  {
+    "arm_id": "grid_sigma5__w275__paths_margin0.25",
+    "association": "paths_margin0.25",
+    "failure": null,
+    "metrics": null,
+    "representation": "grid_sigma5",
+    "state": "NOT_RUN",
+    "width_hz": 275
+  },
+  {
+    "arm_id": "grid_sigma5__w275__paths_margin1",
+    "association": "paths_margin1",
+    "failure": null,
+    "metrics": null,
+    "representation": "grid_sigma5",
+    "state": "NOT_RUN",
+    "width_hz": 275
+  },
+  {
+    "arm_id": "grid_sigma5__w300__connected",
+    "association": "connected",
+    "failure": null,
+    "metrics": null,
+    "representation": "grid_sigma5",
+    "state": "NOT_RUN",
+    "width_hz": 300
+  },
+  {
+    "arm_id": "grid_sigma5__w300__paths_margin0",
+    "association": "paths_margin0",
+    "failure": null,
+    "metrics": null,
+    "representation": "grid_sigma5",
+    "state": "NOT_RUN",
+    "width_hz": 300
+  },
+  {
+    "arm_id": "grid_sigma5__w300__paths_margin0.25",
+    "association": "paths_margin0.25",
+    "failure": null,
+    "metrics": null,
+    "representation": "grid_sigma5",
+    "state": "NOT_RUN",
+    "width_hz": 300
+  },
+  {
+    "arm_id": "grid_sigma5__w300__paths_margin1",
+    "association": "paths_margin1",
+    "failure": null,
+    "metrics": null,
+    "representation": "grid_sigma5",
+    "state": "NOT_RUN",
+    "width_hz": 300
+  },
+  {
+    "arm_id": "grid_sigma5__w325__connected",
+    "association": "connected",
+    "failure": null,
+    "metrics": null,
+    "representation": "grid_sigma5",
+    "state": "NOT_RUN",
+    "width_hz": 325
+  },
+  {
+    "arm_id": "grid_sigma5__w325__paths_margin0",
+    "association": "paths_margin0",
+    "failure": null,
+    "metrics": null,
+    "representation": "grid_sigma5",
+    "state": "NOT_RUN",
+    "width_hz": 325
+  },
+  {
+    "arm_id": "grid_sigma5__w325__paths_margin0.25",
+    "association": "paths_margin0.25",
+    "failure": null,
+    "metrics": null,
+    "representation": "grid_sigma5",
+    "state": "NOT_RUN",
+    "width_hz": 325
+  },
+  {
+    "arm_id": "grid_sigma5__w325__paths_margin1",
+    "association": "paths_margin1",
+    "failure": null,
+    "metrics": null,
+    "representation": "grid_sigma5",
+    "state": "NOT_RUN",
+    "width_hz": 325
+  },
+  {
+    "arm_id": "grid_sigma5__w350__connected",
+    "association": "connected",
+    "failure": null,
+    "metrics": null,
+    "representation": "grid_sigma5",
+    "state": "NOT_RUN",
+    "width_hz": 350
+  },
+  {
+    "arm_id": "grid_sigma5__w350__paths_margin0",
+    "association": "paths_margin0",
+    "failure": null,
+    "metrics": null,
+    "representation": "grid_sigma5",
+    "state": "NOT_RUN",
+    "width_hz": 350
+  },
+  {
+    "arm_id": "grid_sigma5__w350__paths_margin0.25",
+    "association": "paths_margin0.25",
+    "failure": null,
+    "metrics": null,
+    "representation": "grid_sigma5",
+    "state": "NOT_RUN",
+    "width_hz": 350
+  },
+  {
+    "arm_id": "grid_sigma5__w350__paths_margin1",
+    "association": "paths_margin1",
+    "failure": null,
+    "metrics": null,
+    "representation": "grid_sigma5",
+    "state": "NOT_RUN",
+    "width_hz": 350
+  },
+  {
+    "arm_id": "grid_sigma5__wunlimited__connected",
+    "association": "connected",
+    "failure": null,
+    "metrics": null,
+    "representation": "grid_sigma5",
+    "state": "NOT_RUN",
+    "width_hz": null
+  },
+  {
+    "arm_id": "grid_sigma5__wunlimited__paths_margin0",
+    "association": "paths_margin0",
+    "failure": null,
+    "metrics": null,
+    "representation": "grid_sigma5",
+    "state": "NOT_RUN",
+    "width_hz": null
+  },
+  {
+    "arm_id": "grid_sigma5__wunlimited__paths_margin0.25",
+    "association": "paths_margin0.25",
+    "failure": null,
+    "metrics": null,
+    "representation": "grid_sigma5",
+    "state": "NOT_RUN",
+    "width_hz": null
+  },
+  {
+    "arm_id": "grid_sigma5__wunlimited__paths_margin1",
+    "association": "paths_margin1",
+    "failure": null,
+    "metrics": null,
+    "representation": "grid_sigma5",
+    "state": "NOT_RUN",
+    "width_hz": null
+  },
+  {
+    "arm_id": "grid_sigma10__w200__connected",
+    "association": "connected",
+    "failure": null,
+    "metrics": null,
+    "representation": "grid_sigma10",
+    "state": "NOT_RUN",
+    "width_hz": 200
+  },
+  {
+    "arm_id": "grid_sigma10__w200__paths_margin0",
+    "association": "paths_margin0",
+    "failure": null,
+    "metrics": null,
+    "representation": "grid_sigma10",
+    "state": "NOT_RUN",
+    "width_hz": 200
+  },
+  {
+    "arm_id": "grid_sigma10__w200__paths_margin0.25",
+    "association": "paths_margin0.25",
+    "failure": null,
+    "metrics": null,
+    "representation": "grid_sigma10",
+    "state": "NOT_RUN",
+    "width_hz": 200
+  },
+  {
+    "arm_id": "grid_sigma10__w200__paths_margin1",
+    "association": "paths_margin1",
+    "failure": null,
+    "metrics": null,
+    "representation": "grid_sigma10",
+    "state": "NOT_RUN",
+    "width_hz": 200
+  },
+  {
+    "arm_id": "grid_sigma10__w225__connected",
+    "association": "connected",
+    "failure": null,
+    "metrics": null,
+    "representation": "grid_sigma10",
+    "state": "NOT_RUN",
+    "width_hz": 225
+  },
+  {
+    "arm_id": "grid_sigma10__w225__paths_margin0",
+    "association": "paths_margin0",
+    "failure": null,
+    "metrics": null,
+    "representation": "grid_sigma10",
+    "state": "NOT_RUN",
+    "width_hz": 225
+  },
+  {
+    "arm_id": "grid_sigma10__w225__paths_margin0.25",
+    "association": "paths_margin0.25",
+    "failure": null,
+    "metrics": null,
+    "representation": "grid_sigma10",
+    "state": "NOT_RUN",
+    "width_hz": 225
+  },
+  {
+    "arm_id": "grid_sigma10__w225__paths_margin1",
+    "association": "paths_margin1",
+    "failure": null,
+    "metrics": null,
+    "representation": "grid_sigma10",
+    "state": "NOT_RUN",
+    "width_hz": 225
+  },
+  {
+    "arm_id": "grid_sigma10__w250__connected",
+    "association": "connected",
+    "failure": null,
+    "metrics": null,
+    "representation": "grid_sigma10",
+    "state": "NOT_RUN",
+    "width_hz": 250
+  },
+  {
+    "arm_id": "grid_sigma10__w250__paths_margin0",
+    "association": "paths_margin0",
+    "failure": null,
+    "metrics": null,
+    "representation": "grid_sigma10",
+    "state": "NOT_RUN",
+    "width_hz": 250
+  },
+  {
+    "arm_id": "grid_sigma10__w250__paths_margin0.25",
+    "association": "paths_margin0.25",
+    "failure": null,
+    "metrics": null,
+    "representation": "grid_sigma10",
+    "state": "NOT_RUN",
+    "width_hz": 250
+  },
+  {
+    "arm_id": "grid_sigma10__w250__paths_margin1",
+    "association": "paths_margin1",
+    "failure": null,
+    "metrics": null,
+    "representation": "grid_sigma10",
+    "state": "NOT_RUN",
+    "width_hz": 250
+  },
+  {
+    "arm_id": "grid_sigma10__w275__connected",
+    "association": "connected",
+    "failure": null,
+    "metrics": null,
+    "representation": "grid_sigma10",
+    "state": "NOT_RUN",
+    "width_hz": 275
+  },
+  {
+    "arm_id": "grid_sigma10__w275__paths_margin0",
+    "association": "paths_margin0",
+    "failure": null,
+    "metrics": null,
+    "representation": "grid_sigma10",
+    "state": "NOT_RUN",
+    "width_hz": 275
+  },
+  {
+    "arm_id": "grid_sigma10__w275__paths_margin0.25",
+    "association": "paths_margin0.25",
+    "failure": null,
+    "metrics": null,
+    "representation": "grid_sigma10",
+    "state": "NOT_RUN",
+    "width_hz": 275
+  },
+  {
+    "arm_id": "grid_sigma10__w275__paths_margin1",
+    "association": "paths_margin1",
+    "failure": null,
+    "metrics": null,
+    "representation": "grid_sigma10",
+    "state": "NOT_RUN",
+    "width_hz": 275
+  },
+  {
+    "arm_id": "grid_sigma10__w300__connected",
+    "association": "connected",
+    "failure": null,
+    "metrics": null,
+    "representation": "grid_sigma10",
+    "state": "NOT_RUN",
+    "width_hz": 300
+  },
+  {
+    "arm_id": "grid_sigma10__w300__paths_margin0",
+    "association": "paths_margin0",
+    "failure": null,
+    "metrics": null,
+    "representation": "grid_sigma10",
+    "state": "NOT_RUN",
+    "width_hz": 300
+  },
+  {
+    "arm_id": "grid_sigma10__w300__paths_margin0.25",
+    "association": "paths_margin0.25",
+    "failure": null,
+    "metrics": null,
+    "representation": "grid_sigma10",
+    "state": "NOT_RUN",
+    "width_hz": 300
+  },
+  {
+    "arm_id": "grid_sigma10__w300__paths_margin1",
+    "association": "paths_margin1",
+    "failure": null,
+    "metrics": null,
+    "representation": "grid_sigma10",
+    "state": "NOT_RUN",
+    "width_hz": 300
+  },
+  {
+    "arm_id": "grid_sigma10__w325__connected",
+    "association": "connected",
+    "failure": null,
+    "metrics": null,
+    "representation": "grid_sigma10",
+    "state": "NOT_RUN",
+    "width_hz": 325
+  },
+  {
+    "arm_id": "grid_sigma10__w325__paths_margin0",
+    "association": "paths_margin0",
+    "failure": null,
+    "metrics": null,
+    "representation": "grid_sigma10",
+    "state": "NOT_RUN",
+    "width_hz": 325
+  },
+  {
+    "arm_id": "grid_sigma10__w325__paths_margin0.25",
+    "association": "paths_margin0.25",
+    "failure": null,
+    "metrics": null,
+    "representation": "grid_sigma10",
+    "state": "NOT_RUN",
+    "width_hz": 325
+  },
+  {
+    "arm_id": "grid_sigma10__w325__paths_margin1",
+    "association": "paths_margin1",
+    "failure": null,
+    "metrics": null,
+    "representation": "grid_sigma10",
+    "state": "NOT_RUN",
+    "width_hz": 325
+  },
+  {
+    "arm_id": "grid_sigma10__w350__connected",
+    "association": "connected",
+    "failure": null,
+    "metrics": null,
+    "representation": "grid_sigma10",
+    "state": "NOT_RUN",
+    "width_hz": 350
+  },
+  {
+    "arm_id": "grid_sigma10__w350__paths_margin0",
+    "association": "paths_margin0",
+    "failure": null,
+    "metrics": null,
+    "representation": "grid_sigma10",
+    "state": "NOT_RUN",
+    "width_hz": 350
+  },
+  {
+    "arm_id": "grid_sigma10__w350__paths_margin0.25",
+    "association": "paths_margin0.25",
+    "failure": null,
+    "metrics": null,
+    "representation": "grid_sigma10",
+    "state": "NOT_RUN",
+    "width_hz": 350
+  },
+  {
+    "arm_id": "grid_sigma10__w350__paths_margin1",
+    "association": "paths_margin1",
+    "failure": null,
+    "metrics": null,
+    "representation": "grid_sigma10",
+    "state": "NOT_RUN",
+    "width_hz": 350
+  },
+  {
+    "arm_id": "grid_sigma10__wunlimited__connected",
+    "association": "connected",
+    "failure": null,
+    "metrics": null,
+    "representation": "grid_sigma10",
+    "state": "NOT_RUN",
+    "width_hz": null
+  },
+  {
+    "arm_id": "grid_sigma10__wunlimited__paths_margin0",
+    "association": "paths_margin0",
+    "failure": null,
+    "metrics": null,
+    "representation": "grid_sigma10",
+    "state": "NOT_RUN",
+    "width_hz": null
+  },
+  {
+    "arm_id": "grid_sigma10__wunlimited__paths_margin0.25",
+    "association": "paths_margin0.25",
+    "failure": null,
+    "metrics": null,
+    "representation": "grid_sigma10",
+    "state": "NOT_RUN",
+    "width_hz": null
+  },
+  {
+    "arm_id": "grid_sigma10__wunlimited__paths_margin1",
+    "association": "paths_margin1",
+    "failure": null,
+    "metrics": null,
+    "representation": "grid_sigma10",
+    "state": "NOT_RUN",
+    "width_hz": null
+  },
+  {
+    "arm_id": "grid_sigma20__w200__connected",
+    "association": "connected",
+    "failure": null,
+    "metrics": null,
+    "representation": "grid_sigma20",
+    "state": "NOT_RUN",
+    "width_hz": 200
+  },
+  {
+    "arm_id": "grid_sigma20__w200__paths_margin0",
+    "association": "paths_margin0",
+    "failure": null,
+    "metrics": null,
+    "representation": "grid_sigma20",
+    "state": "NOT_RUN",
+    "width_hz": 200
+  },
+  {
+    "arm_id": "grid_sigma20__w200__paths_margin0.25",
+    "association": "paths_margin0.25",
+    "failure": null,
+    "metrics": null,
+    "representation": "grid_sigma20",
+    "state": "NOT_RUN",
+    "width_hz": 200
+  },
+  {
+    "arm_id": "grid_sigma20__w200__paths_margin1",
+    "association": "paths_margin1",
+    "failure": null,
+    "metrics": null,
+    "representation": "grid_sigma20",
+    "state": "NOT_RUN",
+    "width_hz": 200
+  },
+  {
+    "arm_id": "grid_sigma20__w225__connected",
+    "association": "connected",
+    "failure": null,
+    "metrics": null,
+    "representation": "grid_sigma20",
+    "state": "NOT_RUN",
+    "width_hz": 225
+  },
+  {
+    "arm_id": "grid_sigma20__w225__paths_margin0",
+    "association": "paths_margin0",
+    "failure": null,
+    "metrics": null,
+    "representation": "grid_sigma20",
+    "state": "NOT_RUN",
+    "width_hz": 225
+  },
+  {
+    "arm_id": "grid_sigma20__w225__paths_margin0.25",
+    "association": "paths_margin0.25",
+    "failure": null,
+    "metrics": null,
+    "representation": "grid_sigma20",
+    "state": "NOT_RUN",
+    "width_hz": 225
+  },
+  {
+    "arm_id": "grid_sigma20__w225__paths_margin1",
+    "association": "paths_margin1",
+    "failure": null,
+    "metrics": null,
+    "representation": "grid_sigma20",
+    "state": "NOT_RUN",
+    "width_hz": 225
+  },
+  {
+    "arm_id": "grid_sigma20__w250__connected",
+    "association": "connected",
+    "failure": null,
+    "metrics": null,
+    "representation": "grid_sigma20",
+    "state": "NOT_RUN",
+    "width_hz": 250
+  },
+  {
+    "arm_id": "grid_sigma20__w250__paths_margin0",
+    "association": "paths_margin0",
+    "failure": null,
+    "metrics": null,
+    "representation": "grid_sigma20",
+    "state": "NOT_RUN",
+    "width_hz": 250
+  },
+  {
+    "arm_id": "grid_sigma20__w250__paths_margin0.25",
+    "association": "paths_margin0.25",
+    "failure": null,
+    "metrics": null,
+    "representation": "grid_sigma20",
+    "state": "NOT_RUN",
+    "width_hz": 250
+  },
+  {
+    "arm_id": "grid_sigma20__w250__paths_margin1",
+    "association": "paths_margin1",
+    "failure": null,
+    "metrics": null,
+    "representation": "grid_sigma20",
+    "state": "NOT_RUN",
+    "width_hz": 250
+  },
+  {
+    "arm_id": "grid_sigma20__w275__connected",
+    "association": "connected",
+    "failure": null,
+    "metrics": null,
+    "representation": "grid_sigma20",
+    "state": "NOT_RUN",
+    "width_hz": 275
+  },
+  {
+    "arm_id": "grid_sigma20__w275__paths_margin0",
+    "association": "paths_margin0",
+    "failure": null,
+    "metrics": null,
+    "representation": "grid_sigma20",
+    "state": "NOT_RUN",
+    "width_hz": 275
+  },
+  {
+    "arm_id": "grid_sigma20__w275__paths_margin0.25",
+    "association": "paths_margin0.25",
+    "failure": null,
+    "metrics": null,
+    "representation": "grid_sigma20",
+    "state": "NOT_RUN",
+    "width_hz": 275
+  },
+  {
+    "arm_id": "grid_sigma20__w275__paths_margin1",
+    "association": "paths_margin1",
+    "failure": null,
+    "metrics": null,
+    "representation": "grid_sigma20",
+    "state": "NOT_RUN",
+    "width_hz": 275
+  },
+  {
+    "arm_id": "grid_sigma20__w300__connected",
+    "association": "connected",
+    "failure": null,
+    "metrics": null,
+    "representation": "grid_sigma20",
+    "state": "NOT_RUN",
+    "width_hz": 300
+  },
+  {
+    "arm_id": "grid_sigma20__w300__paths_margin0",
+    "association": "paths_margin0",
+    "failure": null,
+    "metrics": null,
+    "representation": "grid_sigma20",
+    "state": "NOT_RUN",
+    "width_hz": 300
+  },
+  {
+    "arm_id": "grid_sigma20__w300__paths_margin0.25",
+    "association": "paths_margin0.25",
+    "failure": null,
+    "metrics": null,
+    "representation": "grid_sigma20",
+    "state": "NOT_RUN",
+    "width_hz": 300
+  },
+  {
+    "arm_id": "grid_sigma20__w300__paths_margin1",
+    "association": "paths_margin1",
+    "failure": null,
+    "metrics": null,
+    "representation": "grid_sigma20",
+    "state": "NOT_RUN",
+    "width_hz": 300
+  },
+  {
+    "arm_id": "grid_sigma20__w325__connected",
+    "association": "connected",
+    "failure": null,
+    "metrics": null,
+    "representation": "grid_sigma20",
+    "state": "NOT_RUN",
+    "width_hz": 325
+  },
+  {
+    "arm_id": "grid_sigma20__w325__paths_margin0",
+    "association": "paths_margin0",
+    "failure": null,
+    "metrics": null,
+    "representation": "grid_sigma20",
+    "state": "NOT_RUN",
+    "width_hz": 325
+  },
+  {
+    "arm_id": "grid_sigma20__w325__paths_margin0.25",
+    "association": "paths_margin0.25",
+    "failure": null,
+    "metrics": null,
+    "representation": "grid_sigma20",
+    "state": "NOT_RUN",
+    "width_hz": 325
+  },
+  {
+    "arm_id": "grid_sigma20__w325__paths_margin1",
+    "association": "paths_margin1",
+    "failure": null,
+    "metrics": null,
+    "representation": "grid_sigma20",
+    "state": "NOT_RUN",
+    "width_hz": 325
+  },
+  {
+    "arm_id": "grid_sigma20__w350__connected",
+    "association": "connected",
+    "failure": null,
+    "metrics": null,
+    "representation": "grid_sigma20",
+    "state": "NOT_RUN",
+    "width_hz": 350
+  },
+  {
+    "arm_id": "grid_sigma20__w350__paths_margin0",
+    "association": "paths_margin0",
+    "failure": null,
+    "metrics": null,
+    "representation": "grid_sigma20",
+    "state": "NOT_RUN",
+    "width_hz": 350
+  },
+  {
+    "arm_id": "grid_sigma20__w350__paths_margin0.25",
+    "association": "paths_margin0.25",
+    "failure": null,
+    "metrics": null,
+    "representation": "grid_sigma20",
+    "state": "NOT_RUN",
+    "width_hz": 350
+  },
+  {
+    "arm_id": "grid_sigma20__w350__paths_margin1",
+    "association": "paths_margin1",
+    "failure": null,
+    "metrics": null,
+    "representation": "grid_sigma20",
+    "state": "NOT_RUN",
+    "width_hz": 350
+  },
+  {
+    "arm_id": "grid_sigma20__wunlimited__connected",
+    "association": "connected",
+    "failure": null,
+    "metrics": null,
+    "representation": "grid_sigma20",
+    "state": "NOT_RUN",
+    "width_hz": null
+  },
+  {
+    "arm_id": "grid_sigma20__wunlimited__paths_margin0",
+    "association": "paths_margin0",
+    "failure": null,
+    "metrics": null,
+    "representation": "grid_sigma20",
+    "state": "NOT_RUN",
+    "width_hz": null
+  },
+  {
+    "arm_id": "grid_sigma20__wunlimited__paths_margin0.25",
+    "association": "paths_margin0.25",
+    "failure": null,
+    "metrics": null,
+    "representation": "grid_sigma20",
+    "state": "NOT_RUN",
+    "width_hz": null
+  },
+  {
+    "arm_id": "grid_sigma20__wunlimited__paths_margin1",
+    "association": "paths_margin1",
+    "failure": null,
+    "metrics": null,
+    "representation": "grid_sigma20",
+    "state": "NOT_RUN",
+    "width_hz": null
+  }
+]
