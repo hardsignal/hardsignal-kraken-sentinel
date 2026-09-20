@@ -1,0 +1,114 @@
+{
+  "certificate": {
+    "policy": "Exact monotone binary64 addition preimages; frozen chronological fold and all prefix predicates",
+    "rounding_or_quantization": false,
+    "version": "KRAKEN_DRAFT2_IEEE_MONOTONE_PIVOT_COUNT_V1"
+  },
+  "count_state": "EXACT",
+  "details": {
+    "certificate": {
+      "policy": "Exact monotone binary64 addition preimages; frozen chronological fold and all prefix predicates",
+      "rounding_or_quantization": false,
+      "version": "KRAKEN_DRAFT2_IEEE_MONOTONE_PIVOT_COUNT_V1"
+    },
+    "composition": {
+      "boundary_hex": "0x1.8e3eb6f24b60dp+3",
+      "group_histogram_entries": [
+        9,
+        9987,
+        5
+      ],
+      "join_live_containers": 20022,
+      "join_pairs": 89883,
+      "packed_polynomial_bytes": 0,
+      "pivot": 1,
+      "prefix_states": 9,
+      "prefix_steps": [
+        {
+          "factor": 0,
+          "input_states": 1,
+          "output_states": 9,
+          "transitions": 9
+        }
+      ],
+      "suffix_steps": [
+        {
+          "cost_threshold_pairs": 5,
+          "factor": 2,
+          "input_thresholds": 1,
+          "output_thresholds": 5
+        }
+      ],
+      "suffix_thresholds": 5
+    },
+    "counter_version": "KRAKEN_DRAFT2_DYADIC_MATCHING_BOUND_COUNT_V1",
+    "factor_state_trace": [
+      {
+        "factor": 0,
+        "peak_live_states": 128
+      },
+      {
+        "factor": 1,
+        "peak_live_states": 44240
+      },
+      {
+        "factor": 2,
+        "peak_live_states": 10118
+      }
+    ],
+    "factor_statistics": [
+      {
+        "assignments_decimal": "9",
+        "elapsed_seconds": 0.0011406099947635084,
+        "factor": 0,
+        "held_previous_histogram_states": 0,
+        "histogram_entries": 9,
+        "transitions": 42
+      },
+      {
+        "assignments_decimal": "26641",
+        "elapsed_seconds": 12.52832697800477,
+        "factor": 1,
+        "held_previous_histogram_states": 9,
+        "histogram_entries": 9987,
+        "transitions": 306988
+      },
+      {
+        "assignments_decimal": "5",
+        "elapsed_seconds": 0.0005536430107895285,
+        "factor": 2,
+        "held_previous_histogram_states": 9996,
+        "histogram_entries": 5,
+        "transitions": 20
+      }
+    ],
+    "matching_bound_adapter": {
+      "edge_integer_entries": 112,
+      "policy": "Exact common dyadic denominator; unchanged residual traversal/ties; Fraction result",
+      "preprocessing_seconds": 7.26149883121252e-05,
+      "version": "KRAKEN_DRAFT2_DYADIC_MATCHING_BOUND_COUNT_V1"
+    },
+    "method": "KRAKEN_DRAFT2_IEEE_MONOTONE_PIVOT_COUNT_V1",
+    "ordering": "forward",
+    "packed_polynomial_bytes": 0,
+    "stats": {
+      "checkpoints": [],
+      "elapsed_seconds": 12.641474447009386,
+      "peak_states": 44240,
+      "transitions": 397325
+    }
+  },
+  "exact_count_decimal": "217075",
+  "family_path": "results/episode-component-tracking-v2-draft2-six-capture-regression/C6-E02/margin-1/family.json",
+  "family_sha256": "b5c5503b910cc8940a6a08310f52117b56bd41add94d0f47980208918d737aa6",
+  "load_seconds": 0.8104580529907253,
+  "method": "KRAKEN_DRAFT2_IEEE_MONOTONE_PIVOT_COUNT_V1",
+  "ordering": "forward",
+  "statistics": {
+    "checkpoints": [],
+    "elapsed_seconds": 12.641578117007157,
+    "peak_states": 44240,
+    "process_peak_rss_kib": 68076,
+    "transitions": 397325
+  }
+}

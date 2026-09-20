@@ -1,0 +1,150 @@
+{
+  "backend": "IEEE local histogram and monotone pivot",
+  "backend_reason": "A path has more than two candidates",
+  "connected_groups": 135,
+  "factor_order": "unchanged stored order; independent histogram construction forward",
+  "factor_structure": [
+    {
+      "candidates": 7,
+      "edges": 6,
+      "factor": 0,
+      "optimum_cost_hex": "0x1.c5ef587f86498p-1",
+      "optimum_links": 2,
+      "path_lengths": {
+        "1": 7,
+        "2": 6,
+        "3": 9
+      },
+      "per_fragment": {
+        "2": 3,
+        "4": 1,
+        "6": 3
+      }
+    },
+    {
+      "candidates": 35,
+      "edges": 101,
+      "factor": 1,
+      "optimum_cost_hex": "0x1.49ce9726fc2b0p+3",
+      "optimum_links": 20,
+      "path_lengths": {
+        "1": 35,
+        "2": 101,
+        "3": 256
+      },
+      "per_fragment": {
+        "2": 15,
+        "4": 10,
+        "6": 10
+      }
+    },
+    {
+      "candidates": 6,
+      "edges": 5,
+      "factor": 2,
+      "optimum_cost_hex": "0x1.0225486ad5c02p-2",
+      "optimum_links": 1,
+      "path_lengths": {
+        "1": 6,
+        "2": 5
+      },
+      "per_fragment": {
+        "2": 5,
+        "4": 1
+      }
+    }
+  ],
+  "factors": [
+    {
+      "assignments_decimal": "9",
+      "factor": 0,
+      "histogram_entries": 9,
+      "matching_calls": 88,
+      "matching_seconds": 0.0007995798659976572,
+      "peak_reported_states": 16,
+      "seconds": 0.001457324979128316,
+      "solver_stats": {
+        "augmentations": 23,
+        "matching_calls": 51,
+        "matching_certificates": 0,
+        "optimum_cache_hits": 24,
+        "search_nodes": 108
+      },
+      "state": "COMPLETE",
+      "transitions": 42
+    },
+    {
+      "factor": 1,
+      "matching_calls": 28406,
+      "matching_seconds": 59.60870288967271,
+      "peak_reported_states": 260,
+      "seconds": 59.99844628100982,
+      "solver_stats": {
+        "augmentations": 125667,
+        "matching_calls": 10785,
+        "matching_certificates": 0,
+        "optimum_cache_hits": 418,
+        "search_nodes": 28540
+      },
+      "state": "RUNNING",
+      "transitions": 771
+    }
+  ],
+  "family_sha256": "b5c5503b910cc8940a6a08310f52117b56bd41add94d0f47980208918d737aa6",
+  "fixed_singletons": 132,
+  "format": "KRAKEN_REPL_E02_MARGIN1_DIAGNOSTIC_V1",
+  "fragment_count": 6,
+  "limits": {
+    "max_polynomial_bytes": 33554432,
+    "max_seconds": 60,
+    "max_states": 250000,
+    "max_transitions": 5000000
+  },
+  "matching": {
+    "calls": 28494,
+    "seconds": 59.60950246953871
+  },
+  "memory_kib": {
+    "VmHWM": 50536,
+    "VmRSS": 50536
+  },
+  "model_sha256": "563cd0d5ba71e7bd7594e65c29b1a670492df1d35f84233e4a7ab8b21c0266e0",
+  "outcome": {
+    "last_budget_location": {
+      "phase": "IEEE prefix DAG",
+      "position": 3
+    },
+    "reason": "Staged exact-query wall-clock limit exceeded",
+    "state": "COMPUTATION_UNRESOLVED",
+    "traceback": "Traceback (most recent call last):\n  File \"/home/maciejduranczyk/hardsignal-kraken-sentinel/analysis/diagnose_episode_component_tracking_v2_draft2_repl_e02_margin1.py\", line 49, in run\n    with staged.deadline(60):result=committed.count(family,budget)\n                                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/maciejduranczyk/hardsignal-kraken-sentinel/analysis/episode_component_tracking_v2_draft2_e02_margin1_count.py\", line 173, in count\n    hist=old.ieee_histogram(factors[i],HeldBudget(budget,held))\n         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/maciejduranczyk/hardsignal-kraken-sentinel/analysis/diagnose_episode_component_tracking_v2_draft2_repl_e02_margin1.py\", line 43, in traced_hist\n    h=hist(f,b);row.update(state='COMPLETE',histogram_entries=len(h),assignments_decimal=str(sum(h.values())));return h\n      ^^^^^^^^^\n  File \"/home/maciejduranczyk/hardsignal-kraken-sentinel/analysis/episode_component_tracking_v2_draft2_exact_count.py\", line 91, in ieee_histogram\n    tail=s.optimum(mask ^ p.mask)\n         ^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/maciejduranczyk/hardsignal-kraken-sentinel/analysis/episode_component_tracking_v2_draft2_exact_solver.py\", line 288, in optimum\n    count,lower,cover = self._matching(mask)\n                        ^^^^^^^^^^^^^^^^^^^^\n  File \"/home/maciejduranczyk/hardsignal-kraken-sentinel/analysis/diagnose_episode_component_tracking_v2_draft2_repl_e02_margin1.py\", line 31, in traced_matching\n    try:return matching(*args,**kwargs)\n               ^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/maciejduranczyk/hardsignal-kraken-sentinel/analysis/episode_component_tracking_v2_draft2_exact_solver.py\", line 170, in _matching\n    value = distances[u]+cost\n            ~~~~~~~~~~~~^~~~~\n  File \"/usr/lib/python3.12/fractions.py\", line 615, in forward\n    return monomorphic_operator(a, b)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/lib/python3.12/fractions.py\", line 716, in _add\n    return Fraction._from_coprime_ints(na * db + da * nb, da * db)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/lib/python3.12/fractions.py\", line 317, in _from_coprime_ints\n    @classmethod\n    \n  File \"/home/maciejduranczyk/hardsignal-kraken-sentinel/analysis/episode_component_tracking_v2_draft2_staged.py\", line 122, in expired\n    raise exact.Unresolved('Staged exact-query wall-clock limit exceeded')\nepisode_component_tracking_v2_draft2_exact_solver.Unresolved: Staged exact-query wall-clock limit exceeded\n",
+    "value_decimal": null
+  },
+  "selected": {
+    "capture": "BETWEEN-DEVICE-REPL-V1-20260919-024341",
+    "eligible_per_fragment": [
+      0,
+      69,
+      0,
+      20,
+      2,
+      89
+    ],
+    "episode": 2,
+    "fragments_sha256": "ded7c08fcbeb0f4419842a27cd2cb287e034f31aea2a0e35d0fcda61ca1e876d",
+    "label": "C6-E02",
+    "original_fragment_count": 6,
+    "structural_reason": "Every saved episode in the fixed six-capture set; no outcome selection."
+  },
+  "source_hashes": {
+    "analysis/diagnose_episode_component_tracking_v2_draft2_repl_e02_margin1.py": "b24066a1ed2e5b51f3e5402bbf67080c8536eafed847e40fa61fb6b303cc4d23",
+    "analysis/episode_component_tracking_v2_draft2_e02_margin1_count.py": "ba1ad497cd7dc0412a42c52bf62005002babd871e5d55c152a1be7b10c6c7a00",
+    "analysis/episode_component_tracking_v2_draft2_exact_count.py": "4c543655c738fcc9d2b771f2cb3ae26106304e2ff2f86a201a47d77cd5bd18a3",
+    "analysis/episode_component_tracking_v2_draft2_exact_solver.py": "f5c4a907af24958739bf7a2d90fd27d2e602c295a74c951bb52525ccd10023a1"
+  },
+  "statistics": {
+    "checkpoints": [],
+    "elapsed_seconds": 60.00173376701423,
+    "peak_states": 260,
+    "transitions": 813
+  }
+}
