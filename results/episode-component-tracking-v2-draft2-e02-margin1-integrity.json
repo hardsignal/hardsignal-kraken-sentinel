@@ -1,0 +1,37 @@
+{
+  "all_preexisting_tracked_files_byte_identical": true,
+  "committed_regression_readiness": "NOT_READY",
+  "format": "KRAKEN_DRAFT2_E02_MARGIN1_INTEGRITY_V1",
+  "git_commit": "4ce37ec977c69b5816949dc9e5ebca449fb07cd0",
+  "git_diff_check": "PASS",
+  "git_status": [
+    "?? analysis/benchmark_episode_component_tracking_v2_draft2_e02_margin1_count.py",
+    "?? analysis/diagnose_episode_component_tracking_v2_draft2_e02_margin1.py",
+    "?? analysis/episode_component_tracking_v2_draft2_e02_margin1_count.py",
+    "?? docs/episode-component-tracking-v2-draft2-e02-margin1-count.md",
+    "?? results/episode-component-tracking-v2-draft2-e02-margin1-investigation/",
+    "?? tests/test_episode_component_tracking_v2_draft2_e02_margin1_count.py"
+  ],
+  "new_file_hashes": {
+    "analysis/benchmark_episode_component_tracking_v2_draft2_e02_margin1_count.py": "6ad6007e7ebb43bcfea7de0803a13a95e78ada90f94a0b1c9b30f222948e6e55",
+    "analysis/diagnose_episode_component_tracking_v2_draft2_e02_margin1.py": "7720cf9e522f5fd9ef66df5a378a2597f71e729584c8c5872a2dc0684fe8e5a9",
+    "analysis/episode_component_tracking_v2_draft2_e02_margin1_count.py": "ba1ad497cd7dc0412a42c52bf62005002babd871e5d55c152a1be7b10c6c7a00",
+    "docs/episode-component-tracking-v2-draft2-e02-margin1-count.md": "f725c8baf2dab101ebce41c06ad1a34420b4eaf1dd5b85197e828d33980459f5",
+    "results/episode-component-tracking-v2-draft2-e02-margin1-investigation/benchmark.json": "9d1e65a44b5194bb7ae143115061cbc31fa001a51dd6a38a430598c90f37cb33",
+    "results/episode-component-tracking-v2-draft2-e02-margin1-investigation/control-counts.json": "1d95d2f0aaf105b7a4779650a434a38eb68c392d7b487e708f6895bc49e38174",
+    "results/episode-component-tracking-v2-draft2-e02-margin1-investigation/diagnostic.json": "2b49c0f91cb9edde7c9cc101cb3d5ab5abe090c47b703bb057c5360e138b9137",
+    "results/episode-component-tracking-v2-draft2-e02-margin1-investigation/files.sha256": "bdd6957733b89a778de2c5d401665b7ddd9bb6a0ff6feddb10f0e901c36bbe1c",
+    "results/episode-component-tracking-v2-draft2-e02-margin1-investigation/target-forward.json": "6d5d6eb083ad22a91f87146e10cf03487c7e9090716c4208d11ff1ec84ea4033",
+    "results/episode-component-tracking-v2-draft2-e02-margin1-investigation/target-margin-1.cardinality.json": "739038e2026606a71dced45dab50381e7c9dbecae89b9ba1d7a7df6db809416b",
+    "results/episode-component-tracking-v2-draft2-e02-margin1-investigation/target-reverse.json": "3ccf2da07c7d339cc3b01b2e57ee88346b78dbc56623f04c4b7958e313246d5e",
+    "results/episode-component-tracking-v2-draft2-e02-margin1-investigation/target-staged-result.json": "eb64852253f7fbcecb48989d1789509728c63e6161ad5028534d56fcc3584c5c",
+    "results/episode-component-tracking-v2-draft2-e02-margin1-investigation/tests.txt": "c47d117b5e88725483145e8f6be0eac6629ee138df1b7e9ea9c85127d90cbc5f",
+    "tests/test_episode_component_tracking_v2_draft2_e02_margin1_count.py": "4761e30dfdd9dbd9449991982edb739eb0fde1fa0c0b51cb88c518aa07b81ee0"
+  },
+  "preexisting_tracked_count": 504,
+  "result_manifest_verified": true,
+  "scientific_changes_only_cardinality": true,
+  "sidecar_validation": "PASS",
+  "source_hashes_verified": true,
+  "untracked_whitespace_check": "PASS"
+}
