@@ -1,0 +1,119 @@
+{
+  "association": null,
+  "cardinality": {
+    "reason": null,
+    "state": "EXACT",
+    "value_decimal": "17067800502243"
+  },
+  "computational_limits": {
+    "max_calls": 5000,
+    "max_seconds": 120
+  },
+  "family_complete_as_predicate": true,
+  "format": "KRAKEN_DRAFT2_STAGED_ASSOCIATION_V1",
+  "metrics": null,
+  "provenance": {
+    "embedded_model_sha256": "2a97b63ba5d207ce47517b9e6f70cfc834f1004faae88cea7d184e9398d02321",
+    "git": {
+      "commit": "5ffd2739ab105f786d08c6e1a7433afbd68e0985",
+      "dirty": true,
+      "policy": "Frozen batch-start context; output creation does not change result identity",
+      "status_at_batch_start": [
+        "?? analysis/episode_component_tracking_v2_draft2_staged.py",
+        "?? analysis/validate_episode_component_tracking_v2_draft2_staged_e08.py",
+        "?? tests/test_episode_component_tracking_v2_draft2_staged.py"
+      ]
+    },
+    "git_context_sha256": "20df5e0a316e800041ed47365cba7047bd66a164ac7ce6c126bde05c36c86cde",
+    "request": {
+      "cardinality_sidecar": {
+        "path": "results/episode-component-tracking-v2-draft2-margin1-investigation/episode-0.25-column-frequency-bound1.cardinality.json",
+        "sha256": "d0e57100e9c78816fb1ec468111222d97d8c59e393b17743d716db4eadabe5fa"
+      },
+      "experiment_specification": {
+        "path": "docs/episode-component-tracking-v2-draft2-experiment.md",
+        "sha256": "3923a1f009a0c798ed97bbfdf8158b36c2673a88b0d687a67e3b921bd352e026"
+      },
+      "family": {
+        "path": "results/episode-component-tracking-v2-draft2-exact-solver-benchmark/episode-margin-0.25.json",
+        "sha256": "d18abcd3199ddfff2bd06301991489973e81cf9552ab539bff42a38c1d440dd5"
+      },
+      "fragments_sha256": "e5d32c221e708c85aeae5cffb838cba7940aabe5d060316e527a8fa146389068",
+      "representation": "COMPACT_EXACT_FAMILY_V1",
+      "saved_input": {
+        "path": "results/episode-component-tracking-v2-draft2-experiment/native__w200__connected.json",
+        "sha256": "097c48395cb5cabb639a74d697d03a431b941f9f64cfebafa2e23a2b3d8053ab"
+      },
+      "sources": {
+        "analysis/episode_component_tracking_v2_draft1.py": {
+          "sha256": "a24a5617ca9f4129c6970fd0a9743f8b78610c58567e8a557f21dee2a055f66c",
+          "version": "FROZEN_DRAFT1"
+        },
+        "analysis/episode_component_tracking_v2_draft2_cardinality_sidecar.py": {
+          "sha256": "3b05374ed34667b82f1f420fee9ccab9a096efa2c2426fd73fe1b01a371f5142",
+          "version": "KRAKEN_DRAFT2_RETAINED_CARDINALITY_V1"
+        },
+        "analysis/episode_component_tracking_v2_draft2_column_count.py": {
+          "sha256": "03c0f8493ab571caed7bb48eca2c2d6327f021c7a94e9a82ec2add75d5327fed",
+          "version": "COLUMN_COUNTER_V1"
+        },
+        "analysis/episode_component_tracking_v2_draft2_exact_count.py": {
+          "sha256": "4c543655c738fcc9d2b771f2cb3ae26106304e2ff2f86a201a47d77cd5bd18a3",
+          "version": "EXACT_COUNTER_V1"
+        },
+        "analysis/episode_component_tracking_v2_draft2_exact_solver.py": {
+          "sha256": "f5c4a907af24958739bf7a2d90fd27d2e602c295a74c951bb52525ccd10023a1",
+          "version": "EXACT_SOLVER_V1"
+        },
+        "analysis/episode_component_tracking_v2_draft2_experiment.py": {
+          "sha256": "73dc27741f3ad5fd710f94a8989a930bb731cd196e32ff2d000ee48e00b9d39a",
+          "version": "FROZEN_DRAFT2"
+        },
+        "analysis/episode_component_tracking_v2_draft2_staged.py": {
+          "sha256": "5fc3a8638c7619b7f3597195681f3b93f08ff46d566a73a8f0437263e5ed172d",
+          "version": "KRAKEN_DRAFT2_STAGED_ASSOCIATION_V1"
+        }
+      }
+    },
+    "request_sha256": "04467bdae95e878c03f32803ad163995a937bb915e92464029673deca7ecf487"
+  },
+  "query_calls": 150,
+  "query_operations": {
+    "ambiguity": {
+      "reason": null,
+      "state": "NOT_EVALUATED"
+    },
+    "invariance": {
+      "reason": null,
+      "state": "NOT_EVALUATED"
+    },
+    "membership": {
+      "reason": "Exact-cover search limit reached; result is unresolved",
+      "state": "COMPUTATION_UNRESOLVED"
+    }
+  },
+  "representation": "COMPACT_EXACT_FAMILY_V1",
+  "states": {
+    "cardinality_counting": {
+      "mode": "CONSUMED_VALIDATED_SIDECAR_NO_RECOUNT",
+      "reason": null,
+      "state": "EXACT"
+    },
+    "exact_queries": {
+      "reason": "Exact-cover search limit reached; result is unresolved",
+      "state": "COMPUTATION_UNRESOLVED"
+    },
+    "family_construction": {
+      "reason": null,
+      "state": "COMPLETE"
+    },
+    "metric_projection": {
+      "reason": null,
+      "state": "BLOCKED_BY_QUERY_FAILURE"
+    },
+    "provenance_validation": {
+      "reason": null,
+      "state": "VERIFIED"
+    }
+  }
+}

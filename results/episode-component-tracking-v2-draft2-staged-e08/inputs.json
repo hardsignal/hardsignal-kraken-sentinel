@@ -1,0 +1,228 @@
+{
+  "capture": "PIPELINE-TPMS-008-20260918-003900",
+  "episode": 8,
+  "format": "KRAKEN_DRAFT2_STAGED_E08_INPUTS_V1",
+  "fragments_sha256": "e5d32c221e708c85aeae5cffb838cba7940aabe5d060316e527a8fa146389068",
+  "git_context": {
+    "commit": "5ffd2739ab105f786d08c6e1a7433afbd68e0985",
+    "dirty": true,
+    "policy": "Frozen batch-start context; output creation does not change result identity",
+    "status_at_batch_start": [
+      "?? analysis/episode_component_tracking_v2_draft2_staged.py",
+      "?? analysis/validate_episode_component_tracking_v2_draft2_staged_e08.py",
+      "?? tests/test_episode_component_tracking_v2_draft2_staged.py"
+    ]
+  },
+  "original_fragment_count": 2,
+  "query_limits": {
+    "max_calls": 5000,
+    "max_seconds": 120
+  },
+  "requests": {
+    "connected": {
+      "cardinality_sidecar": null,
+      "experiment_specification": {
+        "path": "docs/episode-component-tracking-v2-draft2-experiment.md",
+        "sha256": "3923a1f009a0c798ed97bbfdf8158b36c2673a88b0d687a67e3b921bd352e026"
+      },
+      "family": null,
+      "fragments_sha256": "e5d32c221e708c85aeae5cffb838cba7940aabe5d060316e527a8fa146389068",
+      "representation": "CONNECTED_GROUPS_HISTORICAL_V1",
+      "saved_input": {
+        "path": "results/episode-component-tracking-v2-draft2-experiment/native__w200__connected.json",
+        "sha256": "097c48395cb5cabb639a74d697d03a431b941f9f64cfebafa2e23a2b3d8053ab"
+      },
+      "sources": {
+        "analysis/episode_component_tracking_v2_draft1.py": {
+          "sha256": "a24a5617ca9f4129c6970fd0a9743f8b78610c58567e8a557f21dee2a055f66c",
+          "version": "FROZEN_DRAFT1"
+        },
+        "analysis/episode_component_tracking_v2_draft2_cardinality_sidecar.py": {
+          "sha256": "3b05374ed34667b82f1f420fee9ccab9a096efa2c2426fd73fe1b01a371f5142",
+          "version": "KRAKEN_DRAFT2_RETAINED_CARDINALITY_V1"
+        },
+        "analysis/episode_component_tracking_v2_draft2_column_count.py": {
+          "sha256": "03c0f8493ab571caed7bb48eca2c2d6327f021c7a94e9a82ec2add75d5327fed",
+          "version": "COLUMN_COUNTER_V1"
+        },
+        "analysis/episode_component_tracking_v2_draft2_exact_count.py": {
+          "sha256": "4c543655c738fcc9d2b771f2cb3ae26106304e2ff2f86a201a47d77cd5bd18a3",
+          "version": "EXACT_COUNTER_V1"
+        },
+        "analysis/episode_component_tracking_v2_draft2_exact_solver.py": {
+          "sha256": "f5c4a907af24958739bf7a2d90fd27d2e602c295a74c951bb52525ccd10023a1",
+          "version": "EXACT_SOLVER_V1"
+        },
+        "analysis/episode_component_tracking_v2_draft2_experiment.py": {
+          "sha256": "73dc27741f3ad5fd710f94a8989a930bb731cd196e32ff2d000ee48e00b9d39a",
+          "version": "FROZEN_DRAFT2"
+        },
+        "analysis/episode_component_tracking_v2_draft2_staged.py": {
+          "sha256": "5fc3a8638c7619b7f3597195681f3b93f08ff46d566a73a8f0437263e5ed172d",
+          "version": "KRAKEN_DRAFT2_STAGED_ASSOCIATION_V1"
+        }
+      }
+    },
+    "margin-0": {
+      "cardinality_sidecar": {
+        "path": "results/episode-component-tracking-v2-draft2-margin1-investigation/episode-0-column-frequency-bound1.cardinality.json",
+        "sha256": "31b3796f177866e7139aed00cef2fc88db0b48687174be65b2f444bf99ce66b0"
+      },
+      "experiment_specification": {
+        "path": "docs/episode-component-tracking-v2-draft2-experiment.md",
+        "sha256": "3923a1f009a0c798ed97bbfdf8158b36c2673a88b0d687a67e3b921bd352e026"
+      },
+      "family": {
+        "path": "results/episode-component-tracking-v2-draft2-exact-solver-benchmark/episode-margin-0.json",
+        "sha256": "0929917b8f648dc6afe088597bb78c2598345ecb91df40f02b5c196cdcffb2f2"
+      },
+      "fragments_sha256": "e5d32c221e708c85aeae5cffb838cba7940aabe5d060316e527a8fa146389068",
+      "representation": "COMPACT_EXACT_FAMILY_V1",
+      "saved_input": {
+        "path": "results/episode-component-tracking-v2-draft2-experiment/native__w200__connected.json",
+        "sha256": "097c48395cb5cabb639a74d697d03a431b941f9f64cfebafa2e23a2b3d8053ab"
+      },
+      "sources": {
+        "analysis/episode_component_tracking_v2_draft1.py": {
+          "sha256": "a24a5617ca9f4129c6970fd0a9743f8b78610c58567e8a557f21dee2a055f66c",
+          "version": "FROZEN_DRAFT1"
+        },
+        "analysis/episode_component_tracking_v2_draft2_cardinality_sidecar.py": {
+          "sha256": "3b05374ed34667b82f1f420fee9ccab9a096efa2c2426fd73fe1b01a371f5142",
+          "version": "KRAKEN_DRAFT2_RETAINED_CARDINALITY_V1"
+        },
+        "analysis/episode_component_tracking_v2_draft2_column_count.py": {
+          "sha256": "03c0f8493ab571caed7bb48eca2c2d6327f021c7a94e9a82ec2add75d5327fed",
+          "version": "COLUMN_COUNTER_V1"
+        },
+        "analysis/episode_component_tracking_v2_draft2_exact_count.py": {
+          "sha256": "4c543655c738fcc9d2b771f2cb3ae26106304e2ff2f86a201a47d77cd5bd18a3",
+          "version": "EXACT_COUNTER_V1"
+        },
+        "analysis/episode_component_tracking_v2_draft2_exact_solver.py": {
+          "sha256": "f5c4a907af24958739bf7a2d90fd27d2e602c295a74c951bb52525ccd10023a1",
+          "version": "EXACT_SOLVER_V1"
+        },
+        "analysis/episode_component_tracking_v2_draft2_experiment.py": {
+          "sha256": "73dc27741f3ad5fd710f94a8989a930bb731cd196e32ff2d000ee48e00b9d39a",
+          "version": "FROZEN_DRAFT2"
+        },
+        "analysis/episode_component_tracking_v2_draft2_staged.py": {
+          "sha256": "5fc3a8638c7619b7f3597195681f3b93f08ff46d566a73a8f0437263e5ed172d",
+          "version": "KRAKEN_DRAFT2_STAGED_ASSOCIATION_V1"
+        }
+      }
+    },
+    "margin-0.25": {
+      "cardinality_sidecar": {
+        "path": "results/episode-component-tracking-v2-draft2-margin1-investigation/episode-0.25-column-frequency-bound1.cardinality.json",
+        "sha256": "d0e57100e9c78816fb1ec468111222d97d8c59e393b17743d716db4eadabe5fa"
+      },
+      "experiment_specification": {
+        "path": "docs/episode-component-tracking-v2-draft2-experiment.md",
+        "sha256": "3923a1f009a0c798ed97bbfdf8158b36c2673a88b0d687a67e3b921bd352e026"
+      },
+      "family": {
+        "path": "results/episode-component-tracking-v2-draft2-exact-solver-benchmark/episode-margin-0.25.json",
+        "sha256": "d18abcd3199ddfff2bd06301991489973e81cf9552ab539bff42a38c1d440dd5"
+      },
+      "fragments_sha256": "e5d32c221e708c85aeae5cffb838cba7940aabe5d060316e527a8fa146389068",
+      "representation": "COMPACT_EXACT_FAMILY_V1",
+      "saved_input": {
+        "path": "results/episode-component-tracking-v2-draft2-experiment/native__w200__connected.json",
+        "sha256": "097c48395cb5cabb639a74d697d03a431b941f9f64cfebafa2e23a2b3d8053ab"
+      },
+      "sources": {
+        "analysis/episode_component_tracking_v2_draft1.py": {
+          "sha256": "a24a5617ca9f4129c6970fd0a9743f8b78610c58567e8a557f21dee2a055f66c",
+          "version": "FROZEN_DRAFT1"
+        },
+        "analysis/episode_component_tracking_v2_draft2_cardinality_sidecar.py": {
+          "sha256": "3b05374ed34667b82f1f420fee9ccab9a096efa2c2426fd73fe1b01a371f5142",
+          "version": "KRAKEN_DRAFT2_RETAINED_CARDINALITY_V1"
+        },
+        "analysis/episode_component_tracking_v2_draft2_column_count.py": {
+          "sha256": "03c0f8493ab571caed7bb48eca2c2d6327f021c7a94e9a82ec2add75d5327fed",
+          "version": "COLUMN_COUNTER_V1"
+        },
+        "analysis/episode_component_tracking_v2_draft2_exact_count.py": {
+          "sha256": "4c543655c738fcc9d2b771f2cb3ae26106304e2ff2f86a201a47d77cd5bd18a3",
+          "version": "EXACT_COUNTER_V1"
+        },
+        "analysis/episode_component_tracking_v2_draft2_exact_solver.py": {
+          "sha256": "f5c4a907af24958739bf7a2d90fd27d2e602c295a74c951bb52525ccd10023a1",
+          "version": "EXACT_SOLVER_V1"
+        },
+        "analysis/episode_component_tracking_v2_draft2_experiment.py": {
+          "sha256": "73dc27741f3ad5fd710f94a8989a930bb731cd196e32ff2d000ee48e00b9d39a",
+          "version": "FROZEN_DRAFT2"
+        },
+        "analysis/episode_component_tracking_v2_draft2_staged.py": {
+          "sha256": "5fc3a8638c7619b7f3597195681f3b93f08ff46d566a73a8f0437263e5ed172d",
+          "version": "KRAKEN_DRAFT2_STAGED_ASSOCIATION_V1"
+        }
+      }
+    },
+    "margin-1": {
+      "cardinality_sidecar": {
+        "path": "results/episode-component-tracking-v2-draft2-margin1-investigation/episode-1-column-frequency-bound1.cardinality.json",
+        "sha256": "60fcb1530323cc6045234032456a1b8fba7fdf223c09dc5231873d4917996c8b"
+      },
+      "experiment_specification": {
+        "path": "docs/episode-component-tracking-v2-draft2-experiment.md",
+        "sha256": "3923a1f009a0c798ed97bbfdf8158b36c2673a88b0d687a67e3b921bd352e026"
+      },
+      "family": {
+        "path": "results/episode-component-tracking-v2-draft2-exact-solver-benchmark/episode-margin-1.json",
+        "sha256": "b9d84662673e829cf29206d1682354e955f8f93cd660d4e7860787999dd4a015"
+      },
+      "fragments_sha256": "e5d32c221e708c85aeae5cffb838cba7940aabe5d060316e527a8fa146389068",
+      "representation": "COMPACT_EXACT_FAMILY_V1",
+      "saved_input": {
+        "path": "results/episode-component-tracking-v2-draft2-experiment/native__w200__connected.json",
+        "sha256": "097c48395cb5cabb639a74d697d03a431b941f9f64cfebafa2e23a2b3d8053ab"
+      },
+      "sources": {
+        "analysis/episode_component_tracking_v2_draft1.py": {
+          "sha256": "a24a5617ca9f4129c6970fd0a9743f8b78610c58567e8a557f21dee2a055f66c",
+          "version": "FROZEN_DRAFT1"
+        },
+        "analysis/episode_component_tracking_v2_draft2_cardinality_sidecar.py": {
+          "sha256": "3b05374ed34667b82f1f420fee9ccab9a096efa2c2426fd73fe1b01a371f5142",
+          "version": "KRAKEN_DRAFT2_RETAINED_CARDINALITY_V1"
+        },
+        "analysis/episode_component_tracking_v2_draft2_column_count.py": {
+          "sha256": "03c0f8493ab571caed7bb48eca2c2d6327f021c7a94e9a82ec2add75d5327fed",
+          "version": "COLUMN_COUNTER_V1"
+        },
+        "analysis/episode_component_tracking_v2_draft2_exact_count.py": {
+          "sha256": "4c543655c738fcc9d2b771f2cb3ae26106304e2ff2f86a201a47d77cd5bd18a3",
+          "version": "EXACT_COUNTER_V1"
+        },
+        "analysis/episode_component_tracking_v2_draft2_exact_solver.py": {
+          "sha256": "f5c4a907af24958739bf7a2d90fd27d2e602c295a74c951bb52525ccd10023a1",
+          "version": "EXACT_SOLVER_V1"
+        },
+        "analysis/episode_component_tracking_v2_draft2_experiment.py": {
+          "sha256": "73dc27741f3ad5fd710f94a8989a930bb731cd196e32ff2d000ee48e00b9d39a",
+          "version": "FROZEN_DRAFT2"
+        },
+        "analysis/episode_component_tracking_v2_draft2_staged.py": {
+          "sha256": "5fc3a8638c7619b7f3597195681f3b93f08ff46d566a73a8f0437263e5ed172d",
+          "version": "KRAKEN_DRAFT2_STAGED_ASSOCIATION_V1"
+        }
+      }
+    }
+  },
+  "runner_sha256": "28cd13629d29f1e9ba943c0ea3cd70971073f87ab0cafc8e82140d54595790c0",
+  "scientific_parameters_unchanged": true,
+  "subprocess_timeout_seconds": 150,
+  "tests": {
+    "test_episode_component_tracking_v2_draft2_cardinality_sidecar.py": "4e8d4c0358cde820d46865e3eea9e7c3ed4ed96083fa4a2840b44e7238b3906d",
+    "test_episode_component_tracking_v2_draft2_column_count.py": "bdf923c789ce88de880a82a8fedbd457404ca553310f7923d91a2ee0404f0934",
+    "test_episode_component_tracking_v2_draft2_exact_count.py": "3de23c86e259c31ab0d1c94d467216e6ac2ec8d89a2c7ec374a88d31d1eb7985",
+    "test_episode_component_tracking_v2_draft2_exact_solver.py": "a1126708158a0de0989c09377fa0414435cfd6e882ddc3611aa40280d14982a2",
+    "test_episode_component_tracking_v2_draft2_margin1_investigation.py": "212a47e1267b9726c05b4fa6b1bfc3559692f20c7a2b3d2d384d1090577d89a8",
+    "test_episode_component_tracking_v2_draft2_staged.py": "b7723a0259ad46ac5e660ef87927e2a63218e4a53e115f6294711e96b027d124"
+  }
+}
