@@ -1,0 +1,536 @@
+{
+  "all_six_counts_exact": false,
+  "cases": [
+    {
+      "analytical_lower_bound_comparison": "PASS",
+      "count_elapsed_seconds": 0.5058756789949257,
+      "count_state": "EXACT",
+      "exact_count_decimal": "1",
+      "family_load_seconds": 0.03370651198201813,
+      "input_model_sha256": "0796abcb32dae7bf614eef14f2ae847523045ce7341895ab5ef4455b2af9e00a",
+      "lattice_unavailable": "Floating-point envelope overlaps an integer-shell acceptance boundary",
+      "margin": 0.0,
+      "process_peak_rss_kib": 38156,
+      "result": {
+        "certificate": null,
+        "lattice_unavailable": "Floating-point envelope overlaps an integer-shell acceptance boundary",
+        "method": "exact IEEE prefix-state DAG",
+        "stats": {
+          "checkpoints": [],
+          "elapsed_seconds": 0.5058693239989225,
+          "peak_states": 0,
+          "transitions": 0
+        }
+      },
+      "scope": "group"
+    },
+    {
+      "analytical_lower_bound_comparison": "PASS",
+      "count_elapsed_seconds": 0.4444099269749131,
+      "count_state": "EXACT",
+      "exact_count_decimal": "191532581516",
+      "family_load_seconds": 0.032640855002682656,
+      "input_model_sha256": "93b741f90a3fccdec25de382fbfff0ef76fbf2095c56bede27daba11abd2ad5c",
+      "lattice_certificate": {
+        "coefficient_error": [
+          4255917389,
+          119407368663390016765952
+        ],
+        "cutoff": 11931,
+        "lower_boundary_gap": [
+          643,
+          159082572
+        ],
+        "optima": [
+          3280
+        ],
+        "quantum": [
+          2500,
+          119311929
+        ],
+        "rounding_envelope": [
+          2074560178101,
+          29851842165847504191488
+        ],
+        "upper_boundary_gap": [
+          8071,
+          477247716
+        ],
+        "zero_margin_exact_arithmetic": false
+      },
+      "margin": 0.25,
+      "process_peak_rss_kib": 43368,
+      "result": {
+        "certificate": {
+          "coefficient_error": [
+            4255917389,
+            119407368663390016765952
+          ],
+          "cutoff": 11931,
+          "lower_boundary_gap": [
+            643,
+            159082572
+          ],
+          "optima": [
+            3280
+          ],
+          "quantum": [
+            2500,
+            119311929
+          ],
+          "rounding_envelope": [
+            2074560178101,
+            29851842165847504191488
+          ],
+          "upper_boundary_gap": [
+            8071,
+            477247716
+          ],
+          "zero_margin_exact_arithmetic": false
+        },
+        "histogram_entries": 2918,
+        "method": "certified lattice + factored weighted matching frontier DP",
+        "stats": {
+          "checkpoints": [
+            {
+              "columns": 28,
+              "component": "factor0/block0",
+              "count": 3434629,
+              "histogram_entries": 2904,
+              "rows": 8
+            },
+            {
+              "columns": 3,
+              "component": "factor0/block1",
+              "count": 3,
+              "histogram_entries": 3,
+              "rows": 1
+            },
+            {
+              "columns": 22,
+              "component": "factor0/block2",
+              "count": 2169675,
+              "histogram_entries": 2729,
+              "rows": 9
+            }
+          ],
+          "elapsed_seconds": 0.44437558797653764,
+          "peak_states": 63265,
+          "transitions": 1812837
+        }
+      },
+      "scope": "group"
+    },
+    {
+      "analytical_lower_bound_comparison": "EXACT_COUNT_UNAVAILABLE; lower bound is not an estimate",
+      "analytical_lower_bound_decimal": "74680704",
+      "count_elapsed_seconds": 0.08765852198121138,
+      "count_state": "COMPUTATION_UNRESOLVED",
+      "exact_count_decimal": null,
+      "failure": {
+        "elapsed_seconds": 0.08628193198819645,
+        "limit": 250000,
+        "location": {
+          "component": "factor0/block0",
+          "future_columns": 52,
+          "integer_budget": 11931,
+          "next_states": 211171,
+          "phase": "matching frontier",
+          "prior_states": 39964,
+          "row": 5,
+          "rows": 18
+        },
+        "peak_states": 251135,
+        "reason": "frontier/state budget exceeded",
+        "states": 251135,
+        "transitions": 433774
+      },
+      "family_load_seconds": 0.03303471000981517,
+      "input_model_sha256": "2d07cf9b6442fb4a9f17b6623816d4fb7c3750b95462541146629fecf84feb9f",
+      "lattice_certificate": {
+        "coefficient_error": [
+          4255917389,
+          119407368663390016765952
+        ],
+        "cutoff": 47724,
+        "lower_boundary_gap": [
+          643,
+          39770643
+        ],
+        "optima": [
+          3280
+        ],
+        "quantum": [
+          2500,
+          119311929
+        ],
+        "rounding_envelope": [
+          2074560178101,
+          29851842165847504191488
+        ],
+        "upper_boundary_gap": [
+          571,
+          119311929
+        ],
+        "zero_margin_exact_arithmetic": false
+      },
+      "margin": 1.0,
+      "process_peak_rss_kib": 62944,
+      "scope": "group",
+      "stats": {
+        "checkpoints": [],
+        "elapsed_seconds": 0.08630924197495915,
+        "peak_states": 251135,
+        "transitions": 433774
+      }
+    },
+    {
+      "count_elapsed_seconds": 1.6045462759793736,
+      "count_state": "EXACT",
+      "exact_count_decimal": "2",
+      "family_load_seconds": 0.2045647469931282,
+      "input_model_sha256": "02317178502ad06069b9d934b9b7721d51a63360fa86f4c1d1a1861c4903542b",
+      "lattice_unavailable": "Floating-point envelope overlaps an integer-shell acceptance boundary",
+      "margin": 0.0,
+      "process_peak_rss_kib": 62944,
+      "result": {
+        "certificate": null,
+        "lattice_unavailable": "Floating-point envelope overlaps an integer-shell acceptance boundary",
+        "method": "exact IEEE prefix-state DAG",
+        "stats": {
+          "checkpoints": [],
+          "elapsed_seconds": 1.6045427909994032,
+          "peak_states": 4,
+          "transitions": 131
+        }
+      },
+      "scope": "episode"
+    },
+    {
+      "count_elapsed_seconds": 0.5034821039880626,
+      "count_state": "EXACT",
+      "exact_count_decimal": "17067800502243",
+      "family_load_seconds": 0.19669170898851007,
+      "input_model_sha256": "2a97b63ba5d207ce47517b9e6f70cfc834f1004faae88cea7d184e9398d02321",
+      "lattice_certificate": {
+        "coefficient_error": [
+          38230932203,
+          537333158985255075446784
+        ],
+        "cutoff": 11931,
+        "lower_boundary_gap": [
+          643,
+          159082572
+        ],
+        "optima": [
+          88553,
+          484,
+          3280,
+          36100,
+          5684,
+          3562,
+          1225,
+          1405,
+          121,
+          4541,
+          1225,
+          9425,
+          36100
+        ],
+        "quantum": [
+          2500,
+          119311929
+        ],
+        "rounding_envelope": [
+          1819955738603,
+          5597220406096407035904
+        ],
+        "upper_boundary_gap": [
+          8071,
+          477247716
+        ],
+        "zero_margin_exact_arithmetic": false
+      },
+      "margin": 0.25,
+      "process_peak_rss_kib": 62944,
+      "result": {
+        "certificate": {
+          "coefficient_error": [
+            38230932203,
+            537333158985255075446784
+          ],
+          "cutoff": 11931,
+          "lower_boundary_gap": [
+            643,
+            159082572
+          ],
+          "optima": [
+            88553,
+            484,
+            3280,
+            36100,
+            5684,
+            3562,
+            1225,
+            1405,
+            121,
+            4541,
+            1225,
+            9425,
+            36100
+          ],
+          "quantum": [
+            2500,
+            119311929
+          ],
+          "rounding_envelope": [
+            1819955738603,
+            5597220406096407035904
+          ],
+          "upper_boundary_gap": [
+            8071,
+            477247716
+          ],
+          "zero_margin_exact_arithmetic": false
+        },
+        "histogram_entries": 8210,
+        "method": "certified lattice + factored weighted matching frontier DP",
+        "stats": {
+          "checkpoints": [
+            {
+              "columns": 17,
+              "component": "factor0/block0",
+              "count": 1529,
+              "histogram_entries": 771,
+              "rows": 12
+            },
+            {
+              "columns": 1,
+              "component": "factor1/block0",
+              "count": 1,
+              "histogram_entries": 1,
+              "rows": 1
+            },
+            {
+              "columns": 28,
+              "component": "factor2/block0",
+              "count": 3434629,
+              "histogram_entries": 2904,
+              "rows": 8
+            },
+            {
+              "columns": 3,
+              "component": "factor2/block1",
+              "count": 3,
+              "histogram_entries": 3,
+              "rows": 1
+            },
+            {
+              "columns": 22,
+              "component": "factor2/block2",
+              "count": 2169675,
+              "histogram_entries": 2729,
+              "rows": 9
+            },
+            {
+              "columns": 1,
+              "component": "factor3/block0",
+              "count": 1,
+              "histogram_entries": 1,
+              "rows": 1
+            },
+            {
+              "columns": 4,
+              "component": "factor4/block0",
+              "count": 3,
+              "histogram_entries": 3,
+              "rows": 3
+            },
+            {
+              "columns": 3,
+              "component": "factor5/block0",
+              "count": 3,
+              "histogram_entries": 3,
+              "rows": 2
+            },
+            {
+              "columns": 3,
+              "component": "factor6/block0",
+              "count": 3,
+              "histogram_entries": 2,
+              "rows": 1
+            },
+            {
+              "columns": 5,
+              "component": "factor7/block0",
+              "count": 8,
+              "histogram_entries": 8,
+              "rows": 2
+            },
+            {
+              "columns": 1,
+              "component": "factor8/block0",
+              "count": 1,
+              "histogram_entries": 1,
+              "rows": 1
+            },
+            {
+              "columns": 4,
+              "component": "factor9/block0",
+              "count": 3,
+              "histogram_entries": 3,
+              "rows": 3
+            },
+            {
+              "columns": 2,
+              "component": "factor10/block0",
+              "count": 2,
+              "histogram_entries": 2,
+              "rows": 1
+            },
+            {
+              "columns": 4,
+              "component": "factor11/block0",
+              "count": 5,
+              "histogram_entries": 5,
+              "rows": 2
+            },
+            {
+              "columns": 1,
+              "component": "factor12/block0",
+              "count": 1,
+              "histogram_entries": 1,
+              "rows": 1
+            }
+          ],
+          "elapsed_seconds": 0.5034217890060972,
+          "peak_states": 63265,
+          "transitions": 1847405
+        }
+      },
+      "scope": "episode"
+    },
+    {
+      "count_elapsed_seconds": 0.31602837599348277,
+      "count_state": "COMPUTATION_UNRESOLVED",
+      "exact_count_decimal": null,
+      "failure": {
+        "elapsed_seconds": 0.3139028229925316,
+        "limit": 250000,
+        "location": {
+          "component": "factor2/block0",
+          "future_columns": 52,
+          "integer_budget": 11931,
+          "next_states": 211171,
+          "phase": "matching frontier",
+          "prior_states": 39964,
+          "row": 5,
+          "rows": 18
+        },
+        "peak_states": 251135,
+        "reason": "frontier/state budget exceeded",
+        "states": 251135,
+        "transitions": 1944070
+      },
+      "family_load_seconds": 0.2018408379808534,
+      "input_model_sha256": "bf4c4f52a85bf1210bb569df913ccf6b021fb8765e089315d094e82df0b272f8",
+      "lattice_certificate": {
+        "coefficient_error": [
+          38230932203,
+          537333158985255075446784
+        ],
+        "cutoff": 47724,
+        "lower_boundary_gap": [
+          643,
+          39770643
+        ],
+        "optima": [
+          88553,
+          484,
+          3280,
+          36100,
+          5684,
+          3562,
+          1225,
+          1405,
+          121,
+          4541,
+          1225,
+          9425,
+          36100
+        ],
+        "quantum": [
+          2500,
+          119311929
+        ],
+        "rounding_envelope": [
+          1819955738603,
+          5597220406096407035904
+        ],
+        "upper_boundary_gap": [
+          571,
+          119311929
+        ],
+        "zero_margin_exact_arithmetic": false
+      },
+      "margin": 1.0,
+      "process_peak_rss_kib": 68184,
+      "scope": "episode",
+      "stats": {
+        "checkpoints": [
+          {
+            "columns": 17,
+            "component": "factor0/block0",
+            "count": 489508,
+            "histogram_entries": 9501,
+            "rows": 12
+          },
+          {
+            "columns": 1,
+            "component": "factor1/block0",
+            "count": 1,
+            "histogram_entries": 1,
+            "rows": 1
+          }
+        ],
+        "elapsed_seconds": 0.3139308599929791,
+        "peak_states": 251135,
+        "transitions": 1944070
+      }
+    }
+  ],
+  "format": "KRAKEN_DRAFT2_EXACT_COUNT_BENCHMARK_V1",
+  "full_experiment_rerun": false,
+  "git_head": "495b797440d5c693d70ab65818220fcb56c9120f",
+  "input_hashes": {
+    "/home/maciejduranczyk/hardsignal-kraken-sentinel/results/episode-component-tracking-v2-draft2-exact-solver-benchmark/files.sha256": "14f1140f2b7254dac23fdaf05100c1c0f12b59bda5308d802b6ea94ec5e91bf3",
+    "results/episode-component-tracking-v2-draft2-exact-solver-benchmark/episode-margin-0.25.json": "d18abcd3199ddfff2bd06301991489973e81cf9552ab539bff42a38c1d440dd5",
+    "results/episode-component-tracking-v2-draft2-exact-solver-benchmark/episode-margin-0.json": "0929917b8f648dc6afe088597bb78c2598345ecb91df40f02b5c196cdcffb2f2",
+    "results/episode-component-tracking-v2-draft2-exact-solver-benchmark/episode-margin-1.json": "b9d84662673e829cf29206d1682354e955f8f93cd660d4e7860787999dd4a015",
+    "results/episode-component-tracking-v2-draft2-exact-solver-benchmark/group-margin-0.25.json": "8985e04fd8e428fce59a4e0b8e9bf2e89e8a5baddffd627804919930849e8510",
+    "results/episode-component-tracking-v2-draft2-exact-solver-benchmark/group-margin-0.json": "403d5cf65f7bea9b78c5b6e0ab7ae4d5d84ab783adadf8f5c9e5cf0be645fc02",
+    "results/episode-component-tracking-v2-draft2-exact-solver-benchmark/group-margin-1.json": "d913ad0a84135771432fdb26ea34a82079716d3219ad6f75d87125e21c68eed1"
+  },
+  "limits": {
+    "max_polynomial_bytes": 33554432,
+    "max_seconds": 60,
+    "max_states": 250000,
+    "max_transitions": 5000000
+  },
+  "old_artifacts_modified": false,
+  "platform": "Linux-7.0.11-76070011-generic-x86_64-with-glibc2.39",
+  "python": "3.12.3",
+  "ready_for_160_arm_run": false,
+  "schema_conclusion": "Explicit versioned adoption of compact-family artifacts is still required; unresolved counts cannot satisfy an exact-count requirement.",
+  "source_hashes": {
+    "analysis/benchmark_episode_component_tracking_v2_draft2_exact_count.py": "cc142c995231a3779b640ea990af6a92cfc663f401576ae85a5233d3d71b266a",
+    "analysis/episode_component_tracking_v2_draft2_exact_count.py": "4c543655c738fcc9d2b771f2cb3ae26106304e2ff2f86a201a47d77cd5bd18a3",
+    "analysis/episode_component_tracking_v2_draft2_exact_solver.py": "f5c4a907af24958739bf7a2d90fd27d2e602c295a74c951bb52525ccd10023a1",
+    "tests/test_episode_component_tracking_v2_draft2_exact_count.py": "3de23c86e259c31ab0d1c94d467216e6ac2ec8d89a2c7ec374a88d31d1eb7985"
+  },
+  "tests": {
+    "errors": 0,
+    "failures": 0,
+    "run": 17
+  }
+}

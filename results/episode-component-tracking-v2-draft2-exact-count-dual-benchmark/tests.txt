@@ -1,0 +1,22 @@
+test_assignment_dual_and_unmatched_penalties (test_episode_component_tracking_v2_draft2_exact_count.ExactCountingTests.test_assignment_dual_and_unmatched_penalties) ... ok
+test_assignment_dual_rejects_infeasible_matching (test_episode_component_tracking_v2_draft2_exact_count.ExactCountingTests.test_assignment_dual_rejects_infeasible_matching) ... ok
+test_certified_lattice_global_margin (test_episode_component_tracking_v2_draft2_exact_count.ExactCountingTests.test_certified_lattice_global_margin) ... ok
+test_certified_lattice_matches_exhaustive (test_episode_component_tracking_v2_draft2_exact_count.ExactCountingTests.test_certified_lattice_matches_exhaustive) ... ok
+test_deterministic_and_original_queries_unchanged (test_episode_component_tracking_v2_draft2_exact_count.ExactCountingTests.test_deterministic_and_original_queries_unchanged) ... ok
+test_disconnected_cost_histories_preserve_multiplicity (test_episode_component_tracking_v2_draft2_exact_count.ExactCountingTests.test_disconnected_cost_histories_preserve_multiplicity) ... ok
+test_equal_cost_assignments_count_separately (test_episode_component_tracking_v2_draft2_exact_count.ExactCountingTests.test_equal_cost_assignments_count_separately) ... ok
+test_exact_polynomial_product (test_episode_component_tracking_v2_draft2_exact_count.ExactCountingTests.test_exact_polynomial_product) ... ok
+test_frontier_factorization_and_column_identity (test_episode_component_tracking_v2_draft2_exact_count.ExactCountingTests.test_frontier_factorization_and_column_identity) ... ok
+test_global_margin_not_product_of_local_counts (test_episode_component_tracking_v2_draft2_exact_count.ExactCountingTests.test_global_margin_not_product_of_local_counts) ... ok
+test_millions_counted_without_hypothesis_enumeration (test_episode_component_tracking_v2_draft2_exact_count.ExactCountingTests.test_millions_counted_without_hypothesis_enumeration) ... ok
+test_numeric_margin_boundary_and_fallback (test_episode_component_tracking_v2_draft2_exact_count.ExactCountingTests.test_numeric_margin_boundary_and_fallback) ... ok
+test_paths_not_labelled_or_permuted (test_episode_component_tracking_v2_draft2_exact_count.ExactCountingTests.test_paths_not_labelled_or_permuted) ... ok
+test_random_small_complete_families (test_episode_component_tracking_v2_draft2_exact_count.ExactCountingTests.test_random_small_complete_families) ... ok
+test_range_and_fragment_skip_boundaries (test_episode_component_tracking_v2_draft2_exact_count.ExactCountingTests.test_range_and_fragment_skip_boundaries) ... ok
+test_resource_failure_is_not_partial_count (test_episode_component_tracking_v2_draft2_exact_count.ExactCountingTests.test_resource_failure_is_not_partial_count) ... ok
+test_singletons_exactly_once (test_episode_component_tracking_v2_draft2_exact_count.ExactCountingTests.test_singletons_exactly_once) ... ok
+
+----------------------------------------------------------------------
+Ran 17 tests in 0.095s
+
+OK
