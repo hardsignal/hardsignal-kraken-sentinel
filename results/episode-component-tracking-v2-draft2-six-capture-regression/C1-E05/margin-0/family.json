@@ -1,0 +1,825 @@
+{
+  "composition": "frozen Draft 2 ordered group prefix filter; one GLOBAL cost margin",
+  "count_state": "NOT_EVALUATED",
+  "factors": [
+    {
+      "candidates": [
+        {
+          "candidate_id": "E005_F002_C0037",
+          "fragment_index": 2,
+          "frequency_hz": -2770.5300741554515
+        },
+        {
+          "candidate_id": "E005_F003_C0003",
+          "fragment_index": 3,
+          "frequency_hz": -2737.343220726906
+        }
+      ],
+      "constraints": [
+        "each candidate in exactly one selected path",
+        "sum(path.links) == maximum_links",
+        "frozen earliest-candidate prefix margin predicate"
+      ],
+      "cost_tolerance_hex": "0x1.19799812dea11p-40",
+      "count_state": "NOT_EVALUATED",
+      "family_representation": "complete implicit constraints plus exact membership predicate",
+      "format": "KRAKEN_DRAFT2_EXACT_IMPLICIT_FAMILY_V1",
+      "margin": 0.0,
+      "maximum_links": 1,
+      "minimum_cost_hex": "0x1.c31eb9be0c916p-2",
+      "model_sha256": "f01cb5b1fec4da3aa1be9ba3d1b4b018fa059dfcd30e57e111f0d59ac99ef21a",
+      "numerical_policy": "FROZEN_DRAFT2_BINARY64_PATH_COST_RIGHT_FOLD_AND_PREFIX_MARGIN_V1",
+      "optimum_witness": [
+        [
+          "E005_F002_C0037",
+          "E005_F003_C0003"
+        ]
+      ],
+      "original_fragment_count": 6,
+      "paths": [
+        {
+          "candidate_ids": [
+            "E005_F002_C0037"
+          ],
+          "cost_hex": "0x0.0p+0",
+          "links": 0
+        },
+        {
+          "candidate_ids": [
+            "E005_F002_C0037",
+            "E005_F003_C0003"
+          ],
+          "cost_hex": "0x1.c31eb9be0c916p-2",
+          "links": 1
+        },
+        {
+          "candidate_ids": [
+            "E005_F003_C0003"
+          ],
+          "cost_hex": "0x0.0p+0",
+          "links": 0
+        }
+      ],
+      "retained_hypothesis_count": null,
+      "scientific_parameters_unchanged": true
+    },
+    {
+      "candidates": [
+        {
+          "candidate_id": "E005_F004_C0005",
+          "fragment_index": 4,
+          "frequency_hz": -1567.7927309347247
+        },
+        {
+          "candidate_id": "E005_F005_C0002",
+          "fragment_index": 5,
+          "frequency_hz": -1595.2577130824864
+        },
+        {
+          "candidate_id": "E005_F005_C0003",
+          "fragment_index": 5,
+          "frequency_hz": -1542.6164972992765
+        },
+        {
+          "candidate_id": "E005_F006_C0047",
+          "fragment_index": 6,
+          "frequency_hz": -1573.5146022155084
+        },
+        {
+          "candidate_id": "E005_F006_C0048",
+          "fragment_index": 6,
+          "frequency_hz": -1557.493362629314
+        },
+        {
+          "candidate_id": "E005_F006_C0049",
+          "fragment_index": 6,
+          "frequency_hz": -1541.4721230431198
+        }
+      ],
+      "constraints": [
+        "each candidate in exactly one selected path",
+        "sum(path.links) == maximum_links",
+        "frozen earliest-candidate prefix margin predicate"
+      ],
+      "cost_tolerance_hex": "0x1.19799812dea11p-40",
+      "count_state": "NOT_EVALUATED",
+      "family_representation": "complete implicit constraints plus exact membership predicate",
+      "format": "KRAKEN_DRAFT2_EXACT_IMPLICIT_FAMILY_V1",
+      "margin": 0.0,
+      "maximum_links": 3,
+      "minimum_cost_hex": "0x1.c5cd544397bdep-2",
+      "model_sha256": "1406327fd9b354a36d8adc6801ddf8623a2d81696de96129a3454389744c5eb0",
+      "numerical_policy": "FROZEN_DRAFT2_BINARY64_PATH_COST_RIGHT_FOLD_AND_PREFIX_MARGIN_V1",
+      "optimum_witness": [
+        [
+          "E005_F004_C0005",
+          "E005_F005_C0003",
+          "E005_F006_C0049"
+        ],
+        [
+          "E005_F005_C0002",
+          "E005_F006_C0047"
+        ],
+        [
+          "E005_F006_C0048"
+        ]
+      ],
+      "original_fragment_count": 6,
+      "paths": [
+        {
+          "candidate_ids": [
+            "E005_F004_C0005"
+          ],
+          "cost_hex": "0x0.0p+0",
+          "links": 0
+        },
+        {
+          "candidate_ids": [
+            "E005_F004_C0005",
+            "E005_F005_C0002"
+          ],
+          "cost_hex": "0x1.34f8bc183bbe9p-2",
+          "links": 1
+        },
+        {
+          "candidate_ids": [
+            "E005_F004_C0005",
+            "E005_F005_C0002",
+            "E005_F006_C0047"
+          ],
+          "cost_hex": "0x1.f69d83c216850p-2",
+          "links": 2
+        },
+        {
+          "candidate_ids": [
+            "E005_F004_C0005",
+            "E005_F005_C0002",
+            "E005_F006_C0048"
+          ],
+          "cost_hex": "0x1.be8f7fdb06580p-1",
+          "links": 2
+        },
+        {
+          "candidate_ids": [
+            "E005_F004_C0005",
+            "E005_F005_C0003"
+          ],
+          "cost_hex": "0x1.039f3a7f0787bp-2",
+          "links": 1
+        },
+        {
+          "candidate_ids": [
+            "E005_F004_C0005",
+            "E005_F005_C0003",
+            "E005_F006_C0047"
+          ],
+          "cost_hex": "0x1.45550446d9921p-1",
+          "links": 2
+        },
+        {
+          "candidate_ids": [
+            "E005_F004_C0005",
+            "E005_F005_C0003",
+            "E005_F006_C0048"
+          ],
+          "cost_hex": "0x1.5e466e20ce64ep-2",
+          "links": 2
+        },
+        {
+          "candidate_ids": [
+            "E005_F004_C0005",
+            "E005_F005_C0003",
+            "E005_F006_C0049"
+          ],
+          "cost_hex": "0x1.04288c99bcf78p-2",
+          "links": 2
+        },
+        {
+          "candidate_ids": [
+            "E005_F004_C0005",
+            "E005_F006_C0047"
+          ],
+          "cost_hex": "0x1.0d69049bb7ed5p-2",
+          "links": 1
+        },
+        {
+          "candidate_ids": [
+            "E005_F004_C0005",
+            "E005_F006_C0048"
+          ],
+          "cost_hex": "0x1.2b72fa7368660p-2",
+          "links": 1
+        },
+        {
+          "candidate_ids": [
+            "E005_F004_C0005",
+            "E005_F006_C0049"
+          ],
+          "cost_hex": "0x1.0de1549876184p-1",
+          "links": 1
+        },
+        {
+          "candidate_ids": [
+            "E005_F005_C0002"
+          ],
+          "cost_hex": "0x0.0p+0",
+          "links": 0
+        },
+        {
+          "candidate_ids": [
+            "E005_F005_C0002",
+            "E005_F006_C0047"
+          ],
+          "cost_hex": "0x1.83498f53b58cdp-3",
+          "links": 1
+        },
+        {
+          "candidate_ids": [
+            "E005_F005_C0002",
+            "E005_F006_C0048"
+          ],
+          "cost_hex": "0x1.241321cee878cp-1",
+          "links": 1
+        },
+        {
+          "candidate_ids": [
+            "E005_F005_C0003"
+          ],
+          "cost_hex": "0x0.0p+0",
+          "links": 0
+        },
+        {
+          "candidate_ids": [
+            "E005_F005_C0003",
+            "E005_F006_C0047"
+          ],
+          "cost_hex": "0x1.870ace0eab9c7p-2",
+          "links": 1
+        },
+        {
+          "candidate_ids": [
+            "E005_F005_C0003",
+            "E005_F006_C0048"
+          ],
+          "cost_hex": "0x1.6a9cce871b74bp-4",
+          "links": 1
+        },
+        {
+          "candidate_ids": [
+            "E005_F005_C0003",
+            "E005_F006_C0049"
+          ],
+          "cost_hex": "0x1.12a4356adf98ep-11",
+          "links": 1
+        },
+        {
+          "candidate_ids": [
+            "E005_F006_C0047"
+          ],
+          "cost_hex": "0x0.0p+0",
+          "links": 0
+        },
+        {
+          "candidate_ids": [
+            "E005_F006_C0048"
+          ],
+          "cost_hex": "0x0.0p+0",
+          "links": 0
+        },
+        {
+          "candidate_ids": [
+            "E005_F006_C0049"
+          ],
+          "cost_hex": "0x0.0p+0",
+          "links": 0
+        }
+      ],
+      "retained_hypothesis_count": null,
+      "scientific_parameters_unchanged": true
+    },
+    {
+      "candidates": [
+        {
+          "candidate_id": "E005_F002_C0046",
+          "fragment_index": 2,
+          "frequency_hz": 1911.1050077817447
+        },
+        {
+          "candidate_id": "E005_F002_C0047",
+          "fragment_index": 2,
+          "frequency_hz": 1928.2706216240958
+        },
+        {
+          "candidate_id": "E005_F002_C0048",
+          "fragment_index": 2,
+          "frequency_hz": 1938.5699899295064
+        },
+        {
+          "candidate_id": "E005_F003_C0006",
+          "fragment_index": 3,
+          "frequency_hz": 1950.0137324910736
+        }
+      ],
+      "constraints": [
+        "each candidate in exactly one selected path",
+        "sum(path.links) == maximum_links",
+        "frozen earliest-candidate prefix margin predicate"
+      ],
+      "cost_tolerance_hex": "0x1.19799812dea11p-40",
+      "count_state": "NOT_EVALUATED",
+      "family_representation": "complete implicit constraints plus exact membership predicate",
+      "format": "KRAKEN_DRAFT2_EXACT_IMPLICIT_FAMILY_V1",
+      "margin": 0.0,
+      "maximum_links": 1,
+      "minimum_cost_hex": "0x1.ad209376fd970p-5",
+      "model_sha256": "e832c7146ede74b518ad3b95a746b29f629d80fb65a627511c5989e170ea1f51",
+      "numerical_policy": "FROZEN_DRAFT2_BINARY64_PATH_COST_RIGHT_FOLD_AND_PREFIX_MARGIN_V1",
+      "optimum_witness": [
+        [
+          "E005_F002_C0046"
+        ],
+        [
+          "E005_F002_C0047"
+        ],
+        [
+          "E005_F002_C0048",
+          "E005_F003_C0006"
+        ]
+      ],
+      "original_fragment_count": 6,
+      "paths": [
+        {
+          "candidate_ids": [
+            "E005_F002_C0046"
+          ],
+          "cost_hex": "0x0.0p+0",
+          "links": 0
+        },
+        {
+          "candidate_ids": [
+            "E005_F002_C0046",
+            "E005_F003_C0006"
+          ],
+          "cost_hex": "0x1.360b604da69b5p-1",
+          "links": 1
+        },
+        {
+          "candidate_ids": [
+            "E005_F002_C0047"
+          ],
+          "cost_hex": "0x0.0p+0",
+          "links": 0
+        },
+        {
+          "candidate_ids": [
+            "E005_F002_C0047",
+            "E005_F003_C0006"
+          ],
+          "cost_hex": "0x1.83498f53b583fp-3",
+          "links": 1
+        },
+        {
+          "candidate_ids": [
+            "E005_F002_C0048"
+          ],
+          "cost_hex": "0x0.0p+0",
+          "links": 0
+        },
+        {
+          "candidate_ids": [
+            "E005_F002_C0048",
+            "E005_F003_C0006"
+          ],
+          "cost_hex": "0x1.ad209376fd970p-5",
+          "links": 1
+        },
+        {
+          "candidate_ids": [
+            "E005_F003_C0006"
+          ],
+          "cost_hex": "0x0.0p+0",
+          "links": 0
+        }
+      ],
+      "retained_hypothesis_count": null,
+      "scientific_parameters_unchanged": true
+    }
+  ],
+  "format": "KRAKEN_DRAFT2_EXACT_IMPLICIT_EPISODE_V1",
+  "margin": 0.0,
+  "maximum_links": 5,
+  "minimum_cost_hex": "0x1.df48103842011p-1",
+  "model_sha256": "205c172bac32d1c2cb31ece0b15368bb32496930ee0c83442b3828b1819c2472",
+  "original_fragment_count": 6,
+  "retained_hypothesis_count": null,
+  "singletons": [
+    [
+      "E005_F001_C0001"
+    ],
+    [
+      "E005_F001_C0003"
+    ],
+    [
+      "E005_F002_C0001"
+    ],
+    [
+      "E005_F002_C0002"
+    ],
+    [
+      "E005_F002_C0003"
+    ],
+    [
+      "E005_F002_C0004"
+    ],
+    [
+      "E005_F002_C0005"
+    ],
+    [
+      "E005_F002_C0006"
+    ],
+    [
+      "E005_F002_C0007"
+    ],
+    [
+      "E005_F002_C0008"
+    ],
+    [
+      "E005_F002_C0009"
+    ],
+    [
+      "E005_F002_C0010"
+    ],
+    [
+      "E005_F002_C0011"
+    ],
+    [
+      "E005_F002_C0012"
+    ],
+    [
+      "E005_F002_C0013"
+    ],
+    [
+      "E005_F002_C0014"
+    ],
+    [
+      "E005_F002_C0015"
+    ],
+    [
+      "E005_F002_C0016"
+    ],
+    [
+      "E005_F002_C0017"
+    ],
+    [
+      "E005_F002_C0018"
+    ],
+    [
+      "E005_F002_C0019"
+    ],
+    [
+      "E005_F002_C0020"
+    ],
+    [
+      "E005_F002_C0021"
+    ],
+    [
+      "E005_F002_C0022"
+    ],
+    [
+      "E005_F002_C0023"
+    ],
+    [
+      "E005_F002_C0024"
+    ],
+    [
+      "E005_F002_C0025"
+    ],
+    [
+      "E005_F002_C0026"
+    ],
+    [
+      "E005_F002_C0027"
+    ],
+    [
+      "E005_F002_C0028"
+    ],
+    [
+      "E005_F002_C0029"
+    ],
+    [
+      "E005_F002_C0030"
+    ],
+    [
+      "E005_F002_C0031"
+    ],
+    [
+      "E005_F002_C0032"
+    ],
+    [
+      "E005_F002_C0033"
+    ],
+    [
+      "E005_F002_C0034"
+    ],
+    [
+      "E005_F002_C0035"
+    ],
+    [
+      "E005_F002_C0036"
+    ],
+    [
+      "E005_F002_C0038"
+    ],
+    [
+      "E005_F002_C0039"
+    ],
+    [
+      "E005_F002_C0040"
+    ],
+    [
+      "E005_F002_C0041"
+    ],
+    [
+      "E005_F002_C0042"
+    ],
+    [
+      "E005_F002_C0043"
+    ],
+    [
+      "E005_F002_C0044"
+    ],
+    [
+      "E005_F002_C0045"
+    ],
+    [
+      "E005_F002_C0049"
+    ],
+    [
+      "E005_F002_C0050"
+    ],
+    [
+      "E005_F002_C0051"
+    ],
+    [
+      "E005_F002_C0052"
+    ],
+    [
+      "E005_F002_C0053"
+    ],
+    [
+      "E005_F002_C0054"
+    ],
+    [
+      "E005_F002_C0055"
+    ],
+    [
+      "E005_F002_C0056"
+    ],
+    [
+      "E005_F002_C0057"
+    ],
+    [
+      "E005_F002_C0058"
+    ],
+    [
+      "E005_F002_C0059"
+    ],
+    [
+      "E005_F002_C0060"
+    ],
+    [
+      "E005_F002_C0061"
+    ],
+    [
+      "E005_F002_C0062"
+    ],
+    [
+      "E005_F002_C0063"
+    ],
+    [
+      "E005_F003_C0002"
+    ],
+    [
+      "E005_F003_C0004"
+    ],
+    [
+      "E005_F003_C0005"
+    ],
+    [
+      "E005_F003_C0007"
+    ],
+    [
+      "E005_F003_C0008"
+    ],
+    [
+      "E005_F004_C0001"
+    ],
+    [
+      "E005_F004_C0002"
+    ],
+    [
+      "E005_F004_C0003"
+    ],
+    [
+      "E005_F005_C0005"
+    ],
+    [
+      "E005_F006_C0001"
+    ],
+    [
+      "E005_F006_C0002"
+    ],
+    [
+      "E005_F006_C0003"
+    ],
+    [
+      "E005_F006_C0004"
+    ],
+    [
+      "E005_F006_C0005"
+    ],
+    [
+      "E005_F006_C0006"
+    ],
+    [
+      "E005_F006_C0007"
+    ],
+    [
+      "E005_F006_C0008"
+    ],
+    [
+      "E005_F006_C0009"
+    ],
+    [
+      "E005_F006_C0010"
+    ],
+    [
+      "E005_F006_C0011"
+    ],
+    [
+      "E005_F006_C0012"
+    ],
+    [
+      "E005_F006_C0013"
+    ],
+    [
+      "E005_F006_C0014"
+    ],
+    [
+      "E005_F006_C0015"
+    ],
+    [
+      "E005_F006_C0016"
+    ],
+    [
+      "E005_F006_C0017"
+    ],
+    [
+      "E005_F006_C0018"
+    ],
+    [
+      "E005_F006_C0019"
+    ],
+    [
+      "E005_F006_C0020"
+    ],
+    [
+      "E005_F006_C0021"
+    ],
+    [
+      "E005_F006_C0022"
+    ],
+    [
+      "E005_F006_C0023"
+    ],
+    [
+      "E005_F006_C0024"
+    ],
+    [
+      "E005_F006_C0025"
+    ],
+    [
+      "E005_F006_C0026"
+    ],
+    [
+      "E005_F006_C0027"
+    ],
+    [
+      "E005_F006_C0028"
+    ],
+    [
+      "E005_F006_C0029"
+    ],
+    [
+      "E005_F006_C0030"
+    ],
+    [
+      "E005_F006_C0031"
+    ],
+    [
+      "E005_F006_C0032"
+    ],
+    [
+      "E005_F006_C0033"
+    ],
+    [
+      "E005_F006_C0034"
+    ],
+    [
+      "E005_F006_C0035"
+    ],
+    [
+      "E005_F006_C0036"
+    ],
+    [
+      "E005_F006_C0037"
+    ],
+    [
+      "E005_F006_C0038"
+    ],
+    [
+      "E005_F006_C0039"
+    ],
+    [
+      "E005_F006_C0040"
+    ],
+    [
+      "E005_F006_C0041"
+    ],
+    [
+      "E005_F006_C0042"
+    ],
+    [
+      "E005_F006_C0043"
+    ],
+    [
+      "E005_F006_C0044"
+    ],
+    [
+      "E005_F006_C0045"
+    ],
+    [
+      "E005_F006_C0046"
+    ],
+    [
+      "E005_F006_C0050"
+    ],
+    [
+      "E005_F006_C0051"
+    ],
+    [
+      "E005_F006_C0052"
+    ],
+    [
+      "E005_F006_C0053"
+    ],
+    [
+      "E005_F006_C0054"
+    ],
+    [
+      "E005_F006_C0055"
+    ],
+    [
+      "E005_F006_C0056"
+    ],
+    [
+      "E005_F006_C0057"
+    ],
+    [
+      "E005_F006_C0058"
+    ],
+    [
+      "E005_F006_C0059"
+    ],
+    [
+      "E005_F006_C0060"
+    ],
+    [
+      "E005_F006_C0061"
+    ],
+    [
+      "E005_F006_C0062"
+    ],
+    [
+      "E005_F006_C0063"
+    ],
+    [
+      "E005_F006_C0064"
+    ],
+    [
+      "E005_F006_C0065"
+    ],
+    [
+      "E005_F006_C0066"
+    ],
+    [
+      "E005_F006_C0067"
+    ],
+    [
+      "E005_F006_C0068"
+    ],
+    [
+      "E005_F006_C0069"
+    ]
+  ]
+}

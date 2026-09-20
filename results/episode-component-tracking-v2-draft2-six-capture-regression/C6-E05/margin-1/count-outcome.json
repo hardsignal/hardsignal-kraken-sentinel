@@ -1,0 +1,25 @@
+{
+  "count_state": "COMPUTATION_UNRESOLVED",
+  "exact_count_decimal": null,
+  "failure": {
+    "elapsed_seconds": 3.1253782639978454,
+    "limit": 5000000,
+    "location": {
+      "phase": "IEEE streaming pivot join",
+      "pivot": 5
+    },
+    "peak_states": 12745,
+    "reason": "transition budget exceeded",
+    "states": 12745,
+    "transitions": 5000001
+  },
+  "method": "KRAKEN_DRAFT2_IEEE_MONOTONE_PIVOT_COUNT_V1",
+  "packed_polynomial_bytes": 0,
+  "statistics": {
+    "checkpoints": [],
+    "elapsed_seconds": 3.1255174599937163,
+    "peak_states": 12745,
+    "process_peak_rss_kib": 118548,
+    "transitions": 5000001
+  }
+}

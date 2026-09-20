@@ -1,0 +1,74 @@
+{
+  "certificate": {
+    "policy": "Exact monotone binary64 addition preimages; frozen chronological fold and all prefix predicates",
+    "rounding_or_quantization": false,
+    "version": "KRAKEN_DRAFT2_IEEE_MONOTONE_PIVOT_COUNT_V1"
+  },
+  "count_state": "EXACT",
+  "details": {
+    "certificate": {
+      "policy": "Exact monotone binary64 addition preimages; frozen chronological fold and all prefix predicates",
+      "rounding_or_quantization": false,
+      "version": "KRAKEN_DRAFT2_IEEE_MONOTONE_PIVOT_COUNT_V1"
+    },
+    "composition": {
+      "boundary_hex": "0x1.874efeabea465p-1",
+      "group_histogram_entries": [
+        3,
+        9
+      ],
+      "join_live_containers": 31,
+      "join_pairs": 27,
+      "packed_polynomial_bytes": 0,
+      "pivot": 1,
+      "prefix_states": 3,
+      "prefix_steps": [
+        {
+          "factor": 0,
+          "input_states": 1,
+          "output_states": 3,
+          "transitions": 3
+        }
+      ],
+      "suffix_steps": [],
+      "suffix_thresholds": 1
+    },
+    "factor_statistics": [
+      {
+        "assignments_decimal": "3",
+        "elapsed_seconds": 0.000601920997723937,
+        "factor": 0,
+        "held_previous_histogram_states": 0,
+        "histogram_entries": 3,
+        "transitions": 13
+      },
+      {
+        "assignments_decimal": "9",
+        "elapsed_seconds": 0.0029080479871481657,
+        "factor": 1,
+        "held_previous_histogram_states": 3,
+        "histogram_entries": 9,
+        "transitions": 71
+      }
+    ],
+    "method": "KRAKEN_DRAFT2_IEEE_MONOTONE_PIVOT_COUNT_V1",
+    "ordering": "forward",
+    "packed_polynomial_bytes": 0,
+    "stats": {
+      "checkpoints": [],
+      "elapsed_seconds": 0.003882258984958753,
+      "peak_states": 31,
+      "transitions": 114
+    }
+  },
+  "exact_count_decimal": "21",
+  "method": "KRAKEN_DRAFT2_IEEE_MONOTONE_PIVOT_COUNT_V1",
+  "packed_polynomial_bytes": 0,
+  "statistics": {
+    "checkpoints": [],
+    "elapsed_seconds": 0.0038911309966351837,
+    "peak_states": 31,
+    "process_peak_rss_kib": 118340,
+    "transitions": 114
+  }
+}

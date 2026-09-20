@@ -1,0 +1,436 @@
+{
+  "certificate": {
+    "coefficient_error": [
+      38230932203,
+      537333158985255075446784
+    ],
+    "cutoff": 11931,
+    "lower_boundary_gap": [
+      643,
+      159082572
+    ],
+    "optima": [
+      88553,
+      484,
+      3280,
+      36100,
+      5684,
+      3562,
+      1225,
+      1405,
+      121,
+      4541,
+      1225,
+      9425,
+      36100
+    ],
+    "quantum": [
+      2500,
+      119311929
+    ],
+    "rounding_envelope": [
+      1819955738603,
+      5597220406096407035904
+    ],
+    "upper_boundary_gap": [
+      8071,
+      477247716
+    ],
+    "zero_margin_exact_arithmetic": false
+  },
+  "count_state": "EXACT",
+  "details": {
+    "certificate": {
+      "coefficient_error": [
+        38230932203,
+        537333158985255075446784
+      ],
+      "cutoff": 11931,
+      "lower_boundary_gap": [
+        643,
+        159082572
+      ],
+      "optima": [
+        88553,
+        484,
+        3280,
+        36100,
+        5684,
+        3562,
+        1225,
+        1405,
+        121,
+        4541,
+        1225,
+        9425,
+        36100
+      ],
+      "quantum": [
+        2500,
+        119311929
+      ],
+      "rounding_envelope": [
+        1819955738603,
+        5597220406096407035904
+      ],
+      "upper_boundary_gap": [
+        8071,
+        477247716
+      ],
+      "zero_margin_exact_arithmetic": false
+    },
+    "dispatcher_version": "KRAKEN_DRAFT2_IEEE_MONOTONE_PIVOT_COUNT_V1",
+    "histogram_entries": 8210,
+    "method": "certified column frontier exact generating function",
+    "ordering": "frequency",
+    "stats": {
+      "checkpoints": [
+        {
+          "coefficient_digit_bytes": 4,
+          "columns": 17,
+          "component": "factor0/block0",
+          "count": "1529",
+          "histogram_entries": 771,
+          "peak_frontier_masks": 15,
+          "peak_packed_bytes": 148595,
+          "rows": 12,
+          "suffix_bound": true
+        },
+        {
+          "coefficient_digit_bytes": 1,
+          "columns": 1,
+          "component": "factor1/block0",
+          "count": "1",
+          "histogram_entries": 1,
+          "peak_frontier_masks": 2,
+          "peak_packed_bytes": 2,
+          "rows": 1,
+          "suffix_bound": true
+        },
+        {
+          "coefficient_digit_bytes": 4,
+          "columns": 28,
+          "component": "factor2/block0",
+          "count": "3434629",
+          "histogram_entries": 2904,
+          "peak_frontier_masks": 32,
+          "peak_packed_bytes": 323963,
+          "rows": 8,
+          "suffix_bound": true
+        },
+        {
+          "coefficient_digit_bytes": 1,
+          "columns": 3,
+          "component": "factor2/block1",
+          "count": "3",
+          "histogram_entries": 3,
+          "peak_frontier_masks": 4,
+          "peak_packed_bytes": 2189,
+          "rows": 1,
+          "suffix_bound": true
+        },
+        {
+          "coefficient_digit_bytes": 4,
+          "columns": 22,
+          "component": "factor2/block2",
+          "count": "2169675",
+          "histogram_entries": 2729,
+          "peak_frontier_masks": 37,
+          "peak_packed_bytes": 314669,
+          "rows": 9,
+          "suffix_bound": true
+        },
+        {
+          "coefficient_digit_bytes": 1,
+          "columns": 1,
+          "component": "factor3/block0",
+          "count": "1",
+          "histogram_entries": 1,
+          "peak_frontier_masks": 2,
+          "peak_packed_bytes": 2,
+          "rows": 1,
+          "suffix_bound": true
+        },
+        {
+          "coefficient_digit_bytes": 1,
+          "columns": 4,
+          "component": "factor4/block0",
+          "count": "3",
+          "histogram_entries": 3,
+          "peak_frontier_masks": 5,
+          "peak_packed_bytes": 5130,
+          "rows": 3,
+          "suffix_bound": true
+        },
+        {
+          "coefficient_digit_bytes": 1,
+          "columns": 3,
+          "component": "factor5/block0",
+          "count": "3",
+          "histogram_entries": 3,
+          "peak_frontier_masks": 5,
+          "peak_packed_bytes": 1753,
+          "rows": 2,
+          "suffix_bound": true
+        },
+        {
+          "coefficient_digit_bytes": 1,
+          "columns": 3,
+          "component": "factor6/block0",
+          "count": "3",
+          "histogram_entries": 2,
+          "peak_frontier_masks": 4,
+          "peak_packed_bytes": 4,
+          "rows": 1,
+          "suffix_bound": true
+        },
+        {
+          "coefficient_digit_bytes": 1,
+          "columns": 5,
+          "component": "factor7/block0",
+          "count": "8",
+          "histogram_entries": 8,
+          "peak_frontier_masks": 6,
+          "peak_packed_bytes": 6344,
+          "rows": 2,
+          "suffix_bound": true
+        },
+        {
+          "coefficient_digit_bytes": 1,
+          "columns": 1,
+          "component": "factor8/block0",
+          "count": "1",
+          "histogram_entries": 1,
+          "peak_frontier_masks": 2,
+          "peak_packed_bytes": 2,
+          "rows": 1,
+          "suffix_bound": true
+        },
+        {
+          "coefficient_digit_bytes": 1,
+          "columns": 4,
+          "component": "factor9/block0",
+          "count": "3",
+          "histogram_entries": 3,
+          "peak_frontier_masks": 4,
+          "peak_packed_bytes": 556,
+          "rows": 3,
+          "suffix_bound": true
+        },
+        {
+          "coefficient_digit_bytes": 1,
+          "columns": 2,
+          "component": "factor10/block0",
+          "count": "2",
+          "histogram_entries": 2,
+          "peak_frontier_masks": 3,
+          "peak_packed_bytes": 5,
+          "rows": 1,
+          "suffix_bound": true
+        },
+        {
+          "coefficient_digit_bytes": 1,
+          "columns": 4,
+          "component": "factor11/block0",
+          "count": "5",
+          "histogram_entries": 5,
+          "peak_frontier_masks": 4,
+          "peak_packed_bytes": 742,
+          "rows": 2,
+          "suffix_bound": true
+        },
+        {
+          "coefficient_digit_bytes": 1,
+          "columns": 1,
+          "component": "factor12/block0",
+          "count": "1",
+          "histogram_entries": 1,
+          "peak_frontier_masks": 2,
+          "peak_packed_bytes": 2,
+          "rows": 1,
+          "suffix_bound": true
+        }
+      ],
+      "elapsed_seconds": 0.09657335799420252,
+      "peak_states": 13909,
+      "transitions": 2908
+    },
+    "suffix_bound": true
+  },
+  "exact_count_decimal": "17067800502243",
+  "method": "certified column frontier exact generating function",
+  "packed_polynomial_bytes": 323963,
+  "statistics": {
+    "checkpoints": [
+      {
+        "coefficient_digit_bytes": 4,
+        "columns": 17,
+        "component": "factor0/block0",
+        "count": "1529",
+        "histogram_entries": 771,
+        "peak_frontier_masks": 15,
+        "peak_packed_bytes": 148595,
+        "rows": 12,
+        "suffix_bound": true
+      },
+      {
+        "coefficient_digit_bytes": 1,
+        "columns": 1,
+        "component": "factor1/block0",
+        "count": "1",
+        "histogram_entries": 1,
+        "peak_frontier_masks": 2,
+        "peak_packed_bytes": 2,
+        "rows": 1,
+        "suffix_bound": true
+      },
+      {
+        "coefficient_digit_bytes": 4,
+        "columns": 28,
+        "component": "factor2/block0",
+        "count": "3434629",
+        "histogram_entries": 2904,
+        "peak_frontier_masks": 32,
+        "peak_packed_bytes": 323963,
+        "rows": 8,
+        "suffix_bound": true
+      },
+      {
+        "coefficient_digit_bytes": 1,
+        "columns": 3,
+        "component": "factor2/block1",
+        "count": "3",
+        "histogram_entries": 3,
+        "peak_frontier_masks": 4,
+        "peak_packed_bytes": 2189,
+        "rows": 1,
+        "suffix_bound": true
+      },
+      {
+        "coefficient_digit_bytes": 4,
+        "columns": 22,
+        "component": "factor2/block2",
+        "count": "2169675",
+        "histogram_entries": 2729,
+        "peak_frontier_masks": 37,
+        "peak_packed_bytes": 314669,
+        "rows": 9,
+        "suffix_bound": true
+      },
+      {
+        "coefficient_digit_bytes": 1,
+        "columns": 1,
+        "component": "factor3/block0",
+        "count": "1",
+        "histogram_entries": 1,
+        "peak_frontier_masks": 2,
+        "peak_packed_bytes": 2,
+        "rows": 1,
+        "suffix_bound": true
+      },
+      {
+        "coefficient_digit_bytes": 1,
+        "columns": 4,
+        "component": "factor4/block0",
+        "count": "3",
+        "histogram_entries": 3,
+        "peak_frontier_masks": 5,
+        "peak_packed_bytes": 5130,
+        "rows": 3,
+        "suffix_bound": true
+      },
+      {
+        "coefficient_digit_bytes": 1,
+        "columns": 3,
+        "component": "factor5/block0",
+        "count": "3",
+        "histogram_entries": 3,
+        "peak_frontier_masks": 5,
+        "peak_packed_bytes": 1753,
+        "rows": 2,
+        "suffix_bound": true
+      },
+      {
+        "coefficient_digit_bytes": 1,
+        "columns": 3,
+        "component": "factor6/block0",
+        "count": "3",
+        "histogram_entries": 2,
+        "peak_frontier_masks": 4,
+        "peak_packed_bytes": 4,
+        "rows": 1,
+        "suffix_bound": true
+      },
+      {
+        "coefficient_digit_bytes": 1,
+        "columns": 5,
+        "component": "factor7/block0",
+        "count": "8",
+        "histogram_entries": 8,
+        "peak_frontier_masks": 6,
+        "peak_packed_bytes": 6344,
+        "rows": 2,
+        "suffix_bound": true
+      },
+      {
+        "coefficient_digit_bytes": 1,
+        "columns": 1,
+        "component": "factor8/block0",
+        "count": "1",
+        "histogram_entries": 1,
+        "peak_frontier_masks": 2,
+        "peak_packed_bytes": 2,
+        "rows": 1,
+        "suffix_bound": true
+      },
+      {
+        "coefficient_digit_bytes": 1,
+        "columns": 4,
+        "component": "factor9/block0",
+        "count": "3",
+        "histogram_entries": 3,
+        "peak_frontier_masks": 4,
+        "peak_packed_bytes": 556,
+        "rows": 3,
+        "suffix_bound": true
+      },
+      {
+        "coefficient_digit_bytes": 1,
+        "columns": 2,
+        "component": "factor10/block0",
+        "count": "2",
+        "histogram_entries": 2,
+        "peak_frontier_masks": 3,
+        "peak_packed_bytes": 5,
+        "rows": 1,
+        "suffix_bound": true
+      },
+      {
+        "coefficient_digit_bytes": 1,
+        "columns": 4,
+        "component": "factor11/block0",
+        "count": "5",
+        "histogram_entries": 5,
+        "peak_frontier_masks": 4,
+        "peak_packed_bytes": 742,
+        "rows": 2,
+        "suffix_bound": true
+      },
+      {
+        "coefficient_digit_bytes": 1,
+        "columns": 1,
+        "component": "factor12/block0",
+        "count": "1",
+        "histogram_entries": 1,
+        "peak_frontier_masks": 2,
+        "peak_packed_bytes": 2,
+        "rows": 1,
+        "suffix_bound": true
+      }
+    ],
+    "elapsed_seconds": 0.0966518489876762,
+    "peak_states": 13909,
+    "process_peak_rss_kib": 118316,
+    "transitions": 2908
+  }
+}

@@ -1,0 +1,49 @@
+{
+  "cardinality": {
+    "reason": null,
+    "state": "EXACT",
+    "value_decimal": "349149"
+  },
+  "limited_parity": "NOT_APPLICABLE",
+  "measurement": {
+    "counting_seconds": 31.787242876016535,
+    "family_construction_seconds": 1.7249595239991322,
+    "integration_reconstruction_seconds": 3.436112453986425,
+    "integration_seconds": 25.45359538498451,
+    "memory_kib": {
+      "VmHWM": 123040,
+      "VmRSS": 116924
+    },
+    "total_seconds": 62.427133568999125
+  },
+  "metrics": null,
+  "primary": null,
+  "projection": {
+    "state": "UNAVAILABLE_EXPLICIT_FAILURE"
+  },
+  "query_calls": 964,
+  "states": {
+    "cardinality_counting": {
+      "mode": "CONSUMED_VALIDATED_SIDECAR_NO_RECOUNT",
+      "reason": null,
+      "state": "EXACT"
+    },
+    "exact_queries": {
+      "reason": "Exact-cover search limit reached; result is unresolved",
+      "state": "COMPUTATION_UNRESOLVED"
+    },
+    "family_construction": {
+      "reason": null,
+      "state": "COMPLETE"
+    },
+    "metric_projection": {
+      "reason": null,
+      "state": "BLOCKED_BY_QUERY_FAILURE"
+    },
+    "provenance_validation": {
+      "reason": null,
+      "state": "VERIFIED"
+    }
+  },
+  "status": null
+}

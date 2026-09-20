@@ -1,0 +1,205 @@
+{
+  "arm": "margin-0.25",
+  "audit": {
+    "cardinality": {
+      "reason": null,
+      "state": "EXACT",
+      "value_decimal": "349149"
+    },
+    "limited_parity": "NOT_APPLICABLE",
+    "measurement": {
+      "counting_seconds": 31.787242876016535,
+      "family_construction_seconds": 1.7249595239991322,
+      "integration_reconstruction_seconds": 3.436112453986425,
+      "integration_seconds": 25.45359538498451,
+      "memory_kib": {
+        "VmHWM": 123040,
+        "VmRSS": 116924
+      },
+      "total_seconds": 62.427133568999125
+    },
+    "metrics": null,
+    "primary": null,
+    "projection": {
+      "state": "UNAVAILABLE_EXPLICIT_FAILURE"
+    },
+    "query_calls": 964,
+    "states": {
+      "cardinality_counting": {
+        "mode": "CONSUMED_VALIDATED_SIDECAR_NO_RECOUNT",
+        "reason": null,
+        "state": "EXACT"
+      },
+      "exact_queries": {
+        "reason": "Exact-cover search limit reached; result is unresolved",
+        "state": "COMPUTATION_UNRESOLVED"
+      },
+      "family_construction": {
+        "reason": null,
+        "state": "COMPLETE"
+      },
+      "metric_projection": {
+        "reason": null,
+        "state": "BLOCKED_BY_QUERY_FAILURE"
+      },
+      "provenance_validation": {
+        "reason": null,
+        "state": "VERIFIED"
+      }
+    },
+    "status": null
+  },
+  "capture": "BETWEEN-DEVICE-REPL-V1-20260919-024341",
+  "counting": {
+    "method": "KRAKEN_DRAFT2_IEEE_MONOTONE_PIVOT_COUNT_V1",
+    "packed_polynomial_bytes": 0,
+    "reason": null,
+    "state": "EXACT",
+    "statistics": {
+      "checkpoints": [],
+      "elapsed_seconds": 31.787242876016535,
+      "peak_states": 205669,
+      "process_peak_rss_kib": 123040,
+      "transitions": 2342175
+    },
+    "value_decimal": "349149"
+  },
+  "eligible_per_fragment": [
+    193,
+    3,
+    18,
+    2,
+    97
+  ],
+  "episode": 3,
+  "failure": {
+    "last_progress": [
+      "{\"stage\": \"staged_integration\"}",
+      "{\"stage\": \"projection_checks\"}",
+      "{\"stage\": \"complete\"}"
+    ],
+    "reason": null,
+    "reproduction": {
+      "memory_kib": {
+        "VmHWM": 119012,
+        "VmRSS": 78500
+      },
+      "reconstruction_seconds": 3.452446297975257,
+      "seconds": 25.404200757999206,
+      "state": "BYTE_IDENTICAL"
+    },
+    "resource_violations": [],
+    "stages": {
+      "exact_queries": {
+        "reason": "Exact-cover search limit reached; result is unresolved",
+        "state": "COMPUTATION_UNRESOLVED"
+      },
+      "metric_projection": {
+        "reason": null,
+        "state": "BLOCKED_BY_QUERY_FAILURE"
+      }
+    }
+  },
+  "family_sha256": "a011e756b107d3583a3ee77f0a2ba8df0132e381babe02d2f50b83237d80e3b4",
+  "fragments_sha256": "1d126597caf18ec60aa185b5b9d93dbf1a694ed1d6b2929f2e68675d31222370",
+  "input_sha256": "097c48395cb5cabb639a74d697d03a431b941f9f64cfebafa2e23a2b3d8053ab",
+  "label": "C6-E03",
+  "model_sha256": "fc67536790b7f24f9a5598cb280e5cb4a5d8ead6101437de5c29db235053deff",
+  "original_fragment_count": 5,
+  "passed": false,
+  "plan_sha256": "e6917efb66bc9eda0eddb94ec2d39a7c8c7271fcd1251b61d3eff70c17556728",
+  "record": {
+    "alternative_membership_count": null,
+    "arm": "margin-0.25",
+    "association_availability": "UNAVAILABLE_EXPLICIT_FAILURE",
+    "association_status": null,
+    "candidate_context_sha256": "1d126597caf18ec60aa185b5b9d93dbf1a694ed1d6b2929f2e68675d31222370",
+    "capture": "BETWEEN-DEVICE-REPL-V1-20260919-024341",
+    "cardinality": {
+      "reason": null,
+      "state": "EXACT",
+      "value_decimal": "349149"
+    },
+    "counting_transitions": 2342175,
+    "eligible_candidates_per_fragment": [
+      193,
+      3,
+      18,
+      2,
+      97
+    ],
+    "episode": 3,
+    "family_sha256": "a011e756b107d3583a3ee77f0a2ba8df0132e381babe02d2f50b83237d80e3b4",
+    "fragment_count": 5,
+    "input_sha256": "097c48395cb5cabb639a74d697d03a431b941f9f64cfebafa2e23a2b3d8053ab",
+    "invariant_membership_count": null,
+    "model_sha256": "fc67536790b7f24f9a5598cb280e5cb4a5d8ead6101437de5c29db235053deff",
+    "packed_polynomial_bytes": 0,
+    "peak_live_states": 205669,
+    "persistent_track_count": null,
+    "possible_path_count": null,
+    "primary": null,
+    "query_calls": 964,
+    "reproduction_seconds": 25.404200757999206,
+    "runtimes": {
+      "counting_seconds": 31.787242876016535,
+      "family_construction_seconds": 1.7249595239991322,
+      "integration_reconstruction_seconds": 3.436112453986425,
+      "integration_seconds": 25.45359538498451,
+      "memory_kib": {
+        "VmHWM": 123040,
+        "VmRSS": 116924
+      },
+      "total_seconds": 62.427133568999125
+    },
+    "sidecar_sha256": "33faa62b36bc62f9c15e5ffddbd2c73402991bd5164a0bcbd887ea04ee62b499",
+    "stages": {
+      "cardinality_counting": {
+        "mode": "CONSUMED_VALIDATED_SIDECAR_NO_RECOUNT",
+        "reason": null,
+        "state": "EXACT"
+      },
+      "exact_queries": {
+        "reason": "Exact-cover search limit reached; result is unresolved",
+        "state": "COMPUTATION_UNRESOLVED"
+      },
+      "family_construction": {
+        "reason": null,
+        "state": "COMPLETE"
+      },
+      "metric_projection": {
+        "reason": null,
+        "state": "BLOCKED_BY_QUERY_FAILURE"
+      },
+      "provenance_validation": {
+        "reason": null,
+        "state": "VERIFIED"
+      }
+    },
+    "worker_peak_rss_kib": 123040
+  },
+  "reload": {
+    "memory_kib": {
+      "VmHWM": 119012,
+      "VmRSS": 78500
+    },
+    "reconstruction_seconds": 3.452446297975257,
+    "seconds": 25.404200757999206,
+    "state": "BYTE_IDENTICAL"
+  },
+  "reload_worker": {
+    "elapsed_seconds": 26.025244807999115,
+    "exit_code": 0,
+    "observed_peak_rss_kib": 119012,
+    "reason": null
+  },
+  "resource_violations": [],
+  "sidecar_sha256": "33faa62b36bc62f9c15e5ffddbd2c73402991bd5164a0bcbd887ea04ee62b499",
+  "structural_reason": "Every saved episode in the fixed six-capture set; no outcome selection.",
+  "worker": {
+    "elapsed_seconds": 62.86367945000529,
+    "exit_code": 0,
+    "observed_peak_rss_kib": 123040,
+    "reason": null
+  }
+}

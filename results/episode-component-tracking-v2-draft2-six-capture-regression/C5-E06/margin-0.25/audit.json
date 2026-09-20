@@ -1,0 +1,62 @@
+{
+  "cardinality": {
+    "reason": null,
+    "state": "EXACT",
+    "value_decimal": "26"
+  },
+  "limited_parity": "PASS",
+  "measurement": {
+    "counting_seconds": 0.007149576005758718,
+    "family_construction_seconds": 0.004403480998007581,
+    "integration_reconstruction_seconds": 0.009838940022746101,
+    "integration_seconds": 0.06476429701433517,
+    "memory_kib": {
+      "VmHWM": 118604,
+      "VmRSS": 75996
+    },
+    "total_seconds": 0.09714721300406381
+  },
+  "metrics": {
+    "abstained": true,
+    "alternative_path_count": 24,
+    "eligible_candidate_count": 226,
+    "invariant_path_count": 210,
+    "original_fragment_count": 5,
+    "persistent_path_count": 4,
+    "possible_path_count": 234,
+    "structural_constraint_status": "VALID_BY_EXACT_CONSTRAINTS",
+    "truth_metrics": null,
+    "truth_metrics_state": "NOT_APPLICABLE",
+    "union_link_count": 18
+  },
+  "primary": null,
+  "projection": {
+    "parity": "EXACT_QUERY_PROJECTION_CONSISTENCY",
+    "state": "PASS"
+  },
+  "query_calls": 288,
+  "states": {
+    "cardinality_counting": {
+      "mode": "CONSUMED_VALIDATED_SIDECAR_NO_RECOUNT",
+      "reason": null,
+      "state": "EXACT"
+    },
+    "exact_queries": {
+      "reason": null,
+      "state": "EXACT"
+    },
+    "family_construction": {
+      "reason": null,
+      "state": "COMPLETE"
+    },
+    "metric_projection": {
+      "reason": null,
+      "state": "COMPLETE"
+    },
+    "provenance_validation": {
+      "reason": null,
+      "state": "VERIFIED"
+    }
+  },
+  "status": "AMBIGUOUS_ASSOCIATION"
+}

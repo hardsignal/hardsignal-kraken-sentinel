@@ -1,0 +1,25 @@
+{
+  "count_state": "COMPUTATION_UNRESOLVED",
+  "exact_count_decimal": null,
+  "failure": {
+    "elapsed_seconds": 28.859368369012373,
+    "limit": 250000,
+    "location": {
+      "phase": "IEEE prefix DAG",
+      "position": 22
+    },
+    "peak_states": 250001,
+    "reason": "frontier/state budget exceeded",
+    "states": 250001,
+    "transitions": 1260885
+  },
+  "method": "KRAKEN_DRAFT2_IEEE_MONOTONE_PIVOT_COUNT_V1",
+  "packed_polynomial_bytes": 0,
+  "statistics": {
+    "checkpoints": [],
+    "elapsed_seconds": 28.866295568004716,
+    "peak_states": 250001,
+    "process_peak_rss_kib": 129992,
+    "transitions": 1260885
+  }
+}

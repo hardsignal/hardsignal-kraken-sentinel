@@ -1,0 +1,56 @@
+{
+  "arithmetic_policy": "FROZEN_DRAFT2_BINARY64_PATH_COST_RIGHT_FOLD_AND_PREFIX_MARGIN_GLOBAL_EPISODE_V1",
+  "cardinality": {
+    "reason": null,
+    "state": "EXACT",
+    "value_decimal": "1"
+  },
+  "certificate": {
+    "policy": "Exact monotone binary64 addition preimages; frozen chronological fold and all prefix predicates",
+    "rounding_or_quantization": false,
+    "version": "KRAKEN_DRAFT2_IEEE_MONOTONE_PIVOT_COUNT_V1"
+  },
+  "computational_limits": {
+    "max_polynomial_bytes": 33554432,
+    "max_seconds": 60,
+    "max_states": 250000,
+    "max_transitions": 5000000
+  },
+  "counter_source_hashes": {
+    "analysis/episode_component_tracking_v2_draft1.py": "a24a5617ca9f4129c6970fd0a9743f8b78610c58567e8a557f21dee2a055f66c",
+    "analysis/episode_component_tracking_v2_draft2_cardinality_sidecar.py": "3b05374ed34667b82f1f420fee9ccab9a096efa2c2426fd73fe1b01a371f5142",
+    "analysis/episode_component_tracking_v2_draft2_column_count.py": "03c0f8493ab571caed7bb48eca2c2d6327f021c7a94e9a82ec2add75d5327fed",
+    "analysis/episode_component_tracking_v2_draft2_e02_margin1_count.py": "ba1ad497cd7dc0412a42c52bf62005002babd871e5d55c152a1be7b10c6c7a00",
+    "analysis/episode_component_tracking_v2_draft2_exact_count.py": "4c543655c738fcc9d2b771f2cb3ae26106304e2ff2f86a201a47d77cd5bd18a3",
+    "analysis/episode_component_tracking_v2_draft2_exact_solver.py": "f5c4a907af24958739bf7a2d90fd27d2e602c295a74c951bb52525ccd10023a1",
+    "analysis/episode_component_tracking_v2_draft2_experiment.py": "73dc27741f3ad5fd710f94a8989a930bb731cd196e32ff2d000ee48e00b9d39a",
+    "analysis/episode_component_tracking_v2_draft2_staged.py": "7bae7314d50494f45bb0d0a72331d38cc4024205e770f825202c44ff8be4bb80",
+    "analysis/episode_component_tracking_v2_draft2_staged_queries.py": "b6fcfe3be1fe64be5cad81d549ba1193167cef12a0752797b47fa298a7571615",
+    "analysis/regress_episode_component_tracking_v2_draft2_limited.py": "a464dca279cd5ffc2a2eda88980a4819e37f7ce41afb6483c891786fd1b2e3bc",
+    "analysis/regress_episode_component_tracking_v2_draft2_six_capture.py": "1aab7e973a491fc98431ed1de66b4cb431e3e7c95c6d72db41debfc20fe7e5be",
+    "tests/test_episode_component_tracking_v2_draft2_cardinality_sidecar.py": "4e8d4c0358cde820d46865e3eea9e7c3ed4ed96083fa4a2840b44e7238b3906d",
+    "tests/test_episode_component_tracking_v2_draft2_column_count.py": "bdf923c789ce88de880a82a8fedbd457404ca553310f7923d91a2ee0404f0934",
+    "tests/test_episode_component_tracking_v2_draft2_e02_margin1_count.py": "4761e30dfdd9dbd9449991982edb739eb0fde1fa0c0b51cb88c518aa07b81ee0",
+    "tests/test_episode_component_tracking_v2_draft2_exact_count.py": "3de23c86e259c31ab0d1c94d467216e6ac2ec8d89a2c7ec374a88d31d1eb7985",
+    "tests/test_episode_component_tracking_v2_draft2_exact_solver.py": "a1126708158a0de0989c09377fa0414435cfd6e882ddc3611aa40280d14982a2",
+    "tests/test_episode_component_tracking_v2_draft2_limited_regression.py": "80c71f2a7a7ebacd03524171193257705cc52f0bf22ee68b2312e5d3a8eb07a3",
+    "tests/test_episode_component_tracking_v2_draft2_margin1_investigation.py": "212a47e1267b9726c05b4fa6b1bfc3559692f20c7a2b3d2d384d1090577d89a8",
+    "tests/test_episode_component_tracking_v2_draft2_six_capture.py": "c77f9c35254a9786b4fc8c286692782dcb6a6e2abd3745addf015bf43454082f",
+    "tests/test_episode_component_tracking_v2_draft2_staged.py": "a5beee3e39c5b2a5418a146f42b2b642739bcd3204e053fe07e4e0682b0e5829"
+  },
+  "counting_definition_version": "UNORDERED_COMPLETE_CANDIDATE_PATH_PARTITION_MAX_LINKS_V1",
+  "family_artifact": "results/episode-component-tracking-v2-draft2-six-capture-regression/C5-E06/margin-0/family.json",
+  "family_sha256": "50b57da0d4270942b07765d242e2abb544f4864390e4eb4a894fced5bcb8c3b5",
+  "format": "KRAKEN_DRAFT2_RETAINED_CARDINALITY_V1",
+  "margin_hex": "0x0.0p+0",
+  "method": "KRAKEN_DRAFT2_IEEE_MONOTONE_PIVOT_COUNT_V1",
+  "model_sha256": "047f412c4ee4cc358766320b74ea21092aa552c884312604f97de596c0baa9e3",
+  "runtime_state_statistics": {
+    "checkpoints": [],
+    "elapsed_seconds": 0.00447119798627682,
+    "peak_states": 11,
+    "process_peak_rss_kib": 118660,
+    "transitions": 408
+  },
+  "scope": "episode"
+}

@@ -1,0 +1,351 @@
+{
+  "arm": "margin-0.25",
+  "audit": {
+    "cardinality": {
+      "reason": null,
+      "state": "EXACT",
+      "value_decimal": "17067800502243"
+    },
+    "limited_parity": "PASS",
+    "measurement": {
+      "counting_seconds": 0.0966518489876762,
+      "family_construction_seconds": 0.20776510398718528,
+      "integration_reconstruction_seconds": 0.43046037101885304,
+      "integration_seconds": 27.910416261001956,
+      "memory_kib": {
+        "VmHWM": 118316,
+        "VmRSS": 75784
+      },
+      "total_seconds": 28.680466095014708
+    },
+    "metrics": {
+      "abstained": true,
+      "alternative_path_count": 355,
+      "eligible_candidate_count": 227,
+      "invariant_path_count": 86,
+      "original_fragment_count": 2,
+      "persistent_path_count": 0,
+      "possible_path_count": 441,
+      "structural_constraint_status": "VALID_BY_EXACT_CONSTRAINTS",
+      "truth_metrics": null,
+      "truth_metrics_state": "NOT_APPLICABLE",
+      "union_link_count": 275
+    },
+    "primary": null,
+    "projection": {
+      "parity": "EXACT_QUERY_PROJECTION_CONSISTENCY",
+      "state": "PASS"
+    },
+    "query_calls": 840,
+    "states": {
+      "cardinality_counting": {
+        "mode": "CONSUMED_VALIDATED_SIDECAR_NO_RECOUNT",
+        "reason": null,
+        "state": "EXACT"
+      },
+      "exact_queries": {
+        "reason": null,
+        "state": "EXACT"
+      },
+      "family_construction": {
+        "reason": null,
+        "state": "COMPLETE"
+      },
+      "metric_projection": {
+        "reason": null,
+        "state": "COMPLETE"
+      },
+      "provenance_validation": {
+        "reason": null,
+        "state": "VERIFIED"
+      }
+    },
+    "status": "AMBIGUOUS_ASSOCIATION"
+  },
+  "capture": "PIPELINE-TPMS-008-20260918-003900",
+  "counting": {
+    "method": "certified column frontier exact generating function",
+    "packed_polynomial_bytes": 323963,
+    "reason": null,
+    "state": "EXACT",
+    "statistics": {
+      "checkpoints": [
+        {
+          "coefficient_digit_bytes": 4,
+          "columns": 17,
+          "component": "factor0/block0",
+          "count": "1529",
+          "histogram_entries": 771,
+          "peak_frontier_masks": 15,
+          "peak_packed_bytes": 148595,
+          "rows": 12,
+          "suffix_bound": true
+        },
+        {
+          "coefficient_digit_bytes": 1,
+          "columns": 1,
+          "component": "factor1/block0",
+          "count": "1",
+          "histogram_entries": 1,
+          "peak_frontier_masks": 2,
+          "peak_packed_bytes": 2,
+          "rows": 1,
+          "suffix_bound": true
+        },
+        {
+          "coefficient_digit_bytes": 4,
+          "columns": 28,
+          "component": "factor2/block0",
+          "count": "3434629",
+          "histogram_entries": 2904,
+          "peak_frontier_masks": 32,
+          "peak_packed_bytes": 323963,
+          "rows": 8,
+          "suffix_bound": true
+        },
+        {
+          "coefficient_digit_bytes": 1,
+          "columns": 3,
+          "component": "factor2/block1",
+          "count": "3",
+          "histogram_entries": 3,
+          "peak_frontier_masks": 4,
+          "peak_packed_bytes": 2189,
+          "rows": 1,
+          "suffix_bound": true
+        },
+        {
+          "coefficient_digit_bytes": 4,
+          "columns": 22,
+          "component": "factor2/block2",
+          "count": "2169675",
+          "histogram_entries": 2729,
+          "peak_frontier_masks": 37,
+          "peak_packed_bytes": 314669,
+          "rows": 9,
+          "suffix_bound": true
+        },
+        {
+          "coefficient_digit_bytes": 1,
+          "columns": 1,
+          "component": "factor3/block0",
+          "count": "1",
+          "histogram_entries": 1,
+          "peak_frontier_masks": 2,
+          "peak_packed_bytes": 2,
+          "rows": 1,
+          "suffix_bound": true
+        },
+        {
+          "coefficient_digit_bytes": 1,
+          "columns": 4,
+          "component": "factor4/block0",
+          "count": "3",
+          "histogram_entries": 3,
+          "peak_frontier_masks": 5,
+          "peak_packed_bytes": 5130,
+          "rows": 3,
+          "suffix_bound": true
+        },
+        {
+          "coefficient_digit_bytes": 1,
+          "columns": 3,
+          "component": "factor5/block0",
+          "count": "3",
+          "histogram_entries": 3,
+          "peak_frontier_masks": 5,
+          "peak_packed_bytes": 1753,
+          "rows": 2,
+          "suffix_bound": true
+        },
+        {
+          "coefficient_digit_bytes": 1,
+          "columns": 3,
+          "component": "factor6/block0",
+          "count": "3",
+          "histogram_entries": 2,
+          "peak_frontier_masks": 4,
+          "peak_packed_bytes": 4,
+          "rows": 1,
+          "suffix_bound": true
+        },
+        {
+          "coefficient_digit_bytes": 1,
+          "columns": 5,
+          "component": "factor7/block0",
+          "count": "8",
+          "histogram_entries": 8,
+          "peak_frontier_masks": 6,
+          "peak_packed_bytes": 6344,
+          "rows": 2,
+          "suffix_bound": true
+        },
+        {
+          "coefficient_digit_bytes": 1,
+          "columns": 1,
+          "component": "factor8/block0",
+          "count": "1",
+          "histogram_entries": 1,
+          "peak_frontier_masks": 2,
+          "peak_packed_bytes": 2,
+          "rows": 1,
+          "suffix_bound": true
+        },
+        {
+          "coefficient_digit_bytes": 1,
+          "columns": 4,
+          "component": "factor9/block0",
+          "count": "3",
+          "histogram_entries": 3,
+          "peak_frontier_masks": 4,
+          "peak_packed_bytes": 556,
+          "rows": 3,
+          "suffix_bound": true
+        },
+        {
+          "coefficient_digit_bytes": 1,
+          "columns": 2,
+          "component": "factor10/block0",
+          "count": "2",
+          "histogram_entries": 2,
+          "peak_frontier_masks": 3,
+          "peak_packed_bytes": 5,
+          "rows": 1,
+          "suffix_bound": true
+        },
+        {
+          "coefficient_digit_bytes": 1,
+          "columns": 4,
+          "component": "factor11/block0",
+          "count": "5",
+          "histogram_entries": 5,
+          "peak_frontier_masks": 4,
+          "peak_packed_bytes": 742,
+          "rows": 2,
+          "suffix_bound": true
+        },
+        {
+          "coefficient_digit_bytes": 1,
+          "columns": 1,
+          "component": "factor12/block0",
+          "count": "1",
+          "histogram_entries": 1,
+          "peak_frontier_masks": 2,
+          "peak_packed_bytes": 2,
+          "rows": 1,
+          "suffix_bound": true
+        }
+      ],
+      "elapsed_seconds": 0.0966518489876762,
+      "peak_states": 13909,
+      "process_peak_rss_kib": 118316,
+      "transitions": 2908
+    },
+    "value_decimal": "17067800502243"
+  },
+  "eligible_per_fragment": [
+    145,
+    82
+  ],
+  "episode": 8,
+  "failure": null,
+  "family_sha256": "d18abcd3199ddfff2bd06301991489973e81cf9552ab539bff42a38c1d440dd5",
+  "fragments_sha256": "e5d32c221e708c85aeae5cffb838cba7940aabe5d060316e527a8fa146389068",
+  "input_sha256": "097c48395cb5cabb639a74d697d03a431b941f9f64cfebafa2e23a2b3d8053ab",
+  "label": "C4-E08",
+  "model_sha256": "2a97b63ba5d207ce47517b9e6f70cfc834f1004faae88cea7d184e9398d02321",
+  "original_fragment_count": 2,
+  "passed": true,
+  "plan_sha256": "e6917efb66bc9eda0eddb94ec2d39a7c8c7271fcd1251b61d3eff70c17556728",
+  "record": {
+    "alternative_membership_count": 355,
+    "arm": "margin-0.25",
+    "association_availability": "COMPLETE",
+    "association_status": "AMBIGUOUS_ASSOCIATION",
+    "candidate_context_sha256": "e5d32c221e708c85aeae5cffb838cba7940aabe5d060316e527a8fa146389068",
+    "capture": "PIPELINE-TPMS-008-20260918-003900",
+    "cardinality": {
+      "reason": null,
+      "state": "EXACT",
+      "value_decimal": "17067800502243"
+    },
+    "counting_transitions": 2908,
+    "eligible_candidates_per_fragment": [
+      145,
+      82
+    ],
+    "episode": 8,
+    "family_sha256": "d18abcd3199ddfff2bd06301991489973e81cf9552ab539bff42a38c1d440dd5",
+    "fragment_count": 2,
+    "input_sha256": "097c48395cb5cabb639a74d697d03a431b941f9f64cfebafa2e23a2b3d8053ab",
+    "invariant_membership_count": 86,
+    "model_sha256": "2a97b63ba5d207ce47517b9e6f70cfc834f1004faae88cea7d184e9398d02321",
+    "packed_polynomial_bytes": 323963,
+    "peak_live_states": 13909,
+    "persistent_track_count": 0,
+    "possible_path_count": 441,
+    "primary": null,
+    "query_calls": 840,
+    "reproduction_seconds": 28.086520548997214,
+    "runtimes": {
+      "counting_seconds": 0.0966518489876762,
+      "family_construction_seconds": 0.20776510398718528,
+      "integration_reconstruction_seconds": 0.43046037101885304,
+      "integration_seconds": 27.910416261001956,
+      "memory_kib": {
+        "VmHWM": 118316,
+        "VmRSS": 75784
+      },
+      "total_seconds": 28.680466095014708
+    },
+    "sidecar_sha256": "3cda58d4417b967552523310278741cb3a60c4c1d801f6f7bf4baf2db8774881",
+    "stages": {
+      "cardinality_counting": {
+        "mode": "CONSUMED_VALIDATED_SIDECAR_NO_RECOUNT",
+        "reason": null,
+        "state": "EXACT"
+      },
+      "exact_queries": {
+        "reason": null,
+        "state": "EXACT"
+      },
+      "family_construction": {
+        "reason": null,
+        "state": "COMPLETE"
+      },
+      "metric_projection": {
+        "reason": null,
+        "state": "COMPLETE"
+      },
+      "provenance_validation": {
+        "reason": null,
+        "state": "VERIFIED"
+      }
+    },
+    "worker_peak_rss_kib": 118892
+  },
+  "reload": {
+    "memory_kib": {
+      "VmHWM": 118892,
+      "VmRSS": 77988
+    },
+    "reconstruction_seconds": 0.44435257802251726,
+    "seconds": 28.086520548997214,
+    "state": "BYTE_IDENTICAL"
+  },
+  "reload_worker": {
+    "elapsed_seconds": 28.627568494004663,
+    "exit_code": 0,
+    "observed_peak_rss_kib": 118892,
+    "reason": null
+  },
+  "resource_violations": [],
+  "sidecar_sha256": "3cda58d4417b967552523310278741cb3a60c4c1d801f6f7bf4baf2db8774881",
+  "structural_reason": "Every saved episode in the fixed six-capture set; no outcome selection.",
+  "worker": {
+    "elapsed_seconds": 29.22796419300721,
+    "exit_code": 0,
+    "observed_peak_rss_kib": 118316,
+    "reason": null
+  }
+}

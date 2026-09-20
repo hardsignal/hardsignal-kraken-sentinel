@@ -1,0 +1,84 @@
+{
+  "cardinality": {
+    "reason": {
+      "elapsed_seconds": 3.1253782639978454,
+      "limit": 5000000,
+      "location": {
+        "phase": "IEEE streaming pivot join",
+        "pivot": 5
+      },
+      "peak_states": 12745,
+      "reason": "transition budget exceeded",
+      "states": 12745,
+      "transitions": 5000001
+    },
+    "state": "COMPUTATION_UNRESOLVED",
+    "value_decimal": null
+  },
+  "limited_parity": "NOT_APPLICABLE",
+  "measurement": {
+    "counting_seconds": 3.1255174599937163,
+    "family_construction_seconds": 0.052269061998231336,
+    "integration_reconstruction_seconds": 0.10624652900150977,
+    "integration_seconds": 0.6037863270030357,
+    "memory_kib": {
+      "VmHWM": 118548,
+      "VmRSS": 77344
+    },
+    "total_seconds": 3.9045000770129263
+  },
+  "metrics": {
+    "abstained": true,
+    "alternative_path_count": 160,
+    "eligible_candidate_count": 279,
+    "invariant_path_count": 231,
+    "original_fragment_count": 5,
+    "persistent_path_count": 54,
+    "possible_path_count": 391,
+    "structural_constraint_status": "VALID_BY_EXACT_CONSTRAINTS",
+    "truth_metrics": null,
+    "truth_metrics_state": "NOT_APPLICABLE",
+    "union_link_count": 198
+  },
+  "primary": null,
+  "projection": {
+    "parity": "EXACT_QUERY_PROJECTION_CONSISTENCY",
+    "state": "PASS"
+  },
+  "query_calls": 475,
+  "states": {
+    "cardinality_counting": {
+      "mode": "CONSUMED_VALIDATED_SIDECAR_NO_RECOUNT",
+      "reason": {
+        "elapsed_seconds": 3.1253782639978454,
+        "limit": 5000000,
+        "location": {
+          "phase": "IEEE streaming pivot join",
+          "pivot": 5
+        },
+        "peak_states": 12745,
+        "reason": "transition budget exceeded",
+        "states": 12745,
+        "transitions": 5000001
+      },
+      "state": "COMPUTATION_UNRESOLVED"
+    },
+    "exact_queries": {
+      "reason": null,
+      "state": "EXACT"
+    },
+    "family_construction": {
+      "reason": null,
+      "state": "COMPLETE"
+    },
+    "metric_projection": {
+      "reason": null,
+      "state": "COMPLETE"
+    },
+    "provenance_validation": {
+      "reason": null,
+      "state": "VERIFIED"
+    }
+  },
+  "status": "MULTIPLE_PERSISTENT_TRACKS"
+}

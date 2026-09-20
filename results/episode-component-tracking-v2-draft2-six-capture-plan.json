@@ -1,0 +1,679 @@
+{
+  "arms": [
+    "connected",
+    "margin-0",
+    "margin-0.25",
+    "margin-1"
+  ],
+  "captures": [
+    "PIPELINE-TPMS-004-20260917-233423",
+    "PIPELINE-TPMS-005-20260917-235439",
+    "PIPELINE-TPMS-007-20260918-002700",
+    "PIPELINE-TPMS-008-20260918-003900",
+    "BETWEEN-DEVICE-V1-20260919-022917",
+    "BETWEEN-DEVICE-REPL-V1-20260919-024341"
+  ],
+  "case_count": 164,
+  "count_limits": {
+    "max_polynomial_bytes": 33554432,
+    "max_seconds": 60,
+    "max_states": 250000,
+    "max_transitions": 5000000
+  },
+  "counter": "analysis/episode_component_tracking_v2_draft2_e02_margin1_count.py",
+  "counter_sha256": "ba1ad497cd7dc0412a42c52bf62005002babd871e5d55c152a1be7b10c6c7a00",
+  "episode_count": 41,
+  "family_construction_seconds": 60,
+  "format": "KRAKEN_DRAFT2_SIX_CAPTURE_PLAN_V1",
+  "full_matrix": false,
+  "git_commit": "8d58ec0744b00a952d81059c8db2e805356a342e",
+  "input_artifact": "results/episode-component-tracking-v2-draft2-experiment/native__w200__connected.json",
+  "input_sha256": "097c48395cb5cabb639a74d697d03a431b941f9f64cfebafa2e23a2b3d8053ab",
+  "policy": "All episodes, four fixed arms, no substitutions or limit changes. Revalidate limited seven episodes first; stop broader stage on unexplained control/parity failure. Individual broader failures remain explicit and other cases continue.",
+  "query_limits": {
+    "max_calls": 5000,
+    "max_seconds": 120
+  },
+  "scientific_semantics": {
+    "coherent_range_hz": 100,
+    "coverage": 0.6,
+    "eligible_abs_hz": [
+      100,
+      11500
+    ],
+    "fragment_increment": [
+      1,
+      2
+    ],
+    "persistent_support": 3,
+    "step_hz": 50,
+    "width_ceiling_hz": 200
+  },
+  "selected": [
+    {
+      "capture": "PIPELINE-TPMS-004-20260917-233423",
+      "eligible_per_fragment": [
+        175,
+        2,
+        16,
+        2,
+        95
+      ],
+      "episode": 1,
+      "fragments_sha256": "f7af41b15b0e68c4d2a76c25de4d37ed964147969176ca53c0c151b30c5730f3",
+      "label": "C1-E01",
+      "original_fragment_count": 5,
+      "structural_reason": "Every saved episode in the fixed six-capture set; no outcome selection."
+    },
+    {
+      "capture": "PIPELINE-TPMS-004-20260917-233423",
+      "eligible_per_fragment": [
+        189,
+        1,
+        19,
+        4,
+        71
+      ],
+      "episode": 2,
+      "fragments_sha256": "e96f2dbb695e9d4cb901ca2a5c7afe785489446f7e434a1c00ba40584d3c1b8e",
+      "label": "C1-E02",
+      "original_fragment_count": 5,
+      "structural_reason": "Every saved episode in the fixed six-capture set; no outcome selection."
+    },
+    {
+      "capture": "PIPELINE-TPMS-004-20260917-233423",
+      "eligible_per_fragment": [
+        138,
+        3,
+        6,
+        7,
+        47
+      ],
+      "episode": 3,
+      "fragments_sha256": "d1e0dd851cf6584cc08736b2a6956484349e564234b3f149b461535aaa75c94e",
+      "label": "C1-E03",
+      "original_fragment_count": 5,
+      "structural_reason": "Every saved episode in the fixed six-capture set; no outcome selection."
+    },
+    {
+      "capture": "PIPELINE-TPMS-004-20260917-233423",
+      "eligible_per_fragment": [
+        228,
+        3,
+        9,
+        3,
+        85
+      ],
+      "episode": 4,
+      "fragments_sha256": "d8afaa5b36503d65cd79201ac6dfcd317d64962e0f76bcfb324837cde8a2355d",
+      "label": "C1-E04",
+      "original_fragment_count": 5,
+      "structural_reason": "Every saved episode in the fixed six-capture set; no outcome selection."
+    },
+    {
+      "capture": "PIPELINE-TPMS-004-20260917-233423",
+      "eligible_per_fragment": [
+        2,
+        63,
+        7,
+        4,
+        3,
+        69
+      ],
+      "episode": 5,
+      "fragments_sha256": "8ce382bbe513f0f0481548a3caf92b49143cf6ae466cb73ac273adb778b06ee0",
+      "label": "C1-E05",
+      "original_fragment_count": 6,
+      "structural_reason": "Every saved episode in the fixed six-capture set; no outcome selection."
+    },
+    {
+      "capture": "PIPELINE-TPMS-004-20260917-233423",
+      "eligible_per_fragment": [
+        133,
+        6,
+        11,
+        74
+      ],
+      "episode": 6,
+      "fragments_sha256": "2c97b87ec9aa80117027ce9d54fdd1695740d84182793c4442132ef59743c401",
+      "label": "C1-E06",
+      "original_fragment_count": 4,
+      "structural_reason": "Every saved episode in the fixed six-capture set; no outcome selection."
+    },
+    {
+      "capture": "PIPELINE-TPMS-005-20260917-235439",
+      "eligible_per_fragment": [
+        191,
+        1,
+        12,
+        1,
+        78
+      ],
+      "episode": 1,
+      "fragments_sha256": "55ce18d69aa22b793cb5f0ac9c7485739565e1eb82b84b4e0d9cd5545efc67bd",
+      "label": "C2-E01",
+      "original_fragment_count": 5,
+      "structural_reason": "Every saved episode in the fixed six-capture set; no outcome selection."
+    },
+    {
+      "capture": "PIPELINE-TPMS-005-20260917-235439",
+      "eligible_per_fragment": [
+        179,
+        3,
+        4,
+        7,
+        68
+      ],
+      "episode": 2,
+      "fragments_sha256": "4b6bba11338759af485f7bc7932cb56179398a191d9ddd5276f75af4290a3184",
+      "label": "C2-E02",
+      "original_fragment_count": 5,
+      "structural_reason": "Every saved episode in the fixed six-capture set; no outcome selection."
+    },
+    {
+      "capture": "PIPELINE-TPMS-005-20260917-235439",
+      "eligible_per_fragment": [
+        181,
+        3,
+        6,
+        2,
+        99
+      ],
+      "episode": 3,
+      "fragments_sha256": "caa071d17f917795fdf2c8a3722202269fe4ce47560c134e30d1707dd5274ed0",
+      "label": "C2-E03",
+      "original_fragment_count": 5,
+      "structural_reason": "Every saved episode in the fixed six-capture set; no outcome selection."
+    },
+    {
+      "capture": "PIPELINE-TPMS-005-20260917-235439",
+      "eligible_per_fragment": [
+        0,
+        59,
+        11,
+        6,
+        1,
+        90
+      ],
+      "episode": 4,
+      "fragments_sha256": "cd67eaded60591f0c66bfb79e480258aecd4de0408be82f4943cbb7830d8db38",
+      "label": "C2-E04",
+      "original_fragment_count": 6,
+      "structural_reason": "Every saved episode in the fixed six-capture set; no outcome selection."
+    },
+    {
+      "capture": "PIPELINE-TPMS-005-20260917-235439",
+      "eligible_per_fragment": [
+        204,
+        5,
+        10,
+        1,
+        56
+      ],
+      "episode": 5,
+      "fragments_sha256": "e0de30f689e3a9f0e7a066130e6c70cb19c044ecda35430b38e6199e83efae10",
+      "label": "C2-E05",
+      "original_fragment_count": 5,
+      "structural_reason": "Every saved episode in the fixed six-capture set; no outcome selection."
+    },
+    {
+      "capture": "PIPELINE-TPMS-007-20260918-002700",
+      "eligible_per_fragment": [
+        196,
+        1,
+        6,
+        2,
+        77
+      ],
+      "episode": 1,
+      "fragments_sha256": "51b299c4835757c44c2c54ed17c618c392d9b583f6fd8304361dd93232ef1bcb",
+      "label": "C3-E01",
+      "original_fragment_count": 5,
+      "structural_reason": "Every saved episode in the fixed six-capture set; no outcome selection."
+    },
+    {
+      "capture": "PIPELINE-TPMS-007-20260918-002700",
+      "eligible_per_fragment": [
+        164,
+        1,
+        7,
+        2,
+        64
+      ],
+      "episode": 2,
+      "fragments_sha256": "c9a8d8107ed843ec57959910c160bdf8e56fcd91048c5a0c6743dc26e977eb00",
+      "label": "C3-E02",
+      "original_fragment_count": 5,
+      "structural_reason": "Every saved episode in the fixed six-capture set; no outcome selection."
+    },
+    {
+      "capture": "PIPELINE-TPMS-007-20260918-002700",
+      "eligible_per_fragment": [
+        0,
+        64,
+        4,
+        1,
+        1,
+        81
+      ],
+      "episode": 3,
+      "fragments_sha256": "1e845d4f2dedb28f4a124651080341c90b25a19ab7ac0df58029d7c77c5c6269",
+      "label": "C3-E03",
+      "original_fragment_count": 6,
+      "structural_reason": "Every saved episode in the fixed six-capture set; no outcome selection."
+    },
+    {
+      "capture": "PIPELINE-TPMS-007-20260918-002700",
+      "eligible_per_fragment": [
+        211,
+        2,
+        3,
+        2,
+        78
+      ],
+      "episode": 4,
+      "fragments_sha256": "2aa66443fe08aba31d33c3abf5b6faa19bb1a4c55592f044d796af6da4ea0014",
+      "label": "C3-E04",
+      "original_fragment_count": 5,
+      "structural_reason": "Every saved episode in the fixed six-capture set; no outcome selection."
+    },
+    {
+      "capture": "PIPELINE-TPMS-007-20260918-002700",
+      "eligible_per_fragment": [
+        5,
+        53,
+        5,
+        2,
+        0,
+        40
+      ],
+      "episode": 5,
+      "fragments_sha256": "6bc981f6c5c8b911549d666c9edb9682a2072d71664c6c1fc7a3f37b965f7dd2",
+      "label": "C3-E05",
+      "original_fragment_count": 6,
+      "structural_reason": "Every saved episode in the fixed six-capture set; no outcome selection."
+    },
+    {
+      "capture": "PIPELINE-TPMS-007-20260918-002700",
+      "eligible_per_fragment": [
+        0,
+        50,
+        8,
+        2,
+        2,
+        80
+      ],
+      "episode": 6,
+      "fragments_sha256": "0c118d76111f97ea2a7b272cdc5af22b9b40808a4087dd9bcb338688b7f8757c",
+      "label": "C3-E06",
+      "original_fragment_count": 6,
+      "structural_reason": "Every saved episode in the fixed six-capture set; no outcome selection."
+    },
+    {
+      "capture": "PIPELINE-TPMS-007-20260918-002700",
+      "eligible_per_fragment": [
+        151,
+        1,
+        1,
+        0,
+        61
+      ],
+      "episode": 7,
+      "fragments_sha256": "24a287dc9ba89e11852fa00047033cdac370ea69c494c533633602c3c482e87e",
+      "label": "C3-E07",
+      "original_fragment_count": 5,
+      "structural_reason": "Every saved episode in the fixed six-capture set; no outcome selection."
+    },
+    {
+      "capture": "PIPELINE-TPMS-007-20260918-002700",
+      "eligible_per_fragment": [
+        151,
+        2,
+        4,
+        81
+      ],
+      "episode": 8,
+      "fragments_sha256": "29ee469b71104333bce3573bce29590dda6d73d0e0100864611f583f3dda43d0",
+      "label": "C3-E08",
+      "original_fragment_count": 4,
+      "structural_reason": "Every saved episode in the fixed six-capture set; no outcome selection."
+    },
+    {
+      "capture": "PIPELINE-TPMS-008-20260918-003900",
+      "eligible_per_fragment": [
+        5,
+        42,
+        4,
+        0,
+        49
+      ],
+      "episode": 1,
+      "fragments_sha256": "cfd0445779e68528d93c118c869db6d649502b57b23b6ecf1a4cda6a8aca7e88",
+      "label": "C4-E01",
+      "original_fragment_count": 5,
+      "structural_reason": "Every saved episode in the fixed six-capture set; no outcome selection."
+    },
+    {
+      "capture": "PIPELINE-TPMS-008-20260918-003900",
+      "eligible_per_fragment": [
+        10,
+        55,
+        3,
+        4,
+        45
+      ],
+      "episode": 2,
+      "fragments_sha256": "6be3e20546134b7191ae95dfde3873be0c52cae0e1228aab0474320adcb7719a",
+      "label": "C4-E02",
+      "original_fragment_count": 5,
+      "structural_reason": "Every saved episode in the fixed six-capture set; no outcome selection."
+    },
+    {
+      "capture": "PIPELINE-TPMS-008-20260918-003900",
+      "eligible_per_fragment": [
+        142,
+        1,
+        1,
+        13,
+        52
+      ],
+      "episode": 3,
+      "fragments_sha256": "726a5b170754783714827a6245fa2a5aed9e6b8401f1f5c0a191eec4beaa9d03",
+      "label": "C4-E03",
+      "original_fragment_count": 5,
+      "structural_reason": "Every saved episode in the fixed six-capture set; no outcome selection."
+    },
+    {
+      "capture": "PIPELINE-TPMS-008-20260918-003900",
+      "eligible_per_fragment": [
+        0,
+        61,
+        11,
+        6,
+        2,
+        102
+      ],
+      "episode": 4,
+      "fragments_sha256": "6ee658e7c2d725fd18ef8600ac655173d403eaf73714183e99ddd53308a408dd",
+      "label": "C4-E04",
+      "original_fragment_count": 6,
+      "structural_reason": "Every saved episode in the fixed six-capture set; no outcome selection."
+    },
+    {
+      "capture": "PIPELINE-TPMS-008-20260918-003900",
+      "eligible_per_fragment": [
+        191,
+        4,
+        3,
+        1,
+        85
+      ],
+      "episode": 5,
+      "fragments_sha256": "cf7dfac928ccd5728a17f8c20274fd5fae22ad9b6b0414d06849db0347d48394",
+      "label": "C4-E05",
+      "original_fragment_count": 5,
+      "structural_reason": "Every saved episode in the fixed six-capture set; no outcome selection."
+    },
+    {
+      "capture": "PIPELINE-TPMS-008-20260918-003900",
+      "eligible_per_fragment": [
+        0,
+        65,
+        12,
+        3,
+        0,
+        84
+      ],
+      "episode": 6,
+      "fragments_sha256": "332e988f9dff309363d14c700af6d05844708543199963371bcce13ac8b8d636",
+      "label": "C4-E06",
+      "original_fragment_count": 6,
+      "structural_reason": "Every saved episode in the fixed six-capture set; no outcome selection."
+    },
+    {
+      "capture": "PIPELINE-TPMS-008-20260918-003900",
+      "eligible_per_fragment": [
+        168,
+        0,
+        22,
+        1,
+        81
+      ],
+      "episode": 7,
+      "fragments_sha256": "28f18d4d04fcfab8001b4f560b76705ae28e774c72d56f3e05ac9c0c742314f9",
+      "label": "C4-E07",
+      "original_fragment_count": 5,
+      "structural_reason": "Every saved episode in the fixed six-capture set; no outcome selection."
+    },
+    {
+      "capture": "PIPELINE-TPMS-008-20260918-003900",
+      "eligible_per_fragment": [
+        145,
+        82
+      ],
+      "episode": 8,
+      "fragments_sha256": "e5d32c221e708c85aeae5cffb838cba7940aabe5d060316e527a8fa146389068",
+      "label": "C4-E08",
+      "original_fragment_count": 2,
+      "structural_reason": "Every saved episode in the fixed six-capture set; no outcome selection."
+    },
+    {
+      "capture": "BETWEEN-DEVICE-V1-20260919-022917",
+      "eligible_per_fragment": [
+        13,
+        52,
+        10,
+        2,
+        3,
+        53
+      ],
+      "episode": 1,
+      "fragments_sha256": "1871a7b7931d3af03163e67a84dab020e01d8c3d4db8a9c23acb75efe7d92502",
+      "label": "C5-E01",
+      "original_fragment_count": 6,
+      "structural_reason": "Every saved episode in the fixed six-capture set; no outcome selection."
+    },
+    {
+      "capture": "BETWEEN-DEVICE-V1-20260919-022917",
+      "eligible_per_fragment": [
+        4,
+        48,
+        20,
+        2,
+        2,
+        79
+      ],
+      "episode": 2,
+      "fragments_sha256": "11fc42f7baec7220eff0cf2751aa31cf3b59b9c36ad7f4018c51bbeab29ab5c7",
+      "label": "C5-E02",
+      "original_fragment_count": 6,
+      "structural_reason": "Every saved episode in the fixed six-capture set; no outcome selection."
+    },
+    {
+      "capture": "BETWEEN-DEVICE-V1-20260919-022917",
+      "eligible_per_fragment": [
+        1,
+        83,
+        0,
+        1,
+        109
+      ],
+      "episode": 3,
+      "fragments_sha256": "c014c78fbb3f3891d978fc8d01cd89032919c9459d32cb5f433bcb0f0e11482e",
+      "label": "C5-E03",
+      "original_fragment_count": 5,
+      "structural_reason": "Every saved episode in the fixed six-capture set; no outcome selection."
+    },
+    {
+      "capture": "BETWEEN-DEVICE-V1-20260919-022917",
+      "eligible_per_fragment": [
+        188,
+        0,
+        11,
+        4,
+        61
+      ],
+      "episode": 4,
+      "fragments_sha256": "ead21f001504f2d1597a551c00fa1a351b72786ac390e93fd1b00d7c426eaa19",
+      "label": "C5-E04",
+      "original_fragment_count": 5,
+      "structural_reason": "Every saved episode in the fixed six-capture set; no outcome selection."
+    },
+    {
+      "capture": "BETWEEN-DEVICE-V1-20260919-022917",
+      "eligible_per_fragment": [
+        1,
+        64,
+        6,
+        9,
+        2,
+        82
+      ],
+      "episode": 5,
+      "fragments_sha256": "3383ec10f1a7c6c9212c864c0ccb5a3042100b3dbe40272924ffc60436d08679",
+      "label": "C5-E05",
+      "original_fragment_count": 6,
+      "structural_reason": "Every saved episode in the fixed six-capture set; no outcome selection."
+    },
+    {
+      "capture": "BETWEEN-DEVICE-V1-20260919-022917",
+      "eligible_per_fragment": [
+        149,
+        2,
+        2,
+        13,
+        60
+      ],
+      "episode": 6,
+      "fragments_sha256": "749e6c4210557695ecf47c651fde985770ef79f39c62c228311ac2e1c22f1ff1",
+      "label": "C5-E06",
+      "original_fragment_count": 5,
+      "structural_reason": "Every saved episode in the fixed six-capture set; no outcome selection."
+    },
+    {
+      "capture": "BETWEEN-DEVICE-V1-20260919-022917",
+      "eligible_per_fragment": [
+        158,
+        2,
+        3,
+        11,
+        64
+      ],
+      "episode": 7,
+      "fragments_sha256": "b8f19b0e34d7b986249856f0e7f38d836c18672bc96f6bc3dd04e8733334dcc1",
+      "label": "C5-E07",
+      "original_fragment_count": 5,
+      "structural_reason": "Every saved episode in the fixed six-capture set; no outcome selection."
+    },
+    {
+      "capture": "BETWEEN-DEVICE-REPL-V1-20260919-024341",
+      "eligible_per_fragment": [
+        8,
+        48,
+        7,
+        0,
+        11,
+        44
+      ],
+      "episode": 1,
+      "fragments_sha256": "66d484e24216384333ed98e47be96fecc9557009e8e6ddd5bf01021e81cbfb54",
+      "label": "C6-E01",
+      "original_fragment_count": 6,
+      "structural_reason": "Every saved episode in the fixed six-capture set; no outcome selection."
+    },
+    {
+      "capture": "BETWEEN-DEVICE-REPL-V1-20260919-024341",
+      "eligible_per_fragment": [
+        0,
+        69,
+        0,
+        20,
+        2,
+        89
+      ],
+      "episode": 2,
+      "fragments_sha256": "ded7c08fcbeb0f4419842a27cd2cb287e034f31aea2a0e35d0fcda61ca1e876d",
+      "label": "C6-E02",
+      "original_fragment_count": 6,
+      "structural_reason": "Every saved episode in the fixed six-capture set; no outcome selection."
+    },
+    {
+      "capture": "BETWEEN-DEVICE-REPL-V1-20260919-024341",
+      "eligible_per_fragment": [
+        193,
+        3,
+        18,
+        2,
+        97
+      ],
+      "episode": 3,
+      "fragments_sha256": "1d126597caf18ec60aa185b5b9d93dbf1a694ed1d6b2929f2e68675d31222370",
+      "label": "C6-E03",
+      "original_fragment_count": 5,
+      "structural_reason": "Every saved episode in the fixed six-capture set; no outcome selection."
+    },
+    {
+      "capture": "BETWEEN-DEVICE-REPL-V1-20260919-024341",
+      "eligible_per_fragment": [
+        0,
+        55,
+        12,
+        7,
+        0,
+        83
+      ],
+      "episode": 4,
+      "fragments_sha256": "18dc21b4c6897cca4c1d7e4c84356950e65b0d1dae4e88bc8e2ddc46ce8881c6",
+      "label": "C6-E04",
+      "original_fragment_count": 6,
+      "structural_reason": "Every saved episode in the fixed six-capture set; no outcome selection."
+    },
+    {
+      "capture": "BETWEEN-DEVICE-REPL-V1-20260919-024341",
+      "eligible_per_fragment": [
+        173,
+        4,
+        15,
+        1,
+        86
+      ],
+      "episode": 5,
+      "fragments_sha256": "a95060bba182f945b2b985fa31891749762b4124286e50d655885f580fd2b6c2",
+      "label": "C6-E05",
+      "original_fragment_count": 5,
+      "structural_reason": "Every saved episode in the fixed six-capture set; no outcome selection."
+    },
+    {
+      "capture": "BETWEEN-DEVICE-REPL-V1-20260919-024341",
+      "eligible_per_fragment": [
+        8,
+        45,
+        0,
+        2,
+        3,
+        53
+      ],
+      "episode": 6,
+      "fragments_sha256": "0d70c57ed34e3fc05b09182931783cff45b4491cd9bb8df8e902a6f3c824821f",
+      "label": "C6-E06",
+      "original_fragment_count": 6,
+      "structural_reason": "Every saved episode in the fixed six-capture set; no outcome selection."
+    },
+    {
+      "capture": "BETWEEN-DEVICE-REPL-V1-20260919-024341",
+      "eligible_per_fragment": [
+        38
+      ],
+      "episode": 7,
+      "fragments_sha256": "27a3632e1b3db9a73d266c6b3f2fc1f9b6e26a51527a4f33dd0cf1b028fd0cc1",
+      "label": "C6-E07",
+      "original_fragment_count": 1,
+      "structural_reason": "Every saved episode in the fixed six-capture set; no outcome selection."
+    }
+  ],
+  "selection_before_execution": true,
+  "specification": "docs/episode-component-tracking-v2-draft2-experiment.md",
+  "specification_sha256": "3923a1f009a0c798ed97bbfdf8158b36c2673a88b0d687a67e3b921bd352e026",
+  "worker_peak_rss_limit_kib": 524288,
+  "worker_timeout_seconds": 400
+}

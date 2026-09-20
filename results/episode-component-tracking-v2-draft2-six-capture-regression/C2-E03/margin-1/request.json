@@ -1,0 +1,54 @@
+{
+  "cardinality_sidecar": {
+    "path": "results/episode-component-tracking-v2-draft2-six-capture-regression/C2-E03/margin-1/cardinality.json",
+    "sha256": "d19df5d9a335f8d583f1bc6729ff1e1cec07a8a8626eba8ed02cc0f8bb2f0e69"
+  },
+  "experiment_specification": {
+    "path": "docs/episode-component-tracking-v2-draft2-experiment.md",
+    "sha256": "3923a1f009a0c798ed97bbfdf8158b36c2673a88b0d687a67e3b921bd352e026"
+  },
+  "family": {
+    "path": "results/episode-component-tracking-v2-draft2-six-capture-regression/C2-E03/margin-1/family.json",
+    "sha256": "2e552aa0e769a070c0a0300493eed324a1d4cfd442658c6c4d4043b7b858569d"
+  },
+  "fragments_sha256": "caa071d17f917795fdf2c8a3722202269fe4ce47560c134e30d1707dd5274ed0",
+  "representation": "COMPACT_EXACT_FAMILY_V1",
+  "saved_input": {
+    "path": "results/episode-component-tracking-v2-draft2-experiment/native__w200__connected.json",
+    "sha256": "097c48395cb5cabb639a74d697d03a431b941f9f64cfebafa2e23a2b3d8053ab"
+  },
+  "sources": {
+    "analysis/episode_component_tracking_v2_draft1.py": {
+      "sha256": "a24a5617ca9f4129c6970fd0a9743f8b78610c58567e8a557f21dee2a055f66c",
+      "version": "FROZEN_DRAFT1"
+    },
+    "analysis/episode_component_tracking_v2_draft2_cardinality_sidecar.py": {
+      "sha256": "3b05374ed34667b82f1f420fee9ccab9a096efa2c2426fd73fe1b01a371f5142",
+      "version": "KRAKEN_DRAFT2_RETAINED_CARDINALITY_V1"
+    },
+    "analysis/episode_component_tracking_v2_draft2_column_count.py": {
+      "sha256": "03c0f8493ab571caed7bb48eca2c2d6327f021c7a94e9a82ec2add75d5327fed",
+      "version": "COLUMN_COUNTER_V1"
+    },
+    "analysis/episode_component_tracking_v2_draft2_exact_count.py": {
+      "sha256": "4c543655c738fcc9d2b771f2cb3ae26106304e2ff2f86a201a47d77cd5bd18a3",
+      "version": "EXACT_COUNTER_V1"
+    },
+    "analysis/episode_component_tracking_v2_draft2_exact_solver.py": {
+      "sha256": "f5c4a907af24958739bf7a2d90fd27d2e602c295a74c951bb52525ccd10023a1",
+      "version": "EXACT_SOLVER_V1"
+    },
+    "analysis/episode_component_tracking_v2_draft2_experiment.py": {
+      "sha256": "73dc27741f3ad5fd710f94a8989a930bb731cd196e32ff2d000ee48e00b9d39a",
+      "version": "FROZEN_DRAFT2"
+    },
+    "analysis/episode_component_tracking_v2_draft2_staged.py": {
+      "sha256": "7bae7314d50494f45bb0d0a72331d38cc4024205e770f825202c44ff8be4bb80",
+      "version": "KRAKEN_DRAFT2_STAGED_ASSOCIATION_V1"
+    },
+    "analysis/episode_component_tracking_v2_draft2_staged_queries.py": {
+      "sha256": "b6fcfe3be1fe64be5cad81d549ba1193167cef12a0752797b47fa298a7571615",
+      "version": "KRAKEN_DRAFT2_EXACT_QUERY_PREFLIGHT_V1"
+    }
+  }
+}

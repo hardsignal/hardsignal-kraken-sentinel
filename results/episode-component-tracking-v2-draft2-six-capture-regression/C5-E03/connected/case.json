@@ -1,0 +1,164 @@
+{
+  "arm": "connected",
+  "audit": {
+    "cardinality": null,
+    "limited_parity": "NOT_APPLICABLE",
+    "measurement": {
+      "integration_reconstruction_seconds": 0.0,
+      "integration_seconds": 0.04405698599293828,
+      "memory_kib": {
+        "VmHWM": 118604,
+        "VmRSS": 77004
+      },
+      "total_seconds": 0.052068561024498194
+    },
+    "metrics": {
+      "abstained": true,
+      "alternative_path_count": null,
+      "eligible_candidate_count": 194,
+      "invariant_path_count": null,
+      "original_fragment_count": 5,
+      "persistent_path_count": 0,
+      "possible_path_count": 193,
+      "structural_constraint_status": "HISTORICAL_CONNECTED_DIAGNOSTICS",
+      "truth_metrics": null,
+      "truth_metrics_state": "NOT_APPLICABLE",
+      "union_link_count": 1
+    },
+    "primary": null,
+    "projection": {
+      "parity": "SAVED_CONNECTED_COMPLETE_OUTPUT",
+      "state": "PASS"
+    },
+    "query_calls": null,
+    "states": {
+      "cardinality_counting": {
+        "reason": null,
+        "state": "NOT_APPLICABLE_CONNECTED"
+      },
+      "exact_queries": {
+        "reason": null,
+        "state": "NOT_APPLICABLE_CONNECTED"
+      },
+      "family_construction": {
+        "reason": null,
+        "state": "NOT_APPLICABLE_CONNECTED"
+      },
+      "metric_projection": {
+        "reason": null,
+        "state": "COMPLETE"
+      },
+      "provenance_validation": {
+        "reason": null,
+        "state": "VERIFIED"
+      }
+    },
+    "status": "INSUFFICIENT_SUPPORT"
+  },
+  "capture": "BETWEEN-DEVICE-V1-20260919-022917",
+  "counting": null,
+  "eligible_per_fragment": [
+    1,
+    83,
+    0,
+    1,
+    109
+  ],
+  "episode": 3,
+  "failure": null,
+  "family_sha256": null,
+  "fragments_sha256": "c014c78fbb3f3891d978fc8d01cd89032919c9459d32cb5f433bcb0f0e11482e",
+  "input_sha256": "097c48395cb5cabb639a74d697d03a431b941f9f64cfebafa2e23a2b3d8053ab",
+  "label": "C5-E03",
+  "model_sha256": null,
+  "original_fragment_count": 5,
+  "passed": true,
+  "plan_sha256": "e6917efb66bc9eda0eddb94ec2d39a7c8c7271fcd1251b61d3eff70c17556728",
+  "record": {
+    "alternative_membership_count": null,
+    "arm": "connected",
+    "association_availability": "COMPLETE",
+    "association_status": "INSUFFICIENT_SUPPORT",
+    "candidate_context_sha256": "c014c78fbb3f3891d978fc8d01cd89032919c9459d32cb5f433bcb0f0e11482e",
+    "capture": "BETWEEN-DEVICE-V1-20260919-022917",
+    "cardinality": null,
+    "counting_transitions": null,
+    "eligible_candidates_per_fragment": [
+      1,
+      83,
+      0,
+      1,
+      109
+    ],
+    "episode": 3,
+    "family_sha256": null,
+    "fragment_count": 5,
+    "input_sha256": "097c48395cb5cabb639a74d697d03a431b941f9f64cfebafa2e23a2b3d8053ab",
+    "invariant_membership_count": null,
+    "model_sha256": null,
+    "packed_polynomial_bytes": null,
+    "peak_live_states": null,
+    "persistent_track_count": 0,
+    "possible_path_count": 193,
+    "primary": null,
+    "query_calls": null,
+    "reproduction_seconds": 0.054291407024720684,
+    "runtimes": {
+      "integration_reconstruction_seconds": 0.0,
+      "integration_seconds": 0.04405698599293828,
+      "memory_kib": {
+        "VmHWM": 118604,
+        "VmRSS": 77004
+      },
+      "total_seconds": 0.052068561024498194
+    },
+    "sidecar_sha256": null,
+    "stages": {
+      "cardinality_counting": {
+        "reason": null,
+        "state": "NOT_APPLICABLE_CONNECTED"
+      },
+      "exact_queries": {
+        "reason": null,
+        "state": "NOT_APPLICABLE_CONNECTED"
+      },
+      "family_construction": {
+        "reason": null,
+        "state": "NOT_APPLICABLE_CONNECTED"
+      },
+      "metric_projection": {
+        "reason": null,
+        "state": "COMPLETE"
+      },
+      "provenance_validation": {
+        "reason": null,
+        "state": "VERIFIED"
+      }
+    },
+    "worker_peak_rss_kib": 118664
+  },
+  "reload": {
+    "memory_kib": {
+      "VmHWM": 118504,
+      "VmRSS": 76996
+    },
+    "reconstruction_seconds": 0.0,
+    "seconds": 0.054291407024720684,
+    "state": "BYTE_IDENTICAL"
+  },
+  "reload_worker": {
+    "elapsed_seconds": 0.6016394630132709,
+    "exit_code": 0,
+    "observed_peak_rss_kib": 118504,
+    "reason": null
+  },
+  "resource_violations": [],
+  "sidecar_sha256": null,
+  "structural_reason": "Every saved episode in the fixed six-capture set; no outcome selection.",
+  "worker": {
+    "elapsed_seconds": 0.6013162129966076,
+    "exit_code": 0,
+    "observed_peak_rss_kib": 118664,
+    "reason": null
+  }
+}

@@ -1,0 +1,89 @@
+{
+  "certificate": {
+    "policy": "Exact monotone binary64 addition preimages; frozen chronological fold and all prefix predicates",
+    "rounding_or_quantization": false,
+    "version": "KRAKEN_DRAFT2_IEEE_MONOTONE_PIVOT_COUNT_V1"
+  },
+  "count_state": "EXACT",
+  "details": {
+    "certificate": {
+      "policy": "Exact monotone binary64 addition preimages; frozen chronological fold and all prefix predicates",
+      "rounding_or_quantization": false,
+      "version": "KRAKEN_DRAFT2_IEEE_MONOTONE_PIVOT_COUNT_V1"
+    },
+    "composition": {
+      "boundary_hex": "0x1.583080931d7e1p+1",
+      "group_histogram_entries": [
+        1,
+        1,
+        1
+      ],
+      "join_live_containers": 10,
+      "join_pairs": 1,
+      "packed_polynomial_bytes": 0,
+      "pivot": 0,
+      "prefix_states": 1,
+      "prefix_steps": [],
+      "suffix_steps": [
+        {
+          "cost_threshold_pairs": 1,
+          "factor": 2,
+          "input_thresholds": 1,
+          "output_thresholds": 1
+        },
+        {
+          "cost_threshold_pairs": 1,
+          "factor": 1,
+          "input_thresholds": 1,
+          "output_thresholds": 1
+        }
+      ],
+      "suffix_thresholds": 1
+    },
+    "factor_statistics": [
+      {
+        "assignments_decimal": "1",
+        "elapsed_seconds": 6.056498386897147e-05,
+        "factor": 0,
+        "held_previous_histogram_states": 0,
+        "histogram_entries": 1,
+        "transitions": 2
+      },
+      {
+        "assignments_decimal": "1",
+        "elapsed_seconds": 0.004423067002790049,
+        "factor": 1,
+        "held_previous_histogram_states": 1,
+        "histogram_entries": 1,
+        "transitions": 12
+      },
+      {
+        "assignments_decimal": "1",
+        "elapsed_seconds": 0.0002041500119958073,
+        "factor": 2,
+        "held_previous_histogram_states": 2,
+        "histogram_entries": 1,
+        "transitions": 4
+      }
+    ],
+    "method": "KRAKEN_DRAFT2_IEEE_MONOTONE_PIVOT_COUNT_V1",
+    "ordering": "forward",
+    "packed_polynomial_bytes": 0,
+    "stats": {
+      "checkpoints": [],
+      "elapsed_seconds": 0.005128652002895251,
+      "peak_states": 10,
+      "transitions": 273
+    }
+  },
+  "exact_count_decimal": "1",
+  "method": "KRAKEN_DRAFT2_IEEE_MONOTONE_PIVOT_COUNT_V1",
+  "packed_polynomial_bytes": 0,
+  "statistics": {
+    "checkpoints": [],
+    "elapsed_seconds": 0.005137341999216005,
+    "peak_states": 10,
+    "process_peak_rss_kib": 118656,
+    "transitions": 273
+  }
+}

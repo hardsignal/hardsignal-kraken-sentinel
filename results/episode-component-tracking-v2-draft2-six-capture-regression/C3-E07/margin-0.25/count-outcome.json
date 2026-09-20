@@ -1,0 +1,104 @@
+{
+  "certificate": {
+    "coefficient_error": [
+      11345339,
+      71052318543504803364864
+    ],
+    "cutoff": 3,
+    "lower_boundary_gap": [
+      78683,
+      1314732
+    ],
+    "optima": [
+      1
+    ],
+    "quantum": [
+      62500,
+      986049
+    ],
+    "rounding_envelope": [
+      8089058747,
+      35526159271752401682432
+    ],
+    "upper_boundary_gap": [
+      13951,
+      3944196
+    ],
+    "zero_margin_exact_arithmetic": false
+  },
+  "count_state": "EXACT",
+  "details": {
+    "certificate": {
+      "coefficient_error": [
+        11345339,
+        71052318543504803364864
+      ],
+      "cutoff": 3,
+      "lower_boundary_gap": [
+        78683,
+        1314732
+      ],
+      "optima": [
+        1
+      ],
+      "quantum": [
+        62500,
+        986049
+      ],
+      "rounding_envelope": [
+        8089058747,
+        35526159271752401682432
+      ],
+      "upper_boundary_gap": [
+        13951,
+        3944196
+      ],
+      "zero_margin_exact_arithmetic": false
+    },
+    "dispatcher_version": "KRAKEN_DRAFT2_IEEE_MONOTONE_PIVOT_COUNT_V1",
+    "histogram_entries": 1,
+    "method": "certified column frontier exact generating function",
+    "ordering": "frequency",
+    "stats": {
+      "checkpoints": [
+        {
+          "coefficient_digit_bytes": 1,
+          "columns": 1,
+          "component": "factor0/block0",
+          "count": "1",
+          "histogram_entries": 1,
+          "peak_frontier_masks": 2,
+          "peak_packed_bytes": 2,
+          "rows": 1,
+          "suffix_bound": true
+        }
+      ],
+      "elapsed_seconds": 0.00025695402291603386,
+      "peak_states": 2,
+      "transitions": 2
+    },
+    "suffix_bound": true
+  },
+  "exact_count_decimal": "1",
+  "method": "certified column frontier exact generating function",
+  "packed_polynomial_bytes": 2,
+  "statistics": {
+    "checkpoints": [
+      {
+        "coefficient_digit_bytes": 1,
+        "columns": 1,
+        "component": "factor0/block0",
+        "count": "1",
+        "histogram_entries": 1,
+        "peak_frontier_masks": 2,
+        "peak_packed_bytes": 2,
+        "rows": 1,
+        "suffix_bound": true
+      }
+    ],
+    "elapsed_seconds": 0.0002643850166350603,
+    "peak_states": 2,
+    "process_peak_rss_kib": 118820,
+    "transitions": 2
+  }
+}

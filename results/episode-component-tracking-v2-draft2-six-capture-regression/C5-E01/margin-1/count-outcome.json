@@ -1,0 +1,135 @@
+{
+  "certificate": {
+    "policy": "Exact monotone binary64 addition preimages; frozen chronological fold and all prefix predicates",
+    "rounding_or_quantization": false,
+    "version": "KRAKEN_DRAFT2_IEEE_MONOTONE_PIVOT_COUNT_V1"
+  },
+  "count_state": "EXACT",
+  "details": {
+    "certificate": {
+      "policy": "Exact monotone binary64 addition preimages; frozen chronological fold and all prefix predicates",
+      "rounding_or_quantization": false,
+      "version": "KRAKEN_DRAFT2_IEEE_MONOTONE_PIVOT_COUNT_V1"
+    },
+    "composition": {
+      "boundary_hex": "0x1.ca53bccce40a5p+1",
+      "group_histogram_entries": [
+        5,
+        645,
+        14,
+        1,
+        1,
+        66
+      ],
+      "join_live_containers": 2510,
+      "join_pairs": 3225,
+      "packed_polynomial_bytes": 0,
+      "pivot": 1,
+      "prefix_states": 5,
+      "prefix_steps": [
+        {
+          "factor": 0,
+          "input_states": 1,
+          "output_states": 5,
+          "transitions": 5
+        }
+      ],
+      "suffix_steps": [
+        {
+          "cost_threshold_pairs": 66,
+          "factor": 5,
+          "input_thresholds": 1,
+          "output_thresholds": 66
+        },
+        {
+          "cost_threshold_pairs": 66,
+          "factor": 4,
+          "input_thresholds": 66,
+          "output_thresholds": 66
+        },
+        {
+          "cost_threshold_pairs": 66,
+          "factor": 3,
+          "input_thresholds": 66,
+          "output_thresholds": 66
+        },
+        {
+          "cost_threshold_pairs": 924,
+          "factor": 2,
+          "input_thresholds": 66,
+          "output_thresholds": 374
+        }
+      ],
+      "suffix_thresholds": 374
+    },
+    "factor_statistics": [
+      {
+        "assignments_decimal": "5",
+        "elapsed_seconds": 0.0006285409908741713,
+        "factor": 0,
+        "held_previous_histogram_states": 0,
+        "histogram_entries": 5,
+        "transitions": 20
+      },
+      {
+        "assignments_decimal": "777",
+        "elapsed_seconds": 0.08106482197763398,
+        "factor": 1,
+        "held_previous_histogram_states": 5,
+        "histogram_entries": 645,
+        "transitions": 4314
+      },
+      {
+        "assignments_decimal": "14",
+        "elapsed_seconds": 0.0038737500144634396,
+        "factor": 2,
+        "held_previous_histogram_states": 650,
+        "histogram_entries": 14,
+        "transitions": 62
+      },
+      {
+        "assignments_decimal": "1",
+        "elapsed_seconds": 3.9470993215218186e-05,
+        "factor": 3,
+        "held_previous_histogram_states": 664,
+        "histogram_entries": 1,
+        "transitions": 2
+      },
+      {
+        "assignments_decimal": "1",
+        "elapsed_seconds": 2.9874005122110248e-05,
+        "factor": 4,
+        "held_previous_histogram_states": 665,
+        "histogram_entries": 1,
+        "transitions": 2
+      },
+      {
+        "assignments_decimal": "66",
+        "elapsed_seconds": 0.0582502789911814,
+        "factor": 5,
+        "held_previous_histogram_states": 666,
+        "histogram_entries": 66,
+        "transitions": 520
+      }
+    ],
+    "method": "KRAKEN_DRAFT2_IEEE_MONOTONE_PIVOT_COUNT_V1",
+    "ordering": "forward",
+    "packed_polynomial_bytes": 0,
+    "stats": {
+      "checkpoints": [],
+      "elapsed_seconds": 0.1712469169870019,
+      "peak_states": 2510,
+      "transitions": 46110
+    }
+  },
+  "exact_count_decimal": "101884",
+  "method": "KRAKEN_DRAFT2_IEEE_MONOTONE_PIVOT_COUNT_V1",
+  "packed_polynomial_bytes": 0,
+  "statistics": {
+    "checkpoints": [],
+    "elapsed_seconds": 0.17126854899106547,
+    "peak_states": 2510,
+    "process_peak_rss_kib": 118852,
+    "transitions": 46110
+  }
+}

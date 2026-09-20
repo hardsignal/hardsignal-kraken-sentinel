@@ -1,0 +1,193 @@
+{
+  "arm": "margin-0.25",
+  "audit": {
+    "cardinality": {
+      "reason": null,
+      "state": "EXACT",
+      "value_decimal": "12"
+    },
+    "limited_parity": "NOT_APPLICABLE",
+    "measurement": {
+      "counting_seconds": 0.0015965820057317615,
+      "family_construction_seconds": 0.0012861360155511647,
+      "integration_reconstruction_seconds": 0.0040126710082404315,
+      "integration_seconds": 0.03726405501947738,
+      "memory_kib": {
+        "VmHWM": 118444,
+        "VmRSS": 75740
+      },
+      "total_seconds": 0.05214987898943946
+    },
+    "metrics": {
+      "abstained": true,
+      "alternative_path_count": 14,
+      "eligible_candidate_count": 105,
+      "invariant_path_count": 94,
+      "original_fragment_count": 6,
+      "persistent_path_count": 0,
+      "possible_path_count": 108,
+      "structural_constraint_status": "VALID_BY_EXACT_CONSTRAINTS",
+      "truth_metrics": null,
+      "truth_metrics_state": "NOT_APPLICABLE",
+      "union_link_count": 8
+    },
+    "primary": null,
+    "projection": {
+      "parity": "EXACT_QUERY_PROJECTION_CONSISTENCY",
+      "state": "PASS"
+    },
+    "query_calls": 134,
+    "states": {
+      "cardinality_counting": {
+        "mode": "CONSUMED_VALIDATED_SIDECAR_NO_RECOUNT",
+        "reason": null,
+        "state": "EXACT"
+      },
+      "exact_queries": {
+        "reason": null,
+        "state": "EXACT"
+      },
+      "family_construction": {
+        "reason": null,
+        "state": "COMPLETE"
+      },
+      "metric_projection": {
+        "reason": null,
+        "state": "COMPLETE"
+      },
+      "provenance_validation": {
+        "reason": null,
+        "state": "VERIFIED"
+      }
+    },
+    "status": "AMBIGUOUS_ASSOCIATION"
+  },
+  "capture": "PIPELINE-TPMS-007-20260918-002700",
+  "counting": {
+    "method": "KRAKEN_DRAFT2_IEEE_MONOTONE_PIVOT_COUNT_V1",
+    "packed_polynomial_bytes": 0,
+    "reason": null,
+    "state": "EXACT",
+    "statistics": {
+      "checkpoints": [],
+      "elapsed_seconds": 0.0015965820057317615,
+      "peak_states": 22,
+      "process_peak_rss_kib": 118444,
+      "transitions": 233
+    },
+    "value_decimal": "12"
+  },
+  "eligible_per_fragment": [
+    5,
+    53,
+    5,
+    2,
+    0,
+    40
+  ],
+  "episode": 5,
+  "failure": null,
+  "family_sha256": "4de2bb9159b9b3329a3ab65ee766cdef5ca55f51158c4780357fc4112e4612ef",
+  "fragments_sha256": "6bc981f6c5c8b911549d666c9edb9682a2072d71664c6c1fc7a3f37b965f7dd2",
+  "input_sha256": "097c48395cb5cabb639a74d697d03a431b941f9f64cfebafa2e23a2b3d8053ab",
+  "label": "C3-E05",
+  "model_sha256": "a3ab9ed220c96312b5dceb867d8700535de26118ee3cf90d20be9199098d1832",
+  "original_fragment_count": 6,
+  "passed": true,
+  "plan_sha256": "e6917efb66bc9eda0eddb94ec2d39a7c8c7271fcd1251b61d3eff70c17556728",
+  "record": {
+    "alternative_membership_count": 14,
+    "arm": "margin-0.25",
+    "association_availability": "COMPLETE",
+    "association_status": "AMBIGUOUS_ASSOCIATION",
+    "candidate_context_sha256": "6bc981f6c5c8b911549d666c9edb9682a2072d71664c6c1fc7a3f37b965f7dd2",
+    "capture": "PIPELINE-TPMS-007-20260918-002700",
+    "cardinality": {
+      "reason": null,
+      "state": "EXACT",
+      "value_decimal": "12"
+    },
+    "counting_transitions": 233,
+    "eligible_candidates_per_fragment": [
+      5,
+      53,
+      5,
+      2,
+      0,
+      40
+    ],
+    "episode": 5,
+    "family_sha256": "4de2bb9159b9b3329a3ab65ee766cdef5ca55f51158c4780357fc4112e4612ef",
+    "fragment_count": 6,
+    "input_sha256": "097c48395cb5cabb639a74d697d03a431b941f9f64cfebafa2e23a2b3d8053ab",
+    "invariant_membership_count": 94,
+    "model_sha256": "a3ab9ed220c96312b5dceb867d8700535de26118ee3cf90d20be9199098d1832",
+    "packed_polynomial_bytes": 0,
+    "peak_live_states": 22,
+    "persistent_track_count": 0,
+    "possible_path_count": 108,
+    "primary": null,
+    "query_calls": 134,
+    "reproduction_seconds": 0.051440759998513386,
+    "runtimes": {
+      "counting_seconds": 0.0015965820057317615,
+      "family_construction_seconds": 0.0012861360155511647,
+      "integration_reconstruction_seconds": 0.0040126710082404315,
+      "integration_seconds": 0.03726405501947738,
+      "memory_kib": {
+        "VmHWM": 118444,
+        "VmRSS": 75740
+      },
+      "total_seconds": 0.05214987898943946
+    },
+    "sidecar_sha256": "8739a0b226513912cedfc8ef6c8bdf753519d37ac846be8d58910ae56bb00782",
+    "stages": {
+      "cardinality_counting": {
+        "mode": "CONSUMED_VALIDATED_SIDECAR_NO_RECOUNT",
+        "reason": null,
+        "state": "EXACT"
+      },
+      "exact_queries": {
+        "reason": null,
+        "state": "EXACT"
+      },
+      "family_construction": {
+        "reason": null,
+        "state": "COMPLETE"
+      },
+      "metric_projection": {
+        "reason": null,
+        "state": "COMPLETE"
+      },
+      "provenance_validation": {
+        "reason": null,
+        "state": "VERIFIED"
+      }
+    },
+    "worker_peak_rss_kib": 118808
+  },
+  "reload": {
+    "memory_kib": {
+      "VmHWM": 118808,
+      "VmRSS": 76656
+    },
+    "reconstruction_seconds": 0.00712706902413629,
+    "seconds": 0.051440759998513386,
+    "state": "BYTE_IDENTICAL"
+  },
+  "reload_worker": {
+    "elapsed_seconds": 0.6016861949756276,
+    "exit_code": 0,
+    "observed_peak_rss_kib": 118808,
+    "reason": null
+  },
+  "resource_violations": [],
+  "sidecar_sha256": "8739a0b226513912cedfc8ef6c8bdf753519d37ac846be8d58910ae56bb00782",
+  "structural_reason": "Every saved episode in the fixed six-capture set; no outcome selection.",
+  "worker": {
+    "elapsed_seconds": 0.6013422569958493,
+    "exit_code": 0,
+    "observed_peak_rss_kib": 118776,
+    "reason": null
+  }
+}

@@ -1,0 +1,285 @@
+{
+  "arm": "margin-1",
+  "audit": {
+    "cardinality": {
+      "reason": {
+        "elapsed_seconds": 3.1253782639978454,
+        "limit": 5000000,
+        "location": {
+          "phase": "IEEE streaming pivot join",
+          "pivot": 5
+        },
+        "peak_states": 12745,
+        "reason": "transition budget exceeded",
+        "states": 12745,
+        "transitions": 5000001
+      },
+      "state": "COMPUTATION_UNRESOLVED",
+      "value_decimal": null
+    },
+    "limited_parity": "NOT_APPLICABLE",
+    "measurement": {
+      "counting_seconds": 3.1255174599937163,
+      "family_construction_seconds": 0.052269061998231336,
+      "integration_reconstruction_seconds": 0.10624652900150977,
+      "integration_seconds": 0.6037863270030357,
+      "memory_kib": {
+        "VmHWM": 118548,
+        "VmRSS": 77344
+      },
+      "total_seconds": 3.9045000770129263
+    },
+    "metrics": {
+      "abstained": true,
+      "alternative_path_count": 160,
+      "eligible_candidate_count": 279,
+      "invariant_path_count": 231,
+      "original_fragment_count": 5,
+      "persistent_path_count": 54,
+      "possible_path_count": 391,
+      "structural_constraint_status": "VALID_BY_EXACT_CONSTRAINTS",
+      "truth_metrics": null,
+      "truth_metrics_state": "NOT_APPLICABLE",
+      "union_link_count": 198
+    },
+    "primary": null,
+    "projection": {
+      "parity": "EXACT_QUERY_PROJECTION_CONSISTENCY",
+      "state": "PASS"
+    },
+    "query_calls": 475,
+    "states": {
+      "cardinality_counting": {
+        "mode": "CONSUMED_VALIDATED_SIDECAR_NO_RECOUNT",
+        "reason": {
+          "elapsed_seconds": 3.1253782639978454,
+          "limit": 5000000,
+          "location": {
+            "phase": "IEEE streaming pivot join",
+            "pivot": 5
+          },
+          "peak_states": 12745,
+          "reason": "transition budget exceeded",
+          "states": 12745,
+          "transitions": 5000001
+        },
+        "state": "COMPUTATION_UNRESOLVED"
+      },
+      "exact_queries": {
+        "reason": null,
+        "state": "EXACT"
+      },
+      "family_construction": {
+        "reason": null,
+        "state": "COMPLETE"
+      },
+      "metric_projection": {
+        "reason": null,
+        "state": "COMPLETE"
+      },
+      "provenance_validation": {
+        "reason": null,
+        "state": "VERIFIED"
+      }
+    },
+    "status": "MULTIPLE_PERSISTENT_TRACKS"
+  },
+  "capture": "BETWEEN-DEVICE-REPL-V1-20260919-024341",
+  "counting": {
+    "method": "KRAKEN_DRAFT2_IEEE_MONOTONE_PIVOT_COUNT_V1",
+    "packed_polynomial_bytes": 0,
+    "reason": {
+      "elapsed_seconds": 3.1253782639978454,
+      "limit": 5000000,
+      "location": {
+        "phase": "IEEE streaming pivot join",
+        "pivot": 5
+      },
+      "peak_states": 12745,
+      "reason": "transition budget exceeded",
+      "states": 12745,
+      "transitions": 5000001
+    },
+    "state": "COMPUTATION_UNRESOLVED",
+    "statistics": {
+      "checkpoints": [],
+      "elapsed_seconds": 3.1255174599937163,
+      "peak_states": 12745,
+      "process_peak_rss_kib": 118548,
+      "transitions": 5000001
+    },
+    "value_decimal": null
+  },
+  "eligible_per_fragment": [
+    173,
+    4,
+    15,
+    1,
+    86
+  ],
+  "episode": 5,
+  "failure": {
+    "last_progress": [
+      "{\"stage\": \"staged_integration\"}",
+      "{\"stage\": \"projection_checks\"}",
+      "{\"stage\": \"complete\"}"
+    ],
+    "reason": null,
+    "reproduction": {
+      "memory_kib": {
+        "VmHWM": 118884,
+        "VmRSS": 78308
+      },
+      "reconstruction_seconds": 0.10510940497624688,
+      "seconds": 0.6138686159974895,
+      "state": "BYTE_IDENTICAL"
+    },
+    "resource_violations": [
+      "transitions"
+    ],
+    "stages": {
+      "cardinality_counting": {
+        "mode": "CONSUMED_VALIDATED_SIDECAR_NO_RECOUNT",
+        "reason": {
+          "elapsed_seconds": 3.1253782639978454,
+          "limit": 5000000,
+          "location": {
+            "phase": "IEEE streaming pivot join",
+            "pivot": 5
+          },
+          "peak_states": 12745,
+          "reason": "transition budget exceeded",
+          "states": 12745,
+          "transitions": 5000001
+        },
+        "state": "COMPUTATION_UNRESOLVED"
+      }
+    }
+  },
+  "family_sha256": "25482c430012768675f80ee32e243353ac339f51f4a6f72e64e4e9fcbb114bfb",
+  "fragments_sha256": "a95060bba182f945b2b985fa31891749762b4124286e50d655885f580fd2b6c2",
+  "input_sha256": "097c48395cb5cabb639a74d697d03a431b941f9f64cfebafa2e23a2b3d8053ab",
+  "label": "C6-E05",
+  "model_sha256": "f463f465666e4f96dc220a7446f9b75084cf560e46f4c5473ce4ee49569f0d5a",
+  "original_fragment_count": 5,
+  "passed": false,
+  "plan_sha256": "e6917efb66bc9eda0eddb94ec2d39a7c8c7271fcd1251b61d3eff70c17556728",
+  "record": {
+    "alternative_membership_count": 160,
+    "arm": "margin-1",
+    "association_availability": "COMPLETE",
+    "association_status": "MULTIPLE_PERSISTENT_TRACKS",
+    "candidate_context_sha256": "a95060bba182f945b2b985fa31891749762b4124286e50d655885f580fd2b6c2",
+    "capture": "BETWEEN-DEVICE-REPL-V1-20260919-024341",
+    "cardinality": {
+      "reason": {
+        "elapsed_seconds": 3.1253782639978454,
+        "limit": 5000000,
+        "location": {
+          "phase": "IEEE streaming pivot join",
+          "pivot": 5
+        },
+        "peak_states": 12745,
+        "reason": "transition budget exceeded",
+        "states": 12745,
+        "transitions": 5000001
+      },
+      "state": "COMPUTATION_UNRESOLVED",
+      "value_decimal": null
+    },
+    "counting_transitions": 5000001,
+    "eligible_candidates_per_fragment": [
+      173,
+      4,
+      15,
+      1,
+      86
+    ],
+    "episode": 5,
+    "family_sha256": "25482c430012768675f80ee32e243353ac339f51f4a6f72e64e4e9fcbb114bfb",
+    "fragment_count": 5,
+    "input_sha256": "097c48395cb5cabb639a74d697d03a431b941f9f64cfebafa2e23a2b3d8053ab",
+    "invariant_membership_count": 231,
+    "model_sha256": "f463f465666e4f96dc220a7446f9b75084cf560e46f4c5473ce4ee49569f0d5a",
+    "packed_polynomial_bytes": 0,
+    "peak_live_states": 12745,
+    "persistent_track_count": 54,
+    "possible_path_count": 391,
+    "primary": null,
+    "query_calls": 475,
+    "reproduction_seconds": 0.6138686159974895,
+    "runtimes": {
+      "counting_seconds": 3.1255174599937163,
+      "family_construction_seconds": 0.052269061998231336,
+      "integration_reconstruction_seconds": 0.10624652900150977,
+      "integration_seconds": 0.6037863270030357,
+      "memory_kib": {
+        "VmHWM": 118548,
+        "VmRSS": 77344
+      },
+      "total_seconds": 3.9045000770129263
+    },
+    "sidecar_sha256": "9bf4b63406a5ae0e68e56045ec6172b229e4adb1f8136a43f443be4ffcd61255",
+    "stages": {
+      "cardinality_counting": {
+        "mode": "CONSUMED_VALIDATED_SIDECAR_NO_RECOUNT",
+        "reason": {
+          "elapsed_seconds": 3.1253782639978454,
+          "limit": 5000000,
+          "location": {
+            "phase": "IEEE streaming pivot join",
+            "pivot": 5
+          },
+          "peak_states": 12745,
+          "reason": "transition budget exceeded",
+          "states": 12745,
+          "transitions": 5000001
+        },
+        "state": "COMPUTATION_UNRESOLVED"
+      },
+      "exact_queries": {
+        "reason": null,
+        "state": "EXACT"
+      },
+      "family_construction": {
+        "reason": null,
+        "state": "COMPLETE"
+      },
+      "metric_projection": {
+        "reason": null,
+        "state": "COMPLETE"
+      },
+      "provenance_validation": {
+        "reason": null,
+        "state": "VERIFIED"
+      }
+    },
+    "worker_peak_rss_kib": 118884
+  },
+  "reload": {
+    "memory_kib": {
+      "VmHWM": 118884,
+      "VmRSS": 78308
+    },
+    "reconstruction_seconds": 0.10510940497624688,
+    "seconds": 0.6138686159974895,
+    "state": "BYTE_IDENTICAL"
+  },
+  "reload_worker": {
+    "elapsed_seconds": 1.2019559780019335,
+    "exit_code": 0,
+    "observed_peak_rss_kib": 118884,
+    "reason": null
+  },
+  "resource_violations": [
+    "transitions"
+  ],
+  "sidecar_sha256": "9bf4b63406a5ae0e68e56045ec6172b229e4adb1f8136a43f443be4ffcd61255",
+  "structural_reason": "Every saved episode in the fixed six-capture set; no outcome selection.",
+  "worker": {
+    "elapsed_seconds": 4.404276874003699,
+    "exit_code": 0,
+    "observed_peak_rss_kib": 118548,
+    "reason": null
+  }
+}

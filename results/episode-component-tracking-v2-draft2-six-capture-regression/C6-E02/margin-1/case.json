@@ -1,0 +1,239 @@
+{
+  "arm": "margin-1",
+  "audit": {
+    "cardinality": {
+      "reason": {
+        "reason": "Staged exact-query wall-clock limit exceeded",
+        "stage": "counting"
+      },
+      "state": "COMPUTATION_UNRESOLVED",
+      "value_decimal": null
+    },
+    "limited_parity": "NOT_APPLICABLE",
+    "measurement": {
+      "counting_seconds": 60.00009112799307,
+      "family_construction_seconds": 0.8386720849957783,
+      "integration_reconstruction_seconds": 1.6788094390067272,
+      "integration_seconds": 25.20724226901075,
+      "memory_kib": {
+        "VmHWM": 118708,
+        "VmRSS": 79228
+      },
+      "total_seconds": 87.71877556300024
+    },
+    "metrics": {
+      "abstained": true,
+      "alternative_path_count": 165,
+      "eligible_candidate_count": 180,
+      "invariant_path_count": 132,
+      "original_fragment_count": 6,
+      "persistent_path_count": 0,
+      "possible_path_count": 297,
+      "structural_constraint_status": "VALID_BY_EXACT_CONSTRAINTS",
+      "truth_metrics": null,
+      "truth_metrics_state": "NOT_APPLICABLE",
+      "union_link_count": 277
+    },
+    "primary": null,
+    "projection": {
+      "parity": "EXACT_QUERY_PROJECTION_CONSISTENCY",
+      "state": "PASS"
+    },
+    "query_calls": 585,
+    "states": {
+      "cardinality_counting": {
+        "mode": "CONSUMED_VALIDATED_SIDECAR_NO_RECOUNT",
+        "reason": {
+          "reason": "Staged exact-query wall-clock limit exceeded",
+          "stage": "counting"
+        },
+        "state": "COMPUTATION_UNRESOLVED"
+      },
+      "exact_queries": {
+        "reason": null,
+        "state": "EXACT"
+      },
+      "family_construction": {
+        "reason": null,
+        "state": "COMPLETE"
+      },
+      "metric_projection": {
+        "reason": null,
+        "state": "COMPLETE"
+      },
+      "provenance_validation": {
+        "reason": null,
+        "state": "VERIFIED"
+      }
+    },
+    "status": "AMBIGUOUS_ASSOCIATION"
+  },
+  "capture": "BETWEEN-DEVICE-REPL-V1-20260919-024341",
+  "counting": {
+    "method": "KRAKEN_DRAFT2_IEEE_MONOTONE_PIVOT_COUNT_V1",
+    "packed_polynomial_bytes": 0,
+    "reason": {
+      "reason": "Staged exact-query wall-clock limit exceeded",
+      "stage": "counting"
+    },
+    "state": "COMPUTATION_UNRESOLVED",
+    "statistics": {
+      "checkpoints": [],
+      "elapsed_seconds": 60.00009112799307,
+      "peak_states": 145,
+      "process_peak_rss_kib": 118708,
+      "transitions": 465
+    },
+    "value_decimal": null
+  },
+  "eligible_per_fragment": [
+    0,
+    69,
+    0,
+    20,
+    2,
+    89
+  ],
+  "episode": 2,
+  "failure": {
+    "last_progress": [
+      "{\"stage\": \"staged_integration\"}",
+      "{\"stage\": \"projection_checks\"}",
+      "{\"stage\": \"complete\"}"
+    ],
+    "reason": null,
+    "reproduction": {
+      "memory_kib": {
+        "VmHWM": 118632,
+        "VmRSS": 78144
+      },
+      "reconstruction_seconds": 1.6326945520122536,
+      "seconds": 24.805475333007053,
+      "state": "BYTE_IDENTICAL"
+    },
+    "resource_violations": [
+      "elapsed_seconds"
+    ],
+    "stages": {
+      "cardinality_counting": {
+        "mode": "CONSUMED_VALIDATED_SIDECAR_NO_RECOUNT",
+        "reason": {
+          "reason": "Staged exact-query wall-clock limit exceeded",
+          "stage": "counting"
+        },
+        "state": "COMPUTATION_UNRESOLVED"
+      }
+    }
+  },
+  "family_sha256": "b5c5503b910cc8940a6a08310f52117b56bd41add94d0f47980208918d737aa6",
+  "fragments_sha256": "ded7c08fcbeb0f4419842a27cd2cb287e034f31aea2a0e35d0fcda61ca1e876d",
+  "input_sha256": "097c48395cb5cabb639a74d697d03a431b941f9f64cfebafa2e23a2b3d8053ab",
+  "label": "C6-E02",
+  "model_sha256": "563cd0d5ba71e7bd7594e65c29b1a670492df1d35f84233e4a7ab8b21c0266e0",
+  "original_fragment_count": 6,
+  "passed": false,
+  "plan_sha256": "e6917efb66bc9eda0eddb94ec2d39a7c8c7271fcd1251b61d3eff70c17556728",
+  "record": {
+    "alternative_membership_count": 165,
+    "arm": "margin-1",
+    "association_availability": "COMPLETE",
+    "association_status": "AMBIGUOUS_ASSOCIATION",
+    "candidate_context_sha256": "ded7c08fcbeb0f4419842a27cd2cb287e034f31aea2a0e35d0fcda61ca1e876d",
+    "capture": "BETWEEN-DEVICE-REPL-V1-20260919-024341",
+    "cardinality": {
+      "reason": {
+        "reason": "Staged exact-query wall-clock limit exceeded",
+        "stage": "counting"
+      },
+      "state": "COMPUTATION_UNRESOLVED",
+      "value_decimal": null
+    },
+    "counting_transitions": 465,
+    "eligible_candidates_per_fragment": [
+      0,
+      69,
+      0,
+      20,
+      2,
+      89
+    ],
+    "episode": 2,
+    "family_sha256": "b5c5503b910cc8940a6a08310f52117b56bd41add94d0f47980208918d737aa6",
+    "fragment_count": 6,
+    "input_sha256": "097c48395cb5cabb639a74d697d03a431b941f9f64cfebafa2e23a2b3d8053ab",
+    "invariant_membership_count": 132,
+    "model_sha256": "563cd0d5ba71e7bd7594e65c29b1a670492df1d35f84233e4a7ab8b21c0266e0",
+    "packed_polynomial_bytes": 0,
+    "peak_live_states": 145,
+    "persistent_track_count": 0,
+    "possible_path_count": 297,
+    "primary": null,
+    "query_calls": 585,
+    "reproduction_seconds": 24.805475333007053,
+    "runtimes": {
+      "counting_seconds": 60.00009112799307,
+      "family_construction_seconds": 0.8386720849957783,
+      "integration_reconstruction_seconds": 1.6788094390067272,
+      "integration_seconds": 25.20724226901075,
+      "memory_kib": {
+        "VmHWM": 118708,
+        "VmRSS": 79228
+      },
+      "total_seconds": 87.71877556300024
+    },
+    "sidecar_sha256": "1104fdee9f6453d05aedfbe926db8d15024269169d62c5d9721bd9ef8d24e54f",
+    "stages": {
+      "cardinality_counting": {
+        "mode": "CONSUMED_VALIDATED_SIDECAR_NO_RECOUNT",
+        "reason": {
+          "reason": "Staged exact-query wall-clock limit exceeded",
+          "stage": "counting"
+        },
+        "state": "COMPUTATION_UNRESOLVED"
+      },
+      "exact_queries": {
+        "reason": null,
+        "state": "EXACT"
+      },
+      "family_construction": {
+        "reason": null,
+        "state": "COMPLETE"
+      },
+      "metric_projection": {
+        "reason": null,
+        "state": "COMPLETE"
+      },
+      "provenance_validation": {
+        "reason": null,
+        "state": "VERIFIED"
+      }
+    },
+    "worker_peak_rss_kib": 118764
+  },
+  "reload": {
+    "memory_kib": {
+      "VmHWM": 118632,
+      "VmRSS": 78144
+    },
+    "reconstruction_seconds": 1.6326945520122536,
+    "seconds": 24.805475333007053,
+    "state": "BYTE_IDENTICAL"
+  },
+  "reload_worker": {
+    "elapsed_seconds": 25.425770041998476,
+    "exit_code": 0,
+    "observed_peak_rss_kib": 118764,
+    "reason": null
+  },
+  "resource_violations": [
+    "elapsed_seconds"
+  ],
+  "sidecar_sha256": "1104fdee9f6453d05aedfbe926db8d15024269169d62c5d9721bd9ef8d24e54f",
+  "structural_reason": "Every saved episode in the fixed six-capture set; no outcome selection.",
+  "worker": {
+    "elapsed_seconds": 88.28475513999001,
+    "exit_code": 0,
+    "observed_peak_rss_kib": 118708,
+    "reason": null
+  }
+}

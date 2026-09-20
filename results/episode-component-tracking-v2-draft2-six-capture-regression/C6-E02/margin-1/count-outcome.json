@@ -1,0 +1,17 @@
+{
+  "count_state": "COMPUTATION_UNRESOLVED",
+  "exact_count_decimal": null,
+  "failure": {
+    "reason": "Staged exact-query wall-clock limit exceeded",
+    "stage": "counting"
+  },
+  "method": "KRAKEN_DRAFT2_IEEE_MONOTONE_PIVOT_COUNT_V1",
+  "packed_polynomial_bytes": 0,
+  "statistics": {
+    "checkpoints": [],
+    "elapsed_seconds": 60.00009112799307,
+    "peak_states": 145,
+    "process_peak_rss_kib": 118708,
+    "transitions": 465
+  }
+}
