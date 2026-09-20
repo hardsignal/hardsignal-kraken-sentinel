@@ -1,0 +1,45 @@
+{
+  "arithmetic_policy": "FROZEN_DRAFT2_BINARY64_PATH_COST_RIGHT_FOLD_AND_PREFIX_MARGIN_GLOBAL_EPISODE_V1",
+  "cardinality": {
+    "reason": null,
+    "state": "EXACT",
+    "value_decimal": "1"
+  },
+  "certificate": null,
+  "computational_limits": {
+    "max_polynomial_bytes": 33554432,
+    "max_seconds": 60,
+    "max_states": 250000,
+    "max_transitions": 5000000
+  },
+  "counter_source_hashes": {
+    "analysis/benchmark_episode_component_tracking_v2_draft2_margin1_investigation.py": "b60426da4ae1ad3a6c4604997378135225c1eeadffb25c0b595f12e3c3aca05b",
+    "analysis/episode_component_tracking_v2_draft2_cardinality_sidecar.py": "3b05374ed34667b82f1f420fee9ccab9a096efa2c2426fd73fe1b01a371f5142",
+    "analysis/episode_component_tracking_v2_draft2_column_count.py": "03c0f8493ab571caed7bb48eca2c2d6327f021c7a94e9a82ec2add75d5327fed",
+    "analysis/episode_component_tracking_v2_draft2_compact_consumer_prototype.py": "ecc5e62eb8cde43c72f442fc6bd5d97c31ef44b1e071f1526126de81946e43b0",
+    "analysis/episode_component_tracking_v2_draft2_exact_count.py": "4c543655c738fcc9d2b771f2cb3ae26106304e2ff2f86a201a47d77cd5bd18a3",
+    "analysis/episode_component_tracking_v2_draft2_exact_solver.py": "f5c4a907af24958739bf7a2d90fd27d2e602c295a74c951bb52525ccd10023a1",
+    "analysis/episode_component_tracking_v2_draft2_experiment.py": "73dc27741f3ad5fd710f94a8989a930bb731cd196e32ff2d000ee48e00b9d39a",
+    "tests/test_episode_component_tracking_v2_draft2_cardinality_sidecar.py": "4e8d4c0358cde820d46865e3eea9e7c3ed4ed96083fa4a2840b44e7238b3906d",
+    "tests/test_episode_component_tracking_v2_draft2_column_count.py": "bdf923c789ce88de880a82a8fedbd457404ca553310f7923d91a2ee0404f0934",
+    "tests/test_episode_component_tracking_v2_draft2_exact_count.py": "3de23c86e259c31ab0d1c94d467216e6ac2ec8d89a2c7ec374a88d31d1eb7985",
+    "tests/test_episode_component_tracking_v2_draft2_exact_solver.py": "a1126708158a0de0989c09377fa0414435cfd6e882ddc3611aa40280d14982a2",
+    "tests/test_episode_component_tracking_v2_draft2_experiment.py": "e33ba689b523e88f376ed70706334dd35c52027d8bea880f482ec15b7c9cdb67",
+    "tests/test_episode_component_tracking_v2_draft2_margin1_investigation.py": "212a47e1267b9726c05b4fa6b1bfc3559692f20c7a2b3d2d384d1090577d89a8"
+  },
+  "counting_definition_version": "UNORDERED_COMPLETE_CANDIDATE_PATH_PARTITION_MAX_LINKS_V1",
+  "family_artifact": "results/episode-component-tracking-v2-draft2-exact-solver-benchmark/group-margin-0.json",
+  "family_sha256": "403d5cf65f7bea9b78c5b6e0ab7ae4d5d84ab783adadf8f5c9e5cf0be645fc02",
+  "format": "KRAKEN_DRAFT2_RETAINED_CARDINALITY_V1",
+  "margin_hex": "0x0.0p+0",
+  "method": "exact IEEE prefix-state DAG",
+  "model_sha256": "0796abcb32dae7bf614eef14f2ae847523045ce7341895ab5ef4455b2af9e00a",
+  "runtime_state_statistics": {
+    "checkpoints": [],
+    "elapsed_seconds": 0.5049352060013916,
+    "peak_states": 0,
+    "process_peak_rss_kib": 77412,
+    "transitions": 0
+  },
+  "scope": "group"
+}

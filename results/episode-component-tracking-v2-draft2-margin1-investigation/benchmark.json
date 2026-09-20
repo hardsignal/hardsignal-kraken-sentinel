@@ -1,0 +1,1287 @@
+{
+  "all_preexisting_bytes_unchanged": true,
+  "cases": {
+    "episode-0-column-frequency-bound1": {
+      "backend": "column",
+      "certificate": null,
+      "count_state": "EXACT",
+      "exact_count_decimal": "2",
+      "histogram_entries": null,
+      "load_seconds": 0.20014085099683143,
+      "margin_hex": "0x0.0p+0",
+      "method": "exact IEEE prefix-state DAG",
+      "ordering": "frequency",
+      "query_noninterference": "PASS",
+      "scope": "episode",
+      "statistics": {
+        "checkpoints": [],
+        "elapsed_seconds": 1.5896273480029777,
+        "peak_states": 4,
+        "process_peak_rss_kib": 77412,
+        "transitions": 131
+      },
+      "suffix_bound": true
+    },
+    "episode-0.25-column-frequency-bound1": {
+      "backend": "column",
+      "certificate": {
+        "coefficient_error": [
+          38230932203,
+          537333158985255075446784
+        ],
+        "cutoff": 11931,
+        "lower_boundary_gap": [
+          643,
+          159082572
+        ],
+        "optima": [
+          88553,
+          484,
+          3280,
+          36100,
+          5684,
+          3562,
+          1225,
+          1405,
+          121,
+          4541,
+          1225,
+          9425,
+          36100
+        ],
+        "quantum": [
+          2500,
+          119311929
+        ],
+        "rounding_envelope": [
+          1819955738603,
+          5597220406096407035904
+        ],
+        "upper_boundary_gap": [
+          8071,
+          477247716
+        ],
+        "zero_margin_exact_arithmetic": false
+      },
+      "count_state": "EXACT",
+      "exact_count_decimal": "17067800502243",
+      "histogram_entries": 8210,
+      "load_seconds": 0.19911601502099074,
+      "margin_hex": "0x1.0000000000000p-2",
+      "method": "certified column frontier exact generating function",
+      "ordering": "frequency",
+      "query_noninterference": "PASS",
+      "scope": "episode",
+      "statistics": {
+        "checkpoints": [
+          {
+            "coefficient_digit_bytes": 4,
+            "columns": 17,
+            "component": "factor0/block0",
+            "count": "1529",
+            "histogram_entries": 771,
+            "peak_frontier_masks": 15,
+            "peak_packed_bytes": 148595,
+            "rows": 12,
+            "suffix_bound": true
+          },
+          {
+            "coefficient_digit_bytes": 1,
+            "columns": 1,
+            "component": "factor1/block0",
+            "count": "1",
+            "histogram_entries": 1,
+            "peak_frontier_masks": 2,
+            "peak_packed_bytes": 2,
+            "rows": 1,
+            "suffix_bound": true
+          },
+          {
+            "coefficient_digit_bytes": 4,
+            "columns": 28,
+            "component": "factor2/block0",
+            "count": "3434629",
+            "histogram_entries": 2904,
+            "peak_frontier_masks": 32,
+            "peak_packed_bytes": 323963,
+            "rows": 8,
+            "suffix_bound": true
+          },
+          {
+            "coefficient_digit_bytes": 1,
+            "columns": 3,
+            "component": "factor2/block1",
+            "count": "3",
+            "histogram_entries": 3,
+            "peak_frontier_masks": 4,
+            "peak_packed_bytes": 2189,
+            "rows": 1,
+            "suffix_bound": true
+          },
+          {
+            "coefficient_digit_bytes": 4,
+            "columns": 22,
+            "component": "factor2/block2",
+            "count": "2169675",
+            "histogram_entries": 2729,
+            "peak_frontier_masks": 37,
+            "peak_packed_bytes": 314669,
+            "rows": 9,
+            "suffix_bound": true
+          },
+          {
+            "coefficient_digit_bytes": 1,
+            "columns": 1,
+            "component": "factor3/block0",
+            "count": "1",
+            "histogram_entries": 1,
+            "peak_frontier_masks": 2,
+            "peak_packed_bytes": 2,
+            "rows": 1,
+            "suffix_bound": true
+          },
+          {
+            "coefficient_digit_bytes": 1,
+            "columns": 4,
+            "component": "factor4/block0",
+            "count": "3",
+            "histogram_entries": 3,
+            "peak_frontier_masks": 5,
+            "peak_packed_bytes": 5130,
+            "rows": 3,
+            "suffix_bound": true
+          },
+          {
+            "coefficient_digit_bytes": 1,
+            "columns": 3,
+            "component": "factor5/block0",
+            "count": "3",
+            "histogram_entries": 3,
+            "peak_frontier_masks": 5,
+            "peak_packed_bytes": 1753,
+            "rows": 2,
+            "suffix_bound": true
+          },
+          {
+            "coefficient_digit_bytes": 1,
+            "columns": 3,
+            "component": "factor6/block0",
+            "count": "3",
+            "histogram_entries": 2,
+            "peak_frontier_masks": 4,
+            "peak_packed_bytes": 4,
+            "rows": 1,
+            "suffix_bound": true
+          },
+          {
+            "coefficient_digit_bytes": 1,
+            "columns": 5,
+            "component": "factor7/block0",
+            "count": "8",
+            "histogram_entries": 8,
+            "peak_frontier_masks": 6,
+            "peak_packed_bytes": 6344,
+            "rows": 2,
+            "suffix_bound": true
+          },
+          {
+            "coefficient_digit_bytes": 1,
+            "columns": 1,
+            "component": "factor8/block0",
+            "count": "1",
+            "histogram_entries": 1,
+            "peak_frontier_masks": 2,
+            "peak_packed_bytes": 2,
+            "rows": 1,
+            "suffix_bound": true
+          },
+          {
+            "coefficient_digit_bytes": 1,
+            "columns": 4,
+            "component": "factor9/block0",
+            "count": "3",
+            "histogram_entries": 3,
+            "peak_frontier_masks": 4,
+            "peak_packed_bytes": 556,
+            "rows": 3,
+            "suffix_bound": true
+          },
+          {
+            "coefficient_digit_bytes": 1,
+            "columns": 2,
+            "component": "factor10/block0",
+            "count": "2",
+            "histogram_entries": 2,
+            "peak_frontier_masks": 3,
+            "peak_packed_bytes": 5,
+            "rows": 1,
+            "suffix_bound": true
+          },
+          {
+            "coefficient_digit_bytes": 1,
+            "columns": 4,
+            "component": "factor11/block0",
+            "count": "5",
+            "histogram_entries": 5,
+            "peak_frontier_masks": 4,
+            "peak_packed_bytes": 742,
+            "rows": 2,
+            "suffix_bound": true
+          },
+          {
+            "coefficient_digit_bytes": 1,
+            "columns": 1,
+            "component": "factor12/block0",
+            "count": "1",
+            "histogram_entries": 1,
+            "peak_frontier_masks": 2,
+            "peak_packed_bytes": 2,
+            "rows": 1,
+            "suffix_bound": true
+          }
+        ],
+        "elapsed_seconds": 0.08945173100801185,
+        "peak_states": 13909,
+        "process_peak_rss_kib": 77412,
+        "transitions": 2908
+      },
+      "suffix_bound": true
+    },
+    "episode-1-column-frequency-bound1": {
+      "backend": "column",
+      "certificate": {
+        "coefficient_error": [
+          38230932203,
+          537333158985255075446784
+        ],
+        "cutoff": 47724,
+        "lower_boundary_gap": [
+          643,
+          39770643
+        ],
+        "optima": [
+          88553,
+          484,
+          3280,
+          36100,
+          5684,
+          3562,
+          1225,
+          1405,
+          121,
+          4541,
+          1225,
+          9425,
+          36100
+        ],
+        "quantum": [
+          2500,
+          119311929
+        ],
+        "rounding_envelope": [
+          1819955738603,
+          5597220406096407035904
+        ],
+        "upper_boundary_gap": [
+          571,
+          119311929
+        ],
+        "zero_margin_exact_arithmetic": false
+      },
+      "count_state": "EXACT",
+      "exact_count_decimal": "378038954451765697490",
+      "histogram_entries": 42428,
+      "load_seconds": 0.1985098180011846,
+      "margin_hex": "0x1.0000000000000p+0",
+      "method": "certified column frontier exact generating function",
+      "ordering": "frequency",
+      "query_noninterference": "PASS",
+      "scope": "episode",
+      "statistics": {
+        "checkpoints": [
+          {
+            "coefficient_digit_bytes": 5,
+            "columns": 17,
+            "component": "factor0/block0",
+            "count": "489508",
+            "histogram_entries": 9501,
+            "peak_frontier_masks": 69,
+            "peak_packed_bytes": 2958399,
+            "rows": 12,
+            "suffix_bound": true
+          },
+          {
+            "coefficient_digit_bytes": 1,
+            "columns": 1,
+            "component": "factor1/block0",
+            "count": "1",
+            "histogram_entries": 1,
+            "peak_frontier_masks": 2,
+            "peak_packed_bytes": 2,
+            "rows": 1,
+            "suffix_bound": true
+          },
+          {
+            "coefficient_digit_bytes": 10,
+            "columns": 55,
+            "component": "factor2/block0",
+            "count": "9651994153789972",
+            "histogram_entries": 11867,
+            "peak_frontier_masks": 254,
+            "peak_packed_bytes": 20584913,
+            "rows": 18,
+            "suffix_bound": true
+          },
+          {
+            "coefficient_digit_bytes": 1,
+            "columns": 1,
+            "component": "factor3/block0",
+            "count": "1",
+            "histogram_entries": 1,
+            "peak_frontier_masks": 2,
+            "peak_packed_bytes": 2,
+            "rows": 1,
+            "suffix_bound": true
+          },
+          {
+            "coefficient_digit_bytes": 1,
+            "columns": 7,
+            "component": "factor4/block0",
+            "count": "37",
+            "histogram_entries": 37,
+            "peak_frontier_masks": 12,
+            "peak_packed_bytes": 84383,
+            "rows": 3,
+            "suffix_bound": true
+          },
+          {
+            "coefficient_digit_bytes": 1,
+            "columns": 3,
+            "component": "factor5/block0",
+            "count": "6",
+            "histogram_entries": 6,
+            "peak_frontier_masks": 7,
+            "peak_packed_bytes": 4211,
+            "rows": 2,
+            "suffix_bound": true
+          },
+          {
+            "coefficient_digit_bytes": 1,
+            "columns": 3,
+            "component": "factor6/block0",
+            "count": "3",
+            "histogram_entries": 2,
+            "peak_frontier_masks": 4,
+            "peak_packed_bytes": 4,
+            "rows": 1,
+            "suffix_bound": true
+          },
+          {
+            "coefficient_digit_bytes": 1,
+            "columns": 6,
+            "component": "factor7/block0",
+            "count": "23",
+            "histogram_entries": 23,
+            "peak_frontier_masks": 8,
+            "peak_packed_bytes": 28440,
+            "rows": 2,
+            "suffix_bound": true
+          },
+          {
+            "coefficient_digit_bytes": 1,
+            "columns": 3,
+            "component": "factor8/block0",
+            "count": "3",
+            "histogram_entries": 3,
+            "peak_frontier_masks": 4,
+            "peak_packed_bytes": 2018,
+            "rows": 1,
+            "suffix_bound": true
+          },
+          {
+            "coefficient_digit_bytes": 1,
+            "columns": 6,
+            "component": "factor9/block0",
+            "count": "17",
+            "histogram_entries": 17,
+            "peak_frontier_masks": 9,
+            "peak_packed_bytes": 20483,
+            "rows": 3,
+            "suffix_bound": true
+          },
+          {
+            "coefficient_digit_bytes": 1,
+            "columns": 4,
+            "component": "factor10/block0",
+            "count": "4",
+            "histogram_entries": 4,
+            "peak_frontier_masks": 4,
+            "peak_packed_bytes": 238,
+            "rows": 1,
+            "suffix_bound": true
+          },
+          {
+            "coefficient_digit_bytes": 1,
+            "columns": 6,
+            "component": "factor11/block0",
+            "count": "14",
+            "histogram_entries": 14,
+            "peak_frontier_masks": 6,
+            "peak_packed_bytes": 4631,
+            "rows": 2,
+            "suffix_bound": true
+          },
+          {
+            "coefficient_digit_bytes": 1,
+            "columns": 1,
+            "component": "factor12/block0",
+            "count": "1",
+            "histogram_entries": 1,
+            "peak_frontier_masks": 2,
+            "peak_packed_bytes": 2,
+            "rows": 1,
+            "suffix_bound": true
+          }
+        ],
+        "elapsed_seconds": 1.1616193509835284,
+        "peak_states": 73406,
+        "process_peak_rss_kib": 77412,
+        "transitions": 25441
+      },
+      "suffix_bound": true
+    },
+    "episode-1-column-reverse_frequency-bound1": {
+      "backend": "column",
+      "certificate": {
+        "coefficient_error": [
+          38230932203,
+          537333158985255075446784
+        ],
+        "cutoff": 47724,
+        "lower_boundary_gap": [
+          643,
+          39770643
+        ],
+        "optima": [
+          88553,
+          484,
+          3280,
+          36100,
+          5684,
+          3562,
+          1225,
+          1405,
+          121,
+          4541,
+          1225,
+          9425,
+          36100
+        ],
+        "quantum": [
+          2500,
+          119311929
+        ],
+        "rounding_envelope": [
+          1819955738603,
+          5597220406096407035904
+        ],
+        "upper_boundary_gap": [
+          571,
+          119311929
+        ],
+        "zero_margin_exact_arithmetic": false
+      },
+      "count_state": "EXACT",
+      "exact_count_decimal": "378038954451765697490",
+      "histogram_entries": 42428,
+      "load_seconds": 0.19878253599745221,
+      "margin_hex": "0x1.0000000000000p+0",
+      "method": "certified column frontier exact generating function",
+      "ordering": "reverse_frequency",
+      "query_noninterference": "PASS",
+      "scope": "episode",
+      "statistics": {
+        "checkpoints": [
+          {
+            "coefficient_digit_bytes": 5,
+            "columns": 17,
+            "component": "factor0/block0",
+            "count": "489508",
+            "histogram_entries": 9501,
+            "peak_frontier_masks": 78,
+            "peak_packed_bytes": 3197183,
+            "rows": 12,
+            "suffix_bound": true
+          },
+          {
+            "coefficient_digit_bytes": 1,
+            "columns": 1,
+            "component": "factor1/block0",
+            "count": "1",
+            "histogram_entries": 1,
+            "peak_frontier_masks": 2,
+            "peak_packed_bytes": 2,
+            "rows": 1,
+            "suffix_bound": true
+          },
+          {
+            "coefficient_digit_bytes": 10,
+            "columns": 55,
+            "component": "factor2/block0",
+            "count": "9651994153789972",
+            "histogram_entries": 11867,
+            "peak_frontier_masks": 250,
+            "peak_packed_bytes": 20752271,
+            "rows": 18,
+            "suffix_bound": true
+          },
+          {
+            "coefficient_digit_bytes": 1,
+            "columns": 1,
+            "component": "factor3/block0",
+            "count": "1",
+            "histogram_entries": 1,
+            "peak_frontier_masks": 2,
+            "peak_packed_bytes": 2,
+            "rows": 1,
+            "suffix_bound": true
+          },
+          {
+            "coefficient_digit_bytes": 1,
+            "columns": 7,
+            "component": "factor4/block0",
+            "count": "37",
+            "histogram_entries": 37,
+            "peak_frontier_masks": 13,
+            "peak_packed_bytes": 73924,
+            "rows": 3,
+            "suffix_bound": true
+          },
+          {
+            "coefficient_digit_bytes": 1,
+            "columns": 3,
+            "component": "factor5/block0",
+            "count": "6",
+            "histogram_entries": 6,
+            "peak_frontier_masks": 7,
+            "peak_packed_bytes": 7567,
+            "rows": 2,
+            "suffix_bound": true
+          },
+          {
+            "coefficient_digit_bytes": 1,
+            "columns": 3,
+            "component": "factor6/block0",
+            "count": "3",
+            "histogram_entries": 2,
+            "peak_frontier_masks": 4,
+            "peak_packed_bytes": 6,
+            "rows": 1,
+            "suffix_bound": true
+          },
+          {
+            "coefficient_digit_bytes": 1,
+            "columns": 6,
+            "component": "factor7/block0",
+            "count": "23",
+            "histogram_entries": 23,
+            "peak_frontier_masks": 8,
+            "peak_packed_bytes": 34780,
+            "rows": 2,
+            "suffix_bound": true
+          },
+          {
+            "coefficient_digit_bytes": 1,
+            "columns": 3,
+            "component": "factor8/block0",
+            "count": "3",
+            "histogram_entries": 3,
+            "peak_frontier_masks": 4,
+            "peak_packed_bytes": 1436,
+            "rows": 1,
+            "suffix_bound": true
+          },
+          {
+            "coefficient_digit_bytes": 1,
+            "columns": 6,
+            "component": "factor9/block0",
+            "count": "17",
+            "histogram_entries": 17,
+            "peak_frontier_masks": 9,
+            "peak_packed_bytes": 32357,
+            "rows": 3,
+            "suffix_bound": true
+          },
+          {
+            "coefficient_digit_bytes": 1,
+            "columns": 4,
+            "component": "factor10/block0",
+            "count": "4",
+            "histogram_entries": 4,
+            "peak_frontier_masks": 4,
+            "peak_packed_bytes": 195,
+            "rows": 1,
+            "suffix_bound": true
+          },
+          {
+            "coefficient_digit_bytes": 1,
+            "columns": 6,
+            "component": "factor11/block0",
+            "count": "14",
+            "histogram_entries": 14,
+            "peak_frontier_masks": 6,
+            "peak_packed_bytes": 3846,
+            "rows": 2,
+            "suffix_bound": true
+          },
+          {
+            "coefficient_digit_bytes": 1,
+            "columns": 1,
+            "component": "factor12/block0",
+            "count": "1",
+            "histogram_entries": 1,
+            "peak_frontier_masks": 2,
+            "peak_packed_bytes": 2,
+            "rows": 1,
+            "suffix_bound": true
+          }
+        ],
+        "elapsed_seconds": 1.2017113759939093,
+        "peak_states": 73406,
+        "process_peak_rss_kib": 77412,
+        "transitions": 25196
+      },
+      "suffix_bound": true
+    },
+    "episode-1-previous-frequency-bound1": {
+      "backend": "previous",
+      "count_state": "COMPUTATION_UNRESOLVED",
+      "exact_count_decimal": null,
+      "failure": {
+        "elapsed_seconds": 0.32248492699000053,
+        "limit": 250000,
+        "location": {
+          "component": "factor2/block0",
+          "future_columns": 52,
+          "integer_budget": 11931,
+          "next_states": 211171,
+          "phase": "matching frontier",
+          "prior_states": 39964,
+          "row": 5,
+          "rows": 18
+        },
+        "peak_states": 251135,
+        "reason": "frontier/state budget exceeded",
+        "states": 251135,
+        "transitions": 1944070
+      },
+      "load_seconds": 0.19944044802105054,
+      "margin_hex": "0x1.0000000000000p+0",
+      "method": "previous",
+      "ordering": "frequency",
+      "query_noninterference": "PASS",
+      "scope": "episode",
+      "statistics": {
+        "checkpoints": [
+          {
+            "columns": 17,
+            "component": "factor0/block0",
+            "count": 489508,
+            "histogram_entries": 9501,
+            "rows": 12
+          },
+          {
+            "columns": 1,
+            "component": "factor1/block0",
+            "count": 1,
+            "histogram_entries": 1,
+            "rows": 1
+          }
+        ],
+        "elapsed_seconds": 0.3246635539981071,
+        "peak_states": 251135,
+        "process_peak_rss_kib": 77412,
+        "transitions": 1944070
+      },
+      "suffix_bound": true
+    },
+    "group-0-column-frequency-bound1": {
+      "backend": "column",
+      "certificate": null,
+      "count_state": "EXACT",
+      "exact_count_decimal": "1",
+      "histogram_entries": null,
+      "load_seconds": 0.03352703098789789,
+      "margin_hex": "0x0.0p+0",
+      "method": "exact IEEE prefix-state DAG",
+      "ordering": "frequency",
+      "query_noninterference": "PASS",
+      "scope": "group",
+      "statistics": {
+        "checkpoints": [],
+        "elapsed_seconds": 0.5049352060013916,
+        "peak_states": 0,
+        "process_peak_rss_kib": 77412,
+        "transitions": 0
+      },
+      "suffix_bound": true
+    },
+    "group-0.25-column-frequency-bound1": {
+      "backend": "column",
+      "certificate": {
+        "coefficient_error": [
+          4255917389,
+          119407368663390016765952
+        ],
+        "cutoff": 11931,
+        "lower_boundary_gap": [
+          643,
+          159082572
+        ],
+        "optima": [
+          3280
+        ],
+        "quantum": [
+          2500,
+          119311929
+        ],
+        "rounding_envelope": [
+          2074560178101,
+          29851842165847504191488
+        ],
+        "upper_boundary_gap": [
+          8071,
+          477247716
+        ],
+        "zero_margin_exact_arithmetic": false
+      },
+      "count_state": "EXACT",
+      "exact_count_decimal": "191532581516",
+      "histogram_entries": 2918,
+      "load_seconds": 0.0345215949928388,
+      "margin_hex": "0x1.0000000000000p-2",
+      "method": "certified column frontier exact generating function",
+      "ordering": "frequency",
+      "query_noninterference": "PASS",
+      "scope": "group",
+      "statistics": {
+        "checkpoints": [
+          {
+            "coefficient_digit_bytes": 4,
+            "columns": 28,
+            "component": "factor0/block0",
+            "count": "3434629",
+            "histogram_entries": 2904,
+            "peak_frontier_masks": 32,
+            "peak_packed_bytes": 323963,
+            "rows": 8,
+            "suffix_bound": true
+          },
+          {
+            "coefficient_digit_bytes": 1,
+            "columns": 3,
+            "component": "factor0/block1",
+            "count": "3",
+            "histogram_entries": 3,
+            "peak_frontier_masks": 4,
+            "peak_packed_bytes": 2189,
+            "rows": 1,
+            "suffix_bound": true
+          },
+          {
+            "coefficient_digit_bytes": 4,
+            "columns": 22,
+            "component": "factor0/block2",
+            "count": "2169675",
+            "histogram_entries": 2729,
+            "peak_frontier_masks": 37,
+            "peak_packed_bytes": 314669,
+            "rows": 9,
+            "suffix_bound": true
+          }
+        ],
+        "elapsed_seconds": 0.0325583030062262,
+        "peak_states": 8551,
+        "process_peak_rss_kib": 77412,
+        "transitions": 2428
+      },
+      "suffix_bound": true
+    },
+    "group-1-column-frequency-bound0": {
+      "backend": "column",
+      "count_state": "COMPUTATION_UNRESOLVED",
+      "exact_count_decimal": null,
+      "failure": {
+        "bytes_required": 37299200,
+        "column": 13,
+        "component": "factor0/block0",
+        "limit": 33554432,
+        "reason": "Live packed polynomial byte budget exceeded"
+      },
+      "load_seconds": 0.03336361300898716,
+      "margin_hex": "0x1.0000000000000p+0",
+      "method": "column",
+      "ordering": "frequency",
+      "query_noninterference": "PASS",
+      "scope": "group",
+      "statistics": {
+        "checkpoints": [],
+        "elapsed_seconds": 0.1741452440037392,
+        "peak_states": 320,
+        "process_peak_rss_kib": 77412,
+        "transitions": 6414
+      },
+      "suffix_bound": false
+    },
+    "group-1-column-frequency-bound1": {
+      "backend": "column",
+      "certificate": {
+        "coefficient_error": [
+          4255917389,
+          119407368663390016765952
+        ],
+        "cutoff": 47724,
+        "lower_boundary_gap": [
+          643,
+          39770643
+        ],
+        "optima": [
+          3280
+        ],
+        "quantum": [
+          2500,
+          119311929
+        ],
+        "rounding_envelope": [
+          2074560178101,
+          29851842165847504191488
+        ],
+        "upper_boundary_gap": [
+          571,
+          119311929
+        ],
+        "zero_margin_exact_arithmetic": false
+      },
+      "count_state": "EXACT",
+      "exact_count_decimal": "9651994153789972",
+      "histogram_entries": 11867,
+      "load_seconds": 0.035104579001199454,
+      "margin_hex": "0x1.0000000000000p+0",
+      "method": "certified column frontier exact generating function",
+      "ordering": "frequency",
+      "query_noninterference": "PASS",
+      "scope": "group",
+      "statistics": {
+        "checkpoints": [
+          {
+            "coefficient_digit_bytes": 10,
+            "columns": 55,
+            "component": "factor0/block0",
+            "count": "9651994153789972",
+            "histogram_entries": 11867,
+            "peak_frontier_masks": 254,
+            "peak_packed_bytes": 20584913,
+            "rows": 18,
+            "suffix_bound": true
+          }
+        ],
+        "elapsed_seconds": 0.36321629100712016,
+        "peak_states": 254,
+        "process_peak_rss_kib": 77412,
+        "transitions": 23146
+      },
+      "suffix_bound": true
+    },
+    "group-1-column-reverse_frequency-bound1": {
+      "backend": "column",
+      "certificate": {
+        "coefficient_error": [
+          4255917389,
+          119407368663390016765952
+        ],
+        "cutoff": 47724,
+        "lower_boundary_gap": [
+          643,
+          39770643
+        ],
+        "optima": [
+          3280
+        ],
+        "quantum": [
+          2500,
+          119311929
+        ],
+        "rounding_envelope": [
+          2074560178101,
+          29851842165847504191488
+        ],
+        "upper_boundary_gap": [
+          571,
+          119311929
+        ],
+        "zero_margin_exact_arithmetic": false
+      },
+      "count_state": "EXACT",
+      "exact_count_decimal": "9651994153789972",
+      "histogram_entries": 11867,
+      "load_seconds": 0.03312737098895013,
+      "margin_hex": "0x1.0000000000000p+0",
+      "method": "certified column frontier exact generating function",
+      "ordering": "reverse_frequency",
+      "query_noninterference": "PASS",
+      "scope": "group",
+      "statistics": {
+        "checkpoints": [
+          {
+            "coefficient_digit_bytes": 10,
+            "columns": 55,
+            "component": "factor0/block0",
+            "count": "9651994153789972",
+            "histogram_entries": 11867,
+            "peak_frontier_masks": 250,
+            "peak_packed_bytes": 20752271,
+            "rows": 18,
+            "suffix_bound": true
+          }
+        ],
+        "elapsed_seconds": 0.38053272498655133,
+        "peak_states": 250,
+        "process_peak_rss_kib": 77412,
+        "transitions": 23058
+      },
+      "suffix_bound": true
+    },
+    "group-1-previous-frequency-bound1": {
+      "backend": "previous",
+      "count_state": "COMPUTATION_UNRESOLVED",
+      "exact_count_decimal": null,
+      "failure": {
+        "elapsed_seconds": 0.08670355699723586,
+        "limit": 250000,
+        "location": {
+          "component": "factor0/block0",
+          "future_columns": 52,
+          "integer_budget": 11931,
+          "next_states": 211171,
+          "phase": "matching frontier",
+          "prior_states": 39964,
+          "row": 5,
+          "rows": 18
+        },
+        "peak_states": 251135,
+        "reason": "frontier/state budget exceeded",
+        "states": 251135,
+        "transitions": 433774
+      },
+      "load_seconds": 0.03353637401596643,
+      "margin_hex": "0x1.0000000000000p+0",
+      "method": "previous",
+      "ordering": "frequency",
+      "query_noninterference": "PASS",
+      "scope": "group",
+      "statistics": {
+        "checkpoints": [],
+        "elapsed_seconds": 0.08812715098611079,
+        "peak_states": 251135,
+        "process_peak_rss_kib": 77412,
+        "transitions": 433774
+      },
+      "suffix_bound": true
+    }
+  },
+  "computational_limits": {
+    "max_polynomial_bytes": 33554432,
+    "max_seconds": 60,
+    "max_states": 250000,
+    "max_transitions": 5000000
+  },
+  "format": "KRAKEN_DRAFT2_MARGIN1_INDEPENDENT_INVESTIGATION_V1",
+  "full_experiment_rerun": false,
+  "git_head": "e3984959c28888f5dd4cc08e9ba5b8d95baa6ea2",
+  "initial_file_hashes": {
+    ".gitignore": "24459e7feded9172d32c80b041c4ef76fe903f720037559a0f44ff3e82ea0d7a",
+    "LICENSE": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "README.md": "7a5ded855b029c3ac440a3b07e213bdd001b6c000cd069fbdfe13eb788ce1904",
+    "analysis/benchmark_episode_component_tracking_v2_draft2_column_count.py": "52f044719fce701a9f0f49825491ad50e5947fceef5ad7116a7ae4411c0ae19d",
+    "analysis/benchmark_episode_component_tracking_v2_draft2_exact_count.py": "cc142c995231a3779b640ea990af6a92cfc663f401576ae85a5233d3d71b266a",
+    "analysis/benchmark_episode_component_tracking_v2_draft2_exact_solver.py": "2931087c0c335834f611786f7bb12ba59c4a12e8f30c71099a9632b423e91bdb",
+    "analysis/benchmark_episode_component_tracking_v2_draft2_margin1_investigation.py": "b60426da4ae1ad3a6c4604997378135225c1eeadffb25c0b595f12e3c3aca05b",
+    "analysis/episode_component_tracking_v2_draft1.py": "a24a5617ca9f4129c6970fd0a9743f8b78610c58567e8a557f21dee2a055f66c",
+    "analysis/episode_component_tracking_v2_draft2_cardinality_sidecar.py": "3b05374ed34667b82f1f420fee9ccab9a096efa2c2426fd73fe1b01a371f5142",
+    "analysis/episode_component_tracking_v2_draft2_column_count.py": "03c0f8493ab571caed7bb48eca2c2d6327f021c7a94e9a82ec2add75d5327fed",
+    "analysis/episode_component_tracking_v2_draft2_compact_consumer_prototype.py": "ecc5e62eb8cde43c72f442fc6bd5d97c31ef44b1e071f1526126de81946e43b0",
+    "analysis/episode_component_tracking_v2_draft2_exact_count.py": "4c543655c738fcc9d2b771f2cb3ae26106304e2ff2f86a201a47d77cd5bd18a3",
+    "analysis/episode_component_tracking_v2_draft2_exact_count_baseline.py": "efa45902c98e5a435dc43b4361e34f49a234808cd6f62087c50dbf2f8ffbd584",
+    "analysis/episode_component_tracking_v2_draft2_exact_solver.py": "f5c4a907af24958739bf7a2d90fd27d2e602c295a74c951bb52525ccd10023a1",
+    "analysis/episode_component_tracking_v2_draft2_experiment.py": "73dc27741f3ad5fd710f94a8989a930bb731cd196e32ff2d000ee48e00b9d39a",
+    "analysis/episode_features_v1.py": "4528ccf87557426adf50be6cf2678597d320977b046011c38f8ab0103b371259",
+    "analysis/episode_features_v2.py": "d72d85a2c1542f173c240f02e77e8486dd90e05cea9dd486fda7cea6092f8d30",
+    "analysis/passband_retune_v1.py": "f268203d2465c394a1a09ae9f4cf653081399f8a488d0a2664e2a8d45ee23aa4",
+    "analysis/waveform_structure_v1.py": "7c752127aaa52050cfc2978a11fdcb55b9b46a43ebca1f1082b68db16603d138",
+    "capture/group_episodes.py": "c14586d6304eca3ea906b320f43607ffe6a982929b6bdacd9adb71f973fe98e6",
+    "capture/hackrf_capture.py": "2dd7b48dd63ed4a0e15cd1d8f27a4bbcf91cd6cdade788054bea008200ac33e7",
+    "capture/kraken_capture.py": "bbee1eb37138b9b2d5eb4aa61006ea36d7ebc794b9293794a2754e86adc41970",
+    "capture/log_activations.py": "bc713946f2181e59c23a37d1b04a83ee35a0994aff8b908b72d66f0dc80034d5",
+    "capture/verify_capture.py": "d813cf530cd513036fea31a6669a1dad4b815d42e5dbdcf5e9631f2d310bd8ce",
+    "capture/verify_hackrf_capture.py": "8eef0e753aad23ef0b3b7ac12e29ea35637146439cf4eed969e64f52f2f24f74",
+    "captures/ACQ-COMPLETE-V1-20260919-021641/files.sha256": "018175bd3d715768fb94fff670468e44f3adc6d591db74eccfff1238752d0c9e",
+    "captures/ACQ-COMPLETE-V1-20260919-021641/manifest.json": "a53e1236683321e5a22d12e26a9b7dda355b6dd153055eadcefb4c694494aad1",
+    "captures/ACQ-COMPLETE-V1-20260919-021641/notes.md": "f4ecf79e88842a20152e6a8238ba52bcb92acfad855ed6699982b841460fe114",
+    "captures/BETWEEN-DEVICE-REPL-V1-20260919-024341/acquisition-completeness-v1.md": "8581a94170d03528051fb0970c127562e4bb372f97f87a133af6f25d3aa18673",
+    "captures/BETWEEN-DEVICE-REPL-V1-20260919-024341/episode-features-v1.json": "013c56937ca45d2cbb86e13c5251157f36bdf6fee1d18b20580fe54027e14721",
+    "captures/BETWEEN-DEVICE-REPL-V1-20260919-024341/episodes.json": "83569b5b486422f15ea068bc2474fa3bf614086362f1e9ad8010a08182cf4c81",
+    "captures/BETWEEN-DEVICE-REPL-V1-20260919-024341/files.sha256": "e5d2c9271382637057e55c3ced4ac59c91ba63df5e8fa40d2dda84366fc2dec0",
+    "captures/BETWEEN-DEVICE-REPL-V1-20260919-024341/manifest.json": "190213fb854080b8c2a3fd80381b5f4130d1a26c749621a8f42c289ed7330004",
+    "captures/BETWEEN-DEVICE-REPL-V1-20260919-024341/notes.md": "3260807b0bc49417f4c30f66a9ac32b8b8ca5d370f57e1d349db050e61235464",
+    "captures/BETWEEN-DEVICE-V1-20260919-022809/files.sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "captures/BETWEEN-DEVICE-V1-20260919-022809/manifest.json": "e92853d575266e3e0ac78606a77bc2663c7e75062b063506b26b750955dbc28d",
+    "captures/BETWEEN-DEVICE-V1-20260919-022809/notes.md": "ee2ad02022f059d8f26dc1ea84aa14810b190cc7f229554d550d9cdc2abad098",
+    "captures/BETWEEN-DEVICE-V1-20260919-022917/episode-features-v1.json": "5b9d68096ad2af88eac4885f0665102b44344592403e299bea7b6b36525ea41b",
+    "captures/BETWEEN-DEVICE-V1-20260919-022917/episodes.json": "d990fc385ddcfbf6926316704c0c94e8721785b589cda56bcf67ddbd2bcae1f0",
+    "captures/BETWEEN-DEVICE-V1-20260919-022917/files.sha256": "d88350568cfe3590cc7e3a7b3d8fa63aeac7cba7fc9f4c86b0fa0c9d65d5700a",
+    "captures/BETWEEN-DEVICE-V1-20260919-022917/manifest.json": "326850f488ebb670a17f2e51aba594eee20ebfd3977f0926b89eec56de4c1e00",
+    "captures/BETWEEN-DEVICE-V1-20260919-022917/notes.md": "651858a391b355d17446b8cd0d89cf48e5c1cdda8c830bde13af450e26526182",
+    "captures/PIPELINE-TPMS-001-20260917-202651/files.sha256": "1eb88feb32e5d9e0781e7458cf49407fb7e8b6efb6e22a516dd296748633b081",
+    "captures/PIPELINE-TPMS-001-20260917-202651/manifest.json": "e9d1531bbee9960023037c6d4b0592dcb9552422d50a8deae6ef9eafb7992498",
+    "captures/PIPELINE-TPMS-001-20260917-202651/notes.md": "0b02f2c7367a039fadef2c27be2e60ac00c7c972d1e7fd0fd99c8d589cb202ae",
+    "captures/PIPELINE-TPMS-002-20260917-230551/files.sha256": "4dc3f08f4b6af1d2d0518fd857e59faff9b74d147408feb10c122209497cfb85",
+    "captures/PIPELINE-TPMS-002-20260917-230551/manifest.json": "0994ba3c389b57d5713ddde06f4a2b0c19eebe400d5b3a5485aa7ab715e4a12b",
+    "captures/PIPELINE-TPMS-002-20260917-230551/notes.md": "f18a04a7c938c798aff31a19aa59d1b53bb7a3b063e690f72735904bc2efaa0c",
+    "captures/PIPELINE-TPMS-002-20260917-230551/operator-activations.log": "c17b6e246700524998e0500b895efd54d1e1f64a0624bebdade1209e50ad83e5",
+    "captures/PIPELINE-TPMS-002-20260917-230551/validation-status.md": "dcfac07a037aa412e04506a85359ccf6ada14ea8c0d28ab4fbe00b76ea725530",
+    "captures/PIPELINE-TPMS-003-20260917-231616/files.sha256": "4f7afcaf1e34509950d774240eb01693ccf67780569c5ceef17b4b7919fa627b",
+    "captures/PIPELINE-TPMS-003-20260917-231616/manifest.json": "e281bb0f8b1b2c5503b891cef5e67f7d52075f428c3f6aebaae2e1a0d803d966",
+    "captures/PIPELINE-TPMS-003-20260917-231616/notes.md": "3a532d0dfb1993c6646157c10c516c53c6fbb5fd1ac36be3ad93f3cd4d0e8689",
+    "captures/PIPELINE-TPMS-003-20260917-231616/operator-activations.log": "e8d0aab3346a6237672c510f380c70478de13724fb8c940c9a19a334f06c3575",
+    "captures/PIPELINE-TPMS-003-20260917-231616/validation-status.md": "2a67b674aa6c070e019ae96917e495b9622b21356a86f6eb7ae6c336285cf822",
+    "captures/PIPELINE-TPMS-004-20260917-233423/episode-features-v1-status.md": "bb7855e726d9d5b2962480988ab38830236a7a6ae99bd6ac5d8b019796eb04d8",
+    "captures/PIPELINE-TPMS-004-20260917-233423/episode-features-v1.json": "2bd617d51a8b5ef24c5575e18e2fcaea2520ffc84685cdd224a4eb1f37582fe1",
+    "captures/PIPELINE-TPMS-004-20260917-233423/episode-features-v2.json": "a168a5aca47b3b68e4ab8b6dcb8a4198c38b7b4d778523145ee2ee473f3e126d",
+    "captures/PIPELINE-TPMS-004-20260917-233423/episodes.json": "63c1e36332c9d460443727e51197e4cb08eb1a9efc167afe0456a3546c0d2b22",
+    "captures/PIPELINE-TPMS-004-20260917-233423/files.sha256": "193df1381e60dcc374c4d2fe20296c3b55cfd3e17ec17c945b6af1b518bd4cbf",
+    "captures/PIPELINE-TPMS-004-20260917-233423/manifest.json": "b8e80226adb18fcde55ef30313d87266c9c7649953ed4f085f4a0c9aa03da80a",
+    "captures/PIPELINE-TPMS-004-20260917-233423/notes.md": "d9c9d74d664b7c1af68809fa4e69f7044fed937a6345c039adca2fac97653b6e",
+    "captures/PIPELINE-TPMS-004-20260917-233423/operator-activations.log": "23b991b91101ebd581e0bc1dfe1432ae51bba71c40589e89653bd5dff7259ddc",
+    "captures/PIPELINE-TPMS-004-20260917-233423/validation-status.md": "103f71623b60fcf98103f34a3a0de7bfce9d6043ddd2048914be39232e92a283",
+    "captures/PIPELINE-TPMS-004-20260917-233423/waveform-structure-v1.json": "f790ecf2784cda8b202e962f8a340f38e85588ec3f496a12ebbce1c2504e7204",
+    "captures/PIPELINE-TPMS-005-20260917-235439/episode-features-v1.json": "124e1b9d4d133ff317607dd37368ced7201292f5531d4294e17f270e27bad686",
+    "captures/PIPELINE-TPMS-005-20260917-235439/episode-features-v2.json": "d5fb34e4495394a2c3b50b59e910c17c68733052583e2d5bd739ed8af6acee44",
+    "captures/PIPELINE-TPMS-005-20260917-235439/episodes.json": "4722d958b952683bf3a7af08873a7068bd21b17533e0590ad4492a7bf8e2db19",
+    "captures/PIPELINE-TPMS-005-20260917-235439/files.sha256": "c8e29382cc31a876f3c97485f1bef922067619e088840c36c97986319d9f20bc",
+    "captures/PIPELINE-TPMS-005-20260917-235439/manifest.json": "3f1e64587c281f0e71fa13a286026b6c93e41f32fb15ae5bf4025f51f9edc90b",
+    "captures/PIPELINE-TPMS-005-20260917-235439/notes.md": "cc6ede6286469b68ec570297ea8d854c2a29ab2abba314be2944343519c98da5",
+    "captures/PIPELINE-TPMS-005-20260917-235439/operator-activations.log": "9d4046a31c4f1e57e6fcde8d62136c9b328ca706135994cbd07afd95f6d488dc",
+    "captures/PIPELINE-TPMS-005-20260917-235439/replication-status.md": "062ccc545b7a21eb87eacc3b9d7191cdcf388e3d2839932c21a20aa5be7179b6",
+    "captures/PIPELINE-TPMS-005-20260917-235439/waveform-structure-v1.json": "30b66be09a6cb708d9b8d9a0964089fee2d20cc7f22b3439f1f3df24315c3dce",
+    "captures/PIPELINE-TPMS-006-20260918-001713/acquisition-completeness-v1.md": "71fc942f5444f1cebb8fe96c485f1f584392f55ce3423679ca8afb977eca805f",
+    "captures/PIPELINE-TPMS-006-20260918-001713/files.sha256": "50a3ae0249cf74b59baa045e354dc9a5a4a09f5e71fbf7feab202eda72de2acd",
+    "captures/PIPELINE-TPMS-006-20260918-001713/manifest.json": "8b47e6cb1d8dc979c5b440159bb9e3f7ad8da8568dd76c7d8769d9fdd5ca1db6",
+    "captures/PIPELINE-TPMS-006-20260918-001713/notes.md": "c8c1c1725cfa6db4a9a1b1d2b9df390cf6586911440f9e90c69011fb38d66b9b",
+    "captures/PIPELINE-TPMS-006-20260918-001713/operator-activations.log": "bdda1f06339613442bb6e63250257c9f5dd113b304e34bf866b07ba2f1935907",
+    "captures/PIPELINE-TPMS-007-20260918-002700/activation-position-v1.md": "5d10c2772418d2fa2609bd043bf0665add200662f9ba061973e0e8a2a75d9c5e",
+    "captures/PIPELINE-TPMS-007-20260918-002700/episode-features-v1.json": "6f6d9a91d8a3914561f942887f781ca11200f66f30b6575360be495e8741b357",
+    "captures/PIPELINE-TPMS-007-20260918-002700/episode-features-v2.json": "94f51569c2399843636df7830896883bcf5ed7a2725ed012384608174441956c",
+    "captures/PIPELINE-TPMS-007-20260918-002700/episodes.json": "6dfcc56e3fbbe82a88dec285ac039245982a429cfd286bf98a8a6b170d754ea9",
+    "captures/PIPELINE-TPMS-007-20260918-002700/files.sha256": "af7d89fbf78dbeb3cb52cb43ad51163b04f924c6fc3a6eafe49c76fa9889fe88",
+    "captures/PIPELINE-TPMS-007-20260918-002700/manifest.json": "ffc4eab54b7b89152fd4b78efe58a886064b61b4a07afe0944be654c62dda1de",
+    "captures/PIPELINE-TPMS-007-20260918-002700/notes.md": "99dd1829e05418feac24b82688a7614ddba7c610a03da9724827bf84a54fde31",
+    "captures/PIPELINE-TPMS-007-20260918-002700/operator-activations.log": "ee7a94a318fbff2c8e8011cd08c0f5a4e8798452e790065a491305bba3c5d0b6",
+    "captures/PIPELINE-TPMS-007-20260918-002700/waveform-structure-v1.json": "db889e8531d250c757269c6211605dc17b79b4bd39f0d12c1ac6eb340e44d709",
+    "captures/PIPELINE-TPMS-008-20260918-003900/between-device-discrimination-v1.md": "cb10e07acb7a4993c0a13782db5b1ee8ad4f6507ba82e9a2665fd2a9222b387e",
+    "captures/PIPELINE-TPMS-008-20260918-003900/episode-features-v1.json": "81510454b80f8015c98438ceb70f6a26bfe847dbe0e11571125fb328e99e65e5",
+    "captures/PIPELINE-TPMS-008-20260918-003900/episode-features-v2.json": "1fb01486873d2d51281e95a7a95785629b18444b038be2042ca65bfa3f065453",
+    "captures/PIPELINE-TPMS-008-20260918-003900/episodes.json": "8b579352021486f85c4bb129980873ddb2c1c81d2900dc7d9d790f4f4a29b24b",
+    "captures/PIPELINE-TPMS-008-20260918-003900/files.sha256": "47955841898576dc8c08c08d74af2161d6f7970df67c1c0e3772caf604ca499f",
+    "captures/PIPELINE-TPMS-008-20260918-003900/manifest.json": "afd05d8ba49e316b488dd34ad977919e13f0fa8dd691d50c1070dbfa76f65422",
+    "captures/PIPELINE-TPMS-008-20260918-003900/notes.md": "ede64b1db3da334d2dde67b7379cd060e9083ed251113bb11414c2a14f6d05e5",
+    "captures/PIPELINE-TPMS-008-20260918-003900/operator-activations.log": "67a48686c37390d5c77e67b1580576e33739431c4be29c88d040ad5d5aef4b4d",
+    "captures/PIPELINE-TPMS-008-20260918-003900/waveform-structure-v1.json": "c97bb34821673f2afc6c90b24b794450d5463a997c490dbd30dda3870ed971bb",
+    "captures/hackrf/ENGINEERING-PROVENANCE-001/files.sha256": "05f4e3e0833b5241c4391a6ae3842f32cbd29ae5ba389afa3424351862e6aac5",
+    "captures/hackrf/ENGINEERING-PROVENANCE-001/manifest.json": "49a3fcd9f6ca617afbca922fa639bbe728d9118b006ad1275dff6297f34361ac",
+    "captures/hackrf/ENGINEERING-PROVENANCE-001/notes.md": "9a6a3bc90d2cf934dee93953f8d23c5381f60d199e64c5d3c8b2d9593a46715e",
+    "captures/hackrf/ENGINEERING-PROVENANCE-002/files.sha256": "744566a60de0198dfd58f5c7a0a76ce26fd5773935b92de7c0b940b9dfff2848",
+    "captures/hackrf/ENGINEERING-PROVENANCE-002/manifest.json": "e8b1a7ce538a89e1382180b6bffc047ba75856ed121736f8d231e561ee041f07",
+    "captures/hackrf/ENGINEERING-PROVENANCE-002/notes.md": "48c0bb3130421d493b0b6fe077880b7564b6664ec79ee8b73ab620e304aa90c9",
+    "captures/hackrf/SYNTHETIC-CONTROLLED-002/files.sha256": "361ba639354178541bcf2222710e8415d6df8a4b6d2c83c3735fb3faff6c012f",
+    "captures/hackrf/SYNTHETIC-CONTROLLED-002/manifest.json": "78ce969128e129be4e657579a67f3a187458365e9681de4aa3284e6707bc9cc3",
+    "captures/hackrf/SYNTHETIC-CONTROLLED-002/notes.md": "4ebee87d03c8be7047d3e5752276a5c1d0979f7d7f7b666550981bf6c7d5e8ef",
+    "captures/hackrf/SYNTHETIC-CONTROLLED-003/files.sha256": "032a82ba16754324f15497fea41200d02715fe596fc098423ae62ea430a1bcd6",
+    "captures/hackrf/SYNTHETIC-CONTROLLED-003/manifest.json": "64d8635251636ee609d3402a3ec6343656a422ad1b7b2dc04d1a3615a3bd1d7e",
+    "captures/hackrf/SYNTHETIC-CONTROLLED-003/notes.md": "b1dde0d94640578f6ed27d2ca2dcd742a7e2ed7e04ac4d0276fda774b243b827",
+    "docs/episode-component-tracking-v2-draft1.md": "017a4bf9dde31c745ba9765827378e8dd9c6e6af175bd0cddf594b22f08ac004",
+    "docs/episode-component-tracking-v2-draft2-exact-count-review.md": "e4ce0690af09f16ded5feb9705232be8b6caece2369882fefe406ab41a8fe306",
+    "docs/episode-component-tracking-v2-draft2-exact-solver.md": "461b996fbaffff89f049c4aa5ff44b9e06b9e17364c31db237784a84c6ac897d",
+    "docs/episode-component-tracking-v2-draft2-experiment.md": "3923a1f009a0c798ed97bbfdf8158b36c2673a88b0d687a67e3b921bd352e026",
+    "docs/hackrf-capture-provenance-v1.md": "515fadeaf131b913b55a6fdd82594b83d6aa226340aff23a7e55f58e8d305714",
+    "docs/hackrf-passband-characterization-v1.md": "be5527c548b052a66fc7e101c1d7f0b9d98a992485b741edf49539ab4e44a7bb",
+    "docs/kraken-acquisition-completeness-v1.md": "98966288321d95c34f7111b10fba64f0061866b557dddc60840d839ab8eb5427",
+    "docs/kraken-acquisition-design-review.md": "b370022db7fdfd36a3b1eea45536a78277a7257d14fc408e910884035d028318",
+    "docs/kraken-activation-position-v1.md": "70b4621fb0e474ad173f7b9477177117a8e17a84b86b341fd8e6be64ab989729",
+    "docs/kraken-between-device-discrimination-v1.md": "bfba460e7e51a98c86e6bb1307413dabbab39a86113dad25b43fcb33bb125c46",
+    "docs/kraken-episode-features-v1.md": "f0bbc8f8c0dd179486979e9aee904bf3db5fee2717073a3406b65e6c636bc7dc",
+    "docs/kraken-episode-features-v2-development-result.md": "46d5f5aa8073fd9a52c424cb5f0dab470bd585456eb48801f1a82f770f84f4f4",
+    "docs/kraken-episode-features-v2-development.md": "71c0b60eeb4dfd4c98336313bbc54735af3713fdadc36516c393367f6bbda260",
+    "docs/kraken-episode-grouping-v1.md": "8d04b9c93e1df055738831bdda3ad4ea276d91a2f5da39e7935294a4b7491aca",
+    "docs/kraken-episode-repeat-v1.md": "25ba4036a0ed063cd5c4230d7171d560490ac37091dfc8335e56293c6d334ec9",
+    "docs/kraken-waveform-structure-v1-development-result.md": "274196186b41ceb5350e1b329050f698b3b7d398d2c446e36e4d1d6a6d8434a5",
+    "docs/kraken-waveform-structure-v1-development.md": "88a01cab50ca8874370cadf411694aefc90282b5e55a9dcf6a3b30b2a8ab5be1",
+    "docs/kraken-wider-iq-acquisition-v1.md": "bba32d4e56bc96b6745b9edd6a30fc4f2fd90950ad4daf8e64eff77858f11ba7",
+    "docs/phase1-rf-doa-characterisation.md": "a16f63badc208a43aef64bdef8b067e5bfb2b2b29bc203166807040270fcfd05",
+    "docs/phase2-tpms-rf-characterisation.md": "ded100ac4346406bbaab2bcc2bdb12327c505c348ea24ea49534c06229a09928",
+    "docs/stages.md": "d8179d7f69eea458326f0111655870dc72473ca50b658a898d2200b41c29d8c8",
+    "docs/tpms-component-families-v3-hypothesis.md": "ed8ae55f015e0c7e92f02b70fdb7666fa2a7baa9f9a58fe813b8e4cef97bd780",
+    "docs/tpms-topology-v2-hypothesis.md": "7f3b025999ba5d93763c09ab8554cca4ba62875088a0153f908d82b837801a7b",
+    "experiments/between-device-v1-heldout-selection.md": "2593082090d527e0b45fb797f8a44242b192ffb1f5f5ef22d2910bd850267baf",
+    "fingerprinting/keyfob_baseline_v1.json": "33c67734ce34c0cb154c042f5629a0f8ae4dafa618f583c5167aba4e21e00720",
+    "fingerprinting/keyfob_feature_v2.json": "7f6cf6dc470b6391cf871a398d2784f3314dc2e2a836880f291f0210b6c62a45",
+    "fingerprinting/results/tpms_s1_capture_a.json": "1d9c70ec7fb5284d09549273f4b1205bd1ea96621377d15f31200f04df7912f9",
+    "fingerprinting/results/tpms_s1_capture_b.json": "a05793b81f4401ea3e65f3177b267041df86277f0010c1168a136fc4f0205999",
+    "fingerprinting/results/tpms_s2_capture_a.json": "6769f3e1036738bc2ec9f73e91b67f5aeaca50c6e2d16b49c26869d7e9d0a6fc",
+    "fingerprinting/results/tpms_s2_capture_b.json": "7c978c287d5356c5116c417a547281948b9d7518183536b19fa2f414782452e8",
+    "fingerprinting/results/tpms_s2_capture_c.json": "5827c0a59c5edce56a92e427eb746c999a08d932d86e01c8a9235a7f21e150f1",
+    "fingerprinting/results/v2/tpms_s1_s2_development.json": "2ee5e915dc43bcdc2aa3e4644dd13ed8f4c52dccf98448b2ec21bf41a32c8923",
+    "fingerprinting/results/v3/tpms_s1_s2_development.json": "10a3b1ceef2fd1da831f2639364af4cee0fb8dcba409f4a9d8c4078daca8469a",
+    "fingerprinting/results/v3/validation/tpms_s3_capture_a.json": "7da0ac6ad2c3fa3a0df81ba6a102ede07d4413a91c2e1d14117127f897794ec9",
+    "fingerprinting/results/v3/validation/tpms_s3_capture_a2.json": "03dd168d1bd0d3fc239331456d7cb3ca3b30c77a7e27371ae8776bb5e159fbef",
+    "fingerprinting/results/v3/validation/tpms_s3_capture_a3.json": "19418868970e710c4d2dab8c12b98c32dc9c0691f8926a2eb0910e119946ec9c",
+    "fingerprinting/results/v3/validation/tpms_s3_capture_a4.json": "67495efd793f65bc2ac3d3218ce04accf4a89b6073c31e9d9f39b3d027319487",
+    "fingerprinting/results/v3/validation/tpms_s4_capture_a2.json": "6274ee372d802da6461c633b9ef47beac4ec460451c8c6cf815e704aa728b242",
+    "fingerprinting/results/v3/validation/tpms_s4_capture_b.json": "c0d48bfae6a1e8b937dcec4f9e43df659537800efdc7ad6307bf74aa932d3eca",
+    "fingerprinting/results/v3/validation/tpms_s4_capture_c.json": "bb8de89e444bc2a22ce2959cb1836b40e4d27b98ffe1e9e2c31559768854339b",
+    "fingerprinting/tpms_component_families_v3.py": "faf8411528a86e18447ed2ecc86c17dfb99b842048da7996f08f4557db87a487",
+    "fingerprinting/tpms_iq_features.py": "5aa9e6e0452895a355880316bf884758fbc2811f11aac8c9f8f3e9f715509c84",
+    "fingerprinting/tpms_topology_v2.py": "047c40aa89faf8ebe5639ab61085b67c859ef13bcd1bfcff7c42ca7eb71ba492",
+    "kraken_project.py": "12cd2c6bd6ebd2c3b799e0102259fcf7b3c120b9fc152376970287da537adef3",
+    "notes/BETWEEN-DEVICE-V1/between_device_replication_v1.md": "8dd0dcde2a7ac7bb953fd34f3090926e6a29e0f4bf6de8f5c584989bcacdb59d",
+    "notes/BETWEEN-DEVICE-V1/between_device_v1.md": "8d1529ce679b021e52947d0a83a7fe2826f7fe85741b4059910044daae24e053",
+    "notes/PASSBAND-V1/2026-09-18-retune-results.md": "0ab39589510f8a0575a7f99aa4c42d6e0d9b6c63e7c21223c1de91bb42c9a7d2",
+    "notes/PASSBAND-V1/passband_retune_v1.csv": "0efa6a2af6d24d49dc1d5a7a4af7fd3d208a2abe3a51ddc2507191fb1b409a3c",
+    "notes/PASSBAND-V1/passband_retune_v1.md": "694c1fabaeeb805c8ee87efd06cdba43dc2a8514f48fcfaaed94be335a1ffd04",
+    "reporting/kraken_report.py": "1407fd35c8c1ac76d9313f916ccd42ae50fb1d651abc570aba5b34a26ac34edb",
+    "results/episode-component-tracking-v2-draft1/BETWEEN-DEVICE-REPL-V1-20260919-024341/components.json": "2d5cca375d6c961aa506c9b976980b7264b976bc0f2863d5d42bbcfd2a44d04f",
+    "results/episode-component-tracking-v2-draft1/BETWEEN-DEVICE-REPL-V1-20260919-024341/episodes.csv": "59e846cf6b33fc6cbce692540434631a5daa49bc21d98086cf40928c78ffa439",
+    "results/episode-component-tracking-v2-draft1/BETWEEN-DEVICE-REPL-V1-20260919-024341/files.sha256": "847ac13b2efd398ba40a5959571f6c55a9baffea441644ae04804e99710646d1",
+    "results/episode-component-tracking-v2-draft1/BETWEEN-DEVICE-REPL-V1-20260919-024341/run.json": "3cf6049bdc2abf706c4f3ddf3869c572a2089bda04d5a96420f43d03b4f88c85",
+    "results/episode-component-tracking-v2-draft1/BETWEEN-DEVICE-REPL-V1-20260919-024341/spectra.npz": "1507684d517d174e6d60cd97240f9a1f9683629297801407550b38b77a20f8d3",
+    "results/episode-component-tracking-v2-draft1/BETWEEN-DEVICE-REPL-V1-20260919-024341/summary.md": "ee9f1bd412ba70c0fe5cfb0cd2b6e8f0ae7422cfd8017711a1f9cb537f4faf67",
+    "results/episode-component-tracking-v2-draft1/BETWEEN-DEVICE-REPL-V1-20260919-024341/tracks.json": "8a70c41f72d55a49cfc9b9433814518de7751ed580a6b7fa458415c665e65fc8",
+    "results/episode-component-tracking-v2-draft1/BETWEEN-DEVICE-V1-20260919-022917/components.json": "5ced3e091d74352951f7f5cfe6ba3a7733ded6e1f718e220fa9db87c76cea3fd",
+    "results/episode-component-tracking-v2-draft1/BETWEEN-DEVICE-V1-20260919-022917/episodes.csv": "0334e0e8168c638bf13741a362ca3a422664f638e044d55d991e4052b93a773b",
+    "results/episode-component-tracking-v2-draft1/BETWEEN-DEVICE-V1-20260919-022917/files.sha256": "430cea3206bc7c7a210fa4407622e0c129874b6f49568afc84f1919a89e8ec9f",
+    "results/episode-component-tracking-v2-draft1/BETWEEN-DEVICE-V1-20260919-022917/run.json": "17b35e6389971d5f6be299fb2eb2df06d74188952fbc51eac503328df56e1366",
+    "results/episode-component-tracking-v2-draft1/BETWEEN-DEVICE-V1-20260919-022917/spectra.npz": "bd7bf53f2ea48705a98608d307405e64fe16f491a8805ed99aefc6c389b035d6",
+    "results/episode-component-tracking-v2-draft1/BETWEEN-DEVICE-V1-20260919-022917/summary.md": "529ab8767d74435d5c283b5cb30f39aacc03b6875cf7ea94aa9a2eca1a2361f3",
+    "results/episode-component-tracking-v2-draft1/BETWEEN-DEVICE-V1-20260919-022917/tracks.json": "74f3c766cf49d46303a5024098fdb8736a9c6c27b1d0921e861ab73082632cae",
+    "results/episode-component-tracking-v2-draft1/PIPELINE-TPMS-004-20260917-233423/components.json": "631d6bc6cebb0b842ad77cbe2760ff3b93afc65fa0423b123f6a74d669fac8c0",
+    "results/episode-component-tracking-v2-draft1/PIPELINE-TPMS-004-20260917-233423/episodes.csv": "f755ae204d4d1976dadc582d529456c1c389371e3b2f6f5f128ba70ec8e06cb2",
+    "results/episode-component-tracking-v2-draft1/PIPELINE-TPMS-004-20260917-233423/files.sha256": "201717abb4f0f8a5acc03504d0782c95274462f678646e2b336bbf851b43be99",
+    "results/episode-component-tracking-v2-draft1/PIPELINE-TPMS-004-20260917-233423/run.json": "851aa70b748c0b14e62a5f35ee34723a7f5c9c02f691aa70f6a74c2eb5f86fd2",
+    "results/episode-component-tracking-v2-draft1/PIPELINE-TPMS-004-20260917-233423/spectra.npz": "2d674d24f33fec1d477e1e4a7e9961e8897d5b64174f5cc314cb22228f9bbe76",
+    "results/episode-component-tracking-v2-draft1/PIPELINE-TPMS-004-20260917-233423/summary.md": "5b34118fcd9e69c4cda0a4a7cb109dcbd65aae986680caa8201b6b8c0df836e0",
+    "results/episode-component-tracking-v2-draft1/PIPELINE-TPMS-004-20260917-233423/tracks.json": "eb02eca5c23817c35baaa19be5680866cff4d7b5db54e30e584f980a1829f107",
+    "results/episode-component-tracking-v2-draft1/PIPELINE-TPMS-005-20260917-235439/components.json": "1eb6d8c052f1ec3a5feae2aa3bc68b93612c3d2ff9e6dcbb45ea409d91ce1bbb",
+    "results/episode-component-tracking-v2-draft1/PIPELINE-TPMS-005-20260917-235439/episodes.csv": "d9820a04fd61f6fd647b897a32f4dc79fdc4c993cd2a101240a77a715ae6e5f9",
+    "results/episode-component-tracking-v2-draft1/PIPELINE-TPMS-005-20260917-235439/files.sha256": "28276e9434716b1fdcec8b9d4c90cfe4d6255c9a9959a0e7110d77ae33b997ea",
+    "results/episode-component-tracking-v2-draft1/PIPELINE-TPMS-005-20260917-235439/run.json": "c85ff142a54b6f3544652aeac84954d595734a6c4edbd21e7531d4ecf7741810",
+    "results/episode-component-tracking-v2-draft1/PIPELINE-TPMS-005-20260917-235439/spectra.npz": "10f9d521155b20afdbe1064fb9f4a6b5732e1fda67002606939548662b0c6554",
+    "results/episode-component-tracking-v2-draft1/PIPELINE-TPMS-005-20260917-235439/summary.md": "dad10b4181a3ad2705b6cb227c57741a04053936573582766c38c0d57eb5b2b8",
+    "results/episode-component-tracking-v2-draft1/PIPELINE-TPMS-005-20260917-235439/tracks.json": "5d483ae0a2580248ae8cf052a255d91801efd1b03d136905db08ecf61b1b9428",
+    "results/episode-component-tracking-v2-draft1/PIPELINE-TPMS-007-20260918-002700/components.json": "484afd2e7204ba81e86331df2fe5201398b950e12eb90a21b9e29b394eb812ca",
+    "results/episode-component-tracking-v2-draft1/PIPELINE-TPMS-007-20260918-002700/episodes.csv": "31ed3551c0f39d5b5cbee5881a64ce5787f2043287e65f5a51be46ac86d68561",
+    "results/episode-component-tracking-v2-draft1/PIPELINE-TPMS-007-20260918-002700/files.sha256": "ab360192f8b7e893eeebd58c3698d994d5d58bfc0947347edd0960b21e9c8f9b",
+    "results/episode-component-tracking-v2-draft1/PIPELINE-TPMS-007-20260918-002700/run.json": "9fb717694245a816f8605738c3cc21a756bac2ad06ba2584b1679e1de54effb9",
+    "results/episode-component-tracking-v2-draft1/PIPELINE-TPMS-007-20260918-002700/spectra.npz": "d4a6947f61e1604149b2a07eb5c758526e18fdd8b6f825ce2563df0123c76da3",
+    "results/episode-component-tracking-v2-draft1/PIPELINE-TPMS-007-20260918-002700/summary.md": "f77d11ff989ba1f18523798ce2478e3a57c80dc60b26b91e5ecd93137ff44e8d",
+    "results/episode-component-tracking-v2-draft1/PIPELINE-TPMS-007-20260918-002700/tracks.json": "fadbd9769fefa3487b2e7112ab28fbda1cd22cdb5caa9087c8a57fde13214639",
+    "results/episode-component-tracking-v2-draft1/PIPELINE-TPMS-008-20260918-003900/components.json": "07bef74c044b77f5548ea68dcff0a82bfac10f135b1f232d2bd6e08f1e132c83",
+    "results/episode-component-tracking-v2-draft1/PIPELINE-TPMS-008-20260918-003900/episodes.csv": "c42f65bc45f395aaade5eb6f47a6f1444e6e35192b67f6cdeae3246458001a70",
+    "results/episode-component-tracking-v2-draft1/PIPELINE-TPMS-008-20260918-003900/files.sha256": "51a2b2ddd25d51e2806ef55a9fdc3d48c7eed411c21fe5128d89dbcd138d348a",
+    "results/episode-component-tracking-v2-draft1/PIPELINE-TPMS-008-20260918-003900/run.json": "d35358ad1c80988b064fc769d5984618e43d46b0a687f860e49d6227af4aa90d",
+    "results/episode-component-tracking-v2-draft1/PIPELINE-TPMS-008-20260918-003900/spectra.npz": "d5ded0fd94462cb8ecf00cb66d37befba3d00bcd42367e39a72d460795f64fe2",
+    "results/episode-component-tracking-v2-draft1/PIPELINE-TPMS-008-20260918-003900/summary.md": "3c212070d190d0747bc7a141b73ea27a6ffba8de15db11ed7ce1e352e96901e0",
+    "results/episode-component-tracking-v2-draft1/PIPELINE-TPMS-008-20260918-003900/tracks.json": "145244968245c59722681dbe5341a7a190ba457254c3bbae0c9c64681135c2ef",
+    "results/episode-component-tracking-v2-draft1/comparison-summary.json": "51447d6771e8702ed29cc7f77762c98104e48860ced28d86366bfd02975285ae",
+    "results/episode-component-tracking-v2-draft1/regression-validation.json": "3740c8317eea18a73371333af2746e82cc536aae20800a82bc975525dfee06a2",
+    "results/episode-component-tracking-v2-draft1/review-summary.md": "0b86311ae21a94ae87f2943f1adc61f034453c2cffcbedf54ffcafdf5e3e406d",
+    "results/episode-component-tracking-v2-draft1/test-results.json": "858e00f6cb4b1375803c1aa4bb19a704c84aebb23ca4a0ed3ac2ae820326979b",
+    "results/episode-component-tracking-v2-draft2-column-count-benchmark/benchmark.json": "1de9f521e8a895aad72e7d035fc675cae5c15538395595e7a35657e0803af4e1",
+    "results/episode-component-tracking-v2-draft2-column-count-benchmark/episode-0.25-column-frequency-bound1.cardinality.json": "9dad35d91a64231f6012b24bfaaa1bae6fc6c6f4a96fee4d986c61255bd0e110",
+    "results/episode-component-tracking-v2-draft2-column-count-benchmark/episode-1-column-frequency-bound1.cardinality.json": "28baf31c3f4c7f54b13a334ad8e635594c8c79f9244e8875e72852296b46e82e",
+    "results/episode-component-tracking-v2-draft2-column-count-benchmark/files.sha256": "c3e76ea99e7793ad0916a980040df5a1d7aa7ef44120df2dff116c051d3d2d97",
+    "results/episode-component-tracking-v2-draft2-column-count-benchmark/group-0.25-column-frequency-bound1.cardinality.json": "9117c65ea0f7cdc8c5c4c508303017419da7fdfe5fa3ccdae654da3afb9347d9",
+    "results/episode-component-tracking-v2-draft2-column-count-benchmark/group-1-column-frequency-bound0.cardinality.json": "fba5cde5f88eee8bcb8cd142c815b595cabf3bc9848e12042c8b07faf9a4e0d7",
+    "results/episode-component-tracking-v2-draft2-column-count-benchmark/group-1-column-frequency-bound1.cardinality.json": "866eaa014d0c558eb8952437d11d92bb72323f5bf407548dda245ea9f5fbd523",
+    "results/episode-component-tracking-v2-draft2-column-count-benchmark/group-1-column-reverse_frequency-bound1.cardinality.json": "d89f1d138327686935119c373043b69e787a48941631d8acca8bcf05afaa6056",
+    "results/episode-component-tracking-v2-draft2-column-count-benchmark/group-1-previous-frequency-bound1.cardinality.json": "fb19d3f0cd7479e82fecc832a53139e695efe5672cd1c1238db89cf0b4b092be",
+    "results/episode-component-tracking-v2-draft2-column-count-benchmark/tests.txt": "01124d0fca2b353e780d94ff8f10578652185c0f609f598d70e8332b889d8f8c",
+    "results/episode-component-tracking-v2-draft2-exact-count-benchmark/counts.json": "f0f4a864d42e8dd997580aef57dd0e5b17fcf861de29c3454d776defb69cd355",
+    "results/episode-component-tracking-v2-draft2-exact-count-benchmark/files.sha256": "e82a25bb08552a380b1011bff0030efc7738214194ea351e490f2d849999afc1",
+    "results/episode-component-tracking-v2-draft2-exact-count-benchmark/review.md": "862286870bf4b4b0cffbb5981d1f28bf95bff8a2cb391b294cdcb5feecef9130",
+    "results/episode-component-tracking-v2-draft2-exact-count-benchmark/source_snapshot/test_counter.py": "27a23228184b8da63c61f8b66f85537279e39933ea3d15ac403183b699cac61d",
+    "results/episode-component-tracking-v2-draft2-exact-count-benchmark/tests.txt": "5d61324e722f165e177d512f970ba4acb2bda9f557f7fc6cbeb08f1fee7126c9",
+    "results/episode-component-tracking-v2-draft2-exact-count-dual-benchmark/counts.json": "2845f754246dd0da897d45964098eb908123948133b61d5cead5ef2005dc922a",
+    "results/episode-component-tracking-v2-draft2-exact-count-dual-benchmark/files.sha256": "ed1ab6c64bea9c305b5188575b3fd0f73156318acd69176522e292c2b89ea01e",
+    "results/episode-component-tracking-v2-draft2-exact-count-dual-benchmark/review.md": "1368aee6591db4f5a8dd815e4d11449148537ecd1baa12facd88634539c6566f",
+    "results/episode-component-tracking-v2-draft2-exact-count-dual-benchmark/tests.txt": "488e96882573b8df5ae0d75199a03152b14c73aedb60a6093d82adbd3d93afa5",
+    "results/episode-component-tracking-v2-draft2-exact-solver-benchmark/benchmark.json": "30a4e34a8348fa268ba0d696c4585d3ab5686787d30de982864a1a623b69137f",
+    "results/episode-component-tracking-v2-draft2-exact-solver-benchmark/episode-margin-0.25.json": "d18abcd3199ddfff2bd06301991489973e81cf9552ab539bff42a38c1d440dd5",
+    "results/episode-component-tracking-v2-draft2-exact-solver-benchmark/episode-margin-0.json": "0929917b8f648dc6afe088597bb78c2598345ecb91df40f02b5c196cdcffb2f2",
+    "results/episode-component-tracking-v2-draft2-exact-solver-benchmark/episode-margin-1.json": "b9d84662673e829cf29206d1682354e955f8f93cd660d4e7860787999dd4a015",
+    "results/episode-component-tracking-v2-draft2-exact-solver-benchmark/files.sha256": "14f1140f2b7254dac23fdaf05100c1c0f12b59bda5308d802b6ea94ec5e91bf3",
+    "results/episode-component-tracking-v2-draft2-exact-solver-benchmark/group-margin-0.25.json": "8985e04fd8e428fce59a4e0b8e9bf2e89e8a5baddffd627804919930849e8510",
+    "results/episode-component-tracking-v2-draft2-exact-solver-benchmark/group-margin-0.json": "403d5cf65f7bea9b78c5b6e0ab7ae4d5d84ab783adadf8f5c9e5cf0be645fc02",
+    "results/episode-component-tracking-v2-draft2-exact-solver-benchmark/group-margin-1.json": "d913ad0a84135771432fdb26ea34a82079716d3219ad6f75d87125e21c68eed1",
+    "results/episode-component-tracking-v2-draft2-exact-solver-benchmark/review.md": "e7db214806abe908313b89c87bfb928a56667e96c3e74d62f61b3ea7c5b843cb",
+    "results/episode-component-tracking-v2-draft2-exact-solver-benchmark/tests.txt": "3f8bea22cbaa4bcb73ba6203938d61997d1c8cb8337b7cb2d32785a508a097d0",
+    "results/episode-component-tracking-v2-draft2-exact-solver-benchmark/verification.json": "f01702f1c41c9f875f779ea08408880236d0151d899c70e52f99e38c127c0f9a",
+    "results/episode-component-tracking-v2-draft2-experiment/.gitattributes": "ce382f7f36c1b98bea1d7801249af7d7e244f4f830cb62c0a1d18f92433170b5",
+    "results/episode-component-tracking-v2-draft2-experiment/arms.csv": "af5cff213682d14696a2c8a2880b1082861ea92b3ce051359b5600b2b72ac904",
+    "results/episode-component-tracking-v2-draft2-experiment/arms.json": "4585511f8b00a7c545de796341695e9d48b64c4972ef89e95a26d2a15f76826e",
+    "results/episode-component-tracking-v2-draft2-experiment/association-fixture-summary.json": "58e809b55e47af61a8fc452e9786ba0d02803b8c4a1676ec154d9acabd426880",
+    "results/episode-component-tracking-v2-draft2-experiment/association-fixtures.json": "81c38566c9caf91dcace8c6e4ee67cd6ddec1865b4897449a2be8c5714fb12a6",
+    "results/episode-component-tracking-v2-draft2-experiment/files.sha256": "26266bf3209c89ed9b724c5b62ae23bf4d8ac750c9c6e41bdb773145ec191360",
+    "results/episode-component-tracking-v2-draft2-experiment/native__w200__connected.json": "097c48395cb5cabb639a74d697d03a431b941f9f64cfebafa2e23a2b3d8053ab",
+    "results/episode-component-tracking-v2-draft2-experiment/native__w200__paths_margin0.partial.json": "60bb8c8578f50785e50208cc0a0b929e78026dba0a4daf88bb70cd001b677707",
+    "results/episode-component-tracking-v2-draft2-experiment/review.md": "5711429abf9229aef4c8dac06b00aed823fc04267ee2c601b6651cc5421e8f5e",
+    "results/episode-component-tracking-v2-draft2-experiment/run.json": "d4da61e54a96379faf44772d35eaa96b7778c336da45e44e39037b3da47f9437",
+    "results/episode-component-tracking-v2-draft2-experiment/summary.md": "e2c8dfaae69f5988c3893c30f4bc42725f6727247ea8d8eff9ef30a09924cab7",
+    "results/episode-component-tracking-v2-draft2-experiment/validation.json": "09e574ab3146bde4e9d00edfa2c76ddc9b78f7bbf60e6296813888c4e40ae6b7",
+    "tests/test_episode_component_tracking_v2_draft1.py": "1a480fa0d8b6120a823872e644fbdbe1a1d70cdbb402c3377a7225204e461dfe",
+    "tests/test_episode_component_tracking_v2_draft2_cardinality_sidecar.py": "4e8d4c0358cde820d46865e3eea9e7c3ed4ed96083fa4a2840b44e7238b3906d",
+    "tests/test_episode_component_tracking_v2_draft2_column_count.py": "bdf923c789ce88de880a82a8fedbd457404ca553310f7923d91a2ee0404f0934",
+    "tests/test_episode_component_tracking_v2_draft2_exact_count.py": "3de23c86e259c31ab0d1c94d467216e6ac2ec8d89a2c7ec374a88d31d1eb7985",
+    "tests/test_episode_component_tracking_v2_draft2_exact_solver.py": "a1126708158a0de0989c09377fa0414435cfd6e882ddc3611aa40280d14982a2",
+    "tests/test_episode_component_tracking_v2_draft2_experiment.py": "e33ba689b523e88f376ed70706334dd35c52027d8bea880f482ec15b7c9cdb67",
+    "tests/test_episode_component_tracking_v2_draft2_margin1_investigation.py": "212a47e1267b9726c05b4fa6b1bfc3559692f20c7a2b3d2d384d1090577d89a8",
+    "tests/test_passband_retune_v1.py": "8a27b10b72327e2203d85df4b9c1ba03b6725ed98d635df4827c691cbe14124a",
+    "watcher/kraken_watch.py": "c814ac3c25151728f509ac28199f843707a024e37bf4e78efbf6167733b0c870"
+  },
+  "limits_increased": false,
+  "per_case_fresh_process": true,
+  "platform": "Linux-7.0.11-76070011-generic-x86_64-with-glibc2.39",
+  "production_integration": false,
+  "python": "3.12.3 (main, Jun 19 2026, 12:46:00) [GCC 13.3.0]",
+  "rf_capture": false,
+  "rss_policy": "Linux ru_maxrss KiB; includes imports/model load/count, sampled before sidecar queries",
+  "source_hashes": {
+    "analysis/benchmark_episode_component_tracking_v2_draft2_margin1_investigation.py": "b60426da4ae1ad3a6c4604997378135225c1eeadffb25c0b595f12e3c3aca05b",
+    "analysis/episode_component_tracking_v2_draft2_cardinality_sidecar.py": "3b05374ed34667b82f1f420fee9ccab9a096efa2c2426fd73fe1b01a371f5142",
+    "analysis/episode_component_tracking_v2_draft2_column_count.py": "03c0f8493ab571caed7bb48eca2c2d6327f021c7a94e9a82ec2add75d5327fed",
+    "analysis/episode_component_tracking_v2_draft2_compact_consumer_prototype.py": "ecc5e62eb8cde43c72f442fc6bd5d97c31ef44b1e071f1526126de81946e43b0",
+    "analysis/episode_component_tracking_v2_draft2_exact_count.py": "4c543655c738fcc9d2b771f2cb3ae26106304e2ff2f86a201a47d77cd5bd18a3",
+    "analysis/episode_component_tracking_v2_draft2_exact_solver.py": "f5c4a907af24958739bf7a2d90fd27d2e602c295a74c951bb52525ccd10023a1",
+    "analysis/episode_component_tracking_v2_draft2_experiment.py": "73dc27741f3ad5fd710f94a8989a930bb731cd196e32ff2d000ee48e00b9d39a",
+    "tests/test_episode_component_tracking_v2_draft2_cardinality_sidecar.py": "4e8d4c0358cde820d46865e3eea9e7c3ed4ed96083fa4a2840b44e7238b3906d",
+    "tests/test_episode_component_tracking_v2_draft2_column_count.py": "bdf923c789ce88de880a82a8fedbd457404ca553310f7923d91a2ee0404f0934",
+    "tests/test_episode_component_tracking_v2_draft2_exact_count.py": "3de23c86e259c31ab0d1c94d467216e6ac2ec8d89a2c7ec374a88d31d1eb7985",
+    "tests/test_episode_component_tracking_v2_draft2_exact_solver.py": "a1126708158a0de0989c09377fa0414435cfd6e882ddc3611aa40280d14982a2",
+    "tests/test_episode_component_tracking_v2_draft2_experiment.py": "e33ba689b523e88f376ed70706334dd35c52027d8bea880f482ec15b7c9cdb67",
+    "tests/test_episode_component_tracking_v2_draft2_margin1_investigation.py": "212a47e1267b9726c05b4fa6b1bfc3559692f20c7a2b3d2d384d1090577d89a8"
+  },
+  "state_policy": "Previous: mask/cost keys; column: packed mask polynomials; convolution: coefficients. These are not equal-sized states.",
+  "tests": {
+    "errors": 0,
+    "failures": 0,
+    "run": 72
+  }
+}
