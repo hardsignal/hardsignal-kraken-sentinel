@@ -1,0 +1,80 @@
+{
+  "arm": "connected",
+  "audit": {
+    "cardinality": null,
+    "measurement": {
+      "integration_seconds": 0.045313695998629555,
+      "memory_kib": {
+        "VmHWM": 119492,
+        "VmRSS": 90712
+      },
+      "total_seconds": 0.055031735013471916
+    },
+    "metrics": {
+      "abstained": true,
+      "alternative_path_count": null,
+      "eligible_candidate_count": 290,
+      "invariant_path_count": null,
+      "original_fragment_count": 5,
+      "persistent_path_count": 0,
+      "possible_path_count": 249,
+      "structural_constraint_status": "HISTORICAL_CONNECTED_DIAGNOSTICS",
+      "truth_metrics": null,
+      "truth_metrics_state": "NOT_APPLICABLE",
+      "union_link_count": 1
+    },
+    "primary": null,
+    "projection": {
+      "parity": "SAVED_CONNECTED_COMPLETE_OUTPUT",
+      "state": "PASS"
+    },
+    "query_calls": null,
+    "reference_parity": "NO_COMPLETE_HISTORICAL_COMPACT_REFERENCE",
+    "states": {
+      "cardinality_counting": {
+        "reason": null,
+        "state": "NOT_APPLICABLE_CONNECTED"
+      },
+      "exact_queries": {
+        "reason": null,
+        "state": "NOT_APPLICABLE_CONNECTED"
+      },
+      "family_construction": {
+        "reason": null,
+        "state": "NOT_APPLICABLE_CONNECTED"
+      },
+      "metric_projection": {
+        "reason": null,
+        "state": "COMPLETE"
+      },
+      "provenance_validation": {
+        "reason": null,
+        "state": "VERIFIED"
+      }
+    },
+    "status": "AMBIGUOUS_ASSOCIATION"
+  },
+  "label": "TPMS004-anomaly",
+  "reload": {
+    "measurement": {
+      "elapsed_seconds": 0.05556823100778274,
+      "memory_kib": {
+        "VmHWM": 119496,
+        "VmRSS": 91224
+      }
+    },
+    "state": "BYTE_IDENTICAL"
+  },
+  "reload_worker": {
+    "elapsed_seconds": 0.4013996920257341,
+    "exit_code": 0,
+    "observed_peak_rss_kib": 118416,
+    "reason": null
+  },
+  "worker": {
+    "elapsed_seconds": 0.4012206899933517,
+    "exit_code": 0,
+    "observed_peak_rss_kib": 116708,
+    "reason": null
+  }
+}

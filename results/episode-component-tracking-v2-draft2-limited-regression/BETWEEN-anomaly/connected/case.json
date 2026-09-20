@@ -1,0 +1,80 @@
+{
+  "arm": "connected",
+  "audit": {
+    "cardinality": null,
+    "measurement": {
+      "integration_seconds": 0.0344287549960427,
+      "memory_kib": {
+        "VmHWM": 118568,
+        "VmRSS": 98428
+      },
+      "total_seconds": 0.042433892987901345
+    },
+    "metrics": {
+      "abstained": true,
+      "alternative_path_count": null,
+      "eligible_candidate_count": 226,
+      "invariant_path_count": null,
+      "original_fragment_count": 5,
+      "persistent_path_count": 0,
+      "possible_path_count": 199,
+      "structural_constraint_status": "HISTORICAL_CONNECTED_DIAGNOSTICS",
+      "truth_metrics": null,
+      "truth_metrics_state": "NOT_APPLICABLE",
+      "union_link_count": 0
+    },
+    "primary": null,
+    "projection": {
+      "parity": "SAVED_CONNECTED_COMPLETE_OUTPUT",
+      "state": "PASS"
+    },
+    "query_calls": null,
+    "reference_parity": "NO_COMPLETE_HISTORICAL_COMPACT_REFERENCE",
+    "states": {
+      "cardinality_counting": {
+        "reason": null,
+        "state": "NOT_APPLICABLE_CONNECTED"
+      },
+      "exact_queries": {
+        "reason": null,
+        "state": "NOT_APPLICABLE_CONNECTED"
+      },
+      "family_construction": {
+        "reason": null,
+        "state": "NOT_APPLICABLE_CONNECTED"
+      },
+      "metric_projection": {
+        "reason": null,
+        "state": "COMPLETE"
+      },
+      "provenance_validation": {
+        "reason": null,
+        "state": "VERIFIED"
+      }
+    },
+    "status": "AMBIGUOUS_ASSOCIATION"
+  },
+  "label": "BETWEEN-anomaly",
+  "reload": {
+    "measurement": {
+      "elapsed_seconds": 0.05006822900031693,
+      "memory_kib": {
+        "VmHWM": 119092,
+        "VmRSS": 97496
+      }
+    },
+    "state": "BYTE_IDENTICAL"
+  },
+  "reload_worker": {
+    "elapsed_seconds": 0.40152601301088,
+    "exit_code": 0,
+    "observed_peak_rss_kib": 118480,
+    "reason": null
+  },
+  "worker": {
+    "elapsed_seconds": 0.4013466690084897,
+    "exit_code": 0,
+    "observed_peak_rss_kib": 114548,
+    "reason": null
+  }
+}

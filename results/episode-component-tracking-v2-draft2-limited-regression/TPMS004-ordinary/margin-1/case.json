@@ -1,0 +1,109 @@
+{
+  "arm": "margin-1",
+  "audit": {
+    "cardinality": {
+      "reason": {
+        "elapsed_seconds": 14.28593562101014,
+        "limit": 250000,
+        "location": {
+          "factor": 2,
+          "phase": "IEEE group composition"
+        },
+        "peak_states": 250001,
+        "reason": "frontier/state budget exceeded",
+        "states": 250001,
+        "transitions": 2137240
+      },
+      "state": "COMPUTATION_UNRESOLVED",
+      "value_decimal": null
+    },
+    "measurement": {
+      "counting_seconds": 14.28780094202375,
+      "family_construction_seconds": 0.20232884798315354,
+      "integration_seconds": 6.819712113996502,
+      "memory_kib": {
+        "VmHWM": 140036,
+        "VmRSS": 135800
+      },
+      "total_seconds": 21.776773958001286
+    },
+    "metrics": {
+      "abstained": true,
+      "alternative_path_count": 617,
+      "eligible_candidate_count": 284,
+      "invariant_path_count": 191,
+      "original_fragment_count": 5,
+      "persistent_path_count": 528,
+      "possible_path_count": 808,
+      "structural_constraint_status": "VALID_BY_EXACT_CONSTRAINTS",
+      "truth_metrics": null,
+      "truth_metrics_state": "NOT_APPLICABLE",
+      "union_link_count": 1062
+    },
+    "primary": null,
+    "projection": {
+      "parity": "EXACT_QUERY_PROJECTION_CONSISTENCY",
+      "state": "PASS"
+    },
+    "query_calls": 1110,
+    "reference_parity": "NO_COMPLETE_HISTORICAL_COMPACT_REFERENCE",
+    "states": {
+      "cardinality_counting": {
+        "mode": "CONSUMED_VALIDATED_SIDECAR_NO_RECOUNT",
+        "reason": {
+          "elapsed_seconds": 14.28593562101014,
+          "limit": 250000,
+          "location": {
+            "factor": 2,
+            "phase": "IEEE group composition"
+          },
+          "peak_states": 250001,
+          "reason": "frontier/state budget exceeded",
+          "states": 250001,
+          "transitions": 2137240
+        },
+        "state": "COMPUTATION_UNRESOLVED"
+      },
+      "exact_queries": {
+        "reason": null,
+        "state": "EXACT"
+      },
+      "family_construction": {
+        "reason": null,
+        "state": "COMPLETE"
+      },
+      "metric_projection": {
+        "reason": null,
+        "state": "COMPLETE"
+      },
+      "provenance_validation": {
+        "reason": null,
+        "state": "VERIFIED"
+      }
+    },
+    "status": "MULTIPLE_PERSISTENT_TRACKS"
+  },
+  "label": "TPMS004-ordinary",
+  "reload": {
+    "measurement": {
+      "elapsed_seconds": 6.800017803994706,
+      "memory_kib": {
+        "VmHWM": 119312,
+        "VmRSS": 105788
+      }
+    },
+    "state": "BYTE_IDENTICAL"
+  },
+  "reload_worker": {
+    "elapsed_seconds": 7.20691902298131,
+    "exit_code": 0,
+    "observed_peak_rss_kib": 119432,
+    "reason": null
+  },
+  "worker": {
+    "elapsed_seconds": 22.021584414003883,
+    "exit_code": 0,
+    "observed_peak_rss_kib": 140816,
+    "reason": null
+  }
+}

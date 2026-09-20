@@ -1,0 +1,91 @@
+{
+  "arm": "margin-0",
+  "audit": {
+    "cardinality": {
+      "reason": null,
+      "state": "EXACT",
+      "value_decimal": "1"
+    },
+    "measurement": {
+      "counting_seconds": 0.0037235519848763943,
+      "family_construction_seconds": 0.0040604189853183925,
+      "integration_seconds": 0.050972119002835825,
+      "memory_kib": {
+        "VmHWM": 118692,
+        "VmRSS": 99568
+      },
+      "total_seconds": 0.11542390001704916
+    },
+    "metrics": {
+      "abstained": false,
+      "alternative_path_count": 0,
+      "eligible_candidate_count": 226,
+      "invariant_path_count": 221,
+      "original_fragment_count": 5,
+      "persistent_path_count": 1,
+      "possible_path_count": 221,
+      "structural_constraint_status": "VALID_BY_EXACT_CONSTRAINTS",
+      "truth_metrics": null,
+      "truth_metrics_state": "NOT_APPLICABLE",
+      "union_link_count": 5
+    },
+    "primary": [
+      "E006_F001_C0127",
+      "E006_F002_C0002",
+      "E006_F003_C0003"
+    ],
+    "projection": {
+      "parity": "EXACT_QUERY_PROJECTION_CONSISTENCY",
+      "state": "PASS"
+    },
+    "query_calls": 288,
+    "reference_parity": "NO_COMPLETE_HISTORICAL_COMPACT_REFERENCE",
+    "states": {
+      "cardinality_counting": {
+        "mode": "CONSUMED_VALIDATED_SIDECAR_NO_RECOUNT",
+        "reason": null,
+        "state": "EXACT"
+      },
+      "exact_queries": {
+        "reason": null,
+        "state": "EXACT"
+      },
+      "family_construction": {
+        "reason": null,
+        "state": "COMPLETE"
+      },
+      "metric_projection": {
+        "reason": null,
+        "state": "COMPLETE"
+      },
+      "provenance_validation": {
+        "reason": null,
+        "state": "VERIFIED"
+      }
+    },
+    "status": "UNIQUE_PERSISTENT_TRACK"
+  },
+  "label": "BETWEEN-anomaly",
+  "reload": {
+    "measurement": {
+      "elapsed_seconds": 0.059665656997822225,
+      "memory_kib": {
+        "VmHWM": 119204,
+        "VmRSS": 97284
+      }
+    },
+    "state": "BYTE_IDENTICAL"
+  },
+  "reload_worker": {
+    "elapsed_seconds": 0.4013100279844366,
+    "exit_code": 0,
+    "observed_peak_rss_kib": 119348,
+    "reason": null
+  },
+  "worker": {
+    "elapsed_seconds": 0.4007470250071492,
+    "exit_code": 0,
+    "observed_peak_rss_kib": 116448,
+    "reason": null
+  }
+}

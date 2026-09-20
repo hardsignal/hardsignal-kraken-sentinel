@@ -1,0 +1,24 @@
+{
+  "count_state": "COMPUTATION_UNRESOLVED",
+  "exact_count_decimal": null,
+  "failure": {
+    "elapsed_seconds": 14.28593562101014,
+    "limit": 250000,
+    "location": {
+      "factor": 2,
+      "phase": "IEEE group composition"
+    },
+    "peak_states": 250001,
+    "reason": "frontier/state budget exceeded",
+    "states": 250001,
+    "transitions": 2137240
+  },
+  "method": "unchanged column counter with committed IEEE fallback",
+  "statistics": {
+    "checkpoints": [],
+    "elapsed_seconds": 14.28780094202375,
+    "peak_states": 250001,
+    "process_peak_rss_kib": 140036,
+    "transitions": 2137240
+  }
+}

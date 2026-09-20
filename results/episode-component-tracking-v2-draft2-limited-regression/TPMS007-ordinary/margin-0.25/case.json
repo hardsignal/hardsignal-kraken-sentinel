@@ -1,0 +1,87 @@
+{
+  "arm": "margin-0.25",
+  "audit": {
+    "cardinality": {
+      "reason": null,
+      "state": "EXACT",
+      "value_decimal": "130"
+    },
+    "measurement": {
+      "counting_seconds": 0.009511624986771494,
+      "family_construction_seconds": 0.005256551987258717,
+      "integration_seconds": 0.06997758999932557,
+      "memory_kib": {
+        "VmHWM": 119292,
+        "VmRSS": 94496
+      },
+      "total_seconds": 0.10649921698495746
+    },
+    "metrics": {
+      "abstained": true,
+      "alternative_path_count": 32,
+      "eligible_candidate_count": 282,
+      "invariant_path_count": 260,
+      "original_fragment_count": 5,
+      "persistent_path_count": 9,
+      "possible_path_count": 292,
+      "structural_constraint_status": "VALID_BY_EXACT_CONSTRAINTS",
+      "truth_metrics": null,
+      "truth_metrics_state": "NOT_APPLICABLE",
+      "union_link_count": 32
+    },
+    "primary": null,
+    "projection": {
+      "parity": "EXACT_QUERY_PROJECTION_CONSISTENCY",
+      "state": "PASS"
+    },
+    "query_calls": 354,
+    "reference_parity": "NO_COMPLETE_HISTORICAL_COMPACT_REFERENCE",
+    "states": {
+      "cardinality_counting": {
+        "mode": "CONSUMED_VALIDATED_SIDECAR_NO_RECOUNT",
+        "reason": null,
+        "state": "EXACT"
+      },
+      "exact_queries": {
+        "reason": null,
+        "state": "EXACT"
+      },
+      "family_construction": {
+        "reason": null,
+        "state": "COMPLETE"
+      },
+      "metric_projection": {
+        "reason": null,
+        "state": "COMPLETE"
+      },
+      "provenance_validation": {
+        "reason": null,
+        "state": "VERIFIED"
+      }
+    },
+    "status": "MULTIPLE_PERSISTENT_TRACKS"
+  },
+  "label": "TPMS007-ordinary",
+  "reload": {
+    "measurement": {
+      "elapsed_seconds": 0.07641650101868436,
+      "memory_kib": {
+        "VmHWM": 119196,
+        "VmRSS": 95516
+      }
+    },
+    "state": "BYTE_IDENTICAL"
+  },
+  "reload_worker": {
+    "elapsed_seconds": 0.40106880699750036,
+    "exit_code": 0,
+    "observed_peak_rss_kib": 118756,
+    "reason": null
+  },
+  "worker": {
+    "elapsed_seconds": 0.40075808501569554,
+    "exit_code": 0,
+    "observed_peak_rss_kib": 117564,
+    "reason": null
+  }
+}
