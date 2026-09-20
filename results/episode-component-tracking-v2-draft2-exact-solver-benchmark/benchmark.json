@@ -1,0 +1,741 @@
+{
+  "baseline_artifact_hashes": {
+    "results/episode-component-tracking-v2-draft2-experiment/.gitattributes": "ce382f7f36c1b98bea1d7801249af7d7e244f4f830cb62c0a1d18f92433170b5",
+    "results/episode-component-tracking-v2-draft2-experiment/arms.csv": "af5cff213682d14696a2c8a2880b1082861ea92b3ce051359b5600b2b72ac904",
+    "results/episode-component-tracking-v2-draft2-experiment/arms.json": "4585511f8b00a7c545de796341695e9d48b64c4972ef89e95a26d2a15f76826e",
+    "results/episode-component-tracking-v2-draft2-experiment/association-fixture-summary.json": "58e809b55e47af61a8fc452e9786ba0d02803b8c4a1676ec154d9acabd426880",
+    "results/episode-component-tracking-v2-draft2-experiment/association-fixtures.json": "81c38566c9caf91dcace8c6e4ee67cd6ddec1865b4897449a2be8c5714fb12a6",
+    "results/episode-component-tracking-v2-draft2-experiment/files.sha256": "26266bf3209c89ed9b724c5b62ae23bf4d8ac750c9c6e41bdb773145ec191360",
+    "results/episode-component-tracking-v2-draft2-experiment/native__w200__connected.json": "097c48395cb5cabb639a74d697d03a431b941f9f64cfebafa2e23a2b3d8053ab",
+    "results/episode-component-tracking-v2-draft2-experiment/native__w200__paths_margin0.partial.json": "60bb8c8578f50785e50208cc0a0b929e78026dba0a4daf88bb70cd001b677707",
+    "results/episode-component-tracking-v2-draft2-experiment/review.md": "5711429abf9229aef4c8dac06b00aed823fc04267ee2c601b6651cc5421e8f5e",
+    "results/episode-component-tracking-v2-draft2-experiment/run.json": "d4da61e54a96379faf44772d35eaa96b7778c336da45e44e39037b3da47f9437",
+    "results/episode-component-tracking-v2-draft2-experiment/summary.md": "e2c8dfaae69f5988c3893c30f4bc42725f6727247ea8d8eff9ef30a09924cab7",
+    "results/episode-component-tracking-v2-draft2-experiment/validation.json": "09e574ab3146bde4e9d00edfa2c76ddc9b78f7bbf60e6296813888c4e40ae6b7"
+  },
+  "candidates": 73,
+  "capture": "PIPELINE-TPMS-008-20260918-003900",
+  "episode": 8,
+  "episode_margins": [
+    {
+      "alternative_exists": true,
+      "classification": {
+        "count_state": "NOT_EVALUATED",
+        "family_complete_as_predicate": true,
+        "possible_persistent_paths": [],
+        "primary": null,
+        "retained_hypothesis_count": null,
+        "status": "AMBIGUOUS_ASSOCIATION"
+      },
+      "elapsed_seconds": 5.04567041102564,
+      "factor_count": 13,
+      "margin": 0.0,
+      "maximum_links": 48,
+      "minimum_cost": 4.016886693701919,
+      "serialized_family_bytes": 163737,
+      "singleton_count": 66
+    },
+    {
+      "alternative_exists": true,
+      "classification": {
+        "count_state": "NOT_EVALUATED",
+        "family_complete_as_predicate": true,
+        "possible_persistent_paths": [],
+        "primary": null,
+        "retained_hypothesis_count": null,
+        "status": "AMBIGUOUS_ASSOCIATION"
+      },
+      "elapsed_seconds": 1.0782330190122593,
+      "factor_count": 13,
+      "margin": 0.25,
+      "maximum_links": 48,
+      "minimum_cost": 4.016886693701919,
+      "serialized_family_bytes": 163751,
+      "singleton_count": 66
+    },
+    {
+      "alternative_exists": true,
+      "classification": {
+        "count_state": "NOT_EVALUATED",
+        "family_complete_as_predicate": true,
+        "possible_persistent_paths": [],
+        "primary": null,
+        "retained_hypothesis_count": null,
+        "status": "AMBIGUOUS_ASSOCIATION"
+      },
+      "elapsed_seconds": 1.0660095660132356,
+      "factor_count": 13,
+      "margin": 1.0,
+      "maximum_links": 48,
+      "minimum_cost": 4.016886693701919,
+      "serialized_family_bytes": 163737,
+      "singleton_count": 66
+    }
+  ],
+  "existing_files_unchanged": true,
+  "failed_group_id": "T019",
+  "format": "KRAKEN_DRAFT2_EXACT_SOLVER_BENCHMARK_V1",
+  "git_head": "f00dc2a228edd49c2480cac53be4c74a744243db",
+  "group_margins": [
+    {
+      "alternative_exists": false,
+      "alternative_witness": null,
+      "classification": {
+        "count_state": "NOT_EVALUATED",
+        "family_complete_as_predicate": true,
+        "possible_persistent_paths": [],
+        "primary": null,
+        "retained_hypothesis_count": null,
+        "status": "INSUFFICIENT_SUPPORT"
+      },
+      "elapsed_seconds": 0.5460626250132918,
+      "margin": 0.0,
+      "serialized_family_bytes": 74911
+    },
+    {
+      "alternative_exists": true,
+      "alternative_witness": [
+        [
+          "E008_F001_C0032",
+          "E008_F002_C0017"
+        ],
+        [
+          "E008_F001_C0033"
+        ],
+        [
+          "E008_F001_C0034"
+        ],
+        [
+          "E008_F001_C0035"
+        ],
+        [
+          "E008_F001_C0036",
+          "E008_F002_C0018"
+        ],
+        [
+          "E008_F001_C0037"
+        ],
+        [
+          "E008_F001_C0038"
+        ],
+        [
+          "E008_F001_C0039",
+          "E008_F002_C0019"
+        ],
+        [
+          "E008_F001_C0040"
+        ],
+        [
+          "E008_F001_C0041",
+          "E008_F002_C0020"
+        ],
+        [
+          "E008_F001_C0042"
+        ],
+        [
+          "E008_F001_C0043"
+        ],
+        [
+          "E008_F001_C0044",
+          "E008_F002_C0021"
+        ],
+        [
+          "E008_F001_C0045"
+        ],
+        [
+          "E008_F001_C0046",
+          "E008_F002_C0022"
+        ],
+        [
+          "E008_F001_C0047"
+        ],
+        [
+          "E008_F001_C0048"
+        ],
+        [
+          "E008_F001_C0049"
+        ],
+        [
+          "E008_F001_C0050"
+        ],
+        [
+          "E008_F001_C0051"
+        ],
+        [
+          "E008_F001_C0052"
+        ],
+        [
+          "E008_F001_C0053",
+          "E008_F002_C0023"
+        ],
+        [
+          "E008_F001_C0054"
+        ],
+        [
+          "E008_F001_C0055"
+        ],
+        [
+          "E008_F001_C0056"
+        ],
+        [
+          "E008_F001_C0057",
+          "E008_F002_C0024"
+        ],
+        [
+          "E008_F001_C0058"
+        ],
+        [
+          "E008_F001_C0059"
+        ],
+        [
+          "E008_F001_C0060",
+          "E008_F002_C0025"
+        ],
+        [
+          "E008_F001_C0061"
+        ],
+        [
+          "E008_F001_C0062"
+        ],
+        [
+          "E008_F001_C0063"
+        ],
+        [
+          "E008_F001_C0064"
+        ],
+        [
+          "E008_F001_C0065"
+        ],
+        [
+          "E008_F001_C0066",
+          "E008_F002_C0026"
+        ],
+        [
+          "E008_F001_C0067",
+          "E008_F002_C0027"
+        ],
+        [
+          "E008_F001_C0068"
+        ],
+        [
+          "E008_F001_C0069",
+          "E008_F002_C0028"
+        ],
+        [
+          "E008_F001_C0070"
+        ],
+        [
+          "E008_F001_C0071"
+        ],
+        [
+          "E008_F001_C0072"
+        ],
+        [
+          "E008_F001_C0073"
+        ],
+        [
+          "E008_F001_C0074",
+          "E008_F002_C0029"
+        ],
+        [
+          "E008_F001_C0075",
+          "E008_F002_C0030"
+        ],
+        [
+          "E008_F001_C0076"
+        ],
+        [
+          "E008_F001_C0077"
+        ],
+        [
+          "E008_F001_C0078",
+          "E008_F002_C0031"
+        ],
+        [
+          "E008_F001_C0079"
+        ],
+        [
+          "E008_F001_C0080",
+          "E008_F002_C0032"
+        ],
+        [
+          "E008_F001_C0081"
+        ],
+        [
+          "E008_F001_C0082"
+        ],
+        [
+          "E008_F001_C0083",
+          "E008_F002_C0033"
+        ],
+        [
+          "E008_F001_C0084"
+        ],
+        [
+          "E008_F001_C0085",
+          "E008_F002_C0034"
+        ],
+        [
+          "E008_F001_C0086"
+        ]
+      ],
+      "classification": {
+        "count_state": "NOT_EVALUATED",
+        "family_complete_as_predicate": true,
+        "possible_persistent_paths": [],
+        "primary": null,
+        "retained_hypothesis_count": null,
+        "status": "AMBIGUOUS_ASSOCIATION"
+      },
+      "elapsed_seconds": 0.0564606609987095,
+      "margin": 0.25,
+      "serialized_family_bytes": 74912
+    },
+    {
+      "alternative_exists": true,
+      "alternative_witness": [
+        [
+          "E008_F001_C0032",
+          "E008_F002_C0017"
+        ],
+        [
+          "E008_F001_C0033"
+        ],
+        [
+          "E008_F001_C0034"
+        ],
+        [
+          "E008_F001_C0035"
+        ],
+        [
+          "E008_F001_C0036",
+          "E008_F002_C0018"
+        ],
+        [
+          "E008_F001_C0037"
+        ],
+        [
+          "E008_F001_C0038"
+        ],
+        [
+          "E008_F001_C0039",
+          "E008_F002_C0019"
+        ],
+        [
+          "E008_F001_C0040"
+        ],
+        [
+          "E008_F001_C0041",
+          "E008_F002_C0020"
+        ],
+        [
+          "E008_F001_C0042"
+        ],
+        [
+          "E008_F001_C0043"
+        ],
+        [
+          "E008_F001_C0044",
+          "E008_F002_C0021"
+        ],
+        [
+          "E008_F001_C0045"
+        ],
+        [
+          "E008_F001_C0046",
+          "E008_F002_C0022"
+        ],
+        [
+          "E008_F001_C0047"
+        ],
+        [
+          "E008_F001_C0048"
+        ],
+        [
+          "E008_F001_C0049"
+        ],
+        [
+          "E008_F001_C0050"
+        ],
+        [
+          "E008_F001_C0051"
+        ],
+        [
+          "E008_F001_C0052"
+        ],
+        [
+          "E008_F001_C0053",
+          "E008_F002_C0023"
+        ],
+        [
+          "E008_F001_C0054"
+        ],
+        [
+          "E008_F001_C0055"
+        ],
+        [
+          "E008_F001_C0056"
+        ],
+        [
+          "E008_F001_C0057",
+          "E008_F002_C0024"
+        ],
+        [
+          "E008_F001_C0058"
+        ],
+        [
+          "E008_F001_C0059"
+        ],
+        [
+          "E008_F001_C0060",
+          "E008_F002_C0025"
+        ],
+        [
+          "E008_F001_C0061"
+        ],
+        [
+          "E008_F001_C0062"
+        ],
+        [
+          "E008_F001_C0063"
+        ],
+        [
+          "E008_F001_C0064"
+        ],
+        [
+          "E008_F001_C0065"
+        ],
+        [
+          "E008_F001_C0066",
+          "E008_F002_C0026"
+        ],
+        [
+          "E008_F001_C0067",
+          "E008_F002_C0027"
+        ],
+        [
+          "E008_F001_C0068"
+        ],
+        [
+          "E008_F001_C0069",
+          "E008_F002_C0028"
+        ],
+        [
+          "E008_F001_C0070"
+        ],
+        [
+          "E008_F001_C0071"
+        ],
+        [
+          "E008_F001_C0072"
+        ],
+        [
+          "E008_F001_C0073"
+        ],
+        [
+          "E008_F001_C0074",
+          "E008_F002_C0029"
+        ],
+        [
+          "E008_F001_C0075",
+          "E008_F002_C0030"
+        ],
+        [
+          "E008_F001_C0076"
+        ],
+        [
+          "E008_F001_C0077"
+        ],
+        [
+          "E008_F001_C0078",
+          "E008_F002_C0031"
+        ],
+        [
+          "E008_F001_C0079"
+        ],
+        [
+          "E008_F001_C0080",
+          "E008_F002_C0032"
+        ],
+        [
+          "E008_F001_C0081"
+        ],
+        [
+          "E008_F001_C0082"
+        ],
+        [
+          "E008_F001_C0083",
+          "E008_F002_C0033"
+        ],
+        [
+          "E008_F001_C0084"
+        ],
+        [
+          "E008_F001_C0085",
+          "E008_F002_C0034"
+        ],
+        [
+          "E008_F001_C0086"
+        ]
+      ],
+      "classification": {
+        "count_state": "NOT_EVALUATED",
+        "family_complete_as_predicate": true,
+        "possible_persistent_paths": [],
+        "primary": null,
+        "retained_hypothesis_count": null,
+        "status": "AMBIGUOUS_ASSOCIATION"
+      },
+      "elapsed_seconds": 0.003505875007249415,
+      "margin": 1.0,
+      "serialized_family_bytes": 74911
+    }
+  ],
+  "input_path": "results/episode-component-tracking-v2-draft2-experiment/native__w200__connected.json",
+  "input_sha256": "097c48395cb5cabb639a74d697d03a431b941f9f64cfebafa2e23a2b3d8053ab",
+  "new_group_optimum": {
+    "edges": 339,
+    "elapsed_seconds": 0.03056163401925005,
+    "feasible_paths": 412,
+    "fragment_candidate_counts": {
+      "1": 55,
+      "2": 18
+    },
+    "maximum_links": 18,
+    "method": "rational min-cost matching with distinct-row-minima uniqueness certificate",
+    "minimum_cost": 0.06872741115433705,
+    "minimum_cost_hex": "0x1.1981e9f3f22b3p-4",
+    "paths": [
+      [
+        "E008_F001_C0032"
+      ],
+      [
+        "E008_F001_C0033",
+        "E008_F002_C0017"
+      ],
+      [
+        "E008_F001_C0034"
+      ],
+      [
+        "E008_F001_C0035"
+      ],
+      [
+        "E008_F001_C0036",
+        "E008_F002_C0018"
+      ],
+      [
+        "E008_F001_C0037"
+      ],
+      [
+        "E008_F001_C0038"
+      ],
+      [
+        "E008_F001_C0039",
+        "E008_F002_C0019"
+      ],
+      [
+        "E008_F001_C0040"
+      ],
+      [
+        "E008_F001_C0041",
+        "E008_F002_C0020"
+      ],
+      [
+        "E008_F001_C0042"
+      ],
+      [
+        "E008_F001_C0043"
+      ],
+      [
+        "E008_F001_C0044",
+        "E008_F002_C0021"
+      ],
+      [
+        "E008_F001_C0045"
+      ],
+      [
+        "E008_F001_C0046",
+        "E008_F002_C0022"
+      ],
+      [
+        "E008_F001_C0047"
+      ],
+      [
+        "E008_F001_C0048"
+      ],
+      [
+        "E008_F001_C0049"
+      ],
+      [
+        "E008_F001_C0050"
+      ],
+      [
+        "E008_F001_C0051"
+      ],
+      [
+        "E008_F001_C0052"
+      ],
+      [
+        "E008_F001_C0053",
+        "E008_F002_C0023"
+      ],
+      [
+        "E008_F001_C0054"
+      ],
+      [
+        "E008_F001_C0055"
+      ],
+      [
+        "E008_F001_C0056"
+      ],
+      [
+        "E008_F001_C0057",
+        "E008_F002_C0024"
+      ],
+      [
+        "E008_F001_C0058"
+      ],
+      [
+        "E008_F001_C0059"
+      ],
+      [
+        "E008_F001_C0060",
+        "E008_F002_C0025"
+      ],
+      [
+        "E008_F001_C0061"
+      ],
+      [
+        "E008_F001_C0062"
+      ],
+      [
+        "E008_F001_C0063"
+      ],
+      [
+        "E008_F001_C0064"
+      ],
+      [
+        "E008_F001_C0065"
+      ],
+      [
+        "E008_F001_C0066",
+        "E008_F002_C0026"
+      ],
+      [
+        "E008_F001_C0067",
+        "E008_F002_C0027"
+      ],
+      [
+        "E008_F001_C0068"
+      ],
+      [
+        "E008_F001_C0069",
+        "E008_F002_C0028"
+      ],
+      [
+        "E008_F001_C0070"
+      ],
+      [
+        "E008_F001_C0071"
+      ],
+      [
+        "E008_F001_C0072"
+      ],
+      [
+        "E008_F001_C0073"
+      ],
+      [
+        "E008_F001_C0074",
+        "E008_F002_C0029"
+      ],
+      [
+        "E008_F001_C0075",
+        "E008_F002_C0030"
+      ],
+      [
+        "E008_F001_C0076"
+      ],
+      [
+        "E008_F001_C0077"
+      ],
+      [
+        "E008_F001_C0078",
+        "E008_F002_C0031"
+      ],
+      [
+        "E008_F001_C0079"
+      ],
+      [
+        "E008_F001_C0080",
+        "E008_F002_C0032"
+      ],
+      [
+        "E008_F001_C0081"
+      ],
+      [
+        "E008_F001_C0082"
+      ],
+      [
+        "E008_F001_C0083",
+        "E008_F002_C0033"
+      ],
+      [
+        "E008_F001_C0084"
+      ],
+      [
+        "E008_F001_C0085",
+        "E008_F002_C0034"
+      ],
+      [
+        "E008_F001_C0086"
+      ]
+    ],
+    "stats": {
+      "augmentations": 18,
+      "matching_calls": 1,
+      "matching_certificates": 1,
+      "optimum_cache_hits": 0,
+      "search_nodes": 0
+    }
+  },
+  "old_dp": {
+    "details": {
+      "candidates": 73,
+      "feasible_paths": 412,
+      "limit": 200000,
+      "reason": "exact partition DP state limit",
+      "visited_states": 200001
+    },
+    "elapsed_seconds": 0.21090279999771155,
+    "state": "COMPUTATION_UNRESOLVED"
+  },
+  "original_fragments": 2,
+  "platform": "Linux-7.0.11-76070011-generic-x86_64-with-glibc2.39",
+  "python": "3.12.3",
+  "schema_status": {
+    "compact_format": "lossless implicit retained-family model with exact query procedures",
+    "exact_positive_margin_counts": "NOT_EVALUATED",
+    "existing_expanded_schema_sufficient": false,
+    "integration_ready": false,
+    "required_before_full_run": [
+      "Explicitly adopt/version implicit-family artifact schema",
+      "Decide and implement exact family counting required by the original metrics, or explicitly revise that output requirement",
+      "Add runner/verification integration without altering frozen files or scientific parameters",
+      "Validate remaining representation/width candidate graphs; benchmark is not a completion guarantee"
+    ]
+  },
+  "scope": "Saved TPMS-008 E08 only; no spectral analysis or full-matrix rerun",
+  "source_hashes": {
+    "analysis/benchmark_episode_component_tracking_v2_draft2_exact_solver.py": "2931087c0c335834f611786f7bb12ba59c4a12e8f30c71099a9632b423e91bdb",
+    "analysis/episode_component_tracking_v2_draft1.py": "a24a5617ca9f4129c6970fd0a9743f8b78610c58567e8a557f21dee2a055f66c",
+    "analysis/episode_component_tracking_v2_draft2_exact_solver.py": "f5c4a907af24958739bf7a2d90fd27d2e602c295a74c951bb52525ccd10023a1",
+    "analysis/episode_component_tracking_v2_draft2_experiment.py": "73dc27741f3ad5fd710f94a8989a930bb731cd196e32ff2d000ee48e00b9d39a",
+    "tests/test_episode_component_tracking_v2_draft2_exact_solver.py": "a1126708158a0de0989c09377fa0414435cfd6e882ddc3611aa40280d14982a2"
+  },
+  "tests": {
+    "errors": 0,
+    "failures": 0,
+    "passed": true,
+    "run": 22
+  }
+}

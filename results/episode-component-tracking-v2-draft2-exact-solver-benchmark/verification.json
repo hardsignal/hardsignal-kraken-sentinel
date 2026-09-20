@@ -1,0 +1,89 @@
+{
+  "RF_capture": false,
+  "artifact_hashes_verified": true,
+  "development_note": "An initial whole-episode benchmark attempt was interrupted before output serialization. Exact mandatory-singleton matching constraints and matching-result caching resolved that query bottleneck; scientific parameters and limits were unchanged.",
+  "documentation_sha256": "461b996fbaffff89f049c4aa5ff44b9e06b9e17364c31db237784a84c6ac897d",
+  "full_matrix_rerun": false,
+  "git_diff_check_passed": true,
+  "new_source_whitespace_checks_passed": true,
+  "original_artifacts_unchanged": true,
+  "other_E08_groups_compared_exactly_with_frozen_DP": [
+    {
+      "candidates": 29,
+      "cost": 1.8554934268141121,
+      "group": "T001",
+      "links": 12
+    },
+    {
+      "candidates": 2,
+      "cost": 0.010141483841066381,
+      "group": "T015",
+      "links": 1
+    },
+    {
+      "candidates": 2,
+      "cost": 0.7564205922779138,
+      "group": "T023",
+      "links": 1
+    },
+    {
+      "candidates": 10,
+      "cost": 0.11909957469549977,
+      "group": "T031",
+      "links": 3
+    },
+    {
+      "candidates": 5,
+      "cost": 0.07463629223528832,
+      "group": "T035",
+      "links": 2
+    },
+    {
+      "candidates": 4,
+      "cost": 0.025668011787821642,
+      "group": "T056",
+      "links": 1
+    },
+    {
+      "candidates": 8,
+      "cost": 0.02943963800971034,
+      "group": "T057",
+      "links": 2
+    },
+    {
+      "candidates": 4,
+      "cost": 0.0025353709602665953,
+      "group": "T070",
+      "links": 1
+    },
+    {
+      "candidates": 9,
+      "cost": 0.09514974818652541,
+      "group": "T072",
+      "links": 3
+    },
+    {
+      "candidates": 5,
+      "cost": 0.025668011787818735,
+      "group": "T075",
+      "links": 1
+    },
+    {
+      "candidates": 8,
+      "cost": 0.19748653967364554,
+      "group": "T077",
+      "links": 2
+    },
+    {
+      "candidates": 2,
+      "cost": 0.7564205922779138,
+      "group": "T079",
+      "links": 1
+    }
+  ],
+  "raw_IQ_read": false,
+  "saved_episode_family_roundtrips_verified": 3,
+  "source_hashes_verified": true,
+  "staged_files_modified": [],
+  "tracked_files_modified": []
+}
