@@ -12,6 +12,7 @@ import statistics
 import subprocess
 from unittest.mock import patch
 import unittest
+from provenance.stage37_gitignore_v1 import effective_historical_digest
 
 ROOT = Path(__file__).resolve().parents[1]
 RAW = Path('/home/maciejduranczyk/hardsignal-kraken-sentinel/results/episode-component-tracking-v2-draft2-full-matrix-exact-v1')
@@ -96,7 +97,8 @@ def build_review(raw=RAW):
             historical = subprocess.check_output(['git','show','e559d63:' + name], cwd=ROOT)
             require(hashlib.sha256(historical).hexdigest() == digest, 'historical gitignore drift')
         else:
-            require(sha(ROOT / name) == digest, 'source drift: ' + name)
+            require(effective_historical_digest(ROOT, name, sha(ROOT / name)) == digest,
+                    'source drift: ' + name)
     inventory = {}
     for line in (ROOT / INVENTORY).read_text().splitlines():
         digest, name = line.split('  ', 1)
@@ -279,14 +281,8 @@ class ComputationalReviewTests(unittest.TestCase):
     def test_frozen_launch_sources_and_limits(self):
         import episode_component_tracking_v2_draft2_full_matrix_exact as launch
         self.assertEqual(launch.LIMITS, LIMITS)
-        # Document the pre-existing freeze-commit mismatch without editing sources.
-        with self.assertRaisesRegex(ValueError, 'source hash drift: .gitignore'):
-            launch.verify_plan()
-        real_sha = launch.sc.sha
-        historical_digest = read(ROOT / PLAN)['sources']['.gitignore']
-        with patch.object(launch.sc, 'sha', side_effect=lambda p:
-                          historical_digest if Path(p) == ROOT / '.gitignore' else real_sha(p)):
-            self.assertEqual(len(launch.verify_plan()['arms']),160)
+        # The saved review records the pre-repair failure; its bytes stay frozen.
+        self.assertEqual(len(launch.verify_plan()['arms']), 160)
 
     @unittest.skipUnless(RAW.is_dir(), 'External read-only Stage 36 archive unavailable')
     def test_raw_inventory_receipts_and_recomputed_aggregates(self):

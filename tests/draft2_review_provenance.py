@@ -8,6 +8,8 @@ import json
 from pathlib import Path
 import subprocess
 
+from provenance.stage37_gitignore_v1 import validate_gitignore
+
 ROOT = Path(__file__).resolve().parents[1]
 STEM = 'episode-component-tracking-v2-draft2-full-matrix'
 REVIEW_CHECKPOINT = '6bd63ac90b9045ecb2eac3544ee63b035103428b'
@@ -40,6 +42,9 @@ def validate_files(inventory, read_bytes, tracked_paths):
             actual = read_bytes(name)
         except FileNotFoundError as exc:
             raise ValueError(f'Missing baseline file: {name}') from exc
+        if name == '.gitignore':
+            validate_gitignore(ROOT, expected, actual)
+            continue
         if hashlib.sha256(actual).hexdigest() != expected:
             raise ValueError(f'Baseline bytes changed: {name}')
 

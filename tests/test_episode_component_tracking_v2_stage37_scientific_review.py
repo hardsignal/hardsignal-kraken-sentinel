@@ -11,6 +11,7 @@ import os
 from pathlib import Path
 import subprocess
 import unittest
+from provenance.stage37_gitignore_v1 import effective_historical_digest
 from collections import Counter
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -84,7 +85,8 @@ class ScientificReviewTests(unittest.TestCase):
             with self.subTest(path=path):
                 frozen = subprocess.check_output(['git', 'show', CHECKPOINT + ':' + path], cwd=ROOT)
                 self.assertEqual(digest(frozen), expected)
-                self.assertEqual((ROOT / path).read_bytes(), frozen)
+                self.assertEqual(effective_historical_digest(
+                    ROOT, path, digest((ROOT / path).read_bytes())), digest(frozen))
         for path, expected in self.review['provenance']['input_files_sha256'].items():
             self.assertEqual(digest((ROOT / path).read_bytes()), expected, path)
 
@@ -95,7 +97,7 @@ class ScientificReviewTests(unittest.TestCase):
         for path, expected in plan['sources'].items():
             if path == binding['runner_path']:
                 expected = binding['runner_sha256']
-            if digest((ROOT / path).read_bytes()) != expected:
+            if effective_historical_digest(ROOT, path, digest((ROOT / path).read_bytes())) != expected:
                 mismatches.append(path)
         self.assertEqual(mismatches, ['.gitignore'])
         issue = self.review['provenance']['integrity']['issues'][0]

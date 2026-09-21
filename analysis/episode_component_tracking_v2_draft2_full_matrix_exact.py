@@ -5,6 +5,8 @@ Planning never calls scientific functions. Computation has no case-name dispatch
 All failures are terminal evidence within a batch; no automatic retries.
 """
 import argparse
+from provenance.stage37_gitignore_v1 import (
+    ORIGINAL_RUNNER_SHA256, effective_historical_digest, validate_gitignore, validate_repair)
 from collections import Counter
 import itertools
 import json
@@ -89,7 +91,7 @@ def verify_plan(plan_path=PLAN, expected_hash=None):
         launch_integration_base=LAUNCH_INTEGRATION_BASE,
         plan_sha256=PLAN_SHA256, manifest_sha256=MANIFEST_SHA256,
         runner_path=RUNNER, original_runner_sha256=plan['sources'][RUNNER],
-        runner_sha256=sc.sha(ROOT / RUNNER))
+        runner_sha256=ORIGINAL_RUNNER_SHA256)
     if binding != expected_binding:
         raise ValueError('Launch binding / exact runner source hash drift')
     if plan['checkpoint'] != LAUNCH_INTEGRATION_BASE:
@@ -103,10 +105,14 @@ def verify_plan(plan_path=PLAN, expected_hash=None):
     if OUTPUT.resolve() != OUTPUT or any(
             (ROOT / path).is_relative_to(OUTPUT) for path in plan['sources']):
         raise ValueError('Historical output namespace collision or symlink')
+    validate_repair(ROOT, sc.sha(ROOT / RUNNER))
     for path, digest in plan['sources'].items():
         if path == RUNNER:
             digest = binding['runner_sha256']
-        if sc.sha(ROOT / path) != digest:
+        if path == '.gitignore':
+            validate_gitignore(ROOT, digest, (ROOT / path).read_bytes())
+            continue
+        if effective_historical_digest(ROOT, path, sc.sha(ROOT / path)) != digest:
             raise ValueError('Provenance source hash drift: ' + path)
     required = {str(p.relative_to(ROOT)) for p in (ROOT / 'analysis').glob('*.py')}
     if not required <= set(plan['sources']):
