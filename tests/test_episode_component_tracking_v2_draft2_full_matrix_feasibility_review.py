@@ -3,8 +3,9 @@ import collections
 import hashlib
 import json
 from pathlib import Path
-import subprocess
 import unittest
+
+from draft2_review_provenance import validate_review
 
 ROOT = Path(__file__).resolve().parents[1]
 STEM = 'episode-component-tracking-v2-draft2-full-matrix'
@@ -63,12 +64,7 @@ class FeasibilityReviewTests(unittest.TestCase):
             self.assertEqual(row['state'], 'EXACT')
 
     def test_original_tracked_inventory_is_byte_identical(self):
-        baseline = self.review['integrity']['before']
-        head = subprocess.check_output(['git', 'rev-parse', 'HEAD'], cwd=ROOT, text=True).strip()
-        self.assertEqual(head, '6bd63ac90b9045ecb2eac3544ee63b035103428b')
-        self.assertEqual(head, baseline['head'])
-        for name, digest in baseline['sha256'].items():
-            self.assertEqual(hashlib.sha256((ROOT / name).read_bytes()).hexdigest(), digest, name)
+        self.assertEqual(validate_review('feasibility'), 3068)
 
     def test_no_launch_approval_is_inferred(self):
         self.assertEqual(self.review['decision'], 'COMPUTATIONAL_BLOCKERS_REMAIN')

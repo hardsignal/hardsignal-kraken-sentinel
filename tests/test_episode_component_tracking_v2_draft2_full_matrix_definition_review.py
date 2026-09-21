@@ -11,6 +11,8 @@ from pathlib import Path
 import subprocess
 import unittest
 
+from draft2_review_provenance import validate_review
+
 ROOT = Path(__file__).resolve().parents[1]
 STEM = 'episode-component-tracking-v2-draft2-full-matrix'
 BASE = ROOT / 'results/episode-component-tracking-v2-draft2-experiment'
@@ -164,11 +166,7 @@ class MatrixDefinitionReviewTests(unittest.TestCase):
         self.assertEqual(comparison['drift'], [])
 
     def test_checkpoint_and_all_preexisting_tracked_bytes(self):
-        b = load(REVIEW)['before']
-        self.assertEqual(subprocess.check_output(['git', 'rev-parse', 'HEAD'], cwd=ROOT).decode().strip(), b['head'])
-        self.assertEqual(subprocess.check_output(['git', 'branch', '--show-current'], cwd=ROOT).decode().strip(), b['branch'])
-        for name, expected in b['files'].items():
-            self.assertEqual(digest((ROOT / name).read_bytes()), expected, name)
+        self.assertEqual(validate_review('definition'), 3068)
 
 
 if __name__ == '__main__':
