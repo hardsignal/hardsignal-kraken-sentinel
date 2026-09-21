@@ -25,7 +25,10 @@ CANONICAL = ROOT / f'results/{STEM}-canonical-arms.json'
 MANIFEST_SHA256 = 'd6b85599a9241f3267d91ded0b5145d208ec63f1507086e28fb14c3cd6b05b3a'
 PLAN = ROOT / f'results/{STEM}-launch-plan.json'
 OUTPUT = ROOT / 'results/episode-component-tracking-v2-draft2-full-matrix-exact-v1'
-HEAD = '30904f3513d1c0c7354e4be02e77c35b3b28303f'
+LAUNCH_INTEGRATION_BASE = '30904f3513d1c0c7354e4be02e77c35b3b28303f'
+PLAN_SHA256 = 'b36749cd17804f70955be52b5c35d8e9d803bb643d72349a692ff1407a15b9c9'
+BINDING = ROOT / f'results/{STEM}-launch-binding-v2.json'
+RUNNER = 'analysis/episode_component_tracking_v2_draft2_full_matrix_exact.py'
 REPRESENTATIONS = ('native', 'grid_sigma0', 'grid_sigma5', 'grid_sigma10', 'grid_sigma20')
 WIDTHS = (200, 225, 250, 275, 300, 325, 350, None)
 ASSOCIATIONS = ('connected', 'paths_margin0', 'paths_margin0.25', 'paths_margin1')
@@ -76,14 +79,38 @@ def verify_plan(plan_path=PLAN, expected_hash=None):
         raise ValueError('Frozen plan/configuration mismatch')
     if staged.QUERY_LIMITS != LIMITS['query']:
         raise ValueError('Query limit drift')
+    if sc.sha(plan_path) != PLAN_SHA256:
+        raise ValueError('Frozen launch plan hash drift')
+    binding = read(BINDING)
+    # Only the launch-control adapter is superseded. The original plan and its
+    # original runner digest remain historical evidence, not rewritten provenance.
+    expected_binding = dict(
+        format='KRAKEN_DRAFT2_FULL_MATRIX_LAUNCH_BINDING_V2',
+        launch_integration_base=LAUNCH_INTEGRATION_BASE,
+        plan_sha256=PLAN_SHA256, manifest_sha256=MANIFEST_SHA256,
+        runner_path=RUNNER, original_runner_sha256=plan['sources'][RUNNER],
+        runner_sha256=sc.sha(ROOT / RUNNER))
+    if binding != expected_binding:
+        raise ValueError('Launch binding / exact runner source hash drift')
+    if plan['checkpoint'] != LAUNCH_INTEGRATION_BASE:
+        raise ValueError('Launch integration base mismatch')
+    current_head = subprocess.check_output(
+        ['git', 'rev-parse', 'HEAD'], cwd=ROOT, text=True).strip()
+    if subprocess.run(['git', 'merge-base', '--is-ancestor',
+                       LAUNCH_INTEGRATION_BASE, current_head], cwd=ROOT,
+                      capture_output=True).returncode != 0:
+        raise ValueError('HEAD is not a descendant of launch integration base')
+    if OUTPUT.resolve() != OUTPUT or any(
+            (ROOT / path).is_relative_to(OUTPUT) for path in plan['sources']):
+        raise ValueError('Historical output namespace collision or symlink')
     for path, digest in plan['sources'].items():
+        if path == RUNNER:
+            digest = binding['runner_sha256']
         if sc.sha(ROOT / path) != digest:
             raise ValueError('Provenance source hash drift: ' + path)
     required = {str(p.relative_to(ROOT)) for p in (ROOT / 'analysis').glob('*.py')}
     if not required <= set(plan['sources']):
         raise ValueError('Incomplete source provenance')
-    if subprocess.check_output(['git', 'rev-parse', 'HEAD'], cwd=ROOT, text=True).strip() != HEAD:
-        raise ValueError('Checkpoint drift')
     for suffix, decision in [('definition', 'MATRIX_DEFINITION_FROZEN_AND_RECONSTRUCTED'),
                              ('feasibility', 'COMPUTATIONAL_BLOCKERS_REMAIN')]:
         if read(ROOT / f'results/{STEM}-{suffix}-review.json')['decision'] != decision:
