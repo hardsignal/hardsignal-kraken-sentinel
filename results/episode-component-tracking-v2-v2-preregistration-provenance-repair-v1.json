@@ -1,0 +1,23 @@
+{
+  "authorized_repair_checkpoint": "fb11e2347e38aed82824118c99e5a882069905e3",
+  "authorized_v2_paths": [
+    "docs/episode-component-tracking-v2-v2-discrimination-preregistration.md",
+    "results/episode-component-tracking-v2-v2-discrimination-preregistration.json",
+    "tests/test_episode_component_tracking_v2_v2_discrimination_preregistration.py"
+  ],
+  "current_validation_sha256": {
+    "tests/test_episode_component_tracking_v2_stage37_configuration_selection.py": "aefb6455aece094dd5d264f86efb6b0fbe4142a7d92f42d7ce5b68febfa2752d",
+    "tests/test_episode_component_tracking_v2_v2_discrimination_preregistration.py": "bc5194af226106c5eda14165bdc7ab9d21bd5cd39d7ae428f7c31fe12c909272"
+  },
+  "frozen_v2_json_sha256": "dd9a1694c5d0bc7a47ad2f0bfa917816cc66325f5325e4718b95a7bb9780a7b6",
+  "frozen_v2_markdown_sha256": "f28d4d168a2475c6a755b21c521270e8f2de269a12e67227f24116137321b7c7",
+  "historical_stage37_test_sha256": "e3263babc1aa5231d00f15cc0fc719a02c28f61403a8639dbd582ad27fc3bd09",
+  "historical_v2_test_sha256": "e3652e9025070e72101468b4aca738b403cbe762122d6e5de50140c5f9156596",
+  "parent_decision": "STAGE37_V1_CONFIGURATION_SELECTION_DEFERRED",
+  "preregistration_checkpoint": "9eda24f5a065c8763132eab1f336963d4e322d87",
+  "repaired_stage37_test_sha256": "ea5b6df9d572067c04f34a8b134df2b29cac1594e2661877d239882f0e4ce997",
+  "schema_version": 1,
+  "scope": "Provenance validation only. The original V2 test and fb11e23 Stage 37 validator mutually pin historical bytes. Both validators now read this versioned artifact; current_validation_sha256 binds their final bytes. The artifact is separately committed, avoiding self-embedded hashes. No scientific execution, protocol changes or tuning interface.",
+  "stage37_test_path": "tests/test_episode_component_tracking_v2_stage37_configuration_selection.py",
+  "v2_decision": "V2_DISCRIMINATION_EXPERIMENT_PREREGISTERED"
+}

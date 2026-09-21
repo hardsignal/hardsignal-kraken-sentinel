@@ -6,6 +6,7 @@ import json
 from pathlib import Path
 import subprocess
 import unittest
+from unittest.mock import patch
 
 ROOT = Path(__file__).resolve().parents[1]
 STEM = 'episode-component-tracking-v2-v2-discrimination-preregistration'
@@ -21,6 +22,34 @@ EXPECTED = {
 INTENDED = {'docs/' + STEM + '.md', 'results/' + STEM + '.json',
             'tests/test_episode_component_tracking_v2_v2_discrimination_preregistration.py'}
 
+PREREGISTRATION = '9eda24f5a065c8763132eab1f336963d4e322d87'
+AUTHORIZED_REPAIR = 'fb11e2347e38aed82824118c99e5a882069905e3'
+STAGE37_TEST = 'tests/test_episode_component_tracking_v2_stage37_configuration_selection.py'
+V2_TEST = 'tests/test_episode_component_tracking_v2_v2_discrimination_preregistration.py'
+REPAIR_PATH = 'results/episode-component-tracking-v2-v2-preregistration-provenance-repair-v1.json'
+HISTORICAL_STAGE37_SHA256 = 'e3263babc1aa5231d00f15cc0fc719a02c28f61403a8639dbd582ad27fc3bd09'
+REPAIRED_STAGE37_SHA256 = 'ea5b6df9d572067c04f34a8b134df2b29cac1594e2661877d239882f0e4ce997'
+HISTORICAL_V2_SHA256 = 'e3652e9025070e72101468b4aca738b403cbe762122d6e5de50140c5f9156596'
+REPAIR_METADATA = {
+    'schema_version': 1,
+    'preregistration_checkpoint': PREREGISTRATION,
+    'authorized_repair_checkpoint': AUTHORIZED_REPAIR,
+    'stage37_test_path': STAGE37_TEST,
+    'historical_stage37_test_sha256': HISTORICAL_STAGE37_SHA256,
+    'repaired_stage37_test_sha256': REPAIRED_STAGE37_SHA256,
+    'historical_v2_test_sha256': HISTORICAL_V2_SHA256,
+    'frozen_v2_markdown_sha256': DOC_SHA256,
+    'frozen_v2_json_sha256': JSON_SHA256,
+    'authorized_v2_paths': sorted(INTENDED),
+    'parent_decision': 'STAGE37_V1_CONFIGURATION_SELECTION_DEFERRED',
+    'v2_decision': 'V2_DISCRIMINATION_EXPERIMENT_PREREGISTERED',
+    'scope': 'Provenance validation only. The original V2 test and fb11e23 Stage 37 '
+             'validator mutually pin historical bytes. Both validators now read this '
+             'versioned artifact; current_validation_sha256 binds their final bytes. '
+             'The artifact is separately committed, avoiding self-embedded hashes. '
+             'No scientific execution, protocol changes or tuning interface.',
+}
+
 
 def sha(raw):
     return hashlib.sha256(raw).hexdigest()
@@ -35,6 +64,72 @@ def validate(document):
         raise ValueError('Frozen preregistration changed')
 
 
+def git_bytes(checkpoint, path):
+    return subprocess.check_output(['git', 'show', checkpoint + ':' + path], cwd=ROOT)
+
+
+def require_hash(raw, expected, label):
+    if sha(raw) != expected:
+        raise ValueError('provenance drift: ' + label)
+
+
+def verify_repair():
+    """Read-only, versioned transition; never executes scientific code."""
+    raw = (ROOT / REPAIR_PATH).read_bytes()
+    artifact = json.loads(raw)
+    metadata = {k: v for k, v in artifact.items() if k != 'current_validation_sha256'}
+    if metadata != REPAIR_METADATA:
+        raise ValueError('repair metadata drift')
+    current = artifact['current_validation_sha256']
+    if set(current) != {STAGE37_TEST, V2_TEST}:
+        raise ValueError('validation path drift')
+    for earlier, later in ((PARENT, PREREGISTRATION),
+                           (PREREGISTRATION, AUTHORIZED_REPAIR),
+                           (AUTHORIZED_REPAIR, 'HEAD')):
+        subprocess.run(['git', 'merge-base', '--is-ancestor', earlier, later],
+                       cwd=ROOT, check=True)
+    for checkpoint, path, expected in (
+            (PREREGISTRATION, STAGE37_TEST, HISTORICAL_STAGE37_SHA256),
+            (AUTHORIZED_REPAIR, STAGE37_TEST, REPAIRED_STAGE37_SHA256),
+            (PREREGISTRATION, V2_TEST, HISTORICAL_V2_SHA256),
+            (AUTHORIZED_REPAIR, V2_TEST, HISTORICAL_V2_SHA256)):
+        require_hash(git_bytes(checkpoint, path), expected, checkpoint + ':' + path)
+    changed_at_repair = subprocess.check_output(
+        ['git', 'diff', '--name-only', PREREGISTRATION, AUTHORIZED_REPAIR],
+        cwd=ROOT, text=True).splitlines()
+    if changed_at_repair != [STAGE37_TEST]:
+        raise ValueError('authorized repair scope drift')
+    for path, expected in current.items():
+        require_hash((ROOT / path).read_bytes(), expected, path)
+    # Before the repair commit, HEAD is exactly fb11e23. Once committed, also
+    # require the artifact and validator bytes to match HEAD (no mutable manifest).
+    head = subprocess.check_output(['git', 'rev-parse', 'HEAD'], cwd=ROOT, text=True).strip()
+    if head != AUTHORIZED_REPAIR:
+        if raw != git_bytes('HEAD', REPAIR_PATH):
+            raise ValueError('committed repair artifact drift')
+        for path, expected in current.items():
+            require_hash(git_bytes('HEAD', path), expected, 'committed V2 drift: ' + path)
+    for path, expected in [('docs/' + STEM + '.md', DOC_SHA256),
+                           ('results/' + STEM + '.json', JSON_SHA256)]:
+        require_hash((ROOT / path).read_bytes(), expected, path)
+        for checkpoint in (PREREGISTRATION, AUTHORIZED_REPAIR):
+            require_hash(git_bytes(checkpoint, path), expected, checkpoint + ':' + path)
+    design = json.loads(JSON_PATH.read_bytes())
+    for path, expected in design['provenance_requirements']['bound_files_sha256'].items():
+        require_hash(git_bytes(PARENT, path), expected, 'parent ' + path)
+        if path != STAGE37_TEST:
+            require_hash((ROOT / path).read_bytes(), expected, path)
+        elif expected != HISTORICAL_STAGE37_SHA256:
+            raise ValueError('historical Stage 37 binding drift')
+    changed = subprocess.check_output(['git', 'diff', '--name-only', '-z', PARENT], cwd=ROOT)
+    untracked = subprocess.check_output(
+        ['git', 'ls-files', '--others', '--exclude-standard', '-z'], cwd=ROOT)
+    unexpected = set((changed + untracked).decode().split('\0')) - {''} - INTENDED - {STAGE37_TEST, REPAIR_PATH}
+    if unexpected:
+        raise ValueError('unrecognized descendant paths: ' + repr(sorted(unexpected)))
+    return artifact
+
+
 class DiscriminationPreregistrationTests(unittest.TestCase):
     @classmethod
     def setUpClass(cls):
@@ -45,6 +140,88 @@ class DiscriminationPreregistrationTests(unittest.TestCase):
         self.assertEqual(sha(JSON_PATH.read_bytes()), JSON_SHA256)
         self.assertEqual(sha(DOC_PATH.read_bytes()), DOC_SHA256)
         self.assertIn(self.design['decision'], DOC_PATH.read_text())
+
+    def test_versioned_historical_and_current_hashes(self):
+        artifact = verify_repair()
+        self.assertEqual(sha(git_bytes(PREREGISTRATION, STAGE37_TEST)), HISTORICAL_STAGE37_SHA256)
+        self.assertEqual(sha(git_bytes(AUTHORIZED_REPAIR, STAGE37_TEST)), REPAIRED_STAGE37_SHA256)
+        self.assertEqual(sha(git_bytes(PREREGISTRATION, V2_TEST)), HISTORICAL_V2_SHA256)
+        for path, expected in artifact['current_validation_sha256'].items():
+            self.assertEqual(sha((ROOT / path).read_bytes()), expected)
+
+    def test_reject_validator_science_and_artifact_mutations(self):
+        original = Path.read_bytes
+        paths = {STAGE37_TEST, V2_TEST, REPAIR_PATH,
+                 'docs/' + STEM + '.md', 'results/' + STEM + '.json'}
+        paths.update(self.design['provenance_requirements']['bound_files_sha256'])
+        for path in sorted(paths):
+            # Use valid JSON when mutating the manifest, so rejection is semantic.
+            def mutated(file):
+                raw = original(file)
+                if file == ROOT / path:
+                    if path == REPAIR_PATH:
+                        artifact = json.loads(raw)
+                        artifact['authorized_v2_paths'].append('results/fourth.json')
+                        return json.dumps(artifact).encode()
+                    return raw + b'\nchanged'
+                return raw
+
+            with self.subTest(path=path), patch.object(Path, 'read_bytes', mutated):
+                with self.assertRaises(ValueError):
+                    verify_repair()
+
+    def test_reject_reverted_or_missing_descendant_authorization(self):
+        original = Path.read_bytes
+        for checkpoint in (PREREGISTRATION, AUTHORIZED_REPAIR):
+            reverted = git_bytes(checkpoint, STAGE37_TEST)
+            def changed(file):
+                return reverted if file == ROOT / STAGE37_TEST else original(file)
+            with self.subTest(checkpoint=checkpoint), patch.object(Path, 'read_bytes', changed):
+                with self.assertRaisesRegex(ValueError, 'provenance drift'):
+                    verify_repair()
+        def missing(file):
+            if file == ROOT / STAGE37_TEST:
+                raise FileNotFoundError(STAGE37_TEST)
+            return original(file)
+        with patch.object(Path, 'read_bytes', missing), self.assertRaises(FileNotFoundError):
+            verify_repair()
+
+    def test_reject_historical_hash_drift(self):
+        original = subprocess.check_output
+        for checkpoint, path in ((PREREGISTRATION, STAGE37_TEST),
+                                 (AUTHORIZED_REPAIR, STAGE37_TEST),
+                                 (PREREGISTRATION, V2_TEST)):
+            def changed(cmd, **kwargs):
+                raw = original(cmd, **kwargs)
+                return raw + b'changed' if cmd == ['git', 'show', checkpoint + ':' + path] else raw
+            with self.subTest(checkpoint=checkpoint, path=path):
+                with patch.object(subprocess, 'check_output', side_effect=changed):
+                    with self.assertRaisesRegex(ValueError, 'provenance drift'):
+                        verify_repair()
+
+    def test_reject_broken_transition_ancestry(self):
+        original = subprocess.run
+        for earlier, later in ((PREREGISTRATION, AUTHORIZED_REPAIR), (AUTHORIZED_REPAIR, 'HEAD')):
+            def rejected(cmd, **kwargs):
+                if cmd == ['git', 'merge-base', '--is-ancestor', earlier, later]:
+                    raise subprocess.CalledProcessError(1, cmd)
+                return original(cmd, **kwargs)
+            with self.subTest(earlier=earlier, later=later):
+                with patch.object(subprocess, 'run', side_effect=rejected):
+                    with self.assertRaises(subprocess.CalledProcessError):
+                        verify_repair()
+
+    def test_reject_arbitrary_fourth_descendant(self):
+        original = subprocess.check_output
+        for command in (['git', 'diff', '--name-only', '-z', PARENT],
+                        ['git', 'ls-files', '--others', '--exclude-standard', '-z']):
+            def extra(cmd, **kwargs):
+                raw = original(cmd, **kwargs)
+                return raw + b'results/fourth.json\0' if cmd == command else raw
+            with self.subTest(command=command):
+                with patch.object(subprocess, 'check_output', side_effect=extra):
+                    with self.assertRaisesRegex(ValueError, 'unrecognized descendant'):
+                        verify_repair()
 
     def test_exact_two_candidates(self):
         self.assertEqual(self.design['candidates'], EXPECTED)
@@ -75,18 +252,15 @@ class DiscriminationPreregistrationTests(unittest.TestCase):
         self.assertIsNone(old['selected_configuration'])
         subprocess.run(['git', 'merge-base', '--is-ancestor', PARENT, 'HEAD'], cwd=ROOT, check=True)
         self.assertEqual(d['provenance_requirements']['branch'], 'codex/v2-discrimination-design')
-        for path, digest in d['provenance_requirements']['bound_files_sha256'].items():
-            with self.subTest(path=path):
-                self.assertEqual(sha((ROOT / path).read_bytes()), digest)
-                self.assertEqual(sha(subprocess.check_output(['git', 'show', PARENT + ':' + path], cwd=ROOT)), digest)
+        verify_repair()
 
     def test_all_parent_tracked_files_unchanged(self):
-        # Covers tracked V1 evidence, reviews, raw inventories and scientific code.
-        # Git diff includes staged + unstaged changes and checks deleted files too.
-        changed = set(subprocess.check_output(['git', 'diff', '--name-only', PARENT], cwd=ROOT, text=True).splitlines())
-        self.assertFalse(changed - INTENDED, changed - INTENDED)
-        parent_files = set(subprocess.check_output(['git', 'ls-tree', '-r', '--name-only', PARENT], cwd=ROOT, text=True).splitlines())
-        self.assertFalse(changed & parent_files)
+        verify_repair()
+        changed = set(subprocess.check_output(
+            ['git', 'diff', '--name-only', PARENT], cwd=ROOT, text=True).splitlines())
+        parent_files = set(subprocess.check_output(
+            ['git', 'ls-tree', '-r', '--name-only', PARENT], cwd=ROOT, text=True).splitlines())
+        self.assertEqual(changed & parent_files, {STAGE37_TEST})
 
     def test_inherited_constants_and_width_override(self):
         tree = ast.parse((ROOT / 'analysis/episode_component_tracking_v2_draft1.py').read_text())
@@ -151,6 +325,7 @@ class DiscriminationPreregistrationTests(unittest.TestCase):
                           'device identity', 'universal thresholds', 'universally correct source association'})
 
     def test_no_execution_or_tuning_interface(self):
+        self.assertEqual(self.design['decision'], REPAIR_METADATA['v2_decision'])
         self.assertTrue(self.design['design_only'])
         self.assertFalse(self.design['prohibition_on_post_hoc_tuning']['allowed'])
         f = self.design['computational_failure_policy']
@@ -163,9 +338,9 @@ class DiscriminationPreregistrationTests(unittest.TestCase):
         tree = ast.parse(Path(__file__).read_text())
         modules = {n.module for n in ast.walk(tree) if isinstance(n, ast.ImportFrom)}
         modules |= {a.name for n in ast.walk(tree) if isinstance(n, ast.Import) for a in n.names}
-        self.assertLessEqual(modules, {'ast', 'copy', 'hashlib', 'json', 'pathlib', 'subprocess', 'unittest'})
+        self.assertLessEqual(modules, {'ast', 'copy', 'hashlib', 'json', 'pathlib', 'subprocess', 'unittest', 'unittest.mock'})
         for node in ast.walk(tree):
-            if isinstance(node, ast.Call) and isinstance(node.func, ast.Attribute) and isinstance(node.func.value, ast.Name) and node.func.value.id == 'subprocess':
+            if isinstance(node, ast.Call) and isinstance(node.func, ast.Attribute) and isinstance(node.func.value, ast.Name) and node.func.value.id == 'subprocess' and node.func.attr != 'CalledProcessError':
                 self.assertIsInstance(node.args[0], ast.List)
                 self.assertEqual(ast.literal_eval(node.args[0].elts[0]), 'git')
 

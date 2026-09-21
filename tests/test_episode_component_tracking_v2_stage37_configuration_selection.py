@@ -15,6 +15,7 @@ from unittest.mock import patch
 
 import episode_component_tracking_v2_draft2_full_matrix_exact as launch
 from provenance import stage37_gitignore_v1 as repair
+import test_episode_component_tracking_v2_v2_discrimination_preregistration as v2_provenance
 import test_episode_component_tracking_v2_stage37_scientific_review as scientific
 import test_episode_component_tracking_v2_stage37_computational_review as computational
 
@@ -69,10 +70,14 @@ def verify_provenance(selection):
         if digest(subprocess.check_output(
                 ['git', 'show', CHECKPOINT + ':' + path], cwd=ROOT)) != expected:
             raise ValueError('checkpoint bound-file drift: ' + path)
-    for path, expected in V2_DESCENDANTS.items():
+    artifact = v2_provenance.verify_repair()
+    head = subprocess.check_output(['git', 'rev-parse', 'HEAD'], cwd=ROOT, text=True).strip()
+    for path, historical in V2_DESCENDANTS.items():
+        expected = artifact['current_validation_sha256'].get(path, historical)
         if digest((ROOT / path).read_bytes()) != expected:
             raise ValueError('V2 descendant drift: ' + path)
-        if digest(subprocess.check_output(['git', 'show', 'HEAD:' + path], cwd=ROOT)) != expected:
+        committed = historical if head == v2_provenance.AUTHORIZED_REPAIR else expected
+        if digest(subprocess.check_output(['git', 'show', 'HEAD:' + path], cwd=ROOT)) != committed:
             raise ValueError('committed V2 drift: ' + path)
     changed = subprocess.check_output(
         ['git', 'diff', '--name-only', '-z', CHECKPOINT], cwd=ROOT)
@@ -81,7 +86,7 @@ def verify_provenance(selection):
     intended = {'docs/' + STEM + 'stage37-configuration-selection.md',
                 'results/' + STEM + 'stage37-configuration-selection.json',
                 'tests/test_episode_component_tracking_v2_stage37_configuration_selection.py'}
-    unexpected = set((changed + untracked).decode().split('\0')) - {''} - intended - V2_DESCENDANTS.keys()
+    unexpected = set((changed + untracked).decode().split('\0')) - {''} - intended - V2_DESCENDANTS.keys() - {v2_provenance.REPAIR_PATH}
     if unexpected:
         raise ValueError('unrecognized descendant paths: ' + repr(sorted(unexpected)))
 
