@@ -1,0 +1,407 @@
+# Hardsignal Labs Kraken RF Sentinel V2: discrimination preregistration
+
+**Design only. No V2 acquisition or scientific execution has occurred.** The experiment is preregistered, but execution is blocked until the operational manifest and reviewed implementation are locked before acquisition. This document and its JSON constitute the design; the JSON is the machine-readable contract.
+
+Parent: `4d61b04` (`4d61b04867e479187a3ae5c6914df98e382fc18b`), branch `codex/v2-discrimination-design`. Parent decision: **STAGE37_V1_CONFIGURATION_SELECTION_DEFERRED**. No frozen V1 conclusion is changed.
+
+## Question and candidates
+
+On independently acquired new captures, which of grid_sigma5 and grid_sigma10, at width 350 Hz and connected association, provides more repeatable primary candidate membership without contradictory persistence, control or retention evidence?
+
+| Candidate | Representation | Width | Association |
+| --- | --- | --- | --- |
+| A | grid_sigma5 | 350 Hz | connected |
+| B | grid_sigma10 | 350 Hz | connected |
+
+Only representation differs. No width, association, native, path-margin or sigma search is permitted. Neither candidate is a winner at registration.
+
+## Capture commitment
+
+Eight sessions separated by at least 24 hours, two owned controlled sources, three repeats per source per session: **48 new captures, 288 scheduled activation slots, 288 within-source repeat-pair comparisons**. The independent scoring unit is the session (eight), not 288 independent RF trials. This is a conservative logistical commitment, not a power calculation from Stage 36.
+
+## Membership endpoint and decision
+
+For each candidate separately, resolve saved primary IDs to candidate fragment ordinals and peak frequencies. Match members across repeats only at the same original ordinal and within 25 Hz. Score `2*M/(|P1|+|P2|)`; a missing/null primary or invalid slot scores zero, including two null primaries. Never compare candidate IDs across captures. This measures tolerance-defined membership reproducibility and penalizes changed membership even when status is unchanged. It does not prove physical continuity.
+
+Average all 36 scheduled pair scores within each session, then equally average eight sessions. Select only if the proposed winner has a mean advantage of at least 0.10, mean score at least 0.80, and a strictly positive advantage in all eight sessions. All eight same-direction signs correspond to a two-sided exact sign probability of 0.0078125 under independent equiprobable session signs; dependence limits generalization. Repeat-neighbor, source-stratum, critical secondary, anomaly-sensitivity, control and completion gates must also pass. Otherwise **DEFERRED**.
+
+## Complete frozen protocol
+
+The following numbered fields reproduce the complete JSON protocol values. Units and inclusive comparisons are explicit; omitted acquisition settings are blockers, never silently inherited. The historical Draft1 200 Hz width flag is removed by the frozen Draft2 construction and replaced with 350 Hz. All other scientific rules remain bound to the parent sources.
+
+### 1. Fixed parameters
+
+```json
+{
+  "acquisition": {
+    "source": "captures/BETWEEN-DEVICE-REPL-V1-20260919-024341/manifest.json settings_at_start and settings_at_finish",
+    "vfo_bw_0": 25000,
+    "vfo_freq_0": 433868160,
+    "vfo_iq_0": "True",
+    "vfo_squelch_0": -45,
+    "vfo_squelch_mode_0": "Manual"
+  },
+  "candidate_construction": "Draft2 detect/apply_width: contiguous eligible contrast runs; retain interval_hz, native_subpeaks and original-spectrum integrated_power; remove Draft1 200 Hz BROAD_COMPONENT flag then apply strictly width_hz >350 rejection. Other eligibility flags unchanged. IDs E{episode:03d}_F{fragment:03d}_C{component_index:04d}.",
+  "connected_semantics": "Draft1 track_episode: connected groups, coherent only with one candidate per fragment and range <=100 Hz. Persistent support >=3 and coverage >=0.60 of ALL original fragments. Primary only unique persistent group with no coherent recurring competitor or incoherent group of support >=2; preserve status precedence and all memberships.",
+  "episode_segmentation": {
+    "comparison": ">",
+    "fragment": "One original recorder IQ file; no reslicing, merging, resampling or dropping; keep original fragment denominator. Snapshot timestamps once at acquisition close, never regroup from later live mtimes.",
+    "gap_seconds": 4.0,
+    "order": [
+      "recorded mtime_ns",
+      "filename"
+    ]
+  },
+  "inherited_detector_and_tracking": {
+    "association_fragment_index_differences": [
+      1,
+      2
+    ],
+    "association_maximum_frequency_difference_hz": 50.0,
+    "background_minimum_bins": 32,
+    "background_separation_hz": [
+      50,
+      500
+    ],
+    "competing_group_minimum_support": 2,
+    "component_max_contrast_db": 10.0,
+    "component_run_contrast_db": 6.0,
+    "dtype": "<c16",
+    "eligible_abs_frequency_hz": [
+      100,
+      11500
+    ],
+    "fft_length": "N",
+    "frequency_estimator": "largest-power component bin; lower-frequency tie",
+    "maximum_component_width_hz": 350,
+    "maximum_track_range_hz": 100.0,
+    "minimum_samples": 4,
+    "minimum_track_coverage": 0.6,
+    "minimum_track_support": 3,
+    "normalization": "abs(FFT)**2/(N*sum(window**2))",
+    "primary_selection": "unique persistent track; no recurring competitor or ambiguous group",
+    "sample_rate_hz": 25000,
+    "summary_weighting": "equal per supporting fragment",
+    "window": "numpy.hanning(N)",
+    "zero_padding": false
+  },
+  "not_established_by_committed_evidence": [
+    "receiver serial and firmware",
+    "RF frontend sample rate and decimation chain",
+    "receiver gain/AGC and calibration settings",
+    "antenna/cable and channel selection",
+    "recorder trigger/buffer/file rollover settings",
+    "source serials, battery state and activation procedure",
+    "physical geometry and ambient conditions"
+  ],
+  "numerical_policy": {
+    "environment": "Lock Python, NumPy, OS, CPU and dependency versions in pre-acquisition execution manifest; no environment upgrade mid-experiment.",
+    "frequency_grid_atol": 1e-09,
+    "frequency_grid_rtol": 0,
+    "iq": "little-endian complex128 (<c16)",
+    "power_conservation_atol": 1e-14,
+    "power_conservation_rtol": 1e-11,
+    "spectra": "float64; subtract complex mean, Hann, fftshift; no zero padding",
+    "thresholds": "Inclusive detector and tracking thresholds as source; no additional epsilon, rounding or amplitude tie preference; lower-frequency peak ties. Reject nonfinite JSON; preserve unusable IQ as outcomes."
+  },
+  "pre_acquisition_lock": "Execution blocked until a versioned operational manifest gives exact values for every not-established field, full receiver/recorder settings hash, hardware inventory, geometry photographs/measurements, source labels S1/S2, activation procedure and environment versions. These are NEW operational commitments, not invented inherited constants. No RF pilot or outcome inspection to choose them. Register manifest and reviewed runner commit before first V2 capture; any scientific parameter change requires a separate preregistration and fresh data.",
+  "representation": {
+    "grid_edge_count": 10001,
+    "grid_edges_hz": [
+      -12500,
+      12500
+    ],
+    "rebin": "Exact piecewise-constant interval overlap of original FFT-bin power; periodic Nyquist splitting. Convert integrated power to density by dividing by 2.5.",
+    "smoothing": "Normalized Gaussian sampled every 2.5 Hz over +/-4 sigma; numpy.convolve mode=same, zero extension. Sigma is 5 Hz for A, 10 Hz for B only.",
+    "spacing_hz": 2.5
+  },
+  "resource_budget": {
+    "count": {
+      "max_polynomial_bytes": 33554432,
+      "max_seconds": 60,
+      "max_states": 250000,
+      "max_transitions": 5000000
+    },
+    "family_construction_seconds": 60,
+    "origin": "Inherited Stage36 launcher LIMITS; same for both candidates",
+    "query": {
+      "max_calls": 5000,
+      "max_seconds": 120
+    },
+    "scope": "400 s / 524288 KiB per complete candidate capture worker including extraction, scoring and reload; 60 s per connected association construction, 120 s query phase. Count/family solver budgets retained as provenance but path enumeration is not invoked. Control batch uses same worker ceilings; no automatic retries.",
+    "worker_rss_kib": 524288,
+    "worker_timeout_seconds": 400,
+    "workers": 1
+  }
+}
+```
+
+### 2. Deliberately excluded parameters
+
+```json
+[
+  "other representations including native, grid_sigma0, grid_sigma20",
+  "other widths including unlimited",
+  "other association methods",
+  "path margins",
+  "arbitrary sigma values",
+  "adaptive budgets",
+  "new exploratory synthetic spectral matrix"
+]
+```
+
+### 3. Acquisition plan
+
+```json
+{
+  "activation_slots_per_capture": 6,
+  "capture_timing": "Each capture 180 seconds: six fixed half-open 30-second slots; one activation commanded 5 seconds into each slot using locked procedure; at least 60 seconds between captures. Operator records actual UTC/monotonic trigger times and failures without spectrum or configuration outcome feedback.",
+  "captures": 48,
+  "controlled_sources": 2,
+  "environmental_controls": "Same receiver, antenna, cable, gain, VFO, source geometry, orientation and activation procedure throughout. Only designated source intentionally active; other controlled source idle. Record ambient temperature, battery state, interference and deviations. Do not retune to suppress unexpected RF.",
+  "episode_requirements": "Group entire capture with frozen >4 s rule. Assign episode to slot containing its first recorded file timestamp. If any member lies outside that slot flag boundary anomaly. Exactly one episode wholly within a slot is required for that slot to supply a membership score; zero or multiple episodes or crossing boundary yield score 0, with all episodes retained in secondary reporting. No minimum fragment count for inclusion; one/two-fragment episodes retained. Extra episodes never replace scheduled slots.",
+  "new_data_only": true,
+  "pairing": "Both A and B consume byte-identical raw captures, episode boundaries, fragment order and source/slot ledger. Repeat pairs within each session/source/activation-slot: (R1,R2),(R1,R3),(R2,R3). No pairing of source identities inferred from RF.",
+  "planned_activation_slots": 288,
+  "repeat_comparisons": 288,
+  "repeats_per_source_per_session": 3,
+  "sample_size_rationale": "Fixed conservative logistical commitment: 8 sessions x 2 sources x 3 captures x 6 activation slots. Not power-derived, not optimized using Stage36 effects; unknown power, no extension or early success stopping.",
+  "schedule": "Sessions odd: S1-R1,S2-R1,S1-R2,S2-R2,S1-R3,S2-R3; sessions even: S2-R1,S1-R1,S2-R2,S1-R2,S2-R3,S1-R3. Fixed counterbalance, no outcome-dependent order.",
+  "session_separation": "At least 24 hours between session starts; one session per day; eight independent acquisition occasions, not eight proven independent RF environments.",
+  "sessions": 8,
+  "stage36_role": "Motivation and frozen comparison only; never confirmatory outcomes or sample-size effects."
+}
+```
+
+### 4. Primary endpoint
+
+```json
+{
+  "aggregation": "For candidate c, session score S_cj is equal mean of all 36 scheduled pair scores (2 sources x 6 slots x 3 repeat pairs). Delta_j=S_Aj-S_Bj; Delta=mean of eight Delta_j. Never pool fragments as independent trials.",
+  "defined_before_execution": true,
+  "frequency_match_tolerance_hz": 25,
+  "inference": "Require all eight session differences strictly favor proposed winner AND absolute Delta >=0.10. Two-sided exact sign test for 8/8 nonzero same-direction session signs is 2/256=0.0078125 under independent equiprobable signs; ties fail. No CI or p-value from pseudoreplicated pairs. Session dependence limits inference to tested workflow.",
+  "inputs": [
+    "association.primary candidate IDs",
+    "components candidate_id, fragment_index, frequency_hz",
+    "original episode fragment count",
+    "locked capture/slot ledger"
+  ],
+  "membership_mapping": "Within each representation independently, resolve primary IDs to candidates. Candidate IDs themselves are never matched across captures or representations. Match candidates across repeats only when original fragment ordinal is identical AND absolute peak-frequency difference <=25 Hz. At most one primary candidate per ordinal; otherwise structural failure. Missing fragment ordinals are not compacted. Unequal fragment counts are allowed and unmatched members penalized. No alignment shifts, nearest-track choice, fitted frequency correction or dynamic time warping.",
+  "minimum_mean_advantage": 0.1,
+  "name": "Repeat primary-membership concordance",
+  "pair_score": "If either slot lacks exactly one wholly contained episode, either primary is null, or either primary set is empty, score=0 (including two null primaries). Otherwise score=2*M/(len(P_r)+len(P_s)), M being count of matched ordinal/frequency candidate pairs. Thus identical status can score below 1 or 0. This is tolerance-defined membership reproducibility, not physical identity; ordinal alignment may penalize recorder variability.",
+  "preference": "higher",
+  "unit": "session (n=8); repeat pairs and slots are dependent within session",
+  "winner_minimum_mean_score": 0.8
+}
+```
+
+### 5. Secondary endpoints
+
+```json
+[
+  {
+    "critical_gate": "Proposed winner pooled AMBIGUOUS_ASSOCIATION + INSUFFICIENT_SUPPORT + NO_ELIGIBLE_COMPONENT + UNUSABLE_INPUT + acquisition-invalid slot fraction must not exceed other by >0.05. Extra UNIQUE outcomes alone never select.",
+    "definition": "Per-candidate counts of every status, null primary and paired repeat status agreement; denominator all scheduled slots (invalid slots are separate acquisition-invalid category). Also full episode inventory counts.",
+    "name": "status_and_abstention"
+  },
+  {
+    "critical_gate": "Winner mean persistent-membership score must not be lower than other by >0.05.",
+    "definition": "All persistent groups retained. Between repeat episodes, match groups by maximum-total-weight one-to-one assignment using primary pair Dice rule for each group pair. Divide summed Dice by max(group counts); two empty sets score 0. Invalid slots score 0. Equal session weighting as primary. Group ties lexicographic by sorted candidate IDs.",
+    "name": "persistent_membership"
+  },
+  {
+    "critical_gate": "Winner dominant-bin retention fraction must not be lower by >0.05 overall OR in either source stratum.",
+    "definition": "Per original fragment: detected and eligible candidate counts, any eligible candidate indicator, and containment of original dominant non-DC FFT bin in any eligible half-open interval_hz. Unusable/no-bin fragments count as not retained. Report counts and original fragment denominators; diagnostic only, not carrier recovery.",
+    "name": "candidate_fragment_retention"
+  },
+  {
+    "critical_gate": "Zero asserted structural violations; all 96 candidate-capture workers and required controls/reloads complete within locked limits.",
+    "definition": "Preserve incoherent connected groups as diagnostics; violations concern asserted coherent/persistent/primary output properties, eligibility and support/coverage denominators. Record per-capture CPU/wall time, peak RSS, exit codes and receipt/hash/reload status.",
+    "name": "structural_integrity_and_completion"
+  }
+]
+```
+
+### 6. Negative controls
+
+```json
+{
+  "baseline": "Historical connected 1/100 noise, 0 crossing switches, 4/4 recoverable; historical path 10/100 and 8 crossing switches remain negative evidence, not rerun arms.",
+  "crossing_gate": "Zero crossing identity-switch links and no forced primary on crossing or two_persistent; all four designated recoverable fixtures must retain correct primaries.",
+  "failure": "Any missing control or regression in either adapter => DEFERRED. Control pass is shared prerequisite, never proof that smoothing preserves identity.",
+  "mandatory": true,
+  "noise_gate": "At most 1/100 false primaries, and false-primary set must be subset of historical {noise_58}; no new false-primary cases.",
+  "scope": "Use exact frozen association_fixtures and fixture_metrics from bound Draft2 source: 113 fixtures, including noise seeds 0..99 and crossing. Exercise both candidate connected adapters on identical historical candidate inputs; these bypass representation/detection and cannot distinguish sigma or estimate representation-specific false-primary rates. No new spectral matrix.",
+  "separate_from_real_data": true
+}
+```
+
+### 7. Anomaly policy
+
+```json
+{
+  "flags": "Predeclare single/two-fragment episodes, unusable IQ, global maximum in DC/edge exclusion, out-of-guard maximum, multiple/no episodes per slot, boundary-crossing episode, logged activation/environment deviations. Flag from acquisition/unsmoothed metadata without A/B outcomes; E07-like cases remain included.",
+  "interpretation": "Report all flag counts, membership/status discordance and anomalous strata; stable insufficient status is not membership success. Historical E07 remains retained and is not reused as a new observation.",
+  "post_hoc_exclusion_allowed": false,
+  "primary": "All scheduled slots and original fragments remain in denominators; valid anomalous episodes scored normally, null/invalid slots score 0. No replacement captures.",
+  "retain_all": true,
+  "sensitivity": "Only sensitivity: recompute on repeat pairs whose two slots have none of the listed flags, applying same mask to A/B. Retain main result and exclusions ledger. Equal session weights; require >=12 unflagged pairs in every session and both sources represented. Otherwise sensitivity uninformative => DEFERRED. Proposed winner sensitivity mean advantage must be >=0; reversal => DEFERRED. Sensitivity cannot rescue a failed primary gate."
+}
+```
+
+### 8. Missing data policy
+
+```json
+{
+  "policy": "Every planned capture/slot has a row even if no files, no activation, corrupted or inaccessible data. Missing acquisition slot primary score 0 for both; observed insufficient/unusable status is an outcome, not missing. Retain partial capture data and all extra episodes. Any missing whole capture, unreadable/corrupt raw data, or incomplete planned acquisition => DEFERRED; zero/multiple observed episodes with otherwise complete acquisition remain ordinary zero-scored outcomes. No complete-case primary or imputation.",
+  "replacement": false
+}
+```
+
+### 9. Computational failure policy
+
+```json
+{
+  "automatic_retries": false,
+  "policy": "Any incomplete A/B worker, timeout, resource violation, reload disagreement or control failure => DEFERRED. Preserve logs, partial outputs, request, limits and receipt; missing computed scores are null, never zero or scientific negatives. No winner from remaining completed subset. Diagnostic reruns require separate authorization and cannot replace confirmatory results.",
+  "relaxed_limits": false
+}
+```
+
+### 10. Decision rule
+
+```json
+{
+  "A_SELECTED": "All gates pass for A with Delta >=0.10.",
+  "B_SELECTED": "All gates pass for B with Delta <=-0.10.",
+  "DEFERRED": "Any tie, threshold failure, contradiction, missing required evidence, failure or protocol violation; no fallback ranking or forced winner.",
+  "all_required": [
+    "All 48 acquisitions and 96 paired candidate-capture workers complete; provenance intact; mandatory controls pass.",
+    "Primary mean advantage >=0.10, winner mean score >=0.80, and all 8 session differences strictly favor winner.",
+    "Repeat-neighbor gate: winner mean score on adjacent repeats (R1,R2 and R2,R3) >=0.75 in EACH session, and mean advantage >=0 in EACH source stratum. Neighbor means acquisition repeats only; no neighboring sigma/width arms.",
+    "Every critical secondary gate passes and anomaly sensitivity is informative with no direction reversal.",
+    "All preregistration and operational locks predate first V2 capture; no post-hoc changes."
+  ],
+  "default": "DEFERRED"
+}
+```
+
+### 11. Possible outcomes
+
+```json
+[
+  "A_SELECTED",
+  "B_SELECTED",
+  "DEFERRED"
+]
+```
+
+### 12. Claims boundary
+
+```json
+{
+  "allowed": "Conditional discrimination of two representation choices for this fixed pipeline and controlled workflow, measuring dominant non-DC FFT-bin / fragment membership behavior.",
+  "forbidden": [
+    "RF transmitter identity",
+    "carrier identity",
+    "device fingerprint identity",
+    "device identity",
+    "universal thresholds",
+    "universally correct source association"
+  ],
+  "preserved_v1": [
+    "Between-device evidence remains descriptive.",
+    "E07 remains retained.",
+    "Stable status labels can conceal changing primary memberships.",
+    "Zero structural violations do not prove correct source association.",
+    "Historical noise/crossing fixtures remain negative evidence.",
+    "Eight native Stage36 arms remain COMPUTATION_UNRESOLVED.",
+    "Stage37 V1 configuration selection remains DEFERRED; neither A nor B has established superiority."
+  ]
+}
+```
+
+### 13. Provenance requirements
+
+```json
+{
+  "blinding": "Acquire all sessions before scoring/comparative interpretation. Fixed semantic labels A/B disclosed here; optional scorer-facing X/Y mapping stored with independent custodian before acquisition, hash-bound, withheld from scorer until all scores and gates frozen. If custodian unavailable record unblinded scoring; automated locked rules remain mandatory.",
+  "bound_files_sha256": {
+    "analysis/episode_component_tracking_v2_draft1.py": "a24a5617ca9f4129c6970fd0a9743f8b78610c58567e8a557f21dee2a055f66c",
+    "analysis/episode_component_tracking_v2_draft2_experiment.py": "73dc27741f3ad5fd710f94a8989a930bb731cd196e32ff2d000ee48e00b9d39a",
+    "analysis/episode_component_tracking_v2_draft2_full_matrix_exact.py": "9f23840db5a32964ad40910af79f8e1ecb622c0ce0b64aab220f94061c4dd4fd",
+    "capture/group_episodes.py": "c14586d6304eca3ea906b320f43607ffe6a982929b6bdacd9adb71f973fe98e6",
+    "capture/kraken_capture.py": "bbee1eb37138b9b2d5eb4aa61006ea36d7ebc794b9293794a2754e86adc41970",
+    "captures/BETWEEN-DEVICE-REPL-V1-20260919-024341/manifest.json": "190213fb854080b8c2a3fd80381b5f4130d1a26c749621a8f42c289ed7330004",
+    "docs/episode-component-tracking-v2-draft1.md": "017a4bf9dde31c745ba9765827378e8dd9c6e6af175bd0cddf594b22f08ac004",
+    "docs/episode-component-tracking-v2-stage37-computational-review.md": "6c17bbeaa0ee16f4fb4c3cff396e8a507b95f094ac94da2f450bdc0b896eef88",
+    "docs/episode-component-tracking-v2-stage37-configuration-selection.md": "20ec4954eac2474d06a607d641b1725c19fca64f08b2727b2b3cfee163d9247c",
+    "docs/episode-component-tracking-v2-stage37-provenance-repair.md": "f01f7aebafa39aa9c387d6bb2e02f8184c207de685ac8454a04d8471fe4c67bc",
+    "docs/episode-component-tracking-v2-stage37-scientific-review.md": "0d1c3275bc96e71f26638b50cf8f4651138a7c6d9282bccfe216ef15703ae28e",
+    "docs/kraken-episode-grouping-v1.md": "8d04b9c93e1df055738831bdda3ad4ea276d91a2f5da39e7935294a4b7491aca",
+    "results/episode-component-tracking-v2-draft2-stage36-files.sha256": "3f2794459be61714e7d5b1859ca919e16882f71fe1794db8b2905089006d92ba",
+    "results/episode-component-tracking-v2-stage37-computational-review.json": "bbaa1560539e54e98bb49cc0665e0c010641f7d81a7d9a7822ee01b6f9e83ceb",
+    "results/episode-component-tracking-v2-stage37-configuration-selection.json": "d501ea1ae51fdab0585ca1c5b42988583ea2f20c6047044446ec5012df53559a",
+    "results/episode-component-tracking-v2-stage37-provenance-repair-v1.json": "085babba93c3ba981f60511d788ae4591f0fdcb2fb020b30aacb365f86ecfd86",
+    "results/episode-component-tracking-v2-stage37-scientific-review.json": "9153576d2d580eb918dfa4e306b493e91b2d9841f484728b6efa80be4f8a1c44",
+    "tests/test_episode_component_tracking_v2_stage37_computational_review.py": "a71bd2f35509efc94d47062747d6e944536ee30813094515d464d932f1aeba86",
+    "tests/test_episode_component_tracking_v2_stage37_configuration_selection.py": "e3263babc1aa5231d00f15cc0fc719a02c28f61403a8639dbd582ad27fc3bd09",
+    "tests/test_episode_component_tracking_v2_stage37_scientific_review.py": "fa04f7ad6c5e0476c50e58937c0c8097b22f4467dd9d6d4ce37c6735e434bbc3"
+  },
+  "branch": "codex/v2-discrimination-design",
+  "git": "Before first capture, record clean execution git commit, preregistration commit and file SHA256, operational manifest SHA256, reviewed future runner SHA256, dependency lock and ancestry to full parent. Commit ID cannot be self-embedded in its own file: record it in separate future execution manifest, never rewrite this preregistration.",
+  "manifests": "Session manifest: all 48 IDs, source, session, repeat, six slot IDs, trigger times, failures, environment and deviations. Configuration manifest: exact two candidates, all fixed parameters, full settings snapshots before/after each capture, operational lock, code/dependency hashes and budgets. Raw freeze signed/timestamped before comparative interpretation.",
+  "planned_runner_interface": {
+    "contract": "Future reviewed runner only. validate-lock does not acquire or analyse; score-frozen refuses until acquisition-complete and hash freeze. Both candidates mandatory. No representation, width, association, threshold, budget override, retry or tuning arguments. Decide uses only frozen scored receipts. Do not invoke Stage36 launcher as V2 runner.",
+    "implemented": false,
+    "name": "kraken-v2-discrimination",
+    "phases": [
+      "validate-lock --prereg PATH --operations PATH --execution-lock PATH",
+      "score-frozen --execution-lock PATH --sessions PATH --raw-inventory PATH --output NEW_DIRECTORY",
+      "decide --execution-lock PATH --receipts PATH --output NEW_DIRECTORY"
+    ]
+  },
+  "raw_integrity": "SHA256 and byte size for every raw IQ file, acquisition start/stop UTC, recorded mtime_ns, immutable archive location, file order and complete files.sha256 inventory. Reject any Stage36 capture ID or raw hash reuse; compare against frozen capture inventories before analysis.",
+  "receipts": "Exclusive output directory per candidate/capture; input/output hashes, complete config, git commit, exact argv, start/end, platform, limits, exit status, peak RSS, partial paths, result/projection and byte-identical reload receipts. Preserve all failures; no overwrites."
+}
+```
+
+### 14. Stop abort criteria
+
+```json
+[
+  "Before acquisition: unresolved operational fields, missing runner review, wrong ancestry or missing archive/lock => do not start.",
+  "After first capture: parameter/settings/code drift, raw hash mismatch, unavailable controlled source, recorder failure or resource overrun => stop affected work, preserve all evidence, decision DEFERRED.",
+  "No early stopping for apparent superiority or futility; no added sessions or replacement observations. Physical safety interruption is recorded and incomplete acquisition defers."
+]
+```
+
+### 15. Prohibition on post hoc tuning
+
+```json
+{
+  "allowed": false,
+  "freeze_point": "All scientific rules fixed by this commit; operational metadata and future implementation locked before FIRST V2 capture.",
+  "rule": "No parameter, metric, threshold, matching tolerance, anomaly rule, sample size, budget or candidate change after first capture. Amendments require separate preregistration and wholly fresh confirmatory data; never optimize on V2 outcomes."
+}
+```
+
+## Validation and integrity
+
+The new tests read documents, JSON, AST constants and Git objects only. They do not import scientific modules, access hardware, load IQ, rerun Stage 36 or execute V2. Whole-payload and report digests prevent silent edits to endpoint rules, thresholds, exclusions and gates. Parent-tracked files must remain byte-identical; new files are limited to these three deliverables. The frozen raw hash inventory is bound here; a full external IQ archive audit remains a mandatory pre-execution requirement, not a claim made by design tests.
+
+The requested legacy Stage37 selection test contains a historical changed-file allowlist relative to its earlier parent. With these three new files staged, that assertion fails solely because it rejects the three legitimate preregistration paths. Preserve that test unchanged and report the failure rather than weaken a frozen review.
+
+```sh
+PYTHONPATH=analysis:tests python3 -m unittest test_episode_component_tracking_v2_v2_discrimination_preregistration -v
+PYTHONPATH=analysis:tests python3 -m unittest discover -s tests -p 'test_episode_component_tracking_v2_stage37_configuration_selection.py' -v
+PYTHONPATH=analysis:tests python3 -m unittest discover -s tests -p 'test_episode_component_tracking_v2_stage37*review.py' -v
+PYTHONPATH=analysis:tests python3 -m unittest discover -s tests -p 'test_episode_component_tracking_v2_draft2_full_matrix*.py' -v
+git diff --check
+```
+
+Validation performed with intended files staged: new design tests **13 passed**; Stage37 configuration selection **11 passed, 1 failed** (the historical changed-file allowlist above); Stage37 reviews **12 passed, 1 skipped** (opt-in full raw audit); full-matrix regressions **54 passed**. Total: **90 passed, 1 failed, 1 skipped, 92 tests**. Both `git diff --check` and `git diff --cached --check` passed. All parent-tracked files remain unchanged. No V2 execution or Stage36 arm rerun occurred; no full external raw hash audit is claimed.
+
+Final design decision: **V2_DISCRIMINATION_EXPERIMENT_PREREGISTERED**
