@@ -1,0 +1,283 @@
+{
+  "backend": "KRAKEN_DRAFT2_IEEE_MONOTONE_PIVOT_COUNT_V1",
+  "certificate_unavailable": "A path has more than two candidates",
+  "eligible_per_fragment": [
+    173,
+    4,
+    15,
+    1,
+    86
+  ],
+  "factor_count": 6,
+  "factors": [
+    {
+      "candidates": 5,
+      "edges": 6,
+      "factor": 0,
+      "optimum_cost": 0.7625732838499286,
+      "optimum_cost_hex": "0x1.86700165e0a64p-1",
+      "optimum_links": 2,
+      "path_lengths": {
+        "1": 5,
+        "2": 6
+      },
+      "paths": 11,
+      "per_fragment": {
+        "1": 2,
+        "3": 3
+      }
+    },
+    {
+      "candidates": 4,
+      "edges": 3,
+      "factor": 1,
+      "optimum_cost": 0.7033797056453611,
+      "optimum_cost_hex": "0x1.68216280d5783p-1",
+      "optimum_links": 2,
+      "path_lengths": {
+        "1": 4,
+        "2": 3,
+        "3": 2
+      },
+      "paths": 9,
+      "per_fragment": {
+        "1": 1,
+        "3": 1,
+        "5": 2
+      }
+    },
+    {
+      "candidates": 3,
+      "edges": 2,
+      "factor": 2,
+      "optimum_cost": 0.7771097599134489,
+      "optimum_cost_hex": "0x1.8de15498761b0p-1",
+      "optimum_links": 2,
+      "path_lengths": {
+        "1": 3,
+        "2": 2,
+        "3": 1
+      },
+      "paths": 6,
+      "per_fragment": {
+        "1": 1,
+        "3": 1,
+        "5": 1
+      }
+    },
+    {
+      "candidates": 4,
+      "edges": 3,
+      "factor": 3,
+      "optimum_cost": 1.5475453841669085,
+      "optimum_cost_hex": "0x1.8c2bef2e1297cp+0",
+      "optimum_links": 2,
+      "path_lengths": {
+        "1": 4,
+        "2": 3
+      },
+      "paths": 7,
+      "per_fragment": {
+        "1": 2,
+        "2": 2
+      }
+    },
+    {
+      "candidates": 15,
+      "edges": 33,
+      "factor": 4,
+      "optimum_cost": 1.3249098839060731,
+      "optimum_cost_hex": "0x1.532d4b4d8613ep+0",
+      "optimum_links": 4,
+      "path_lengths": {
+        "1": 15,
+        "2": 33
+      },
+      "paths": 48,
+      "per_fragment": {
+        "1": 11,
+        "3": 4
+      }
+    },
+    {
+      "candidates": 20,
+      "edges": 46,
+      "factor": 5,
+      "optimum_cost": 1.0030144554950424,
+      "optimum_cost_hex": "0x1.00c58e2bc4366p+0",
+      "optimum_links": 6,
+      "path_lengths": {
+        "1": 20,
+        "2": 46,
+        "3": 53,
+        "4": 11
+      },
+      "paths": 130,
+      "per_fragment": {
+        "1": 14,
+        "2": 2,
+        "3": 3,
+        "4": 1
+      }
+    }
+  ],
+  "failure_trace": {
+    "compose": {
+      "attempts": 4969209,
+      "boundary": 7.118532472977763,
+      "caps_size": 1,
+      "cost": 5.944359071589555,
+      "g": 1.064434340844491,
+      "i": 4,
+      "left_size": 2428,
+      "live": 12745,
+      "pivot": 5,
+      "pivot_costs_size": 3670,
+      "prefix_size": 2428,
+      "prefix_steps": [
+        {
+          "factor": 0,
+          "input_states": 1,
+          "output_states": 6,
+          "transitions": 6
+        },
+        {
+          "factor": 1,
+          "input_states": 6,
+          "output_states": 12,
+          "transitions": 12
+        },
+        {
+          "factor": 2,
+          "input_states": 12,
+          "output_states": 12,
+          "transitions": 12
+        },
+        {
+          "factor": 3,
+          "input_states": 12,
+          "output_states": 12,
+          "transitions": 12
+        },
+        {
+          "factor": 4,
+          "input_states": 12,
+          "output_states": 2428,
+          "transitions": 6420
+        }
+      ],
+      "suffix_steps": [],
+      "thresholds_size": 1
+    }
+  },
+  "family_sha256": "25482c430012768675f80ee32e243353ac339f51f4a6f72e64e4e9fcbb114bfb",
+  "fixed_singletons": 228,
+  "fragment_count": 5,
+  "limits": {
+    "max_polynomial_bytes": 33554432,
+    "max_seconds": 60,
+    "max_states": 250000,
+    "max_transitions": 5000000
+  },
+  "local_histograms": [
+    {
+      "assignments_decimal": "6",
+      "entries": 6,
+      "factor": 0,
+      "matching_calls": 38,
+      "matching_seconds": 0.00039237423334270716,
+      "peak_states": 9,
+      "seconds": 0.0006950629758648574,
+      "transitions": 19
+    },
+    {
+      "assignments_decimal": "2",
+      "entries": 2,
+      "factor": 1,
+      "matching_calls": 13,
+      "matching_seconds": 0.00013963005039840937,
+      "peak_states": 9,
+      "seconds": 0.00023295404389500618,
+      "transitions": 6
+    },
+    {
+      "assignments_decimal": "1",
+      "entries": 1,
+      "factor": 2,
+      "matching_calls": 3,
+      "matching_seconds": 3.867305349558592e-05,
+      "peak_states": 10,
+      "seconds": 6.572401616722345e-05,
+      "transitions": 3
+    },
+    {
+      "assignments_decimal": "1",
+      "entries": 1,
+      "factor": 3,
+      "matching_calls": 10,
+      "matching_seconds": 0.00011540803825482726,
+      "peak_states": 11,
+      "seconds": 0.00019520299974828959,
+      "transitions": 4
+    },
+    {
+      "assignments_decimal": "543",
+      "entries": 535,
+      "factor": 4,
+      "matching_calls": 863,
+      "matching_seconds": 0.02976179344113916,
+      "peak_states": 1094,
+      "seconds": 0.043140122026670724,
+      "transitions": 2807
+    },
+    {
+      "assignments_decimal": "4019",
+      "entries": 3670,
+      "factor": 5,
+      "matching_calls": 3462,
+      "matching_seconds": 0.2750436647911556,
+      "peak_states": 8212,
+      "seconds": 0.36418016999959946,
+      "transitions": 21491
+    }
+  ],
+  "matching": {
+    "calls": 4389,
+    "seconds": 0.3054915436077863
+  },
+  "memory_kib": {
+    "VmHWM": 82380,
+    "VmRSS": 60348
+  },
+  "outcome": {
+    "failure": {
+      "elapsed_seconds": 4.5950777779798955,
+      "limit": 5000000,
+      "location": {
+        "phase": "IEEE streaming pivot join",
+        "pivot": 5
+      },
+      "peak_states": 12745,
+      "reason": "transition budget exceeded",
+      "states": 12745,
+      "transitions": 5000001
+    },
+    "state": "COMPUTATION_UNRESOLVED",
+    "value": null
+  },
+  "packed_polynomial_bytes": 0,
+  "phase_transitions": {
+    "IEEE pivot left prefix": 6462,
+    "IEEE prefix DAG": 24330,
+    "IEEE streaming pivot join": 4969209,
+    "group histogram complete": 0,
+    "histograms retained": 0
+  },
+  "statistics": {
+    "checkpoints": [],
+    "elapsed_seconds": 4.691842469968833,
+    "peak_states": 12745,
+    "transitions": 5000001
+  },
+  "total_eligible": 279
+}
