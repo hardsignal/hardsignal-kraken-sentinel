@@ -1,0 +1,28 @@
+{
+  "count_state": "COMPUTATION_UNRESOLVED",
+  "exact_count_decimal": null,
+  "failure": {
+    "elapsed_seconds": 12.288484062999487,
+    "limit": 250000,
+    "location": {
+      "phase": "drained IEEE DAG",
+      "position": 22
+    },
+    "peak_states": 250001,
+    "reason": "frontier/state budget exceeded",
+    "states": 250001,
+    "transitions": 1593408
+  },
+  "family_path": "results/episode-component-tracking-v2-draft2-six-capture-regression/C6-E03/margin-1/family.json",
+  "family_sha256": "5db427d4b254151b363318cbeae3c902ca573dbcd14b2347f38ca7a27de66c1f",
+  "load_seconds": 1.769741188036278,
+  "method": "KRAKEN_DRAFT2_FORCED_SINGLETON_FRONTIER_COUNT_V2",
+  "ordering": "forward",
+  "statistics": {
+    "checkpoints": [],
+    "elapsed_seconds": 12.300306756049395,
+    "peak_states": 250001,
+    "process_peak_rss_kib": 149180,
+    "transitions": 1593408
+  }
+}

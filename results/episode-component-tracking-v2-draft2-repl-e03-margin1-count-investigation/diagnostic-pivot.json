@@ -1,0 +1,266 @@
+{
+  "factor_order": "unchanged stored order",
+  "factor_statistics": [
+    {
+      "assignments_decimal": "1",
+      "factor": 0,
+      "histogram_entries": 1,
+      "peak_states": 2,
+      "seconds": 6.629899144172668e-05,
+      "state": "COMPLETE",
+      "transitions": 2
+    },
+    {
+      "factor": 1,
+      "peak_states": 250001,
+      "seconds": 27.188605033035856,
+      "state": "RUNNING",
+      "transitions": 1260883
+    }
+  ],
+  "factor_structure": [
+    {
+      "candidates": 2,
+      "edges": 1,
+      "factor": 0,
+      "optimum_cost_hex": "0x1.0d69049bb7ec2p-2",
+      "optimum_links": 1,
+      "path_lengths": {
+        "1": 2,
+        "2": 1
+      },
+      "paths": 3,
+      "per_fragment": {
+        "3": 1,
+        "5": 1
+      }
+    },
+    {
+      "candidates": 61,
+      "edges": 144,
+      "factor": 1,
+      "optimum_cost_hex": "0x1.895cda2431f8ep+2",
+      "optimum_links": 15,
+      "path_lengths": {
+        "1": 61,
+        "2": 144,
+        "3": 466
+      },
+      "paths": 671,
+      "per_fragment": {
+        "1": 44,
+        "3": 8,
+        "5": 9
+      }
+    },
+    {
+      "candidates": 4,
+      "edges": 3,
+      "factor": 2,
+      "optimum_cost_hex": "0x1.a48b71cba6a3ap-6",
+      "optimum_links": 1,
+      "path_lengths": {
+        "1": 4,
+        "2": 3
+      },
+      "paths": 7,
+      "per_fragment": {
+        "1": 3,
+        "2": 1
+      }
+    },
+    {
+      "candidates": 11,
+      "edges": 10,
+      "factor": 3,
+      "optimum_cost_hex": "0x1.01ad5ccb861d6p+0",
+      "optimum_links": 2,
+      "path_lengths": {
+        "1": 11,
+        "2": 10,
+        "3": 9
+      },
+      "paths": 30,
+      "per_fragment": {
+        "1": 9,
+        "2": 1,
+        "4": 1
+      }
+    },
+    {
+      "candidates": 2,
+      "edges": 1,
+      "factor": 4,
+      "optimum_cost_hex": "0x1.40e7ce9fc1df6p-2",
+      "optimum_links": 1,
+      "path_lengths": {
+        "1": 2,
+        "2": 1
+      },
+      "paths": 3,
+      "per_fragment": {
+        "1": 1,
+        "3": 1
+      }
+    },
+    {
+      "candidates": 2,
+      "edges": 1,
+      "factor": 5,
+      "optimum_cost_hex": "0x1.26f5270bc7ef6p+0",
+      "optimum_links": 1,
+      "path_lengths": {
+        "1": 2,
+        "2": 1
+      },
+      "paths": 3,
+      "per_fragment": {
+        "1": 1,
+        "3": 1
+      }
+    }
+  ],
+  "failure": {
+    "active_future_states": 120876,
+    "bucket_sizes": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      129124,
+      120876,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "current_bucket_size": 129124,
+    "emitted_cost_hex": "0x1.87f2475f02b8cp+2",
+    "factor": 1,
+    "histogram_entries": 0,
+    "new_mask_hex": "0x1a040fffff800000",
+    "position": 22,
+    "prior_mask_hex": "0x1b060fffffc00000",
+    "remaining_hex": "0x1.05aa4b14bd00ap+0",
+    "selected_path_ids": [
+      "E003_F001_C0076",
+      "E003_F003_C0009",
+      "E003_F005_C0046"
+    ],
+    "survives_next_exact_prefix": true,
+    "target_links": 2
+  },
+  "family_sha256": "5db427d4b254151b363318cbeae3c902ca573dbcd14b2347f38ca7a27de66c1f",
+  "fixed_singletons": 231,
+  "format": "KRAKEN_REPL_E03_MARGIN1_COUNT_DIAGNOSTIC_V1",
+  "limits": {
+    "max_polynomial_bytes": 33554432,
+    "max_seconds": 60,
+    "max_states": 250000,
+    "max_transitions": 5000000
+  },
+  "memory_kib": {
+    "VmHWM": 124936,
+    "VmRSS": 76724
+  },
+  "mode": "pivot",
+  "model_sha256": "e51cc3a19e5e951984c003be3ed96f413cc41a60d12cf2dcdccf644b0ca928cc",
+  "nontrivial_factors": 6,
+  "outcome": {
+    "reason": {
+      "elapsed_seconds": 27.18624677596381,
+      "limit": 250000,
+      "location": {
+        "phase": "IEEE prefix DAG",
+        "position": 22
+      },
+      "peak_states": 250001,
+      "reason": "frontier/state budget exceeded",
+      "states": 250001,
+      "transitions": 1260885
+    },
+    "state": "COMPUTATION_UNRESOLVED",
+    "value_decimal": null
+  },
+  "packed_polynomial_bytes": 0,
+  "selected": {
+    "capture": "BETWEEN-DEVICE-REPL-V1-20260919-024341",
+    "eligible_per_fragment": [
+      193,
+      3,
+      18,
+      2,
+      97
+    ],
+    "episode": 3,
+    "fragments_sha256": "1d126597caf18ec60aa185b5b9d93dbf1a694ed1d6b2929f2e68675d31222370",
+    "label": "C6-E03",
+    "original_fragment_count": 5,
+    "structural_reason": "Every saved episode in the fixed six-capture set; no outcome selection."
+  },
+  "source_hashes": {
+    "analysis/diagnose_episode_component_tracking_v2_draft2_repl_e03_margin1_count.py": "7386ee6a41045375dbc0cfa56a5c7c9b02ca54544815ed089a717bb39a941406",
+    "analysis/episode_component_tracking_v2_draft2_e02_margin1_count.py": "ba1ad497cd7dc0412a42c52bf62005002babd871e5d55c152a1be7b10c6c7a00",
+    "analysis/episode_component_tracking_v2_draft2_exact_count.py": "4c543655c738fcc9d2b771f2cb3ae26106304e2ff2f86a201a47d77cd5bd18a3",
+    "analysis/episode_component_tracking_v2_draft2_exact_solver.py": "f5c4a907af24958739bf7a2d90fd27d2e602c295a74c951bb52525ccd10023a1",
+    "analysis/episode_component_tracking_v2_draft2_repl_e02_margin1_count.py": "77fe33359d3dc90651a7cb24b670124ac3b43ee9285a7e3a028000da96a66936"
+  },
+  "statistics": {
+    "checkpoints": [],
+    "elapsed_seconds": 27.195838662970345,
+    "peak_states": 250001,
+    "transitions": 1260885
+  }
+}
