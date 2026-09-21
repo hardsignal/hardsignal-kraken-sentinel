@@ -1,0 +1,135 @@
+{
+  "certificate": {
+    "coefficient_error": "64163877587/1074666317970510150893568",
+    "cutoff": 1908,
+    "fixed_penalty": "0",
+    "lower_shell_gap": "6881/13256881",
+    "maximum_directed_path_nodes": 3,
+    "maximum_links": 2,
+    "policy": "Exact edge-incidence bijection; rigorous separation of every frozen prefix comparison; no rounded predicate",
+    "quantum": "62500/119311929",
+    "rounding_envelope": "4230432677407/268666579492627537723392",
+    "upper_shell_gap": "571/119311929",
+    "version": "KRAKEN_DRAFT2_CERTIFIED_SHORT_PATH_MATCHING_COUNT_V3"
+  },
+  "count_state": "EXACT",
+  "details": {
+    "blocks": [
+      {
+        "block": 0,
+        "dummy_columns": 0,
+        "dummy_factor": 1,
+        "edges": 1,
+        "factor": 0,
+        "fixed_penalty": "0",
+        "integer_optimum": 841,
+        "left": 1,
+        "local_assignments_decimal": "1",
+        "local_histogram_entries": 1,
+        "optimum_links": 1,
+        "product_histogram_entries": 1,
+        "right": 1,
+        "transitions": 2
+      },
+      {
+        "block": 1,
+        "dummy_columns": 0,
+        "dummy_factor": 1,
+        "edges": 2,
+        "factor": 1,
+        "fixed_penalty": "0",
+        "integer_optimum": 529,
+        "left": 1,
+        "local_assignments_decimal": "2",
+        "local_histogram_entries": 2,
+        "optimum_links": 1,
+        "product_histogram_entries": 2,
+        "right": 2,
+        "transitions": 6
+      }
+    ],
+    "certificate": {
+      "coefficient_error": "64163877587/1074666317970510150893568",
+      "cutoff": 1908,
+      "fixed_penalty": "0",
+      "lower_shell_gap": "6881/13256881",
+      "maximum_directed_path_nodes": 3,
+      "maximum_links": 2,
+      "policy": "Exact edge-incidence bijection; rigorous separation of every frozen prefix comparison; no rounded predicate",
+      "quantum": "62500/119311929",
+      "rounding_envelope": "4230432677407/268666579492627537723392",
+      "upper_shell_gap": "571/119311929",
+      "version": "KRAKEN_DRAFT2_CERTIFIED_SHORT_PATH_MATCHING_COUNT_V3"
+    },
+    "dispatch": {
+      "certificate_backend": "KRAKEN_DRAFT2_CERTIFIED_SHORT_PATH_MATCHING_COUNT_V3",
+      "composition_backend": "KRAKEN_DRAFT2_WEIGHTED_CUTOFF_PIVOT_COUNT_V1",
+      "fallback_backend": "KRAKEN_DRAFT2_FORCED_SINGLETON_FRONTIER_COUNT_V2"
+    },
+    "method": "KRAKEN_DRAFT2_CERTIFIED_SHORT_PATH_MATCHING_COUNT_V3",
+    "ordering": "forward",
+    "packed_polynomial_bytes": 4,
+    "stats": {
+      "checkpoints": [
+        {
+          "coefficient_digit_bytes": 1,
+          "columns": 1,
+          "component": "factor0/block0/block0",
+          "count": "1",
+          "histogram_entries": 1,
+          "peak_frontier_masks": 2,
+          "peak_packed_bytes": 2,
+          "rows": 1,
+          "suffix_bound": true
+        },
+        {
+          "coefficient_digit_bytes": 1,
+          "columns": 2,
+          "component": "factor1/block1/block0",
+          "count": "2",
+          "histogram_entries": 2,
+          "peak_frontier_masks": 3,
+          "peak_packed_bytes": 4,
+          "rows": 1,
+          "suffix_bound": true
+        }
+      ],
+      "elapsed_seconds": 0.0003769570030272007,
+      "peak_states": 13,
+      "transitions": 8
+    }
+  },
+  "exact_count_decimal": "2",
+  "method": "KRAKEN_DRAFT2_CERTIFIED_SHORT_PATH_MATCHING_COUNT_V3",
+  "packed_polynomial_bytes": 4,
+  "statistics": {
+    "checkpoints": [
+      {
+        "coefficient_digit_bytes": 1,
+        "columns": 1,
+        "component": "factor0/block0/block0",
+        "count": "1",
+        "histogram_entries": 1,
+        "peak_frontier_masks": 2,
+        "peak_packed_bytes": 2,
+        "rows": 1,
+        "suffix_bound": true
+      },
+      {
+        "coefficient_digit_bytes": 1,
+        "columns": 2,
+        "component": "factor1/block1/block0",
+        "count": "2",
+        "histogram_entries": 2,
+        "peak_frontier_masks": 3,
+        "peak_packed_bytes": 4,
+        "rows": 1,
+        "suffix_bound": true
+      }
+    ],
+    "elapsed_seconds": 0.0003917880239896476,
+    "peak_states": 13,
+    "process_peak_rss_kib": 151572,
+    "transitions": 8
+  }
+}

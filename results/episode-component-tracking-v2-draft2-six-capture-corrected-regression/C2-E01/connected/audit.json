@@ -1,0 +1,63 @@
+{
+  "cardinality": null,
+  "limited_parity": "PASS",
+  "measurement": {
+    "integration_reconstruction_seconds": 0.0,
+    "integration_seconds": 0.054213286959566176,
+    "memory_kib": {
+      "VmHWM": 151340,
+      "VmRSS": 74448
+    },
+    "total_seconds": 0.072424849960953
+  },
+  "metrics": {
+    "abstained": true,
+    "alternative_path_count": null,
+    "eligible_candidate_count": 283,
+    "invariant_path_count": null,
+    "original_fragment_count": 5,
+    "persistent_path_count": 0,
+    "possible_path_count": 262,
+    "structural_constraint_status": "HISTORICAL_CONNECTED_DIAGNOSTICS",
+    "truth_metrics": null,
+    "truth_metrics_state": "NOT_APPLICABLE",
+    "union_link_count": 2
+  },
+  "original_parity": {
+    "old_result_sha256": "157c9ced3fd5732205b2fd23da65fb5080e7d0abf498a1255fa2ee00429d76cb",
+    "previously_passed": true,
+    "scientific_payload_sha256": "0695078deb9a453f34bd46f67b36af72db5041a4c5d105d527184f12c99405b8",
+    "state": "PASS",
+    "state_changes": {}
+  },
+  "primary": null,
+  "projection": {
+    "parity": "SAVED_CONNECTED_COMPLETE_OUTPUT",
+    "state": "PASS"
+  },
+  "query_calls": null,
+  "query_engine_statistics": null,
+  "states": {
+    "cardinality_counting": {
+      "reason": null,
+      "state": "NOT_APPLICABLE_CONNECTED"
+    },
+    "exact_queries": {
+      "reason": null,
+      "state": "NOT_APPLICABLE_CONNECTED"
+    },
+    "family_construction": {
+      "reason": null,
+      "state": "NOT_APPLICABLE_CONNECTED"
+    },
+    "metric_projection": {
+      "reason": null,
+      "state": "COMPLETE"
+    },
+    "provenance_validation": {
+      "reason": null,
+      "state": "VERIFIED"
+    }
+  },
+  "status": "AMBIGUOUS_ASSOCIATION"
+}

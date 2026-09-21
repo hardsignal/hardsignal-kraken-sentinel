@@ -1,0 +1,211 @@
+{
+  "certificate": {
+    "coefficient_error": "759592015/119407368663390016765952",
+    "cutoff": 477,
+    "fixed_penalty": "5/4",
+    "lower_shell_gap": "6881/53027524",
+    "maximum_directed_path_nodes": 3,
+    "maximum_links": 7,
+    "policy": "Exact edge-incidence bijection; rigorous separation of every frozen prefix comparison; no rounded predicate",
+    "quantum": "62500/119311929",
+    "rounding_envelope": "982720466473/14925921082923752095744",
+    "upper_shell_gap": "188071/477247716",
+    "version": "KRAKEN_DRAFT2_CERTIFIED_SHORT_PATH_MATCHING_COUNT_V3"
+  },
+  "count_state": "EXACT",
+  "details": {
+    "blocks": [
+      {
+        "block": 0,
+        "dummy_columns": 0,
+        "dummy_factor": 1,
+        "edges": 1,
+        "factor": 0,
+        "fixed_penalty": "0",
+        "integer_optimum": 1024,
+        "left": 1,
+        "local_assignments_decimal": "1",
+        "local_histogram_entries": 1,
+        "optimum_links": 1,
+        "product_histogram_entries": 1,
+        "right": 1,
+        "transitions": 2
+      },
+      {
+        "block": 1,
+        "dummy_columns": 0,
+        "dummy_factor": 1,
+        "edges": 14,
+        "factor": 1,
+        "fixed_penalty": "1",
+        "integer_optimum": 1098,
+        "left": 4,
+        "local_assignments_decimal": "3",
+        "local_histogram_entries": 3,
+        "optimum_links": 4,
+        "product_histogram_entries": 3,
+        "right": 4,
+        "transitions": 22
+      },
+      {
+        "block": 2,
+        "dummy_columns": 0,
+        "dummy_factor": 1,
+        "edges": 2,
+        "factor": 2,
+        "fixed_penalty": "0",
+        "integer_optimum": 49,
+        "left": 2,
+        "local_assignments_decimal": "1",
+        "local_histogram_entries": 1,
+        "optimum_links": 1,
+        "product_histogram_entries": 3,
+        "right": 1,
+        "transitions": 2
+      },
+      {
+        "block": 3,
+        "dummy_columns": 0,
+        "dummy_factor": 1,
+        "edges": 1,
+        "factor": 2,
+        "fixed_penalty": "1/4",
+        "integer_optimum": 576,
+        "left": 1,
+        "local_assignments_decimal": "1",
+        "local_histogram_entries": 1,
+        "optimum_links": 1,
+        "product_histogram_entries": 3,
+        "right": 1,
+        "transitions": 2
+      }
+    ],
+    "certificate": {
+      "coefficient_error": "759592015/119407368663390016765952",
+      "cutoff": 477,
+      "fixed_penalty": "5/4",
+      "lower_shell_gap": "6881/53027524",
+      "maximum_directed_path_nodes": 3,
+      "maximum_links": 7,
+      "policy": "Exact edge-incidence bijection; rigorous separation of every frozen prefix comparison; no rounded predicate",
+      "quantum": "62500/119311929",
+      "rounding_envelope": "982720466473/14925921082923752095744",
+      "upper_shell_gap": "188071/477247716",
+      "version": "KRAKEN_DRAFT2_CERTIFIED_SHORT_PATH_MATCHING_COUNT_V3"
+    },
+    "dispatch": {
+      "certificate_backend": "KRAKEN_DRAFT2_CERTIFIED_SHORT_PATH_MATCHING_COUNT_V3",
+      "composition_backend": "KRAKEN_DRAFT2_WEIGHTED_CUTOFF_PIVOT_COUNT_V1",
+      "fallback_backend": "KRAKEN_DRAFT2_FORCED_SINGLETON_FRONTIER_COUNT_V2"
+    },
+    "method": "KRAKEN_DRAFT2_CERTIFIED_SHORT_PATH_MATCHING_COUNT_V3",
+    "ordering": "forward",
+    "packed_polynomial_bytes": 675,
+    "stats": {
+      "checkpoints": [
+        {
+          "coefficient_digit_bytes": 1,
+          "columns": 1,
+          "component": "factor0/block0/block0",
+          "count": "1",
+          "histogram_entries": 1,
+          "peak_frontier_masks": 2,
+          "peak_packed_bytes": 2,
+          "rows": 1,
+          "suffix_bound": true
+        },
+        {
+          "coefficient_digit_bytes": 1,
+          "columns": 4,
+          "component": "factor1/block1/block0",
+          "count": "3",
+          "histogram_entries": 3,
+          "peak_frontier_masks": 4,
+          "peak_packed_bytes": 675,
+          "rows": 4,
+          "suffix_bound": true
+        },
+        {
+          "coefficient_digit_bytes": 1,
+          "columns": 1,
+          "component": "factor2/block2/block0",
+          "count": "1",
+          "histogram_entries": 1,
+          "peak_frontier_masks": 2,
+          "peak_packed_bytes": 2,
+          "rows": 1,
+          "suffix_bound": true
+        },
+        {
+          "coefficient_digit_bytes": 1,
+          "columns": 1,
+          "component": "factor2/block3/block0",
+          "count": "1",
+          "histogram_entries": 1,
+          "peak_frontier_masks": 2,
+          "peak_packed_bytes": 2,
+          "rows": 1,
+          "suffix_bound": true
+        }
+      ],
+      "elapsed_seconds": 0.0007564410334452987,
+      "peak_states": 40,
+      "transitions": 28
+    }
+  },
+  "exact_count_decimal": "3",
+  "method": "KRAKEN_DRAFT2_CERTIFIED_SHORT_PATH_MATCHING_COUNT_V3",
+  "packed_polynomial_bytes": 675,
+  "statistics": {
+    "checkpoints": [
+      {
+        "coefficient_digit_bytes": 1,
+        "columns": 1,
+        "component": "factor0/block0/block0",
+        "count": "1",
+        "histogram_entries": 1,
+        "peak_frontier_masks": 2,
+        "peak_packed_bytes": 2,
+        "rows": 1,
+        "suffix_bound": true
+      },
+      {
+        "coefficient_digit_bytes": 1,
+        "columns": 4,
+        "component": "factor1/block1/block0",
+        "count": "3",
+        "histogram_entries": 3,
+        "peak_frontier_masks": 4,
+        "peak_packed_bytes": 675,
+        "rows": 4,
+        "suffix_bound": true
+      },
+      {
+        "coefficient_digit_bytes": 1,
+        "columns": 1,
+        "component": "factor2/block2/block0",
+        "count": "1",
+        "histogram_entries": 1,
+        "peak_frontier_masks": 2,
+        "peak_packed_bytes": 2,
+        "rows": 1,
+        "suffix_bound": true
+      },
+      {
+        "coefficient_digit_bytes": 1,
+        "columns": 1,
+        "component": "factor2/block3/block0",
+        "count": "1",
+        "histogram_entries": 1,
+        "peak_frontier_masks": 2,
+        "peak_packed_bytes": 2,
+        "rows": 1,
+        "suffix_bound": true
+      }
+    ],
+    "elapsed_seconds": 0.0007728830096311867,
+    "peak_states": 40,
+    "process_peak_rss_kib": 151464,
+    "transitions": 28
+  }
+}

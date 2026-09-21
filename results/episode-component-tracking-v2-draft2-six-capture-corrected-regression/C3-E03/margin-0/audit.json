@@ -1,0 +1,91 @@
+{
+  "cardinality": {
+    "reason": null,
+    "state": "EXACT",
+    "value_decimal": "1"
+  },
+  "limited_parity": "NOT_APPLICABLE",
+  "measurement": {
+    "counting_seconds": 0.0008573869708925486,
+    "family_construction_seconds": 0.002379529003519565,
+    "integration_reconstruction_seconds": 0.006450591026805341,
+    "integration_seconds": 0.03735567501280457,
+    "memory_kib": {
+      "VmHWM": 151448,
+      "VmRSS": 74836
+    },
+    "total_seconds": 0.05815587000688538
+  },
+  "metrics": {
+    "abstained": true,
+    "alternative_path_count": 0,
+    "eligible_candidate_count": 151,
+    "invariant_path_count": 149,
+    "original_fragment_count": 6,
+    "persistent_path_count": 0,
+    "possible_path_count": 149,
+    "structural_constraint_status": "VALID_BY_EXACT_CONSTRAINTS",
+    "truth_metrics": null,
+    "truth_metrics_state": "NOT_APPLICABLE",
+    "union_link_count": 2
+  },
+  "original_parity": {
+    "old_result_sha256": "4c0e2a2677396903538b12a326b35fd8184e70d0648fc64286584fb1c65e2e14",
+    "previously_passed": true,
+    "scientific_payload_sha256": "e52db0274c1cfec6c29efb7015a498919d934c99fda424d779a232f9e87e96cf",
+    "state": "PASS",
+    "state_changes": {}
+  },
+  "primary": null,
+  "projection": {
+    "parity": "EXACT_QUERY_PROJECTION_CONSISTENCY",
+    "state": "PASS"
+  },
+  "query_calls": 173,
+  "query_engine_statistics": {
+    "engine": {
+      "base_global_queries": 165,
+      "branches": 12,
+      "cache_hits": 168,
+      "disjunctions": 6,
+      "find_calls": 482,
+      "max_disjunction_depth": 1
+    },
+    "factors": [
+      {
+        "augmentations": 25,
+        "matching_cache_entries": 37,
+        "matching_calls": 37,
+        "matching_certificates": 0,
+        "optimum_cache_entries": 7,
+        "optimum_cache_hits": 936,
+        "search_nodes": 58
+      }
+    ],
+    "query_cache_entries": 314
+  },
+  "states": {
+    "cardinality_counting": {
+      "mode": "CONSUMED_VALIDATED_SIDECAR_NO_RECOUNT",
+      "reason": null,
+      "state": "EXACT"
+    },
+    "exact_queries": {
+      "reason": null,
+      "state": "EXACT"
+    },
+    "family_construction": {
+      "reason": null,
+      "state": "COMPLETE"
+    },
+    "metric_projection": {
+      "reason": null,
+      "state": "COMPLETE"
+    },
+    "provenance_validation": {
+      "reason": null,
+      "state": "VERIFIED"
+    }
+  },
+  "status": "INSUFFICIENT_SUPPORT"
+}

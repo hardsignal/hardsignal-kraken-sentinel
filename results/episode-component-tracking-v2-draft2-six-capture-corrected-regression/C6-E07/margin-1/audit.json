@@ -1,0 +1,81 @@
+{
+  "cardinality": {
+    "reason": null,
+    "state": "EXACT",
+    "value_decimal": "1"
+  },
+  "limited_parity": "PASS",
+  "measurement": {
+    "counting_seconds": 5.097599932923913e-05,
+    "family_construction_seconds": 0.0001837490126490593,
+    "integration_reconstruction_seconds": 0.003166453039739281,
+    "integration_seconds": 0.02486802899511531,
+    "memory_kib": {
+      "VmHWM": 151832,
+      "VmRSS": 72344
+    },
+    "total_seconds": 0.035268711973913014
+  },
+  "metrics": {
+    "abstained": true,
+    "alternative_path_count": 0,
+    "eligible_candidate_count": 38,
+    "invariant_path_count": 38,
+    "original_fragment_count": 1,
+    "persistent_path_count": 0,
+    "possible_path_count": 38,
+    "structural_constraint_status": "VALID_BY_EXACT_CONSTRAINTS",
+    "truth_metrics": null,
+    "truth_metrics_state": "NOT_APPLICABLE",
+    "union_link_count": 0
+  },
+  "original_parity": {
+    "old_result_sha256": "a4a35a8c466a2719a9625e5e0a20a246b96442f0ce135c95e04a4d04a6a63f11",
+    "previously_passed": true,
+    "scientific_payload_sha256": "d82652bec7593c381864c951c8fe2de380f9d68fb3f48169ca5bb853b8689f13",
+    "state": "PASS",
+    "state_changes": {}
+  },
+  "primary": null,
+  "projection": {
+    "parity": "EXACT_QUERY_PROJECTION_CONSISTENCY",
+    "state": "PASS"
+  },
+  "query_calls": 41,
+  "query_engine_statistics": {
+    "engine": {
+      "base_global_queries": 39,
+      "branches": 0,
+      "cache_hits": 39,
+      "disjunctions": 0,
+      "find_calls": 116,
+      "max_disjunction_depth": 0
+    },
+    "factors": [],
+    "query_cache_entries": 77
+  },
+  "states": {
+    "cardinality_counting": {
+      "mode": "CONSUMED_VALIDATED_SIDECAR_NO_RECOUNT",
+      "reason": null,
+      "state": "EXACT"
+    },
+    "exact_queries": {
+      "reason": null,
+      "state": "EXACT"
+    },
+    "family_construction": {
+      "reason": null,
+      "state": "COMPLETE"
+    },
+    "metric_projection": {
+      "reason": null,
+      "state": "COMPLETE"
+    },
+    "provenance_validation": {
+      "reason": null,
+      "state": "VERIFIED"
+    }
+  },
+  "status": "INSUFFICIENT_SUPPORT"
+}

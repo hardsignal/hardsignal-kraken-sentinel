@@ -1,0 +1,274 @@
+{
+  "arm": "margin-0.25",
+  "audit": {
+    "cardinality": {
+      "reason": null,
+      "state": "EXACT",
+      "value_decimal": "24"
+    },
+    "limited_parity": "NOT_APPLICABLE",
+    "measurement": {
+      "counting_seconds": 0.0039512699586339295,
+      "family_construction_seconds": 0.004368056019302458,
+      "integration_reconstruction_seconds": 0.012597167980857193,
+      "integration_seconds": 0.05501864000689238,
+      "memory_kib": {
+        "VmHWM": 151016,
+        "VmRSS": 76640
+      },
+      "total_seconds": 0.08732021000469103
+    },
+    "metrics": {
+      "abstained": true,
+      "alternative_path_count": 25,
+      "eligible_candidate_count": 118,
+      "invariant_path_count": 100,
+      "original_fragment_count": 6,
+      "persistent_path_count": 3,
+      "possible_path_count": 125,
+      "structural_constraint_status": "VALID_BY_EXACT_CONSTRAINTS",
+      "truth_metrics": null,
+      "truth_metrics_state": "NOT_APPLICABLE",
+      "union_link_count": 31
+    },
+    "original_parity": {
+      "old_result_sha256": "7b1b22b3259b2c2e3aa7b4ae8893ff2dcefddc316c462173b603e7bfc8667dd5",
+      "previously_passed": true,
+      "scientific_payload_sha256": "e5e788d6be3c0c0d9e98697fb4c0ac2e432a853313039d255918961cd0b1535c",
+      "state": "PASS",
+      "state_changes": {}
+    },
+    "primary": null,
+    "projection": {
+      "parity": "EXACT_QUERY_PROJECTION_CONSISTENCY",
+      "state": "PASS"
+    },
+    "query_calls": 174,
+    "query_engine_statistics": {
+      "engine": {
+        "base_global_queries": 162,
+        "branches": 20,
+        "cache_hits": 40,
+        "disjunctions": 13,
+        "find_calls": 310,
+        "max_disjunction_depth": 1
+      },
+      "factors": [
+        {
+          "augmentations": 6,
+          "matching_cache_entries": 9,
+          "matching_calls": 9,
+          "matching_certificates": 2,
+          "optimum_cache_entries": 2,
+          "optimum_cache_hits": 127,
+          "search_nodes": 3
+        },
+        {
+          "augmentations": 47,
+          "matching_cache_entries": 47,
+          "matching_calls": 47,
+          "matching_certificates": 0,
+          "optimum_cache_entries": 9,
+          "optimum_cache_hits": 409,
+          "search_nodes": 54
+        },
+        {
+          "augmentations": 2,
+          "matching_cache_entries": 6,
+          "matching_calls": 6,
+          "matching_certificates": 2,
+          "optimum_cache_entries": 2,
+          "optimum_cache_hits": 127,
+          "search_nodes": 2
+        },
+        {
+          "augmentations": 70,
+          "matching_cache_entries": 45,
+          "matching_calls": 45,
+          "matching_certificates": 6,
+          "optimum_cache_entries": 11,
+          "optimum_cache_hits": 538,
+          "search_nodes": 33
+        },
+        {
+          "augmentations": 7,
+          "matching_cache_entries": 21,
+          "matching_calls": 21,
+          "matching_certificates": 0,
+          "optimum_cache_entries": 7,
+          "optimum_cache_hits": 526,
+          "search_nodes": 32
+        }
+      ],
+      "query_cache_entries": 270
+    },
+    "states": {
+      "cardinality_counting": {
+        "mode": "CONSUMED_VALIDATED_SIDECAR_NO_RECOUNT",
+        "reason": null,
+        "state": "EXACT"
+      },
+      "exact_queries": {
+        "reason": null,
+        "state": "EXACT"
+      },
+      "family_construction": {
+        "reason": null,
+        "state": "COMPLETE"
+      },
+      "metric_projection": {
+        "reason": null,
+        "state": "COMPLETE"
+      },
+      "provenance_validation": {
+        "reason": null,
+        "state": "VERIFIED"
+      }
+    },
+    "status": "AMBIGUOUS_ASSOCIATION"
+  },
+  "capture": "BETWEEN-DEVICE-REPL-V1-20260919-024341",
+  "counting": {
+    "certificate": {
+      "policy": "Exact monotone binary64 addition preimages; frozen chronological fold and all prefix predicates",
+      "rounding_or_quantization": false,
+      "version": "KRAKEN_DRAFT2_IEEE_MONOTONE_PIVOT_COUNT_V1"
+    },
+    "method": "KRAKEN_DRAFT2_FORCED_SINGLETON_FRONTIER_COUNT_V2 / KRAKEN_DRAFT2_IEEE_MONOTONE_PIVOT_COUNT_V1",
+    "packed_polynomial_bytes": 0,
+    "reason": null,
+    "state": "EXACT",
+    "statistics": {
+      "checkpoints": [],
+      "elapsed_seconds": 0.0039512699586339295,
+      "peak_states": 77,
+      "process_peak_rss_kib": 151016,
+      "transitions": 1670
+    },
+    "value_decimal": "24"
+  },
+  "eligible_per_fragment": [
+    8,
+    48,
+    7,
+    0,
+    11,
+    44
+  ],
+  "episode": 1,
+  "failure": null,
+  "family_sha256": "7eae356fd96668a0b9e7e90bb198a7d4f31501165b04bd99b546a5787c0fd0b8",
+  "fragments_sha256": "66d484e24216384333ed98e47be96fecc9557009e8e6ddd5bf01021e81cbfb54",
+  "input_sha256": "097c48395cb5cabb639a74d697d03a431b941f9f64cfebafa2e23a2b3d8053ab",
+  "label": "C6-E01",
+  "model_sha256": "2e4b0af3a3bb8c218bb23c818a120aac6b4c4c93282c34aaa5199410985c9a9b",
+  "original_fragment_count": 6,
+  "passed": true,
+  "plan_sha256": "04739e46633155bcbdf567ae04f00c74cd196f8e9ec8d282163fc989a7284006",
+  "record": {
+    "alternative_membership_count": 25,
+    "arm": "margin-0.25",
+    "association_availability": "COMPLETE",
+    "association_status": "AMBIGUOUS_ASSOCIATION",
+    "candidate_context_sha256": "66d484e24216384333ed98e47be96fecc9557009e8e6ddd5bf01021e81cbfb54",
+    "capture": "BETWEEN-DEVICE-REPL-V1-20260919-024341",
+    "cardinality": {
+      "reason": null,
+      "state": "EXACT",
+      "value_decimal": "24"
+    },
+    "certificate": {
+      "policy": "Exact monotone binary64 addition preimages; frozen chronological fold and all prefix predicates",
+      "rounding_or_quantization": false,
+      "version": "KRAKEN_DRAFT2_IEEE_MONOTONE_PIVOT_COUNT_V1"
+    },
+    "counting_transitions": 1670,
+    "eligible_candidates_per_fragment": [
+      8,
+      48,
+      7,
+      0,
+      11,
+      44
+    ],
+    "episode": 1,
+    "exact_backend": "KRAKEN_DRAFT2_FORCED_SINGLETON_FRONTIER_COUNT_V2 / KRAKEN_DRAFT2_IEEE_MONOTONE_PIVOT_COUNT_V1",
+    "exact_dispatch": {
+      "certificate_backend": "KRAKEN_DRAFT2_CERTIFIED_SHORT_PATH_MATCHING_COUNT_V3",
+      "composition_backend": "KRAKEN_DRAFT2_WEIGHTED_CUTOFF_PIVOT_COUNT_V1",
+      "fallback_backend": "KRAKEN_DRAFT2_FORCED_SINGLETON_FRONTIER_COUNT_V2"
+    },
+    "family_sha256": "7eae356fd96668a0b9e7e90bb198a7d4f31501165b04bd99b546a5787c0fd0b8",
+    "fragment_count": 6,
+    "input_sha256": "097c48395cb5cabb639a74d697d03a431b941f9f64cfebafa2e23a2b3d8053ab",
+    "invariant_membership_count": 100,
+    "model_sha256": "2e4b0af3a3bb8c218bb23c818a120aac6b4c4c93282c34aaa5199410985c9a9b",
+    "packed_polynomial_bytes": 0,
+    "peak_live_states": 77,
+    "persistent_track_count": 3,
+    "possible_path_count": 125,
+    "primary": null,
+    "query_calls": 174,
+    "reproduction_seconds": 0.05326292902464047,
+    "runtimes": {
+      "counting_seconds": 0.0039512699586339295,
+      "family_construction_seconds": 0.004368056019302458,
+      "integration_reconstruction_seconds": 0.012597167980857193,
+      "integration_seconds": 0.05501864000689238,
+      "memory_kib": {
+        "VmHWM": 151016,
+        "VmRSS": 76640
+      },
+      "total_seconds": 0.08732021000469103
+    },
+    "sidecar_sha256": "b2ea6761ff38cea5794e250beb88d606d4a2be038d35f8ad8df57350d5bd233e",
+    "stages": {
+      "cardinality_counting": {
+        "mode": "CONSUMED_VALIDATED_SIDECAR_NO_RECOUNT",
+        "reason": null,
+        "state": "EXACT"
+      },
+      "exact_queries": {
+        "reason": null,
+        "state": "EXACT"
+      },
+      "family_construction": {
+        "reason": null,
+        "state": "COMPLETE"
+      },
+      "metric_projection": {
+        "reason": null,
+        "state": "COMPLETE"
+      },
+      "provenance_validation": {
+        "reason": null,
+        "state": "VERIFIED"
+      }
+    },
+    "worker_peak_rss_kib": 151532
+  },
+  "reload": {
+    "memory_kib": {
+      "VmHWM": 151532,
+      "VmRSS": 77676
+    },
+    "reconstruction_seconds": 0.011837439960800111,
+    "seconds": 0.05326292902464047,
+    "state": "BYTE_IDENTICAL"
+  },
+  "reload_worker": {
+    "elapsed_seconds": 0.801298875012435,
+    "exit_code": 0,
+    "observed_peak_rss_kib": 151532,
+    "reason": null
+  },
+  "resource_violations": [],
+  "sidecar_sha256": "b2ea6761ff38cea5794e250beb88d606d4a2be038d35f8ad8df57350d5bd233e",
+  "structural_reason": "Every saved episode in the fixed six-capture set; no outcome selection.",
+  "worker": {
+    "elapsed_seconds": 0.8015352790243924,
+    "exit_code": 0,
+    "observed_peak_rss_kib": 151016,
+    "reason": null
+  }
+}

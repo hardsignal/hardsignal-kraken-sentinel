@@ -1,0 +1,105 @@
+{
+  "certificate": {
+    "policy": "Exact monotone binary64 addition preimages; frozen chronological fold and all prefix predicates",
+    "rounding_or_quantization": false,
+    "version": "KRAKEN_DRAFT2_IEEE_MONOTONE_PIVOT_COUNT_V1"
+  },
+  "count_state": "EXACT",
+  "details": {
+    "certificate": {
+      "policy": "Exact monotone binary64 addition preimages; frozen chronological fold and all prefix predicates",
+      "rounding_or_quantization": false,
+      "version": "KRAKEN_DRAFT2_IEEE_MONOTONE_PIVOT_COUNT_V1"
+    },
+    "composition": {
+      "boundary_hex": "0x1.039f3a7f191f5p-4",
+      "cutoff_mode": false,
+      "cutoff_probes": 0,
+      "cutoff_queries": 0,
+      "group_histogram_entries": [
+        1
+      ],
+      "join_live_containers": 8,
+      "join_pairs": 1,
+      "packed_polynomial_bytes": 0,
+      "pivot": 0,
+      "prefix_states": 1,
+      "prefix_steps": [],
+      "suffix_steps": [],
+      "suffix_thresholds": 1
+    },
+    "counter_version": "KRAKEN_DRAFT2_DYADIC_MATCHING_BOUND_COUNT_V1",
+    "dispatch": {
+      "certificate_backend": "KRAKEN_DRAFT2_CERTIFIED_SHORT_PATH_MATCHING_COUNT_V3",
+      "composition_backend": "KRAKEN_DRAFT2_WEIGHTED_CUTOFF_PIVOT_COUNT_V1",
+      "fallback_backend": "KRAKEN_DRAFT2_FORCED_SINGLETON_FRONTIER_COUNT_V2"
+    },
+    "factor_statistics": [
+      {
+        "assignments_decimal": "1",
+        "elapsed_seconds": 8.08619661256671e-05,
+        "factor": 0,
+        "held_previous_histogram_states": 0,
+        "histogram_entries": 1,
+        "transitions": 2
+      }
+    ],
+    "local_frontiers": [
+      {
+        "assignments_decimal": "1",
+        "candidate_count": 2,
+        "histogram_entries": 1,
+        "positions": [
+          {
+            "histogram_entries": 0,
+            "input_states": 1,
+            "position": 0,
+            "remaining_frontier_states": 1,
+            "transitions": 2
+          },
+          {
+            "histogram_entries": 0,
+            "input_states": 0,
+            "position": 1,
+            "remaining_frontier_states": 1,
+            "transitions": 0
+          },
+          {
+            "histogram_entries": 1,
+            "input_states": 1,
+            "position": 2,
+            "remaining_frontier_states": 0,
+            "transitions": 0
+          }
+        ],
+        "transitions": 2
+      }
+    ],
+    "matching_bound_adapter": {
+      "edge_integer_entries": 1,
+      "policy": "Exact common dyadic denominator; unchanged residual traversal/ties; Fraction result",
+      "preprocessing_seconds": 1.0135991033166647e-05,
+      "version": "KRAKEN_DRAFT2_DYADIC_MATCHING_BOUND_COUNT_V1"
+    },
+    "method": "KRAKEN_DRAFT2_FORCED_SINGLETON_FRONTIER_COUNT_V2 / KRAKEN_DRAFT2_IEEE_MONOTONE_PIVOT_COUNT_V1",
+    "ordering": "forward",
+    "packed_polynomial_bytes": 0,
+    "short_path_certificate_unavailable": "Use frozen IEEE/column zero-margin route",
+    "stats": {
+      "checkpoints": [],
+      "elapsed_seconds": 0.00026084104320034385,
+      "peak_states": 9,
+      "transitions": 3
+    }
+  },
+  "exact_count_decimal": "1",
+  "method": "KRAKEN_DRAFT2_FORCED_SINGLETON_FRONTIER_COUNT_V2 / KRAKEN_DRAFT2_IEEE_MONOTONE_PIVOT_COUNT_V1",
+  "packed_polynomial_bytes": 0,
+  "statistics": {
+    "checkpoints": [],
+    "elapsed_seconds": 0.0002795280306600034,
+    "peak_states": 9,
+    "process_peak_rss_kib": 151396,
+    "transitions": 3
+  }
+}

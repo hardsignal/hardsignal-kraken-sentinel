@@ -1,0 +1,326 @@
+{
+  "arm": "margin-0.25",
+  "audit": {
+    "cardinality": {
+      "reason": null,
+      "state": "EXACT",
+      "value_decimal": "12"
+    },
+    "limited_parity": "NOT_APPLICABLE",
+    "measurement": {
+      "counting_seconds": 0.0008046510047279298,
+      "family_construction_seconds": 0.0017579119885340333,
+      "integration_reconstruction_seconds": 0.005775013996753842,
+      "integration_seconds": 0.03758419398218393,
+      "memory_kib": {
+        "VmHWM": 151616,
+        "VmRSS": 75708
+      },
+      "total_seconds": 0.05638954200549051
+    },
+    "metrics": {
+      "abstained": true,
+      "alternative_path_count": 14,
+      "eligible_candidate_count": 105,
+      "invariant_path_count": 94,
+      "original_fragment_count": 6,
+      "persistent_path_count": 0,
+      "possible_path_count": 108,
+      "structural_constraint_status": "VALID_BY_EXACT_CONSTRAINTS",
+      "truth_metrics": null,
+      "truth_metrics_state": "NOT_APPLICABLE",
+      "union_link_count": 8
+    },
+    "original_parity": {
+      "old_result_sha256": "43bbe850a31aec5f5f724be5042915aeb6ffdf1ff09b8366888fb6895266b262",
+      "previously_passed": true,
+      "scientific_payload_sha256": "996e84e8287c34487c8ba9c4d292cda51af7916890d63e9d05d4e613b5127c53",
+      "state": "PASS",
+      "state_changes": {}
+    },
+    "primary": null,
+    "projection": {
+      "parity": "EXACT_QUERY_PROJECTION_CONSISTENCY",
+      "state": "PASS"
+    },
+    "query_calls": 134,
+    "query_engine_statistics": {
+      "engine": {
+        "base_global_queries": 119,
+        "branches": 13,
+        "cache_hits": 72,
+        "disjunctions": 13,
+        "find_calls": 292,
+        "max_disjunction_depth": 1
+      },
+      "factors": [
+        {
+          "augmentations": 5,
+          "matching_cache_entries": 14,
+          "matching_calls": 14,
+          "matching_certificates": 0,
+          "optimum_cache_entries": 5,
+          "optimum_cache_hits": 341,
+          "search_nodes": 20
+        },
+        {
+          "augmentations": 2,
+          "matching_cache_entries": 6,
+          "matching_calls": 6,
+          "matching_certificates": 2,
+          "optimum_cache_entries": 2,
+          "optimum_cache_hits": 110,
+          "search_nodes": 2
+        },
+        {
+          "augmentations": 10,
+          "matching_cache_entries": 21,
+          "matching_calls": 21,
+          "matching_certificates": 3,
+          "optimum_cache_entries": 7,
+          "optimum_cache_hits": 462,
+          "search_nodes": 17
+        },
+        {
+          "augmentations": 9,
+          "matching_cache_entries": 22,
+          "matching_calls": 22,
+          "matching_certificates": 3,
+          "optimum_cache_entries": 7,
+          "optimum_cache_hits": 579,
+          "search_nodes": 20
+        }
+      ],
+      "query_cache_entries": 220
+    },
+    "states": {
+      "cardinality_counting": {
+        "mode": "CONSUMED_VALIDATED_SIDECAR_NO_RECOUNT",
+        "reason": null,
+        "state": "EXACT"
+      },
+      "exact_queries": {
+        "reason": null,
+        "state": "EXACT"
+      },
+      "family_construction": {
+        "reason": null,
+        "state": "COMPLETE"
+      },
+      "metric_projection": {
+        "reason": null,
+        "state": "COMPLETE"
+      },
+      "provenance_validation": {
+        "reason": null,
+        "state": "VERIFIED"
+      }
+    },
+    "status": "AMBIGUOUS_ASSOCIATION"
+  },
+  "capture": "PIPELINE-TPMS-007-20260918-002700",
+  "counting": {
+    "certificate": {
+      "coefficient_error": "1280558945/67166644873156884430848",
+      "cutoff": 477,
+      "fixed_penalty": "1/4",
+      "lower_shell_gap": "6881/53027524",
+      "maximum_directed_path_nodes": 3,
+      "maximum_links": 4,
+      "policy": "Exact edge-incidence bijection; rigorous separation of every frozen prefix comparison; no rounded predicate",
+      "quantum": "62500/119311929",
+      "rounding_envelope": "1365699070321/16791661218289221107712",
+      "upper_shell_gap": "188071/477247716",
+      "version": "KRAKEN_DRAFT2_CERTIFIED_SHORT_PATH_MATCHING_COUNT_V3"
+    },
+    "method": "KRAKEN_DRAFT2_CERTIFIED_SHORT_PATH_MATCHING_COUNT_V3",
+    "packed_polynomial_bytes": 429,
+    "reason": null,
+    "state": "EXACT",
+    "statistics": {
+      "checkpoints": [
+        {
+          "coefficient_digit_bytes": 1,
+          "columns": 2,
+          "component": "factor0/block0/block0",
+          "count": "2",
+          "histogram_entries": 2,
+          "peak_frontier_masks": 3,
+          "peak_packed_bytes": 4,
+          "rows": 1,
+          "suffix_bound": true
+        },
+        {
+          "coefficient_digit_bytes": 1,
+          "columns": 1,
+          "component": "factor1/block1/block0",
+          "count": "1",
+          "histogram_entries": 1,
+          "peak_frontier_masks": 2,
+          "peak_packed_bytes": 2,
+          "rows": 1,
+          "suffix_bound": true
+        },
+        {
+          "coefficient_digit_bytes": 1,
+          "columns": 3,
+          "component": "factor2/block2/block0",
+          "count": "3",
+          "histogram_entries": 3,
+          "peak_frontier_masks": 4,
+          "peak_packed_bytes": 377,
+          "rows": 1,
+          "suffix_bound": true
+        },
+        {
+          "coefficient_digit_bytes": 1,
+          "columns": 2,
+          "component": "factor3/block3/block0",
+          "count": "2",
+          "histogram_entries": 2,
+          "peak_frontier_masks": 3,
+          "peak_packed_bytes": 4,
+          "rows": 1,
+          "suffix_bound": true
+        }
+      ],
+      "elapsed_seconds": 0.0008046510047279298,
+      "peak_states": 50,
+      "process_peak_rss_kib": 151616,
+      "transitions": 24
+    },
+    "value_decimal": "12"
+  },
+  "eligible_per_fragment": [
+    5,
+    53,
+    5,
+    2,
+    0,
+    40
+  ],
+  "episode": 5,
+  "failure": null,
+  "family_sha256": "4de2bb9159b9b3329a3ab65ee766cdef5ca55f51158c4780357fc4112e4612ef",
+  "fragments_sha256": "6bc981f6c5c8b911549d666c9edb9682a2072d71664c6c1fc7a3f37b965f7dd2",
+  "input_sha256": "097c48395cb5cabb639a74d697d03a431b941f9f64cfebafa2e23a2b3d8053ab",
+  "label": "C3-E05",
+  "model_sha256": "a3ab9ed220c96312b5dceb867d8700535de26118ee3cf90d20be9199098d1832",
+  "original_fragment_count": 6,
+  "passed": true,
+  "plan_sha256": "04739e46633155bcbdf567ae04f00c74cd196f8e9ec8d282163fc989a7284006",
+  "record": {
+    "alternative_membership_count": 14,
+    "arm": "margin-0.25",
+    "association_availability": "COMPLETE",
+    "association_status": "AMBIGUOUS_ASSOCIATION",
+    "candidate_context_sha256": "6bc981f6c5c8b911549d666c9edb9682a2072d71664c6c1fc7a3f37b965f7dd2",
+    "capture": "PIPELINE-TPMS-007-20260918-002700",
+    "cardinality": {
+      "reason": null,
+      "state": "EXACT",
+      "value_decimal": "12"
+    },
+    "certificate": {
+      "coefficient_error": "1280558945/67166644873156884430848",
+      "cutoff": 477,
+      "fixed_penalty": "1/4",
+      "lower_shell_gap": "6881/53027524",
+      "maximum_directed_path_nodes": 3,
+      "maximum_links": 4,
+      "policy": "Exact edge-incidence bijection; rigorous separation of every frozen prefix comparison; no rounded predicate",
+      "quantum": "62500/119311929",
+      "rounding_envelope": "1365699070321/16791661218289221107712",
+      "upper_shell_gap": "188071/477247716",
+      "version": "KRAKEN_DRAFT2_CERTIFIED_SHORT_PATH_MATCHING_COUNT_V3"
+    },
+    "counting_transitions": 24,
+    "eligible_candidates_per_fragment": [
+      5,
+      53,
+      5,
+      2,
+      0,
+      40
+    ],
+    "episode": 5,
+    "exact_backend": "KRAKEN_DRAFT2_CERTIFIED_SHORT_PATH_MATCHING_COUNT_V3",
+    "exact_dispatch": {
+      "certificate_backend": "KRAKEN_DRAFT2_CERTIFIED_SHORT_PATH_MATCHING_COUNT_V3",
+      "composition_backend": "KRAKEN_DRAFT2_WEIGHTED_CUTOFF_PIVOT_COUNT_V1",
+      "fallback_backend": "KRAKEN_DRAFT2_FORCED_SINGLETON_FRONTIER_COUNT_V2"
+    },
+    "family_sha256": "4de2bb9159b9b3329a3ab65ee766cdef5ca55f51158c4780357fc4112e4612ef",
+    "fragment_count": 6,
+    "input_sha256": "097c48395cb5cabb639a74d697d03a431b941f9f64cfebafa2e23a2b3d8053ab",
+    "invariant_membership_count": 94,
+    "model_sha256": "a3ab9ed220c96312b5dceb867d8700535de26118ee3cf90d20be9199098d1832",
+    "packed_polynomial_bytes": 429,
+    "peak_live_states": 50,
+    "persistent_track_count": 0,
+    "possible_path_count": 108,
+    "primary": null,
+    "query_calls": 134,
+    "reproduction_seconds": 0.04115599696524441,
+    "runtimes": {
+      "counting_seconds": 0.0008046510047279298,
+      "family_construction_seconds": 0.0017579119885340333,
+      "integration_reconstruction_seconds": 0.005775013996753842,
+      "integration_seconds": 0.03758419398218393,
+      "memory_kib": {
+        "VmHWM": 151616,
+        "VmRSS": 75708
+      },
+      "total_seconds": 0.05638954200549051
+    },
+    "sidecar_sha256": "7beea5eff0461c3957256511238fd57a325672eb6af3b2155e8db8534ffdf489",
+    "stages": {
+      "cardinality_counting": {
+        "mode": "CONSUMED_VALIDATED_SIDECAR_NO_RECOUNT",
+        "reason": null,
+        "state": "EXACT"
+      },
+      "exact_queries": {
+        "reason": null,
+        "state": "EXACT"
+      },
+      "family_construction": {
+        "reason": null,
+        "state": "COMPLETE"
+      },
+      "metric_projection": {
+        "reason": null,
+        "state": "COMPLETE"
+      },
+      "provenance_validation": {
+        "reason": null,
+        "state": "VERIFIED"
+      }
+    },
+    "worker_peak_rss_kib": 151616
+  },
+  "reload": {
+    "memory_kib": {
+      "VmHWM": 151308,
+      "VmRSS": 75608
+    },
+    "reconstruction_seconds": 0.0061172370333224535,
+    "seconds": 0.04115599696524441,
+    "state": "BYTE_IDENTICAL"
+  },
+  "reload_worker": {
+    "elapsed_seconds": 0.801584233995527,
+    "exit_code": 0,
+    "observed_peak_rss_kib": 151308,
+    "reason": null
+  },
+  "resource_violations": [],
+  "sidecar_sha256": "7beea5eff0461c3957256511238fd57a325672eb6af3b2155e8db8534ffdf489",
+  "structural_reason": "Every saved episode in the fixed six-capture set; no outcome selection.",
+  "worker": {
+    "elapsed_seconds": 0.8010762629564852,
+    "exit_code": 0,
+    "observed_peak_rss_kib": 151616,
+    "reason": null
+  }
+}

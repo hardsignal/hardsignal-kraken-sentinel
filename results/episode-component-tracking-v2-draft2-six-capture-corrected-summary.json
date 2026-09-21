@@ -1,0 +1,246 @@
+{
+  "artifact_hashes_verified": 1521,
+  "canonical_artifacts_verified": 574,
+  "captures": 6,
+  "cases": 164,
+  "changed_tracked_files": [],
+  "corrected_blockers": [
+    {
+      "arm": "margin-1",
+      "cardinality": "217075",
+      "changes": {
+        "cardinality_counting": {
+          "after": {
+            "mode": "CONSUMED_VALIDATED_SIDECAR_NO_RECOUNT",
+            "reason": null,
+            "state": "EXACT"
+          },
+          "before": {
+            "mode": "CONSUMED_VALIDATED_SIDECAR_NO_RECOUNT",
+            "reason": {
+              "reason": "Staged exact-query wall-clock limit exceeded",
+              "stage": "counting"
+            },
+            "state": "COMPUTATION_UNRESOLVED"
+          }
+        }
+      },
+      "label": "C6-E02",
+      "query_calls": 585
+    },
+    {
+      "arm": "margin-0.25",
+      "cardinality": "349149",
+      "changes": {
+        "exact_queries": {
+          "after": {
+            "reason": null,
+            "state": "EXACT"
+          },
+          "before": {
+            "reason": "Exact-cover search limit reached; result is unresolved",
+            "state": "COMPUTATION_UNRESOLVED"
+          }
+        },
+        "metric_projection": {
+          "after": {
+            "reason": null,
+            "state": "COMPLETE"
+          },
+          "before": {
+            "reason": null,
+            "state": "BLOCKED_BY_QUERY_FAILURE"
+          }
+        }
+      },
+      "label": "C6-E03",
+      "query_calls": 1012
+    },
+    {
+      "arm": "margin-1",
+      "cardinality": "378536340",
+      "changes": {
+        "cardinality_counting": {
+          "after": {
+            "mode": "CONSUMED_VALIDATED_SIDECAR_NO_RECOUNT",
+            "reason": null,
+            "state": "EXACT"
+          },
+          "before": {
+            "mode": "CONSUMED_VALIDATED_SIDECAR_NO_RECOUNT",
+            "reason": {
+              "elapsed_seconds": 28.859368369012373,
+              "limit": 250000,
+              "location": {
+                "phase": "IEEE prefix DAG",
+                "position": 22
+              },
+              "peak_states": 250001,
+              "reason": "frontier/state budget exceeded",
+              "states": 250001,
+              "transitions": 1260885
+            },
+            "state": "COMPUTATION_UNRESOLVED"
+          }
+        },
+        "exact_queries": {
+          "after": {
+            "reason": null,
+            "state": "EXACT"
+          },
+          "before": {
+            "reason": "Exact-cover search limit reached; result is unresolved",
+            "state": "COMPUTATION_UNRESOLVED"
+          }
+        },
+        "metric_projection": {
+          "after": {
+            "reason": null,
+            "state": "COMPLETE"
+          },
+          "before": {
+            "reason": null,
+            "state": "BLOCKED_BY_QUERY_FAILURE"
+          }
+        }
+      },
+      "label": "C6-E03",
+      "query_calls": 1012
+    },
+    {
+      "arm": "margin-1",
+      "cardinality": "697122",
+      "changes": {
+        "cardinality_counting": {
+          "after": {
+            "mode": "CONSUMED_VALIDATED_SIDECAR_NO_RECOUNT",
+            "reason": null,
+            "state": "EXACT"
+          },
+          "before": {
+            "mode": "CONSUMED_VALIDATED_SIDECAR_NO_RECOUNT",
+            "reason": {
+              "elapsed_seconds": 3.1253782639978454,
+              "limit": 5000000,
+              "location": {
+                "phase": "IEEE streaming pivot join",
+                "pivot": 5
+              },
+              "peak_states": 12745,
+              "reason": "transition budget exceeded",
+              "states": 12745,
+              "transitions": 5000001
+            },
+            "state": "COMPUTATION_UNRESOLVED"
+          }
+        }
+      },
+      "label": "C6-E05",
+      "query_calls": 475
+    }
+  ],
+  "episodes": 41,
+  "exact_compact_cardinalities": 123,
+  "fully_passed": 164,
+  "head": "7e38dd9caeb19282ecaa7b5d8464074e77fa5986",
+  "largest_cardinality": {
+    "case": "C4-E08/margin-1",
+    "value": 378038954451765697490
+  },
+  "mandatory_control_parity": {
+    "checks": {
+      "C1-E02/margin-0": true,
+      "C1-E02/margin-0.25": true,
+      "C1-E02/margin-1": true,
+      "C4-E08/margin-0": true,
+      "C4-E08/margin-0.25": true,
+      "C4-E08/margin-1": true,
+      "C6-E02/margin-1": true,
+      "C6-E03/margin-0.25": true,
+      "C6-E03/margin-0.25/queries": true,
+      "C6-E03/margin-1": true,
+      "C6-E03/margin-1/queries": true,
+      "C6-E05/margin-1": true
+    },
+    "passed": true
+  },
+  "max_live_states": {
+    "case": "C4-E08/margin-1",
+    "value": 74064
+  },
+  "max_packed_bytes": {
+    "case": "C4-E08/margin-1",
+    "value": 20584913
+  },
+  "max_query_calls": {
+    "case": "C1-E02/margin-0",
+    "value": 1110
+  },
+  "max_rss_kib": {
+    "case": "C1-E06/margin-1",
+    "value": 152060
+  },
+  "max_transitions": {
+    "case": "C6-E05/margin-1",
+    "value": 63978
+  },
+  "non_null_primary_count": 12,
+  "original_passing_cases": 160,
+  "original_passing_parity": 160,
+  "persistent_track_distribution": {
+    "0": 102,
+    "1": 14,
+    "2": 7,
+    "3": 4,
+    "4": 7,
+    "5": 5,
+    "6": 1,
+    "8": 2,
+    "9": 2,
+    "10": 1,
+    "13": 2,
+    "15": 1,
+    "16": 2,
+    "17": 1,
+    "18": 1,
+    "26": 1,
+    "39": 1,
+    "40": 1,
+    "44": 1,
+    "49": 1,
+    "54": 1,
+    "81": 1,
+    "124": 1,
+    "145": 1,
+    "146": 1,
+    "356": 1,
+    "528": 1
+  },
+  "reproduction_failures": 0,
+  "slowest_count": {
+    "case": "C6-E03/margin-0",
+    "value": 2.6287965869996697
+  },
+  "slowest_execution": {
+    "case": "C4-E08/margin-1",
+    "value": 35.64100802101893
+  },
+  "slowest_full_case": {
+    "case": "C4-E08/margin-1",
+    "value": 70.86846854200121
+  },
+  "status_distribution": {
+    "AMBIGUOUS_ASSOCIATION": 96,
+    "INSUFFICIENT_SUPPORT": 31,
+    "MULTIPLE_PERSISTENT_TRACKS": 25,
+    "UNIQUE_PERSISTENT_TRACK": 12
+  },
+  "tests": {
+    "errors": 0,
+    "failures": 0,
+    "run": 149
+  },
+  "tracked_file_count": 1805,
+  "unresolved_count_cases": 0,
+  "unresolved_query_cases": 0
+}

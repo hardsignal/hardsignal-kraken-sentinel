@@ -1,0 +1,386 @@
+{
+  "arm": "margin-1",
+  "audit": {
+    "cardinality": {
+      "reason": null,
+      "state": "EXACT",
+      "value_decimal": "5788836"
+    },
+    "limited_parity": "PASS_E02_CARDINALITY_CORRECTION",
+    "measurement": {
+      "counting_seconds": 0.022673002968076617,
+      "family_construction_seconds": 0.2194217270007357,
+      "integration_reconstruction_seconds": 0.45249537396011874,
+      "integration_seconds": 6.57212200795766,
+      "memory_kib": {
+        "VmHWM": 151656,
+        "VmRSS": 81476
+      },
+      "total_seconds": 7.34773243800737
+    },
+    "metrics": {
+      "abstained": true,
+      "alternative_path_count": 617,
+      "eligible_candidate_count": 284,
+      "invariant_path_count": 191,
+      "original_fragment_count": 5,
+      "persistent_path_count": 528,
+      "possible_path_count": 808,
+      "structural_constraint_status": "VALID_BY_EXACT_CONSTRAINTS",
+      "truth_metrics": null,
+      "truth_metrics_state": "NOT_APPLICABLE",
+      "union_link_count": 1062
+    },
+    "original_parity": {
+      "old_result_sha256": "f9af7dcdb5110c7771e25d25f8e38587bea4f4adb024a3a0e7bba112d1adc0c8",
+      "previously_passed": true,
+      "scientific_payload_sha256": "e4186c28a061dcbe1484e2b6362b28fa5080eb4eb71b5b086da916b5c1a53aee",
+      "state": "PASS",
+      "state_changes": {}
+    },
+    "primary": null,
+    "projection": {
+      "parity": "EXACT_QUERY_PROJECTION_CONSISTENCY",
+      "state": "PASS"
+    },
+    "query_calls": 1110,
+    "query_engine_statistics": {
+      "engine": {
+        "base_global_queries": 1245,
+        "branches": 199,
+        "cache_hits": 902,
+        "disjunctions": 83,
+        "find_calls": 2419,
+        "max_disjunction_depth": 1
+      },
+      "factors": [
+        {
+          "augmentations": 4,
+          "matching_cache_entries": 10,
+          "matching_calls": 10,
+          "matching_certificates": 0,
+          "optimum_cache_entries": 4,
+          "optimum_cache_hits": 1627,
+          "search_nodes": 13
+        },
+        {
+          "augmentations": 16772,
+          "matching_cache_entries": 7829,
+          "matching_calls": 7829,
+          "matching_certificates": 0,
+          "optimum_cache_entries": 582,
+          "optimum_cache_hits": 54319,
+          "search_nodes": 34752
+        },
+        {
+          "augmentations": 198,
+          "matching_cache_entries": 791,
+          "matching_calls": 791,
+          "matching_certificates": 0,
+          "optimum_cache_entries": 220,
+          "optimum_cache_hits": 32165,
+          "search_nodes": 4956
+        },
+        {
+          "augmentations": 2,
+          "matching_cache_entries": 6,
+          "matching_calls": 6,
+          "matching_certificates": 2,
+          "optimum_cache_entries": 2,
+          "optimum_cache_hits": 811,
+          "search_nodes": 2
+        },
+        {
+          "augmentations": 2,
+          "matching_cache_entries": 6,
+          "matching_calls": 6,
+          "matching_certificates": 2,
+          "optimum_cache_entries": 2,
+          "optimum_cache_hits": 811,
+          "search_nodes": 2
+        },
+        {
+          "augmentations": 4,
+          "matching_cache_entries": 10,
+          "matching_calls": 10,
+          "matching_certificates": 0,
+          "optimum_cache_entries": 4,
+          "optimum_cache_hits": 1627,
+          "search_nodes": 13
+        }
+      ],
+      "query_cache_entries": 1517
+    },
+    "states": {
+      "cardinality_counting": {
+        "mode": "CONSUMED_VALIDATED_SIDECAR_NO_RECOUNT",
+        "reason": null,
+        "state": "EXACT"
+      },
+      "exact_queries": {
+        "reason": null,
+        "state": "EXACT"
+      },
+      "family_construction": {
+        "reason": null,
+        "state": "COMPLETE"
+      },
+      "metric_projection": {
+        "reason": null,
+        "state": "COMPLETE"
+      },
+      "provenance_validation": {
+        "reason": null,
+        "state": "VERIFIED"
+      }
+    },
+    "status": "MULTIPLE_PERSISTENT_TRACKS"
+  },
+  "capture": "PIPELINE-TPMS-004-20260917-233423",
+  "counting": {
+    "certificate": {
+      "coefficient_error": "177473919/7462960541461876047872",
+      "cutoff": 7635,
+      "fixed_penalty": "11/4",
+      "lower_shell_gap": "5018/39770643",
+      "maximum_directed_path_nodes": 3,
+      "maximum_links": 12,
+      "policy": "Exact edge-incidence bijection; rigorous separation of every frozen prefix comparison; no rounded predicate",
+      "quantum": "15625/119311929",
+      "rounding_envelope": "2786169435681/1865740135365469011968",
+      "upper_shell_gap": "571/119311929",
+      "version": "KRAKEN_DRAFT2_CERTIFIED_SHORT_PATH_MATCHING_COUNT_V3"
+    },
+    "method": "KRAKEN_DRAFT2_CERTIFIED_SHORT_PATH_MATCHING_COUNT_V3",
+    "packed_polynomial_bytes": 101144,
+    "reason": null,
+    "state": "EXACT",
+    "statistics": {
+      "checkpoints": [
+        {
+          "coefficient_digit_bytes": 1,
+          "columns": 2,
+          "component": "factor0/block0/block0",
+          "count": "2",
+          "histogram_entries": 2,
+          "peak_frontier_masks": 3,
+          "peak_packed_bytes": 4,
+          "rows": 1,
+          "suffix_bound": true
+        },
+        {
+          "coefficient_digit_bytes": 2,
+          "columns": 37,
+          "component": "factor1/block1/block0",
+          "count": "4119",
+          "histogram_entries": 2198,
+          "peak_frontier_masks": 8,
+          "peak_packed_bytes": 101144,
+          "rows": 3,
+          "suffix_bound": true
+        },
+        {
+          "coefficient_digit_bytes": 2,
+          "columns": 11,
+          "component": "factor1/block2/block0",
+          "count": "94",
+          "histogram_entries": 87,
+          "peak_frontier_masks": 8,
+          "peak_packed_bytes": 17292,
+          "rows": 3,
+          "suffix_bound": true
+        },
+        {
+          "coefficient_digit_bytes": 1,
+          "columns": 26,
+          "component": "factor2/block3/block0",
+          "count": "26",
+          "histogram_entries": 23,
+          "peak_frontier_masks": 4,
+          "peak_packed_bytes": 14446,
+          "rows": 1,
+          "suffix_bound": true
+        },
+        {
+          "coefficient_digit_bytes": 1,
+          "columns": 7,
+          "component": "factor2/block4/block0",
+          "count": "7",
+          "histogram_entries": 7,
+          "peak_frontier_masks": 4,
+          "peak_packed_bytes": 1717,
+          "rows": 1,
+          "suffix_bound": true
+        },
+        {
+          "coefficient_digit_bytes": 1,
+          "columns": 1,
+          "component": "factor3/block5/block0",
+          "count": "1",
+          "histogram_entries": 1,
+          "peak_frontier_masks": 2,
+          "peak_packed_bytes": 2,
+          "rows": 1,
+          "suffix_bound": true
+        },
+        {
+          "coefficient_digit_bytes": 1,
+          "columns": 1,
+          "component": "factor4/block6/block0",
+          "count": "1",
+          "histogram_entries": 1,
+          "peak_frontier_masks": 2,
+          "peak_packed_bytes": 2,
+          "rows": 1,
+          "suffix_bound": true
+        },
+        {
+          "coefficient_digit_bytes": 1,
+          "columns": 2,
+          "component": "factor5/block7/block0",
+          "count": "2",
+          "histogram_entries": 2,
+          "peak_frontier_masks": 3,
+          "peak_packed_bytes": 4,
+          "rows": 1,
+          "suffix_bound": true
+        }
+      ],
+      "elapsed_seconds": 0.022673002968076617,
+      "peak_states": 14829,
+      "process_peak_rss_kib": 151656,
+      "transitions": 559
+    },
+    "value_decimal": "5788836"
+  },
+  "eligible_per_fragment": [
+    189,
+    1,
+    19,
+    4,
+    71
+  ],
+  "episode": 2,
+  "failure": null,
+  "family_sha256": "c13cce11dd0e5ba1ec5bbcf6a130b762ab896bf91678e196fbba5c9aace3a01a",
+  "fragments_sha256": "e96f2dbb695e9d4cb901ca2a5c7afe785489446f7e434a1c00ba40584d3c1b8e",
+  "input_sha256": "097c48395cb5cabb639a74d697d03a431b941f9f64cfebafa2e23a2b3d8053ab",
+  "label": "C1-E02",
+  "model_sha256": "b9ded91d3324b63c5caccf2e1217e9d744e7923464b6bcffe161eb7c241193db",
+  "original_fragment_count": 5,
+  "passed": true,
+  "plan_sha256": "04739e46633155bcbdf567ae04f00c74cd196f8e9ec8d282163fc989a7284006",
+  "record": {
+    "alternative_membership_count": 617,
+    "arm": "margin-1",
+    "association_availability": "COMPLETE",
+    "association_status": "MULTIPLE_PERSISTENT_TRACKS",
+    "candidate_context_sha256": "e96f2dbb695e9d4cb901ca2a5c7afe785489446f7e434a1c00ba40584d3c1b8e",
+    "capture": "PIPELINE-TPMS-004-20260917-233423",
+    "cardinality": {
+      "reason": null,
+      "state": "EXACT",
+      "value_decimal": "5788836"
+    },
+    "certificate": {
+      "coefficient_error": "177473919/7462960541461876047872",
+      "cutoff": 7635,
+      "fixed_penalty": "11/4",
+      "lower_shell_gap": "5018/39770643",
+      "maximum_directed_path_nodes": 3,
+      "maximum_links": 12,
+      "policy": "Exact edge-incidence bijection; rigorous separation of every frozen prefix comparison; no rounded predicate",
+      "quantum": "15625/119311929",
+      "rounding_envelope": "2786169435681/1865740135365469011968",
+      "upper_shell_gap": "571/119311929",
+      "version": "KRAKEN_DRAFT2_CERTIFIED_SHORT_PATH_MATCHING_COUNT_V3"
+    },
+    "counting_transitions": 559,
+    "eligible_candidates_per_fragment": [
+      189,
+      1,
+      19,
+      4,
+      71
+    ],
+    "episode": 2,
+    "exact_backend": "KRAKEN_DRAFT2_CERTIFIED_SHORT_PATH_MATCHING_COUNT_V3",
+    "exact_dispatch": {
+      "certificate_backend": "KRAKEN_DRAFT2_CERTIFIED_SHORT_PATH_MATCHING_COUNT_V3",
+      "composition_backend": "KRAKEN_DRAFT2_WEIGHTED_CUTOFF_PIVOT_COUNT_V1",
+      "fallback_backend": "KRAKEN_DRAFT2_FORCED_SINGLETON_FRONTIER_COUNT_V2"
+    },
+    "family_sha256": "c13cce11dd0e5ba1ec5bbcf6a130b762ab896bf91678e196fbba5c9aace3a01a",
+    "fragment_count": 5,
+    "input_sha256": "097c48395cb5cabb639a74d697d03a431b941f9f64cfebafa2e23a2b3d8053ab",
+    "invariant_membership_count": 191,
+    "model_sha256": "b9ded91d3324b63c5caccf2e1217e9d744e7923464b6bcffe161eb7c241193db",
+    "packed_polynomial_bytes": 101144,
+    "peak_live_states": 14829,
+    "persistent_track_count": 528,
+    "possible_path_count": 808,
+    "primary": null,
+    "query_calls": 1110,
+    "reproduction_seconds": 6.507802651030943,
+    "runtimes": {
+      "counting_seconds": 0.022673002968076617,
+      "family_construction_seconds": 0.2194217270007357,
+      "integration_reconstruction_seconds": 0.45249537396011874,
+      "integration_seconds": 6.57212200795766,
+      "memory_kib": {
+        "VmHWM": 151656,
+        "VmRSS": 81476
+      },
+      "total_seconds": 7.34773243800737
+    },
+    "sidecar_sha256": "e7b86d95fffef6a815aa012a655c61a4a7f2cd501fb561a55b9fe4f338a473b3",
+    "stages": {
+      "cardinality_counting": {
+        "mode": "CONSUMED_VALIDATED_SIDECAR_NO_RECOUNT",
+        "reason": null,
+        "state": "EXACT"
+      },
+      "exact_queries": {
+        "reason": null,
+        "state": "EXACT"
+      },
+      "family_construction": {
+        "reason": null,
+        "state": "COMPLETE"
+      },
+      "metric_projection": {
+        "reason": null,
+        "state": "COMPLETE"
+      },
+      "provenance_validation": {
+        "reason": null,
+        "state": "VERIFIED"
+      }
+    },
+    "worker_peak_rss_kib": 151656
+  },
+  "reload": {
+    "memory_kib": {
+      "VmHWM": 151472,
+      "VmRSS": 82576
+    },
+    "reconstruction_seconds": 0.4597208990016952,
+    "seconds": 6.507802651030943,
+    "state": "BYTE_IDENTICAL"
+  },
+  "reload_worker": {
+    "elapsed_seconds": 7.208379068993963,
+    "exit_code": 0,
+    "observed_peak_rss_kib": 151472,
+    "reason": null
+  },
+  "resource_violations": [],
+  "sidecar_sha256": "e7b86d95fffef6a815aa012a655c61a4a7f2cd501fb561a55b9fe4f338a473b3",
+  "structural_reason": "Every saved episode in the fixed six-capture set; no outcome selection.",
+  "worker": {
+    "elapsed_seconds": 8.210322795028333,
+    "exit_code": 0,
+    "observed_peak_rss_kib": 151656,
+    "reason": null
+  }
+}

@@ -1,0 +1,163 @@
+{
+  "certificate": {
+    "policy": "Exact monotone binary64 addition preimages; frozen chronological fold and all prefix predicates",
+    "rounding_or_quantization": false,
+    "version": "KRAKEN_DRAFT2_IEEE_MONOTONE_PIVOT_COUNT_V1"
+  },
+  "count_state": "EXACT",
+  "details": {
+    "certificate": {
+      "policy": "Exact monotone binary64 addition preimages; frozen chronological fold and all prefix predicates",
+      "rounding_or_quantization": false,
+      "version": "KRAKEN_DRAFT2_IEEE_MONOTONE_PIVOT_COUNT_V1"
+    },
+    "composition": {
+      "boundary_hex": "0x1.172a9df42c9b3p+0",
+      "cutoff_mode": true,
+      "cutoff_probes": 2,
+      "cutoff_queries": 1,
+      "group_histogram_entries": [
+        1,
+        4
+      ],
+      "join_live_containers": 20,
+      "join_pairs": 0,
+      "packed_polynomial_bytes": 0,
+      "pivot": 1,
+      "prefix_states": 1,
+      "prefix_steps": [
+        {
+          "factor": 0,
+          "input_states": 1,
+          "output_states": 1,
+          "transitions": 1
+        }
+      ],
+      "suffix_steps": [],
+      "suffix_thresholds": 1
+    },
+    "counter_version": "KRAKEN_DRAFT2_DYADIC_MATCHING_BOUND_COUNT_V1",
+    "dispatch": {
+      "certificate_backend": "KRAKEN_DRAFT2_CERTIFIED_SHORT_PATH_MATCHING_COUNT_V3",
+      "composition_backend": "KRAKEN_DRAFT2_WEIGHTED_CUTOFF_PIVOT_COUNT_V1",
+      "fallback_backend": "KRAKEN_DRAFT2_FORCED_SINGLETON_FRONTIER_COUNT_V2"
+    },
+    "factor_statistics": [
+      {
+        "assignments_decimal": "1",
+        "elapsed_seconds": 0.0001677140244282782,
+        "factor": 0,
+        "held_previous_histogram_states": 0,
+        "histogram_entries": 1,
+        "transitions": 0
+      },
+      {
+        "assignments_decimal": "4",
+        "elapsed_seconds": 0.0011577489785850048,
+        "factor": 1,
+        "held_previous_histogram_states": 1,
+        "histogram_entries": 4,
+        "transitions": 22
+      }
+    ],
+    "local_frontiers": [
+      {
+        "assignments_decimal": "1",
+        "candidate_count": 4,
+        "histogram_entries": 1,
+        "positions": [],
+        "transitions": 0
+      },
+      {
+        "assignments_decimal": "4",
+        "candidate_count": 7,
+        "histogram_entries": 4,
+        "positions": [
+          {
+            "histogram_entries": 0,
+            "input_states": 1,
+            "position": 0,
+            "remaining_frontier_states": 2,
+            "transitions": 3
+          },
+          {
+            "histogram_entries": 0,
+            "input_states": 2,
+            "position": 1,
+            "remaining_frontier_states": 2,
+            "transitions": 9
+          },
+          {
+            "histogram_entries": 0,
+            "input_states": 2,
+            "position": 2,
+            "remaining_frontier_states": 4,
+            "transitions": 6
+          },
+          {
+            "histogram_entries": 0,
+            "input_states": 2,
+            "position": 3,
+            "remaining_frontier_states": 4,
+            "transitions": 4
+          },
+          {
+            "histogram_entries": 0,
+            "input_states": 0,
+            "position": 4,
+            "remaining_frontier_states": 4,
+            "transitions": 0
+          },
+          {
+            "histogram_entries": 0,
+            "input_states": 0,
+            "position": 5,
+            "remaining_frontier_states": 4,
+            "transitions": 0
+          },
+          {
+            "histogram_entries": 0,
+            "input_states": 0,
+            "position": 6,
+            "remaining_frontier_states": 4,
+            "transitions": 0
+          },
+          {
+            "histogram_entries": 4,
+            "input_states": 4,
+            "position": 7,
+            "remaining_frontier_states": 0,
+            "transitions": 0
+          }
+        ],
+        "transitions": 22
+      }
+    ],
+    "matching_bound_adapter": {
+      "edge_integer_entries": 12,
+      "policy": "Exact common dyadic denominator; unchanged residual traversal/ties; Fraction result",
+      "preprocessing_seconds": 2.1153013221919537e-05,
+      "version": "KRAKEN_DRAFT2_DYADIC_MATCHING_BOUND_COUNT_V1"
+    },
+    "method": "KRAKEN_DRAFT2_FORCED_SINGLETON_FRONTIER_COUNT_V2 / KRAKEN_DRAFT2_IEEE_MONOTONE_PIVOT_COUNT_V1",
+    "ordering": "forward",
+    "packed_polynomial_bytes": 0,
+    "short_path_certificate_unavailable": "Directed path longer than three candidates",
+    "stats": {
+      "checkpoints": [],
+      "elapsed_seconds": 0.0016855979920364916,
+      "peak_states": 32,
+      "transitions": 31
+    }
+  },
+  "exact_count_decimal": "4",
+  "method": "KRAKEN_DRAFT2_FORCED_SINGLETON_FRONTIER_COUNT_V2 / KRAKEN_DRAFT2_IEEE_MONOTONE_PIVOT_COUNT_V1",
+  "packed_polynomial_bytes": 0,
+  "statistics": {
+    "checkpoints": [],
+    "elapsed_seconds": 0.0017077020020224154,
+    "peak_states": 32,
+    "process_peak_rss_kib": 151360,
+    "transitions": 31
+  }
+}

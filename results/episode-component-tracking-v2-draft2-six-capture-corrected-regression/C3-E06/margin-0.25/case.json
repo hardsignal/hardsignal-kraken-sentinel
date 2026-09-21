@@ -1,0 +1,247 @@
+{
+  "arm": "margin-0.25",
+  "audit": {
+    "cardinality": {
+      "reason": null,
+      "state": "EXACT",
+      "value_decimal": "4"
+    },
+    "limited_parity": "NOT_APPLICABLE",
+    "measurement": {
+      "counting_seconds": 0.0017077020020224154,
+      "family_construction_seconds": 0.0026875909534282982,
+      "integration_reconstruction_seconds": 0.007313690963201225,
+      "integration_seconds": 0.04124866204801947,
+      "memory_kib": {
+        "VmHWM": 151360,
+        "VmRSS": 74704
+      },
+      "total_seconds": 0.06432613398646936
+    },
+    "metrics": {
+      "abstained": true,
+      "alternative_path_count": 8,
+      "eligible_candidate_count": 142,
+      "invariant_path_count": 134,
+      "original_fragment_count": 6,
+      "persistent_path_count": 0,
+      "possible_path_count": 142,
+      "structural_constraint_status": "VALID_BY_EXACT_CONSTRAINTS",
+      "truth_metrics": null,
+      "truth_metrics_state": "NOT_APPLICABLE",
+      "union_link_count": 7
+    },
+    "original_parity": {
+      "old_result_sha256": "519e42138888c7d76c7a1c7db68a936036595c47b9ef30b4c600cd6cdf77fea3",
+      "previously_passed": true,
+      "scientific_payload_sha256": "85f4778d1747637e7d0c9c4d936b50df42f0f727145419e1b74d545eb46fd35d",
+      "state": "PASS",
+      "state_changes": {}
+    },
+    "primary": null,
+    "projection": {
+      "parity": "EXACT_QUERY_PROJECTION_CONSISTENCY",
+      "state": "PASS"
+    },
+    "query_calls": 177,
+    "query_engine_statistics": {
+      "engine": {
+        "base_global_queries": 168,
+        "branches": 12,
+        "cache_hits": 69,
+        "disjunctions": 7,
+        "find_calls": 375,
+        "max_disjunction_depth": 1
+      },
+      "factors": [
+        {
+          "augmentations": 8,
+          "matching_cache_entries": 14,
+          "matching_calls": 14,
+          "matching_certificates": 2,
+          "optimum_cache_entries": 4,
+          "optimum_cache_hits": 438,
+          "search_nodes": 10
+        },
+        {
+          "augmentations": 67,
+          "matching_cache_entries": 54,
+          "matching_calls": 54,
+          "matching_certificates": 2,
+          "optimum_cache_entries": 7,
+          "optimum_cache_hits": 602,
+          "search_nodes": 43
+        }
+      ],
+      "query_cache_entries": 306
+    },
+    "states": {
+      "cardinality_counting": {
+        "mode": "CONSUMED_VALIDATED_SIDECAR_NO_RECOUNT",
+        "reason": null,
+        "state": "EXACT"
+      },
+      "exact_queries": {
+        "reason": null,
+        "state": "EXACT"
+      },
+      "family_construction": {
+        "reason": null,
+        "state": "COMPLETE"
+      },
+      "metric_projection": {
+        "reason": null,
+        "state": "COMPLETE"
+      },
+      "provenance_validation": {
+        "reason": null,
+        "state": "VERIFIED"
+      }
+    },
+    "status": "AMBIGUOUS_ASSOCIATION"
+  },
+  "capture": "PIPELINE-TPMS-007-20260918-002700",
+  "counting": {
+    "certificate": {
+      "policy": "Exact monotone binary64 addition preimages; frozen chronological fold and all prefix predicates",
+      "rounding_or_quantization": false,
+      "version": "KRAKEN_DRAFT2_IEEE_MONOTONE_PIVOT_COUNT_V1"
+    },
+    "method": "KRAKEN_DRAFT2_FORCED_SINGLETON_FRONTIER_COUNT_V2 / KRAKEN_DRAFT2_IEEE_MONOTONE_PIVOT_COUNT_V1",
+    "packed_polynomial_bytes": 0,
+    "reason": null,
+    "state": "EXACT",
+    "statistics": {
+      "checkpoints": [],
+      "elapsed_seconds": 0.0017077020020224154,
+      "peak_states": 32,
+      "process_peak_rss_kib": 151360,
+      "transitions": 31
+    },
+    "value_decimal": "4"
+  },
+  "eligible_per_fragment": [
+    0,
+    50,
+    8,
+    2,
+    2,
+    80
+  ],
+  "episode": 6,
+  "failure": null,
+  "family_sha256": "a2c0554b7f897f082da6ae2f28dbb829a5c069293cbe8c76edc3313135260695",
+  "fragments_sha256": "0c118d76111f97ea2a7b272cdc5af22b9b40808a4087dd9bcb338688b7f8757c",
+  "input_sha256": "097c48395cb5cabb639a74d697d03a431b941f9f64cfebafa2e23a2b3d8053ab",
+  "label": "C3-E06",
+  "model_sha256": "f4a2a7ea4bb978db8a25a2f7e8ef67491a54d78ff0f35a289b2fbf08ff6ac6ee",
+  "original_fragment_count": 6,
+  "passed": true,
+  "plan_sha256": "04739e46633155bcbdf567ae04f00c74cd196f8e9ec8d282163fc989a7284006",
+  "record": {
+    "alternative_membership_count": 8,
+    "arm": "margin-0.25",
+    "association_availability": "COMPLETE",
+    "association_status": "AMBIGUOUS_ASSOCIATION",
+    "candidate_context_sha256": "0c118d76111f97ea2a7b272cdc5af22b9b40808a4087dd9bcb338688b7f8757c",
+    "capture": "PIPELINE-TPMS-007-20260918-002700",
+    "cardinality": {
+      "reason": null,
+      "state": "EXACT",
+      "value_decimal": "4"
+    },
+    "certificate": {
+      "policy": "Exact monotone binary64 addition preimages; frozen chronological fold and all prefix predicates",
+      "rounding_or_quantization": false,
+      "version": "KRAKEN_DRAFT2_IEEE_MONOTONE_PIVOT_COUNT_V1"
+    },
+    "counting_transitions": 31,
+    "eligible_candidates_per_fragment": [
+      0,
+      50,
+      8,
+      2,
+      2,
+      80
+    ],
+    "episode": 6,
+    "exact_backend": "KRAKEN_DRAFT2_FORCED_SINGLETON_FRONTIER_COUNT_V2 / KRAKEN_DRAFT2_IEEE_MONOTONE_PIVOT_COUNT_V1",
+    "exact_dispatch": {
+      "certificate_backend": "KRAKEN_DRAFT2_CERTIFIED_SHORT_PATH_MATCHING_COUNT_V3",
+      "composition_backend": "KRAKEN_DRAFT2_WEIGHTED_CUTOFF_PIVOT_COUNT_V1",
+      "fallback_backend": "KRAKEN_DRAFT2_FORCED_SINGLETON_FRONTIER_COUNT_V2"
+    },
+    "family_sha256": "a2c0554b7f897f082da6ae2f28dbb829a5c069293cbe8c76edc3313135260695",
+    "fragment_count": 6,
+    "input_sha256": "097c48395cb5cabb639a74d697d03a431b941f9f64cfebafa2e23a2b3d8053ab",
+    "invariant_membership_count": 134,
+    "model_sha256": "f4a2a7ea4bb978db8a25a2f7e8ef67491a54d78ff0f35a289b2fbf08ff6ac6ee",
+    "packed_polynomial_bytes": 0,
+    "peak_live_states": 32,
+    "persistent_track_count": 0,
+    "possible_path_count": 142,
+    "primary": null,
+    "query_calls": 177,
+    "reproduction_seconds": 0.045911625027656555,
+    "runtimes": {
+      "counting_seconds": 0.0017077020020224154,
+      "family_construction_seconds": 0.0026875909534282982,
+      "integration_reconstruction_seconds": 0.007313690963201225,
+      "integration_seconds": 0.04124866204801947,
+      "memory_kib": {
+        "VmHWM": 151360,
+        "VmRSS": 74704
+      },
+      "total_seconds": 0.06432613398646936
+    },
+    "sidecar_sha256": "43b0078d309b3f970e315b56d8b9dbed08db875eb21ee9600ba9fbff0f301c24",
+    "stages": {
+      "cardinality_counting": {
+        "mode": "CONSUMED_VALIDATED_SIDECAR_NO_RECOUNT",
+        "reason": null,
+        "state": "EXACT"
+      },
+      "exact_queries": {
+        "reason": null,
+        "state": "EXACT"
+      },
+      "family_construction": {
+        "reason": null,
+        "state": "COMPLETE"
+      },
+      "metric_projection": {
+        "reason": null,
+        "state": "COMPLETE"
+      },
+      "provenance_validation": {
+        "reason": null,
+        "state": "VERIFIED"
+      }
+    },
+    "worker_peak_rss_kib": 152032
+  },
+  "reload": {
+    "memory_kib": {
+      "VmHWM": 152032,
+      "VmRSS": 74772
+    },
+    "reconstruction_seconds": 0.007743850059341639,
+    "seconds": 0.045911625027656555,
+    "state": "BYTE_IDENTICAL"
+  },
+  "reload_worker": {
+    "elapsed_seconds": 0.8015879060258158,
+    "exit_code": 0,
+    "observed_peak_rss_kib": 152032,
+    "reason": null
+  },
+  "resource_violations": [],
+  "sidecar_sha256": "43b0078d309b3f970e315b56d8b9dbed08db875eb21ee9600ba9fbff0f301c24",
+  "structural_reason": "Every saved episode in the fixed six-capture set; no outcome selection.",
+  "worker": {
+    "elapsed_seconds": 0.8014270439743996,
+    "exit_code": 0,
+    "observed_peak_rss_kib": 151360,
+    "reason": null
+  }
+}

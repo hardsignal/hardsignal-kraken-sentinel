@@ -1,0 +1,160 @@
+{
+  "cardinality": {
+    "reason": null,
+    "state": "EXACT",
+    "value_decimal": "697122"
+  },
+  "limited_parity": "NOT_APPLICABLE",
+  "measurement": {
+    "counting_seconds": 0.2100788889802061,
+    "family_construction_seconds": 0.05115348001709208,
+    "integration_reconstruction_seconds": 0.10789044003468007,
+    "integration_seconds": 0.5659632360329852,
+    "memory_kib": {
+      "VmHWM": 151460,
+      "VmRSS": 76316
+    },
+    "total_seconds": 0.9587580630322918
+  },
+  "metrics": {
+    "abstained": true,
+    "alternative_path_count": 160,
+    "eligible_candidate_count": 279,
+    "invariant_path_count": 231,
+    "original_fragment_count": 5,
+    "persistent_path_count": 54,
+    "possible_path_count": 391,
+    "structural_constraint_status": "VALID_BY_EXACT_CONSTRAINTS",
+    "truth_metrics": null,
+    "truth_metrics_state": "NOT_APPLICABLE",
+    "union_link_count": 198
+  },
+  "original_parity": {
+    "old_result_sha256": "8ae9f72ccaa0d3f4233cdaf0dadbd1d8f6d89a9e9d449ea4b1c682082b4d0a29",
+    "previously_passed": false,
+    "scientific_payload_sha256": "cdad6637c9c49c953670d794ad7ba9e5a150c8338bd59d657974c607cd8d3f9c",
+    "state": "PASS",
+    "state_changes": {
+      "cardinality_counting": {
+        "after": {
+          "mode": "CONSUMED_VALIDATED_SIDECAR_NO_RECOUNT",
+          "reason": null,
+          "state": "EXACT"
+        },
+        "before": {
+          "mode": "CONSUMED_VALIDATED_SIDECAR_NO_RECOUNT",
+          "reason": {
+            "elapsed_seconds": 3.1253782639978454,
+            "limit": 5000000,
+            "location": {
+              "phase": "IEEE streaming pivot join",
+              "pivot": 5
+            },
+            "peak_states": 12745,
+            "reason": "transition budget exceeded",
+            "states": 12745,
+            "transitions": 5000001
+          },
+          "state": "COMPUTATION_UNRESOLVED"
+        }
+      }
+    }
+  },
+  "primary": null,
+  "projection": {
+    "parity": "EXACT_QUERY_PROJECTION_CONSISTENCY",
+    "state": "PASS"
+  },
+  "query_calls": 475,
+  "query_engine_statistics": {
+    "engine": {
+      "base_global_queries": 442,
+      "branches": 39,
+      "cache_hits": 139,
+      "disjunctions": 33,
+      "find_calls": 842,
+      "max_disjunction_depth": 1
+    },
+    "factors": [
+      {
+        "augmentations": 24,
+        "matching_cache_entries": 28,
+        "matching_calls": 28,
+        "matching_certificates": 0,
+        "optimum_cache_entries": 8,
+        "optimum_cache_hits": 1202,
+        "search_nodes": 37
+      },
+      {
+        "augmentations": 10,
+        "matching_cache_entries": 16,
+        "matching_calls": 16,
+        "matching_certificates": 0,
+        "optimum_cache_entries": 4,
+        "optimum_cache_hits": 795,
+        "search_nodes": 17
+      },
+      {
+        "augmentations": 6,
+        "matching_cache_entries": 9,
+        "matching_calls": 9,
+        "matching_certificates": 2,
+        "optimum_cache_entries": 2,
+        "optimum_cache_hits": 395,
+        "search_nodes": 3
+      },
+      {
+        "augmentations": 11,
+        "matching_cache_entries": 12,
+        "matching_calls": 12,
+        "matching_certificates": 0,
+        "optimum_cache_entries": 3,
+        "optimum_cache_hits": 790,
+        "search_nodes": 13
+      },
+      {
+        "augmentations": 427,
+        "matching_cache_entries": 162,
+        "matching_calls": 162,
+        "matching_certificates": 4,
+        "optimum_cache_entries": 41,
+        "optimum_cache_hits": 4778,
+        "search_nodes": 679
+      },
+      {
+        "augmentations": 2069,
+        "matching_cache_entries": 789,
+        "matching_calls": 789,
+        "matching_certificates": 11,
+        "optimum_cache_entries": 88,
+        "optimum_cache_hits": 6871,
+        "search_nodes": 1604
+      }
+    ],
+    "query_cache_entries": 703
+  },
+  "states": {
+    "cardinality_counting": {
+      "mode": "CONSUMED_VALIDATED_SIDECAR_NO_RECOUNT",
+      "reason": null,
+      "state": "EXACT"
+    },
+    "exact_queries": {
+      "reason": null,
+      "state": "EXACT"
+    },
+    "family_construction": {
+      "reason": null,
+      "state": "COMPLETE"
+    },
+    "metric_projection": {
+      "reason": null,
+      "state": "COMPLETE"
+    },
+    "provenance_validation": {
+      "reason": null,
+      "state": "VERIFIED"
+    }
+  },
+  "status": "MULTIPLE_PERSISTENT_TRACKS"
+}

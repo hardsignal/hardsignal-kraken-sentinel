@@ -1,0 +1,282 @@
+{
+  "arm": "margin-0",
+  "audit": {
+    "cardinality": {
+      "reason": null,
+      "state": "EXACT",
+      "value_decimal": "1"
+    },
+    "limited_parity": "NOT_APPLICABLE",
+    "measurement": {
+      "counting_seconds": 0.00494166900170967,
+      "family_construction_seconds": 0.006744801008608192,
+      "integration_reconstruction_seconds": 0.015614700969308615,
+      "integration_seconds": 0.07614959200145677,
+      "memory_kib": {
+        "VmHWM": 151512,
+        "VmRSS": 75100
+      },
+      "total_seconds": 0.1197549449861981
+    },
+    "metrics": {
+      "abstained": false,
+      "alternative_path_count": 0,
+      "eligible_candidate_count": 261,
+      "invariant_path_count": 254,
+      "original_fragment_count": 5,
+      "persistent_path_count": 1,
+      "possible_path_count": 254,
+      "structural_constraint_status": "VALID_BY_EXACT_CONSTRAINTS",
+      "truth_metrics": null,
+      "truth_metrics_state": "NOT_APPLICABLE",
+      "union_link_count": 7
+    },
+    "original_parity": {
+      "old_result_sha256": "35849ff0bead03c1a51e55665eaeff273f991664aca48979dd14269638f4531d",
+      "previously_passed": true,
+      "scientific_payload_sha256": "527562a6d41a337435e9bc797550d64a1aa77f7fbbfbf8fa58925f8d2a58f3e2",
+      "state": "PASS",
+      "state_changes": {}
+    },
+    "primary": [
+      "E002_F001_C0163",
+      "E002_F003_C0005",
+      "E002_F004_C0008",
+      "E002_F005_C0065"
+    ],
+    "projection": {
+      "parity": "EXACT_QUERY_PROJECTION_CONSISTENCY",
+      "state": "PASS"
+    },
+    "query_calls": 340,
+    "query_engine_statistics": {
+      "engine": {
+        "base_global_queries": 320,
+        "branches": 63,
+        "cache_hits": 120,
+        "disjunctions": 18,
+        "find_calls": 694,
+        "max_disjunction_depth": 1
+      },
+      "factors": [
+        {
+          "augmentations": 2,
+          "matching_cache_entries": 6,
+          "matching_calls": 6,
+          "matching_certificates": 2,
+          "optimum_cache_entries": 2,
+          "optimum_cache_hits": 256,
+          "search_nodes": 2
+        },
+        {
+          "augmentations": 8,
+          "matching_cache_entries": 21,
+          "matching_calls": 21,
+          "matching_certificates": 2,
+          "optimum_cache_entries": 6,
+          "optimum_cache_hits": 1300,
+          "search_nodes": 20
+        },
+        {
+          "augmentations": 2,
+          "matching_cache_entries": 6,
+          "matching_calls": 6,
+          "matching_certificates": 2,
+          "optimum_cache_entries": 2,
+          "optimum_cache_hits": 256,
+          "search_nodes": 2
+        },
+        {
+          "augmentations": 2,
+          "matching_cache_entries": 6,
+          "matching_calls": 6,
+          "matching_certificates": 2,
+          "optimum_cache_entries": 2,
+          "optimum_cache_hits": 256,
+          "search_nodes": 2
+        },
+        {
+          "augmentations": 86,
+          "matching_cache_entries": 98,
+          "matching_calls": 98,
+          "matching_certificates": 0,
+          "optimum_cache_entries": 11,
+          "optimum_cache_hits": 2650,
+          "search_nodes": 181
+        }
+      ],
+      "query_cache_entries": 574
+    },
+    "states": {
+      "cardinality_counting": {
+        "mode": "CONSUMED_VALIDATED_SIDECAR_NO_RECOUNT",
+        "reason": null,
+        "state": "EXACT"
+      },
+      "exact_queries": {
+        "reason": null,
+        "state": "EXACT"
+      },
+      "family_construction": {
+        "reason": null,
+        "state": "COMPLETE"
+      },
+      "metric_projection": {
+        "reason": null,
+        "state": "COMPLETE"
+      },
+      "provenance_validation": {
+        "reason": null,
+        "state": "VERIFIED"
+      }
+    },
+    "status": "UNIQUE_PERSISTENT_TRACK"
+  },
+  "capture": "PIPELINE-TPMS-005-20260917-235439",
+  "counting": {
+    "certificate": {
+      "policy": "Exact monotone binary64 addition preimages; frozen chronological fold and all prefix predicates",
+      "rounding_or_quantization": false,
+      "version": "KRAKEN_DRAFT2_IEEE_MONOTONE_PIVOT_COUNT_V1"
+    },
+    "method": "KRAKEN_DRAFT2_FORCED_SINGLETON_FRONTIER_COUNT_V2 / KRAKEN_DRAFT2_IEEE_MONOTONE_PIVOT_COUNT_V1",
+    "packed_polynomial_bytes": 0,
+    "reason": null,
+    "state": "EXACT",
+    "statistics": {
+      "checkpoints": [],
+      "elapsed_seconds": 0.00494166900170967,
+      "peak_states": 40,
+      "process_peak_rss_kib": 151512,
+      "transitions": 540
+    },
+    "value_decimal": "1"
+  },
+  "eligible_per_fragment": [
+    179,
+    3,
+    4,
+    7,
+    68
+  ],
+  "episode": 2,
+  "failure": null,
+  "family_sha256": "515bf34b1ced38eb180e9cc193f1d5c1aee0b169c37fabaeb206ff609663497c",
+  "fragments_sha256": "4b6bba11338759af485f7bc7932cb56179398a191d9ddd5276f75af4290a3184",
+  "input_sha256": "097c48395cb5cabb639a74d697d03a431b941f9f64cfebafa2e23a2b3d8053ab",
+  "label": "C2-E02",
+  "model_sha256": "ada72e0d14816f6f32bb231e581d484637f95ffb65f09bfdd0293d4ae5e4e886",
+  "original_fragment_count": 5,
+  "passed": true,
+  "plan_sha256": "04739e46633155bcbdf567ae04f00c74cd196f8e9ec8d282163fc989a7284006",
+  "record": {
+    "alternative_membership_count": 0,
+    "arm": "margin-0",
+    "association_availability": "COMPLETE",
+    "association_status": "UNIQUE_PERSISTENT_TRACK",
+    "candidate_context_sha256": "4b6bba11338759af485f7bc7932cb56179398a191d9ddd5276f75af4290a3184",
+    "capture": "PIPELINE-TPMS-005-20260917-235439",
+    "cardinality": {
+      "reason": null,
+      "state": "EXACT",
+      "value_decimal": "1"
+    },
+    "certificate": {
+      "policy": "Exact monotone binary64 addition preimages; frozen chronological fold and all prefix predicates",
+      "rounding_or_quantization": false,
+      "version": "KRAKEN_DRAFT2_IEEE_MONOTONE_PIVOT_COUNT_V1"
+    },
+    "counting_transitions": 540,
+    "eligible_candidates_per_fragment": [
+      179,
+      3,
+      4,
+      7,
+      68
+    ],
+    "episode": 2,
+    "exact_backend": "KRAKEN_DRAFT2_FORCED_SINGLETON_FRONTIER_COUNT_V2 / KRAKEN_DRAFT2_IEEE_MONOTONE_PIVOT_COUNT_V1",
+    "exact_dispatch": {
+      "certificate_backend": "KRAKEN_DRAFT2_CERTIFIED_SHORT_PATH_MATCHING_COUNT_V3",
+      "composition_backend": "KRAKEN_DRAFT2_WEIGHTED_CUTOFF_PIVOT_COUNT_V1",
+      "fallback_backend": "KRAKEN_DRAFT2_FORCED_SINGLETON_FRONTIER_COUNT_V2"
+    },
+    "family_sha256": "515bf34b1ced38eb180e9cc193f1d5c1aee0b169c37fabaeb206ff609663497c",
+    "fragment_count": 5,
+    "input_sha256": "097c48395cb5cabb639a74d697d03a431b941f9f64cfebafa2e23a2b3d8053ab",
+    "invariant_membership_count": 254,
+    "model_sha256": "ada72e0d14816f6f32bb231e581d484637f95ffb65f09bfdd0293d4ae5e4e886",
+    "packed_polynomial_bytes": 0,
+    "peak_live_states": 40,
+    "persistent_track_count": 1,
+    "possible_path_count": 254,
+    "primary": [
+      "E002_F001_C0163",
+      "E002_F003_C0005",
+      "E002_F004_C0008",
+      "E002_F005_C0065"
+    ],
+    "query_calls": 340,
+    "reproduction_seconds": 0.08537794800940901,
+    "runtimes": {
+      "counting_seconds": 0.00494166900170967,
+      "family_construction_seconds": 0.006744801008608192,
+      "integration_reconstruction_seconds": 0.015614700969308615,
+      "integration_seconds": 0.07614959200145677,
+      "memory_kib": {
+        "VmHWM": 151512,
+        "VmRSS": 75100
+      },
+      "total_seconds": 0.1197549449861981
+    },
+    "sidecar_sha256": "4758222fd2fb42de0666dfe02c724b568c12ad93632b106cc431afa216fa38a6",
+    "stages": {
+      "cardinality_counting": {
+        "mode": "CONSUMED_VALIDATED_SIDECAR_NO_RECOUNT",
+        "reason": null,
+        "state": "EXACT"
+      },
+      "exact_queries": {
+        "reason": null,
+        "state": "EXACT"
+      },
+      "family_construction": {
+        "reason": null,
+        "state": "COMPLETE"
+      },
+      "metric_projection": {
+        "reason": null,
+        "state": "COMPLETE"
+      },
+      "provenance_validation": {
+        "reason": null,
+        "state": "VERIFIED"
+      }
+    },
+    "worker_peak_rss_kib": 151512
+  },
+  "reload": {
+    "memory_kib": {
+      "VmHWM": 151096,
+      "VmRSS": 75112
+    },
+    "reconstruction_seconds": 0.01726621197303757,
+    "seconds": 0.08537794800940901,
+    "state": "BYTE_IDENTICAL"
+  },
+  "reload_worker": {
+    "elapsed_seconds": 0.8010840429924428,
+    "exit_code": 0,
+    "observed_peak_rss_kib": 151096,
+    "reason": null
+  },
+  "resource_violations": [],
+  "sidecar_sha256": "4758222fd2fb42de0666dfe02c724b568c12ad93632b106cc431afa216fa38a6",
+  "structural_reason": "Every saved episode in the fixed six-capture set; no outcome selection.",
+  "worker": {
+    "elapsed_seconds": 0.801511044963263,
+    "exit_code": 0,
+    "observed_peak_rss_kib": 151512,
+    "reason": null
+  }
+}

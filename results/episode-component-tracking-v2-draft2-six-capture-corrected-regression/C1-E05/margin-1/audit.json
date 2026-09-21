@@ -1,0 +1,109 @@
+{
+  "cardinality": {
+    "reason": null,
+    "state": "EXACT",
+    "value_decimal": "31"
+  },
+  "limited_parity": "NOT_APPLICABLE",
+  "measurement": {
+    "counting_seconds": 0.0023733560228720307,
+    "family_construction_seconds": 0.0030357209616340697,
+    "integration_reconstruction_seconds": 0.007721974980086088,
+    "integration_seconds": 0.04370899999048561,
+    "memory_kib": {
+      "VmHWM": 151328,
+      "VmRSS": 71704
+    },
+    "total_seconds": 0.06924693897599354
+  },
+  "metrics": {
+    "abstained": true,
+    "alternative_path_count": 22,
+    "eligible_candidate_count": 148,
+    "invariant_path_count": 137,
+    "original_fragment_count": 6,
+    "persistent_path_count": 0,
+    "possible_path_count": 159,
+    "structural_constraint_status": "VALID_BY_EXACT_CONSTRAINTS",
+    "truth_metrics": null,
+    "truth_metrics_state": "NOT_APPLICABLE",
+    "union_link_count": 22
+  },
+  "original_parity": {
+    "old_result_sha256": "7ca175772a29f76c9b4342ac83c96735dee84a3ec5e46a953ae88225aee783f3",
+    "previously_passed": true,
+    "scientific_payload_sha256": "86f38adb0fbb85539553a672882b833b3824ef3492b44900b8e3db3b0c8ba6f3",
+    "state": "PASS",
+    "state_changes": {}
+  },
+  "primary": null,
+  "projection": {
+    "parity": "EXACT_QUERY_PROJECTION_CONSISTENCY",
+    "state": "PASS"
+  },
+  "query_calls": 177,
+  "query_engine_statistics": {
+    "engine": {
+      "base_global_queries": 168,
+      "branches": 8,
+      "cache_hits": 64,
+      "disjunctions": 7,
+      "find_calls": 375,
+      "max_disjunction_depth": 1
+    },
+    "factors": [
+      {
+        "augmentations": 2,
+        "matching_cache_entries": 6,
+        "matching_calls": 6,
+        "matching_certificates": 2,
+        "optimum_cache_entries": 2,
+        "optimum_cache_hits": 161,
+        "search_nodes": 2
+      },
+      {
+        "augmentations": 62,
+        "matching_cache_entries": 48,
+        "matching_calls": 48,
+        "matching_certificates": 2,
+        "optimum_cache_entries": 15,
+        "optimum_cache_hits": 517,
+        "search_nodes": 55
+      },
+      {
+        "augmentations": 8,
+        "matching_cache_entries": 17,
+        "matching_calls": 17,
+        "matching_certificates": 2,
+        "optimum_cache_entries": 6,
+        "optimum_cache_hits": 496,
+        "search_nodes": 15
+      }
+    ],
+    "query_cache_entries": 311
+  },
+  "states": {
+    "cardinality_counting": {
+      "mode": "CONSUMED_VALIDATED_SIDECAR_NO_RECOUNT",
+      "reason": null,
+      "state": "EXACT"
+    },
+    "exact_queries": {
+      "reason": null,
+      "state": "EXACT"
+    },
+    "family_construction": {
+      "reason": null,
+      "state": "COMPLETE"
+    },
+    "metric_projection": {
+      "reason": null,
+      "state": "COMPLETE"
+    },
+    "provenance_validation": {
+      "reason": null,
+      "state": "VERIFIED"
+    }
+  },
+  "status": "AMBIGUOUS_ASSOCIATION"
+}

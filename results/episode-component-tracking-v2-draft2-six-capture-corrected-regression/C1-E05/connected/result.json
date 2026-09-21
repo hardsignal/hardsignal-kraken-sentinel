@@ -1,0 +1,6600 @@
+{
+  "association": {
+    "alternative_membership": null,
+    "connected_groups": [
+      {
+        "candidate_ids": [
+          "E005_F006_C0001"
+        ],
+        "coherent": true,
+        "coverage": 0.16666666666666666,
+        "flags": [
+          "SINGLE_OBSERVATION"
+        ],
+        "frequency_range_within_limit": true,
+        "group_median_frequency_hz": -11059.232811498672,
+        "member_fragment_indices": [
+          6
+        ],
+        "missing_fragment_indices": [
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "observed_group_range_hz": 0.0,
+        "one_candidate_per_fragment": true,
+        "persistent": false,
+        "summary": {
+          "adjacent_observed_frequency_differences_hz": null,
+          "mad_hz": null,
+          "maximum_hz": -11059.232811498672,
+          "median_contrast_db": 11.62666903163495,
+          "median_hz": -11059.232811498672,
+          "median_width_hz": 4.577497024625554,
+          "minimum_contrast_db": 11.62666903163495,
+          "minimum_hz": -11059.232811498672,
+          "range_hz": null
+        },
+        "support_count": 1,
+        "track_id": "T001"
+      },
+      {
+        "candidate_ids": [
+          "E005_F002_C0001"
+        ],
+        "coherent": true,
+        "coverage": 0.16666666666666666,
+        "flags": [
+          "SINGLE_OBSERVATION"
+        ],
+        "frequency_range_within_limit": true,
+        "group_median_frequency_hz": -11043.211571912478,
+        "member_fragment_indices": [
+          2
+        ],
+        "missing_fragment_indices": [
+          1,
+          3,
+          4,
+          5,
+          6
+        ],
+        "observed_group_range_hz": 0.0,
+        "one_candidate_per_fragment": true,
+        "persistent": false,
+        "summary": {
+          "adjacent_observed_frequency_differences_hz": null,
+          "mad_hz": null,
+          "maximum_hz": -11043.211571912478,
+          "median_contrast_db": 10.062224959149027,
+          "median_hz": -11043.211571912478,
+          "median_width_hz": 2.2887485123136133,
+          "minimum_contrast_db": 10.062224959149027,
+          "minimum_hz": -11043.211571912478,
+          "range_hz": null
+        },
+        "support_count": 1,
+        "track_id": "T002"
+      },
+      {
+        "candidate_ids": [
+          "E005_F006_C0002"
+        ],
+        "coherent": true,
+        "coverage": 0.16666666666666666,
+        "flags": [
+          "SINGLE_OBSERVATION"
+        ],
+        "frequency_range_within_limit": true,
+        "group_median_frequency_hz": -11043.211571912478,
+        "member_fragment_indices": [
+          6
+        ],
+        "missing_fragment_indices": [
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "observed_group_range_hz": 0.0,
+        "one_candidate_per_fragment": true,
+        "persistent": false,
+        "summary": {
+          "adjacent_observed_frequency_differences_hz": null,
+          "mad_hz": null,
+          "maximum_hz": -11043.211571912478,
+          "median_contrast_db": 11.891892530677096,
+          "median_hz": -11043.211571912478,
+          "median_width_hz": 5.721871280782434,
+          "minimum_contrast_db": 11.891892530677096,
+          "minimum_hz": -11043.211571912478,
+          "range_hz": null
+        },
+        "support_count": 1,
+        "track_id": "T003"
+      },
+      {
+        "candidate_ids": [
+          "E005_F002_C0002"
+        ],
+        "coherent": true,
+        "coverage": 0.16666666666666666,
+        "flags": [
+          "SINGLE_OBSERVATION"
+        ],
+        "frequency_range_within_limit": true,
+        "group_median_frequency_hz": -11039.778449144007,
+        "member_fragment_indices": [
+          2
+        ],
+        "missing_fragment_indices": [
+          1,
+          3,
+          4,
+          5,
+          6
+        ],
+        "observed_group_range_hz": 0.0,
+        "one_candidate_per_fragment": true,
+        "persistent": false,
+        "summary": {
+          "adjacent_observed_frequency_differences_hz": null,
+          "mad_hz": null,
+          "maximum_hz": -11039.778449144007,
+          "median_contrast_db": 11.133140786384317,
+          "median_hz": -11039.778449144007,
+          "median_width_hz": 4.577497024627373,
+          "minimum_contrast_db": 11.133140786384317,
+          "minimum_hz": -11039.778449144007,
+          "range_hz": null
+        },
+        "support_count": 1,
+        "track_id": "T004"
+      },
+      {
+        "candidate_ids": [
+          "E005_F002_C0003"
+        ],
+        "coherent": true,
+        "coverage": 0.16666666666666666,
+        "flags": [
+          "SINGLE_OBSERVATION"
+        ],
+        "frequency_range_within_limit": true,
+        "group_median_frequency_hz": -11032.912203607066,
+        "member_fragment_indices": [
+          2
+        ],
+        "missing_fragment_indices": [
+          1,
+          3,
+          4,
+          5,
+          6
+        ],
+        "observed_group_range_hz": 0.0,
+        "one_candidate_per_fragment": true,
+        "persistent": false,
+        "summary": {
+          "adjacent_observed_frequency_differences_hz": null,
+          "mad_hz": null,
+          "maximum_hz": -11032.912203607066,
+          "median_contrast_db": 10.664458112250763,
+          "median_hz": -11032.912203607066,
+          "median_width_hz": 2.2887485123136133,
+          "minimum_contrast_db": 10.664458112250763,
+          "minimum_hz": -11032.912203607066,
+          "range_hz": null
+        },
+        "support_count": 1,
+        "track_id": "T005"
+      },
+      {
+        "candidate_ids": [
+          "E005_F006_C0003"
+        ],
+        "coherent": true,
+        "coverage": 0.16666666666666666,
+        "flags": [
+          "SINGLE_OBSERVATION"
+        ],
+        "frequency_range_within_limit": true,
+        "group_median_frequency_hz": -11030.623455094754,
+        "member_fragment_indices": [
+          6
+        ],
+        "missing_fragment_indices": [
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "observed_group_range_hz": 0.0,
+        "one_candidate_per_fragment": true,
+        "persistent": false,
+        "summary": {
+          "adjacent_observed_frequency_differences_hz": null,
+          "mad_hz": null,
+          "maximum_hz": -11030.623455094754,
+          "median_contrast_db": 11.155982648236513,
+          "median_hz": -11030.623455094754,
+          "median_width_hz": 6.866245536941133,
+          "minimum_contrast_db": 11.155982648236513,
+          "minimum_hz": -11030.623455094754,
+          "range_hz": null
+        },
+        "support_count": 1,
+        "track_id": "T006"
+      },
+      {
+        "candidate_ids": [
+          "E005_F002_C0004"
+        ],
+        "coherent": true,
+        "coverage": 0.16666666666666666,
+        "flags": [
+          "SINGLE_OBSERVATION"
+        ],
+        "frequency_range_within_limit": true,
+        "group_median_frequency_hz": -11026.045958070126,
+        "member_fragment_indices": [
+          2
+        ],
+        "missing_fragment_indices": [
+          1,
+          3,
+          4,
+          5,
+          6
+        ],
+        "observed_group_range_hz": 0.0,
+        "one_candidate_per_fragment": true,
+        "persistent": false,
+        "summary": {
+          "adjacent_observed_frequency_differences_hz": null,
+          "mad_hz": null,
+          "maximum_hz": -11026.045958070126,
+          "median_contrast_db": 11.106338863627359,
+          "median_hz": -11026.045958070126,
+          "median_width_hz": 5.721871280784253,
+          "minimum_contrast_db": 11.106338863627359,
+          "minimum_hz": -11026.045958070126,
+          "range_hz": null
+        },
+        "support_count": 1,
+        "track_id": "T007"
+      },
+      {
+        "candidate_ids": [
+          "E005_F006_C0004"
+        ],
+        "coherent": true,
+        "coverage": 0.16666666666666666,
+        "flags": [
+          "SINGLE_OBSERVATION"
+        ],
+        "frequency_range_within_limit": true,
+        "group_median_frequency_hz": -11022.612835301656,
+        "member_fragment_indices": [
+          6
+        ],
+        "missing_fragment_indices": [
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "observed_group_range_hz": 0.0,
+        "one_candidate_per_fragment": true,
+        "persistent": false,
+        "summary": {
+          "adjacent_observed_frequency_differences_hz": null,
+          "mad_hz": null,
+          "maximum_hz": -11022.612835301656,
+          "median_contrast_db": 10.691131180702161,
+          "median_hz": -11022.612835301656,
+          "median_width_hz": 4.577497024627373,
+          "minimum_contrast_db": 10.691131180702161,
+          "minimum_hz": -11022.612835301656,
+          "range_hz": null
+        },
+        "support_count": 1,
+        "track_id": "T008"
+      },
+      {
+        "candidate_ids": [
+          "E005_F002_C0005"
+        ],
+        "coherent": true,
+        "coverage": 0.16666666666666666,
+        "flags": [
+          "SINGLE_OBSERVATION"
+        ],
+        "frequency_range_within_limit": true,
+        "group_median_frequency_hz": -11020.324086789342,
+        "member_fragment_indices": [
+          2
+        ],
+        "missing_fragment_indices": [
+          1,
+          3,
+          4,
+          5,
+          6
+        ],
+        "observed_group_range_hz": 0.0,
+        "one_candidate_per_fragment": true,
+        "persistent": false,
+        "summary": {
+          "adjacent_observed_frequency_differences_hz": null,
+          "mad_hz": null,
+          "maximum_hz": -11020.324086789342,
+          "median_contrast_db": 11.975956302464756,
+          "median_hz": -11020.324086789342,
+          "median_width_hz": 2.2887485123136133,
+          "minimum_contrast_db": 11.975956302464756,
+          "minimum_hz": -11020.324086789342,
+          "range_hz": null
+        },
+        "support_count": 1,
+        "track_id": "T009"
+      },
+      {
+        "candidate_ids": [
+          "E005_F002_C0006"
+        ],
+        "coherent": true,
+        "coverage": 0.16666666666666666,
+        "flags": [
+          "SINGLE_OBSERVATION"
+        ],
+        "frequency_range_within_limit": true,
+        "group_median_frequency_hz": -11015.746589764716,
+        "member_fragment_indices": [
+          2
+        ],
+        "missing_fragment_indices": [
+          1,
+          3,
+          4,
+          5,
+          6
+        ],
+        "observed_group_range_hz": 0.0,
+        "one_candidate_per_fragment": true,
+        "persistent": false,
+        "summary": {
+          "adjacent_observed_frequency_differences_hz": null,
+          "mad_hz": null,
+          "maximum_hz": -11015.746589764716,
+          "median_contrast_db": 15.148894717800436,
+          "median_hz": -11015.746589764716,
+          "median_width_hz": 5.721871280782434,
+          "minimum_contrast_db": 15.148894717800436,
+          "minimum_hz": -11015.746589764716,
+          "range_hz": null
+        },
+        "support_count": 1,
+        "track_id": "T010"
+      },
+      {
+        "candidate_ids": [
+          "E005_F006_C0005"
+        ],
+        "coherent": true,
+        "coverage": 0.16666666666666666,
+        "flags": [
+          "SINGLE_OBSERVATION"
+        ],
+        "frequency_range_within_limit": true,
+        "group_median_frequency_hz": -11014.60221550856,
+        "member_fragment_indices": [
+          6
+        ],
+        "missing_fragment_indices": [
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "observed_group_range_hz": 0.0,
+        "one_candidate_per_fragment": true,
+        "persistent": false,
+        "summary": {
+          "adjacent_observed_frequency_differences_hz": null,
+          "mad_hz": null,
+          "maximum_hz": -11014.60221550856,
+          "median_contrast_db": 11.84201566575139,
+          "median_hz": -11014.60221550856,
+          "median_width_hz": 5.721871280784253,
+          "minimum_contrast_db": 11.84201566575139,
+          "minimum_hz": -11014.60221550856,
+          "range_hz": null
+        },
+        "support_count": 1,
+        "track_id": "T011"
+      },
+      {
+        "candidate_ids": [
+          "E005_F002_C0007"
+        ],
+        "coherent": true,
+        "coverage": 0.16666666666666666,
+        "flags": [
+          "SINGLE_OBSERVATION"
+        ],
+        "frequency_range_within_limit": true,
+        "group_median_frequency_hz": -11007.735969971618,
+        "member_fragment_indices": [
+          2
+        ],
+        "missing_fragment_indices": [
+          1,
+          3,
+          4,
+          5,
+          6
+        ],
+        "observed_group_range_hz": 0.0,
+        "one_candidate_per_fragment": true,
+        "persistent": false,
+        "summary": {
+          "adjacent_observed_frequency_differences_hz": null,
+          "mad_hz": null,
+          "maximum_hz": -11007.735969971618,
+          "median_contrast_db": 13.307171286078713,
+          "median_hz": -11007.735969971618,
+          "median_width_hz": 4.577497024627373,
+          "minimum_contrast_db": 13.307171286078713,
+          "minimum_hz": -11007.735969971618,
+          "range_hz": null
+        },
+        "support_count": 1,
+        "track_id": "T012"
+      },
+      {
+        "candidate_ids": [
+          "E005_F006_C0006"
+        ],
+        "coherent": true,
+        "coverage": 0.16666666666666666,
+        "flags": [
+          "SINGLE_OBSERVATION"
+        ],
+        "frequency_range_within_limit": true,
+        "group_median_frequency_hz": -11005.447221459304,
+        "member_fragment_indices": [
+          6
+        ],
+        "missing_fragment_indices": [
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "observed_group_range_hz": 0.0,
+        "one_candidate_per_fragment": true,
+        "persistent": false,
+        "summary": {
+          "adjacent_observed_frequency_differences_hz": null,
+          "mad_hz": null,
+          "maximum_hz": -11005.447221459304,
+          "median_contrast_db": 10.93605385682414,
+          "median_hz": -11005.447221459304,
+          "median_width_hz": 11.443742561566832,
+          "minimum_contrast_db": 10.93605385682414,
+          "minimum_hz": -11005.447221459304,
+          "range_hz": null
+        },
+        "support_count": 1,
+        "track_id": "T013"
+      },
+      {
+        "candidate_ids": [
+          "E005_F002_C0008"
+        ],
+        "coherent": true,
+        "coverage": 0.16666666666666666,
+        "flags": [
+          "SINGLE_OBSERVATION"
+        ],
+        "frequency_range_within_limit": true,
+        "group_median_frequency_hz": -10997.436601666208,
+        "member_fragment_indices": [
+          2
+        ],
+        "missing_fragment_indices": [
+          1,
+          3,
+          4,
+          5,
+          6
+        ],
+        "observed_group_range_hz": 0.0,
+        "one_candidate_per_fragment": true,
+        "persistent": false,
+        "summary": {
+          "adjacent_observed_frequency_differences_hz": null,
+          "mad_hz": null,
+          "maximum_hz": -10997.436601666208,
+          "median_contrast_db": 17.005809161033454,
+          "median_hz": -10997.436601666208,
+          "median_width_hz": 10.299368305409953,
+          "minimum_contrast_db": 17.005809161033454,
+          "minimum_hz": -10997.436601666208,
+          "range_hz": null
+        },
+        "support_count": 1,
+        "track_id": "T014"
+      },
+      {
+        "candidate_ids": [
+          "E005_F006_C0007"
+        ],
+        "coherent": true,
+        "coverage": 0.16666666666666666,
+        "flags": [
+          "SINGLE_OBSERVATION"
+        ],
+        "frequency_range_within_limit": true,
+        "group_median_frequency_hz": -10989.42598187311,
+        "member_fragment_indices": [
+          6
+        ],
+        "missing_fragment_indices": [
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "observed_group_range_hz": 0.0,
+        "one_candidate_per_fragment": true,
+        "persistent": false,
+        "summary": {
+          "adjacent_observed_frequency_differences_hz": null,
+          "mad_hz": null,
+          "maximum_hz": -10989.42598187311,
+          "median_contrast_db": 10.3404195634977,
+          "median_hz": -10989.42598187311,
+          "median_width_hz": 8.010619793096193,
+          "minimum_contrast_db": 10.3404195634977,
+          "minimum_hz": -10989.42598187311,
+          "range_hz": null
+        },
+        "support_count": 1,
+        "track_id": "T015"
+      },
+      {
+        "candidate_ids": [
+          "E005_F002_C0009"
+        ],
+        "coherent": true,
+        "coverage": 0.16666666666666666,
+        "flags": [
+          "SINGLE_OBSERVATION"
+        ],
+        "frequency_range_within_limit": true,
+        "group_median_frequency_hz": -10984.848484848484,
+        "member_fragment_indices": [
+          2
+        ],
+        "missing_fragment_indices": [
+          1,
+          3,
+          4,
+          5,
+          6
+        ],
+        "observed_group_range_hz": 0.0,
+        "one_candidate_per_fragment": true,
+        "persistent": false,
+        "summary": {
+          "adjacent_observed_frequency_differences_hz": null,
+          "mad_hz": null,
+          "maximum_hz": -10984.848484848484,
+          "median_contrast_db": 17.262327572331213,
+          "median_hz": -10984.848484848484,
+          "median_width_hz": 10.299368305411772,
+          "minimum_contrast_db": 17.262327572331213,
+          "minimum_hz": -10984.848484848484,
+          "range_hz": null
+        },
+        "support_count": 1,
+        "track_id": "T016"
+      },
+      {
+        "candidate_ids": [
+          "E005_F002_C0010"
+        ],
+        "coherent": true,
+        "coverage": 0.16666666666666666,
+        "flags": [
+          "SINGLE_OBSERVATION"
+        ],
+        "frequency_range_within_limit": true,
+        "group_median_frequency_hz": -10974.549116543074,
+        "member_fragment_indices": [
+          2
+        ],
+        "missing_fragment_indices": [
+          1,
+          3,
+          4,
+          5,
+          6
+        ],
+        "observed_group_range_hz": 0.0,
+        "one_candidate_per_fragment": true,
+        "persistent": false,
+        "summary": {
+          "adjacent_observed_frequency_differences_hz": null,
+          "mad_hz": null,
+          "maximum_hz": -10974.549116543074,
+          "median_contrast_db": 11.019107600976156,
+          "median_hz": -10974.549116543074,
+          "median_width_hz": 4.577497024625554,
+          "minimum_contrast_db": 11.019107600976156,
+          "minimum_hz": -10974.549116543074,
+          "range_hz": null
+        },
+        "support_count": 1,
+        "track_id": "T017"
+      },
+      {
+        "candidate_ids": [
+          "E005_F002_C0011"
+        ],
+        "coherent": true,
+        "coverage": 0.16666666666666666,
+        "flags": [
+          "SINGLE_OBSERVATION"
+        ],
+        "frequency_range_within_limit": true,
+        "group_median_frequency_hz": -10967.682871006133,
+        "member_fragment_indices": [
+          2
+        ],
+        "missing_fragment_indices": [
+          1,
+          3,
+          4,
+          5,
+          6
+        ],
+        "observed_group_range_hz": 0.0,
+        "one_candidate_per_fragment": true,
+        "persistent": false,
+        "summary": {
+          "adjacent_observed_frequency_differences_hz": null,
+          "mad_hz": null,
+          "maximum_hz": -10967.682871006133,
+          "median_contrast_db": 16.24512735768289,
+          "median_hz": -10967.682871006133,
+          "median_width_hz": 10.299368305409953,
+          "minimum_contrast_db": 16.24512735768289,
+          "minimum_hz": -10967.682871006133,
+          "range_hz": null
+        },
+        "support_count": 1,
+        "track_id": "T018"
+      },
+      {
+        "candidate_ids": [
+          "E005_F002_C0012"
+        ],
+        "coherent": true,
+        "coverage": 0.16666666666666666,
+        "flags": [
+          "SINGLE_OBSERVATION"
+        ],
+        "frequency_range_within_limit": true,
+        "group_median_frequency_hz": -10957.383502700723,
+        "member_fragment_indices": [
+          2
+        ],
+        "missing_fragment_indices": [
+          1,
+          3,
+          4,
+          5,
+          6
+        ],
+        "observed_group_range_hz": 0.0,
+        "one_candidate_per_fragment": true,
+        "persistent": false,
+        "summary": {
+          "adjacent_observed_frequency_differences_hz": null,
+          "mad_hz": null,
+          "maximum_hz": -10957.383502700723,
+          "median_contrast_db": 12.929838297517783,
+          "median_hz": -10957.383502700723,
+          "median_width_hz": 5.721871280784253,
+          "minimum_contrast_db": 12.929838297517783,
+          "minimum_hz": -10957.383502700723,
+          "range_hz": null
+        },
+        "support_count": 1,
+        "track_id": "T019"
+      },
+      {
+        "candidate_ids": [
+          "E005_F002_C0013"
+        ],
+        "coherent": true,
+        "coverage": 0.16666666666666666,
+        "flags": [
+          "SINGLE_OBSERVATION"
+        ],
+        "frequency_range_within_limit": true,
+        "group_median_frequency_hz": -10949.372882907624,
+        "member_fragment_indices": [
+          2
+        ],
+        "missing_fragment_indices": [
+          1,
+          3,
+          4,
+          5,
+          6
+        ],
+        "observed_group_range_hz": 0.0,
+        "one_candidate_per_fragment": true,
+        "persistent": false,
+        "summary": {
+          "adjacent_observed_frequency_differences_hz": null,
+          "mad_hz": null,
+          "maximum_hz": -10949.372882907624,
+          "median_contrast_db": 15.54340969024966,
+          "median_hz": -10949.372882907624,
+          "median_width_hz": 4.577497024627373,
+          "minimum_contrast_db": 15.54340969024966,
+          "minimum_hz": -10949.372882907624,
+          "range_hz": null
+        },
+        "support_count": 1,
+        "track_id": "T020"
+      },
+      {
+        "candidate_ids": [
+          "E005_F002_C0014"
+        ],
+        "coherent": true,
+        "coverage": 0.16666666666666666,
+        "flags": [
+          "SINGLE_OBSERVATION"
+        ],
+        "frequency_range_within_limit": true,
+        "group_median_frequency_hz": -10943.651011626842,
+        "member_fragment_indices": [
+          2
+        ],
+        "missing_fragment_indices": [
+          1,
+          3,
+          4,
+          5,
+          6
+        ],
+        "observed_group_range_hz": 0.0,
+        "one_candidate_per_fragment": true,
+        "persistent": false,
+        "summary": {
+          "adjacent_observed_frequency_differences_hz": null,
+          "mad_hz": null,
+          "maximum_hz": -10943.651011626842,
+          "median_contrast_db": 11.44120971104677,
+          "median_hz": -10943.651011626842,
+          "median_width_hz": 3.433122768470493,
+          "minimum_contrast_db": 11.44120971104677,
+          "minimum_hz": -10943.651011626842,
+          "range_hz": null
+        },
+        "support_count": 1,
+        "track_id": "T021"
+      },
+      {
+        "candidate_ids": [
+          "E005_F002_C0015"
+        ],
+        "coherent": true,
+        "coverage": 0.16666666666666666,
+        "flags": [
+          "SINGLE_OBSERVATION"
+        ],
+        "frequency_range_within_limit": true,
+        "group_median_frequency_hz": -10937.929140346057,
+        "member_fragment_indices": [
+          2
+        ],
+        "missing_fragment_indices": [
+          1,
+          3,
+          4,
+          5,
+          6
+        ],
+        "observed_group_range_hz": 0.0,
+        "one_candidate_per_fragment": true,
+        "persistent": false,
+        "summary": {
+          "adjacent_observed_frequency_differences_hz": null,
+          "mad_hz": null,
+          "maximum_hz": -10937.929140346057,
+          "median_contrast_db": 13.591854282226073,
+          "median_hz": -10937.929140346057,
+          "median_width_hz": 4.577497024627373,
+          "minimum_contrast_db": 13.591854282226073,
+          "minimum_hz": -10937.929140346057,
+          "range_hz": null
+        },
+        "support_count": 1,
+        "track_id": "T022"
+      },
+      {
+        "candidate_ids": [
+          "E005_F006_C0008"
+        ],
+        "coherent": true,
+        "coverage": 0.16666666666666666,
+        "flags": [
+          "SINGLE_OBSERVATION"
+        ],
+        "frequency_range_within_limit": true,
+        "group_median_frequency_hz": -10934.496017577587,
+        "member_fragment_indices": [
+          6
+        ],
+        "missing_fragment_indices": [
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "observed_group_range_hz": 0.0,
+        "one_candidate_per_fragment": true,
+        "persistent": false,
+        "summary": {
+          "adjacent_observed_frequency_differences_hz": null,
+          "mad_hz": null,
+          "maximum_hz": -10934.496017577587,
+          "median_contrast_db": 11.778271410976695,
+          "median_hz": -10934.496017577587,
+          "median_width_hz": 11.443742561566832,
+          "minimum_contrast_db": 11.778271410976695,
+          "minimum_hz": -10934.496017577587,
+          "range_hz": null
+        },
+        "support_count": 1,
+        "track_id": "T023"
+      },
+      {
+        "candidate_ids": [
+          "E005_F002_C0016"
+        ],
+        "coherent": true,
+        "coverage": 0.16666666666666666,
+        "flags": [
+          "SINGLE_OBSERVATION"
+        ],
+        "frequency_range_within_limit": true,
+        "group_median_frequency_hz": -10931.062894809118,
+        "member_fragment_indices": [
+          2
+        ],
+        "missing_fragment_indices": [
+          1,
+          3,
+          4,
+          5,
+          6
+        ],
+        "observed_group_range_hz": 0.0,
+        "one_candidate_per_fragment": true,
+        "persistent": false,
+        "summary": {
+          "adjacent_observed_frequency_differences_hz": null,
+          "mad_hz": null,
+          "maximum_hz": -10931.062894809118,
+          "median_contrast_db": 10.801851931575438,
+          "median_hz": -10931.062894809118,
+          "median_width_hz": 3.433122768470493,
+          "minimum_contrast_db": 10.801851931575438,
+          "minimum_hz": -10931.062894809118,
+          "range_hz": null
+        },
+        "support_count": 1,
+        "track_id": "T024"
+      },
+      {
+        "candidate_ids": [
+          "E005_F002_C0017"
+        ],
+        "coherent": true,
+        "coverage": 0.16666666666666666,
+        "flags": [
+          "SINGLE_OBSERVATION"
+        ],
+        "frequency_range_within_limit": true,
+        "group_median_frequency_hz": -10925.341023528334,
+        "member_fragment_indices": [
+          2
+        ],
+        "missing_fragment_indices": [
+          1,
+          3,
+          4,
+          5,
+          6
+        ],
+        "observed_group_range_hz": 0.0,
+        "one_candidate_per_fragment": true,
+        "persistent": false,
+        "summary": {
+          "adjacent_observed_frequency_differences_hz": null,
+          "mad_hz": null,
+          "maximum_hz": -10925.341023528334,
+          "median_contrast_db": 12.349220188348669,
+          "median_hz": -10925.341023528334,
+          "median_width_hz": 3.433122768470493,
+          "minimum_contrast_db": 12.349220188348669,
+          "minimum_hz": -10925.341023528334,
+          "range_hz": null
+        },
+        "support_count": 1,
+        "track_id": "T025"
+      },
+      {
+        "candidate_ids": [
+          "E005_F002_C0018"
+        ],
+        "coherent": true,
+        "coverage": 0.16666666666666666,
+        "flags": [
+          "SINGLE_OBSERVATION"
+        ],
+        "frequency_range_within_limit": true,
+        "group_median_frequency_hz": -10920.763526503706,
+        "member_fragment_indices": [
+          2
+        ],
+        "missing_fragment_indices": [
+          1,
+          3,
+          4,
+          5,
+          6
+        ],
+        "observed_group_range_hz": 0.0,
+        "one_candidate_per_fragment": true,
+        "persistent": false,
+        "summary": {
+          "adjacent_observed_frequency_differences_hz": null,
+          "mad_hz": null,
+          "maximum_hz": -10920.763526503706,
+          "median_contrast_db": 10.515496634414891,
+          "median_hz": -10920.763526503706,
+          "median_width_hz": 3.433122768470493,
+          "minimum_contrast_db": 10.515496634414891,
+          "minimum_hz": -10920.763526503706,
+          "range_hz": null
+        },
+        "support_count": 1,
+        "track_id": "T026"
+      },
+      {
+        "candidate_ids": [
+          "E005_F006_C0009"
+        ],
+        "coherent": true,
+        "coverage": 0.16666666666666666,
+        "flags": [
+          "SINGLE_OBSERVATION"
+        ],
+        "frequency_range_within_limit": true,
+        "group_median_frequency_hz": -10918.474777991392,
+        "member_fragment_indices": [
+          6
+        ],
+        "missing_fragment_indices": [
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "observed_group_range_hz": 0.0,
+        "one_candidate_per_fragment": true,
+        "persistent": false,
+        "summary": {
+          "adjacent_observed_frequency_differences_hz": null,
+          "mad_hz": null,
+          "maximum_hz": -10918.474777991392,
+          "median_contrast_db": 11.063342271546855,
+          "median_hz": -10918.474777991392,
+          "median_width_hz": 9.154994049253073,
+          "minimum_contrast_db": 11.063342271546855,
+          "minimum_hz": -10918.474777991392,
+          "range_hz": null
+        },
+        "support_count": 1,
+        "track_id": "T027"
+      },
+      {
+        "candidate_ids": [
+          "E005_F006_C0010"
+        ],
+        "coherent": true,
+        "coverage": 0.16666666666666666,
+        "flags": [
+          "SINGLE_OBSERVATION"
+        ],
+        "frequency_range_within_limit": true,
+        "group_median_frequency_hz": -10905.886661173668,
+        "member_fragment_indices": [
+          6
+        ],
+        "missing_fragment_indices": [
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "observed_group_range_hz": 0.0,
+        "one_candidate_per_fragment": true,
+        "persistent": false,
+        "summary": {
+          "adjacent_observed_frequency_differences_hz": null,
+          "mad_hz": null,
+          "maximum_hz": -10905.886661173668,
+          "median_contrast_db": 10.12746684281092,
+          "median_hz": -10905.886661173668,
+          "median_width_hz": 10.299368305409953,
+          "minimum_contrast_db": 10.12746684281092,
+          "minimum_hz": -10905.886661173668,
+          "range_hz": null
+        },
+        "support_count": 1,
+        "track_id": "T028"
+      },
+      {
+        "candidate_ids": [
+          "E005_F006_C0011"
+        ],
+        "coherent": true,
+        "coverage": 0.16666666666666666,
+        "flags": [
+          "SINGLE_OBSERVATION"
+        ],
+        "frequency_range_within_limit": true,
+        "group_median_frequency_hz": -10641.536208001464,
+        "member_fragment_indices": [
+          6
+        ],
+        "missing_fragment_indices": [
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "observed_group_range_hz": 0.0,
+        "one_candidate_per_fragment": true,
+        "persistent": false,
+        "summary": {
+          "adjacent_observed_frequency_differences_hz": null,
+          "mad_hz": null,
+          "maximum_hz": -10641.536208001464,
+          "median_contrast_db": 10.048953089020273,
+          "median_hz": -10641.536208001464,
+          "median_width_hz": 3.433122768470493,
+          "minimum_contrast_db": 10.048953089020273,
+          "minimum_hz": -10641.536208001464,
+          "range_hz": null
+        },
+        "support_count": 1,
+        "track_id": "T029"
+      },
+      {
+        "candidate_ids": [
+          "E005_F001_C0001"
+        ],
+        "coherent": true,
+        "coverage": 0.16666666666666666,
+        "flags": [
+          "SINGLE_OBSERVATION"
+        ],
+        "frequency_range_within_limit": true,
+        "group_median_frequency_hz": -9882.816076169549,
+        "member_fragment_indices": [
+          1
+        ],
+        "missing_fragment_indices": [
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        "observed_group_range_hz": 0.0,
+        "one_candidate_per_fragment": true,
+        "persistent": false,
+        "summary": {
+          "adjacent_observed_frequency_differences_hz": null,
+          "mad_hz": null,
+          "maximum_hz": -9882.816076169549,
+          "median_contrast_db": 10.359377026659072,
+          "median_hz": -9882.816076169549,
+          "median_width_hz": 183.09988098507864,
+          "minimum_contrast_db": 10.359377026659072,
+          "minimum_hz": -9882.816076169549,
+          "range_hz": null
+        },
+        "support_count": 1,
+        "track_id": "T030"
+      },
+      {
+        "candidate_ids": [
+          "E005_F004_C0001"
+        ],
+        "coherent": true,
+        "coverage": 0.16666666666666666,
+        "flags": [
+          "SINGLE_OBSERVATION"
+        ],
+        "frequency_range_within_limit": true,
+        "group_median_frequency_hz": -8818.548017943787,
+        "member_fragment_indices": [
+          4
+        ],
+        "missing_fragment_indices": [
+          1,
+          2,
+          3,
+          5,
+          6
+        ],
+        "observed_group_range_hz": 0.0,
+        "one_candidate_per_fragment": true,
+        "persistent": false,
+        "summary": {
+          "adjacent_observed_frequency_differences_hz": null,
+          "mad_hz": null,
+          "maximum_hz": -8818.548017943787,
+          "median_contrast_db": 10.70131157872246,
+          "median_hz": -8818.548017943787,
+          "median_width_hz": 13.732491073880446,
+          "minimum_contrast_db": 10.70131157872246,
+          "minimum_hz": -8818.548017943787,
+          "range_hz": null
+        },
+        "support_count": 1,
+        "track_id": "T031"
+      },
+      {
+        "candidate_ids": [
+          "E005_F004_C0002"
+        ],
+        "coherent": true,
+        "coverage": 0.16666666666666666,
+        "flags": [
+          "SINGLE_OBSERVATION"
+        ],
+        "frequency_range_within_limit": true,
+        "group_median_frequency_hz": -8809.393023894534,
+        "member_fragment_indices": [
+          4
+        ],
+        "missing_fragment_indices": [
+          1,
+          2,
+          3,
+          5,
+          6
+        ],
+        "observed_group_range_hz": 0.0,
+        "one_candidate_per_fragment": true,
+        "persistent": false,
+        "summary": {
+          "adjacent_observed_frequency_differences_hz": null,
+          "mad_hz": null,
+          "maximum_hz": -8809.393023894534,
+          "median_contrast_db": 10.080065339258319,
+          "median_hz": -8809.393023894534,
+          "median_width_hz": 11.443742561566687,
+          "minimum_contrast_db": 10.080065339258319,
+          "minimum_hz": -8809.393023894534,
+          "range_hz": null
+        },
+        "support_count": 1,
+        "track_id": "T032"
+      },
+      {
+        "candidate_ids": [
+          "E005_F004_C0003"
+        ],
+        "coherent": true,
+        "coverage": 0.16666666666666666,
+        "flags": [
+          "SINGLE_OBSERVATION"
+        ],
+        "frequency_range_within_limit": true,
+        "group_median_frequency_hz": -8795.660532820653,
+        "member_fragment_indices": [
+          4
+        ],
+        "missing_fragment_indices": [
+          1,
+          2,
+          3,
+          5,
+          6
+        ],
+        "observed_group_range_hz": 0.0,
+        "one_candidate_per_fragment": true,
+        "persistent": false,
+        "summary": {
+          "adjacent_observed_frequency_differences_hz": null,
+          "mad_hz": null,
+          "maximum_hz": -8795.660532820653,
+          "median_contrast_db": 10.572433258411655,
+          "median_hz": -8795.660532820653,
+          "median_width_hz": 6.866245536939167,
+          "minimum_contrast_db": 10.572433258411655,
+          "minimum_hz": -8795.660532820653,
+          "range_hz": null
+        },
+        "support_count": 1,
+        "track_id": "T033"
+      },
+      {
+        "candidate_ids": [
+          "E005_F006_C0012"
+        ],
+        "coherent": true,
+        "coverage": 0.16666666666666666,
+        "flags": [
+          "SINGLE_OBSERVATION"
+        ],
+        "frequency_range_within_limit": true,
+        "group_median_frequency_hz": -7318.27336812231,
+        "member_fragment_indices": [
+          6
+        ],
+        "missing_fragment_indices": [
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "observed_group_range_hz": 0.0,
+        "one_candidate_per_fragment": true,
+        "persistent": false,
+        "summary": {
+          "adjacent_observed_frequency_differences_hz": null,
+          "mad_hz": null,
+          "maximum_hz": -7318.27336812231,
+          "median_contrast_db": 10.658137710121737,
+          "median_hz": -7318.27336812231,
+          "median_width_hz": 4.577497024627373,
+          "minimum_contrast_db": 10.658137710121737,
+          "minimum_hz": -7318.27336812231,
+          "range_hz": null
+        },
+        "support_count": 1,
+        "track_id": "T034"
+      },
+      {
+        "candidate_ids": [
+          "E005_F006_C0013"
+        ],
+        "coherent": true,
+        "coverage": 0.16666666666666666,
+        "flags": [
+          "SINGLE_OBSERVATION"
+        ],
+        "frequency_range_within_limit": true,
+        "group_median_frequency_hz": -7302.252128536115,
+        "member_fragment_indices": [
+          6
+        ],
+        "missing_fragment_indices": [
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "observed_group_range_hz": 0.0,
+        "one_candidate_per_fragment": true,
+        "persistent": false,
+        "summary": {
+          "adjacent_observed_frequency_differences_hz": null,
+          "mad_hz": null,
+          "maximum_hz": -7302.252128536115,
+          "median_contrast_db": 11.508470755391794,
+          "median_hz": -7302.252128536115,
+          "median_width_hz": 4.577497024626464,
+          "minimum_contrast_db": 11.508470755391794,
+          "minimum_hz": -7302.252128536115,
+          "range_hz": null
+        },
+        "support_count": 1,
+        "track_id": "T035"
+      },
+      {
+        "candidate_ids": [
+          "E005_F006_C0014"
+        ],
+        "coherent": true,
+        "coverage": 0.16666666666666666,
+        "flags": [
+          "SINGLE_OBSERVATION"
+        ],
+        "frequency_range_within_limit": true,
+        "group_median_frequency_hz": -7286.230888949922,
+        "member_fragment_indices": [
+          6
+        ],
+        "missing_fragment_indices": [
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "observed_group_range_hz": 0.0,
+        "one_candidate_per_fragment": true,
+        "persistent": false,
+        "summary": {
+          "adjacent_observed_frequency_differences_hz": null,
+          "mad_hz": null,
+          "maximum_hz": -7286.230888949922,
+          "median_contrast_db": 10.089246029204615,
+          "median_hz": -7286.230888949922,
+          "median_width_hz": 4.577497024626464,
+          "minimum_contrast_db": 10.089246029204615,
+          "minimum_hz": -7286.230888949922,
+          "range_hz": null
+        },
+        "support_count": 1,
+        "track_id": "T036"
+      },
+      {
+        "candidate_ids": [
+          "E005_F006_C0015"
+        ],
+        "coherent": true,
+        "coverage": 0.16666666666666666,
+        "flags": [
+          "SINGLE_OBSERVATION"
+        ],
+        "frequency_range_within_limit": true,
+        "group_median_frequency_hz": -6378.742103817632,
+        "member_fragment_indices": [
+          6
+        ],
+        "missing_fragment_indices": [
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "observed_group_range_hz": 0.0,
+        "one_candidate_per_fragment": true,
+        "persistent": false,
+        "summary": {
+          "adjacent_observed_frequency_differences_hz": null,
+          "mad_hz": null,
+          "maximum_hz": -6378.742103817632,
+          "median_contrast_db": 10.498919492685063,
+          "median_hz": -6378.742103817632,
+          "median_width_hz": 4.577497024627373,
+          "minimum_contrast_db": 10.498919492685063,
+          "minimum_hz": -6378.742103817632,
+          "range_hz": null
+        },
+        "support_count": 1,
+        "track_id": "T037"
+      },
+      {
+        "candidate_ids": [
+          "E005_F006_C0016"
+        ],
+        "coherent": true,
+        "coverage": 0.16666666666666666,
+        "flags": [
+          "SINGLE_OBSERVATION"
+        ],
+        "frequency_range_within_limit": true,
+        "group_median_frequency_hz": -6363.865238487594,
+        "member_fragment_indices": [
+          6
+        ],
+        "missing_fragment_indices": [
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "observed_group_range_hz": 0.0,
+        "one_candidate_per_fragment": true,
+        "persistent": false,
+        "summary": {
+          "adjacent_observed_frequency_differences_hz": null,
+          "mad_hz": null,
+          "maximum_hz": -6363.865238487594,
+          "median_contrast_db": 10.22120967250008,
+          "median_hz": -6363.865238487594,
+          "median_width_hz": 4.577497024626464,
+          "minimum_contrast_db": 10.22120967250008,
+          "minimum_hz": -6363.865238487594,
+          "range_hz": null
+        },
+        "support_count": 1,
+        "track_id": "T038"
+      },
+      {
+        "candidate_ids": [
+          "E005_F006_C0017"
+        ],
+        "coherent": true,
+        "coverage": 0.16666666666666666,
+        "flags": [
+          "SINGLE_OBSERVATION"
+        ],
+        "frequency_range_within_limit": true,
+        "group_median_frequency_hz": -5409.457108852878,
+        "member_fragment_indices": [
+          6
+        ],
+        "missing_fragment_indices": [
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "observed_group_range_hz": 0.0,
+        "one_candidate_per_fragment": true,
+        "persistent": false,
+        "summary": {
+          "adjacent_observed_frequency_differences_hz": null,
+          "mad_hz": null,
+          "maximum_hz": -5409.457108852878,
+          "median_contrast_db": 11.343909109241752,
+          "median_hz": -5409.457108852878,
+          "median_width_hz": 3.4331227684695835,
+          "minimum_contrast_db": 11.343909109241752,
+          "minimum_hz": -5409.457108852878,
+          "range_hz": null
+        },
+        "support_count": 1,
+        "track_id": "T039"
+      },
+      {
+        "candidate_ids": [
+          "E005_F002_C0019"
+        ],
+        "coherent": true,
+        "coverage": 0.16666666666666666,
+        "flags": [
+          "SINGLE_OBSERVATION"
+        ],
+        "frequency_range_within_limit": true,
+        "group_median_frequency_hz": -5359.104641581983,
+        "member_fragment_indices": [
+          2
+        ],
+        "missing_fragment_indices": [
+          1,
+          3,
+          4,
+          5,
+          6
+        ],
+        "observed_group_range_hz": 0.0,
+        "one_candidate_per_fragment": true,
+        "persistent": false,
+        "summary": {
+          "adjacent_observed_frequency_differences_hz": null,
+          "mad_hz": null,
+          "maximum_hz": -5359.104641581983,
+          "median_contrast_db": 11.769996698370216,
+          "median_hz": -5359.104641581983,
+          "median_width_hz": 6.866245536940223,
+          "minimum_contrast_db": 11.769996698370216,
+          "minimum_hz": -5359.104641581983,
+          "range_hz": null
+        },
+        "support_count": 1,
+        "track_id": "T040"
+      },
+      {
+        "candidate_ids": [
+          "E005_F006_C0018"
+        ],
+        "coherent": true,
+        "coverage": 0.16666666666666666,
+        "flags": [
+          "SINGLE_OBSERVATION"
+        ],
+        "frequency_range_within_limit": true,
+        "group_median_frequency_hz": -5346.516524764258,
+        "member_fragment_indices": [
+          6
+        ],
+        "missing_fragment_indices": [
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "observed_group_range_hz": 0.0,
+        "one_candidate_per_fragment": true,
+        "persistent": false,
+        "summary": {
+          "adjacent_observed_frequency_differences_hz": null,
+          "mad_hz": null,
+          "maximum_hz": -5346.516524764258,
+          "median_contrast_db": 13.794805001149836,
+          "median_hz": -5346.516524764258,
+          "median_width_hz": 8.010619793097103,
+          "minimum_contrast_db": 13.794805001149836,
+          "minimum_hz": -5346.516524764258,
+          "range_hz": null
+        },
+        "support_count": 1,
+        "track_id": "T041"
+      },
+      {
+        "candidate_ids": [
+          "E005_F002_C0020"
+        ],
+        "coherent": true,
+        "coverage": 0.16666666666666666,
+        "flags": [
+          "SINGLE_OBSERVATION"
+        ],
+        "frequency_range_within_limit": true,
+        "group_median_frequency_hz": -5340.794653483475,
+        "member_fragment_indices": [
+          2
+        ],
+        "missing_fragment_indices": [
+          1,
+          3,
+          4,
+          5,
+          6
+        ],
+        "observed_group_range_hz": 0.0,
+        "one_candidate_per_fragment": true,
+        "persistent": false,
+        "summary": {
+          "adjacent_observed_frequency_differences_hz": null,
+          "mad_hz": null,
+          "maximum_hz": -5340.794653483475,
+          "median_contrast_db": 13.395043182036968,
+          "median_hz": -5340.794653483475,
+          "median_width_hz": 5.721871280784253,
+          "minimum_contrast_db": 13.395043182036968,
+          "minimum_hz": -5340.794653483475,
+          "range_hz": null
+        },
+        "support_count": 1,
+        "track_id": "T042"
+      },
+      {
+        "candidate_ids": [
+          "E005_F006_C0019"
+        ],
+        "coherent": true,
+        "coverage": 0.16666666666666666,
+        "flags": [
+          "SINGLE_OBSERVATION"
+        ],
+        "frequency_range_within_limit": true,
+        "group_median_frequency_hz": -5330.4952851780645,
+        "member_fragment_indices": [
+          6
+        ],
+        "missing_fragment_indices": [
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "observed_group_range_hz": 0.0,
+        "one_candidate_per_fragment": true,
+        "persistent": false,
+        "summary": {
+          "adjacent_observed_frequency_differences_hz": null,
+          "mad_hz": null,
+          "maximum_hz": -5330.4952851780645,
+          "median_contrast_db": 14.779841024047883,
+          "median_hz": -5330.4952851780645,
+          "median_width_hz": 8.010619793097103,
+          "minimum_contrast_db": 14.779841024047883,
+          "minimum_hz": -5330.4952851780645,
+          "range_hz": null
+        },
+        "support_count": 1,
+        "track_id": "T043"
+      },
+      {
+        "candidate_ids": [
+          "E005_F002_C0021"
+        ],
+        "coherent": true,
+        "coverage": 0.16666666666666666,
+        "flags": [
+          "SINGLE_OBSERVATION"
+        ],
+        "frequency_range_within_limit": true,
+        "group_median_frequency_hz": -5323.629039641124,
+        "member_fragment_indices": [
+          2
+        ],
+        "missing_fragment_indices": [
+          1,
+          3,
+          4,
+          5,
+          6
+        ],
+        "observed_group_range_hz": 0.0,
+        "one_candidate_per_fragment": true,
+        "persistent": false,
+        "summary": {
+          "adjacent_observed_frequency_differences_hz": null,
+          "mad_hz": null,
+          "maximum_hz": -5323.629039641124,
+          "median_contrast_db": 14.136525279253473,
+          "median_hz": -5323.629039641124,
+          "median_width_hz": 16.02123958619435,
+          "minimum_contrast_db": 14.136525279253473,
+          "minimum_hz": -5323.629039641124,
+          "range_hz": null
+        },
+        "support_count": 1,
+        "track_id": "T044"
+      },
+      {
+        "candidate_ids": [
+          "E005_F006_C0020"
+        ],
+        "coherent": true,
+        "coverage": 0.16666666666666666,
+        "flags": [
+          "SINGLE_OBSERVATION"
+        ],
+        "frequency_range_within_limit": true,
+        "group_median_frequency_hz": -5317.90716836034,
+        "member_fragment_indices": [
+          6
+        ],
+        "missing_fragment_indices": [
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "observed_group_range_hz": 0.0,
+        "one_candidate_per_fragment": true,
+        "persistent": false,
+        "summary": {
+          "adjacent_observed_frequency_differences_hz": null,
+          "mad_hz": null,
+          "maximum_hz": -5317.90716836034,
+          "median_contrast_db": 15.281110957296598,
+          "median_hz": -5317.90716836034,
+          "median_width_hz": 6.866245536940223,
+          "minimum_contrast_db": 15.281110957296598,
+          "minimum_hz": -5317.90716836034,
+          "range_hz": null
+        },
+        "support_count": 1,
+        "track_id": "T045"
+      },
+      {
+        "candidate_ids": [
+          "E005_F002_C0022"
+        ],
+        "coherent": true,
+        "coverage": 0.16666666666666666,
+        "flags": [
+          "SINGLE_OBSERVATION"
+        ],
+        "frequency_range_within_limit": true,
+        "group_median_frequency_hz": -5316.762794104184,
+        "member_fragment_indices": [
+          2
+        ],
+        "missing_fragment_indices": [
+          1,
+          3,
+          4,
+          5,
+          6
+        ],
+        "observed_group_range_hz": 0.0,
+        "one_candidate_per_fragment": true,
+        "persistent": false,
+        "summary": {
+          "adjacent_observed_frequency_differences_hz": null,
+          "mad_hz": null,
+          "maximum_hz": -5316.762794104184,
+          "median_contrast_db": 14.047730236038554,
+          "median_hz": -5316.762794104184,
+          "median_width_hz": 10.299368305410862,
+          "minimum_contrast_db": 14.047730236038554,
+          "minimum_hz": -5316.762794104184,
+          "range_hz": null
+        },
+        "support_count": 1,
+        "track_id": "T046"
+      },
+      {
+        "candidate_ids": [
+          "E005_F006_C0021"
+        ],
+        "coherent": true,
+        "coverage": 0.16666666666666666,
+        "flags": [
+          "SINGLE_OBSERVATION"
+        ],
+        "frequency_range_within_limit": true,
+        "group_median_frequency_hz": -5301.885928774146,
+        "member_fragment_indices": [
+          6
+        ],
+        "missing_fragment_indices": [
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "observed_group_range_hz": 0.0,
+        "one_candidate_per_fragment": true,
+        "persistent": false,
+        "summary": {
+          "adjacent_observed_frequency_differences_hz": null,
+          "mad_hz": null,
+          "maximum_hz": -5301.885928774146,
+          "median_contrast_db": 14.697561590343074,
+          "median_hz": -5301.885928774146,
+          "median_width_hz": 4.577497024626464,
+          "minimum_contrast_db": 14.697561590343074,
+          "minimum_hz": -5301.885928774146,
+          "range_hz": null
+        },
+        "support_count": 1,
+        "track_id": "T047"
+      },
+      {
+        "candidate_ids": [
+          "E005_F002_C0023"
+        ],
+        "coherent": true,
+        "coverage": 0.16666666666666666,
+        "flags": [
+          "SINGLE_OBSERVATION"
+        ],
+        "frequency_range_within_limit": true,
+        "group_median_frequency_hz": -5300.741554517989,
+        "member_fragment_indices": [
+          2
+        ],
+        "missing_fragment_indices": [
+          1,
+          3,
+          4,
+          5,
+          6
+        ],
+        "observed_group_range_hz": 0.0,
+        "one_candidate_per_fragment": true,
+        "persistent": false,
+        "summary": {
+          "adjacent_observed_frequency_differences_hz": null,
+          "mad_hz": null,
+          "maximum_hz": -5300.741554517989,
+          "median_contrast_db": 15.23833732678389,
+          "median_hz": -5300.741554517989,
+          "median_width_hz": 12.588116817724622,
+          "minimum_contrast_db": 15.23833732678389,
+          "minimum_hz": -5300.741554517989,
+          "range_hz": null
+        },
+        "support_count": 1,
+        "track_id": "T048"
+      },
+      {
+        "candidate_ids": [
+          "E005_F006_C0022"
+        ],
+        "coherent": true,
+        "coverage": 0.16666666666666666,
+        "flags": [
+          "SINGLE_OBSERVATION"
+        ],
+        "frequency_range_within_limit": true,
+        "group_median_frequency_hz": -5282.431566419481,
+        "member_fragment_indices": [
+          6
+        ],
+        "missing_fragment_indices": [
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "observed_group_range_hz": 0.0,
+        "one_candidate_per_fragment": true,
+        "persistent": false,
+        "summary": {
+          "adjacent_observed_frequency_differences_hz": null,
+          "mad_hz": null,
+          "maximum_hz": -5282.431566419481,
+          "median_contrast_db": 13.907005693137416,
+          "median_hz": -5282.431566419481,
+          "median_width_hz": 14.876865330037472,
+          "minimum_contrast_db": 13.907005693137416,
+          "minimum_hz": -5282.431566419481,
+          "range_hz": null
+        },
+        "support_count": 1,
+        "track_id": "T049"
+      },
+      {
+        "candidate_ids": [
+          "E005_F002_C0024"
+        ],
+        "coherent": true,
+        "coverage": 0.16666666666666666,
+        "flags": [
+          "SINGLE_OBSERVATION"
+        ],
+        "frequency_range_within_limit": true,
+        "group_median_frequency_hz": -5267.554701089443,
+        "member_fragment_indices": [
+          2
+        ],
+        "missing_fragment_indices": [
+          1,
+          3,
+          4,
+          5,
+          6
+        ],
+        "observed_group_range_hz": 0.0,
+        "one_candidate_per_fragment": true,
+        "persistent": false,
+        "summary": {
+          "adjacent_observed_frequency_differences_hz": null,
+          "mad_hz": null,
+          "maximum_hz": -5267.554701089443,
+          "median_contrast_db": 15.127678726492578,
+          "median_hz": -5267.554701089443,
+          "median_width_hz": 22.88748512313472,
+          "minimum_contrast_db": 15.127678726492578,
+          "minimum_hz": -5267.554701089443,
+          "range_hz": null
+        },
+        "support_count": 1,
+        "track_id": "T050"
+      },
+      {
+        "candidate_ids": [
+          "E005_F002_C0025"
+        ],
+        "coherent": true,
+        "coverage": 0.16666666666666666,
+        "flags": [
+          "SINGLE_OBSERVATION"
+        ],
+        "frequency_range_within_limit": true,
+        "group_median_frequency_hz": -5244.667215966309,
+        "member_fragment_indices": [
+          2
+        ],
+        "missing_fragment_indices": [
+          1,
+          3,
+          4,
+          5,
+          6
+        ],
+        "observed_group_range_hz": 0.0,
+        "one_candidate_per_fragment": true,
+        "persistent": false,
+        "summary": {
+          "adjacent_observed_frequency_differences_hz": null,
+          "mad_hz": null,
+          "maximum_hz": -5244.667215966309,
+          "median_contrast_db": 20.117821590300093,
+          "median_hz": -5244.667215966309,
+          "median_width_hz": 24.0318593792916,
+          "minimum_contrast_db": 20.117821590300093,
+          "minimum_hz": -5244.667215966309,
+          "range_hz": null
+        },
+        "support_count": 1,
+        "track_id": "T051"
+      },
+      {
+        "candidate_ids": [
+          "E005_F002_C0026"
+        ],
+        "coherent": true,
+        "coverage": 0.16666666666666666,
+        "flags": [
+          "SINGLE_OBSERVATION"
+        ],
+        "frequency_range_within_limit": true,
+        "group_median_frequency_hz": -5235.512221917055,
+        "member_fragment_indices": [
+          2
+        ],
+        "missing_fragment_indices": [
+          1,
+          3,
+          4,
+          5,
+          6
+        ],
+        "observed_group_range_hz": 0.0,
+        "one_candidate_per_fragment": true,
+        "persistent": false,
+        "summary": {
+          "adjacent_observed_frequency_differences_hz": null,
+          "mad_hz": null,
+          "maximum_hz": -5235.512221917055,
+          "median_contrast_db": 22.853819013071735,
+          "median_hz": -5235.512221917055,
+          "median_width_hz": 5.721871280784253,
+          "minimum_contrast_db": 22.853819013071735,
+          "minimum_hz": -5235.512221917055,
+          "range_hz": null
+        },
+        "support_count": 1,
+        "track_id": "T052"
+      },
+      {
+        "candidate_ids": [
+          "E005_F006_C0023"
+        ],
+        "coherent": true,
+        "coverage": 0.16666666666666666,
+        "flags": [
+          "SINGLE_OBSERVATION"
+        ],
+        "frequency_range_within_limit": true,
+        "group_median_frequency_hz": -5210.335988281607,
+        "member_fragment_indices": [
+          6
+        ],
+        "missing_fragment_indices": [
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "observed_group_range_hz": 0.0,
+        "one_candidate_per_fragment": true,
+        "persistent": false,
+        "summary": {
+          "adjacent_observed_frequency_differences_hz": null,
+          "mad_hz": null,
+          "maximum_hz": -5210.335988281607,
+          "median_contrast_db": 28.62143006857902,
+          "median_hz": -5210.335988281607,
+          "median_width_hz": 75.52870090634482,
+          "minimum_contrast_db": 28.62143006857902,
+          "minimum_hz": -5210.335988281607,
+          "range_hz": null
+        },
+        "support_count": 1,
+        "track_id": "T053"
+      },
+      {
+        "candidate_ids": [
+          "E005_F006_C0024"
+        ],
+        "coherent": true,
+        "coverage": 0.16666666666666666,
+        "flags": [
+          "SINGLE_OBSERVATION"
+        ],
+        "frequency_range_within_limit": true,
+        "group_median_frequency_hz": -5194.314748695413,
+        "member_fragment_indices": [
+          6
+        ],
+        "missing_fragment_indices": [
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "observed_group_range_hz": 0.0,
+        "one_candidate_per_fragment": true,
+        "persistent": false,
+        "summary": {
+          "adjacent_observed_frequency_differences_hz": null,
+          "mad_hz": null,
+          "maximum_hz": -5194.314748695413,
+          "median_contrast_db": 28.860834091172343,
+          "median_hz": -5194.314748695413,
+          "median_width_hz": 13.732491073880592,
+          "minimum_contrast_db": 28.860834091172343,
+          "minimum_hz": -5194.314748695413,
+          "range_hz": null
+        },
+        "support_count": 1,
+        "track_id": "T054"
+      },
+      {
+        "candidate_ids": [
+          "E005_F002_C0027"
+        ],
+        "coherent": true,
+        "coverage": 0.16666666666666666,
+        "flags": [
+          "SINGLE_OBSERVATION"
+        ],
+        "frequency_range_within_limit": true,
+        "group_median_frequency_hz": -5193.170374439256,
+        "member_fragment_indices": [
+          2
+        ],
+        "missing_fragment_indices": [
+          1,
+          3,
+          4,
+          5,
+          6
+        ],
+        "observed_group_range_hz": 0.0,
+        "one_candidate_per_fragment": true,
+        "persistent": false,
+        "summary": {
+          "adjacent_observed_frequency_differences_hz": null,
+          "mad_hz": null,
+          "maximum_hz": -5193.170374439256,
+          "median_contrast_db": 22.971670213155097,
+          "median_hz": -5193.170374439256,
+          "median_width_hz": 48.06371875858334,
+          "minimum_contrast_db": 22.971670213155097,
+          "minimum_hz": -5193.170374439256,
+          "range_hz": null
+        },
+        "support_count": 1,
+        "track_id": "T055"
+      },
+      {
+        "candidate_ids": [
+          "E005_F002_C0028"
+        ],
+        "coherent": true,
+        "coverage": 0.16666666666666666,
+        "flags": [
+          "SINGLE_OBSERVATION"
+        ],
+        "frequency_range_within_limit": true,
+        "group_median_frequency_hz": -5180.582257621532,
+        "member_fragment_indices": [
+          2
+        ],
+        "missing_fragment_indices": [
+          1,
+          3,
+          4,
+          5,
+          6
+        ],
+        "observed_group_range_hz": 0.0,
+        "one_candidate_per_fragment": true,
+        "persistent": false,
+        "summary": {
+          "adjacent_observed_frequency_differences_hz": null,
+          "mad_hz": null,
+          "maximum_hz": -5180.582257621532,
+          "median_contrast_db": 11.967363256662537,
+          "median_hz": -5180.582257621532,
+          "median_width_hz": 2.288748512312704,
+          "minimum_contrast_db": 11.967363256662537,
+          "minimum_hz": -5180.582257621532,
+          "range_hz": null
+        },
+        "support_count": 1,
+        "track_id": "T056"
+      },
+      {
+        "candidate_ids": [
+          "E005_F006_C0025"
+        ],
+        "coherent": true,
+        "coverage": 0.16666666666666666,
+        "flags": [
+          "SINGLE_OBSERVATION"
+        ],
+        "frequency_range_within_limit": true,
+        "group_median_frequency_hz": -5178.293509109219,
+        "member_fragment_indices": [
+          6
+        ],
+        "missing_fragment_indices": [
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "observed_group_range_hz": 0.0,
+        "one_candidate_per_fragment": true,
+        "persistent": false,
+        "summary": {
+          "adjacent_observed_frequency_differences_hz": null,
+          "mad_hz": null,
+          "maximum_hz": -5178.293509109219,
+          "median_contrast_db": 27.453938714433363,
+          "median_hz": -5178.293509109219,
+          "median_width_hz": 24.03185937929069,
+          "minimum_contrast_db": 27.453938714433363,
+          "minimum_hz": -5178.293509109219,
+          "range_hz": null
+        },
+        "support_count": 1,
+        "track_id": "T057"
+      },
+      {
+        "candidate_ids": [
+          "E005_F002_C0029"
+        ],
+        "coherent": true,
+        "coverage": 0.16666666666666666,
+        "flags": [
+          "SINGLE_OBSERVATION"
+        ],
+        "frequency_range_within_limit": true,
+        "group_median_frequency_hz": -5176.004760596905,
+        "member_fragment_indices": [
+          2
+        ],
+        "missing_fragment_indices": [
+          1,
+          3,
+          4,
+          5,
+          6
+        ],
+        "observed_group_range_hz": 0.0,
+        "one_candidate_per_fragment": true,
+        "persistent": false,
+        "summary": {
+          "adjacent_observed_frequency_differences_hz": null,
+          "mad_hz": null,
+          "maximum_hz": -5176.004760596905,
+          "median_contrast_db": 25.1925176388572,
+          "median_hz": -5176.004760596905,
+          "median_width_hz": 27.46498214776133,
+          "minimum_contrast_db": 25.1925176388572,
+          "minimum_hz": -5176.004760596905,
+          "range_hz": null
+        },
+        "support_count": 1,
+        "track_id": "T058"
+      },
+      {
+        "candidate_ids": [
+          "E005_F006_C0026"
+        ],
+        "coherent": true,
+        "coverage": 0.16666666666666666,
+        "flags": [
+          "SINGLE_OBSERVATION"
+        ],
+        "frequency_range_within_limit": true,
+        "group_median_frequency_hz": -5148.539778449143,
+        "member_fragment_indices": [
+          6
+        ],
+        "missing_fragment_indices": [
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "observed_group_range_hz": 0.0,
+        "one_candidate_per_fragment": true,
+        "persistent": false,
+        "summary": {
+          "adjacent_observed_frequency_differences_hz": null,
+          "mad_hz": null,
+          "maximum_hz": -5148.539778449143,
+          "median_contrast_db": 22.76722060442787,
+          "median_hz": -5148.539778449143,
+          "median_width_hz": 12.588116817723712,
+          "minimum_contrast_db": 22.76722060442787,
+          "minimum_hz": -5148.539778449143,
+          "range_hz": null
+        },
+        "support_count": 1,
+        "track_id": "T059"
+      },
+      {
+        "candidate_ids": [
+          "E005_F002_C0030"
+        ],
+        "coherent": true,
+        "coverage": 0.16666666666666666,
+        "flags": [
+          "SINGLE_OBSERVATION"
+        ],
+        "frequency_range_within_limit": true,
+        "group_median_frequency_hz": -5140.529158656046,
+        "member_fragment_indices": [
+          2
+        ],
+        "missing_fragment_indices": [
+          1,
+          3,
+          4,
+          5,
+          6
+        ],
+        "observed_group_range_hz": 0.0,
+        "one_candidate_per_fragment": true,
+        "persistent": false,
+        "summary": {
+          "adjacent_observed_frequency_differences_hz": null,
+          "mad_hz": null,
+          "maximum_hz": -5140.529158656046,
+          "median_contrast_db": 20.80811648199007,
+          "median_hz": -5140.529158656046,
+          "median_width_hz": 18.30998809850811,
+          "minimum_contrast_db": 20.80811648199007,
+          "minimum_hz": -5140.529158656046,
+          "range_hz": null
+        },
+        "support_count": 1,
+        "track_id": "T060"
+      },
+      {
+        "candidate_ids": [
+          "E005_F006_C0027"
+        ],
+        "coherent": true,
+        "coverage": 0.16666666666666666,
+        "flags": [
+          "SINGLE_OBSERVATION"
+        ],
+        "frequency_range_within_limit": true,
+        "group_median_frequency_hz": -5132.518538862949,
+        "member_fragment_indices": [
+          6
+        ],
+        "missing_fragment_indices": [
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "observed_group_range_hz": 0.0,
+        "one_candidate_per_fragment": true,
+        "persistent": false,
+        "summary": {
+          "adjacent_observed_frequency_differences_hz": null,
+          "mad_hz": null,
+          "maximum_hz": -5132.518538862949,
+          "median_contrast_db": 19.086506220890595,
+          "median_hz": -5132.518538862949,
+          "median_width_hz": 9.154994049253983,
+          "minimum_contrast_db": 19.086506220890595,
+          "minimum_hz": -5132.518538862949,
+          "range_hz": null
+        },
+        "support_count": 1,
+        "track_id": "T061"
+      },
+      {
+        "candidate_ids": [
+          "E005_F002_C0031"
+        ],
+        "coherent": true,
+        "coverage": 0.16666666666666666,
+        "flags": [
+          "SINGLE_OBSERVATION"
+        ],
+        "frequency_range_within_limit": true,
+        "group_median_frequency_hz": -5121.074796301382,
+        "member_fragment_indices": [
+          2
+        ],
+        "missing_fragment_indices": [
+          1,
+          3,
+          4,
+          5,
+          6
+        ],
+        "observed_group_range_hz": 0.0,
+        "one_candidate_per_fragment": true,
+        "persistent": false,
+        "summary": {
+          "adjacent_observed_frequency_differences_hz": null,
+          "mad_hz": null,
+          "maximum_hz": -5121.074796301382,
+          "median_contrast_db": 17.184709095527754,
+          "median_hz": -5121.074796301382,
+          "median_width_hz": 18.30998809850811,
+          "minimum_contrast_db": 17.184709095527754,
+          "minimum_hz": -5121.074796301382,
+          "range_hz": null
+        },
+        "support_count": 1,
+        "track_id": "T062"
+      },
+      {
+        "candidate_ids": [
+          "E005_F006_C0028"
+        ],
+        "coherent": true,
+        "coverage": 0.16666666666666666,
+        "flags": [
+          "SINGLE_OBSERVATION"
+        ],
+        "frequency_range_within_limit": true,
+        "group_median_frequency_hz": -5113.064176508285,
+        "member_fragment_indices": [
+          6
+        ],
+        "missing_fragment_indices": [
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "observed_group_range_hz": 0.0,
+        "one_candidate_per_fragment": true,
+        "persistent": false,
+        "summary": {
+          "adjacent_observed_frequency_differences_hz": null,
+          "mad_hz": null,
+          "maximum_hz": -5113.064176508285,
+          "median_contrast_db": 12.47281230027096,
+          "median_hz": -5113.064176508285,
+          "median_width_hz": 12.588116817723712,
+          "minimum_contrast_db": 12.47281230027096,
+          "minimum_hz": -5113.064176508285,
+          "range_hz": null
+        },
+        "support_count": 1,
+        "track_id": "T063"
+      },
+      {
+        "candidate_ids": [
+          "E005_F006_C0029"
+        ],
+        "coherent": true,
+        "coverage": 0.16666666666666666,
+        "flags": [
+          "SINGLE_OBSERVATION"
+        ],
+        "frequency_range_within_limit": true,
+        "group_median_frequency_hz": -5102.7648082028745,
+        "member_fragment_indices": [
+          6
+        ],
+        "missing_fragment_indices": [
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "observed_group_range_hz": 0.0,
+        "one_candidate_per_fragment": true,
+        "persistent": false,
+        "summary": {
+          "adjacent_observed_frequency_differences_hz": null,
+          "mad_hz": null,
+          "maximum_hz": -5102.7648082028745,
+          "median_contrast_db": 11.47631775100365,
+          "median_hz": -5102.7648082028745,
+          "median_width_hz": 3.4331227684695835,
+          "minimum_contrast_db": 11.47631775100365,
+          "minimum_hz": -5102.7648082028745,
+          "range_hz": null
+        },
+        "support_count": 1,
+        "track_id": "T064"
+      },
+      {
+        "candidate_ids": [
+          "E005_F002_C0032"
+        ],
+        "coherent": true,
+        "coverage": 0.16666666666666666,
+        "flags": [
+          "SINGLE_OBSERVATION"
+        ],
+        "frequency_range_within_limit": true,
+        "group_median_frequency_hz": -5101.620433946718,
+        "member_fragment_indices": [
+          2
+        ],
+        "missing_fragment_indices": [
+          1,
+          3,
+          4,
+          5,
+          6
+        ],
+        "observed_group_range_hz": 0.0,
+        "one_candidate_per_fragment": true,
+        "persistent": false,
+        "summary": {
+          "adjacent_observed_frequency_differences_hz": null,
+          "mad_hz": null,
+          "maximum_hz": -5101.620433946718,
+          "median_contrast_db": 16.133876006184217,
+          "median_hz": -5101.620433946718,
+          "median_width_hz": 16.02123958619435,
+          "minimum_contrast_db": 16.133876006184217,
+          "minimum_hz": -5101.620433946718,
+          "range_hz": null
+        },
+        "support_count": 1,
+        "track_id": "T065"
+      },
+      {
+        "candidate_ids": [
+          "E005_F006_C0030"
+        ],
+        "coherent": true,
+        "coverage": 0.16666666666666666,
+        "flags": [
+          "SINGLE_OBSERVATION"
+        ],
+        "frequency_range_within_limit": true,
+        "group_median_frequency_hz": -5097.04293692209,
+        "member_fragment_indices": [
+          6
+        ],
+        "missing_fragment_indices": [
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "observed_group_range_hz": 0.0,
+        "one_candidate_per_fragment": true,
+        "persistent": false,
+        "summary": {
+          "adjacent_observed_frequency_differences_hz": null,
+          "mad_hz": null,
+          "maximum_hz": -5097.04293692209,
+          "median_contrast_db": 12.109614021149092,
+          "median_hz": -5097.04293692209,
+          "median_width_hz": 8.010619793097103,
+          "minimum_contrast_db": 12.109614021149092,
+          "minimum_hz": -5097.04293692209,
+          "range_hz": null
+        },
+        "support_count": 1,
+        "track_id": "T066"
+      },
+      {
+        "candidate_ids": [
+          "E005_F002_C0033"
+        ],
+        "coherent": true,
+        "coverage": 0.16666666666666666,
+        "flags": [
+          "SINGLE_OBSERVATION"
+        ],
+        "frequency_range_within_limit": true,
+        "group_median_frequency_hz": -5087.887942872837,
+        "member_fragment_indices": [
+          2
+        ],
+        "missing_fragment_indices": [
+          1,
+          3,
+          4,
+          5,
+          6
+        ],
+        "observed_group_range_hz": 0.0,
+        "one_candidate_per_fragment": true,
+        "persistent": false,
+        "summary": {
+          "adjacent_observed_frequency_differences_hz": null,
+          "mad_hz": null,
+          "maximum_hz": -5087.887942872837,
+          "median_contrast_db": 13.579957677333262,
+          "median_hz": -5087.887942872837,
+          "median_width_hz": 8.010619793097103,
+          "minimum_contrast_db": 13.579957677333262,
+          "minimum_hz": -5087.887942872837,
+          "range_hz": null
+        },
+        "support_count": 1,
+        "track_id": "T067"
+      },
+      {
+        "candidate_ids": [
+          "E005_F006_C0031"
+        ],
+        "coherent": true,
+        "coverage": 0.16666666666666666,
+        "flags": [
+          "SINGLE_OBSERVATION"
+        ],
+        "frequency_range_within_limit": true,
+        "group_median_frequency_hz": -5085.599194360523,
+        "member_fragment_indices": [
+          6
+        ],
+        "missing_fragment_indices": [
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "observed_group_range_hz": 0.0,
+        "one_candidate_per_fragment": true,
+        "persistent": false,
+        "summary": {
+          "adjacent_observed_frequency_differences_hz": null,
+          "mad_hz": null,
+          "maximum_hz": -5085.599194360523,
+          "median_contrast_db": 15.14370418679848,
+          "median_hz": -5085.599194360523,
+          "median_width_hz": 10.299368305409953,
+          "minimum_contrast_db": 15.14370418679848,
+          "minimum_hz": -5085.599194360523,
+          "range_hz": null
+        },
+        "support_count": 1,
+        "track_id": "T068"
+      },
+      {
+        "candidate_ids": [
+          "E005_F002_C0034"
+        ],
+        "coherent": true,
+        "coverage": 0.16666666666666666,
+        "flags": [
+          "SINGLE_OBSERVATION"
+        ],
+        "frequency_range_within_limit": true,
+        "group_median_frequency_hz": -5078.732948823583,
+        "member_fragment_indices": [
+          2
+        ],
+        "missing_fragment_indices": [
+          1,
+          3,
+          4,
+          5,
+          6
+        ],
+        "observed_group_range_hz": 0.0,
+        "one_candidate_per_fragment": true,
+        "persistent": false,
+        "summary": {
+          "adjacent_observed_frequency_differences_hz": null,
+          "mad_hz": null,
+          "maximum_hz": -5078.732948823583,
+          "median_contrast_db": 13.460750150380436,
+          "median_hz": -5078.732948823583,
+          "median_width_hz": 4.577497024627373,
+          "minimum_contrast_db": 13.460750150380436,
+          "minimum_hz": -5078.732948823583,
+          "range_hz": null
+        },
+        "support_count": 1,
+        "track_id": "T069"
+      },
+      {
+        "candidate_ids": [
+          "E005_F006_C0032"
+        ],
+        "coherent": true,
+        "coverage": 0.16666666666666666,
+        "flags": [
+          "SINGLE_OBSERVATION"
+        ],
+        "frequency_range_within_limit": true,
+        "group_median_frequency_hz": -5069.577954774329,
+        "member_fragment_indices": [
+          6
+        ],
+        "missing_fragment_indices": [
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "observed_group_range_hz": 0.0,
+        "one_candidate_per_fragment": true,
+        "persistent": false,
+        "summary": {
+          "adjacent_observed_frequency_differences_hz": null,
+          "mad_hz": null,
+          "maximum_hz": -5069.577954774329,
+          "median_contrast_db": 14.593783698168487,
+          "median_hz": -5069.577954774329,
+          "median_width_hz": 8.010619793097103,
+          "minimum_contrast_db": 14.593783698168487,
+          "minimum_hz": -5069.577954774329,
+          "range_hz": null
+        },
+        "support_count": 1,
+        "track_id": "T070"
+      },
+      {
+        "candidate_ids": [
+          "E005_F002_C0035"
+        ],
+        "coherent": true,
+        "coverage": 0.16666666666666666,
+        "flags": [
+          "SINGLE_OBSERVATION"
+        ],
+        "frequency_range_within_limit": true,
+        "group_median_frequency_hz": -5061.567334981231,
+        "member_fragment_indices": [
+          2
+        ],
+        "missing_fragment_indices": [
+          1,
+          3,
+          4,
+          5,
+          6
+        ],
+        "observed_group_range_hz": 0.0,
+        "one_candidate_per_fragment": true,
+        "persistent": false,
+        "summary": {
+          "adjacent_observed_frequency_differences_hz": null,
+          "mad_hz": null,
+          "maximum_hz": -5061.567334981231,
+          "median_contrast_db": 12.451627082140412,
+          "median_hz": -5061.567334981231,
+          "median_width_hz": 4.577497024626464,
+          "minimum_contrast_db": 12.451627082140412,
+          "minimum_hz": -5061.567334981231,
+          "range_hz": null
+        },
+        "support_count": 1,
+        "track_id": "T071"
+      },
+      {
+        "candidate_ids": [
+          "E005_F006_C0033"
+        ],
+        "coherent": true,
+        "coverage": 0.16666666666666666,
+        "flags": [
+          "SINGLE_OBSERVATION"
+        ],
+        "frequency_range_within_limit": true,
+        "group_median_frequency_hz": -5010.070493454179,
+        "member_fragment_indices": [
+          6
+        ],
+        "missing_fragment_indices": [
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "observed_group_range_hz": 0.0,
+        "one_candidate_per_fragment": true,
+        "persistent": false,
+        "summary": {
+          "adjacent_observed_frequency_differences_hz": null,
+          "mad_hz": null,
+          "maximum_hz": -5010.070493454179,
+          "median_contrast_db": 10.627570429602915,
+          "median_hz": -5010.070493454179,
+          "median_width_hz": 3.4331227684695835,
+          "minimum_contrast_db": 10.627570429602915,
+          "minimum_hz": -5010.070493454179,
+          "range_hz": null
+        },
+        "support_count": 1,
+        "track_id": "T072"
+      },
+      {
+        "candidate_ids": [
+          "E005_F006_C0034"
+        ],
+        "coherent": true,
+        "coverage": 0.16666666666666666,
+        "flags": [
+          "SINGLE_OBSERVATION"
+        ],
+        "frequency_range_within_limit": true,
+        "group_median_frequency_hz": -4994.049253867985,
+        "member_fragment_indices": [
+          6
+        ],
+        "missing_fragment_indices": [
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "observed_group_range_hz": 0.0,
+        "one_candidate_per_fragment": true,
+        "persistent": false,
+        "summary": {
+          "adjacent_observed_frequency_differences_hz": null,
+          "mad_hz": null,
+          "maximum_hz": -4994.049253867985,
+          "median_contrast_db": 11.098123407287268,
+          "median_hz": -4994.049253867985,
+          "median_width_hz": 6.866245536941133,
+          "minimum_contrast_db": 11.098123407287268,
+          "minimum_hz": -4994.049253867985,
+          "range_hz": null
+        },
+        "support_count": 1,
+        "track_id": "T073"
+      },
+      {
+        "candidate_ids": [
+          "E005_F006_C0035"
+        ],
+        "coherent": true,
+        "coverage": 0.16666666666666666,
+        "flags": [
+          "SINGLE_OBSERVATION"
+        ],
+        "frequency_range_within_limit": true,
+        "group_median_frequency_hz": -4979.172388537947,
+        "member_fragment_indices": [
+          6
+        ],
+        "missing_fragment_indices": [
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "observed_group_range_hz": 0.0,
+        "one_candidate_per_fragment": true,
+        "persistent": false,
+        "summary": {
+          "adjacent_observed_frequency_differences_hz": null,
+          "mad_hz": null,
+          "maximum_hz": -4979.172388537947,
+          "median_contrast_db": 10.226336823165457,
+          "median_hz": -4979.172388537947,
+          "median_width_hz": 4.577497024627373,
+          "minimum_contrast_db": 10.226336823165457,
+          "minimum_hz": -4979.172388537947,
+          "range_hz": null
+        },
+        "support_count": 1,
+        "track_id": "T074"
+      },
+      {
+        "candidate_ids": [
+          "E005_F006_C0036"
+        ],
+        "coherent": true,
+        "coverage": 0.16666666666666666,
+        "flags": [
+          "SINGLE_OBSERVATION"
+        ],
+        "frequency_range_within_limit": true,
+        "group_median_frequency_hz": -4639.293234459397,
+        "member_fragment_indices": [
+          6
+        ],
+        "missing_fragment_indices": [
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "observed_group_range_hz": 0.0,
+        "one_candidate_per_fragment": true,
+        "persistent": false,
+        "summary": {
+          "adjacent_observed_frequency_differences_hz": null,
+          "mad_hz": null,
+          "maximum_hz": -4639.293234459397,
+          "median_contrast_db": 10.419702657908791,
+          "median_hz": -4639.293234459397,
+          "median_width_hz": 3.433122768470493,
+          "minimum_contrast_db": 10.419702657908791,
+          "minimum_hz": -4639.293234459397,
+          "range_hz": null
+        },
+        "support_count": 1,
+        "track_id": "T075"
+      },
+      {
+        "candidate_ids": [
+          "E005_F006_C0037"
+        ],
+        "coherent": true,
+        "coverage": 0.16666666666666666,
+        "flags": [
+          "SINGLE_OBSERVATION"
+        ],
+        "frequency_range_within_limit": true,
+        "group_median_frequency_hz": -4209.008514144465,
+        "member_fragment_indices": [
+          6
+        ],
+        "missing_fragment_indices": [
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "observed_group_range_hz": 0.0,
+        "one_candidate_per_fragment": true,
+        "persistent": false,
+        "summary": {
+          "adjacent_observed_frequency_differences_hz": null,
+          "mad_hz": null,
+          "maximum_hz": -4209.008514144465,
+          "median_contrast_db": 10.018271166201249,
+          "median_hz": -4209.008514144465,
+          "median_width_hz": 3.433122768470493,
+          "minimum_contrast_db": 10.018271166201249,
+          "minimum_hz": -4209.008514144465,
+          "range_hz": null
+        },
+        "support_count": 1,
+        "track_id": "T076"
+      },
+      {
+        "candidate_ids": [
+          "E005_F002_C0036"
+        ],
+        "coherent": true,
+        "coverage": 0.16666666666666666,
+        "flags": [
+          "SINGLE_OBSERVATION"
+        ],
+        "frequency_range_within_limit": true,
+        "group_median_frequency_hz": -3357.594067563856,
+        "member_fragment_indices": [
+          2
+        ],
+        "missing_fragment_indices": [
+          1,
+          3,
+          4,
+          5,
+          6
+        ],
+        "observed_group_range_hz": 0.0,
+        "one_candidate_per_fragment": true,
+        "persistent": false,
+        "summary": {
+          "adjacent_observed_frequency_differences_hz": null,
+          "mad_hz": null,
+          "maximum_hz": -3357.594067563856,
+          "median_contrast_db": 10.854673187035068,
+          "median_hz": -3357.594067563856,
+          "median_width_hz": 4.577497024626918,
+          "minimum_contrast_db": 10.854673187035068,
+          "minimum_hz": -3357.594067563856,
+          "range_hz": null
+        },
+        "support_count": 1,
+        "track_id": "T077"
+      },
+      {
+        "candidate_ids": [
+          "E005_F003_C0002"
+        ],
+        "coherent": true,
+        "coverage": 0.16666666666666666,
+        "flags": [
+          "SINGLE_OBSERVATION"
+        ],
+        "frequency_range_within_limit": true,
+        "group_median_frequency_hz": -2936.4643412981777,
+        "member_fragment_indices": [
+          3
+        ],
+        "missing_fragment_indices": [
+          1,
+          2,
+          4,
+          5,
+          6
+        ],
+        "observed_group_range_hz": 0.0,
+        "one_candidate_per_fragment": true,
+        "persistent": false,
+        "summary": {
+          "adjacent_observed_frequency_differences_hz": null,
+          "mad_hz": null,
+          "maximum_hz": -2936.4643412981777,
+          "median_contrast_db": 10.626963639084874,
+          "median_hz": -2936.4643412981777,
+          "median_width_hz": 2.288748512313467,
+          "minimum_contrast_db": 10.626963639084874,
+          "minimum_hz": -2936.4643412981777,
+          "range_hz": null
+        },
+        "support_count": 1,
+        "track_id": "T078"
+      },
+      {
+        "candidate_ids": [
+          "E005_F002_C0037",
+          "E005_F003_C0003"
+        ],
+        "coherent": true,
+        "coverage": 0.3333333333333333,
+        "flags": [],
+        "frequency_range_within_limit": true,
+        "group_median_frequency_hz": -2753.936647441179,
+        "member_fragment_indices": [
+          2,
+          3
+        ],
+        "missing_fragment_indices": [
+          1,
+          4,
+          5,
+          6
+        ],
+        "observed_group_range_hz": 33.18685342854542,
+        "one_candidate_per_fragment": true,
+        "persistent": false,
+        "summary": {
+          "adjacent_observed_frequency_differences_hz": [
+            33.18685342854542
+          ],
+          "mad_hz": 16.59342671427271,
+          "maximum_hz": -2737.343220726906,
+          "median_contrast_db": 10.23986737142554,
+          "median_hz": -2753.936647441179,
+          "median_width_hz": 2.86093564039198,
+          "minimum_contrast_db": 10.218604630714708,
+          "minimum_hz": -2770.5300741554515,
+          "range_hz": 33.18685342854542
+        },
+        "support_count": 2,
+        "track_id": "T079"
+      },
+      {
+        "candidate_ids": [
+          "E005_F002_C0038"
+        ],
+        "coherent": true,
+        "coverage": 0.16666666666666666,
+        "flags": [
+          "SINGLE_OBSERVATION"
+        ],
+        "frequency_range_within_limit": true,
+        "group_median_frequency_hz": -2498.169001190149,
+        "member_fragment_indices": [
+          2
+        ],
+        "missing_fragment_indices": [
+          1,
+          3,
+          4,
+          5,
+          6
+        ],
+        "observed_group_range_hz": 0.0,
+        "one_candidate_per_fragment": true,
+        "persistent": false,
+        "summary": {
+          "adjacent_observed_frequency_differences_hz": null,
+          "mad_hz": null,
+          "maximum_hz": -2498.169001190149,
+          "median_contrast_db": 11.94951781901281,
+          "median_hz": -2498.169001190149,
+          "median_width_hz": 3.4331227684700383,
+          "minimum_contrast_db": 11.94951781901281,
+          "minimum_hz": -2498.169001190149,
+          "range_hz": null
+        },
+        "support_count": 1,
+        "track_id": "T080"
+      },
+      {
+        "candidate_ids": [
+          "E005_F001_C0003"
+        ],
+        "coherent": true,
+        "coverage": 0.16666666666666666,
+        "flags": [
+          "SINGLE_OBSERVATION"
+        ],
+        "frequency_range_within_limit": true,
+        "group_median_frequency_hz": -2421.495926027648,
+        "member_fragment_indices": [
+          1
+        ],
+        "missing_fragment_indices": [
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        "observed_group_range_hz": 0.0,
+        "one_candidate_per_fragment": true,
+        "persistent": false,
+        "summary": {
+          "adjacent_observed_frequency_differences_hz": null,
+          "mad_hz": null,
+          "maximum_hz": -2421.495926027648,
+          "median_contrast_db": 10.257257377021403,
+          "median_hz": -2421.495926027648,
+          "median_width_hz": 13.732491073880901,
+          "minimum_contrast_db": 10.257257377021403,
+          "minimum_hz": -2421.495926027648,
+          "range_hz": null
+        },
+        "support_count": 1,
+        "track_id": "T081"
+      },
+      {
+        "candidate_ids": [
+          "E005_F006_C0038"
+        ],
+        "coherent": true,
+        "coverage": 0.16666666666666666,
+        "flags": [
+          "SINGLE_OBSERVATION"
+        ],
+        "frequency_range_within_limit": true,
+        "group_median_frequency_hz": -2421.495926027648,
+        "member_fragment_indices": [
+          6
+        ],
+        "missing_fragment_indices": [
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "observed_group_range_hz": 0.0,
+        "one_candidate_per_fragment": true,
+        "persistent": false,
+        "summary": {
+          "adjacent_observed_frequency_differences_hz": null,
+          "mad_hz": null,
+          "maximum_hz": -2421.495926027648,
+          "median_contrast_db": 10.492733963107273,
+          "median_hz": -2421.495926027648,
+          "median_width_hz": 3.433122768470493,
+          "minimum_contrast_db": 10.492733963107273,
+          "minimum_hz": -2421.495926027648,
+          "range_hz": null
+        },
+        "support_count": 1,
+        "track_id": "T082"
+      },
+      {
+        "candidate_ids": [
+          "E005_F002_C0039"
+        ],
+        "coherent": true,
+        "coverage": 0.16666666666666666,
+        "flags": [
+          "SINGLE_OBSERVATION"
+        ],
+        "frequency_range_within_limit": true,
+        "group_median_frequency_hz": -2066.7399066190605,
+        "member_fragment_indices": [
+          2
+        ],
+        "missing_fragment_indices": [
+          1,
+          3,
+          4,
+          5,
+          6
+        ],
+        "observed_group_range_hz": 0.0,
+        "one_candidate_per_fragment": true,
+        "persistent": false,
+        "summary": {
+          "adjacent_observed_frequency_differences_hz": null,
+          "mad_hz": null,
+          "maximum_hz": -2066.7399066190605,
+          "median_contrast_db": 10.070230173423438,
+          "median_hz": -2066.7399066190605,
+          "median_width_hz": 6.866245536940678,
+          "minimum_contrast_db": 10.070230173423438,
+          "minimum_hz": -2066.7399066190605,
+          "range_hz": null
+        },
+        "support_count": 1,
+        "track_id": "T083"
+      },
+      {
+        "candidate_ids": [
+          "E005_F006_C0039"
+        ],
+        "coherent": true,
+        "coverage": 0.16666666666666666,
+        "flags": [
+          "SINGLE_OBSERVATION"
+        ],
+        "frequency_range_within_limit": true,
+        "group_median_frequency_hz": -1790.9457108852878,
+        "member_fragment_indices": [
+          6
+        ],
+        "missing_fragment_indices": [
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "observed_group_range_hz": 0.0,
+        "one_candidate_per_fragment": true,
+        "persistent": false,
+        "summary": {
+          "adjacent_observed_frequency_differences_hz": null,
+          "mad_hz": null,
+          "maximum_hz": -1790.9457108852878,
+          "median_contrast_db": 10.252088792912561,
+          "median_hz": -1790.9457108852878,
+          "median_width_hz": 3.4331227684702657,
+          "minimum_contrast_db": 10.252088792912561,
+          "minimum_hz": -1790.9457108852878,
+          "range_hz": null
+        },
+        "support_count": 1,
+        "track_id": "T084"
+      },
+      {
+        "candidate_ids": [
+          "E005_F006_C0040"
+        ],
+        "coherent": true,
+        "coverage": 0.16666666666666666,
+        "flags": [
+          "SINGLE_OBSERVATION"
+        ],
+        "frequency_range_within_limit": true,
+        "group_median_frequency_hz": -1774.9244712990935,
+        "member_fragment_indices": [
+          6
+        ],
+        "missing_fragment_indices": [
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "observed_group_range_hz": 0.0,
+        "one_candidate_per_fragment": true,
+        "persistent": false,
+        "summary": {
+          "adjacent_observed_frequency_differences_hz": null,
+          "mad_hz": null,
+          "maximum_hz": -1774.9244712990935,
+          "median_contrast_db": 10.34067483317337,
+          "median_hz": -1774.9244712990935,
+          "median_width_hz": 3.4331227684702657,
+          "minimum_contrast_db": 10.34067483317337,
+          "minimum_hz": -1774.9244712990935,
+          "range_hz": null
+        },
+        "support_count": 1,
+        "track_id": "T085"
+      },
+      {
+        "candidate_ids": [
+          "E005_F006_C0041"
+        ],
+        "coherent": true,
+        "coverage": 0.16666666666666666,
+        "flags": [
+          "SINGLE_OBSERVATION"
+        ],
+        "frequency_range_within_limit": true,
+        "group_median_frequency_hz": -1758.9032317128992,
+        "member_fragment_indices": [
+          6
+        ],
+        "missing_fragment_indices": [
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "observed_group_range_hz": 0.0,
+        "one_candidate_per_fragment": true,
+        "persistent": false,
+        "summary": {
+          "adjacent_observed_frequency_differences_hz": null,
+          "mad_hz": null,
+          "maximum_hz": -1758.9032317128992,
+          "median_contrast_db": 11.010667562964807,
+          "median_hz": -1758.9032317128992,
+          "median_width_hz": 3.4331227684700383,
+          "minimum_contrast_db": 11.010667562964807,
+          "minimum_hz": -1758.9032317128992,
+          "range_hz": null
+        },
+        "support_count": 1,
+        "track_id": "T086"
+      },
+      {
+        "candidate_ids": [
+          "E005_F006_C0042"
+        ],
+        "coherent": true,
+        "coverage": 0.16666666666666666,
+        "flags": [
+          "SINGLE_OBSERVATION"
+        ],
+        "frequency_range_within_limit": true,
+        "group_median_frequency_hz": -1742.881992126705,
+        "member_fragment_indices": [
+          6
+        ],
+        "missing_fragment_indices": [
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "observed_group_range_hz": 0.0,
+        "one_candidate_per_fragment": true,
+        "persistent": false,
+        "summary": {
+          "adjacent_observed_frequency_differences_hz": null,
+          "mad_hz": null,
+          "maximum_hz": -1742.881992126705,
+          "median_contrast_db": 10.158234066633987,
+          "median_hz": -1742.881992126705,
+          "median_width_hz": 5.721871280783571,
+          "minimum_contrast_db": 10.158234066633987,
+          "minimum_hz": -1742.881992126705,
+          "range_hz": null
+        },
+        "support_count": 1,
+        "track_id": "T087"
+      },
+      {
+        "candidate_ids": [
+          "E005_F006_C0043"
+        ],
+        "coherent": true,
+        "coverage": 0.16666666666666666,
+        "flags": [
+          "SINGLE_OBSERVATION"
+        ],
+        "frequency_range_within_limit": true,
+        "group_median_frequency_hz": -1714.2726357227866,
+        "member_fragment_indices": [
+          6
+        ],
+        "missing_fragment_indices": [
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "observed_group_range_hz": 0.0,
+        "one_candidate_per_fragment": true,
+        "persistent": false,
+        "summary": {
+          "adjacent_observed_frequency_differences_hz": null,
+          "mad_hz": null,
+          "maximum_hz": -1714.2726357227866,
+          "median_contrast_db": 11.132148105864717,
+          "median_hz": -1714.2726357227866,
+          "median_width_hz": 5.721871280783571,
+          "minimum_contrast_db": 11.132148105864717,
+          "minimum_hz": -1714.2726357227866,
+          "range_hz": null
+        },
+        "support_count": 1,
+        "track_id": "T088"
+      },
+      {
+        "candidate_ids": [
+          "E005_F006_C0044"
+        ],
+        "coherent": true,
+        "coverage": 0.16666666666666666,
+        "flags": [
+          "SINGLE_OBSERVATION"
+        ],
+        "frequency_range_within_limit": true,
+        "group_median_frequency_hz": -1698.2513961365923,
+        "member_fragment_indices": [
+          6
+        ],
+        "missing_fragment_indices": [
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "observed_group_range_hz": 0.0,
+        "one_candidate_per_fragment": true,
+        "persistent": false,
+        "summary": {
+          "adjacent_observed_frequency_differences_hz": null,
+          "mad_hz": null,
+          "maximum_hz": -1698.2513961365923,
+          "median_contrast_db": 11.64355456671185,
+          "median_hz": -1698.2513961365923,
+          "median_width_hz": 4.577497024626918,
+          "minimum_contrast_db": 11.64355456671185,
+          "minimum_hz": -1698.2513961365923,
+          "range_hz": null
+        },
+        "support_count": 1,
+        "track_id": "T089"
+      },
+      {
+        "candidate_ids": [
+          "E005_F006_C0045"
+        ],
+        "coherent": true,
+        "coverage": 0.16666666666666666,
+        "flags": [
+          "SINGLE_OBSERVATION"
+        ],
+        "frequency_range_within_limit": true,
+        "group_median_frequency_hz": -1682.230156550398,
+        "member_fragment_indices": [
+          6
+        ],
+        "missing_fragment_indices": [
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "observed_group_range_hz": 0.0,
+        "one_candidate_per_fragment": true,
+        "persistent": false,
+        "summary": {
+          "adjacent_observed_frequency_differences_hz": null,
+          "mad_hz": null,
+          "maximum_hz": -1682.230156550398,
+          "median_contrast_db": 11.336027541277813,
+          "median_hz": -1682.230156550398,
+          "median_width_hz": 4.577497024626918,
+          "minimum_contrast_db": 11.336027541277813,
+          "minimum_hz": -1682.230156550398,
+          "range_hz": null
+        },
+        "support_count": 1,
+        "track_id": "T090"
+      },
+      {
+        "candidate_ids": [
+          "E005_F006_C0046"
+        ],
+        "coherent": true,
+        "coverage": 0.16666666666666666,
+        "flags": [
+          "SINGLE_OBSERVATION"
+        ],
+        "frequency_range_within_limit": true,
+        "group_median_frequency_hz": -1666.2089169642038,
+        "member_fragment_indices": [
+          6
+        ],
+        "missing_fragment_indices": [
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "observed_group_range_hz": 0.0,
+        "one_candidate_per_fragment": true,
+        "persistent": false,
+        "summary": {
+          "adjacent_observed_frequency_differences_hz": null,
+          "mad_hz": null,
+          "maximum_hz": -1666.2089169642038,
+          "median_contrast_db": 11.319547090283057,
+          "median_hz": -1666.2089169642038,
+          "median_width_hz": 4.577497024626918,
+          "minimum_contrast_db": 11.319547090283057,
+          "minimum_hz": -1666.2089169642038,
+          "range_hz": null
+        },
+        "support_count": 1,
+        "track_id": "T091"
+      },
+      {
+        "candidate_ids": [
+          "E005_F004_C0005",
+          "E005_F005_C0002",
+          "E005_F005_C0003",
+          "E005_F006_C0047",
+          "E005_F006_C0048",
+          "E005_F006_C0049"
+        ],
+        "coherent": false,
+        "coverage": 0.5,
+        "flags": [
+          "MULTIPLE_CANDIDATES_SAME_FRAGMENT"
+        ],
+        "frequency_range_within_limit": true,
+        "group_median_frequency_hz": -1562.6430467820194,
+        "member_fragment_indices": [
+          4,
+          5,
+          6
+        ],
+        "missing_fragment_indices": [
+          1,
+          2,
+          3
+        ],
+        "observed_group_range_hz": 53.785590039366525,
+        "one_candidate_per_fragment": false,
+        "persistent": false,
+        "summary": null,
+        "support_count": 3,
+        "track_id": "T092"
+      },
+      {
+        "candidate_ids": [
+          "E005_F003_C0004"
+        ],
+        "coherent": true,
+        "coverage": 0.16666666666666666,
+        "flags": [
+          "SINGLE_OBSERVATION"
+        ],
+        "frequency_range_within_limit": true,
+        "group_median_frequency_hz": -1400.7140895358416,
+        "member_fragment_indices": [
+          3
+        ],
+        "missing_fragment_indices": [
+          1,
+          2,
+          4,
+          5,
+          6
+        ],
+        "observed_group_range_hz": 0.0,
+        "one_candidate_per_fragment": true,
+        "persistent": false,
+        "summary": {
+          "adjacent_observed_frequency_differences_hz": null,
+          "mad_hz": null,
+          "maximum_hz": -1400.7140895358416,
+          "median_contrast_db": 10.58723684875529,
+          "median_hz": -1400.7140895358416,
+          "median_width_hz": 9.154994049253837,
+          "minimum_contrast_db": 10.58723684875529,
+          "minimum_hz": -1400.7140895358416,
+          "range_hz": null
+        },
+        "support_count": 1,
+        "track_id": "T093"
+      },
+      {
+        "candidate_ids": [
+          "E005_F006_C0050"
+        ],
+        "coherent": true,
+        "coverage": 0.16666666666666666,
+        "flags": [
+          "SINGLE_OBSERVATION"
+        ],
+        "frequency_range_within_limit": true,
+        "group_median_frequency_hz": -373.0660075070951,
+        "member_fragment_indices": [
+          6
+        ],
+        "missing_fragment_indices": [
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "observed_group_range_hz": 0.0,
+        "one_candidate_per_fragment": true,
+        "persistent": false,
+        "summary": {
+          "adjacent_observed_frequency_differences_hz": null,
+          "mad_hz": null,
+          "maximum_hz": -373.0660075070951,
+          "median_contrast_db": 11.007623998591205,
+          "median_hz": -373.0660075070951,
+          "median_width_hz": 6.866245536940394,
+          "minimum_contrast_db": 11.007623998591205,
+          "minimum_hz": -373.0660075070951,
+          "range_hz": null
+        },
+        "support_count": 1,
+        "track_id": "T094"
+      },
+      {
+        "candidate_ids": [
+          "E005_F006_C0051"
+        ],
+        "coherent": true,
+        "coverage": 0.16666666666666666,
+        "flags": [
+          "SINGLE_OBSERVATION"
+        ],
+        "frequency_range_within_limit": true,
+        "group_median_frequency_hz": -359.3335164332143,
+        "member_fragment_indices": [
+          6
+        ],
+        "missing_fragment_indices": [
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "observed_group_range_hz": 0.0,
+        "one_candidate_per_fragment": true,
+        "persistent": false,
+        "summary": {
+          "adjacent_observed_frequency_differences_hz": null,
+          "mad_hz": null,
+          "maximum_hz": -359.3335164332143,
+          "median_contrast_db": 10.950470194679173,
+          "median_hz": -359.3335164332143,
+          "median_width_hz": 6.866245536940394,
+          "minimum_contrast_db": 10.950470194679173,
+          "minimum_hz": -359.3335164332143,
+          "range_hz": null
+        },
+        "support_count": 1,
+        "track_id": "T095"
+      },
+      {
+        "candidate_ids": [
+          "E005_F002_C0040"
+        ],
+        "coherent": true,
+        "coverage": 0.16666666666666666,
+        "flags": [
+          "SINGLE_OBSERVATION"
+        ],
+        "frequency_range_within_limit": true,
+        "group_median_frequency_hz": -353.61164515243064,
+        "member_fragment_indices": [
+          2
+        ],
+        "missing_fragment_indices": [
+          1,
+          3,
+          4,
+          5,
+          6
+        ],
+        "observed_group_range_hz": 0.0,
+        "one_candidate_per_fragment": true,
+        "persistent": false,
+        "summary": {
+          "adjacent_observed_frequency_differences_hz": null,
+          "mad_hz": null,
+          "maximum_hz": -353.61164515243064,
+          "median_contrast_db": 11.041056197165826,
+          "median_hz": -353.61164515243064,
+          "median_width_hz": 4.577497024626918,
+          "minimum_contrast_db": 11.041056197165826,
+          "minimum_hz": -353.61164515243064,
+          "range_hz": null
+        },
+        "support_count": 1,
+        "track_id": "T096"
+      },
+      {
+        "candidate_ids": [
+          "E005_F006_C0052"
+        ],
+        "coherent": true,
+        "coverage": 0.16666666666666666,
+        "flags": [
+          "SINGLE_OBSERVATION"
+        ],
+        "frequency_range_within_limit": true,
+        "group_median_frequency_hz": -343.31227684702003,
+        "member_fragment_indices": [
+          6
+        ],
+        "missing_fragment_indices": [
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "observed_group_range_hz": 0.0,
+        "one_candidate_per_fragment": true,
+        "persistent": false,
+        "summary": {
+          "adjacent_observed_frequency_differences_hz": null,
+          "mad_hz": null,
+          "maximum_hz": -343.31227684702003,
+          "median_contrast_db": 11.31812808116006,
+          "median_hz": -343.31227684702003,
+          "median_width_hz": 5.7218712807836845,
+          "minimum_contrast_db": 11.31812808116006,
+          "minimum_hz": -343.31227684702003,
+          "range_hz": null
+        },
+        "support_count": 1,
+        "track_id": "T097"
+      },
+      {
+        "candidate_ids": [
+          "E005_F006_C0053"
+        ],
+        "coherent": true,
+        "coverage": 0.16666666666666666,
+        "flags": [
+          "SINGLE_OBSERVATION"
+        ],
+        "frequency_range_within_limit": true,
+        "group_median_frequency_hz": 519.545912295157,
+        "member_fragment_indices": [
+          6
+        ],
+        "missing_fragment_indices": [
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "observed_group_range_hz": 0.0,
+        "one_candidate_per_fragment": true,
+        "persistent": false,
+        "summary": {
+          "adjacent_observed_frequency_differences_hz": null,
+          "mad_hz": null,
+          "maximum_hz": 519.545912295157,
+          "median_contrast_db": 10.090651153466279,
+          "median_hz": 519.545912295157,
+          "median_width_hz": 4.577497024626918,
+          "minimum_contrast_db": 10.090651153466279,
+          "minimum_hz": 519.545912295157,
+          "range_hz": null
+        },
+        "support_count": 1,
+        "track_id": "T098"
+      },
+      {
+        "candidate_ids": [
+          "E005_F002_C0041"
+        ],
+        "coherent": true,
+        "coverage": 0.16666666666666666,
+        "flags": [
+          "SINGLE_OBSERVATION"
+        ],
+        "frequency_range_within_limit": true,
+        "group_median_frequency_hz": 522.9790350636272,
+        "member_fragment_indices": [
+          2
+        ],
+        "missing_fragment_indices": [
+          1,
+          3,
+          4,
+          5,
+          6
+        ],
+        "observed_group_range_hz": 0.0,
+        "one_candidate_per_fragment": true,
+        "persistent": false,
+        "summary": {
+          "adjacent_observed_frequency_differences_hz": null,
+          "mad_hz": null,
+          "maximum_hz": 522.9790350636272,
+          "median_contrast_db": 10.239904277708353,
+          "median_hz": 522.9790350636272,
+          "median_width_hz": 3.4331227684702657,
+          "minimum_contrast_db": 10.239904277708353,
+          "minimum_hz": 522.9790350636272,
+          "range_hz": null
+        },
+        "support_count": 1,
+        "track_id": "T099"
+      },
+      {
+        "candidate_ids": [
+          "E005_F006_C0054"
+        ],
+        "coherent": true,
+        "coverage": 0.16666666666666666,
+        "flags": [
+          "SINGLE_OBSERVATION"
+        ],
+        "frequency_range_within_limit": true,
+        "group_median_frequency_hz": 535.5671518813513,
+        "member_fragment_indices": [
+          6
+        ],
+        "missing_fragment_indices": [
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "observed_group_range_hz": 0.0,
+        "one_candidate_per_fragment": true,
+        "persistent": false,
+        "summary": {
+          "adjacent_observed_frequency_differences_hz": null,
+          "mad_hz": null,
+          "maximum_hz": 535.5671518813513,
+          "median_contrast_db": 10.26254424889145,
+          "median_hz": 535.5671518813513,
+          "median_width_hz": 6.866245536940337,
+          "minimum_contrast_db": 10.26254424889145,
+          "minimum_hz": 535.5671518813513,
+          "range_hz": null
+        },
+        "support_count": 1,
+        "track_id": "T100"
+      },
+      {
+        "candidate_ids": [
+          "E005_F002_C0042"
+        ],
+        "coherent": true,
+        "coverage": 0.16666666666666666,
+        "flags": [
+          "SINGLE_OBSERVATION"
+        ],
+        "frequency_range_within_limit": true,
+        "group_median_frequency_hz": 541.2890231621349,
+        "member_fragment_indices": [
+          2
+        ],
+        "missing_fragment_indices": [
+          1,
+          3,
+          4,
+          5,
+          6
+        ],
+        "observed_group_range_hz": 0.0,
+        "one_candidate_per_fragment": true,
+        "persistent": false,
+        "summary": {
+          "adjacent_observed_frequency_differences_hz": null,
+          "mad_hz": null,
+          "maximum_hz": 541.2890231621349,
+          "median_contrast_db": 10.632847809810826,
+          "median_hz": 541.2890231621349,
+          "median_width_hz": 4.577497024627032,
+          "minimum_contrast_db": 10.632847809810826,
+          "minimum_hz": 541.2890231621349,
+          "range_hz": null
+        },
+        "support_count": 1,
+        "track_id": "T101"
+      },
+      {
+        "candidate_ids": [
+          "E005_F002_C0043"
+        ],
+        "coherent": true,
+        "coverage": 0.16666666666666666,
+        "flags": [
+          "SINGLE_OBSERVATION"
+        ],
+        "frequency_range_within_limit": true,
+        "group_median_frequency_hz": 559.5990112606427,
+        "member_fragment_indices": [
+          2
+        ],
+        "missing_fragment_indices": [
+          1,
+          3,
+          4,
+          5,
+          6
+        ],
+        "observed_group_range_hz": 0.0,
+        "one_candidate_per_fragment": true,
+        "persistent": false,
+        "summary": {
+          "adjacent_observed_frequency_differences_hz": null,
+          "mad_hz": null,
+          "maximum_hz": 559.5990112606427,
+          "median_contrast_db": 12.478020417593845,
+          "median_hz": 559.5990112606427,
+          "median_width_hz": 4.577497024626918,
+          "minimum_contrast_db": 12.478020417593845,
+          "minimum_hz": 559.5990112606427,
+          "range_hz": null
+        },
+        "support_count": 1,
+        "track_id": "T102"
+      },
+      {
+        "candidate_ids": [
+          "E005_F002_C0044"
+        ],
+        "coherent": true,
+        "coverage": 0.16666666666666666,
+        "flags": [
+          "SINGLE_OBSERVATION"
+        ],
+        "frequency_range_within_limit": true,
+        "group_median_frequency_hz": 576.7646251029936,
+        "member_fragment_indices": [
+          2
+        ],
+        "missing_fragment_indices": [
+          1,
+          3,
+          4,
+          5,
+          6
+        ],
+        "observed_group_range_hz": 0.0,
+        "one_candidate_per_fragment": true,
+        "persistent": false,
+        "summary": {
+          "adjacent_observed_frequency_differences_hz": null,
+          "mad_hz": null,
+          "maximum_hz": 576.7646251029936,
+          "median_contrast_db": 11.31193549724073,
+          "median_hz": 576.7646251029936,
+          "median_width_hz": 4.577497024626918,
+          "minimum_contrast_db": 11.31193549724073,
+          "minimum_hz": 576.7646251029936,
+          "range_hz": null
+        },
+        "support_count": 1,
+        "track_id": "T103"
+      },
+      {
+        "candidate_ids": [
+          "E005_F002_C0045"
+        ],
+        "coherent": true,
+        "coverage": 0.16666666666666666,
+        "flags": [
+          "SINGLE_OBSERVATION"
+        ],
+        "frequency_range_within_limit": true,
+        "group_median_frequency_hz": 595.0746132015014,
+        "member_fragment_indices": [
+          2
+        ],
+        "missing_fragment_indices": [
+          1,
+          3,
+          4,
+          5,
+          6
+        ],
+        "observed_group_range_hz": 0.0,
+        "one_candidate_per_fragment": true,
+        "persistent": false,
+        "summary": {
+          "adjacent_observed_frequency_differences_hz": null,
+          "mad_hz": null,
+          "maximum_hz": 595.0746132015014,
+          "median_contrast_db": 10.700617707623568,
+          "median_hz": 595.0746132015014,
+          "median_width_hz": 5.721871280783571,
+          "minimum_contrast_db": 10.700617707623568,
+          "minimum_hz": 595.0746132015014,
+          "range_hz": null
+        },
+        "support_count": 1,
+        "track_id": "T104"
+      },
+      {
+        "candidate_ids": [
+          "E005_F003_C0005"
+        ],
+        "coherent": true,
+        "coverage": 0.16666666666666666,
+        "flags": [
+          "SINGLE_OBSERVATION"
+        ],
+        "frequency_range_within_limit": true,
+        "group_median_frequency_hz": 787.3294882358325,
+        "member_fragment_indices": [
+          3
+        ],
+        "missing_fragment_indices": [
+          1,
+          2,
+          4,
+          5,
+          6
+        ],
+        "observed_group_range_hz": 0.0,
+        "one_candidate_per_fragment": true,
+        "persistent": false,
+        "summary": {
+          "adjacent_observed_frequency_differences_hz": null,
+          "mad_hz": null,
+          "maximum_hz": 787.3294882358325,
+          "median_contrast_db": 11.42085361580284,
+          "median_hz": 787.3294882358325,
+          "median_width_hz": 4.577497024626999,
+          "minimum_contrast_db": 11.42085361580284,
+          "minimum_hz": 787.3294882358325,
+          "range_hz": null
+        },
+        "support_count": 1,
+        "track_id": "T105"
+      },
+      {
+        "candidate_ids": [
+          "E005_F002_C0046",
+          "E005_F002_C0047",
+          "E005_F002_C0048",
+          "E005_F003_C0006"
+        ],
+        "coherent": false,
+        "coverage": 0.3333333333333333,
+        "flags": [
+          "MULTIPLE_CANDIDATES_SAME_FRAGMENT"
+        ],
+        "frequency_range_within_limit": true,
+        "group_median_frequency_hz": 1933.4203057768011,
+        "member_fragment_indices": [
+          2,
+          3
+        ],
+        "missing_fragment_indices": [
+          1,
+          4,
+          5,
+          6
+        ],
+        "observed_group_range_hz": 38.90872470932891,
+        "one_candidate_per_fragment": false,
+        "persistent": false,
+        "summary": null,
+        "support_count": 2,
+        "track_id": "T106"
+      },
+      {
+        "candidate_ids": [
+          "E005_F006_C0055"
+        ],
+        "coherent": true,
+        "coverage": 0.16666666666666666,
+        "flags": [
+          "SINGLE_OBSERVATION"
+        ],
+        "frequency_range_within_limit": true,
+        "group_median_frequency_hz": 3385.0590497116173,
+        "member_fragment_indices": [
+          6
+        ],
+        "missing_fragment_indices": [
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "observed_group_range_hz": 0.0,
+        "one_candidate_per_fragment": true,
+        "persistent": false,
+        "summary": {
+          "adjacent_observed_frequency_differences_hz": null,
+          "mad_hz": null,
+          "maximum_hz": 3385.0590497116173,
+          "median_contrast_db": 10.536290883307181,
+          "median_hz": 3385.0590497116173,
+          "median_width_hz": 3.4331227684700383,
+          "minimum_contrast_db": 10.536290883307181,
+          "minimum_hz": 3385.0590497116173,
+          "range_hz": null
+        },
+        "support_count": 1,
+        "track_id": "T107"
+      },
+      {
+        "candidate_ids": [
+          "E005_F006_C0056"
+        ],
+        "coherent": true,
+        "coverage": 0.16666666666666666,
+        "flags": [
+          "SINGLE_OBSERVATION"
+        ],
+        "frequency_range_within_limit": true,
+        "group_median_frequency_hz": 5401.446489059782,
+        "member_fragment_indices": [
+          6
+        ],
+        "missing_fragment_indices": [
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "observed_group_range_hz": 0.0,
+        "one_candidate_per_fragment": true,
+        "persistent": false,
+        "summary": {
+          "adjacent_observed_frequency_differences_hz": null,
+          "mad_hz": null,
+          "maximum_hz": 5401.446489059782,
+          "median_contrast_db": 10.07507205051568,
+          "median_hz": 5401.446489059782,
+          "median_width_hz": 3.4331227684695835,
+          "minimum_contrast_db": 10.07507205051568,
+          "minimum_hz": 5401.446489059782,
+          "range_hz": null
+        },
+        "support_count": 1,
+        "track_id": "T108"
+      },
+      {
+        "candidate_ids": [
+          "E005_F006_C0057"
+        ],
+        "coherent": true,
+        "coverage": 0.16666666666666666,
+        "flags": [
+          "SINGLE_OBSERVATION"
+        ],
+        "frequency_range_within_limit": true,
+        "group_median_frequency_hz": 5417.4677286459755,
+        "member_fragment_indices": [
+          6
+        ],
+        "missing_fragment_indices": [
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "observed_group_range_hz": 0.0,
+        "one_candidate_per_fragment": true,
+        "persistent": false,
+        "summary": {
+          "adjacent_observed_frequency_differences_hz": null,
+          "mad_hz": null,
+          "maximum_hz": 5417.4677286459755,
+          "median_contrast_db": 11.071142570826382,
+          "median_hz": 5417.4677286459755,
+          "median_width_hz": 3.4331227684695835,
+          "minimum_contrast_db": 11.071142570826382,
+          "minimum_hz": 5417.4677286459755,
+          "range_hz": null
+        },
+        "support_count": 1,
+        "track_id": "T109"
+      },
+      {
+        "candidate_ids": [
+          "E005_F006_C0058"
+        ],
+        "coherent": true,
+        "coverage": 0.16666666666666666,
+        "flags": [
+          "SINGLE_OBSERVATION"
+        ],
+        "frequency_range_within_limit": true,
+        "group_median_frequency_hz": 5433.48896823217,
+        "member_fragment_indices": [
+          6
+        ],
+        "missing_fragment_indices": [
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "observed_group_range_hz": 0.0,
+        "one_candidate_per_fragment": true,
+        "persistent": false,
+        "summary": {
+          "adjacent_observed_frequency_differences_hz": null,
+          "mad_hz": null,
+          "maximum_hz": 5433.48896823217,
+          "median_contrast_db": 10.257346151002043,
+          "median_hz": 5433.48896823217,
+          "median_width_hz": 3.433122768470493,
+          "minimum_contrast_db": 10.257346151002043,
+          "minimum_hz": 5433.48896823217,
+          "range_hz": null
+        },
+        "support_count": 1,
+        "track_id": "T110"
+      },
+      {
+        "candidate_ids": [
+          "E005_F002_C0049"
+        ],
+        "coherent": true,
+        "coverage": 0.16666666666666666,
+        "flags": [
+          "SINGLE_OBSERVATION"
+        ],
+        "frequency_range_within_limit": true,
+        "group_median_frequency_hz": 6887.988647807379,
+        "member_fragment_indices": [
+          2
+        ],
+        "missing_fragment_indices": [
+          1,
+          3,
+          4,
+          5,
+          6
+        ],
+        "observed_group_range_hz": 0.0,
+        "one_candidate_per_fragment": true,
+        "persistent": false,
+        "summary": {
+          "adjacent_observed_frequency_differences_hz": null,
+          "mad_hz": null,
+          "maximum_hz": 6887.988647807379,
+          "median_contrast_db": 11.68085899463267,
+          "median_hz": 6887.988647807379,
+          "median_width_hz": 4.577497024626464,
+          "minimum_contrast_db": 11.68085899463267,
+          "minimum_hz": 6887.988647807379,
+          "range_hz": null
+        },
+        "support_count": 1,
+        "track_id": "T111"
+      },
+      {
+        "candidate_ids": [
+          "E005_F005_C0005"
+        ],
+        "coherent": true,
+        "coverage": 0.16666666666666666,
+        "flags": [
+          "SINGLE_OBSERVATION"
+        ],
+        "frequency_range_within_limit": true,
+        "group_median_frequency_hz": 6889.133022063535,
+        "member_fragment_indices": [
+          5
+        ],
+        "missing_fragment_indices": [
+          1,
+          2,
+          3,
+          4,
+          6
+        ],
+        "observed_group_range_hz": 0.0,
+        "one_candidate_per_fragment": true,
+        "persistent": false,
+        "summary": {
+          "adjacent_observed_frequency_differences_hz": null,
+          "mad_hz": null,
+          "maximum_hz": 6889.133022063535,
+          "median_contrast_db": 10.065160142940128,
+          "median_hz": 6889.133022063535,
+          "median_width_hz": 164.78989288656948,
+          "minimum_contrast_db": 10.065160142940128,
+          "minimum_hz": 6889.133022063535,
+          "range_hz": null
+        },
+        "support_count": 1,
+        "track_id": "T112"
+      },
+      {
+        "candidate_ids": [
+          "E005_F002_C0050"
+        ],
+        "coherent": true,
+        "coverage": 0.16666666666666666,
+        "flags": [
+          "SINGLE_OBSERVATION"
+        ],
+        "frequency_range_within_limit": true,
+        "group_median_frequency_hz": 6904.009887393572,
+        "member_fragment_indices": [
+          2
+        ],
+        "missing_fragment_indices": [
+          1,
+          3,
+          4,
+          5,
+          6
+        ],
+        "observed_group_range_hz": 0.0,
+        "one_candidate_per_fragment": true,
+        "persistent": false,
+        "summary": {
+          "adjacent_observed_frequency_differences_hz": null,
+          "mad_hz": null,
+          "maximum_hz": 6904.009887393572,
+          "median_contrast_db": 10.129868135516556,
+          "median_hz": 6904.009887393572,
+          "median_width_hz": 4.577497024626464,
+          "minimum_contrast_db": 10.129868135516556,
+          "minimum_hz": 6904.009887393572,
+          "range_hz": null
+        },
+        "support_count": 1,
+        "track_id": "T113"
+      },
+      {
+        "candidate_ids": [
+          "E005_F002_C0051"
+        ],
+        "coherent": true,
+        "coverage": 0.16666666666666666,
+        "flags": [
+          "SINGLE_OBSERVATION"
+        ],
+        "frequency_range_within_limit": true,
+        "group_median_frequency_hz": 6914.309255698983,
+        "member_fragment_indices": [
+          2
+        ],
+        "missing_fragment_indices": [
+          1,
+          3,
+          4,
+          5,
+          6
+        ],
+        "observed_group_range_hz": 0.0,
+        "one_candidate_per_fragment": true,
+        "persistent": false,
+        "summary": {
+          "adjacent_observed_frequency_differences_hz": null,
+          "mad_hz": null,
+          "maximum_hz": 6914.309255698983,
+          "median_contrast_db": 11.060353576508266,
+          "median_hz": 6914.309255698983,
+          "median_width_hz": 5.721871280784253,
+          "minimum_contrast_db": 11.060353576508266,
+          "minimum_hz": 6914.309255698983,
+          "range_hz": null
+        },
+        "support_count": 1,
+        "track_id": "T114"
+      },
+      {
+        "candidate_ids": [
+          "E005_F002_C0052"
+        ],
+        "coherent": true,
+        "coverage": 0.16666666666666666,
+        "flags": [
+          "SINGLE_OBSERVATION"
+        ],
+        "frequency_range_within_limit": true,
+        "group_median_frequency_hz": 6930.330495285178,
+        "member_fragment_indices": [
+          2
+        ],
+        "missing_fragment_indices": [
+          1,
+          3,
+          4,
+          5,
+          6
+        ],
+        "observed_group_range_hz": 0.0,
+        "one_candidate_per_fragment": true,
+        "persistent": false,
+        "summary": {
+          "adjacent_observed_frequency_differences_hz": null,
+          "mad_hz": null,
+          "maximum_hz": 6930.330495285178,
+          "median_contrast_db": 11.981870123530424,
+          "median_hz": 6930.330495285178,
+          "median_width_hz": 6.866245536940223,
+          "minimum_contrast_db": 11.981870123530424,
+          "minimum_hz": 6930.330495285178,
+          "range_hz": null
+        },
+        "support_count": 1,
+        "track_id": "T115"
+      },
+      {
+        "candidate_ids": [
+          "E005_F002_C0053"
+        ],
+        "coherent": true,
+        "coverage": 0.16666666666666666,
+        "flags": [
+          "SINGLE_OBSERVATION"
+        ],
+        "frequency_range_within_limit": true,
+        "group_median_frequency_hz": 6947.496109127528,
+        "member_fragment_indices": [
+          2
+        ],
+        "missing_fragment_indices": [
+          1,
+          3,
+          4,
+          5,
+          6
+        ],
+        "observed_group_range_hz": 0.0,
+        "one_candidate_per_fragment": true,
+        "persistent": false,
+        "summary": {
+          "adjacent_observed_frequency_differences_hz": null,
+          "mad_hz": null,
+          "maximum_hz": 6947.496109127528,
+          "median_contrast_db": 11.312410479318613,
+          "median_hz": 6947.496109127528,
+          "median_width_hz": 8.010619793097103,
+          "minimum_contrast_db": 11.312410479318613,
+          "minimum_hz": 6947.496109127528,
+          "range_hz": null
+        },
+        "support_count": 1,
+        "track_id": "T116"
+      },
+      {
+        "candidate_ids": [
+          "E005_F002_C0054"
+        ],
+        "coherent": true,
+        "coverage": 0.16666666666666666,
+        "flags": [
+          "SINGLE_OBSERVATION"
+        ],
+        "frequency_range_within_limit": true,
+        "group_median_frequency_hz": 6962.372974457566,
+        "member_fragment_indices": [
+          2
+        ],
+        "missing_fragment_indices": [
+          1,
+          3,
+          4,
+          5,
+          6
+        ],
+        "observed_group_range_hz": 0.0,
+        "one_candidate_per_fragment": true,
+        "persistent": false,
+        "summary": {
+          "adjacent_observed_frequency_differences_hz": null,
+          "mad_hz": null,
+          "maximum_hz": 6962.372974457566,
+          "median_contrast_db": 10.317311334887485,
+          "median_hz": 6962.372974457566,
+          "median_width_hz": 8.010619793098012,
+          "minimum_contrast_db": 10.317311334887485,
+          "minimum_hz": 6962.372974457566,
+          "range_hz": null
+        },
+        "support_count": 1,
+        "track_id": "T117"
+      },
+      {
+        "candidate_ids": [
+          "E005_F002_C0055"
+        ],
+        "coherent": true,
+        "coverage": 0.16666666666666666,
+        "flags": [
+          "SINGLE_OBSERVATION"
+        ],
+        "frequency_range_within_limit": true,
+        "group_median_frequency_hz": 7002.426073423052,
+        "member_fragment_indices": [
+          2
+        ],
+        "missing_fragment_indices": [
+          1,
+          3,
+          4,
+          5,
+          6
+        ],
+        "observed_group_range_hz": 0.0,
+        "one_candidate_per_fragment": true,
+        "persistent": false,
+        "summary": {
+          "adjacent_observed_frequency_differences_hz": null,
+          "mad_hz": null,
+          "maximum_hz": 7002.426073423052,
+          "median_contrast_db": 11.405520752458198,
+          "median_hz": 7002.426073423052,
+          "median_width_hz": 5.721871280783343,
+          "minimum_contrast_db": 11.405520752458198,
+          "minimum_hz": 7002.426073423052,
+          "range_hz": null
+        },
+        "support_count": 1,
+        "track_id": "T118"
+      },
+      {
+        "candidate_ids": [
+          "E005_F002_C0056"
+        ],
+        "coherent": true,
+        "coverage": 0.16666666666666666,
+        "flags": [
+          "SINGLE_OBSERVATION"
+        ],
+        "frequency_range_within_limit": true,
+        "group_median_frequency_hz": 7925.936098141536,
+        "member_fragment_indices": [
+          2
+        ],
+        "missing_fragment_indices": [
+          1,
+          3,
+          4,
+          5,
+          6
+        ],
+        "observed_group_range_hz": 0.0,
+        "one_candidate_per_fragment": true,
+        "persistent": false,
+        "summary": {
+          "adjacent_observed_frequency_differences_hz": null,
+          "mad_hz": null,
+          "maximum_hz": 7925.936098141536,
+          "median_contrast_db": 10.208059568785252,
+          "median_hz": 7925.936098141536,
+          "median_width_hz": 3.433122768470493,
+          "minimum_contrast_db": 10.208059568785252,
+          "minimum_hz": 7925.936098141536,
+          "range_hz": null
+        },
+        "support_count": 1,
+        "track_id": "T119"
+      },
+      {
+        "candidate_ids": [
+          "E005_F002_C0057"
+        ],
+        "coherent": true,
+        "coverage": 0.16666666666666666,
+        "flags": [
+          "SINGLE_OBSERVATION"
+        ],
+        "frequency_range_within_limit": true,
+        "group_median_frequency_hz": 8284.125240318594,
+        "member_fragment_indices": [
+          2
+        ],
+        "missing_fragment_indices": [
+          1,
+          3,
+          4,
+          5,
+          6
+        ],
+        "observed_group_range_hz": 0.0,
+        "one_candidate_per_fragment": true,
+        "persistent": false,
+        "summary": {
+          "adjacent_observed_frequency_differences_hz": null,
+          "mad_hz": null,
+          "maximum_hz": 8284.125240318594,
+          "median_contrast_db": 11.090976940515054,
+          "median_hz": 8284.125240318594,
+          "median_width_hz": 4.577497024627373,
+          "minimum_contrast_db": 11.090976940515054,
+          "minimum_hz": 8284.125240318594,
+          "range_hz": null
+        },
+        "support_count": 1,
+        "track_id": "T120"
+      },
+      {
+        "candidate_ids": [
+          "E005_F002_C0058"
+        ],
+        "coherent": true,
+        "coverage": 0.16666666666666666,
+        "flags": [
+          "SINGLE_OBSERVATION"
+        ],
+        "frequency_range_within_limit": true,
+        "group_median_frequency_hz": 8302.4352284171,
+        "member_fragment_indices": [
+          2
+        ],
+        "missing_fragment_indices": [
+          1,
+          3,
+          4,
+          5,
+          6
+        ],
+        "observed_group_range_hz": 0.0,
+        "one_candidate_per_fragment": true,
+        "persistent": false,
+        "summary": {
+          "adjacent_observed_frequency_differences_hz": null,
+          "mad_hz": null,
+          "maximum_hz": 8302.4352284171,
+          "median_contrast_db": 11.825966453106718,
+          "median_hz": 8302.4352284171,
+          "median_width_hz": 8.010619793096193,
+          "minimum_contrast_db": 11.825966453106718,
+          "minimum_hz": 8302.4352284171,
+          "range_hz": null
+        },
+        "support_count": 1,
+        "track_id": "T121"
+      },
+      {
+        "candidate_ids": [
+          "E005_F006_C0059"
+        ],
+        "coherent": true,
+        "coverage": 0.16666666666666666,
+        "flags": [
+          "SINGLE_OBSERVATION"
+        ],
+        "frequency_range_within_limit": true,
+        "group_median_frequency_hz": 9183.603405657785,
+        "member_fragment_indices": [
+          6
+        ],
+        "missing_fragment_indices": [
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "observed_group_range_hz": 0.0,
+        "one_candidate_per_fragment": true,
+        "persistent": false,
+        "summary": {
+          "adjacent_observed_frequency_differences_hz": null,
+          "mad_hz": null,
+          "maximum_hz": 9183.603405657785,
+          "median_contrast_db": 10.421627880551778,
+          "median_hz": 9183.603405657785,
+          "median_width_hz": 5.721871280782434,
+          "minimum_contrast_db": 10.421627880551778,
+          "minimum_hz": 9183.603405657785,
+          "range_hz": null
+        },
+        "support_count": 1,
+        "track_id": "T122"
+      },
+      {
+        "candidate_ids": [
+          "E005_F003_C0007"
+        ],
+        "coherent": true,
+        "coverage": 0.16666666666666666,
+        "flags": [
+          "SINGLE_OBSERVATION"
+        ],
+        "frequency_range_within_limit": true,
+        "group_median_frequency_hz": 9427.355122219169,
+        "member_fragment_indices": [
+          3
+        ],
+        "missing_fragment_indices": [
+          1,
+          2,
+          4,
+          5,
+          6
+        ],
+        "observed_group_range_hz": 0.0,
+        "one_candidate_per_fragment": true,
+        "persistent": false,
+        "summary": {
+          "adjacent_observed_frequency_differences_hz": null,
+          "mad_hz": null,
+          "maximum_hz": 9427.355122219169,
+          "median_contrast_db": 10.425760015536277,
+          "median_hz": 9427.355122219169,
+          "median_width_hz": 2.288748512313467,
+          "minimum_contrast_db": 10.425760015536277,
+          "minimum_hz": 9427.355122219169,
+          "range_hz": null
+        },
+        "support_count": 1,
+        "track_id": "T123"
+      },
+      {
+        "candidate_ids": [
+          "E005_F006_C0060"
+        ],
+        "coherent": true,
+        "coverage": 0.16666666666666666,
+        "flags": [
+          "SINGLE_OBSERVATION"
+        ],
+        "frequency_range_within_limit": true,
+        "group_median_frequency_hz": 10335.988281607615,
+        "member_fragment_indices": [
+          6
+        ],
+        "missing_fragment_indices": [
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "observed_group_range_hz": 0.0,
+        "one_candidate_per_fragment": true,
+        "persistent": false,
+        "summary": {
+          "adjacent_observed_frequency_differences_hz": null,
+          "mad_hz": null,
+          "maximum_hz": 10335.988281607615,
+          "median_contrast_db": 10.606032799767695,
+          "median_hz": 10335.988281607615,
+          "median_width_hz": 4.577497024625554,
+          "minimum_contrast_db": 10.606032799767695,
+          "minimum_hz": 10335.988281607615,
+          "range_hz": null
+        },
+        "support_count": 1,
+        "track_id": "T124"
+      },
+      {
+        "candidate_ids": [
+          "E005_F006_C0061"
+        ],
+        "coherent": true,
+        "coverage": 0.16666666666666666,
+        "flags": [
+          "SINGLE_OBSERVATION"
+        ],
+        "frequency_range_within_limit": true,
+        "group_median_frequency_hz": 10352.00952119381,
+        "member_fragment_indices": [
+          6
+        ],
+        "missing_fragment_indices": [
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "observed_group_range_hz": 0.0,
+        "one_candidate_per_fragment": true,
+        "persistent": false,
+        "summary": {
+          "adjacent_observed_frequency_differences_hz": null,
+          "mad_hz": null,
+          "maximum_hz": 10352.00952119381,
+          "median_contrast_db": 10.447532218181282,
+          "median_hz": 10352.00952119381,
+          "median_width_hz": 4.577497024627373,
+          "minimum_contrast_db": 10.447532218181282,
+          "minimum_hz": 10352.00952119381,
+          "range_hz": null
+        },
+        "support_count": 1,
+        "track_id": "T125"
+      },
+      {
+        "candidate_ids": [
+          "E005_F002_C0059"
+        ],
+        "coherent": true,
+        "coverage": 0.16666666666666666,
+        "flags": [
+          "SINGLE_OBSERVATION"
+        ],
+        "frequency_range_within_limit": true,
+        "group_median_frequency_hz": 10392.062620159295,
+        "member_fragment_indices": [
+          2
+        ],
+        "missing_fragment_indices": [
+          1,
+          3,
+          4,
+          5,
+          6
+        ],
+        "observed_group_range_hz": 0.0,
+        "one_candidate_per_fragment": true,
+        "persistent": false,
+        "summary": {
+          "adjacent_observed_frequency_differences_hz": null,
+          "mad_hz": null,
+          "maximum_hz": 10392.062620159295,
+          "median_contrast_db": 10.607580615483771,
+          "median_hz": 10392.062620159295,
+          "median_width_hz": 5.721871280782434,
+          "minimum_contrast_db": 10.607580615483771,
+          "minimum_hz": 10392.062620159295,
+          "range_hz": null
+        },
+        "support_count": 1,
+        "track_id": "T126"
+      },
+      {
+        "candidate_ids": [
+          "E005_F002_C0060"
+        ],
+        "coherent": true,
+        "coverage": 0.16666666666666666,
+        "flags": [
+          "SINGLE_OBSERVATION"
+        ],
+        "frequency_range_within_limit": true,
+        "group_median_frequency_hz": 10424.105099331684,
+        "member_fragment_indices": [
+          2
+        ],
+        "missing_fragment_indices": [
+          1,
+          3,
+          4,
+          5,
+          6
+        ],
+        "observed_group_range_hz": 0.0,
+        "one_candidate_per_fragment": true,
+        "persistent": false,
+        "summary": {
+          "adjacent_observed_frequency_differences_hz": null,
+          "mad_hz": null,
+          "maximum_hz": 10424.105099331684,
+          "median_contrast_db": 11.224384672992898,
+          "median_hz": 10424.105099331684,
+          "median_width_hz": 6.866245536941133,
+          "minimum_contrast_db": 11.224384672992898,
+          "minimum_hz": 10424.105099331684,
+          "range_hz": null
+        },
+        "support_count": 1,
+        "track_id": "T127"
+      },
+      {
+        "candidate_ids": [
+          "E005_F006_C0062"
+        ],
+        "coherent": true,
+        "coverage": 0.16666666666666666,
+        "flags": [
+          "SINGLE_OBSERVATION"
+        ],
+        "frequency_range_within_limit": true,
+        "group_median_frequency_hz": 10428.682596356311,
+        "member_fragment_indices": [
+          6
+        ],
+        "missing_fragment_indices": [
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "observed_group_range_hz": 0.0,
+        "one_candidate_per_fragment": true,
+        "persistent": false,
+        "summary": {
+          "adjacent_observed_frequency_differences_hz": null,
+          "mad_hz": null,
+          "maximum_hz": 10428.682596356311,
+          "median_contrast_db": 10.809734279150787,
+          "median_hz": 10428.682596356311,
+          "median_width_hz": 3.433122768470493,
+          "minimum_contrast_db": 10.809734279150787,
+          "minimum_hz": 10428.682596356311,
+          "range_hz": null
+        },
+        "support_count": 1,
+        "track_id": "T128"
+      },
+      {
+        "candidate_ids": [
+          "E005_F002_C0061"
+        ],
+        "coherent": true,
+        "coverage": 0.16666666666666666,
+        "flags": [
+          "SINGLE_OBSERVATION"
+        ],
+        "frequency_range_within_limit": true,
+        "group_median_frequency_hz": 10442.415087430192,
+        "member_fragment_indices": [
+          2
+        ],
+        "missing_fragment_indices": [
+          1,
+          3,
+          4,
+          5,
+          6
+        ],
+        "observed_group_range_hz": 0.0,
+        "one_candidate_per_fragment": true,
+        "persistent": false,
+        "summary": {
+          "adjacent_observed_frequency_differences_hz": null,
+          "mad_hz": null,
+          "maximum_hz": 10442.415087430192,
+          "median_contrast_db": 10.847357541899644,
+          "median_hz": 10442.415087430192,
+          "median_width_hz": 4.577497024627373,
+          "minimum_contrast_db": 10.847357541899644,
+          "minimum_hz": 10442.415087430192,
+          "range_hz": null
+        },
+        "support_count": 1,
+        "track_id": "T129"
+      },
+      {
+        "candidate_ids": [
+          "E005_F006_C0063"
+        ],
+        "coherent": true,
+        "coverage": 0.16666666666666666,
+        "flags": [
+          "SINGLE_OBSERVATION"
+        ],
+        "frequency_range_within_limit": true,
+        "group_median_frequency_hz": 10443.55946168635,
+        "member_fragment_indices": [
+          6
+        ],
+        "missing_fragment_indices": [
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "observed_group_range_hz": 0.0,
+        "one_candidate_per_fragment": true,
+        "persistent": false,
+        "summary": {
+          "adjacent_observed_frequency_differences_hz": null,
+          "mad_hz": null,
+          "maximum_hz": 10443.55946168635,
+          "median_contrast_db": 11.403886500153197,
+          "median_hz": 10443.55946168635,
+          "median_width_hz": 4.577497024627373,
+          "minimum_contrast_db": 11.403886500153197,
+          "minimum_hz": 10443.55946168635,
+          "range_hz": null
+        },
+        "support_count": 1,
+        "track_id": "T130"
+      },
+      {
+        "candidate_ids": [
+          "E005_F006_C0064"
+        ],
+        "coherent": true,
+        "coverage": 0.16666666666666666,
+        "flags": [
+          "SINGLE_OBSERVATION"
+        ],
+        "frequency_range_within_limit": true,
+        "group_median_frequency_hz": 10459.580701272544,
+        "member_fragment_indices": [
+          6
+        ],
+        "missing_fragment_indices": [
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "observed_group_range_hz": 0.0,
+        "one_candidate_per_fragment": true,
+        "persistent": false,
+        "summary": {
+          "adjacent_observed_frequency_differences_hz": null,
+          "mad_hz": null,
+          "maximum_hz": 10459.580701272544,
+          "median_contrast_db": 10.933986109816399,
+          "median_hz": 10459.580701272544,
+          "median_width_hz": 3.433122768470493,
+          "minimum_contrast_db": 10.933986109816399,
+          "minimum_hz": 10459.580701272544,
+          "range_hz": null
+        },
+        "support_count": 1,
+        "track_id": "T131"
+      },
+      {
+        "candidate_ids": [
+          "E005_F002_C0062"
+        ],
+        "coherent": true,
+        "coverage": 0.16666666666666666,
+        "flags": [
+          "SINGLE_OBSERVATION"
+        ],
+        "frequency_range_within_limit": true,
+        "group_median_frequency_hz": 10460.7250755287,
+        "member_fragment_indices": [
+          2
+        ],
+        "missing_fragment_indices": [
+          1,
+          3,
+          4,
+          5,
+          6
+        ],
+        "observed_group_range_hz": 0.0,
+        "one_candidate_per_fragment": true,
+        "persistent": false,
+        "summary": {
+          "adjacent_observed_frequency_differences_hz": null,
+          "mad_hz": null,
+          "maximum_hz": 10460.7250755287,
+          "median_contrast_db": 10.93436290579102,
+          "median_hz": 10460.7250755287,
+          "median_width_hz": 3.433122768470493,
+          "minimum_contrast_db": 10.93436290579102,
+          "minimum_hz": 10460.7250755287,
+          "range_hz": null
+        },
+        "support_count": 1,
+        "track_id": "T132"
+      },
+      {
+        "candidate_ids": [
+          "E005_F006_C0065"
+        ],
+        "coherent": true,
+        "coverage": 0.16666666666666666,
+        "flags": [
+          "SINGLE_OBSERVATION"
+        ],
+        "frequency_range_within_limit": true,
+        "group_median_frequency_hz": 10475.601940858738,
+        "member_fragment_indices": [
+          6
+        ],
+        "missing_fragment_indices": [
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "observed_group_range_hz": 0.0,
+        "one_candidate_per_fragment": true,
+        "persistent": false,
+        "summary": {
+          "adjacent_observed_frequency_differences_hz": null,
+          "mad_hz": null,
+          "maximum_hz": 10475.601940858738,
+          "median_contrast_db": 10.190088811812961,
+          "median_hz": 10475.601940858738,
+          "median_width_hz": 4.577497024627373,
+          "minimum_contrast_db": 10.190088811812961,
+          "minimum_hz": 10475.601940858738,
+          "range_hz": null
+        },
+        "support_count": 1,
+        "track_id": "T133"
+      },
+      {
+        "candidate_ids": [
+          "E005_F002_C0063"
+        ],
+        "coherent": true,
+        "coverage": 0.16666666666666666,
+        "flags": [
+          "SINGLE_OBSERVATION"
+        ],
+        "frequency_range_within_limit": true,
+        "group_median_frequency_hz": 10731.941774237846,
+        "member_fragment_indices": [
+          2
+        ],
+        "missing_fragment_indices": [
+          1,
+          3,
+          4,
+          5,
+          6
+        ],
+        "observed_group_range_hz": 0.0,
+        "one_candidate_per_fragment": true,
+        "persistent": false,
+        "summary": {
+          "adjacent_observed_frequency_differences_hz": null,
+          "mad_hz": null,
+          "maximum_hz": 10731.941774237846,
+          "median_contrast_db": 11.208568983913185,
+          "median_hz": 10731.941774237846,
+          "median_width_hz": 3.433122768470493,
+          "minimum_contrast_db": 11.208568983913185,
+          "minimum_hz": 10731.941774237846,
+          "range_hz": null
+        },
+        "support_count": 1,
+        "track_id": "T134"
+      },
+      {
+        "candidate_ids": [
+          "E005_F003_C0008"
+        ],
+        "coherent": true,
+        "coverage": 0.16666666666666666,
+        "flags": [
+          "SINGLE_OBSERVATION"
+        ],
+        "frequency_range_within_limit": true,
+        "group_median_frequency_hz": 11027.190332326283,
+        "member_fragment_indices": [
+          3
+        ],
+        "missing_fragment_indices": [
+          1,
+          2,
+          4,
+          5,
+          6
+        ],
+        "observed_group_range_hz": 0.0,
+        "one_candidate_per_fragment": true,
+        "persistent": false,
+        "summary": {
+          "adjacent_observed_frequency_differences_hz": null,
+          "mad_hz": null,
+          "maximum_hz": 11027.190332326283,
+          "median_contrast_db": 10.734285432317844,
+          "median_hz": 11027.190332326283,
+          "median_width_hz": 4.577497024627227,
+          "minimum_contrast_db": 10.734285432317844,
+          "minimum_hz": 11027.190332326283,
+          "range_hz": null
+        },
+        "support_count": 1,
+        "track_id": "T135"
+      },
+      {
+        "candidate_ids": [
+          "E005_F006_C0066"
+        ],
+        "coherent": true,
+        "coverage": 0.16666666666666666,
+        "flags": [
+          "SINGLE_OBSERVATION"
+        ],
+        "frequency_range_within_limit": true,
+        "group_median_frequency_hz": 11260.642680582256,
+        "member_fragment_indices": [
+          6
+        ],
+        "missing_fragment_indices": [
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "observed_group_range_hz": 0.0,
+        "one_candidate_per_fragment": true,
+        "persistent": false,
+        "summary": {
+          "adjacent_observed_frequency_differences_hz": null,
+          "mad_hz": null,
+          "maximum_hz": 11260.642680582256,
+          "median_contrast_db": 10.252741169346265,
+          "median_hz": 11260.642680582256,
+          "median_width_hz": 3.433122768468674,
+          "minimum_contrast_db": 10.252741169346265,
+          "minimum_hz": 11260.642680582256,
+          "range_hz": null
+        },
+        "support_count": 1,
+        "track_id": "T136"
+      },
+      {
+        "candidate_ids": [
+          "E005_F006_C0067"
+        ],
+        "coherent": true,
+        "coverage": 0.16666666666666666,
+        "flags": [
+          "SINGLE_OBSERVATION"
+        ],
+        "frequency_range_within_limit": true,
+        "group_median_frequency_hz": 11276.66392016845,
+        "member_fragment_indices": [
+          6
+        ],
+        "missing_fragment_indices": [
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "observed_group_range_hz": 0.0,
+        "one_candidate_per_fragment": true,
+        "persistent": false,
+        "summary": {
+          "adjacent_observed_frequency_differences_hz": null,
+          "mad_hz": null,
+          "maximum_hz": 11276.66392016845,
+          "median_contrast_db": 10.330408413660027,
+          "median_hz": 11276.66392016845,
+          "median_width_hz": 3.433122768470493,
+          "minimum_contrast_db": 10.330408413660027,
+          "minimum_hz": 11276.66392016845,
+          "range_hz": null
+        },
+        "support_count": 1,
+        "track_id": "T137"
+      },
+      {
+        "candidate_ids": [
+          "E005_F006_C0068"
+        ],
+        "coherent": true,
+        "coverage": 0.16666666666666666,
+        "flags": [
+          "SINGLE_OBSERVATION"
+        ],
+        "frequency_range_within_limit": true,
+        "group_median_frequency_hz": 11336.1713814886,
+        "member_fragment_indices": [
+          6
+        ],
+        "missing_fragment_indices": [
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "observed_group_range_hz": 0.0,
+        "one_candidate_per_fragment": true,
+        "persistent": false,
+        "summary": {
+          "adjacent_observed_frequency_differences_hz": null,
+          "mad_hz": null,
+          "maximum_hz": 11336.1713814886,
+          "median_contrast_db": 11.1406848417376,
+          "median_hz": 11336.1713814886,
+          "median_width_hz": 3.433122768470493,
+          "minimum_contrast_db": 11.1406848417376,
+          "minimum_hz": 11336.1713814886,
+          "range_hz": null
+        },
+        "support_count": 1,
+        "track_id": "T138"
+      },
+      {
+        "candidate_ids": [
+          "E005_F006_C0069"
+        ],
+        "coherent": true,
+        "coverage": 0.16666666666666666,
+        "flags": [
+          "SINGLE_OBSERVATION"
+        ],
+        "frequency_range_within_limit": true,
+        "group_median_frequency_hz": 11352.192621074795,
+        "member_fragment_indices": [
+          6
+        ],
+        "missing_fragment_indices": [
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "observed_group_range_hz": 0.0,
+        "one_candidate_per_fragment": true,
+        "persistent": false,
+        "summary": {
+          "adjacent_observed_frequency_differences_hz": null,
+          "mad_hz": null,
+          "maximum_hz": 11352.192621074795,
+          "median_contrast_db": 10.63650641887521,
+          "median_hz": 11352.192621074795,
+          "median_width_hz": 3.433122768470493,
+          "minimum_contrast_db": 10.63650641887521,
+          "minimum_hz": 11352.192621074795,
+          "range_hz": null
+        },
+        "support_count": 1,
+        "track_id": "T139"
+      }
+    ],
+    "invariant_membership": null,
+    "original_fragment_count": 6,
+    "persistent_tracks": [],
+    "primary": null,
+    "status": "AMBIGUOUS_ASSOCIATION",
+    "structural_constraint_violations": 0,
+    "support_coverage": [
+      {
+        "coherent": true,
+        "coverage": 0.16666666666666666,
+        "members": [
+          "E005_F006_C0001"
+        ],
+        "support": 1
+      },
+      {
+        "coherent": true,
+        "coverage": 0.16666666666666666,
+        "members": [
+          "E005_F002_C0001"
+        ],
+        "support": 1
+      },
+      {
+        "coherent": true,
+        "coverage": 0.16666666666666666,
+        "members": [
+          "E005_F006_C0002"
+        ],
+        "support": 1
+      },
+      {
+        "coherent": true,
+        "coverage": 0.16666666666666666,
+        "members": [
+          "E005_F002_C0002"
+        ],
+        "support": 1
+      },
+      {
+        "coherent": true,
+        "coverage": 0.16666666666666666,
+        "members": [
+          "E005_F002_C0003"
+        ],
+        "support": 1
+      },
+      {
+        "coherent": true,
+        "coverage": 0.16666666666666666,
+        "members": [
+          "E005_F006_C0003"
+        ],
+        "support": 1
+      },
+      {
+        "coherent": true,
+        "coverage": 0.16666666666666666,
+        "members": [
+          "E005_F002_C0004"
+        ],
+        "support": 1
+      },
+      {
+        "coherent": true,
+        "coverage": 0.16666666666666666,
+        "members": [
+          "E005_F006_C0004"
+        ],
+        "support": 1
+      },
+      {
+        "coherent": true,
+        "coverage": 0.16666666666666666,
+        "members": [
+          "E005_F002_C0005"
+        ],
+        "support": 1
+      },
+      {
+        "coherent": true,
+        "coverage": 0.16666666666666666,
+        "members": [
+          "E005_F002_C0006"
+        ],
+        "support": 1
+      },
+      {
+        "coherent": true,
+        "coverage": 0.16666666666666666,
+        "members": [
+          "E005_F006_C0005"
+        ],
+        "support": 1
+      },
+      {
+        "coherent": true,
+        "coverage": 0.16666666666666666,
+        "members": [
+          "E005_F002_C0007"
+        ],
+        "support": 1
+      },
+      {
+        "coherent": true,
+        "coverage": 0.16666666666666666,
+        "members": [
+          "E005_F006_C0006"
+        ],
+        "support": 1
+      },
+      {
+        "coherent": true,
+        "coverage": 0.16666666666666666,
+        "members": [
+          "E005_F002_C0008"
+        ],
+        "support": 1
+      },
+      {
+        "coherent": true,
+        "coverage": 0.16666666666666666,
+        "members": [
+          "E005_F006_C0007"
+        ],
+        "support": 1
+      },
+      {
+        "coherent": true,
+        "coverage": 0.16666666666666666,
+        "members": [
+          "E005_F002_C0009"
+        ],
+        "support": 1
+      },
+      {
+        "coherent": true,
+        "coverage": 0.16666666666666666,
+        "members": [
+          "E005_F002_C0010"
+        ],
+        "support": 1
+      },
+      {
+        "coherent": true,
+        "coverage": 0.16666666666666666,
+        "members": [
+          "E005_F002_C0011"
+        ],
+        "support": 1
+      },
+      {
+        "coherent": true,
+        "coverage": 0.16666666666666666,
+        "members": [
+          "E005_F002_C0012"
+        ],
+        "support": 1
+      },
+      {
+        "coherent": true,
+        "coverage": 0.16666666666666666,
+        "members": [
+          "E005_F002_C0013"
+        ],
+        "support": 1
+      },
+      {
+        "coherent": true,
+        "coverage": 0.16666666666666666,
+        "members": [
+          "E005_F002_C0014"
+        ],
+        "support": 1
+      },
+      {
+        "coherent": true,
+        "coverage": 0.16666666666666666,
+        "members": [
+          "E005_F002_C0015"
+        ],
+        "support": 1
+      },
+      {
+        "coherent": true,
+        "coverage": 0.16666666666666666,
+        "members": [
+          "E005_F006_C0008"
+        ],
+        "support": 1
+      },
+      {
+        "coherent": true,
+        "coverage": 0.16666666666666666,
+        "members": [
+          "E005_F002_C0016"
+        ],
+        "support": 1
+      },
+      {
+        "coherent": true,
+        "coverage": 0.16666666666666666,
+        "members": [
+          "E005_F002_C0017"
+        ],
+        "support": 1
+      },
+      {
+        "coherent": true,
+        "coverage": 0.16666666666666666,
+        "members": [
+          "E005_F002_C0018"
+        ],
+        "support": 1
+      },
+      {
+        "coherent": true,
+        "coverage": 0.16666666666666666,
+        "members": [
+          "E005_F006_C0009"
+        ],
+        "support": 1
+      },
+      {
+        "coherent": true,
+        "coverage": 0.16666666666666666,
+        "members": [
+          "E005_F006_C0010"
+        ],
+        "support": 1
+      },
+      {
+        "coherent": true,
+        "coverage": 0.16666666666666666,
+        "members": [
+          "E005_F006_C0011"
+        ],
+        "support": 1
+      },
+      {
+        "coherent": true,
+        "coverage": 0.16666666666666666,
+        "members": [
+          "E005_F001_C0001"
+        ],
+        "support": 1
+      },
+      {
+        "coherent": true,
+        "coverage": 0.16666666666666666,
+        "members": [
+          "E005_F004_C0001"
+        ],
+        "support": 1
+      },
+      {
+        "coherent": true,
+        "coverage": 0.16666666666666666,
+        "members": [
+          "E005_F004_C0002"
+        ],
+        "support": 1
+      },
+      {
+        "coherent": true,
+        "coverage": 0.16666666666666666,
+        "members": [
+          "E005_F004_C0003"
+        ],
+        "support": 1
+      },
+      {
+        "coherent": true,
+        "coverage": 0.16666666666666666,
+        "members": [
+          "E005_F006_C0012"
+        ],
+        "support": 1
+      },
+      {
+        "coherent": true,
+        "coverage": 0.16666666666666666,
+        "members": [
+          "E005_F006_C0013"
+        ],
+        "support": 1
+      },
+      {
+        "coherent": true,
+        "coverage": 0.16666666666666666,
+        "members": [
+          "E005_F006_C0014"
+        ],
+        "support": 1
+      },
+      {
+        "coherent": true,
+        "coverage": 0.16666666666666666,
+        "members": [
+          "E005_F006_C0015"
+        ],
+        "support": 1
+      },
+      {
+        "coherent": true,
+        "coverage": 0.16666666666666666,
+        "members": [
+          "E005_F006_C0016"
+        ],
+        "support": 1
+      },
+      {
+        "coherent": true,
+        "coverage": 0.16666666666666666,
+        "members": [
+          "E005_F006_C0017"
+        ],
+        "support": 1
+      },
+      {
+        "coherent": true,
+        "coverage": 0.16666666666666666,
+        "members": [
+          "E005_F002_C0019"
+        ],
+        "support": 1
+      },
+      {
+        "coherent": true,
+        "coverage": 0.16666666666666666,
+        "members": [
+          "E005_F006_C0018"
+        ],
+        "support": 1
+      },
+      {
+        "coherent": true,
+        "coverage": 0.16666666666666666,
+        "members": [
+          "E005_F002_C0020"
+        ],
+        "support": 1
+      },
+      {
+        "coherent": true,
+        "coverage": 0.16666666666666666,
+        "members": [
+          "E005_F006_C0019"
+        ],
+        "support": 1
+      },
+      {
+        "coherent": true,
+        "coverage": 0.16666666666666666,
+        "members": [
+          "E005_F002_C0021"
+        ],
+        "support": 1
+      },
+      {
+        "coherent": true,
+        "coverage": 0.16666666666666666,
+        "members": [
+          "E005_F006_C0020"
+        ],
+        "support": 1
+      },
+      {
+        "coherent": true,
+        "coverage": 0.16666666666666666,
+        "members": [
+          "E005_F002_C0022"
+        ],
+        "support": 1
+      },
+      {
+        "coherent": true,
+        "coverage": 0.16666666666666666,
+        "members": [
+          "E005_F006_C0021"
+        ],
+        "support": 1
+      },
+      {
+        "coherent": true,
+        "coverage": 0.16666666666666666,
+        "members": [
+          "E005_F002_C0023"
+        ],
+        "support": 1
+      },
+      {
+        "coherent": true,
+        "coverage": 0.16666666666666666,
+        "members": [
+          "E005_F006_C0022"
+        ],
+        "support": 1
+      },
+      {
+        "coherent": true,
+        "coverage": 0.16666666666666666,
+        "members": [
+          "E005_F002_C0024"
+        ],
+        "support": 1
+      },
+      {
+        "coherent": true,
+        "coverage": 0.16666666666666666,
+        "members": [
+          "E005_F002_C0025"
+        ],
+        "support": 1
+      },
+      {
+        "coherent": true,
+        "coverage": 0.16666666666666666,
+        "members": [
+          "E005_F002_C0026"
+        ],
+        "support": 1
+      },
+      {
+        "coherent": true,
+        "coverage": 0.16666666666666666,
+        "members": [
+          "E005_F006_C0023"
+        ],
+        "support": 1
+      },
+      {
+        "coherent": true,
+        "coverage": 0.16666666666666666,
+        "members": [
+          "E005_F006_C0024"
+        ],
+        "support": 1
+      },
+      {
+        "coherent": true,
+        "coverage": 0.16666666666666666,
+        "members": [
+          "E005_F002_C0027"
+        ],
+        "support": 1
+      },
+      {
+        "coherent": true,
+        "coverage": 0.16666666666666666,
+        "members": [
+          "E005_F002_C0028"
+        ],
+        "support": 1
+      },
+      {
+        "coherent": true,
+        "coverage": 0.16666666666666666,
+        "members": [
+          "E005_F006_C0025"
+        ],
+        "support": 1
+      },
+      {
+        "coherent": true,
+        "coverage": 0.16666666666666666,
+        "members": [
+          "E005_F002_C0029"
+        ],
+        "support": 1
+      },
+      {
+        "coherent": true,
+        "coverage": 0.16666666666666666,
+        "members": [
+          "E005_F006_C0026"
+        ],
+        "support": 1
+      },
+      {
+        "coherent": true,
+        "coverage": 0.16666666666666666,
+        "members": [
+          "E005_F002_C0030"
+        ],
+        "support": 1
+      },
+      {
+        "coherent": true,
+        "coverage": 0.16666666666666666,
+        "members": [
+          "E005_F006_C0027"
+        ],
+        "support": 1
+      },
+      {
+        "coherent": true,
+        "coverage": 0.16666666666666666,
+        "members": [
+          "E005_F002_C0031"
+        ],
+        "support": 1
+      },
+      {
+        "coherent": true,
+        "coverage": 0.16666666666666666,
+        "members": [
+          "E005_F006_C0028"
+        ],
+        "support": 1
+      },
+      {
+        "coherent": true,
+        "coverage": 0.16666666666666666,
+        "members": [
+          "E005_F006_C0029"
+        ],
+        "support": 1
+      },
+      {
+        "coherent": true,
+        "coverage": 0.16666666666666666,
+        "members": [
+          "E005_F002_C0032"
+        ],
+        "support": 1
+      },
+      {
+        "coherent": true,
+        "coverage": 0.16666666666666666,
+        "members": [
+          "E005_F006_C0030"
+        ],
+        "support": 1
+      },
+      {
+        "coherent": true,
+        "coverage": 0.16666666666666666,
+        "members": [
+          "E005_F002_C0033"
+        ],
+        "support": 1
+      },
+      {
+        "coherent": true,
+        "coverage": 0.16666666666666666,
+        "members": [
+          "E005_F006_C0031"
+        ],
+        "support": 1
+      },
+      {
+        "coherent": true,
+        "coverage": 0.16666666666666666,
+        "members": [
+          "E005_F002_C0034"
+        ],
+        "support": 1
+      },
+      {
+        "coherent": true,
+        "coverage": 0.16666666666666666,
+        "members": [
+          "E005_F006_C0032"
+        ],
+        "support": 1
+      },
+      {
+        "coherent": true,
+        "coverage": 0.16666666666666666,
+        "members": [
+          "E005_F002_C0035"
+        ],
+        "support": 1
+      },
+      {
+        "coherent": true,
+        "coverage": 0.16666666666666666,
+        "members": [
+          "E005_F006_C0033"
+        ],
+        "support": 1
+      },
+      {
+        "coherent": true,
+        "coverage": 0.16666666666666666,
+        "members": [
+          "E005_F006_C0034"
+        ],
+        "support": 1
+      },
+      {
+        "coherent": true,
+        "coverage": 0.16666666666666666,
+        "members": [
+          "E005_F006_C0035"
+        ],
+        "support": 1
+      },
+      {
+        "coherent": true,
+        "coverage": 0.16666666666666666,
+        "members": [
+          "E005_F006_C0036"
+        ],
+        "support": 1
+      },
+      {
+        "coherent": true,
+        "coverage": 0.16666666666666666,
+        "members": [
+          "E005_F006_C0037"
+        ],
+        "support": 1
+      },
+      {
+        "coherent": true,
+        "coverage": 0.16666666666666666,
+        "members": [
+          "E005_F002_C0036"
+        ],
+        "support": 1
+      },
+      {
+        "coherent": true,
+        "coverage": 0.16666666666666666,
+        "members": [
+          "E005_F003_C0002"
+        ],
+        "support": 1
+      },
+      {
+        "coherent": true,
+        "coverage": 0.3333333333333333,
+        "members": [
+          "E005_F002_C0037",
+          "E005_F003_C0003"
+        ],
+        "support": 2
+      },
+      {
+        "coherent": true,
+        "coverage": 0.16666666666666666,
+        "members": [
+          "E005_F002_C0038"
+        ],
+        "support": 1
+      },
+      {
+        "coherent": true,
+        "coverage": 0.16666666666666666,
+        "members": [
+          "E005_F001_C0003"
+        ],
+        "support": 1
+      },
+      {
+        "coherent": true,
+        "coverage": 0.16666666666666666,
+        "members": [
+          "E005_F006_C0038"
+        ],
+        "support": 1
+      },
+      {
+        "coherent": true,
+        "coverage": 0.16666666666666666,
+        "members": [
+          "E005_F002_C0039"
+        ],
+        "support": 1
+      },
+      {
+        "coherent": true,
+        "coverage": 0.16666666666666666,
+        "members": [
+          "E005_F006_C0039"
+        ],
+        "support": 1
+      },
+      {
+        "coherent": true,
+        "coverage": 0.16666666666666666,
+        "members": [
+          "E005_F006_C0040"
+        ],
+        "support": 1
+      },
+      {
+        "coherent": true,
+        "coverage": 0.16666666666666666,
+        "members": [
+          "E005_F006_C0041"
+        ],
+        "support": 1
+      },
+      {
+        "coherent": true,
+        "coverage": 0.16666666666666666,
+        "members": [
+          "E005_F006_C0042"
+        ],
+        "support": 1
+      },
+      {
+        "coherent": true,
+        "coverage": 0.16666666666666666,
+        "members": [
+          "E005_F006_C0043"
+        ],
+        "support": 1
+      },
+      {
+        "coherent": true,
+        "coverage": 0.16666666666666666,
+        "members": [
+          "E005_F006_C0044"
+        ],
+        "support": 1
+      },
+      {
+        "coherent": true,
+        "coverage": 0.16666666666666666,
+        "members": [
+          "E005_F006_C0045"
+        ],
+        "support": 1
+      },
+      {
+        "coherent": true,
+        "coverage": 0.16666666666666666,
+        "members": [
+          "E005_F006_C0046"
+        ],
+        "support": 1
+      },
+      {
+        "coherent": false,
+        "coverage": 0.5,
+        "members": [
+          "E005_F004_C0005",
+          "E005_F005_C0002",
+          "E005_F005_C0003",
+          "E005_F006_C0047",
+          "E005_F006_C0048",
+          "E005_F006_C0049"
+        ],
+        "support": 3
+      },
+      {
+        "coherent": true,
+        "coverage": 0.16666666666666666,
+        "members": [
+          "E005_F003_C0004"
+        ],
+        "support": 1
+      },
+      {
+        "coherent": true,
+        "coverage": 0.16666666666666666,
+        "members": [
+          "E005_F006_C0050"
+        ],
+        "support": 1
+      },
+      {
+        "coherent": true,
+        "coverage": 0.16666666666666666,
+        "members": [
+          "E005_F006_C0051"
+        ],
+        "support": 1
+      },
+      {
+        "coherent": true,
+        "coverage": 0.16666666666666666,
+        "members": [
+          "E005_F002_C0040"
+        ],
+        "support": 1
+      },
+      {
+        "coherent": true,
+        "coverage": 0.16666666666666666,
+        "members": [
+          "E005_F006_C0052"
+        ],
+        "support": 1
+      },
+      {
+        "coherent": true,
+        "coverage": 0.16666666666666666,
+        "members": [
+          "E005_F006_C0053"
+        ],
+        "support": 1
+      },
+      {
+        "coherent": true,
+        "coverage": 0.16666666666666666,
+        "members": [
+          "E005_F002_C0041"
+        ],
+        "support": 1
+      },
+      {
+        "coherent": true,
+        "coverage": 0.16666666666666666,
+        "members": [
+          "E005_F006_C0054"
+        ],
+        "support": 1
+      },
+      {
+        "coherent": true,
+        "coverage": 0.16666666666666666,
+        "members": [
+          "E005_F002_C0042"
+        ],
+        "support": 1
+      },
+      {
+        "coherent": true,
+        "coverage": 0.16666666666666666,
+        "members": [
+          "E005_F002_C0043"
+        ],
+        "support": 1
+      },
+      {
+        "coherent": true,
+        "coverage": 0.16666666666666666,
+        "members": [
+          "E005_F002_C0044"
+        ],
+        "support": 1
+      },
+      {
+        "coherent": true,
+        "coverage": 0.16666666666666666,
+        "members": [
+          "E005_F002_C0045"
+        ],
+        "support": 1
+      },
+      {
+        "coherent": true,
+        "coverage": 0.16666666666666666,
+        "members": [
+          "E005_F003_C0005"
+        ],
+        "support": 1
+      },
+      {
+        "coherent": false,
+        "coverage": 0.3333333333333333,
+        "members": [
+          "E005_F002_C0046",
+          "E005_F002_C0047",
+          "E005_F002_C0048",
+          "E005_F003_C0006"
+        ],
+        "support": 2
+      },
+      {
+        "coherent": true,
+        "coverage": 0.16666666666666666,
+        "members": [
+          "E005_F006_C0055"
+        ],
+        "support": 1
+      },
+      {
+        "coherent": true,
+        "coverage": 0.16666666666666666,
+        "members": [
+          "E005_F006_C0056"
+        ],
+        "support": 1
+      },
+      {
+        "coherent": true,
+        "coverage": 0.16666666666666666,
+        "members": [
+          "E005_F006_C0057"
+        ],
+        "support": 1
+      },
+      {
+        "coherent": true,
+        "coverage": 0.16666666666666666,
+        "members": [
+          "E005_F006_C0058"
+        ],
+        "support": 1
+      },
+      {
+        "coherent": true,
+        "coverage": 0.16666666666666666,
+        "members": [
+          "E005_F002_C0049"
+        ],
+        "support": 1
+      },
+      {
+        "coherent": true,
+        "coverage": 0.16666666666666666,
+        "members": [
+          "E005_F005_C0005"
+        ],
+        "support": 1
+      },
+      {
+        "coherent": true,
+        "coverage": 0.16666666666666666,
+        "members": [
+          "E005_F002_C0050"
+        ],
+        "support": 1
+      },
+      {
+        "coherent": true,
+        "coverage": 0.16666666666666666,
+        "members": [
+          "E005_F002_C0051"
+        ],
+        "support": 1
+      },
+      {
+        "coherent": true,
+        "coverage": 0.16666666666666666,
+        "members": [
+          "E005_F002_C0052"
+        ],
+        "support": 1
+      },
+      {
+        "coherent": true,
+        "coverage": 0.16666666666666666,
+        "members": [
+          "E005_F002_C0053"
+        ],
+        "support": 1
+      },
+      {
+        "coherent": true,
+        "coverage": 0.16666666666666666,
+        "members": [
+          "E005_F002_C0054"
+        ],
+        "support": 1
+      },
+      {
+        "coherent": true,
+        "coverage": 0.16666666666666666,
+        "members": [
+          "E005_F002_C0055"
+        ],
+        "support": 1
+      },
+      {
+        "coherent": true,
+        "coverage": 0.16666666666666666,
+        "members": [
+          "E005_F002_C0056"
+        ],
+        "support": 1
+      },
+      {
+        "coherent": true,
+        "coverage": 0.16666666666666666,
+        "members": [
+          "E005_F002_C0057"
+        ],
+        "support": 1
+      },
+      {
+        "coherent": true,
+        "coverage": 0.16666666666666666,
+        "members": [
+          "E005_F002_C0058"
+        ],
+        "support": 1
+      },
+      {
+        "coherent": true,
+        "coverage": 0.16666666666666666,
+        "members": [
+          "E005_F006_C0059"
+        ],
+        "support": 1
+      },
+      {
+        "coherent": true,
+        "coverage": 0.16666666666666666,
+        "members": [
+          "E005_F003_C0007"
+        ],
+        "support": 1
+      },
+      {
+        "coherent": true,
+        "coverage": 0.16666666666666666,
+        "members": [
+          "E005_F006_C0060"
+        ],
+        "support": 1
+      },
+      {
+        "coherent": true,
+        "coverage": 0.16666666666666666,
+        "members": [
+          "E005_F006_C0061"
+        ],
+        "support": 1
+      },
+      {
+        "coherent": true,
+        "coverage": 0.16666666666666666,
+        "members": [
+          "E005_F002_C0059"
+        ],
+        "support": 1
+      },
+      {
+        "coherent": true,
+        "coverage": 0.16666666666666666,
+        "members": [
+          "E005_F002_C0060"
+        ],
+        "support": 1
+      },
+      {
+        "coherent": true,
+        "coverage": 0.16666666666666666,
+        "members": [
+          "E005_F006_C0062"
+        ],
+        "support": 1
+      },
+      {
+        "coherent": true,
+        "coverage": 0.16666666666666666,
+        "members": [
+          "E005_F002_C0061"
+        ],
+        "support": 1
+      },
+      {
+        "coherent": true,
+        "coverage": 0.16666666666666666,
+        "members": [
+          "E005_F006_C0063"
+        ],
+        "support": 1
+      },
+      {
+        "coherent": true,
+        "coverage": 0.16666666666666666,
+        "members": [
+          "E005_F006_C0064"
+        ],
+        "support": 1
+      },
+      {
+        "coherent": true,
+        "coverage": 0.16666666666666666,
+        "members": [
+          "E005_F002_C0062"
+        ],
+        "support": 1
+      },
+      {
+        "coherent": true,
+        "coverage": 0.16666666666666666,
+        "members": [
+          "E005_F006_C0065"
+        ],
+        "support": 1
+      },
+      {
+        "coherent": true,
+        "coverage": 0.16666666666666666,
+        "members": [
+          "E005_F002_C0063"
+        ],
+        "support": 1
+      },
+      {
+        "coherent": true,
+        "coverage": 0.16666666666666666,
+        "members": [
+          "E005_F003_C0008"
+        ],
+        "support": 1
+      },
+      {
+        "coherent": true,
+        "coverage": 0.16666666666666666,
+        "members": [
+          "E005_F006_C0066"
+        ],
+        "support": 1
+      },
+      {
+        "coherent": true,
+        "coverage": 0.16666666666666666,
+        "members": [
+          "E005_F006_C0067"
+        ],
+        "support": 1
+      },
+      {
+        "coherent": true,
+        "coverage": 0.16666666666666666,
+        "members": [
+          "E005_F006_C0068"
+        ],
+        "support": 1
+      },
+      {
+        "coherent": true,
+        "coverage": 0.16666666666666666,
+        "members": [
+          "E005_F006_C0069"
+        ],
+        "support": 1
+      }
+    ]
+  },
+  "cardinality": null,
+  "computational_limits": {
+    "max_calls": 5000,
+    "max_seconds": 120
+  },
+  "family_complete_as_predicate": false,
+  "format": "KRAKEN_DRAFT2_STAGED_ASSOCIATION_V1",
+  "metrics": {
+    "abstained": true,
+    "alternative_path_count": null,
+    "eligible_candidate_count": 148,
+    "invariant_path_count": null,
+    "original_fragment_count": 6,
+    "persistent_path_count": 0,
+    "possible_path_count": 137,
+    "structural_constraint_status": "HISTORICAL_CONNECTED_DIAGNOSTICS",
+    "truth_metrics": null,
+    "truth_metrics_state": "NOT_APPLICABLE",
+    "union_link_count": 1
+  },
+  "provenance": {
+    "embedded_model_sha256": null,
+    "git": {
+      "commit": "7e38dd9caeb19282ecaa7b5d8464074e77fa5986",
+      "dirty": true,
+      "policy": "Frozen batch-start context; output creation does not change result identity",
+      "status_at_batch_start": [
+        "?? analysis/regress_episode_component_tracking_v2_draft2_six_capture_corrected.py",
+        "?? docs/episode-component-tracking-v2-draft2-six-capture-corrected-plan.md",
+        "?? results/episode-component-tracking-v2-draft2-six-capture-corrected-baseline.json",
+        "?? results/episode-component-tracking-v2-draft2-six-capture-corrected-plan.json",
+        "?? results/episode-component-tracking-v2-draft2-six-capture-corrected-regression-startup-attempt/ABORTED.md",
+        "?? results/episode-component-tracking-v2-draft2-six-capture-corrected-regression-startup-attempt/C1-E01/connected/audit.json",
+        "?? results/episode-component-tracking-v2-draft2-six-capture-corrected-regression-startup-attempt/C1-E01/connected/case.json",
+        "?? results/episode-component-tracking-v2-draft2-six-capture-corrected-regression-startup-attempt/C1-E01/connected/reload.json",
+        "?? results/episode-component-tracking-v2-draft2-six-capture-corrected-regression-startup-attempt/C1-E01/connected/request.json",
+        "?? results/episode-component-tracking-v2-draft2-six-capture-corrected-regression-startup-attempt/C1-E01/connected/result.json",
+        "?? results/episode-component-tracking-v2-draft2-six-capture-corrected-regression-startup-attempt/C1-E01/margin-0.25/audit.json",
+        "?? results/episode-component-tracking-v2-draft2-six-capture-corrected-regression-startup-attempt/C1-E01/margin-0.25/cardinality.json",
+        "?? results/episode-component-tracking-v2-draft2-six-capture-corrected-regression-startup-attempt/C1-E01/margin-0.25/case.json",
+        "?? results/episode-component-tracking-v2-draft2-six-capture-corrected-regression-startup-attempt/C1-E01/margin-0.25/count-outcome.json",
+        "?? results/episode-component-tracking-v2-draft2-six-capture-corrected-regression-startup-attempt/C1-E01/margin-0.25/family.json",
+        "?? results/episode-component-tracking-v2-draft2-six-capture-corrected-regression-startup-attempt/C1-E01/margin-0.25/reload.json",
+        "?? results/episode-component-tracking-v2-draft2-six-capture-corrected-regression-startup-attempt/C1-E01/margin-0.25/request.json",
+        "?? results/episode-component-tracking-v2-draft2-six-capture-corrected-regression-startup-attempt/C1-E01/margin-0.25/result.json",
+        "?? results/episode-component-tracking-v2-draft2-six-capture-corrected-regression-startup-attempt/C1-E01/margin-0/audit.json",
+        "?? results/episode-component-tracking-v2-draft2-six-capture-corrected-regression-startup-attempt/C1-E01/margin-0/cardinality.json",
+        "?? results/episode-component-tracking-v2-draft2-six-capture-corrected-regression-startup-attempt/C1-E01/margin-0/case.json",
+        "?? results/episode-component-tracking-v2-draft2-six-capture-corrected-regression-startup-attempt/C1-E01/margin-0/count-outcome.json",
+        "?? results/episode-component-tracking-v2-draft2-six-capture-corrected-regression-startup-attempt/C1-E01/margin-0/family.json",
+        "?? results/episode-component-tracking-v2-draft2-six-capture-corrected-regression-startup-attempt/C1-E01/margin-0/reload.json",
+        "?? results/episode-component-tracking-v2-draft2-six-capture-corrected-regression-startup-attempt/C1-E01/margin-0/request.json",
+        "?? results/episode-component-tracking-v2-draft2-six-capture-corrected-regression-startup-attempt/C1-E01/margin-0/result.json",
+        "?? results/episode-component-tracking-v2-draft2-six-capture-corrected-regression-startup-attempt/C1-E01/margin-1/audit.json",
+        "?? results/episode-component-tracking-v2-draft2-six-capture-corrected-regression-startup-attempt/C1-E01/margin-1/cardinality.json",
+        "?? results/episode-component-tracking-v2-draft2-six-capture-corrected-regression-startup-attempt/C1-E01/margin-1/case.json",
+        "?? results/episode-component-tracking-v2-draft2-six-capture-corrected-regression-startup-attempt/C1-E01/margin-1/count-outcome.json",
+        "?? results/episode-component-tracking-v2-draft2-six-capture-corrected-regression-startup-attempt/C1-E01/margin-1/family.json",
+        "?? results/episode-component-tracking-v2-draft2-six-capture-corrected-regression-startup-attempt/C1-E01/margin-1/reload.json",
+        "?? results/episode-component-tracking-v2-draft2-six-capture-corrected-regression-startup-attempt/C1-E01/margin-1/request.json",
+        "?? results/episode-component-tracking-v2-draft2-six-capture-corrected-regression-startup-attempt/C1-E01/margin-1/result.json",
+        "?? results/episode-component-tracking-v2-draft2-six-capture-corrected-regression-startup-attempt/C1-E02/connected/audit.json",
+        "?? results/episode-component-tracking-v2-draft2-six-capture-corrected-regression-startup-attempt/C1-E02/connected/case.json",
+        "?? results/episode-component-tracking-v2-draft2-six-capture-corrected-regression-startup-attempt/C1-E02/connected/reload.json",
+        "?? results/episode-component-tracking-v2-draft2-six-capture-corrected-regression-startup-attempt/C1-E02/connected/request.json",
+        "?? results/episode-component-tracking-v2-draft2-six-capture-corrected-regression-startup-attempt/C1-E02/connected/result.json",
+        "?? results/episode-component-tracking-v2-draft2-six-capture-corrected-regression-startup-attempt/C1-E02/margin-0.25/audit.json",
+        "?? results/episode-component-tracking-v2-draft2-six-capture-corrected-regression-startup-attempt/C1-E02/margin-0.25/cardinality.json",
+        "?? results/episode-component-tracking-v2-draft2-six-capture-corrected-regression-startup-attempt/C1-E02/margin-0.25/case.json",
+        "?? results/episode-component-tracking-v2-draft2-six-capture-corrected-regression-startup-attempt/C1-E02/margin-0.25/count-outcome.json",
+        "?? results/episode-component-tracking-v2-draft2-six-capture-corrected-regression-startup-attempt/C1-E02/margin-0.25/family.json",
+        "?? results/episode-component-tracking-v2-draft2-six-capture-corrected-regression-startup-attempt/C1-E02/margin-0.25/reload.json",
+        "?? results/episode-component-tracking-v2-draft2-six-capture-corrected-regression-startup-attempt/C1-E02/margin-0.25/request.json",
+        "?? results/episode-component-tracking-v2-draft2-six-capture-corrected-regression-startup-attempt/C1-E02/margin-0.25/result.json",
+        "?? results/episode-component-tracking-v2-draft2-six-capture-corrected-regression-startup-attempt/C1-E02/margin-0/audit.json",
+        "?? results/episode-component-tracking-v2-draft2-six-capture-corrected-regression-startup-attempt/C1-E02/margin-0/cardinality.json",
+        "?? results/episode-component-tracking-v2-draft2-six-capture-corrected-regression-startup-attempt/C1-E02/margin-0/case.json",
+        "?? results/episode-component-tracking-v2-draft2-six-capture-corrected-regression-startup-attempt/C1-E02/margin-0/count-outcome.json",
+        "?? results/episode-component-tracking-v2-draft2-six-capture-corrected-regression-startup-attempt/C1-E02/margin-0/family.json",
+        "?? results/episode-component-tracking-v2-draft2-six-capture-corrected-regression-startup-attempt/C1-E02/margin-0/reload.json",
+        "?? results/episode-component-tracking-v2-draft2-six-capture-corrected-regression-startup-attempt/C1-E02/margin-0/request.json",
+        "?? results/episode-component-tracking-v2-draft2-six-capture-corrected-regression-startup-attempt/C1-E02/margin-0/result.json",
+        "?? results/episode-component-tracking-v2-draft2-six-capture-corrected-regression-startup-attempt/C1-E02/margin-1/audit.json",
+        "?? results/episode-component-tracking-v2-draft2-six-capture-corrected-regression-startup-attempt/C1-E02/margin-1/cardinality.json",
+        "?? results/episode-component-tracking-v2-draft2-six-capture-corrected-regression-startup-attempt/C1-E02/margin-1/count-outcome.json",
+        "?? results/episode-component-tracking-v2-draft2-six-capture-corrected-regression-startup-attempt/C1-E02/margin-1/family.json",
+        "?? results/episode-component-tracking-v2-draft2-six-capture-corrected-regression-startup-attempt/C1-E02/margin-1/request.json",
+        "?? results/episode-component-tracking-v2-draft2-six-capture-corrected-regression-startup-attempt/C1-E02/margin-1/result.json",
+        "?? results/episode-component-tracking-v2-draft2-six-capture-corrected-regression-startup-attempt/batch.json",
+        "?? results/episode-component-tracking-v2-draft2-six-capture-corrected-regression-startup-attempt/runner-at-attempt.py",
+        "?? results/episode-component-tracking-v2-draft2-six-capture-corrected-regression-startup-attempt/tests.txt",
+        "?? tests/test_episode_component_tracking_v2_draft2_six_capture_corrected.py"
+      ]
+    },
+    "git_context_sha256": "99b66f2956781e048a20a19d78b5710e31014bf8b3a9a4b3c6298250f1021c20",
+    "request": {
+      "cardinality_sidecar": null,
+      "experiment_specification": {
+        "path": "docs/episode-component-tracking-v2-draft2-experiment.md",
+        "sha256": "3923a1f009a0c798ed97bbfdf8158b36c2673a88b0d687a67e3b921bd352e026"
+      },
+      "family": null,
+      "fragments_sha256": "8ce382bbe513f0f0481548a3caf92b49143cf6ae466cb73ac273adb778b06ee0",
+      "representation": "CONNECTED_GROUPS_HISTORICAL_V1",
+      "saved_input": {
+        "path": "results/episode-component-tracking-v2-draft2-experiment/native__w200__connected.json",
+        "sha256": "097c48395cb5cabb639a74d697d03a431b941f9f64cfebafa2e23a2b3d8053ab"
+      },
+      "sources": {
+        "analysis/episode_component_tracking_v2_draft1.py": {
+          "sha256": "a24a5617ca9f4129c6970fd0a9743f8b78610c58567e8a557f21dee2a055f66c",
+          "version": "FROZEN_DRAFT1"
+        },
+        "analysis/episode_component_tracking_v2_draft2_cardinality_sidecar.py": {
+          "sha256": "3b05374ed34667b82f1f420fee9ccab9a096efa2c2426fd73fe1b01a371f5142",
+          "version": "KRAKEN_DRAFT2_RETAINED_CARDINALITY_V1"
+        },
+        "analysis/episode_component_tracking_v2_draft2_column_count.py": {
+          "sha256": "03c0f8493ab571caed7bb48eca2c2d6327f021c7a94e9a82ec2add75d5327fed",
+          "version": "COLUMN_COUNTER_V1"
+        },
+        "analysis/episode_component_tracking_v2_draft2_exact_count.py": {
+          "sha256": "4c543655c738fcc9d2b771f2cb3ae26106304e2ff2f86a201a47d77cd5bd18a3",
+          "version": "EXACT_COUNTER_V1"
+        },
+        "analysis/episode_component_tracking_v2_draft2_exact_solver.py": {
+          "sha256": "f5c4a907af24958739bf7a2d90fd27d2e602c295a74c951bb52525ccd10023a1",
+          "version": "EXACT_SOLVER_V1"
+        },
+        "analysis/episode_component_tracking_v2_draft2_experiment.py": {
+          "sha256": "73dc27741f3ad5fd710f94a8989a930bb731cd196e32ff2d000ee48e00b9d39a",
+          "version": "FROZEN_DRAFT2"
+        },
+        "analysis/episode_component_tracking_v2_draft2_staged.py": {
+          "sha256": "7bae7314d50494f45bb0d0a72331d38cc4024205e770f825202c44ff8be4bb80",
+          "version": "KRAKEN_DRAFT2_STAGED_ASSOCIATION_V1"
+        },
+        "analysis/episode_component_tracking_v2_draft2_staged_queries.py": {
+          "sha256": "b6fcfe3be1fe64be5cad81d549ba1193167cef12a0752797b47fa298a7571615",
+          "version": "KRAKEN_DRAFT2_EXACT_QUERY_PREFLIGHT_V1"
+        }
+      }
+    },
+    "request_sha256": "c2593a8f704b92c530032d90331f27b0aac5f7dd0139e4c3913fe8aa2e5ca8d9"
+  },
+  "query_engine": {
+    "ordering": "forward",
+    "path": "analysis/episode_component_tracking_v2_draft2_repl_e03_exact_queries.py",
+    "query_limits": {
+      "max_calls": 5000,
+      "max_seconds": 120
+    },
+    "search_limit": 200000,
+    "sha256": "99d356f073cfdf87b09cc5b195141c1cbb09ef8a5af5fce6866e6944fd48aa11",
+    "version": "KRAKEN_DRAFT2_CANDIDATE_COVER_DISJUNCTION_QUERIES_V1"
+  },
+  "query_operations": {
+    "ambiguity": {
+      "reason": null,
+      "state": "NOT_APPLICABLE_CONNECTED"
+    },
+    "invariance": {
+      "reason": null,
+      "state": "NOT_APPLICABLE_CONNECTED"
+    },
+    "membership": {
+      "reason": null,
+      "state": "NOT_APPLICABLE_CONNECTED"
+    }
+  },
+  "representation": "CONNECTED_GROUPS_HISTORICAL_V1",
+  "states": {
+    "cardinality_counting": {
+      "reason": null,
+      "state": "NOT_APPLICABLE_CONNECTED"
+    },
+    "exact_queries": {
+      "reason": null,
+      "state": "NOT_APPLICABLE_CONNECTED"
+    },
+    "family_construction": {
+      "reason": null,
+      "state": "NOT_APPLICABLE_CONNECTED"
+    },
+    "metric_projection": {
+      "reason": null,
+      "state": "COMPLETE"
+    },
+    "provenance_validation": {
+      "reason": null,
+      "state": "VERIFIED"
+    }
+  }
+}

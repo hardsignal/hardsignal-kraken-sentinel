@@ -1,0 +1,157 @@
+{
+  "cardinality": {
+    "reason": null,
+    "state": "EXACT",
+    "value_decimal": "349149"
+  },
+  "limited_parity": "NOT_APPLICABLE",
+  "measurement": {
+    "counting_seconds": 0.007382587995380163,
+    "family_construction_seconds": 1.7386453720391728,
+    "integration_reconstruction_seconds": 3.528062397032045,
+    "integration_seconds": 17.734443987021223,
+    "memory_kib": {
+      "VmHWM": 151192,
+      "VmRSS": 78360
+    },
+    "total_seconds": 23.007824786996935
+  },
+  "metrics": {
+    "abstained": true,
+    "alternative_path_count": 170,
+    "eligible_candidate_count": 313,
+    "invariant_path_count": 255,
+    "original_fragment_count": 5,
+    "persistent_path_count": 124,
+    "possible_path_count": 425,
+    "structural_constraint_status": "VALID_BY_EXACT_CONSTRAINTS",
+    "truth_metrics": null,
+    "truth_metrics_state": "NOT_APPLICABLE",
+    "union_link_count": 259
+  },
+  "original_parity": {
+    "old_result_sha256": "e5f332c92e198886e944b10bec1b45be2a8f86d5456cc937ae28d4a63c58190f",
+    "previously_passed": false,
+    "scientific_payload_sha256": "452f5508643a14fece1fd2c45b5eb8ce224b1ee21fe2546c851d8472d3a1e4fb",
+    "state": "PASS",
+    "state_changes": {
+      "exact_queries": {
+        "after": {
+          "reason": null,
+          "state": "EXACT"
+        },
+        "before": {
+          "reason": "Exact-cover search limit reached; result is unresolved",
+          "state": "COMPUTATION_UNRESOLVED"
+        }
+      },
+      "metric_projection": {
+        "after": {
+          "reason": null,
+          "state": "COMPLETE"
+        },
+        "before": {
+          "reason": null,
+          "state": "BLOCKED_BY_QUERY_FAILURE"
+        }
+      }
+    }
+  },
+  "primary": null,
+  "projection": {
+    "parity": "EXACT_QUERY_PROJECTION_CONSISTENCY",
+    "state": "PASS"
+  },
+  "query_calls": 1012,
+  "query_engine_statistics": {
+    "engine": {
+      "base_global_queries": 956,
+      "branches": 322,
+      "cache_hits": 858,
+      "disjunctions": 61,
+      "find_calls": 2106,
+      "max_disjunction_depth": 1
+    },
+    "factors": [
+      {
+        "augmentations": 2,
+        "matching_cache_entries": 6,
+        "matching_calls": 6,
+        "matching_certificates": 2,
+        "optimum_cache_entries": 2,
+        "optimum_cache_hits": 428,
+        "search_nodes": 2
+      },
+      {
+        "augmentations": 25433,
+        "matching_cache_entries": 4516,
+        "matching_calls": 4516,
+        "matching_certificates": 0,
+        "optimum_cache_entries": 165,
+        "optimum_cache_hits": 27482,
+        "search_nodes": 21782
+      },
+      {
+        "augmentations": 8,
+        "matching_cache_entries": 16,
+        "matching_calls": 16,
+        "matching_certificates": 2,
+        "optimum_cache_entries": 5,
+        "optimum_cache_hits": 1295,
+        "search_nodes": 12
+      },
+      {
+        "augmentations": 39,
+        "matching_cache_entries": 60,
+        "matching_calls": 60,
+        "matching_certificates": 0,
+        "optimum_cache_entries": 14,
+        "optimum_cache_hits": 3965,
+        "search_nodes": 123
+      },
+      {
+        "augmentations": 2,
+        "matching_cache_entries": 6,
+        "matching_calls": 6,
+        "matching_certificates": 2,
+        "optimum_cache_entries": 2,
+        "optimum_cache_hits": 428,
+        "search_nodes": 2
+      },
+      {
+        "augmentations": 2,
+        "matching_cache_entries": 6,
+        "matching_calls": 6,
+        "matching_certificates": 2,
+        "optimum_cache_entries": 2,
+        "optimum_cache_hits": 428,
+        "search_nodes": 2
+      }
+    ],
+    "query_cache_entries": 1248
+  },
+  "states": {
+    "cardinality_counting": {
+      "mode": "CONSUMED_VALIDATED_SIDECAR_NO_RECOUNT",
+      "reason": null,
+      "state": "EXACT"
+    },
+    "exact_queries": {
+      "reason": null,
+      "state": "EXACT"
+    },
+    "family_construction": {
+      "reason": null,
+      "state": "COMPLETE"
+    },
+    "metric_projection": {
+      "reason": null,
+      "state": "COMPLETE"
+    },
+    "provenance_validation": {
+      "reason": null,
+      "state": "VERIFIED"
+    }
+  },
+  "status": "MULTIPLE_PERSISTENT_TRACKS"
+}

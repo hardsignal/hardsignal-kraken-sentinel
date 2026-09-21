@@ -1,0 +1,173 @@
+{
+  "arm": "connected",
+  "audit": {
+    "cardinality": null,
+    "limited_parity": "NOT_APPLICABLE",
+    "measurement": {
+      "integration_reconstruction_seconds": 0.0,
+      "integration_seconds": 0.045277122000698,
+      "memory_kib": {
+        "VmHWM": 151480,
+        "VmRSS": 76204
+      },
+      "total_seconds": 0.059554629027843475
+    },
+    "metrics": {
+      "abstained": true,
+      "alternative_path_count": null,
+      "eligible_candidate_count": 238,
+      "invariant_path_count": null,
+      "original_fragment_count": 4,
+      "persistent_path_count": 0,
+      "possible_path_count": 219,
+      "structural_constraint_status": "HISTORICAL_CONNECTED_DIAGNOSTICS",
+      "truth_metrics": null,
+      "truth_metrics_state": "NOT_APPLICABLE",
+      "union_link_count": 0
+    },
+    "original_parity": {
+      "old_result_sha256": "24f0424f216555fb0a2613530e023861d6ddba6a1ffc045b65120ac546ba194b",
+      "previously_passed": true,
+      "scientific_payload_sha256": "7db6e5eb1b9850ff134b21a50af6b3b810d27fe98bfe70e8ccc6c74314b557ac",
+      "state": "PASS",
+      "state_changes": {}
+    },
+    "primary": null,
+    "projection": {
+      "parity": "SAVED_CONNECTED_COMPLETE_OUTPUT",
+      "state": "PASS"
+    },
+    "query_calls": null,
+    "query_engine_statistics": null,
+    "states": {
+      "cardinality_counting": {
+        "reason": null,
+        "state": "NOT_APPLICABLE_CONNECTED"
+      },
+      "exact_queries": {
+        "reason": null,
+        "state": "NOT_APPLICABLE_CONNECTED"
+      },
+      "family_construction": {
+        "reason": null,
+        "state": "NOT_APPLICABLE_CONNECTED"
+      },
+      "metric_projection": {
+        "reason": null,
+        "state": "COMPLETE"
+      },
+      "provenance_validation": {
+        "reason": null,
+        "state": "VERIFIED"
+      }
+    },
+    "status": "AMBIGUOUS_ASSOCIATION"
+  },
+  "capture": "PIPELINE-TPMS-007-20260918-002700",
+  "counting": null,
+  "eligible_per_fragment": [
+    151,
+    2,
+    4,
+    81
+  ],
+  "episode": 8,
+  "failure": null,
+  "family_sha256": null,
+  "fragments_sha256": "29ee469b71104333bce3573bce29590dda6d73d0e0100864611f583f3dda43d0",
+  "input_sha256": "097c48395cb5cabb639a74d697d03a431b941f9f64cfebafa2e23a2b3d8053ab",
+  "label": "C3-E08",
+  "model_sha256": null,
+  "original_fragment_count": 4,
+  "passed": true,
+  "plan_sha256": "04739e46633155bcbdf567ae04f00c74cd196f8e9ec8d282163fc989a7284006",
+  "record": {
+    "alternative_membership_count": null,
+    "arm": "connected",
+    "association_availability": "COMPLETE",
+    "association_status": "AMBIGUOUS_ASSOCIATION",
+    "candidate_context_sha256": "29ee469b71104333bce3573bce29590dda6d73d0e0100864611f583f3dda43d0",
+    "capture": "PIPELINE-TPMS-007-20260918-002700",
+    "cardinality": null,
+    "certificate": null,
+    "counting_transitions": null,
+    "eligible_candidates_per_fragment": [
+      151,
+      2,
+      4,
+      81
+    ],
+    "episode": 8,
+    "exact_backend": "HISTORICAL_CONNECTED",
+    "exact_dispatch": null,
+    "family_sha256": null,
+    "fragment_count": 4,
+    "input_sha256": "097c48395cb5cabb639a74d697d03a431b941f9f64cfebafa2e23a2b3d8053ab",
+    "invariant_membership_count": null,
+    "model_sha256": null,
+    "packed_polynomial_bytes": null,
+    "peak_live_states": null,
+    "persistent_track_count": 0,
+    "possible_path_count": 219,
+    "primary": null,
+    "query_calls": null,
+    "reproduction_seconds": 0.05554342700634152,
+    "runtimes": {
+      "integration_reconstruction_seconds": 0.0,
+      "integration_seconds": 0.045277122000698,
+      "memory_kib": {
+        "VmHWM": 151480,
+        "VmRSS": 76204
+      },
+      "total_seconds": 0.059554629027843475
+    },
+    "sidecar_sha256": null,
+    "stages": {
+      "cardinality_counting": {
+        "reason": null,
+        "state": "NOT_APPLICABLE_CONNECTED"
+      },
+      "exact_queries": {
+        "reason": null,
+        "state": "NOT_APPLICABLE_CONNECTED"
+      },
+      "family_construction": {
+        "reason": null,
+        "state": "NOT_APPLICABLE_CONNECTED"
+      },
+      "metric_projection": {
+        "reason": null,
+        "state": "COMPLETE"
+      },
+      "provenance_validation": {
+        "reason": null,
+        "state": "VERIFIED"
+      }
+    },
+    "worker_peak_rss_kib": 151480
+  },
+  "reload": {
+    "memory_kib": {
+      "VmHWM": 151372,
+      "VmRSS": 76264
+    },
+    "reconstruction_seconds": 0.0,
+    "seconds": 0.05554342700634152,
+    "state": "BYTE_IDENTICAL"
+  },
+  "reload_worker": {
+    "elapsed_seconds": 0.8017914770171046,
+    "exit_code": 0,
+    "observed_peak_rss_kib": 151372,
+    "reason": null
+  },
+  "resource_violations": [],
+  "sidecar_sha256": null,
+  "structural_reason": "Every saved episode in the fixed six-capture set; no outcome selection.",
+  "worker": {
+    "elapsed_seconds": 0.8017761809751391,
+    "exit_code": 0,
+    "observed_peak_rss_kib": 151480,
+    "reason": null
+  }
+}

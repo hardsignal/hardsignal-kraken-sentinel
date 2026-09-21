@@ -1,0 +1,344 @@
+{
+  "arm": "margin-1",
+  "audit": {
+    "cardinality": {
+      "reason": null,
+      "state": "EXACT",
+      "value_decimal": "217075"
+    },
+    "limited_parity": "NOT_APPLICABLE",
+    "measurement": {
+      "counting_seconds": 0.006582328991498798,
+      "family_construction_seconds": 0.8278751689940691,
+      "integration_reconstruction_seconds": 1.6719972939463332,
+      "integration_seconds": 23.777964247972704,
+      "memory_kib": {
+        "VmHWM": 151152,
+        "VmRSS": 76780
+      },
+      "total_seconds": 26.28918586403597
+    },
+    "metrics": {
+      "abstained": true,
+      "alternative_path_count": 165,
+      "eligible_candidate_count": 180,
+      "invariant_path_count": 132,
+      "original_fragment_count": 6,
+      "persistent_path_count": 0,
+      "possible_path_count": 297,
+      "structural_constraint_status": "VALID_BY_EXACT_CONSTRAINTS",
+      "truth_metrics": null,
+      "truth_metrics_state": "NOT_APPLICABLE",
+      "union_link_count": 277
+    },
+    "original_parity": {
+      "old_result_sha256": "83f7ddac00fda2c04d146635894949de50ae14e821d99bb33228b400acd9d769",
+      "previously_passed": false,
+      "scientific_payload_sha256": "bff6df1d02bda64aceb18fb2d80b1b568183385614031fb0fdb77b7339a7212b",
+      "state": "PASS",
+      "state_changes": {
+        "cardinality_counting": {
+          "after": {
+            "mode": "CONSUMED_VALIDATED_SIDECAR_NO_RECOUNT",
+            "reason": null,
+            "state": "EXACT"
+          },
+          "before": {
+            "mode": "CONSUMED_VALIDATED_SIDECAR_NO_RECOUNT",
+            "reason": {
+              "reason": "Staged exact-query wall-clock limit exceeded",
+              "stage": "counting"
+            },
+            "state": "COMPUTATION_UNRESOLVED"
+          }
+        }
+      }
+    },
+    "primary": null,
+    "projection": {
+      "parity": "EXACT_QUERY_PROJECTION_CONSISTENCY",
+      "state": "PASS"
+    },
+    "query_calls": 585,
+    "query_engine_statistics": {
+      "engine": {
+        "base_global_queries": 558,
+        "branches": 52,
+        "cache_hits": 92,
+        "disjunctions": 25,
+        "find_calls": 807,
+        "max_disjunction_depth": 1
+      },
+      "factors": [
+        {
+          "augmentations": 29,
+          "matching_cache_entries": 58,
+          "matching_calls": 58,
+          "matching_certificates": 0,
+          "optimum_cache_entries": 15,
+          "optimum_cache_hits": 1556,
+          "search_nodes": 98
+        },
+        {
+          "augmentations": 40190,
+          "matching_cache_entries": 3487,
+          "matching_calls": 3487,
+          "matching_certificates": 0,
+          "optimum_cache_entries": 129,
+          "optimum_cache_hits": 6457,
+          "search_nodes": 7306
+        },
+        {
+          "augmentations": 12,
+          "matching_cache_entries": 27,
+          "matching_calls": 27,
+          "matching_certificates": 4,
+          "optimum_cache_entries": 10,
+          "optimum_cache_hits": 1536,
+          "search_nodes": 28
+        }
+      ],
+      "query_cache_entries": 715
+    },
+    "states": {
+      "cardinality_counting": {
+        "mode": "CONSUMED_VALIDATED_SIDECAR_NO_RECOUNT",
+        "reason": null,
+        "state": "EXACT"
+      },
+      "exact_queries": {
+        "reason": null,
+        "state": "EXACT"
+      },
+      "family_construction": {
+        "reason": null,
+        "state": "COMPLETE"
+      },
+      "metric_projection": {
+        "reason": null,
+        "state": "COMPLETE"
+      },
+      "provenance_validation": {
+        "reason": null,
+        "state": "VERIFIED"
+      }
+    },
+    "status": "AMBIGUOUS_ASSOCIATION"
+  },
+  "capture": "BETWEEN-DEVICE-REPL-V1-20260919-024341",
+  "counting": {
+    "certificate": {
+      "coefficient_error": "4399617059/134333289746313768861696",
+      "cutoff": 1908,
+      "fixed_penalty": "23/4",
+      "lower_shell_gap": "6881/13256881",
+      "maximum_directed_path_nodes": 3,
+      "maximum_links": 23,
+      "policy": "Exact edge-incidence bijection; rigorous separation of every frozen prefix comparison; no rounded predicate",
+      "quantum": "62500/119311929",
+      "rounding_envelope": "269113016867/699652550762050879488",
+      "upper_shell_gap": "571/119311929",
+      "version": "KRAKEN_DRAFT2_CERTIFIED_SHORT_PATH_MATCHING_COUNT_V3"
+    },
+    "method": "KRAKEN_DRAFT2_CERTIFIED_SHORT_PATH_MATCHING_COUNT_V3",
+    "packed_polynomial_bytes": 324198,
+    "reason": null,
+    "state": "EXACT",
+    "statistics": {
+      "checkpoints": [
+        {
+          "coefficient_digit_bytes": 1,
+          "columns": 3,
+          "component": "factor0/block0/block0",
+          "count": "3",
+          "histogram_entries": 3,
+          "peak_frontier_masks": 4,
+          "peak_packed_bytes": 2244,
+          "rows": 1,
+          "suffix_bound": true
+        },
+        {
+          "coefficient_digit_bytes": 1,
+          "columns": 3,
+          "component": "factor0/block1/block0",
+          "count": "3",
+          "histogram_entries": 3,
+          "peak_frontier_masks": 4,
+          "peak_packed_bytes": 26,
+          "rows": 1,
+          "suffix_bound": true
+        },
+        {
+          "coefficient_digit_bytes": 4,
+          "columns": 15,
+          "component": "factor1/block2/block0",
+          "count": "6286",
+          "histogram_entries": 867,
+          "peak_frontier_masks": 62,
+          "peak_packed_bytes": 324198,
+          "rows": 10,
+          "suffix_bound": true
+        },
+        {
+          "coefficient_digit_bytes": 3,
+          "columns": 10,
+          "component": "factor1/block3/block0",
+          "count": "25",
+          "histogram_entries": 25,
+          "peak_frontier_masks": 19,
+          "peak_packed_bytes": 36826,
+          "rows": 10,
+          "suffix_bound": true
+        },
+        {
+          "coefficient_digit_bytes": 1,
+          "columns": 5,
+          "component": "factor2/block4/block0",
+          "count": "5",
+          "histogram_entries": 5,
+          "peak_frontier_masks": 4,
+          "peak_packed_bytes": 2174,
+          "rows": 1,
+          "suffix_bound": true
+        }
+      ],
+      "elapsed_seconds": 0.006582328991498798,
+      "peak_states": 3048,
+      "process_peak_rss_kib": 151152,
+      "transitions": 1157
+    },
+    "value_decimal": "217075"
+  },
+  "eligible_per_fragment": [
+    0,
+    69,
+    0,
+    20,
+    2,
+    89
+  ],
+  "episode": 2,
+  "failure": null,
+  "family_sha256": "b5c5503b910cc8940a6a08310f52117b56bd41add94d0f47980208918d737aa6",
+  "fragments_sha256": "ded7c08fcbeb0f4419842a27cd2cb287e034f31aea2a0e35d0fcda61ca1e876d",
+  "input_sha256": "097c48395cb5cabb639a74d697d03a431b941f9f64cfebafa2e23a2b3d8053ab",
+  "label": "C6-E02",
+  "model_sha256": "563cd0d5ba71e7bd7594e65c29b1a670492df1d35f84233e4a7ab8b21c0266e0",
+  "original_fragment_count": 6,
+  "passed": true,
+  "plan_sha256": "04739e46633155bcbdf567ae04f00c74cd196f8e9ec8d282163fc989a7284006",
+  "record": {
+    "alternative_membership_count": 165,
+    "arm": "margin-1",
+    "association_availability": "COMPLETE",
+    "association_status": "AMBIGUOUS_ASSOCIATION",
+    "candidate_context_sha256": "ded7c08fcbeb0f4419842a27cd2cb287e034f31aea2a0e35d0fcda61ca1e876d",
+    "capture": "BETWEEN-DEVICE-REPL-V1-20260919-024341",
+    "cardinality": {
+      "reason": null,
+      "state": "EXACT",
+      "value_decimal": "217075"
+    },
+    "certificate": {
+      "coefficient_error": "4399617059/134333289746313768861696",
+      "cutoff": 1908,
+      "fixed_penalty": "23/4",
+      "lower_shell_gap": "6881/13256881",
+      "maximum_directed_path_nodes": 3,
+      "maximum_links": 23,
+      "policy": "Exact edge-incidence bijection; rigorous separation of every frozen prefix comparison; no rounded predicate",
+      "quantum": "62500/119311929",
+      "rounding_envelope": "269113016867/699652550762050879488",
+      "upper_shell_gap": "571/119311929",
+      "version": "KRAKEN_DRAFT2_CERTIFIED_SHORT_PATH_MATCHING_COUNT_V3"
+    },
+    "counting_transitions": 1157,
+    "eligible_candidates_per_fragment": [
+      0,
+      69,
+      0,
+      20,
+      2,
+      89
+    ],
+    "episode": 2,
+    "exact_backend": "KRAKEN_DRAFT2_CERTIFIED_SHORT_PATH_MATCHING_COUNT_V3",
+    "exact_dispatch": {
+      "certificate_backend": "KRAKEN_DRAFT2_CERTIFIED_SHORT_PATH_MATCHING_COUNT_V3",
+      "composition_backend": "KRAKEN_DRAFT2_WEIGHTED_CUTOFF_PIVOT_COUNT_V1",
+      "fallback_backend": "KRAKEN_DRAFT2_FORCED_SINGLETON_FRONTIER_COUNT_V2"
+    },
+    "family_sha256": "b5c5503b910cc8940a6a08310f52117b56bd41add94d0f47980208918d737aa6",
+    "fragment_count": 6,
+    "input_sha256": "097c48395cb5cabb639a74d697d03a431b941f9f64cfebafa2e23a2b3d8053ab",
+    "invariant_membership_count": 132,
+    "model_sha256": "563cd0d5ba71e7bd7594e65c29b1a670492df1d35f84233e4a7ab8b21c0266e0",
+    "packed_polynomial_bytes": 324198,
+    "peak_live_states": 3048,
+    "persistent_track_count": 0,
+    "possible_path_count": 297,
+    "primary": null,
+    "query_calls": 585,
+    "reproduction_seconds": 23.663690724002663,
+    "runtimes": {
+      "counting_seconds": 0.006582328991498798,
+      "family_construction_seconds": 0.8278751689940691,
+      "integration_reconstruction_seconds": 1.6719972939463332,
+      "integration_seconds": 23.777964247972704,
+      "memory_kib": {
+        "VmHWM": 151152,
+        "VmRSS": 76780
+      },
+      "total_seconds": 26.28918586403597
+    },
+    "sidecar_sha256": "ce56c9ea9664095b6743861435f0bf90371b6fe57432f26bc7f7339ef73752d5",
+    "stages": {
+      "cardinality_counting": {
+        "mode": "CONSUMED_VALIDATED_SIDECAR_NO_RECOUNT",
+        "reason": null,
+        "state": "EXACT"
+      },
+      "exact_queries": {
+        "reason": null,
+        "state": "EXACT"
+      },
+      "family_construction": {
+        "reason": null,
+        "state": "COMPLETE"
+      },
+      "metric_projection": {
+        "reason": null,
+        "state": "COMPLETE"
+      },
+      "provenance_validation": {
+        "reason": null,
+        "state": "VERIFIED"
+      }
+    },
+    "worker_peak_rss_kib": 151280
+  },
+  "reload": {
+    "memory_kib": {
+      "VmHWM": 151280,
+      "VmRSS": 76824
+    },
+    "reconstruction_seconds": 1.649808180052787,
+    "seconds": 23.663690724002663,
+    "state": "BYTE_IDENTICAL"
+  },
+  "reload_worker": {
+    "elapsed_seconds": 24.42396878899308,
+    "exit_code": 0,
+    "observed_peak_rss_kib": 151280,
+    "reason": null
+  },
+  "resource_violations": [],
+  "sidecar_sha256": "ce56c9ea9664095b6743861435f0bf90371b6fe57432f26bc7f7339ef73752d5",
+  "structural_reason": "Every saved episode in the fixed six-capture set; no outcome selection.",
+  "worker": {
+    "elapsed_seconds": 27.024867127009202,
+    "exit_code": 0,
+    "observed_peak_rss_kib": 151152,
+    "reason": null
+  }
+}

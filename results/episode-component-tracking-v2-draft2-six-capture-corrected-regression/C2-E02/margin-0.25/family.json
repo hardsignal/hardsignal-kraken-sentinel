@@ -1,0 +1,1719 @@
+{
+  "composition": "frozen Draft 2 ordered group prefix filter; one GLOBAL cost margin",
+  "count_state": "NOT_EVALUATED",
+  "factors": [
+    {
+      "candidates": [
+        {
+          "candidate_id": "E002_F003_C0003",
+          "fragment_index": 3,
+          "frequency_hz": -1590.6802160578593
+        },
+        {
+          "candidate_id": "E002_F005_C0039",
+          "fragment_index": 5,
+          "frequency_hz": -1549.482742836217
+        }
+      ],
+      "constraints": [
+        "each candidate in exactly one selected path",
+        "sum(path.links) == maximum_links",
+        "frozen earliest-candidate prefix margin predicate"
+      ],
+      "cost_tolerance_hex": "0x1.19799812dea11p-40",
+      "count_state": "NOT_EVALUATED",
+      "family_representation": "complete implicit constraints plus exact membership predicate",
+      "format": "KRAKEN_DRAFT2_EXACT_IMPLICIT_FAMILY_V1",
+      "margin": 0.25,
+      "maximum_links": 1,
+      "minimum_cost_hex": "0x1.db97d39b43301p-1",
+      "model_sha256": "12c0c5c7c6e3dd1fbbca448215a00f566715c1eab2263a2d54dab62d25fc4a79",
+      "numerical_policy": "FROZEN_DRAFT2_BINARY64_PATH_COST_RIGHT_FOLD_AND_PREFIX_MARGIN_V1",
+      "optimum_witness": [
+        [
+          "E002_F003_C0003",
+          "E002_F005_C0039"
+        ]
+      ],
+      "original_fragment_count": 5,
+      "paths": [
+        {
+          "candidate_ids": [
+            "E002_F003_C0003"
+          ],
+          "cost_hex": "0x0.0p+0",
+          "links": 0
+        },
+        {
+          "candidate_ids": [
+            "E002_F003_C0003",
+            "E002_F005_C0039"
+          ],
+          "cost_hex": "0x1.db97d39b43301p-1",
+          "links": 1
+        },
+        {
+          "candidate_ids": [
+            "E002_F005_C0039"
+          ],
+          "cost_hex": "0x0.0p+0",
+          "links": 0
+        }
+      ],
+      "retained_hypothesis_count": null,
+      "scientific_parameters_unchanged": true
+    },
+    {
+      "candidates": [
+        {
+          "candidate_id": "E002_F001_C0110",
+          "fragment_index": 1,
+          "frequency_hz": -1540.3277487869632
+        },
+        {
+          "candidate_id": "E002_F001_C0111",
+          "fragment_index": 1,
+          "frequency_hz": -1521.445573560377
+        },
+        {
+          "candidate_id": "E002_F001_C0112",
+          "fragment_index": 1,
+          "frequency_hz": -1502.563398333791
+        },
+        {
+          "candidate_id": "E002_F001_C0113",
+          "fragment_index": 1,
+          "frequency_hz": -1483.681223107205
+        },
+        {
+          "candidate_id": "E002_F001_C0114",
+          "fragment_index": 1,
+          "frequency_hz": -1467.6599835210106
+        },
+        {
+          "candidate_id": "E002_F002_C0002",
+          "fragment_index": 2,
+          "frequency_hz": -1515.151515151515
+        }
+      ],
+      "constraints": [
+        "each candidate in exactly one selected path",
+        "sum(path.links) == maximum_links",
+        "frozen earliest-candidate prefix margin predicate"
+      ],
+      "cost_tolerance_hex": "0x1.19799812dea11p-40",
+      "count_state": "NOT_EVALUATED",
+      "family_representation": "complete implicit constraints plus exact membership predicate",
+      "format": "KRAKEN_DRAFT2_EXACT_IMPLICIT_FAMILY_V1",
+      "margin": 0.25,
+      "maximum_links": 1,
+      "minimum_cost_hex": "0x1.039f3a7f077d6p-6",
+      "model_sha256": "0d0ab0f43b947c86d8f88e833e3142430322754839b0fb54aeb6b83cc12510cc",
+      "numerical_policy": "FROZEN_DRAFT2_BINARY64_PATH_COST_RIGHT_FOLD_AND_PREFIX_MARGIN_V1",
+      "optimum_witness": [
+        [
+          "E002_F001_C0110"
+        ],
+        [
+          "E002_F001_C0111",
+          "E002_F002_C0002"
+        ],
+        [
+          "E002_F001_C0112"
+        ],
+        [
+          "E002_F001_C0113"
+        ],
+        [
+          "E002_F001_C0114"
+        ]
+      ],
+      "original_fragment_count": 5,
+      "paths": [
+        {
+          "candidate_ids": [
+            "E002_F001_C0110"
+          ],
+          "cost_hex": "0x0.0p+0",
+          "links": 0
+        },
+        {
+          "candidate_ids": [
+            "E002_F001_C0110",
+            "E002_F002_C0002"
+          ],
+          "cost_hex": "0x1.039f3a7f0787bp-2",
+          "links": 1
+        },
+        {
+          "candidate_ids": [
+            "E002_F001_C0111"
+          ],
+          "cost_hex": "0x0.0p+0",
+          "links": 0
+        },
+        {
+          "candidate_ids": [
+            "E002_F001_C0111",
+            "E002_F002_C0002"
+          ],
+          "cost_hex": "0x1.039f3a7f077d6p-6",
+          "links": 1
+        },
+        {
+          "candidate_ids": [
+            "E002_F001_C0112"
+          ],
+          "cost_hex": "0x0.0p+0",
+          "links": 0
+        },
+        {
+          "candidate_ids": [
+            "E002_F001_C0112",
+            "E002_F002_C0002"
+          ],
+          "cost_hex": "0x1.039f3a7f0787bp-4",
+          "links": 1
+        },
+        {
+          "candidate_ids": [
+            "E002_F001_C0113"
+          ],
+          "cost_hex": "0x0.0p+0",
+          "links": 0
+        },
+        {
+          "candidate_ids": [
+            "E002_F001_C0113",
+            "E002_F002_C0002"
+          ],
+          "cost_hex": "0x1.95a8cb667bc0ep-2",
+          "links": 1
+        },
+        {
+          "candidate_ids": [
+            "E002_F001_C0114"
+          ],
+          "cost_hex": "0x0.0p+0",
+          "links": 0
+        },
+        {
+          "candidate_ids": [
+            "E002_F001_C0114",
+            "E002_F002_C0002"
+          ],
+          "cost_hex": "0x1.cdea4e178ff70p-1",
+          "links": 1
+        },
+        {
+          "candidate_ids": [
+            "E002_F002_C0002"
+          ],
+          "cost_hex": "0x0.0p+0",
+          "links": 0
+        }
+      ],
+      "retained_hypothesis_count": null,
+      "scientific_parameters_unchanged": true
+    },
+    {
+      "candidates": [
+        {
+          "candidate_id": "E002_F001_C0149",
+          "fragment_index": 1,
+          "frequency_hz": 1964.8905978211112
+        },
+        {
+          "candidate_id": "E002_F003_C0004",
+          "fragment_index": 3,
+          "frequency_hz": 2009.5211938112238
+        }
+      ],
+      "constraints": [
+        "each candidate in exactly one selected path",
+        "sum(path.links) == maximum_links",
+        "frozen earliest-candidate prefix margin predicate"
+      ],
+      "cost_tolerance_hex": "0x1.19799812dea11p-40",
+      "count_state": "NOT_EVALUATED",
+      "family_representation": "complete implicit constraints plus exact membership predicate",
+      "format": "KRAKEN_DRAFT2_EXACT_IMPLICIT_FAMILY_V1",
+      "margin": 0.25,
+      "maximum_links": 1,
+      "minimum_cost_hex": "0x1.0bf8342bff6f6p+0",
+      "model_sha256": "1653b363ca45f89f551094a1f72b2f12bc9effa1a930c5c4315e0b283b0b46ba",
+      "numerical_policy": "FROZEN_DRAFT2_BINARY64_PATH_COST_RIGHT_FOLD_AND_PREFIX_MARGIN_V1",
+      "optimum_witness": [
+        [
+          "E002_F001_C0149",
+          "E002_F003_C0004"
+        ]
+      ],
+      "original_fragment_count": 5,
+      "paths": [
+        {
+          "candidate_ids": [
+            "E002_F001_C0149"
+          ],
+          "cost_hex": "0x0.0p+0",
+          "links": 0
+        },
+        {
+          "candidate_ids": [
+            "E002_F001_C0149",
+            "E002_F003_C0004"
+          ],
+          "cost_hex": "0x1.0bf8342bff6f6p+0",
+          "links": 1
+        },
+        {
+          "candidate_ids": [
+            "E002_F003_C0004"
+          ],
+          "cost_hex": "0x0.0p+0",
+          "links": 0
+        }
+      ],
+      "retained_hypothesis_count": null,
+      "scientific_parameters_unchanged": true
+    },
+    {
+      "candidates": [
+        {
+          "candidate_id": "E002_F004_C0007",
+          "fragment_index": 4,
+          "frequency_hz": 3286.6428636821383
+        },
+        {
+          "candidate_id": "E002_F005_C0057",
+          "fragment_index": 5,
+          "frequency_hz": 3270.621624095944
+        }
+      ],
+      "constraints": [
+        "each candidate in exactly one selected path",
+        "sum(path.links) == maximum_links",
+        "frozen earliest-candidate prefix margin predicate"
+      ],
+      "cost_tolerance_hex": "0x1.19799812dea11p-40",
+      "count_state": "NOT_EVALUATED",
+      "family_representation": "complete implicit constraints plus exact membership predicate",
+      "format": "KRAKEN_DRAFT2_EXACT_IMPLICIT_FAMILY_V1",
+      "margin": 0.25,
+      "maximum_links": 1,
+      "minimum_cost_hex": "0x1.a48b71cba6b0cp-4",
+      "model_sha256": "7c3cde6a08154c8f81b9c9dc2ce802212fde00944feab9dad204a26fca6ef3a8",
+      "numerical_policy": "FROZEN_DRAFT2_BINARY64_PATH_COST_RIGHT_FOLD_AND_PREFIX_MARGIN_V1",
+      "optimum_witness": [
+        [
+          "E002_F004_C0007",
+          "E002_F005_C0057"
+        ]
+      ],
+      "original_fragment_count": 5,
+      "paths": [
+        {
+          "candidate_ids": [
+            "E002_F004_C0007"
+          ],
+          "cost_hex": "0x0.0p+0",
+          "links": 0
+        },
+        {
+          "candidate_ids": [
+            "E002_F004_C0007",
+            "E002_F005_C0057"
+          ],
+          "cost_hex": "0x1.a48b71cba6b0cp-4",
+          "links": 1
+        },
+        {
+          "candidate_ids": [
+            "E002_F005_C0057"
+          ],
+          "cost_hex": "0x0.0p+0",
+          "links": 0
+        }
+      ],
+      "retained_hypothesis_count": null,
+      "scientific_parameters_unchanged": true
+    },
+    {
+      "candidates": [
+        {
+          "candidate_id": "E002_F001_C0160",
+          "fragment_index": 1,
+          "frequency_hz": 6882.266776526594
+        },
+        {
+          "candidate_id": "E002_F001_C0161",
+          "fragment_index": 1,
+          "frequency_hz": 6898.860203240867
+        },
+        {
+          "candidate_id": "E002_F001_C0162",
+          "fragment_index": 1,
+          "frequency_hz": 6912.592694314748
+        },
+        {
+          "candidate_id": "E002_F001_C0163",
+          "fragment_index": 1,
+          "frequency_hz": 6921.175501235924
+        },
+        {
+          "candidate_id": "E002_F001_C0164",
+          "fragment_index": 1,
+          "frequency_hz": 6924.036436876316
+        },
+        {
+          "candidate_id": "E002_F001_C0165",
+          "fragment_index": 1,
+          "frequency_hz": 6937.196740822118
+        },
+        {
+          "candidate_id": "E002_F001_C0166",
+          "fragment_index": 1,
+          "frequency_hz": 6940.057676462509
+        },
+        {
+          "candidate_id": "E002_F001_C0167",
+          "fragment_index": 1,
+          "frequency_hz": 6953.79016753639
+        },
+        {
+          "candidate_id": "E002_F001_C0168",
+          "fragment_index": 1,
+          "frequency_hz": 6956.651103176782
+        },
+        {
+          "candidate_id": "E002_F003_C0005",
+          "fragment_index": 3,
+          "frequency_hz": 6918.88675272361
+        },
+        {
+          "candidate_id": "E002_F004_C0008",
+          "fragment_index": 4,
+          "frequency_hz": 6907.443010162043
+        },
+        {
+          "candidate_id": "E002_F005_C0065",
+          "fragment_index": 5,
+          "frequency_hz": 6950.929231895999
+        },
+        {
+          "candidate_id": "E002_F005_C0066",
+          "fragment_index": 5,
+          "frequency_hz": 6966.950471482193
+        }
+      ],
+      "constraints": [
+        "each candidate in exactly one selected path",
+        "sum(path.links) == maximum_links",
+        "frozen earliest-candidate prefix margin predicate"
+      ],
+      "cost_tolerance_hex": "0x1.19799812dea11p-40",
+      "count_state": "NOT_EVALUATED",
+      "family_representation": "complete implicit constraints plus exact membership predicate",
+      "format": "KRAKEN_DRAFT2_EXACT_IMPLICIT_FAMILY_V1",
+      "margin": 0.25,
+      "maximum_links": 3,
+      "minimum_cost_hex": "0x1.0f971e6048229p+0",
+      "model_sha256": "38e96a5dcc38f648b3ecbbe3aef97b09cebd29a20784910dd99d780f690c7572",
+      "numerical_policy": "FROZEN_DRAFT2_BINARY64_PATH_COST_RIGHT_FOLD_AND_PREFIX_MARGIN_V1",
+      "optimum_witness": [
+        [
+          "E002_F001_C0160"
+        ],
+        [
+          "E002_F001_C0161"
+        ],
+        [
+          "E002_F001_C0162"
+        ],
+        [
+          "E002_F001_C0163",
+          "E002_F003_C0005",
+          "E002_F004_C0008",
+          "E002_F005_C0065"
+        ],
+        [
+          "E002_F001_C0164"
+        ],
+        [
+          "E002_F001_C0165"
+        ],
+        [
+          "E002_F001_C0166"
+        ],
+        [
+          "E002_F001_C0167"
+        ],
+        [
+          "E002_F001_C0168"
+        ],
+        [
+          "E002_F005_C0066"
+        ]
+      ],
+      "original_fragment_count": 5,
+      "paths": [
+        {
+          "candidate_ids": [
+            "E002_F001_C0160"
+          ],
+          "cost_hex": "0x0.0p+0",
+          "links": 0
+        },
+        {
+          "candidate_ids": [
+            "E002_F001_C0160",
+            "E002_F003_C0005"
+          ],
+          "cost_hex": "0x1.92a4356adfc5dp-1",
+          "links": 1
+        },
+        {
+          "candidate_ids": [
+            "E002_F001_C0160",
+            "E002_F003_C0005",
+            "E002_F004_C0008"
+          ],
+          "cost_hex": "0x1.ad763ea24f9e1p-1",
+          "links": 2
+        },
+        {
+          "candidate_ids": [
+            "E002_F001_C0160",
+            "E002_F003_C0005",
+            "E002_F004_C0008",
+            "E002_F005_C0065"
+          ],
+          "cost_hex": "0x1.985fe6fb02957p+0",
+          "links": 3
+        },
+        {
+          "candidate_ids": [
+            "E002_F001_C0160",
+            "E002_F003_C0005",
+            "E002_F005_C0065"
+          ],
+          "cost_hex": "0x1.7274f728598f2p+0",
+          "links": 2
+        },
+        {
+          "candidate_ids": [
+            "E002_F001_C0160",
+            "E002_F003_C0005",
+            "E002_F005_C0066"
+          ],
+          "cost_hex": "0x1.f5e08ab7fda66p+0",
+          "links": 2
+        },
+        {
+          "candidate_ids": [
+            "E002_F001_C0161"
+          ],
+          "cost_hex": "0x0.0p+0",
+          "links": 0
+        },
+        {
+          "candidate_ids": [
+            "E002_F001_C0161",
+            "E002_F003_C0005"
+          ],
+          "cost_hex": "0x1.a44678738d14ep-2",
+          "links": 1
+        },
+        {
+          "candidate_ids": [
+            "E002_F001_C0161",
+            "E002_F003_C0005",
+            "E002_F004_C0008"
+          ],
+          "cost_hex": "0x1.d9ea8ae26cc56p-2",
+          "links": 2
+        },
+        {
+          "candidate_ids": [
+            "E002_F001_C0161",
+            "E002_F003_C0005",
+            "E002_F004_C0008",
+            "E002_F005_C0065"
+          ],
+          "cost_hex": "0x1.381f6a6275f7cp+0",
+          "links": 3
+        },
+        {
+          "candidate_ids": [
+            "E002_F001_C0161",
+            "E002_F003_C0005",
+            "E002_F005_C0065"
+          ],
+          "cost_hex": "0x1.12347a8fccf16p+0",
+          "links": 2
+        },
+        {
+          "candidate_ids": [
+            "E002_F001_C0161",
+            "E002_F003_C0005",
+            "E002_F005_C0066"
+          ],
+          "cost_hex": "0x1.95a00e1f7108ap+0",
+          "links": 2
+        },
+        {
+          "candidate_ids": [
+            "E002_F001_C0162"
+          ],
+          "cost_hex": "0x0.0p+0",
+          "links": 0
+        },
+        {
+          "candidate_ids": [
+            "E002_F001_C0162",
+            "E002_F003_C0005"
+          ],
+          "cost_hex": "0x1.1039f3a7f077dp-2",
+          "links": 1
+        },
+        {
+          "candidate_ids": [
+            "E002_F001_C0162",
+            "E002_F003_C0005",
+            "E002_F004_C0008"
+          ],
+          "cost_hex": "0x1.45de0616d0286p-2",
+          "links": 2
+        },
+        {
+          "candidate_ids": [
+            "E002_F001_C0162",
+            "E002_F003_C0005",
+            "E002_F004_C0008",
+            "E002_F005_C0065"
+          ],
+          "cost_hex": "0x1.131c492f8ed08p+0",
+          "links": 3
+        },
+        {
+          "candidate_ids": [
+            "E002_F001_C0162",
+            "E002_F003_C0005",
+            "E002_F005_C0065"
+          ],
+          "cost_hex": "0x1.da62b2b9cb944p-1",
+          "links": 2
+        },
+        {
+          "candidate_ids": [
+            "E002_F001_C0162",
+            "E002_F003_C0005",
+            "E002_F005_C0066"
+          ],
+          "cost_hex": "0x1.709cecec89e16p+0",
+          "links": 2
+        },
+        {
+          "candidate_ids": [
+            "E002_F001_C0163"
+          ],
+          "cost_hex": "0x0.0p+0",
+          "links": 0
+        },
+        {
+          "candidate_ids": [
+            "E002_F001_C0163",
+            "E002_F003_C0005"
+          ],
+          "cost_hex": "0x1.0225486ad5c02p-2",
+          "links": 1
+        },
+        {
+          "candidate_ids": [
+            "E002_F001_C0163",
+            "E002_F003_C0005",
+            "E002_F004_C0008"
+          ],
+          "cost_hex": "0x1.37c95ad9b570ap-2",
+          "links": 2
+        },
+        {
+          "candidate_ids": [
+            "E002_F001_C0163",
+            "E002_F003_C0005",
+            "E002_F004_C0008",
+            "E002_F005_C0065"
+          ],
+          "cost_hex": "0x1.0f971e6048229p+0",
+          "links": 3
+        },
+        {
+          "candidate_ids": [
+            "E002_F001_C0163",
+            "E002_F003_C0005",
+            "E002_F005_C0065"
+          ],
+          "cost_hex": "0x1.d3585d1b3e387p-1",
+          "links": 2
+        },
+        {
+          "candidate_ids": [
+            "E002_F001_C0163",
+            "E002_F003_C0005",
+            "E002_F005_C0066"
+          ],
+          "cost_hex": "0x1.6d17c21d43338p+0",
+          "links": 2
+        },
+        {
+          "candidate_ids": [
+            "E002_F001_C0164"
+          ],
+          "cost_hex": "0x0.0p+0",
+          "links": 0
+        },
+        {
+          "candidate_ids": [
+            "E002_F001_C0164",
+            "E002_F003_C0005"
+          ],
+          "cost_hex": "0x1.0adcbe9cda1cbp-2",
+          "links": 1
+        },
+        {
+          "candidate_ids": [
+            "E002_F001_C0164",
+            "E002_F003_C0005",
+            "E002_F004_C0008"
+          ],
+          "cost_hex": "0x1.4080d10bb9cd4p-2",
+          "links": 2
+        },
+        {
+          "candidate_ids": [
+            "E002_F001_C0164",
+            "E002_F003_C0005",
+            "E002_F004_C0008",
+            "E002_F005_C0065"
+          ],
+          "cost_hex": "0x1.11c4fbecc939bp+0",
+          "links": 3
+        },
+        {
+          "candidate_ids": [
+            "E002_F001_C0164",
+            "E002_F003_C0005",
+            "E002_F005_C0065"
+          ],
+          "cost_hex": "0x1.d7b418344066cp-1",
+          "links": 2
+        },
+        {
+          "candidate_ids": [
+            "E002_F001_C0164",
+            "E002_F003_C0005",
+            "E002_F005_C0066"
+          ],
+          "cost_hex": "0x1.6f459fa9c44aap+0",
+          "links": 2
+        },
+        {
+          "candidate_ids": [
+            "E002_F001_C0165"
+          ],
+          "cost_hex": "0x0.0p+0",
+          "links": 0
+        },
+        {
+          "candidate_ids": [
+            "E002_F001_C0165",
+            "E002_F003_C0005"
+          ],
+          "cost_hex": "0x1.89521ab56fea6p-2",
+          "links": 1
+        },
+        {
+          "candidate_ids": [
+            "E002_F001_C0165",
+            "E002_F003_C0005",
+            "E002_F004_C0008"
+          ],
+          "cost_hex": "0x1.bef62d244f9aep-2",
+          "links": 2
+        },
+        {
+          "candidate_ids": [
+            "E002_F001_C0165",
+            "E002_F003_C0005",
+            "E002_F004_C0008",
+            "E002_F005_C0065"
+          ],
+          "cost_hex": "0x1.316252f2eead2p+0",
+          "links": 3
+        },
+        {
+          "candidate_ids": [
+            "E002_F001_C0165",
+            "E002_F003_C0005",
+            "E002_F005_C0065"
+          ],
+          "cost_hex": "0x1.0b77632045a6cp+0",
+          "links": 2
+        },
+        {
+          "candidate_ids": [
+            "E002_F001_C0165",
+            "E002_F003_C0005",
+            "E002_F005_C0066"
+          ],
+          "cost_hex": "0x1.8ee2f6afe9be0p+0",
+          "links": 2
+        },
+        {
+          "candidate_ids": [
+            "E002_F001_C0166"
+          ],
+          "cost_hex": "0x0.0p+0",
+          "links": 0
+        },
+        {
+          "candidate_ids": [
+            "E002_F001_C0166",
+            "E002_F003_C0005"
+          ],
+          "cost_hex": "0x1.b796043510d34p-2",
+          "links": 1
+        },
+        {
+          "candidate_ids": [
+            "E002_F001_C0166",
+            "E002_F003_C0005",
+            "E002_F004_C0008"
+          ],
+          "cost_hex": "0x1.ed3a16a3f083cp-2",
+          "links": 2
+        },
+        {
+          "candidate_ids": [
+            "E002_F001_C0166",
+            "E002_F003_C0005",
+            "E002_F004_C0008",
+            "E002_F005_C0065"
+          ],
+          "cost_hex": "0x1.3cf34d52d6e76p+0",
+          "links": 3
+        },
+        {
+          "candidate_ids": [
+            "E002_F001_C0166",
+            "E002_F003_C0005",
+            "E002_F005_C0065"
+          ],
+          "cost_hex": "0x1.17085d802de10p+0",
+          "links": 2
+        },
+        {
+          "candidate_ids": [
+            "E002_F001_C0166",
+            "E002_F003_C0005",
+            "E002_F005_C0066"
+          ],
+          "cost_hex": "0x1.9a73f10fd1f84p+0",
+          "links": 2
+        },
+        {
+          "candidate_ids": [
+            "E002_F001_C0167"
+          ],
+          "cost_hex": "0x0.0p+0",
+          "links": 0
+        },
+        {
+          "candidate_ids": [
+            "E002_F001_C0167",
+            "E002_F003_C0005"
+          ],
+          "cost_hex": "0x1.797f4cc6e6e5cp-1",
+          "links": 1
+        },
+        {
+          "candidate_ids": [
+            "E002_F001_C0167",
+            "E002_F003_C0005",
+            "E002_F004_C0008"
+          ],
+          "cost_hex": "0x1.945155fe56be0p-1",
+          "links": 2
+        },
+        {
+          "candidate_ids": [
+            "E002_F001_C0167",
+            "E002_F003_C0005",
+            "E002_F004_C0008",
+            "E002_F005_C0065"
+          ],
+          "cost_hex": "0x1.8bcd72a906257p+0",
+          "links": 3
+        },
+        {
+          "candidate_ids": [
+            "E002_F001_C0167",
+            "E002_F003_C0005",
+            "E002_F005_C0065"
+          ],
+          "cost_hex": "0x1.65e282d65d1f1p+0",
+          "links": 2
+        },
+        {
+          "candidate_ids": [
+            "E002_F001_C0167",
+            "E002_F003_C0005",
+            "E002_F005_C0066"
+          ],
+          "cost_hex": "0x1.e94e166601365p+0",
+          "links": 2
+        },
+        {
+          "candidate_ids": [
+            "E002_F001_C0168"
+          ],
+          "cost_hex": "0x0.0p+0",
+          "links": 0
+        },
+        {
+          "candidate_ids": [
+            "E002_F001_C0168",
+            "E002_F003_C0005"
+          ],
+          "cost_hex": "0x1.a41321cee87c9p-1",
+          "links": 1
+        },
+        {
+          "candidate_ids": [
+            "E002_F001_C0168",
+            "E002_F003_C0005",
+            "E002_F004_C0008"
+          ],
+          "cost_hex": "0x1.bee52b065854dp-1",
+          "links": 2
+        },
+        {
+          "candidate_ids": [
+            "E002_F001_C0168",
+            "E002_F003_C0005",
+            "E002_F004_C0008",
+            "E002_F005_C0065"
+          ],
+          "cost_hex": "0x1.a1175d2d06f0dp+0",
+          "links": 3
+        },
+        {
+          "candidate_ids": [
+            "E002_F001_C0168",
+            "E002_F003_C0005",
+            "E002_F005_C0065"
+          ],
+          "cost_hex": "0x1.7b2c6d5a5dea8p+0",
+          "links": 2
+        },
+        {
+          "candidate_ids": [
+            "E002_F001_C0168",
+            "E002_F003_C0005",
+            "E002_F005_C0066"
+          ],
+          "cost_hex": "0x1.fe9800ea0201cp+0",
+          "links": 2
+        },
+        {
+          "candidate_ids": [
+            "E002_F003_C0005"
+          ],
+          "cost_hex": "0x0.0p+0",
+          "links": 0
+        },
+        {
+          "candidate_ids": [
+            "E002_F003_C0005",
+            "E002_F004_C0008"
+          ],
+          "cost_hex": "0x1.ad209376fd844p-5",
+          "links": 1
+        },
+        {
+          "candidate_ids": [
+            "E002_F003_C0005",
+            "E002_F004_C0008",
+            "E002_F005_C0065"
+          ],
+          "cost_hex": "0x1.9e1b988b25651p-1",
+          "links": 2
+        },
+        {
+          "candidate_ids": [
+            "E002_F003_C0005",
+            "E002_F005_C0065"
+          ],
+          "cost_hex": "0x1.5245b8e5d3586p-1",
+          "links": 1
+        },
+        {
+          "candidate_ids": [
+            "E002_F003_C0005",
+            "E002_F005_C0066"
+          ],
+          "cost_hex": "0x1.2c8e70028dc37p+0",
+          "links": 1
+        },
+        {
+          "candidate_ids": [
+            "E002_F004_C0008"
+          ],
+          "cost_hex": "0x0.0p+0",
+          "links": 0
+        },
+        {
+          "candidate_ids": [
+            "E002_F004_C0008",
+            "E002_F005_C0065"
+          ],
+          "cost_hex": "0x1.83498f53b58cdp-1",
+          "links": 1
+        },
+        {
+          "candidate_ids": [
+            "E002_F005_C0065"
+          ],
+          "cost_hex": "0x0.0p+0",
+          "links": 0
+        },
+        {
+          "candidate_ids": [
+            "E002_F005_C0066"
+          ],
+          "cost_hex": "0x0.0p+0",
+          "links": 0
+        }
+      ],
+      "retained_hypothesis_count": null,
+      "scientific_parameters_unchanged": true
+    }
+  ],
+  "format": "KRAKEN_DRAFT2_EXACT_IMPLICIT_EPISODE_V1",
+  "margin": 0.25,
+  "maximum_links": 7,
+  "minimum_cost_hex": "0x1.93d938304fd98p+1",
+  "model_sha256": "2fe9cc142262cdb77cf086267e317a1986351bb9f59860e94a8821819d3a94a3",
+  "original_fragment_count": 5,
+  "retained_hypothesis_count": null,
+  "singletons": [
+    [
+      "E002_F001_C0001"
+    ],
+    [
+      "E002_F001_C0002"
+    ],
+    [
+      "E002_F001_C0003"
+    ],
+    [
+      "E002_F001_C0004"
+    ],
+    [
+      "E002_F001_C0005"
+    ],
+    [
+      "E002_F001_C0006"
+    ],
+    [
+      "E002_F001_C0007"
+    ],
+    [
+      "E002_F001_C0008"
+    ],
+    [
+      "E002_F001_C0009"
+    ],
+    [
+      "E002_F001_C0010"
+    ],
+    [
+      "E002_F001_C0011"
+    ],
+    [
+      "E002_F001_C0012"
+    ],
+    [
+      "E002_F001_C0013"
+    ],
+    [
+      "E002_F001_C0014"
+    ],
+    [
+      "E002_F001_C0015"
+    ],
+    [
+      "E002_F001_C0016"
+    ],
+    [
+      "E002_F001_C0017"
+    ],
+    [
+      "E002_F001_C0018"
+    ],
+    [
+      "E002_F001_C0019"
+    ],
+    [
+      "E002_F001_C0020"
+    ],
+    [
+      "E002_F001_C0021"
+    ],
+    [
+      "E002_F001_C0022"
+    ],
+    [
+      "E002_F001_C0023"
+    ],
+    [
+      "E002_F001_C0024"
+    ],
+    [
+      "E002_F001_C0025"
+    ],
+    [
+      "E002_F001_C0026"
+    ],
+    [
+      "E002_F001_C0027"
+    ],
+    [
+      "E002_F001_C0028"
+    ],
+    [
+      "E002_F001_C0029"
+    ],
+    [
+      "E002_F001_C0030"
+    ],
+    [
+      "E002_F001_C0031"
+    ],
+    [
+      "E002_F001_C0032"
+    ],
+    [
+      "E002_F001_C0033"
+    ],
+    [
+      "E002_F001_C0034"
+    ],
+    [
+      "E002_F001_C0035"
+    ],
+    [
+      "E002_F001_C0036"
+    ],
+    [
+      "E002_F001_C0037"
+    ],
+    [
+      "E002_F001_C0038"
+    ],
+    [
+      "E002_F001_C0039"
+    ],
+    [
+      "E002_F001_C0040"
+    ],
+    [
+      "E002_F001_C0041"
+    ],
+    [
+      "E002_F001_C0042"
+    ],
+    [
+      "E002_F001_C0043"
+    ],
+    [
+      "E002_F001_C0044"
+    ],
+    [
+      "E002_F001_C0045"
+    ],
+    [
+      "E002_F001_C0046"
+    ],
+    [
+      "E002_F001_C0047"
+    ],
+    [
+      "E002_F001_C0048"
+    ],
+    [
+      "E002_F001_C0049"
+    ],
+    [
+      "E002_F001_C0050"
+    ],
+    [
+      "E002_F001_C0051"
+    ],
+    [
+      "E002_F001_C0052"
+    ],
+    [
+      "E002_F001_C0053"
+    ],
+    [
+      "E002_F001_C0054"
+    ],
+    [
+      "E002_F001_C0055"
+    ],
+    [
+      "E002_F001_C0056"
+    ],
+    [
+      "E002_F001_C0057"
+    ],
+    [
+      "E002_F001_C0058"
+    ],
+    [
+      "E002_F001_C0059"
+    ],
+    [
+      "E002_F001_C0060"
+    ],
+    [
+      "E002_F001_C0061"
+    ],
+    [
+      "E002_F001_C0062"
+    ],
+    [
+      "E002_F001_C0063"
+    ],
+    [
+      "E002_F001_C0064"
+    ],
+    [
+      "E002_F001_C0065"
+    ],
+    [
+      "E002_F001_C0066"
+    ],
+    [
+      "E002_F001_C0067"
+    ],
+    [
+      "E002_F001_C0068"
+    ],
+    [
+      "E002_F001_C0069"
+    ],
+    [
+      "E002_F001_C0070"
+    ],
+    [
+      "E002_F001_C0071"
+    ],
+    [
+      "E002_F001_C0072"
+    ],
+    [
+      "E002_F001_C0073"
+    ],
+    [
+      "E002_F001_C0074"
+    ],
+    [
+      "E002_F001_C0075"
+    ],
+    [
+      "E002_F001_C0076"
+    ],
+    [
+      "E002_F001_C0077"
+    ],
+    [
+      "E002_F001_C0078"
+    ],
+    [
+      "E002_F001_C0079"
+    ],
+    [
+      "E002_F001_C0080"
+    ],
+    [
+      "E002_F001_C0081"
+    ],
+    [
+      "E002_F001_C0082"
+    ],
+    [
+      "E002_F001_C0083"
+    ],
+    [
+      "E002_F001_C0084"
+    ],
+    [
+      "E002_F001_C0085"
+    ],
+    [
+      "E002_F001_C0086"
+    ],
+    [
+      "E002_F001_C0087"
+    ],
+    [
+      "E002_F001_C0088"
+    ],
+    [
+      "E002_F001_C0089"
+    ],
+    [
+      "E002_F001_C0090"
+    ],
+    [
+      "E002_F001_C0091"
+    ],
+    [
+      "E002_F001_C0092"
+    ],
+    [
+      "E002_F001_C0093"
+    ],
+    [
+      "E002_F001_C0094"
+    ],
+    [
+      "E002_F001_C0095"
+    ],
+    [
+      "E002_F001_C0096"
+    ],
+    [
+      "E002_F001_C0097"
+    ],
+    [
+      "E002_F001_C0098"
+    ],
+    [
+      "E002_F001_C0099"
+    ],
+    [
+      "E002_F001_C0100"
+    ],
+    [
+      "E002_F001_C0101"
+    ],
+    [
+      "E002_F001_C0102"
+    ],
+    [
+      "E002_F001_C0103"
+    ],
+    [
+      "E002_F001_C0104"
+    ],
+    [
+      "E002_F001_C0105"
+    ],
+    [
+      "E002_F001_C0106"
+    ],
+    [
+      "E002_F001_C0107"
+    ],
+    [
+      "E002_F001_C0108"
+    ],
+    [
+      "E002_F001_C0109"
+    ],
+    [
+      "E002_F001_C0115"
+    ],
+    [
+      "E002_F001_C0116"
+    ],
+    [
+      "E002_F001_C0117"
+    ],
+    [
+      "E002_F001_C0118"
+    ],
+    [
+      "E002_F001_C0119"
+    ],
+    [
+      "E002_F001_C0120"
+    ],
+    [
+      "E002_F001_C0121"
+    ],
+    [
+      "E002_F001_C0122"
+    ],
+    [
+      "E002_F001_C0123"
+    ],
+    [
+      "E002_F001_C0124"
+    ],
+    [
+      "E002_F001_C0125"
+    ],
+    [
+      "E002_F001_C0126"
+    ],
+    [
+      "E002_F001_C0127"
+    ],
+    [
+      "E002_F001_C0128"
+    ],
+    [
+      "E002_F001_C0129"
+    ],
+    [
+      "E002_F001_C0130"
+    ],
+    [
+      "E002_F001_C0131"
+    ],
+    [
+      "E002_F001_C0132"
+    ],
+    [
+      "E002_F001_C0133"
+    ],
+    [
+      "E002_F001_C0134"
+    ],
+    [
+      "E002_F001_C0135"
+    ],
+    [
+      "E002_F001_C0136"
+    ],
+    [
+      "E002_F001_C0137"
+    ],
+    [
+      "E002_F001_C0138"
+    ],
+    [
+      "E002_F001_C0139"
+    ],
+    [
+      "E002_F001_C0140"
+    ],
+    [
+      "E002_F001_C0141"
+    ],
+    [
+      "E002_F001_C0142"
+    ],
+    [
+      "E002_F001_C0143"
+    ],
+    [
+      "E002_F001_C0144"
+    ],
+    [
+      "E002_F001_C0145"
+    ],
+    [
+      "E002_F001_C0146"
+    ],
+    [
+      "E002_F001_C0147"
+    ],
+    [
+      "E002_F001_C0148"
+    ],
+    [
+      "E002_F001_C0150"
+    ],
+    [
+      "E002_F001_C0151"
+    ],
+    [
+      "E002_F001_C0152"
+    ],
+    [
+      "E002_F001_C0153"
+    ],
+    [
+      "E002_F001_C0154"
+    ],
+    [
+      "E002_F001_C0155"
+    ],
+    [
+      "E002_F001_C0156"
+    ],
+    [
+      "E002_F001_C0157"
+    ],
+    [
+      "E002_F001_C0158"
+    ],
+    [
+      "E002_F001_C0159"
+    ],
+    [
+      "E002_F001_C0169"
+    ],
+    [
+      "E002_F001_C0170"
+    ],
+    [
+      "E002_F001_C0171"
+    ],
+    [
+      "E002_F001_C0172"
+    ],
+    [
+      "E002_F001_C0173"
+    ],
+    [
+      "E002_F001_C0174"
+    ],
+    [
+      "E002_F001_C0175"
+    ],
+    [
+      "E002_F001_C0176"
+    ],
+    [
+      "E002_F001_C0177"
+    ],
+    [
+      "E002_F001_C0178"
+    ],
+    [
+      "E002_F001_C0179"
+    ],
+    [
+      "E002_F002_C0003"
+    ],
+    [
+      "E002_F002_C0004"
+    ],
+    [
+      "E002_F003_C0002"
+    ],
+    [
+      "E002_F004_C0001"
+    ],
+    [
+      "E002_F004_C0002"
+    ],
+    [
+      "E002_F004_C0003"
+    ],
+    [
+      "E002_F004_C0005"
+    ],
+    [
+      "E002_F004_C0006"
+    ],
+    [
+      "E002_F005_C0001"
+    ],
+    [
+      "E002_F005_C0002"
+    ],
+    [
+      "E002_F005_C0003"
+    ],
+    [
+      "E002_F005_C0004"
+    ],
+    [
+      "E002_F005_C0005"
+    ],
+    [
+      "E002_F005_C0006"
+    ],
+    [
+      "E002_F005_C0007"
+    ],
+    [
+      "E002_F005_C0008"
+    ],
+    [
+      "E002_F005_C0009"
+    ],
+    [
+      "E002_F005_C0010"
+    ],
+    [
+      "E002_F005_C0011"
+    ],
+    [
+      "E002_F005_C0012"
+    ],
+    [
+      "E002_F005_C0013"
+    ],
+    [
+      "E002_F005_C0014"
+    ],
+    [
+      "E002_F005_C0015"
+    ],
+    [
+      "E002_F005_C0016"
+    ],
+    [
+      "E002_F005_C0017"
+    ],
+    [
+      "E002_F005_C0018"
+    ],
+    [
+      "E002_F005_C0019"
+    ],
+    [
+      "E002_F005_C0020"
+    ],
+    [
+      "E002_F005_C0021"
+    ],
+    [
+      "E002_F005_C0022"
+    ],
+    [
+      "E002_F005_C0023"
+    ],
+    [
+      "E002_F005_C0024"
+    ],
+    [
+      "E002_F005_C0025"
+    ],
+    [
+      "E002_F005_C0026"
+    ],
+    [
+      "E002_F005_C0027"
+    ],
+    [
+      "E002_F005_C0028"
+    ],
+    [
+      "E002_F005_C0029"
+    ],
+    [
+      "E002_F005_C0030"
+    ],
+    [
+      "E002_F005_C0031"
+    ],
+    [
+      "E002_F005_C0032"
+    ],
+    [
+      "E002_F005_C0033"
+    ],
+    [
+      "E002_F005_C0034"
+    ],
+    [
+      "E002_F005_C0035"
+    ],
+    [
+      "E002_F005_C0036"
+    ],
+    [
+      "E002_F005_C0037"
+    ],
+    [
+      "E002_F005_C0038"
+    ],
+    [
+      "E002_F005_C0040"
+    ],
+    [
+      "E002_F005_C0041"
+    ],
+    [
+      "E002_F005_C0042"
+    ],
+    [
+      "E002_F005_C0043"
+    ],
+    [
+      "E002_F005_C0044"
+    ],
+    [
+      "E002_F005_C0045"
+    ],
+    [
+      "E002_F005_C0046"
+    ],
+    [
+      "E002_F005_C0047"
+    ],
+    [
+      "E002_F005_C0048"
+    ],
+    [
+      "E002_F005_C0049"
+    ],
+    [
+      "E002_F005_C0050"
+    ],
+    [
+      "E002_F005_C0051"
+    ],
+    [
+      "E002_F005_C0052"
+    ],
+    [
+      "E002_F005_C0053"
+    ],
+    [
+      "E002_F005_C0054"
+    ],
+    [
+      "E002_F005_C0055"
+    ],
+    [
+      "E002_F005_C0056"
+    ],
+    [
+      "E002_F005_C0058"
+    ],
+    [
+      "E002_F005_C0059"
+    ],
+    [
+      "E002_F005_C0060"
+    ],
+    [
+      "E002_F005_C0061"
+    ],
+    [
+      "E002_F005_C0062"
+    ],
+    [
+      "E002_F005_C0063"
+    ],
+    [
+      "E002_F005_C0064"
+    ],
+    [
+      "E002_F005_C0067"
+    ],
+    [
+      "E002_F005_C0068"
+    ]
+  ]
+}
