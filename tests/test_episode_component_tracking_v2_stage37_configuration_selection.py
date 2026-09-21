@@ -21,6 +21,16 @@ import test_episode_component_tracking_v2_stage37_computational_review as comput
 ROOT = Path(__file__).resolve().parents[1]
 STEM = 'episode-component-tracking-v2-'
 CHECKPOINT = 'b109ede179e11021e13b8a84713439aa8a4c1ab8'
+SELECTION_CHECKPOINT = '4d61b04867e479187a3ae5c6914df98e382fc18b'
+# Exact bytes committed by the V2 preregistration at 9eda24f.
+V2_DESCENDANTS = {
+    'docs/episode-component-tracking-v2-v2-discrimination-preregistration.md':
+        'f28d4d168a2475c6a755b21c521270e8f2de269a12e67227f24116137321b7c7',
+    'results/episode-component-tracking-v2-v2-discrimination-preregistration.json':
+        'dd9a1694c5d0bc7a47ad2f0bfa917816cc66325f5325e4718b95a7bb9780a7b6',
+    'tests/test_episode_component_tracking_v2_v2_discrimination_preregistration.py':
+        'e3652e9025070e72101468b4aca738b403cbe762122d6e5de50140c5f9156596',
+}
 DECISION = 'STAGE37_V1_CONFIGURATION_SELECTION_DEFERRED'
 PAYLOAD_SHA256 = '269caf62e65faadd6c04e729681195829559f4519728e55419f95b97202198f3'
 REPORT_SHA256 = '20ec4954eac2474d06a607d641b1725c19fca64f08b2727b2b3cfee163d9247c'
@@ -46,6 +56,34 @@ def validate_payload(payload):
         raise ValueError('selection decision drift')
     if digest(canonical(payload)) != PAYLOAD_SHA256:
         raise ValueError('selection payload drift')
+
+
+def verify_provenance(selection):
+    """Keep frozen evidence bound; authorize only the byte-pinned V2 addition."""
+    for checkpoint in (CHECKPOINT, SELECTION_CHECKPOINT):
+        subprocess.run(['git', 'merge-base', '--is-ancestor', checkpoint, 'HEAD'],
+                       cwd=ROOT, check=True)
+    for path, expected in selection['provenance']['bound_files_sha256'].items():
+        if digest((ROOT / path).read_bytes()) != expected:
+            raise ValueError('bound-file drift: ' + path)
+        if digest(subprocess.check_output(
+                ['git', 'show', CHECKPOINT + ':' + path], cwd=ROOT)) != expected:
+            raise ValueError('checkpoint bound-file drift: ' + path)
+    for path, expected in V2_DESCENDANTS.items():
+        if digest((ROOT / path).read_bytes()) != expected:
+            raise ValueError('V2 descendant drift: ' + path)
+        if digest(subprocess.check_output(['git', 'show', 'HEAD:' + path], cwd=ROOT)) != expected:
+            raise ValueError('committed V2 drift: ' + path)
+    changed = subprocess.check_output(
+        ['git', 'diff', '--name-only', '-z', CHECKPOINT], cwd=ROOT)
+    untracked = subprocess.check_output(
+        ['git', 'ls-files', '--others', '--exclude-standard', '-z'], cwd=ROOT)
+    intended = {'docs/' + STEM + 'stage37-configuration-selection.md',
+                'results/' + STEM + 'stage37-configuration-selection.json',
+                'tests/test_episode_component_tracking_v2_stage37_configuration_selection.py'}
+    unexpected = set((changed + untracked).decode().split('\0')) - {''} - intended - V2_DESCENDANTS.keys()
+    if unexpected:
+        raise ValueError('unrecognized descendant paths: ' + repr(sorted(unexpected)))
 
 
 def verify_saved_memberships(payload):
@@ -89,18 +127,83 @@ class ConfigurationSelectionTests(unittest.TestCase):
         self.assertFalse((ROOT / 'results' / (STEM + 'v1-frozen-configuration.json')).exists())
 
     def test_checkpoint_ancestry_and_byte_bindings(self):
-        subprocess.run(['git', 'merge-base', '--is-ancestor', CHECKPOINT, 'HEAD'],
-                       cwd=ROOT, check=True)
-        for path, expected in self.selection['provenance']['bound_files_sha256'].items():
+        verify_provenance(self.selection)
+
+    def test_selection_checkpoint_ancestry_required(self):
+        original = subprocess.run
+
+        def reject_selection(cmd, **kwargs):
+            if cmd == ['git', 'merge-base', '--is-ancestor', SELECTION_CHECKPOINT, 'HEAD']:
+                raise subprocess.CalledProcessError(1, cmd)
+            return original(cmd, **kwargs)
+
+        with patch.object(subprocess, 'run', side_effect=reject_selection):
+            with self.assertRaises(subprocess.CalledProcessError):
+                verify_provenance(self.selection)
+
+    def test_each_v2_mutation_and_deletion_rejected(self):
+        original = Path.read_bytes
+        for path in V2_DESCENDANTS:
+            for deleted in (False, True):
+                def changed_bytes(file):
+                    if file == ROOT / path:
+                        if deleted:
+                            raise FileNotFoundError(path)
+                        return original(file) + b'\nchanged'
+                    return original(file)
+
+                with self.subTest(path=path, deleted=deleted):
+                    with patch.object(Path, 'read_bytes', changed_bytes):
+                        with self.assertRaises(FileNotFoundError if deleted else ValueError):
+                            verify_provenance(self.selection)
+
+    def test_committed_v2_drift_rejected(self):
+        original = subprocess.check_output
+        for path in V2_DESCENDANTS:
+            def changed_commit(cmd, **kwargs):
+                if cmd == ['git', 'show', 'HEAD:' + path]:
+                    return b'changed committed bytes'
+                return original(cmd, **kwargs)
+
             with self.subTest(path=path):
-                self.assertEqual(digest((ROOT / path).read_bytes()), expected)
-                self.assertEqual(digest(subprocess.check_output(
-                    ['git', 'show', CHECKPOINT + ':' + path], cwd=ROOT)), expected)
-        changed = subprocess.check_output(['git', 'diff', '--name-only', CHECKPOINT], cwd=ROOT).decode().splitlines()
-        intended = {'docs/' + STEM + 'stage37-configuration-selection.md',
-                    'results/' + STEM + 'stage37-configuration-selection.json',
-                    'tests/test_episode_component_tracking_v2_stage37_configuration_selection.py'}
-        self.assertFalse(set(changed) - intended)
+                with patch.object(subprocess, 'check_output', side_effect=changed_commit):
+                    with self.assertRaisesRegex(ValueError, 'committed V2 drift'):
+                        verify_provenance(self.selection)
+
+    def test_arbitrary_descendant_path_rejected(self):
+        original = subprocess.check_output
+        for command in (['git', 'diff', '--name-only', '-z', CHECKPOINT],
+                        ['git', 'ls-files', '--others', '--exclude-standard', '-z']):
+            def extra_file(cmd, **kwargs):
+                value = original(cmd, **kwargs)
+                if cmd == command:
+                    return value + b'docs/episode-component-tracking-v2-v2-unrecognized.md\0'
+                return value
+
+            with self.subTest(command=command):
+                with patch.object(subprocess, 'check_output', side_effect=extra_file):
+                    with self.assertRaisesRegex(ValueError, 'unrecognized descendant'):
+                        verify_provenance(self.selection)
+
+    def test_bound_evidence_mutation_rejected(self):
+        original = Path.read_bytes
+        for path in self.selection['provenance']['bound_files_sha256']:
+            def changed_bytes(file):
+                return original(file) + (b'changed' if file == ROOT / path else b'')
+
+            with self.subTest(path=path):
+                with patch.object(Path, 'read_bytes', changed_bytes):
+                    with self.assertRaisesRegex(ValueError, 'bound-file drift'):
+                        verify_provenance(self.selection)
+
+    def test_selection_bytes_and_v2_decision_unchanged(self):
+        for path in ('docs/' + STEM + 'stage37-configuration-selection.md',
+                     'results/' + STEM + 'stage37-configuration-selection.json'):
+            self.assertEqual((ROOT / path).read_bytes(), subprocess.check_output(
+                ['git', 'show', SELECTION_CHECKPOINT + ':' + path], cwd=ROOT))
+        design = read('v2-discrimination-preregistration')
+        self.assertEqual(design['decision'], 'V2_DISCRIMINATION_EXPERIMENT_PREREGISTERED')
+        self.assertFalse(design['execution_performed'])
 
     def test_reviews_remain_unchanged(self):
         scientific.validate_payload(self.scientific)
@@ -198,6 +301,7 @@ class ConfigurationSelectionTests(unittest.TestCase):
             stack.enter_context(patch.object(Path, 'write_bytes', side_effect=AssertionError('write forbidden')))
             stack.enter_context(patch.object(Path, 'write_text', side_effect=AssertionError('write forbidden')))
             validate_payload(self.selection)
+            verify_provenance(self.selection)
             self.assertEqual(len(launch.verify_plan()['arms']), 160)
             self.assertEqual(verify_saved_memberships(self.selection), 6232)
 
