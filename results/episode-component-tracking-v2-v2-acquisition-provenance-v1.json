@@ -1,0 +1,37 @@
+{
+  "acquisition_checkpoint": "fed6a58096804859319b11b125f490201ffbb56d",
+  "current_sha256": {
+    "analysis/episode_component_tracking_v2_draft2_full_matrix_exact.py": "5cb8ec7709e0cfe30c76626ef386d07f8e8ceb94b24257a47becc1a84e75f18b",
+    "analysis/provenance/stage37_gitignore_v1.py": "711ab2d96c3524e8356caf8138f7c575d001a5e8f9bc824824d6d3f1e0835b3d",
+    "analysis/provenance/v2_acquisition_lock_v1.py": "cf3cea07f51a6b859d0da73f14d4ff4cc8c5ef742cd4c0a49966a91009792471",
+    "analysis/validate_episode_component_tracking_v2_v2_acquisition_manifest.py": "a04197f0858f25b17e5b7f171b1d941ae891e1541f177cad9d5e6822cb6ceb7c",
+    "tests/draft2_review_provenance.py": "52a72b22f445ead635bcbbea7e857d7ee919cee8865669715f4dd2dabb649a45",
+    "tests/test_episode_component_tracking_v2_draft2_full_matrix_acquisition_provenance.py": "6aeb5e4ab5b6ad4bdef943169116d215e855fd17504cc1713abc732ed46fc3d1",
+    "tests/test_episode_component_tracking_v2_stage37_configuration_selection.py": "e9ff6f368285b92f278a70c9c3534faa1d950dd1e4607eda17c3f56767aa9731",
+    "tests/test_episode_component_tracking_v2_v2_acquisition_lock.py": "857908b6df4d4bb9b0226adacbc2e347ff30b864f54c146887443a423c1e1541",
+    "tests/test_episode_component_tracking_v2_v2_discrimination_preregistration.py": "80b280e44608a680e93b072e8370b442a27b7baf15995598a3749ad755cc1297"
+  },
+  "decisions": {
+    "acquisition": "V2_ACQUISITION_LOCK_BLOCKED",
+    "preregistration": "V2_DISCRIMINATION_EXPERIMENT_PREREGISTERED",
+    "stage37": "STAGE37_V1_CONFIGURATION_SELECTION_DEFERRED"
+  },
+  "format": "KRAKEN_V2_ACQUISITION_PROVENANCE_V1",
+  "frozen_sha256": {
+    "analysis/validate_episode_component_tracking_v2_v2_acquisition_manifest.py": "5e46861256fd8e61e5b27bf16817a028976e097a6a6ee3a94acae8590a1b2b9e",
+    "docs/episode-component-tracking-v2-v2-acquisition-lock.md": "97e3fee8e60395e9fcae613a9f837c9e9864190fad526f3430fd8809fa87bdf4",
+    "results/episode-component-tracking-v2-v2-acquisition-lock.json": "2225cb87cb7f7802a8fb414c4d75133f03639a6d8d8cc742a02baa4977a07ce9",
+    "results/episode-component-tracking-v2-v2-acquisition-manifest-schema-v1.json": "9139863108894fa5a37db556369940c3f4d922185705d434494584882b237a70",
+    "tests/test_episode_component_tracking_v2_v2_acquisition_lock.py": "5eb31eec23ebc2a7aaa27f2b29ebe83d59a510f3e0afd66c2e97a412d70f9df1"
+  },
+  "historical_sha256": {
+    "analysis/episode_component_tracking_v2_draft2_full_matrix_exact.py": "9f23840db5a32964ad40910af79f8e1ecb622c0ce0b64aab220f94061c4dd4fd",
+    "analysis/provenance/stage37_gitignore_v1.py": "33063ed31fa765970bfb4331b47988917af2b2a8d85b4790285b7b829ba6dfe5",
+    "analysis/validate_episode_component_tracking_v2_v2_acquisition_manifest.py": "5e46861256fd8e61e5b27bf16817a028976e097a6a6ee3a94acae8590a1b2b9e",
+    "tests/draft2_review_provenance.py": "a938521a6bc3974c7519e70a2e69612bdbeaf6870047695db80aadb7bce930de",
+    "tests/test_episode_component_tracking_v2_stage37_configuration_selection.py": "aefb6455aece094dd5d264f86efb6b0fbe4142a7d92f42d7ce5b68febfa2752d",
+    "tests/test_episode_component_tracking_v2_v2_acquisition_lock.py": "5eb31eec23ebc2a7aaa27f2b29ebe83d59a510f3e0afd66c2e97a412d70f9df1",
+    "tests/test_episode_component_tracking_v2_v2_discrimination_preregistration.py": "bc5194af226106c5eda14165bdc7ab9d21bd5cd39d7ae428f7c31fe12c909272"
+  },
+  "parent_checkpoint": "c98ad53a6d278140c98ecbe045f2462c24f5852f"
+}

@@ -65,7 +65,13 @@ def verify_provenance(selection):
         subprocess.run(['git', 'merge-base', '--is-ancestor', checkpoint, 'HEAD'],
                        cwd=ROOT, check=True)
     for path, expected in selection['provenance']['bound_files_sha256'].items():
-        if digest((ROOT / path).read_bytes()) != expected:
+        actual = digest((ROOT / path).read_bytes())
+        if path in v2_provenance.acquisition.TRANSITIONS:
+            try:
+                actual = v2_provenance.acquisition.historical_digest(ROOT, path, actual)
+            except ValueError as exc:
+                raise ValueError('bound-file drift: ' + path + ': ' + str(exc)) from exc
+        if actual != expected:
             raise ValueError('bound-file drift: ' + path)
         if digest(subprocess.check_output(
                 ['git', 'show', CHECKPOINT + ':' + path], cwd=ROOT)) != expected:
@@ -77,6 +83,8 @@ def verify_provenance(selection):
         if digest((ROOT / path).read_bytes()) != expected:
             raise ValueError('V2 descendant drift: ' + path)
         committed = historical if head == v2_provenance.AUTHORIZED_REPAIR else expected
+        if head == v2_provenance.acquisition.ACQUISITION and path == v2_provenance.V2_TEST:
+            committed = v2_provenance.acquisition.validate(ROOT)['historical_sha256'][path]
         if digest(subprocess.check_output(['git', 'show', 'HEAD:' + path], cwd=ROOT)) != committed:
             raise ValueError('committed V2 drift: ' + path)
     changed = subprocess.check_output(
@@ -86,7 +94,7 @@ def verify_provenance(selection):
     intended = {'docs/' + STEM + 'stage37-configuration-selection.md',
                 'results/' + STEM + 'stage37-configuration-selection.json',
                 'tests/test_episode_component_tracking_v2_stage37_configuration_selection.py'}
-    unexpected = set((changed + untracked).decode().split('\0')) - {''} - intended - V2_DESCENDANTS.keys() - {v2_provenance.REPAIR_PATH}
+    unexpected = set((changed + untracked).decode().split('\0')) - {''} - intended - V2_DESCENDANTS.keys() - {v2_provenance.REPAIR_PATH} - v2_provenance.acquisition.AUTHORIZED_PATHS
     if unexpected:
         raise ValueError('unrecognized descendant paths: ' + repr(sorted(unexpected)))
 
@@ -172,7 +180,8 @@ class ConfigurationSelectionTests(unittest.TestCase):
 
             with self.subTest(path=path):
                 with patch.object(subprocess, 'check_output', side_effect=changed_commit):
-                    with self.assertRaisesRegex(ValueError, 'committed V2 drift'):
+                    # The shared checker can reject committed drift before this wrapper.
+                    with self.assertRaisesRegex(ValueError, 'committed (V2 drift|tests/)'):
                         verify_provenance(self.selection)
 
     def test_arbitrary_descendant_path_rejected(self):

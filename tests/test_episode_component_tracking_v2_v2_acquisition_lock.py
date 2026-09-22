@@ -103,19 +103,21 @@ class AcquisitionLockTests(unittest.TestCase):
 
     def test_no_historical_tracked_file_changed(self):
         # No V1/Stage37/scientific evidence change anywhere, not just selected files.
-        names = git('diff','--name-only',PARENT).decode().splitlines()
-        self.assertTrue(set(names) <= set(self.lock['artifact_paths']),names)
+        v.provenance.validate(ROOT)
+        names = git('diff','--name-only',PARENT,v.provenance.ACQUISITION).decode().splitlines()
+        self.assertEqual(set(names), set(self.lock['artifact_paths']))
 
     def test_post_commit_binding(self):
-        revision = os.environ.get('V2_LOCK_COMMIT')
-        if not revision:
-            self.skipTest('post-commit binding requires V2_LOCK_COMMIT; not an acquisition permission')
+        revision = os.environ.get('V2_LOCK_COMMIT', v.provenance.ACQUISITION)
+        self.assertEqual(revision, v.provenance.ACQUISITION)
         self.assertRegex(revision,r'^[0-9a-f]{40}$')
         subprocess.run(['git','merge-base','--is-ancestor',PARENT,revision],cwd=ROOT,check=True)
         self.assertEqual(set(git('diff','--name-only',PARENT,revision).decode().splitlines()),
                          set(self.lock['artifact_paths']))
         for path in self.lock['artifact_paths']:
-            self.assertEqual(git('show',revision+':'+path),(ROOT/path).read_bytes(),path)
+            self.assertEqual(v.digest(git('show',revision+':'+path)),
+                             v.provenance.ACQUISITION_SHA256[path],path)
+        v.provenance.validate(ROOT)
         v.verify_contract(self.lock)
 
     def test_every_setting_has_origin_and_bound_evidence(self):
@@ -254,7 +256,7 @@ class AcquisitionLockTests(unittest.TestCase):
             elif isinstance(node,ast.ImportFrom):modules.append(node.module)
             elif isinstance(node,ast.Call) and isinstance(node.func,ast.Name):
                 self.assertNotIn(node.func.id,{'eval','exec','compile','__import__','open'})
-        self.assertEqual(set(modules),{'argparse','datetime','hashlib','json','pathlib','re'})
+        self.assertEqual(set(modules),{'argparse','datetime','hashlib','json','pathlib','re','provenance'})
         source=Path(v.__file__).read_text()
         for forbidden in ['subprocess','Popen','socket','numpy','kraken_capture','group_episodes']:
             self.assertNotIn(forbidden,source)

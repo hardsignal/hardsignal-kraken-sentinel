@@ -61,6 +61,8 @@ def validate_artifact(path, actual, revision):
 
 
 def validate_review(kind):
+    from provenance.v2_acquisition_lock_v1 import validate
+    validate(ROOT)
     revision = REVIEW_COMMITS[kind]
     manifest = 'canonical-arms' if kind == 'definition' else 'risk-manifest'
     review_path = f'results/{STEM}-{kind}-review.json'

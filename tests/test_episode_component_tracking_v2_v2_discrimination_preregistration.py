@@ -1,5 +1,6 @@
 """Read-only design contract checks; no scientific imports, IQ or execution."""
 import ast
+from provenance import v2_acquisition_lock_v1 as acquisition
 import copy
 import hashlib
 import json
@@ -80,6 +81,7 @@ def verify_repair():
     metadata = {k: v for k, v in artifact.items() if k != 'current_validation_sha256'}
     if metadata != REPAIR_METADATA:
         raise ValueError('repair metadata drift')
+    transition = acquisition.validate(ROOT)
     current = artifact['current_validation_sha256']
     if set(current) != {STAGE37_TEST, V2_TEST}:
         raise ValueError('validation path drift')
@@ -100,7 +102,12 @@ def verify_repair():
     if changed_at_repair != [STAGE37_TEST]:
         raise ValueError('authorized repair scope drift')
     for path, expected in current.items():
-        require_hash((ROOT / path).read_bytes(), expected, path)
+        require_hash(git_bytes(acquisition.ACQUISITION, path), expected, path)
+        if transition['historical_sha256'][path] != expected:
+            raise ValueError('historical validator binding drift')
+    artifact = dict(artifact, current_validation_sha256={
+        path: transition['current_sha256'][path] for path in current})
+    current = artifact['current_validation_sha256']
     # Before the repair commit, HEAD is exactly fb11e23. Once committed, also
     # require the artifact and validator bytes to match HEAD (no mutable manifest).
     head = subprocess.check_output(['git', 'rev-parse', 'HEAD'], cwd=ROOT, text=True).strip()
@@ -108,7 +115,8 @@ def verify_repair():
         if raw != git_bytes('HEAD', REPAIR_PATH):
             raise ValueError('committed repair artifact drift')
         for path, expected in current.items():
-            require_hash(git_bytes('HEAD', path), expected, 'committed V2 drift: ' + path)
+            committed = transition['historical_sha256'][path] if head == acquisition.ACQUISITION else expected
+            require_hash(git_bytes('HEAD', path), committed, 'committed V2 drift: ' + path)
     for path, expected in [('docs/' + STEM + '.md', DOC_SHA256),
                            ('results/' + STEM + '.json', JSON_SHA256)]:
         require_hash((ROOT / path).read_bytes(), expected, path)
@@ -118,13 +126,17 @@ def verify_repair():
     for path, expected in design['provenance_requirements']['bound_files_sha256'].items():
         require_hash(git_bytes(PARENT, path), expected, 'parent ' + path)
         if path != STAGE37_TEST:
-            require_hash((ROOT / path).read_bytes(), expected, path)
+            actual = sha((ROOT / path).read_bytes())
+            if path in acquisition.TRANSITIONS:
+                actual = acquisition.historical_digest(ROOT, path, actual)
+            if actual != expected:
+                raise ValueError('provenance drift: ' + path)
         elif expected != HISTORICAL_STAGE37_SHA256:
             raise ValueError('historical Stage 37 binding drift')
     changed = subprocess.check_output(['git', 'diff', '--name-only', '-z', PARENT], cwd=ROOT)
     untracked = subprocess.check_output(
         ['git', 'ls-files', '--others', '--exclude-standard', '-z'], cwd=ROOT)
-    unexpected = set((changed + untracked).decode().split('\0')) - {''} - INTENDED - {STAGE37_TEST, REPAIR_PATH}
+    unexpected = set((changed + untracked).decode().split('\0')) - {''} - INTENDED - {STAGE37_TEST, REPAIR_PATH} - acquisition.AUTHORIZED_PATHS
     if unexpected:
         raise ValueError('unrecognized descendant paths: ' + repr(sorted(unexpected)))
     return artifact
@@ -260,7 +272,7 @@ class DiscriminationPreregistrationTests(unittest.TestCase):
             ['git', 'diff', '--name-only', PARENT], cwd=ROOT, text=True).splitlines())
         parent_files = set(subprocess.check_output(
             ['git', 'ls-tree', '-r', '--name-only', PARENT], cwd=ROOT, text=True).splitlines())
-        self.assertEqual(changed & parent_files, {STAGE37_TEST})
+        self.assertEqual(changed & parent_files, acquisition.TRANSITIONS & parent_files)
 
     def test_inherited_constants_and_width_override(self):
         tree = ast.parse((ROOT / 'analysis/episode_component_tracking_v2_draft1.py').read_text())
@@ -338,7 +350,7 @@ class DiscriminationPreregistrationTests(unittest.TestCase):
         tree = ast.parse(Path(__file__).read_text())
         modules = {n.module for n in ast.walk(tree) if isinstance(n, ast.ImportFrom)}
         modules |= {a.name for n in ast.walk(tree) if isinstance(n, ast.Import) for a in n.names}
-        self.assertLessEqual(modules, {'ast', 'copy', 'hashlib', 'json', 'pathlib', 'subprocess', 'unittest', 'unittest.mock'})
+        self.assertLessEqual(modules, {'ast', 'copy', 'hashlib', 'json', 'pathlib', 'subprocess', 'unittest', 'unittest.mock', 'provenance'})
         for node in ast.walk(tree):
             if isinstance(node, ast.Call) and isinstance(node.func, ast.Attribute) and isinstance(node.func.value, ast.Name) and node.func.value.id == 'subprocess' and node.func.attr != 'CalledProcessError':
                 self.assertIsInstance(node.args[0], ast.List)

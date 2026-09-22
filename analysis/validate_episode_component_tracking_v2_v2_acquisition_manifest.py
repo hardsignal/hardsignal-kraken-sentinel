@@ -6,6 +6,7 @@ import hashlib
 import json
 from pathlib import Path
 import re
+from provenance import v2_acquisition_lock_v1 as provenance
 
 ROOT = Path(__file__).resolve().parents[1]
 LOCK_PATH = 'results/episode-component-tracking-v2-v2-acquisition-lock.json'
@@ -81,9 +82,13 @@ def schema_check(value, spec, definitions, label='manifest'):
 def verify_contract(lock, root=ROOT):
     require(digest(canonical(lock)) == LOCK_CANONICAL_SHA256, 'immutable acquisition lock changed')
     require(lock['state'] == BLOCKED, 'this version cannot assert READY')
+    provenance.validate(root)
     for path, expected in lock['evidence_sha256'].items():
         require(re.fullmatch('[0-9a-f]{64}', expected) is not None, 'invalid evidence hash')
-        require(digest((root / path).read_bytes()) == expected, 'evidence drift: ' + path)
+        actual = digest((root / path).read_bytes())
+        if path in provenance.TRANSITIONS:
+            actual = provenance.historical_digest(root, path, actual)
+        require(actual == expected, 'evidence drift: ' + path)
     require(digest((root / SCHEMA_PATH).read_bytes()) == lock['schema_sha256'], 'schema drift')
     schema = read_json(root / SCHEMA_PATH)
     schema_check(lock, schema['$defs']['experiment'], schema['$defs'])

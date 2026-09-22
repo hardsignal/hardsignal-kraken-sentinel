@@ -41,16 +41,20 @@ def validate_gitignore(root, expected, actual):
 
 def validate_repair(root, runner_digest):
     """Keep launch binding V2 immutable; bind the verification-only runner edit."""
+    from provenance.v2_acquisition_lock_v1 import historical_digest
+    historical_runner = historical_digest(root, RUNNER, runner_digest)
+    historical_review = historical_digest(root, REVIEW_VALIDATOR, sha((root / REVIEW_VALIDATOR).read_bytes()))
+    historical_helper = historical_digest(root, HELPER, sha((root / HELPER).read_bytes()))
     binding = json.loads((root / BINDING).read_bytes())
     expected = dict(format='KRAKEN_STAGE37_PROVENANCE_REPAIR_V1',
                     freeze_checkpoint=FREEZE, execution_checkpoint=EXECUTION,
                     historical_gitignore_sha256=HISTORICAL_SHA256,
                     frozen_gitignore_sha256=FROZEN_SHA256,
                     original_runner_sha256=ORIGINAL_RUNNER_SHA256,
-                    runner_sha256=runner_digest,
+                    runner_sha256=historical_runner,
                     original_review_validator_sha256=ORIGINAL_REVIEW_VALIDATOR_SHA256,
-                    review_validator_sha256=sha((root / REVIEW_VALIDATOR).read_bytes()),
-                    helper_sha256=sha((root / HELPER).read_bytes()))
+                    review_validator_sha256=historical_review,
+                    helper_sha256=historical_helper)
     if (binding != expected or
             sha(historical_bytes(root, FREEZE, RUNNER)) != ORIGINAL_RUNNER_SHA256 or
             sha(historical_bytes(root, FREEZE, REVIEW_VALIDATOR)) != ORIGINAL_REVIEW_VALIDATOR_SHA256):

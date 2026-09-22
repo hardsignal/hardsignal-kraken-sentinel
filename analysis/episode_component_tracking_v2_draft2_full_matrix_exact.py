@@ -114,8 +114,10 @@ def verify_plan(plan_path=PLAN, expected_hash=None):
             continue
         if effective_historical_digest(ROOT, path, sc.sha(ROOT / path)) != digest:
             raise ValueError('Provenance source hash drift: ' + path)
+    from provenance.v2_acquisition_lock_v1 import ACQUISITION_SHA256, validate
+    validate(ROOT)
     required = {str(p.relative_to(ROOT)) for p in (ROOT / 'analysis').glob('*.py')}
-    if not required <= set(plan['sources']):
+    if not required <= set(plan['sources']) | ACQUISITION_SHA256.keys():
         raise ValueError('Incomplete source provenance')
     for suffix, decision in [('definition', 'MATRIX_DEFINITION_FROZEN_AND_RECONSTRUCTED'),
                              ('feasibility', 'COMPUTATIONAL_BLOCKERS_REMAIN')]:
