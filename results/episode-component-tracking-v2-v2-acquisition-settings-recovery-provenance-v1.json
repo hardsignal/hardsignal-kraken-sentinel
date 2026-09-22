@@ -1,0 +1,36 @@
+{
+  "current_sha256": {
+    "analysis/provenance/v2_acquisition_lock_v1.py": "46d4d8d46041fbad2754c8f1679ae6ad6d977a876ea8edf55855984fc73852ca",
+    "analysis/provenance/v2_acquisition_settings_recovery_v1.py": "102fbb26d36138228dd85f8272eb417e428ce3d71b8771368856d2c2f4d6f985",
+    "docs/episode-component-tracking-v2-v2-acquisition-settings-recovery-v1.md": "c05980aa743a24168eee03eca42b4dd868f24cf45c14a00e29075eec70ce0f6a",
+    "results/episode-component-tracking-v2-v2-acquisition-settings-recovery-v1.json": "5563adc955f0a6037e8264c8403c468e80eda3150a15c6f60693d6c3696169fd",
+    "tests/test_episode_component_tracking_v2_v2_acquisition_settings_recovery.py": "33f16d9674ee2d93650b1e054d1b33e9c8a375b7f559c8222c8bb169d0f371e3"
+  },
+  "decisions": {
+    "acquisition": "V2_ACQUISITION_LOCK_BLOCKED",
+    "preregistration": "V2_DISCRIMINATION_EXPERIMENT_PREREGISTERED",
+    "recovery": "V2_ACQUISITION_SETTINGS_RECOVERY_RECORDED_BLOCKED",
+    "stage37": "STAGE37_V1_CONFIGURATION_SELECTION_DEFERRED"
+  },
+  "format": "KRAKEN_V2_ACQUISITION_SETTINGS_RECOVERY_PROVENANCE_V1",
+  "historical_sha256": {
+    "analysis/provenance/v2_acquisition_lock_v1.py": "cf3cea07f51a6b859d0da73f14d4ff4cc8c5ef742cd4c0a49966a91009792471"
+  },
+  "integration_paths": [
+    "analysis/provenance/v2_acquisition_lock_v1.py",
+    "analysis/provenance/v2_acquisition_settings_recovery_v1.py",
+    "results/episode-component-tracking-v2-v2-acquisition-settings-recovery-provenance-v1.json"
+  ],
+  "original_recovery_sha256": {
+    "docs/episode-component-tracking-v2-v2-acquisition-settings-recovery-v1.md": "c05980aa743a24168eee03eca42b4dd868f24cf45c14a00e29075eec70ce0f6a",
+    "results/episode-component-tracking-v2-v2-acquisition-settings-recovery-v1.json": "5563adc955f0a6037e8264c8403c468e80eda3150a15c6f60693d6c3696169fd",
+    "tests/test_episode_component_tracking_v2_v2_acquisition_settings_recovery.py": "105cbbd81251692bd5894685e9def96a6317f513e4b17be34c6ef1190bc2968e"
+  },
+  "parent_checkpoint": "77035ae9aca0fc35d8979cca5662020f396b3c84",
+  "recovery_paths": [
+    "docs/episode-component-tracking-v2-v2-acquisition-settings-recovery-v1.md",
+    "results/episode-component-tracking-v2-v2-acquisition-settings-recovery-v1.json",
+    "tests/test_episode_component_tracking_v2_v2_acquisition_settings_recovery.py"
+  ],
+  "test_transition": "Only descendant-scope validation and additional provenance regressions; original test was uncommitted, not present at BASE."
+}

@@ -1,0 +1,660 @@
+{
+  "acquisition_authorized": false,
+  "acquisition_decision": "V2_ACQUISITION_LOCK_BLOCKED",
+  "assessments": {
+    "activation_procedure": {
+      "candidate": null,
+      "detail": "Exact activation tool/procedure, source state, idle enforcement and failure logging not established.",
+      "evidence": [],
+      "resolves_existing_lock": false,
+      "runtime_confirmed": false,
+      "status": "UNRESOLVED"
+    },
+    "agc_state": {
+      "candidate": {
+        "auto_gain_sentinel": -100.0,
+        "enabled": false,
+        "mode": "manual_fixed_gain"
+      },
+      "detail": "Fixed gain sets daq_agc=False; rtl_daq selects manual tuner gain mode 1. AGC requires a separate explicit control request. This is not proof of every stage at runtime.",
+      "evidence": [
+        "kraken_settings",
+        "kraken_ui",
+        "kraken_variables",
+        "kraken_receiver",
+        "rtl_daq"
+      ],
+      "resolves_existing_lock": false,
+      "runtime_confirmed": false,
+      "status": "CONFIGURATION_SUPPORTED"
+    },
+    "antenna_cable_inventory": {
+      "candidate": null,
+      "detail": "Antenna/cable identity, arrangement and connections absent.",
+      "evidence": [],
+      "resolves_existing_lock": false,
+      "runtime_confirmed": false,
+      "status": "UNRESOLVED"
+    },
+    "calibration_synchronization": {
+      "candidate": {
+        "amplitude_cal_mode": "channel_power",
+        "cal_frame_burst_size": 10,
+        "cal_frame_interval": 687,
+        "cal_track_mode": 2,
+        "en_iq_cal": 1,
+        "en_noise_source_ctr": 1,
+        "gain_lock_interval": 0,
+        "iq_adjust_source": "explicit-time-delay",
+        "maximum_sync_fails": 10,
+        "runtime_lock_sync_state": null
+      },
+      "detail": "IQ calibration and periodic tracking configured; no archived runtime lock/sync state observed.",
+      "evidence": [
+        "heimdall_config"
+      ],
+      "resolves_existing_lock": false,
+      "runtime_confirmed": false,
+      "status": "PARTIALLY_SUPPORTED"
+    },
+    "clock_source": {
+      "candidate": null,
+      "detail": "RF reference, UTC clock discipline, monotonic clock identity/resolution and synchronization uncertainty absent.",
+      "evidence": [],
+      "resolves_existing_lock": false,
+      "runtime_confirmed": false,
+      "status": "UNRESOLVED"
+    },
+    "decimation_channelizer": {
+      "candidate": {
+        "active_vfos": 1,
+        "adc_rate_hz": 2400000,
+        "daq_decimation": 1,
+        "dsp_decimation": 1,
+        "heimdall_output_dtype": "complex_float32",
+        "output_vfo": 0,
+        "post_daq_rate_hz": 2400000,
+        "vfo_bandwidth_hz": 25000,
+        "vfo_decimation_factor": 96,
+        "vfo_effective_rate_hz": 25000,
+        "vfo_fir_order_factor": 2
+      },
+      "detail": "DAQ rate = ADC/decimation; ratio 1 bypasses filtering/decimation. DSP ratio 1; VFO factor = 2400000 // 25000 = 96. Configuration/code-derived chain, not measured; Heimdall intermediate dtype is not recorder dtype.",
+      "evidence": [
+        "heimdall_config",
+        "fir_decimate",
+        "kraken_settings",
+        "kraken_processor"
+      ],
+      "resolves_existing_lock": false,
+      "runtime_confirmed": false,
+      "status": "CONFIGURATION_SUPPORTED"
+    },
+    "dropped_sample_error_instrumentation": {
+      "candidate": null,
+      "detail": "Dropped sample/overflow/error instrumentation and logs absent; cannot assume zero.",
+      "evidence": [],
+      "resolves_existing_lock": false,
+      "runtime_confirmed": false,
+      "status": "UNRESOLVED"
+    },
+    "environment_measurement_procedure": {
+      "candidate": null,
+      "detail": "Temperature, battery, interference/deviation metadata required; measurement methods and units not locked.",
+      "evidence": [],
+      "resolves_existing_lock": false,
+      "runtime_confirmed": false,
+      "status": "UNRESOLVED"
+    },
+    "exit_status_instrumentation": {
+      "candidate": null,
+      "detail": "Writer exit status and abnormal termination capture mechanism absent.",
+      "evidence": [],
+      "resolves_existing_lock": false,
+      "runtime_confirmed": false,
+      "status": "UNRESOLVED"
+    },
+    "frontend_sample_rate_hz": {
+      "candidate": 2400000,
+      "detail": "Configured sample_rate is passed to rtlsdr_set_sample_rate and adc_sampling_freq; no archived runtime confirmation.",
+      "evidence": [
+        "heimdall_config",
+        "rtl_daq"
+      ],
+      "resolves_existing_lock": false,
+      "runtime_confirmed": false,
+      "status": "CONFIGURATION_SUPPORTED"
+    },
+    "full_configuration_snapshot": {
+      "candidate": null,
+      "detail": "Historical settings hashes differ; complete bytes and explanation unavailable.",
+      "evidence": [],
+      "resolves_existing_lock": false,
+      "runtime_confirmed": false,
+      "status": "UNRESOLVED"
+    },
+    "geometry_location_orientation": {
+      "candidate": null,
+      "detail": "Locked location, source/receiver geometry, orientation, measurements and photograph hashes absent.",
+      "evidence": [],
+      "resolves_existing_lock": false,
+      "runtime_confirmed": false,
+      "status": "UNRESOLVED"
+    },
+    "hardware_inventory": {
+      "candidate": null,
+      "detail": "Receiver model/revision/serial, firmware, channel serials and relevant peripherals absent.",
+      "evidence": [],
+      "resolves_existing_lock": false,
+      "runtime_confirmed": false,
+      "status": "UNRESOLVED"
+    },
+    "host_software_versions": {
+      "candidate": {
+        "complete_dependency_driver_lock": false,
+        "kernel": "7.0.11-76070011-generic",
+        "numpy": "1.26.4",
+        "os": "Pop!_OS 24.04 LTS",
+        "python": "3.12.3"
+      },
+      "detail": "Partial host inventory supplied by user; not a complete dependency, driver or execution-environment lock.",
+      "evidence": [
+        "user_supplied_host_inventory",
+        "kraken_variables"
+      ],
+      "resolves_existing_lock": false,
+      "runtime_confirmed": false,
+      "status": "PARTIALLY_SUPPORTED"
+    },
+    "lna_gain": {
+      "candidate": null,
+      "detail": "Kraken LNA state/gain absent; HackRF 32 dB is inapplicable.",
+      "evidence": [],
+      "resolves_existing_lock": false,
+      "runtime_confirmed": false,
+      "status": "UNRESOLVED"
+    },
+    "partial_file_detection": {
+      "candidate": null,
+      "detail": "Close/flush/size stability and incomplete-file detection implementation absent.",
+      "evidence": [],
+      "resolves_existing_lock": false,
+      "runtime_confirmed": false,
+      "status": "UNRESOLVED"
+    },
+    "raw_naming_convention": {
+      "candidate": null,
+      "detail": "Historical names are examples, not a locked implementation or timezone/collision rule.",
+      "evidence": [],
+      "resolves_existing_lock": false,
+      "runtime_confirmed": false,
+      "status": "UNRESOLVED"
+    },
+    "receiver_channel_count": {
+      "candidate": 5,
+      "detail": "num_ch=5; configured count does not prove connected hardware or scientific channel mapping.",
+      "evidence": [
+        "heimdall_config",
+        "rtl_daq"
+      ],
+      "resolves_existing_lock": false,
+      "runtime_confirmed": false,
+      "status": "CONFIGURATION_SUPPORTED"
+    },
+    "receiver_gain": {
+      "candidate": {
+        "scope": "all active channels",
+        "uniform_db": 15.7
+      },
+      "detail": "Numeric uniform_gain loads daq_rx_gain; set_if_gain replicates int(gain*10) across self.M channels. Heimdall gain=0 is a startup default.",
+      "evidence": [
+        "kraken_settings",
+        "kraken_ui",
+        "kraken_receiver",
+        "rtl_daq"
+      ],
+      "resolves_existing_lock": false,
+      "runtime_confirmed": false,
+      "status": "CONFIGURATION_SUPPORTED"
+    },
+    "recorder_implementation": {
+      "candidate": null,
+      "detail": "kraken_capture.py is a provenance wrapper, not the IQ writer. Actual writer source/binary/version/hash absent.",
+      "evidence": [],
+      "resolves_existing_lock": false,
+      "runtime_confirmed": false,
+      "status": "UNRESOLVED"
+    },
+    "recorder_output_conformance": {
+      "candidate": {
+        "future_v2_authorized": false,
+        "future_v2_conformance": null,
+        "historical_byte_order": "little",
+        "historical_dtype": "<c16"
+      },
+      "detail": "iq_channel.tofile(filename) writes native array bytes without a self-describing dtype. Historical numeric interpretation strongly supports little-endian complex128, but cannot prove future V2 writer conformance.",
+      "evidence": [
+        "historical_iq",
+        "kraken_processor"
+      ],
+      "resolves_existing_lock": false,
+      "runtime_confirmed": false,
+      "status": "PARTIALLY_SUPPORTED"
+    },
+    "recorder_trigger_buffer_rollover": {
+      "candidate": null,
+      "detail": "Trigger, buffering, pre/post-trigger, flush and file rollover behavior absent.",
+      "evidence": [],
+      "resolves_existing_lock": false,
+      "runtime_confirmed": false,
+      "status": "UNRESOLVED"
+    },
+    "reviewed_execution_commit": {
+      "candidate": null,
+      "detail": "Parent requires a reviewed runner commit before capture; no execution implementation is authorized here.",
+      "evidence": [],
+      "resolves_existing_lock": false,
+      "runtime_confirmed": false,
+      "status": "UNRESOLVED"
+    },
+    "rf_center_frequency_hz": {
+      "candidate": 433250000,
+      "detail": "center_freq 433.25 MHz multiplied by 10**6; distinct from VFO frequency 433868160 Hz. Heimdall 700000000 Hz is a startup default, not a V2 runtime value.",
+      "evidence": [
+        "kraken_settings",
+        "kraken_ui"
+      ],
+      "resolves_existing_lock": false,
+      "runtime_confirmed": false,
+      "status": "CONFIGURATION_SUPPORTED"
+    },
+    "rf_if_baseband_bandwidths": {
+      "candidate": {
+        "adc_rate_hz": 2400000,
+        "if_bandwidth_hz": null,
+        "physical_rf_tuner_bandwidth_hz": null,
+        "post_daq_rate_hz": 2400000,
+        "vfo_bandwidth_hz": 25000
+      },
+      "detail": "No explicit tuner bandwidth API call in rtl_daq.c. Sample rate and VFO bandwidth do not establish physical RF/IF bandwidth.",
+      "evidence": [
+        "kraken_settings",
+        "heimdall_config",
+        "rtl_daq"
+      ],
+      "resolves_existing_lock": false,
+      "runtime_confirmed": false,
+      "status": "PARTIALLY_SUPPORTED"
+    },
+    "scientific_channel_mapping": {
+      "candidate": null,
+      "detail": "VFO 0 to physical channel or combination mapping absent.",
+      "evidence": [],
+      "resolves_existing_lock": false,
+      "runtime_confirmed": false,
+      "status": "UNRESOLVED"
+    },
+    "source_inventory": {
+      "candidate": null,
+      "detail": "S1/S2 physical source identities/serials and batteries not locked.",
+      "evidence": [],
+      "resolves_existing_lock": false,
+      "runtime_confirmed": false,
+      "status": "UNRESOLVED"
+    },
+    "vga_baseband_gain": {
+      "candidate": null,
+      "detail": "Exact gain or evidence-supported non-applicability absent.",
+      "evidence": [],
+      "resolves_existing_lock": false,
+      "runtime_confirmed": false,
+      "status": "UNRESOLVED"
+    }
+  },
+  "authorizing_commit": null,
+  "base_commit": "77035ae9aca0fc35d8979cca5662020f396b3c84",
+  "branch": "codex/v2-acquisition-settings-recovery",
+  "candidate_selection_changed": false,
+  "classification_definitions": {
+    "CONFIGURATION_SUPPORTED": "Exact configuration/code supports a candidate only; not a runtime observation or lock resolution.",
+    "PARTIALLY_SUPPORTED": "Some configuration/historical evidence exists; essential conformance or inventory facts remain unresolved.",
+    "RUNTIME_CONFIRMED": "Requires direct runtime evidence; no setting has this classification.",
+    "UNRESOLVED": "No exact supporting evidence establishes this setting."
+  },
+  "decision": "V2_ACQUISITION_SETTINGS_RECOVERY_RECORDED_BLOCKED",
+  "execution_interface": null,
+  "external_evidence": {
+    "fir_decimate": {
+      "byte_identical_to_head": true,
+      "git_head": "1efc252e24501a6bd091699c4f22f140ee71d901",
+      "head_sha256": "a1b426183470a63b51442975666975d9cb46f97a5f7dba9a213a1ec021eb05fb",
+      "path": "/home/maciejduranczyk/heimdall_daq_fw/Firmware/_daq_core/fir_decimate.c",
+      "real_path": "/home/maciejduranczyk/krakensdr/heimdall_daq_fw/Firmware/_daq_core/fir_decimate.c",
+      "sha256": "a1b426183470a63b51442975666975d9cb46f97a5f7dba9a213a1ec021eb05fb",
+      "verification": "READ_ONLY_LOCAL_BYTES"
+    },
+    "heimdall_config": {
+      "byte_identical_to_head": true,
+      "git_head": "1efc252e24501a6bd091699c4f22f140ee71d901",
+      "head_sha256": "2eed4d16bbe497647437f56b726edb236c0439f0db4de9b9b0d7628aaa550e66",
+      "path": "/home/maciejduranczyk/heimdall_daq_fw/Firmware/daq_chain_config.ini",
+      "real_path": "/home/maciejduranczyk/krakensdr/heimdall_daq_fw/Firmware/daq_chain_config.ini",
+      "sha256": "2eed4d16bbe497647437f56b726edb236c0439f0db4de9b9b0d7628aaa550e66",
+      "verification": "READ_ONLY_LOCAL_BYTES"
+    },
+    "historical_iq": {
+      "path": "/home/maciejduranczyk/krakensdr_doa/_share/records/iq/19-Sep-2026_02h31m19s,IQ_433.868MHz,DOA_90.0.iq",
+      "real_path": "/home/maciejduranczyk/krakensdr_doa/_share/records/iq/19-Sep-2026_02h31m19s,IQ_433.868MHz,DOA_90.0.iq",
+      "sha256": "20561d440a122cd5f6faec2756d7979eed0d140de74760cb47fa2f691e362626",
+      "verification": "READ_ONLY_LOCAL_BYTES"
+    },
+    "kraken_processor": {
+      "byte_identical_to_head": false,
+      "git_head": "0686cac0d9e7bd61a7d929a0b48ad6f891d1d25e",
+      "head_sha256": "5d36bd9cf564a0f3935d5bea55ea99558062903adf491e4ddf0267fc38e37c60",
+      "path": "/home/maciejduranczyk/krakensdr_doa/_sdr/_signal_processing/kraken_sdr_signal_processor.py",
+      "real_path": "/home/maciejduranczyk/krakensdr_doa/_sdr/_signal_processing/kraken_sdr_signal_processor.py",
+      "sha256": "eb0187295ca0f7567a89cacf5146f0f6ee250ee0dbd122f32d054a0a802c8afb",
+      "verification": "READ_ONLY_LOCAL_BYTES"
+    },
+    "kraken_receiver": {
+      "byte_identical_to_head": true,
+      "git_head": "0686cac0d9e7bd61a7d929a0b48ad6f891d1d25e",
+      "head_sha256": "fce64aa94478b0e8cdab27093ebf92f0f835e1db232d20e1821f117840b590fb",
+      "path": "/home/maciejduranczyk/krakensdr_doa/_sdr/_receiver/kraken_sdr_receiver.py",
+      "real_path": "/home/maciejduranczyk/krakensdr_doa/_sdr/_receiver/kraken_sdr_receiver.py",
+      "sha256": "fce64aa94478b0e8cdab27093ebf92f0f835e1db232d20e1821f117840b590fb",
+      "verification": "READ_ONLY_LOCAL_BYTES"
+    },
+    "kraken_settings": {
+      "path": "/home/maciejduranczyk/krakensdr_doa/_share/settings.json",
+      "real_path": "/home/maciejduranczyk/krakensdr_doa/_share/settings.json",
+      "sha256": "fccb9eaddb10467ee04128686d50e5a8586276ae09cb631a83925c9343269b4a",
+      "verification": "READ_ONLY_LOCAL_BYTES"
+    },
+    "kraken_ui": {
+      "byte_identical_to_head": true,
+      "git_head": "0686cac0d9e7bd61a7d929a0b48ad6f891d1d25e",
+      "head_sha256": "02a1294198372811ca555a2f5b7d88d74a0507c71247e0e31ca1d63ceb9dfe15",
+      "path": "/home/maciejduranczyk/krakensdr_doa/_ui/_web_interface/kraken_web_interface.py",
+      "real_path": "/home/maciejduranczyk/krakensdr_doa/_ui/_web_interface/kraken_web_interface.py",
+      "sha256": "02a1294198372811ca555a2f5b7d88d74a0507c71247e0e31ca1d63ceb9dfe15",
+      "verification": "READ_ONLY_LOCAL_BYTES"
+    },
+    "kraken_variables": {
+      "byte_identical_to_head": true,
+      "git_head": "0686cac0d9e7bd61a7d929a0b48ad6f891d1d25e",
+      "head_sha256": "596b6fe006db307d4d34016eb24c8464103aef438eaa842597ba196c68201a5d",
+      "path": "/home/maciejduranczyk/krakensdr_doa/_ui/_web_interface/variables.py",
+      "real_path": "/home/maciejduranczyk/krakensdr_doa/_ui/_web_interface/variables.py",
+      "sha256": "596b6fe006db307d4d34016eb24c8464103aef438eaa842597ba196c68201a5d",
+      "verification": "READ_ONLY_LOCAL_BYTES"
+    },
+    "rtl_daq": {
+      "byte_identical_to_head": true,
+      "git_head": "1efc252e24501a6bd091699c4f22f140ee71d901",
+      "head_sha256": "793960e7c93d537187fcf8c26f1126c8efd27e4bac519a5fe2c66624694263eb",
+      "path": "/home/maciejduranczyk/heimdall_daq_fw/Firmware/_daq_core/rtl_daq.c",
+      "real_path": "/home/maciejduranczyk/krakensdr/heimdall_daq_fw/Firmware/_daq_core/rtl_daq.c",
+      "sha256": "793960e7c93d537187fcf8c26f1126c8efd27e4bac519a5fe2c66624694263eb",
+      "verification": "READ_ONLY_LOCAL_BYTES"
+    }
+  },
+  "format": "KRAKEN_V2_ACQUISITION_SETTINGS_RECOVERY_V1",
+  "heimdall_configuration": {
+    "adpis": {
+      "adpis_gains_init": "0,0,0,0,0",
+      "adpis_proc_size": "8192",
+      "en_adpis": "0"
+    },
+    "calibration": {
+      "amplitude_cal_mode": "channel_power",
+      "amplitude_tolerance": "2",
+      "cal_frame_burst_size": "10",
+      "cal_frame_interval": "687",
+      "cal_track_mode": "2",
+      "corr_size": "65536",
+      "en_gain_tune_init": "0",
+      "en_iq_cal": "1",
+      "gain_lock_interval": "0",
+      "iq_adjust_amplitude": "0,0,0,0",
+      "iq_adjust_source": "explicit-time-delay",
+      "iq_adjust_time_delay_ns": "0, 0, 0, 0",
+      "maximum_sync_fails": "10",
+      "phase_tolerance": "1",
+      "require_track_lock_intervention": "0",
+      "std_ch_ind": "0",
+      "unified_gain_control": "0"
+    },
+    "daq": {
+      "center_freq": "700000000",
+      "ctr_channel_serial_no": "1000",
+      "daq_buffer_size": "262144",
+      "en_noise_source_ctr": "1",
+      "gain": "0",
+      "log_level": "5",
+      "sample_rate": "2400000"
+    },
+    "data_interface": {
+      "out_data_iface_type": "shmem"
+    },
+    "hw": {
+      "en_bias_tee": "0,0,0,0,0",
+      "ioo_type": "0",
+      "name": "kraken5",
+      "num_ch": "5",
+      "unit_id": "0"
+    },
+    "meta": {
+      "config_name": "kraken_default",
+      "ini_version": "7"
+    },
+    "pre_processing": {
+      "cpi_size": "1048576",
+      "decimation_ratio": "1",
+      "en_filter_reset": "0",
+      "fir_relative_bandwidth": "1.0",
+      "fir_tap_size": "1",
+      "fir_window": "hann"
+    }
+  },
+  "historical_iq_interpretation": {
+    "<c16": {
+      "finite": 10923,
+      "maximum_magnitude_approx": 0.57967,
+      "median_magnitude_approx": 0.0030159,
+      "samples": 10923
+    },
+    "<c8": {
+      "finite": 21773,
+      "maximum_magnitude_approx": 3.39e+38,
+      "samples": 21846
+    },
+    "future_recorder_conformance": false,
+    "inference": "Strong support for historical little-endian complex128 only",
+    "source": "User-supplied historical numeric interpretation; file hash locally verified, no RF/scientific analysis performed"
+  },
+  "kraken_settings": {
+    "active_vfos": 1,
+    "center_freq": 433.25,
+    "dsp_decimation": 1,
+    "output_vfo": 0,
+    "uniform_gain": 15.7,
+    "vfo_bw_0": 25000,
+    "vfo_fir_order_factor_0": 2,
+    "vfo_freq_0": 433868160,
+    "vfo_iq_0": "True",
+    "vfo_squelch_0": -45,
+    "vfo_squelch_mode_0": "Manual"
+  },
+  "limitations": [
+    "All original NOT_ESTABLISHED lock settings remain blockers, including configuration-supported candidates; this overlay never rewrites the lock.",
+    "The full configuration snapshot conflict remains unresolved despite the current settings hash; no silent reconciliation of earlier bytes.",
+    "Separate LNA and VGA/baseband gains are not evidenced; no HackRF settings inheritance.",
+    "Dirty external repositories are evidence sources only, never reviewed V2 execution implementations.",
+    "No acquisition, hardware start, runtime measurement, scientific analysis, candidate-selection change or final READY transition."
+  ],
+  "lock_conflicts_retained": [
+    {
+      "detail": "Five exposed VFO values agree numerically; full settings bytes differ. No silent choice of unseen settings.",
+      "earlier_sha256": "8f7b52c0b0923cae1e9781878c743bdfd309cc4e52659c1c07815507e53574c9",
+      "field": "full_configuration_snapshot",
+      "later_sha256": "fccb9eaddb10467ee04128686d50e5a8586276ae09cb631a83925c9343269b4a",
+      "resolution": null,
+      "sources": [
+        "captures/ACQ-COMPLETE-V1-20260919-021641/manifest.json",
+        "captures/BETWEEN-DEVICE-REPL-V1-20260919-024341/manifest.json",
+        "captures/BETWEEN-DEVICE-V1-20260919-022809/manifest.json",
+        "captures/BETWEEN-DEVICE-V1-20260919-022917/manifest.json",
+        "captures/PIPELINE-TPMS-001-20260917-202651/manifest.json",
+        "captures/PIPELINE-TPMS-002-20260917-230551/manifest.json",
+        "captures/PIPELINE-TPMS-003-20260917-231616/manifest.json",
+        "captures/PIPELINE-TPMS-004-20260917-233423/manifest.json",
+        "captures/PIPELINE-TPMS-005-20260917-235439/manifest.json",
+        "captures/PIPELINE-TPMS-006-20260918-001713/manifest.json",
+        "captures/PIPELINE-TPMS-007-20260918-002700/manifest.json",
+        "captures/PIPELINE-TPMS-008-20260918-003900/manifest.json"
+      ]
+    }
+  ],
+  "protected_repository_sha256": {
+    "analysis/episode_component_tracking_v2_draft1.py": "a24a5617ca9f4129c6970fd0a9743f8b78610c58567e8a557f21dee2a055f66c",
+    "analysis/episode_component_tracking_v2_draft2_experiment.py": "73dc27741f3ad5fd710f94a8989a930bb731cd196e32ff2d000ee48e00b9d39a",
+    "analysis/episode_component_tracking_v2_draft2_full_matrix_exact.py": "5cb8ec7709e0cfe30c76626ef386d07f8e8ceb94b24257a47becc1a84e75f18b",
+    "analysis/validate_episode_component_tracking_v2_v2_acquisition_manifest.py": "a04197f0858f25b17e5b7f171b1d941ae891e1541f177cad9d5e6822cb6ceb7c",
+    "capture/group_episodes.py": "c14586d6304eca3ea906b320f43607ffe6a982929b6bdacd9adb71f973fe98e6",
+    "capture/kraken_capture.py": "bbee1eb37138b9b2d5eb4aa61006ea36d7ebc794b9293794a2754e86adc41970",
+    "captures/ACQ-COMPLETE-V1-20260919-021641/manifest.json": "a53e1236683321e5a22d12e26a9b7dda355b6dd153055eadcefb4c694494aad1",
+    "captures/BETWEEN-DEVICE-REPL-V1-20260919-024341/manifest.json": "190213fb854080b8c2a3fd80381b5f4130d1a26c749621a8f42c289ed7330004",
+    "captures/BETWEEN-DEVICE-V1-20260919-022809/manifest.json": "e92853d575266e3e0ac78606a77bc2663c7e75062b063506b26b750955dbc28d",
+    "captures/BETWEEN-DEVICE-V1-20260919-022917/manifest.json": "326850f488ebb670a17f2e51aba594eee20ebfd3977f0926b89eec56de4c1e00",
+    "captures/PIPELINE-TPMS-001-20260917-202651/manifest.json": "e9d1531bbee9960023037c6d4b0592dcb9552422d50a8deae6ef9eafb7992498",
+    "captures/PIPELINE-TPMS-002-20260917-230551/manifest.json": "0994ba3c389b57d5713ddde06f4a2b0c19eebe400d5b3a5485aa7ab715e4a12b",
+    "captures/PIPELINE-TPMS-003-20260917-231616/manifest.json": "e281bb0f8b1b2c5503b891cef5e67f7d52075f428c3f6aebaae2e1a0d803d966",
+    "captures/PIPELINE-TPMS-004-20260917-233423/manifest.json": "b8e80226adb18fcde55ef30313d87266c9c7649953ed4f085f4a0c9aa03da80a",
+    "captures/PIPELINE-TPMS-005-20260917-235439/manifest.json": "3f1e64587c281f0e71fa13a286026b6c93e41f32fb15ae5bf4025f51f9edc90b",
+    "captures/PIPELINE-TPMS-006-20260918-001713/manifest.json": "8b47e6cb1d8dc979c5b440159bb9e3f7ad8da8568dd76c7d8769d9fdd5ca1db6",
+    "captures/PIPELINE-TPMS-007-20260918-002700/manifest.json": "ffc4eab54b7b89152fd4b78efe58a886064b61b4a07afe0944be654c62dda1de",
+    "captures/PIPELINE-TPMS-008-20260918-003900/manifest.json": "afd05d8ba49e316b488dd34ad977919e13f0fa8dd691d50c1070dbfa76f65422",
+    "captures/hackrf/ENGINEERING-PROVENANCE-001/manifest.json": "49a3fcd9f6ca617afbca922fa639bbe728d9118b006ad1275dff6297f34361ac",
+    "captures/hackrf/ENGINEERING-PROVENANCE-002/manifest.json": "e8b1a7ce538a89e1382180b6bffc047ba75856ed121736f8d231e561ee041f07",
+    "captures/hackrf/SYNTHETIC-CONTROLLED-002/manifest.json": "78ce969128e129be4e657579a67f3a187458365e9681de4aa3284e6707bc9cc3",
+    "captures/hackrf/SYNTHETIC-CONTROLLED-003/manifest.json": "64d8635251636ee609d3402a3ec6343656a422ad1b7b2dc04d1a3615a3bd1d7e",
+    "docs/episode-component-tracking-v2-draft1.md": "017a4bf9dde31c745ba9765827378e8dd9c6e6af175bd0cddf594b22f08ac004",
+    "docs/episode-component-tracking-v2-draft2-experiment.md": "3923a1f009a0c798ed97bbfdf8158b36c2673a88b0d687a67e3b921bd352e026",
+    "docs/episode-component-tracking-v2-stage37-computational-review.md": "6c17bbeaa0ee16f4fb4c3cff396e8a507b95f094ac94da2f450bdc0b896eef88",
+    "docs/episode-component-tracking-v2-stage37-configuration-selection.md": "20ec4954eac2474d06a607d641b1725c19fca64f08b2727b2b3cfee163d9247c",
+    "docs/episode-component-tracking-v2-stage37-provenance-repair.md": "f01f7aebafa39aa9c387d6bb2e02f8184c207de685ac8454a04d8471fe4c67bc",
+    "docs/episode-component-tracking-v2-stage37-scientific-review.md": "0d1c3275bc96e71f26638b50cf8f4651138a7c6d9282bccfe216ef15703ae28e",
+    "docs/episode-component-tracking-v2-v2-acquisition-lock.md": "97e3fee8e60395e9fcae613a9f837c9e9864190fad526f3430fd8809fa87bdf4",
+    "docs/episode-component-tracking-v2-v2-discrimination-preregistration.md": "f28d4d168a2475c6a755b21c521270e8f2de269a12e67227f24116137321b7c7",
+    "docs/hackrf-capture-provenance-v1.md": "515fadeaf131b913b55a6fdd82594b83d6aa226340aff23a7e55f58e8d305714",
+    "docs/kraken-episode-grouping-v1.md": "8d04b9c93e1df055738831bdda3ad4ea276d91a2f5da39e7935294a4b7491aca",
+    "results/episode-component-tracking-v2-draft2-stage36-files.sha256": "3f2794459be61714e7d5b1859ca919e16882f71fe1794db8b2905089006d92ba",
+    "results/episode-component-tracking-v2-stage37-computational-review.json": "bbaa1560539e54e98bb49cc0665e0c010641f7d81a7d9a7822ee01b6f9e83ceb",
+    "results/episode-component-tracking-v2-stage37-configuration-selection.json": "d501ea1ae51fdab0585ca1c5b42988583ea2f20c6047044446ec5012df53559a",
+    "results/episode-component-tracking-v2-stage37-provenance-repair-v1.json": "085babba93c3ba981f60511d788ae4591f0fdcb2fb020b30aacb365f86ecfd86",
+    "results/episode-component-tracking-v2-stage37-scientific-review.json": "9153576d2d580eb918dfa4e306b493e91b2d9841f484728b6efa80be4f8a1c44",
+    "results/episode-component-tracking-v2-v2-acquisition-lock.json": "2225cb87cb7f7802a8fb414c4d75133f03639a6d8d8cc742a02baa4977a07ce9",
+    "results/episode-component-tracking-v2-v2-acquisition-manifest-schema-v1.json": "9139863108894fa5a37db556369940c3f4d922185705d434494584882b237a70",
+    "results/episode-component-tracking-v2-v2-acquisition-provenance-v1.json": "1385f1e77b13ca0384821bae8531349cea1507c87e818bf5c23f68c8e3396be4",
+    "results/episode-component-tracking-v2-v2-discrimination-preregistration.json": "dd9a1694c5d0bc7a47ad2f0bfa917816cc66325f5325e4718b95a7bb9780a7b6",
+    "results/episode-component-tracking-v2-v2-preregistration-provenance-repair-v1.json": "e16d970dcd5093cb75497cd7527292453ff27fb64afdf3d287b367c907fcec63",
+    "tests/test_episode_component_tracking_v2_stage37_computational_review.py": "a71bd2f35509efc94d47062747d6e944536ee30813094515d464d932f1aeba86",
+    "tests/test_episode_component_tracking_v2_stage37_configuration_selection.py": "e9ff6f368285b92f278a70c9c3534faa1d950dd1e4607eda17c3f56767aa9731",
+    "tests/test_episode_component_tracking_v2_stage37_scientific_review.py": "fa04f7ad6c5e0476c50e58937c0c8097b22f4467dd9d6d4ce37c6735e434bbc3",
+    "tests/test_episode_component_tracking_v2_v2_acquisition_lock.py": "857908b6df4d4bb9b0226adacbc2e347ff30b864f54c146887443a423c1e1541"
+  },
+  "retained_lock_blockers": [
+    "activation_procedure",
+    "agc_state",
+    "antenna_cable_inventory",
+    "calibration_synchronization",
+    "clock_source",
+    "decimation_channelizer",
+    "dropped_sample_error_instrumentation",
+    "environment_measurement_procedure",
+    "exit_status_instrumentation",
+    "frontend_sample_rate_hz",
+    "full_configuration_snapshot",
+    "geometry_location_orientation",
+    "hardware_inventory",
+    "host_software_versions",
+    "lna_gain",
+    "partial_file_detection",
+    "raw_naming_convention",
+    "receiver_channel_count",
+    "receiver_gain",
+    "recorder_implementation",
+    "recorder_output_conformance",
+    "recorder_trigger_buffer_rollover",
+    "reviewed_execution_commit",
+    "rf_center_frequency_hz",
+    "rf_if_baseband_bandwidths",
+    "scientific_channel_mapping",
+    "source_inventory",
+    "vga_baseband_gain"
+  ],
+  "runtime_log_evidence": {
+    "archived_matches_found": false,
+    "limitation": "No archived matches does not prove successful configuration, sample continuity, calibration, synchronization or any hardware state.",
+    "queries": [
+      "Exact sample rate",
+      "Exact center frequency",
+      "Active antenna channels",
+      "ADC sampling frequency",
+      "IQ sampling frequency",
+      "IF gain"
+    ],
+    "runtime_confirmation_available": false,
+    "runtime_measurements": [],
+    "source": "User-supplied prior read-only search result; no new runtime observation"
+  },
+  "scientific_execution": false,
+  "software_provenance": {
+    "heimdall": {
+      "config_byte_identical_to_head": true,
+      "dirty": true,
+      "head": "1efc252e24501a6bd091699c4f22f140ee71d901",
+      "reviewed_v2_execution_implementation": false
+    },
+    "kraken": {
+      "dirty": true,
+      "head": "0686cac0d9e7bd61a7d929a0b48ad6f891d1d25e",
+      "local_changes": "Debug prints and Hardsignal JSON output in signal processor.",
+      "reviewed_v2_execution_implementation": false,
+      "version": "1.8.1"
+    }
+  },
+  "startup_defaults": {
+    "center_freq_hz": 700000000,
+    "gain_db": 0,
+    "interpretation": "Startup/default values; Kraken UI subsequently overrides tune/gain through control code. Not observed V2 runtime values."
+  },
+  "state": "BLOCKED_PENDING_ACQUISITION_SETTINGS",
+  "unresolved_or_partial_settings": [
+    "activation_procedure",
+    "antenna_cable_inventory",
+    "calibration_synchronization",
+    "clock_source",
+    "dropped_sample_error_instrumentation",
+    "environment_measurement_procedure",
+    "exit_status_instrumentation",
+    "full_configuration_snapshot",
+    "geometry_location_orientation",
+    "hardware_inventory",
+    "host_software_versions",
+    "lna_gain",
+    "partial_file_detection",
+    "raw_naming_convention",
+    "recorder_implementation",
+    "recorder_output_conformance",
+    "recorder_trigger_buffer_rollover",
+    "reviewed_execution_commit",
+    "rf_if_baseband_bandwidths",
+    "scientific_channel_mapping",
+    "source_inventory",
+    "vga_baseband_gain"
+  ],
+  "version": 1
+}

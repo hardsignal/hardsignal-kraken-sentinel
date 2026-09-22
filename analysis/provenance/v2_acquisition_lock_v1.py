@@ -9,6 +9,8 @@ import json
 from pathlib import Path
 import subprocess
 
+from provenance import v2_acquisition_settings_recovery_v1 as recovery
+
 PARENT = 'c98ad53a6d278140c98ecbe045f2462c24f5852f'
 ACQUISITION = 'fed6a58096804859319b11b125f490201ffbb56d'
 BINDING = 'results/episode-component-tracking-v2-v2-acquisition-provenance-v1.json'
@@ -38,7 +40,7 @@ ADDITIONS = {
     'tests/test_episode_component_tracking_v2_draft2_full_matrix_acquisition_provenance.py',
 }
 REPAIR_PATHS = TRANSITIONS | ADDITIONS | {BINDING}
-AUTHORIZED_PATHS = set(ACQUISITION_SHA256) | REPAIR_PATHS
+AUTHORIZED_PATHS = set(ACQUISITION_SHA256) | REPAIR_PATHS | recovery.PATHS
 DECISIONS = {
     'acquisition': 'V2_ACQUISITION_LOCK_BLOCKED',
     'preregistration': 'V2_DISCRIMINATION_EXPERIMENT_PREREGISTERED',
@@ -62,6 +64,7 @@ def require(condition, label):
 def validate(root):
     """Verify exact checkpoint additions, all transitions and closed current scope."""
     root = Path(root)
+    recovery_manifest = recovery.validate(root)
     for earlier, later in ((PARENT, ACQUISITION), (ACQUISITION, 'HEAD')):
         subprocess.run(['git', 'merge-base', '--is-ancestor', earlier, later],
                        cwd=root, check=True, capture_output=True)
@@ -94,12 +97,16 @@ def validate(root):
         if path in TRANSITIONS:
             require(manifest['historical_sha256'][path] == expected, 'historical acquisition ' + path)
     for path, expected in (ACQUISITION_SHA256 | manifest['current_sha256']).items():
-        require(sha((root / path).read_bytes()) == expected, path)
+        current_expected = recovery_manifest['current_sha256'][path] if path == recovery.LEGACY else expected
+        if path == recovery.LEGACY:
+            require(expected == recovery.LEGACY_SHA256, 'historical acquisition helper binding')
+        require(sha((root / path).read_bytes()) == current_expected, path)
         if head != ACQUISITION:
-            require(sha(git(root, 'show', 'HEAD:' + path)) == expected, 'committed ' + path)
+            committed_expected = expected if head == recovery.BASE else current_expected
+            require(sha(git(root, 'show', 'HEAD:' + path)) == committed_expected, 'committed ' + path)
     changed = git(root, 'diff', '--name-only', '-z', ACQUISITION)
     untracked = git(root, 'ls-files', '--others', '--exclude-standard', '-z')
-    unexpected = set((changed + untracked).decode().split('\0')) - {''} - REPAIR_PATHS
+    unexpected = set((changed + untracked).decode().split('\0')) - {''} - REPAIR_PATHS - recovery.PATHS
     if unexpected:
         raise ValueError('unrecognized descendant paths: ' + repr(sorted(unexpected)))
     for suffix, decision in (
