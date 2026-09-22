@@ -4,6 +4,8 @@ import json
 from pathlib import Path
 import subprocess
 
+from provenance import v2_execution_contract_v1 as execution
+
 BASE = '77035ae9aca0fc35d8979cca5662020f396b3c84'
 STEM = 'episode-component-tracking-v2-v2-acquisition-settings-recovery-v1'
 DOC = 'docs/' + STEM + '.md'
@@ -13,7 +15,8 @@ LEGACY = 'analysis/provenance/v2_acquisition_lock_v1.py'
 HELPER = 'analysis/provenance/v2_acquisition_settings_recovery_v1.py'
 BINDING = 'results/episode-component-tracking-v2-v2-acquisition-settings-recovery-provenance-v1.json'
 RECOVERY_PATHS = {DOC, DATA, TEST}
-PATHS = RECOVERY_PATHS | {LEGACY, HELPER, BINDING}
+HISTORICAL_PATHS = RECOVERY_PATHS | {LEGACY, HELPER, BINDING}
+PATHS = HISTORICAL_PATHS | execution.PATHS
 ORIGINAL_RECOVERY_SHA256 = {
     DOC: 'c05980aa743a24168eee03eca42b4dd868f24cf45c14a00e29075eec70ce0f6a',
     DATA: '5563adc955f0a6037e8264c8403c468e80eda3150a15c6f60693d6c3696169fd',
@@ -44,6 +47,7 @@ def require(condition, label):
 def validate(root):
     """Permit exact preparation at BASE; subsequently require committed bytes."""
     root = Path(root)
+    execution_manifest = execution.validate(root)
     subprocess.run(['git', 'merge-base', '--is-ancestor', BASE, 'HEAD'],
                    cwd=root, check=True, capture_output=True)
     head = git(root, 'rev-parse', 'HEAD').decode().strip()
@@ -55,22 +59,26 @@ def validate(root):
     require(manifest['format'] == 'KRAKEN_V2_ACQUISITION_SETTINGS_RECOVERY_PROVENANCE_V1'
         and manifest['parent_checkpoint'] == BASE
         and manifest['recovery_paths'] == sorted(RECOVERY_PATHS)
-        and manifest['integration_paths'] == sorted(PATHS - RECOVERY_PATHS)
+        and manifest['integration_paths'] == sorted(HISTORICAL_PATHS - RECOVERY_PATHS)
         and manifest['original_recovery_sha256'] == ORIGINAL_RECOVERY_SHA256
         and manifest['historical_sha256'] == {LEGACY: LEGACY_SHA256}
         and manifest['decisions'] == DECISIONS
         and manifest['test_transition'] == 'Only descendant-scope validation and additional provenance regressions; original test was uncommitted, not present at BASE.',
         'recovery manifest metadata')
-    require(set(manifest['current_sha256']) == PATHS - {BINDING}, 'exact current path inventory')
+    require(set(manifest['current_sha256']) == HISTORICAL_PATHS - {BINDING}, 'exact current path inventory')
     require(sha(git(root, 'show', BASE + ':' + LEGACY)) == LEGACY_SHA256,
             'historical acquisition helper')
     for path in (DOC, DATA):
         require(manifest['current_sha256'][path] == ORIGINAL_RECOVERY_SHA256[path],
                 'immutable recovery evidence ' + path)
     for path, expected in manifest['current_sha256'].items():
-        require(sha((root / path).read_bytes()) == expected, path)
+        current_expected = execution_manifest['sha256'][path] if path == HELPER else expected
+        if path == HELPER:
+            require(expected == execution_manifest['historical_helper_sha256'], 'historical recovery helper')
+        require(sha((root / path).read_bytes()) == current_expected, path)
         if head != BASE:
-            require(sha(git(root, 'show', 'HEAD:' + path)) == expected, 'committed ' + path)
+            committed_expected = expected if head == execution.BASE else current_expected
+            require(sha(git(root, 'show', 'HEAD:' + path)) == committed_expected, 'committed ' + path)
     if head != BASE:
         require(raw == git(root, 'show', 'HEAD:' + BINDING), 'committed recovery manifest')
     changes = git(root, 'diff', '--name-status', BASE).decode().splitlines()

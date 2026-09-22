@@ -1,0 +1,651 @@
+{
+  "acquisition_authorized": false,
+  "activation_procedure": "UNRESOLVED; operator event only; no transmitter",
+  "base_commit": "591640798be56d2ee3a862d963e11d35d38890da",
+  "clock_evidence": {
+    "last_offset_s": -0.000419191,
+    "ntp_synchronized": true,
+    "reference": "paris.time.system76.com",
+    "reported_resolution_s": 1e-09,
+    "resolution_is_accuracy": false,
+    "rms_offset_s": 0.000654378,
+    "root_dispersion_s": 0.003540864,
+    "rtc": "UTC",
+    "service": "chrony",
+    "stratum": 3,
+    "system_offset_s": 2.553e-05,
+    "timezone": "Europe/London"
+  },
+  "comparison": {
+    "A": "grid_sigma5 / 350 Hz / connected",
+    "B": "grid_sigma10 / 350 Hz / connected"
+  },
+  "decision": "V2_ACQUISITION_EXECUTION_CONTRACT_REVIEWED_BLOCKED",
+  "external_files": {
+    "daq_start_sm.sh": {
+      "path": "/home/maciejduranczyk/heimdall_daq_fw/Firmware/daq_start_sm.sh",
+      "sha256": "107baffa19185bb77960d6542820dbe501e647c86324c4900876e5b161eabc67"
+    },
+    "fir_decimate": {
+      "path": "/home/maciejduranczyk/heimdall_daq_fw/Firmware/_daq_core/fir_decimate.c",
+      "sha256": "a1b426183470a63b51442975666975d9cb46f97a5f7dba9a213a1ec021eb05fb"
+    },
+    "heimdall_config": {
+      "path": "/home/maciejduranczyk/heimdall_daq_fw/Firmware/daq_chain_config.ini",
+      "sha256": "2eed4d16bbe497647437f56b726edb236c0439f0db4de9b9b0d7628aaa550e66"
+    },
+    "kraken_processor": {
+      "path": "/home/maciejduranczyk/krakensdr_doa/_sdr/_signal_processing/kraken_sdr_signal_processor.py",
+      "sha256": "eb0187295ca0f7567a89cacf5146f0f6ee250ee0dbd122f32d054a0a802c8afb"
+    },
+    "kraken_receiver": {
+      "path": "/home/maciejduranczyk/krakensdr_doa/_sdr/_receiver/kraken_sdr_receiver.py",
+      "sha256": "fce64aa94478b0e8cdab27093ebf92f0f835e1db232d20e1821f117840b590fb"
+    },
+    "kraken_settings": {
+      "path": "/home/maciejduranczyk/krakensdr_doa/_share/settings.json",
+      "sha256": "fccb9eaddb10467ee04128686d50e5a8586276ae09cb631a83925c9343269b4a"
+    },
+    "kraken_ui": {
+      "path": "/home/maciejduranczyk/krakensdr_doa/_ui/_web_interface/kraken_web_interface.py",
+      "sha256": "02a1294198372811ca555a2f5b7d88d74a0507c71247e0e31ca1d63ceb9dfe15"
+    },
+    "kraken_variables": {
+      "path": "/home/maciejduranczyk/krakensdr_doa/_ui/_web_interface/variables.py",
+      "sha256": "596b6fe006db307d4d34016eb24c8464103aef438eaa842597ba196c68201a5d"
+    },
+    "rebuffer.c": {
+      "path": "/home/maciejduranczyk/heimdall_daq_fw/Firmware/_daq_core/rebuffer.c",
+      "sha256": "64a9be24f31c5114d23edee55dd417a011ae3cd109d80331be839180936d0868"
+    },
+    "rtl_daq": {
+      "path": "/home/maciejduranczyk/heimdall_daq_fw/Firmware/_daq_core/rtl_daq.c",
+      "sha256": "793960e7c93d537187fcf8c26f1126c8efd27e4bac519a5fe2c66624694263eb"
+    },
+    "sh_mem_util.c": {
+      "path": "/home/maciejduranczyk/heimdall_daq_fw/Firmware/_daq_core/sh_mem_util.c",
+      "sha256": "d416be922a9b222746d03645a0a0272fd538f45a4e2483ccee9098bd5f2b16bf"
+    },
+    "shmemIface.py": {
+      "path": "/home/maciejduranczyk/heimdall_daq_fw/Firmware/_daq_core/shmemIface.py",
+      "sha256": "545314925de12c670e1dda6cf265612f37b250b7bde243e852f0f213bd70bacc"
+    }
+  },
+  "external_repositories": {
+    "heimdall": {
+      "head": "1efc252e24501a6bd091699c4f22f140ee71d901",
+      "path": "/home/maciejduranczyk/heimdall_daq_fw",
+      "tracked_diff_sha256": "27e96bf7a00d9cb8377fd7cfdab27e93946b93dc1b795cdf859df9906fbfedaa"
+    },
+    "kraken": {
+      "head": "0686cac0d9e7bd61a7d929a0b48ad6f891d1d25e",
+      "path": "/home/maciejduranczyk/krakensdr_doa",
+      "tracked_diff_sha256": "7fef45f8adb5194184d267dda0a785c89fde3a3dadd7bfe6574b79dee5cbeb61"
+    }
+  },
+  "format": "KRAKEN_V2_EXECUTION_CONTRACT_V1",
+  "frozen": {
+    "activation_offset_seconds": 5,
+    "adaptive_extension": false,
+    "dtype": "<c16",
+    "duration_seconds": 180,
+    "expected_bytes": 72000000,
+    "expected_samples": 4500000,
+    "iq_enabled": true,
+    "manual_squelch": -45,
+    "minimum_spacing_seconds": 60,
+    "pretrigger_samples": 0,
+    "rollover": false,
+    "sample_rate_hz": 25000,
+    "slot_seconds": 30,
+    "vfo_bandwidth_hz": 25000,
+    "vfo_frequency_hz": 433868160,
+    "vfo_index": 0
+  },
+  "future_snapshot_contract": {
+    "policy": "Must be acquired at session/capture boundaries by future reviewed adapter; external_snapshot supplies pinned source/configuration portion. No current hardware adapter or scientific manifest producer.",
+    "required": [
+      "external_files_bytes_and_hashes",
+      "external_repo_heads_and_tracked_diffs",
+      "runner_commit_and_hash",
+      "host_software_snapshot",
+      "receiver_serial_mapping",
+      "boot_id",
+      "clock_status",
+      "chrony_snapshot_or_UNAVAILABLE",
+      "settings_at_start",
+      "settings_at_finish"
+    ]
+  },
+  "hardware_conformance": false,
+  "host_evidence": {
+    "host": "Dell XPS 8960",
+    "kernel": "7.0.11-76070011-generic",
+    "librtlsdr2": "2.0.1-2build1",
+    "libusb": "1.0.27",
+    "numba": "0.56.4",
+    "numpy": "1.23.5",
+    "os": "Pop!_OS 24.04 LTS",
+    "pip_freeze_sorted_sha256": "b5b8c6c505762f3df15c6136581a73609ee7797e04581ae3329ebc0295627985",
+    "python": "3.9.7",
+    "rtl_sdr": "2.0.1-2build1",
+    "scipy": "1.9.3",
+    "usb_mbps": 480
+  },
+  "partial": [
+    "recorder_implementation",
+    "recorder_output_conformance",
+    "dropped_sample_error_instrumentation",
+    "full_configuration_snapshot",
+    "clock_source",
+    "host_software_versions",
+    "hardware_inventory",
+    "reviewed_execution_commit"
+  ],
+  "receiver_serials": [
+    "1000",
+    "1001",
+    "1002",
+    "1003",
+    "1004"
+  ],
+  "rehearsal_manifest_schema": {
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "additionalProperties": false,
+    "allOf": [
+      {
+        "else": {
+          "properties": {
+            "exit_code": {
+              "minimum": 1
+            },
+            "raw": {
+              "type": "null"
+            }
+          }
+        },
+        "if": {
+          "properties": {
+            "status": {
+              "const": "COMPLETE"
+            }
+          }
+        },
+        "then": {
+          "properties": {
+            "events": {
+              "minItems": 6
+            },
+            "exit_code": {
+              "const": 0
+            },
+            "failure": {
+              "type": "null"
+            },
+            "raw": {
+              "type": "object"
+            },
+            "samples": {
+              "const": 4500000
+            }
+          }
+        }
+      }
+    ],
+    "properties": {
+      "contract_sha256": {
+        "pattern": "^[0-9a-f]{64}$",
+        "type": "string"
+      },
+      "counters": {
+        "additionalProperties": false,
+        "properties": {
+          "dropped_buffers": {
+            "oneOf": [
+              {
+                "minimum": 0,
+                "type": "integer"
+              },
+              {
+                "enum": [
+                  "UNKNOWN",
+                  "UNAVAILABLE"
+                ]
+              }
+            ]
+          },
+          "dropped_frames": {
+            "oneOf": [
+              {
+                "minimum": 0,
+                "type": "integer"
+              },
+              {
+                "enum": [
+                  "UNKNOWN",
+                  "UNAVAILABLE"
+                ]
+              }
+            ]
+          },
+          "input_overflow": {
+            "oneOf": [
+              {
+                "minimum": 0,
+                "type": "integer"
+              },
+              {
+                "enum": [
+                  "UNKNOWN",
+                  "UNAVAILABLE"
+                ]
+              }
+            ]
+          },
+          "input_underrun": {
+            "oneOf": [
+              {
+                "minimum": 0,
+                "type": "integer"
+              },
+              {
+                "enum": [
+                  "UNKNOWN",
+                  "UNAVAILABLE"
+                ]
+              }
+            ]
+          },
+          "non_finite_samples": {
+            "oneOf": [
+              {
+                "minimum": 0,
+                "type": "integer"
+              },
+              {
+                "enum": [
+                  "UNKNOWN",
+                  "UNAVAILABLE"
+                ]
+              }
+            ]
+          },
+          "sample_count_mismatch": {
+            "oneOf": [
+              {
+                "minimum": 0,
+                "type": "integer"
+              },
+              {
+                "enum": [
+                  "UNKNOWN",
+                  "UNAVAILABLE"
+                ]
+              }
+            ]
+          },
+          "source_reader_errors": {
+            "oneOf": [
+              {
+                "minimum": 0,
+                "type": "integer"
+              },
+              {
+                "enum": [
+                  "UNKNOWN",
+                  "UNAVAILABLE"
+                ]
+              }
+            ]
+          },
+          "timing_overrun": {
+            "oneOf": [
+              {
+                "minimum": 0,
+                "type": "integer"
+              },
+              {
+                "enum": [
+                  "UNKNOWN",
+                  "UNAVAILABLE"
+                ]
+              }
+            ]
+          },
+          "unexpected_process_exit": {
+            "oneOf": [
+              {
+                "minimum": 0,
+                "type": "integer"
+              },
+              {
+                "enum": [
+                  "UNKNOWN",
+                  "UNAVAILABLE"
+                ]
+              }
+            ]
+          },
+          "writer_errors": {
+            "oneOf": [
+              {
+                "minimum": 0,
+                "type": "integer"
+              },
+              {
+                "enum": [
+                  "UNKNOWN",
+                  "UNAVAILABLE"
+                ]
+              }
+            ]
+          }
+        },
+        "required": [
+          "input_underrun",
+          "input_overflow",
+          "dropped_buffers",
+          "dropped_frames",
+          "source_reader_errors",
+          "writer_errors",
+          "sample_count_mismatch",
+          "non_finite_samples",
+          "timing_overrun",
+          "unexpected_process_exit"
+        ],
+        "type": "object"
+      },
+      "dtype": {
+        "const": "<c16"
+      },
+      "ended_monotonic_ns": {
+        "minimum": 0,
+        "type": "integer"
+      },
+      "ended_realtime_ns": {
+        "minimum": 0,
+        "type": "integer"
+      },
+      "events": {
+        "items": {
+          "additionalProperties": false,
+          "properties": {
+            "actual_monotonic_ns": {
+              "minimum": 0,
+              "type": "integer"
+            },
+            "actual_realtime_ns": {
+              "minimum": 0,
+              "type": "integer"
+            },
+            "lateness_ns": {
+              "minimum": 0,
+              "type": "integer"
+            },
+            "ordinal": {
+              "minimum": 0,
+              "type": "integer"
+            },
+            "scheduled_monotonic_ns": {
+              "minimum": 0,
+              "type": "integer"
+            }
+          },
+          "required": [
+            "ordinal",
+            "scheduled_monotonic_ns",
+            "actual_monotonic_ns",
+            "actual_realtime_ns",
+            "lateness_ns"
+          ],
+          "type": "object"
+        },
+        "maxItems": 6,
+        "type": "array"
+      },
+      "exit_code": {
+        "minimum": 0,
+        "type": "integer"
+      },
+      "failure": {
+        "oneOf": [
+          {
+            "type": "null"
+          },
+          {
+            "additionalProperties": false,
+            "properties": {
+              "reason": {
+                "type": "string"
+              },
+              "type": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "type",
+              "reason"
+            ],
+            "type": "object"
+          }
+        ]
+      },
+      "format": {
+        "const": "V2_RECORDER_REHEARSAL_V1"
+      },
+      "partial_path": {
+        "pattern": "\\.iq\\.partial$",
+        "type": "string"
+      },
+      "raw": {
+        "oneOf": [
+          {
+            "type": "null"
+          },
+          {
+            "additionalProperties": false,
+            "properties": {
+              "path": {
+                "pattern": "^ECT-V2__.+\\.iq$",
+                "type": "string"
+              },
+              "sha256": {
+                "pattern": "^[0-9a-f]{64}$",
+                "type": "string"
+              },
+              "size_bytes": {
+                "const": 72000000
+              }
+            },
+            "required": [
+              "path",
+              "size_bytes",
+              "sha256"
+            ],
+            "type": "object"
+          }
+        ]
+      },
+      "runner_sha256": {
+        "pattern": "^[0-9a-f]{64}$",
+        "type": "string"
+      },
+      "sample_rate_hz": {
+        "const": 25000
+      },
+      "samples": {
+        "minimum": 0,
+        "type": "integer"
+      },
+      "scientific_eligible": {
+        "const": false
+      },
+      "started_monotonic_ns": {
+        "minimum": 0,
+        "type": "integer"
+      },
+      "started_realtime_ns": {
+        "minimum": 0,
+        "type": "integer"
+      },
+      "status": {
+        "enum": [
+          "COMPLETE",
+          "FAILED",
+          "ABORTED",
+          "INCOMPLETE"
+        ]
+      },
+      "synthetic": {
+        "const": true
+      }
+    },
+    "required": [
+      "format",
+      "status",
+      "synthetic",
+      "scientific_eligible",
+      "exit_code",
+      "failure",
+      "raw",
+      "partial_path",
+      "samples",
+      "dtype",
+      "sample_rate_hz",
+      "events",
+      "counters",
+      "contract_sha256",
+      "runner_sha256",
+      "started_monotonic_ns",
+      "ended_monotonic_ns",
+      "started_realtime_ns",
+      "ended_realtime_ns"
+    ],
+    "type": "object"
+  },
+  "retained_lock_blockers": [
+    "activation_procedure",
+    "agc_state",
+    "antenna_cable_inventory",
+    "calibration_synchronization",
+    "clock_source",
+    "decimation_channelizer",
+    "dropped_sample_error_instrumentation",
+    "environment_measurement_procedure",
+    "exit_status_instrumentation",
+    "frontend_sample_rate_hz",
+    "full_configuration_snapshot",
+    "geometry_location_orientation",
+    "hardware_inventory",
+    "host_software_versions",
+    "lna_gain",
+    "partial_file_detection",
+    "raw_naming_convention",
+    "receiver_channel_count",
+    "receiver_gain",
+    "recorder_implementation",
+    "recorder_output_conformance",
+    "recorder_trigger_buffer_rollover",
+    "reviewed_execution_commit",
+    "rf_center_frequency_hz",
+    "rf_if_baseband_bandwidths",
+    "scientific_channel_mapping",
+    "source_inventory",
+    "vga_baseband_gain"
+  ],
+  "review_resolved": [
+    "raw_naming_convention",
+    "partial_file_detection",
+    "exit_status_instrumentation",
+    "recorder_trigger_buffer_rollover"
+  ],
+  "scientific_channel_mapping": {
+    "array_axis": 0,
+    "daq_source_assignment": "serial = 1000 + i",
+    "index": 1,
+    "meaning": "Second receiver row after channelization; not VFO index, not beamformed combination",
+    "physical_antenna_mapping": null,
+    "status": "BLOCKED"
+  },
+  "scientific_execution": false,
+  "selected_values": {
+    "heimdall": {
+      "adpis": {
+        "adpis_gains_init": "0,0,0,0,0",
+        "adpis_proc_size": "8192",
+        "en_adpis": "0"
+      },
+      "calibration": {
+        "amplitude_cal_mode": "channel_power",
+        "amplitude_tolerance": "2",
+        "cal_frame_burst_size": "10",
+        "cal_frame_interval": "687",
+        "cal_track_mode": "2",
+        "corr_size": "65536",
+        "en_gain_tune_init": "0",
+        "en_iq_cal": "1",
+        "gain_lock_interval": "0",
+        "iq_adjust_amplitude": "0,0,0,0",
+        "iq_adjust_source": "explicit-time-delay",
+        "iq_adjust_time_delay_ns": "0, 0, 0, 0",
+        "maximum_sync_fails": "10",
+        "phase_tolerance": "1",
+        "require_track_lock_intervention": "0",
+        "std_ch_ind": "0",
+        "unified_gain_control": "0"
+      },
+      "daq": {
+        "center_freq": "700000000",
+        "ctr_channel_serial_no": "1000",
+        "daq_buffer_size": "262144",
+        "en_noise_source_ctr": "1",
+        "gain": "0",
+        "log_level": "5",
+        "sample_rate": "2400000"
+      },
+      "data_interface": {
+        "out_data_iface_type": "shmem"
+      },
+      "hw": {
+        "en_bias_tee": "0,0,0,0,0",
+        "ioo_type": "0",
+        "name": "kraken5",
+        "num_ch": "5",
+        "unit_id": "0"
+      },
+      "meta": {
+        "config_name": "kraken_default",
+        "ini_version": "7"
+      },
+      "pre_processing": {
+        "cpi_size": "1048576",
+        "decimation_ratio": "1",
+        "en_filter_reset": "0",
+        "fir_relative_bandwidth": "1.0",
+        "fir_tap_size": "1",
+        "fir_window": "hann"
+      }
+    },
+    "kraken": {
+      "active_vfos": 1,
+      "center_freq": 433.25,
+      "dsp_decimation": 1,
+      "output_vfo": 0,
+      "uniform_gain": 15.7,
+      "vfo_bw_0": 25000,
+      "vfo_fir_order_factor_0": 2,
+      "vfo_freq_0": 433868160,
+      "vfo_iq_0": "True",
+      "vfo_squelch_0": -45,
+      "vfo_squelch_mode_0": "Manual"
+    }
+  },
+  "state": "BLOCKED_PENDING_ACQUISITION_SETTINGS",
+  "unavailable": {
+    "board_revision": null,
+    "lna_gain_db": null,
+    "physical_tuner_bandwidth_hz": null,
+    "receiver_firmware": null,
+    "vga_gain_db": null
+  }
+}
