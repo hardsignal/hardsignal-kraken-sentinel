@@ -1,0 +1,615 @@
+{
+  "acquisition_plan": {
+    "activation_slots_per_capture": 6,
+    "capture_timing": "Each capture 180 seconds: six fixed half-open 30-second slots; one activation commanded 5 seconds into each slot using locked procedure; at least 60 seconds between captures. Operator records actual UTC/monotonic trigger times and failures without spectrum or configuration outcome feedback.",
+    "captures": 48,
+    "controlled_sources": 2,
+    "environmental_controls": "Same receiver, antenna, cable, gain, VFO, source geometry, orientation and activation procedure throughout. Only designated source intentionally active; other controlled source idle. Record ambient temperature, battery state, interference and deviations. Do not retune to suppress unexpected RF.",
+    "episode_requirements": "Group entire capture with frozen >4 s rule. Assign episode to slot containing its first recorded file timestamp. If any member lies outside that slot flag boundary anomaly. Exactly one episode wholly within a slot is required for that slot to supply a membership score; zero or multiple episodes or crossing boundary yield score 0, with all episodes retained in secondary reporting. No minimum fragment count for inclusion; one/two-fragment episodes retained. Extra episodes never replace scheduled slots.",
+    "new_data_only": true,
+    "pairing": "Both A and B consume byte-identical raw captures, episode boundaries, fragment order and source/slot ledger. Repeat pairs within each session/source/activation-slot: (R1,R2),(R1,R3),(R2,R3). No pairing of source identities inferred from RF.",
+    "planned_activation_slots": 288,
+    "repeat_comparisons": 288,
+    "repeats_per_source_per_session": 3,
+    "sample_size_rationale": "Fixed conservative logistical commitment: 8 sessions x 2 sources x 3 captures x 6 activation slots. Not power-derived, not optimized using Stage36 effects; unknown power, no extension or early success stopping.",
+    "schedule": "Sessions odd: S1-R1,S2-R1,S1-R2,S2-R2,S1-R3,S2-R3; sessions even: S2-R1,S1-R1,S2-R2,S1-R2,S2-R3,S1-R3. Fixed counterbalance, no outcome-dependent order.",
+    "session_separation": "At least 24 hours between session starts; one session per day; eight independent acquisition occasions, not eight proven independent RF environments.",
+    "sessions": 8,
+    "stage36_role": "Motivation and frozen comparison only; never confirmatory outcomes or sample-size effects."
+  },
+  "anomaly_policy": {
+    "flags": "Predeclare single/two-fragment episodes, unusable IQ, global maximum in DC/edge exclusion, out-of-guard maximum, multiple/no episodes per slot, boundary-crossing episode, logged activation/environment deviations. Flag from acquisition/unsmoothed metadata without A/B outcomes; E07-like cases remain included.",
+    "interpretation": "Report all flag counts, membership/status discordance and anomalous strata; stable insufficient status is not membership success. Historical E07 remains retained and is not reused as a new observation.",
+    "post_hoc_exclusion_allowed": false,
+    "primary": "All scheduled slots and original fragments remain in denominators; valid anomalous episodes scored normally, null/invalid slots score 0. No replacement captures.",
+    "retain_all": true,
+    "sensitivity": "Only sensitivity: recompute on repeat pairs whose two slots have none of the listed flags, applying same mask to A/B. Retain main result and exclusions ledger. Equal session weights; require >=12 unflagged pairs in every session and both sources represented. Otherwise sensitivity uninformative => DEFERRED. Proposed winner sensitivity mean advantage must be >=0; reversal => DEFERRED. Sensitivity cannot rescue a failed primary gate."
+  },
+  "artifact_paths": [
+    "docs/episode-component-tracking-v2-v2-acquisition-lock.md",
+    "results/episode-component-tracking-v2-v2-acquisition-lock.json",
+    "results/episode-component-tracking-v2-v2-acquisition-manifest-schema-v1.json",
+    "analysis/validate_episode_component_tracking_v2_v2_acquisition_manifest.py",
+    "tests/test_episode_component_tracking_v2_v2_acquisition_lock.py"
+  ],
+  "candidates": {
+    "A": {
+      "association": "connected",
+      "representation": "grid_sigma5",
+      "width_hz": 350
+    },
+    "B": {
+      "association": "connected",
+      "representation": "grid_sigma10",
+      "width_hz": 350
+    }
+  },
+  "conflicts": [
+    {
+      "detail": "Five exposed VFO values agree numerically; full settings bytes differ. No silent choice of unseen settings.",
+      "earlier_sha256": "8f7b52c0b0923cae1e9781878c743bdfd309cc4e52659c1c07815507e53574c9",
+      "field": "full_configuration_snapshot",
+      "later_sha256": "fccb9eaddb10467ee04128686d50e5a8586276ae09cb631a83925c9343269b4a",
+      "resolution": null,
+      "sources": [
+        "captures/ACQ-COMPLETE-V1-20260919-021641/manifest.json",
+        "captures/BETWEEN-DEVICE-REPL-V1-20260919-024341/manifest.json",
+        "captures/BETWEEN-DEVICE-V1-20260919-022809/manifest.json",
+        "captures/BETWEEN-DEVICE-V1-20260919-022917/manifest.json",
+        "captures/PIPELINE-TPMS-001-20260917-202651/manifest.json",
+        "captures/PIPELINE-TPMS-002-20260917-230551/manifest.json",
+        "captures/PIPELINE-TPMS-003-20260917-231616/manifest.json",
+        "captures/PIPELINE-TPMS-004-20260917-233423/manifest.json",
+        "captures/PIPELINE-TPMS-005-20260917-235439/manifest.json",
+        "captures/PIPELINE-TPMS-006-20260918-001713/manifest.json",
+        "captures/PIPELINE-TPMS-007-20260918-002700/manifest.json",
+        "captures/PIPELINE-TPMS-008-20260918-003900/manifest.json"
+      ]
+    }
+  ],
+  "decision": "V2_ACQUISITION_LOCK_BLOCKED",
+  "design": {
+    "activation_slots": 288,
+    "captures": 48,
+    "minimum_session_start_separation_seconds": 86400,
+    "paired_raw_inputs": true,
+    "repeats_per_source_per_session": 3,
+    "sessions": 8,
+    "slots_per_capture": 6,
+    "sources": [
+      "S1",
+      "S2"
+    ]
+  },
+  "episode_segmentation": {
+    "comparison": ">",
+    "fragment": "One original recorder IQ file; no reslicing, merging, resampling or dropping; keep original fragment denominator. Snapshot timestamps once at acquisition close, never regroup from later live mtimes.",
+    "gap_seconds": 4.0,
+    "order": [
+      "recorded mtime_ns",
+      "filename"
+    ]
+  },
+  "evidence_sha256": {
+    "analysis/episode_component_tracking_v2_draft1.py": "a24a5617ca9f4129c6970fd0a9743f8b78610c58567e8a557f21dee2a055f66c",
+    "analysis/episode_component_tracking_v2_draft2_experiment.py": "73dc27741f3ad5fd710f94a8989a930bb731cd196e32ff2d000ee48e00b9d39a",
+    "analysis/episode_component_tracking_v2_draft2_full_matrix_exact.py": "9f23840db5a32964ad40910af79f8e1ecb622c0ce0b64aab220f94061c4dd4fd",
+    "capture/group_episodes.py": "c14586d6304eca3ea906b320f43607ffe6a982929b6bdacd9adb71f973fe98e6",
+    "capture/kraken_capture.py": "bbee1eb37138b9b2d5eb4aa61006ea36d7ebc794b9293794a2754e86adc41970",
+    "captures/ACQ-COMPLETE-V1-20260919-021641/manifest.json": "a53e1236683321e5a22d12e26a9b7dda355b6dd153055eadcefb4c694494aad1",
+    "captures/BETWEEN-DEVICE-REPL-V1-20260919-024341/manifest.json": "190213fb854080b8c2a3fd80381b5f4130d1a26c749621a8f42c289ed7330004",
+    "captures/BETWEEN-DEVICE-V1-20260919-022809/manifest.json": "e92853d575266e3e0ac78606a77bc2663c7e75062b063506b26b750955dbc28d",
+    "captures/BETWEEN-DEVICE-V1-20260919-022917/manifest.json": "326850f488ebb670a17f2e51aba594eee20ebfd3977f0926b89eec56de4c1e00",
+    "captures/PIPELINE-TPMS-001-20260917-202651/manifest.json": "e9d1531bbee9960023037c6d4b0592dcb9552422d50a8deae6ef9eafb7992498",
+    "captures/PIPELINE-TPMS-002-20260917-230551/manifest.json": "0994ba3c389b57d5713ddde06f4a2b0c19eebe400d5b3a5485aa7ab715e4a12b",
+    "captures/PIPELINE-TPMS-003-20260917-231616/manifest.json": "e281bb0f8b1b2c5503b891cef5e67f7d52075f428c3f6aebaae2e1a0d803d966",
+    "captures/PIPELINE-TPMS-004-20260917-233423/manifest.json": "b8e80226adb18fcde55ef30313d87266c9c7649953ed4f085f4a0c9aa03da80a",
+    "captures/PIPELINE-TPMS-005-20260917-235439/manifest.json": "3f1e64587c281f0e71fa13a286026b6c93e41f32fb15ae5bf4025f51f9edc90b",
+    "captures/PIPELINE-TPMS-006-20260918-001713/manifest.json": "8b47e6cb1d8dc979c5b440159bb9e3f7ad8da8568dd76c7d8769d9fdd5ca1db6",
+    "captures/PIPELINE-TPMS-007-20260918-002700/manifest.json": "ffc4eab54b7b89152fd4b78efe58a886064b61b4a07afe0944be654c62dda1de",
+    "captures/PIPELINE-TPMS-008-20260918-003900/manifest.json": "afd05d8ba49e316b488dd34ad977919e13f0fa8dd691d50c1070dbfa76f65422",
+    "captures/hackrf/ENGINEERING-PROVENANCE-001/manifest.json": "49a3fcd9f6ca617afbca922fa639bbe728d9118b006ad1275dff6297f34361ac",
+    "captures/hackrf/ENGINEERING-PROVENANCE-002/manifest.json": "e8b1a7ce538a89e1382180b6bffc047ba75856ed121736f8d231e561ee041f07",
+    "captures/hackrf/SYNTHETIC-CONTROLLED-002/manifest.json": "78ce969128e129be4e657579a67f3a187458365e9681de4aa3284e6707bc9cc3",
+    "captures/hackrf/SYNTHETIC-CONTROLLED-003/manifest.json": "64d8635251636ee609d3402a3ec6343656a422ad1b7b2dc04d1a3615a3bd1d7e",
+    "docs/episode-component-tracking-v2-draft1.md": "017a4bf9dde31c745ba9765827378e8dd9c6e6af175bd0cddf594b22f08ac004",
+    "docs/episode-component-tracking-v2-draft2-experiment.md": "3923a1f009a0c798ed97bbfdf8158b36c2673a88b0d687a67e3b921bd352e026",
+    "docs/episode-component-tracking-v2-stage37-computational-review.md": "6c17bbeaa0ee16f4fb4c3cff396e8a507b95f094ac94da2f450bdc0b896eef88",
+    "docs/episode-component-tracking-v2-stage37-configuration-selection.md": "20ec4954eac2474d06a607d641b1725c19fca64f08b2727b2b3cfee163d9247c",
+    "docs/episode-component-tracking-v2-stage37-provenance-repair.md": "f01f7aebafa39aa9c387d6bb2e02f8184c207de685ac8454a04d8471fe4c67bc",
+    "docs/episode-component-tracking-v2-stage37-scientific-review.md": "0d1c3275bc96e71f26638b50cf8f4651138a7c6d9282bccfe216ef15703ae28e",
+    "docs/episode-component-tracking-v2-v2-discrimination-preregistration.md": "f28d4d168a2475c6a755b21c521270e8f2de269a12e67227f24116137321b7c7",
+    "docs/hackrf-capture-provenance-v1.md": "515fadeaf131b913b55a6fdd82594b83d6aa226340aff23a7e55f58e8d305714",
+    "docs/kraken-episode-grouping-v1.md": "8d04b9c93e1df055738831bdda3ad4ea276d91a2f5da39e7935294a4b7491aca",
+    "results/episode-component-tracking-v2-draft2-stage36-files.sha256": "3f2794459be61714e7d5b1859ca919e16882f71fe1794db8b2905089006d92ba",
+    "results/episode-component-tracking-v2-stage37-computational-review.json": "bbaa1560539e54e98bb49cc0665e0c010641f7d81a7d9a7822ee01b6f9e83ceb",
+    "results/episode-component-tracking-v2-stage37-configuration-selection.json": "d501ea1ae51fdab0585ca1c5b42988583ea2f20c6047044446ec5012df53559a",
+    "results/episode-component-tracking-v2-stage37-provenance-repair-v1.json": "085babba93c3ba981f60511d788ae4591f0fdcb2fb020b30aacb365f86ecfd86",
+    "results/episode-component-tracking-v2-stage37-scientific-review.json": "9153576d2d580eb918dfa4e306b493e91b2d9841f484728b6efa80be4f8a1c44",
+    "results/episode-component-tracking-v2-v2-discrimination-preregistration.json": "dd9a1694c5d0bc7a47ad2f0bfa917816cc66325f5325e4718b95a7bb9780a7b6",
+    "results/episode-component-tracking-v2-v2-preregistration-provenance-repair-v1.json": "e16d970dcd5093cb75497cd7527292453ff27fb64afdf3d287b367c907fcec63",
+    "tests/test_episode_component_tracking_v2_stage37_computational_review.py": "a71bd2f35509efc94d47062747d6e944536ee30813094515d464d932f1aeba86",
+    "tests/test_episode_component_tracking_v2_stage37_configuration_selection.py": "aefb6455aece094dd5d264f86efb6b0fbe4142a7d92f42d7ce5b68febfa2752d",
+    "tests/test_episode_component_tracking_v2_stage37_scientific_review.py": "fa04f7ad6c5e0476c50e58937c0c8097b22f4467dd9d6d4ce37c6735e434bbc3"
+  },
+  "excluded_evidence": {
+    "doa": "No DoA endpoint or geometry-based source identity inference. Exact geometry still matters as parent environmental control; no invented array spacing or phase-accuracy target.",
+    "hackrf": "Independent Wider-IQ V1: 2 MHz, 1.75 MHz filter, CS8, LNA/VGA 32 dB are NOT Kraken settings. No cross-device inheritance."
+  },
+  "format": "KRAKEN_V2_ACQUISITION_LOCK_V1",
+  "labels": {
+    "CFG-01": "A",
+    "CFG-02": "B",
+    "rule": "Fixed lexical mapping, disclosed and hash-bound; administrative labels, not concealed blinding. Acquisition sees session/source/repetition/slot only; no candidate setting or feedback. Both configurations receive identical inputs after all acquisition. Optional custodian blinding remains parent policy."
+  },
+  "missing_data_policy": {
+    "policy": "Every planned capture/slot has a row even if no files, no activation, corrupted or inaccessible data. Missing acquisition slot primary score 0 for both; observed insufficient/unusable status is an outcome, not missing. Retain partial capture data and all extra episodes. Any missing whole capture, unreadable/corrupt raw data, or incomplete planned acquisition => DEFERRED; zero/multiple observed episodes with otherwise complete acquisition remain ordinary zero-scored outcomes. No complete-case primary or imputation.",
+    "replacement": false
+  },
+  "parent_checkpoint": "c98ad53",
+  "parent_commit": "c98ad53a6d278140c98ecbe045f2462c24f5852f",
+  "parent_decision": "V2_DISCRIMINATION_EXPERIMENT_PREREGISTERED",
+  "policies": {
+    "abort": [
+      "missing mandatory field",
+      "not READY before acquisition",
+      "hardware/configuration drift",
+      "recorder version/hash mismatch",
+      "incomplete raw file",
+      "hash or size verification failure",
+      "duplicate IDs",
+      "session/capture/order/slot structure violation",
+      "session start separation below 24 hours",
+      "unexpected termination or sample loss",
+      "configuration or commit changed",
+      "unresolved evidence conflict"
+    ],
+    "episode": "Group separately within each capture, never across captures or sessions. >4 seconds, (frozen mtime_ns, filename) order. Episode numbers 1..N per capture, fragment ordinals 1..N per episode. One original file per fragment. No minimum inclusion count; retain one/two-fragment and incomplete episodes; unusable fragments remain in denominators. Slot assignment and anomaly treatment exactly as parent; no grouping/scoring in this validator.",
+    "ids": "Sessions V2-J01..V2-J08; captures V2-Jjj-Ss-Rr; slots capture-ID-T01..T06. Source IDs are operator inventory labels, never RF-inferred. Odd/even order is parent counterbalance. Raw file names are unresolved and cannot be inferred from capture IDs.",
+    "metadata": "Record operator ID and notes; ambient temperature, battery states, interference, deviations, location and geometry reference, source state. Exact instruments/procedure remain unresolved. Settings snapshots start/end must equal the frozen settings object and hash. Record activation UTC/monotonic markers and failures without changing expected slots.",
+    "partial": "Preserve failed/partial files, logs, attempted/missing ledger entries and all scheduled slots. No replacements or retries. Complete requires exit code zero and no acquisition errors; warnings retained. No-file captures can be operationally complete only with independently evidenced writer completion; zero episodes is not itself an acquisition failure.",
+    "post_hoc": "After finalization no additions, relaxations or changes to receiver/recorder/acquisition settings or structure; especially none after capture 1. Required change invalidates the series; retain all records and require new preregistration/version and wholly new data. Never use pilots or outcomes to choose settings.",
+    "timestamps": "New operational metadata convention: ISO-8601 UTC ending Z with fractional seconds allowed, plus monotonic_ns for capture and activation markers. Recorded file mtime_ns frozen once on close. Clock source remains unresolved."
+  },
+  "post_commit_binding": {
+    "authorizing_commit": null,
+    "mechanism": "Post-commit Git tree binds all five artifacts, including validator/tests, without circular self-hashes. Run post-commit test with V2_LOCK_COMMIT set to the full commit. Verify parent ancestry, exact changed-path allowlist, committed bytes and SHA-256 of evidence. This BLOCKED commit never authorizes collection; a new version/preregistration and reviewed implementation with all settings established must precede any capture. Future session/capture records must bind the actual authorizing commit and lock SHA-256 before first start."
+  },
+  "schema_sha256": "9139863108894fa5a37db556369940c3f4d922185705d434494584882b237a70",
+  "scientific_execution": false,
+  "settings": {
+    "activation_offset_seconds": {
+      "detail": "Fixed timing; no adaptive extension.",
+      "evidence": [
+        "results/episode-component-tracking-v2-v2-discrimination-preregistration.json#/acquisition_plan/capture_timing"
+      ],
+      "mandatory": true,
+      "status": "PREREGISTERED",
+      "value": 5
+    },
+    "activation_procedure": {
+      "detail": "Exact activation tool/procedure, source state, idle enforcement and failure logging not established.",
+      "evidence": [
+        "results/episode-component-tracking-v2-v2-discrimination-preregistration.json#/fixed_parameters/not_established_by_committed_evidence",
+        "results/episode-component-tracking-v2-v2-discrimination-preregistration.json#/fixed_parameters/pre_acquisition_lock"
+      ],
+      "mandatory": true,
+      "status": "NOT_ESTABLISHED",
+      "value": null
+    },
+    "agc_state": {
+      "detail": "Per-stage AGC states absent.",
+      "evidence": [
+        "results/episode-component-tracking-v2-v2-discrimination-preregistration.json#/fixed_parameters/not_established_by_committed_evidence",
+        "results/episode-component-tracking-v2-v2-discrimination-preregistration.json#/fixed_parameters/pre_acquisition_lock"
+      ],
+      "mandatory": true,
+      "status": "NOT_ESTABLISHED",
+      "value": null
+    },
+    "antenna_cable_inventory": {
+      "detail": "Antenna/cable identity, arrangement and connections absent.",
+      "evidence": [
+        "results/episode-component-tracking-v2-v2-discrimination-preregistration.json#/fixed_parameters/not_established_by_committed_evidence",
+        "results/episode-component-tracking-v2-v2-discrimination-preregistration.json#/fixed_parameters/pre_acquisition_lock"
+      ],
+      "mandatory": true,
+      "status": "NOT_ESTABLISHED",
+      "value": null
+    },
+    "byte_order": {
+      "detail": "Explicitly inherited; not HackRF CS8.",
+      "evidence": [
+        "results/episode-component-tracking-v2-v2-discrimination-preregistration.json#/fixed_parameters/numerical_policy/iq",
+        "docs/episode-component-tracking-v2-draft1.md"
+      ],
+      "mandatory": true,
+      "status": "PREREGISTERED",
+      "value": "little"
+    },
+    "calibration_synchronization": {
+      "detail": "Required calibration/synchronization procedure and state, or justified non-applicability, absent.",
+      "evidence": [
+        "results/episode-component-tracking-v2-v2-discrimination-preregistration.json#/fixed_parameters/not_established_by_committed_evidence",
+        "results/episode-component-tracking-v2-v2-discrimination-preregistration.json#/fixed_parameters/pre_acquisition_lock"
+      ],
+      "mandatory": true,
+      "status": "NOT_ESTABLISHED",
+      "value": null
+    },
+    "capture_duration_seconds": {
+      "detail": "Fixed timing; no adaptive extension.",
+      "evidence": [
+        "results/episode-component-tracking-v2-v2-discrimination-preregistration.json#/acquisition_plan/capture_timing"
+      ],
+      "mandatory": true,
+      "status": "PREREGISTERED",
+      "value": 180
+    },
+    "clock_source": {
+      "detail": "RF reference, UTC clock discipline, monotonic clock identity/resolution and synchronization uncertainty absent.",
+      "evidence": [
+        "results/episode-component-tracking-v2-v2-discrimination-preregistration.json#/fixed_parameters/not_established_by_committed_evidence",
+        "results/episode-component-tracking-v2-v2-discrimination-preregistration.json#/fixed_parameters/pre_acquisition_lock"
+      ],
+      "mandatory": true,
+      "status": "NOT_ESTABLISHED",
+      "value": null
+    },
+    "decimation_channelizer": {
+      "detail": "Frontend-to-25 ksample/s chain, factors, filters and versions absent.",
+      "evidence": [
+        "results/episode-component-tracking-v2-v2-discrimination-preregistration.json#/fixed_parameters/not_established_by_committed_evidence",
+        "results/episode-component-tracking-v2-v2-discrimination-preregistration.json#/fixed_parameters/pre_acquisition_lock"
+      ],
+      "mandatory": true,
+      "status": "NOT_ESTABLISHED",
+      "value": null
+    },
+    "dropped_sample_error_instrumentation": {
+      "detail": "Dropped sample/overflow/error instrumentation and logs absent; cannot assume zero.",
+      "evidence": [
+        "results/episode-component-tracking-v2-v2-discrimination-preregistration.json#/fixed_parameters/not_established_by_committed_evidence",
+        "results/episode-component-tracking-v2-v2-discrimination-preregistration.json#/fixed_parameters/pre_acquisition_lock"
+      ],
+      "mandatory": true,
+      "status": "NOT_ESTABLISHED",
+      "value": null
+    },
+    "effective_complex_sample_rate_hz": {
+      "detail": "Preregistered recorder input rate; physical clock accuracy not characterized.",
+      "evidence": [
+        "results/episode-component-tracking-v2-v2-discrimination-preregistration.json#/fixed_parameters/inherited_detector_and_tracking/sample_rate_hz",
+        "docs/episode-component-tracking-v2-draft1.md"
+      ],
+      "mandatory": true,
+      "status": "PREREGISTERED",
+      "value": 25000
+    },
+    "environment_measurement_procedure": {
+      "detail": "Temperature, battery, interference/deviation metadata required; measurement methods and units not locked.",
+      "evidence": [
+        "results/episode-component-tracking-v2-v2-discrimination-preregistration.json#/fixed_parameters/not_established_by_committed_evidence",
+        "results/episode-component-tracking-v2-v2-discrimination-preregistration.json#/fixed_parameters/pre_acquisition_lock"
+      ],
+      "mandatory": true,
+      "status": "NOT_ESTABLISHED",
+      "value": null
+    },
+    "exit_status_instrumentation": {
+      "detail": "Writer exit status and abnormal termination capture mechanism absent.",
+      "evidence": [
+        "results/episode-component-tracking-v2-v2-discrimination-preregistration.json#/fixed_parameters/not_established_by_committed_evidence",
+        "results/episode-component-tracking-v2-v2-discrimination-preregistration.json#/fixed_parameters/pre_acquisition_lock"
+      ],
+      "mandatory": true,
+      "status": "NOT_ESTABLISHED",
+      "value": null
+    },
+    "file_hash_algorithm": {
+      "detail": "Hash each original raw file; immutable after freeze.",
+      "evidence": [
+        "capture/kraken_capture.py",
+        "captures/BETWEEN-DEVICE-REPL-V1-20260919-024341/manifest.json"
+      ],
+      "mandatory": true,
+      "status": "HISTORICAL_AND_PREREGISTERED",
+      "value": "SHA-256"
+    },
+    "frontend_sample_rate_hz": {
+      "detail": "ADC/frontend complex rate not recorded.",
+      "evidence": [
+        "results/episode-component-tracking-v2-v2-discrimination-preregistration.json#/fixed_parameters/not_established_by_committed_evidence",
+        "results/episode-component-tracking-v2-v2-discrimination-preregistration.json#/fixed_parameters/pre_acquisition_lock"
+      ],
+      "mandatory": true,
+      "status": "NOT_ESTABLISHED",
+      "value": null
+    },
+    "full_configuration_snapshot": {
+      "detail": "Historical settings hashes differ; complete bytes and explanation unavailable.",
+      "evidence": [
+        "results/episode-component-tracking-v2-v2-discrimination-preregistration.json#/fixed_parameters/not_established_by_committed_evidence",
+        "results/episode-component-tracking-v2-v2-discrimination-preregistration.json#/fixed_parameters/pre_acquisition_lock"
+      ],
+      "mandatory": true,
+      "status": "NOT_ESTABLISHED",
+      "value": null
+    },
+    "geometry_location_orientation": {
+      "detail": "Locked location, source/receiver geometry, orientation, measurements and photograph hashes absent.",
+      "evidence": [
+        "results/episode-component-tracking-v2-v2-discrimination-preregistration.json#/fixed_parameters/not_established_by_committed_evidence",
+        "results/episode-component-tracking-v2-v2-discrimination-preregistration.json#/fixed_parameters/pre_acquisition_lock"
+      ],
+      "mandatory": true,
+      "status": "NOT_ESTABLISHED",
+      "value": null
+    },
+    "hardware_inventory": {
+      "detail": "Receiver model/revision/serial, firmware, channel serials and relevant peripherals absent.",
+      "evidence": [
+        "results/episode-component-tracking-v2-v2-discrimination-preregistration.json#/fixed_parameters/not_established_by_committed_evidence",
+        "results/episode-component-tracking-v2-v2-discrimination-preregistration.json#/fixed_parameters/pre_acquisition_lock"
+      ],
+      "mandatory": true,
+      "status": "NOT_ESTABLISHED",
+      "value": null
+    },
+    "host_software_versions": {
+      "detail": "Host identity, OS/kernel, CPU, Python, NumPy, dependencies, drivers and recorder versions absent.",
+      "evidence": [
+        "results/episode-component-tracking-v2-v2-discrimination-preregistration.json#/fixed_parameters/not_established_by_committed_evidence",
+        "results/episode-component-tracking-v2-v2-discrimination-preregistration.json#/fixed_parameters/pre_acquisition_lock"
+      ],
+      "mandatory": true,
+      "status": "NOT_ESTABLISHED",
+      "value": null
+    },
+    "lna_gain": {
+      "detail": "Kraken LNA state/gain absent; HackRF 32 dB is inapplicable.",
+      "evidence": [
+        "results/episode-component-tracking-v2-v2-discrimination-preregistration.json#/fixed_parameters/not_established_by_committed_evidence",
+        "results/episode-component-tracking-v2-v2-discrimination-preregistration.json#/fixed_parameters/pre_acquisition_lock"
+      ],
+      "mandatory": true,
+      "status": "NOT_ESTABLISHED",
+      "value": null
+    },
+    "minimum_inter_capture_seconds": {
+      "detail": "Fixed timing; no adaptive extension.",
+      "evidence": [
+        "results/episode-component-tracking-v2-v2-discrimination-preregistration.json#/acquisition_plan/capture_timing"
+      ],
+      "mandatory": true,
+      "status": "PREREGISTERED",
+      "value": 60
+    },
+    "partial_file_detection": {
+      "detail": "Close/flush/size stability and incomplete-file detection implementation absent.",
+      "evidence": [
+        "results/episode-component-tracking-v2-v2-discrimination-preregistration.json#/fixed_parameters/not_established_by_committed_evidence",
+        "results/episode-component-tracking-v2-v2-discrimination-preregistration.json#/fixed_parameters/pre_acquisition_lock"
+      ],
+      "mandatory": true,
+      "status": "NOT_ESTABLISHED",
+      "value": null
+    },
+    "raw_immutable": {
+      "detail": "Never edit, overwrite, reslice or replace original files.",
+      "evidence": [
+        "docs/kraken-episode-grouping-v1.md",
+        "results/episode-component-tracking-v2-v2-discrimination-preregistration.json"
+      ],
+      "mandatory": true,
+      "status": "HISTORICAL_AND_PREREGISTERED",
+      "value": true
+    },
+    "raw_naming_convention": {
+      "detail": "Historical names are examples, not a locked implementation or timezone/collision rule.",
+      "evidence": [
+        "results/episode-component-tracking-v2-v2-discrimination-preregistration.json#/fixed_parameters/not_established_by_committed_evidence",
+        "results/episode-component-tracking-v2-v2-discrimination-preregistration.json#/fixed_parameters/pre_acquisition_lock"
+      ],
+      "mandatory": true,
+      "status": "NOT_ESTABLISHED",
+      "value": null
+    },
+    "receiver_channel_count": {
+      "detail": "Number enabled and number recorded not established.",
+      "evidence": [
+        "results/episode-component-tracking-v2-v2-discrimination-preregistration.json#/fixed_parameters/not_established_by_committed_evidence",
+        "results/episode-component-tracking-v2-v2-discrimination-preregistration.json#/fixed_parameters/pre_acquisition_lock"
+      ],
+      "mandatory": true,
+      "status": "NOT_ESTABLISHED",
+      "value": null
+    },
+    "receiver_gain": {
+      "detail": "Exact per-channel receiver gains absent.",
+      "evidence": [
+        "results/episode-component-tracking-v2-v2-discrimination-preregistration.json#/fixed_parameters/not_established_by_committed_evidence",
+        "results/episode-component-tracking-v2-v2-discrimination-preregistration.json#/fixed_parameters/pre_acquisition_lock"
+      ],
+      "mandatory": true,
+      "status": "NOT_ESTABLISHED",
+      "value": null
+    },
+    "recorder_implementation": {
+      "detail": "kraken_capture.py is a provenance wrapper, not the IQ writer. Actual writer source/binary/version/hash absent.",
+      "evidence": [
+        "results/episode-component-tracking-v2-v2-discrimination-preregistration.json#/fixed_parameters/not_established_by_committed_evidence",
+        "results/episode-component-tracking-v2-v2-discrimination-preregistration.json#/fixed_parameters/pre_acquisition_lock"
+      ],
+      "mandatory": true,
+      "status": "NOT_ESTABLISHED",
+      "value": null
+    },
+    "recorder_output_conformance": {
+      "detail": "Preregistered <c16 input is fixed, but actual writer conformance and completion detection are unverified.",
+      "evidence": [
+        "results/episode-component-tracking-v2-v2-discrimination-preregistration.json#/fixed_parameters/not_established_by_committed_evidence",
+        "results/episode-component-tracking-v2-v2-discrimination-preregistration.json#/fixed_parameters/pre_acquisition_lock"
+      ],
+      "mandatory": true,
+      "status": "NOT_ESTABLISHED",
+      "value": null
+    },
+    "recorder_trigger_buffer_rollover": {
+      "detail": "Trigger, buffering, pre/post-trigger, flush and file rollover behavior absent.",
+      "evidence": [
+        "results/episode-component-tracking-v2-v2-discrimination-preregistration.json#/fixed_parameters/not_established_by_committed_evidence",
+        "results/episode-component-tracking-v2-v2-discrimination-preregistration.json#/fixed_parameters/pre_acquisition_lock"
+      ],
+      "mandatory": true,
+      "status": "NOT_ESTABLISHED",
+      "value": null
+    },
+    "reviewed_execution_commit": {
+      "detail": "Parent requires a reviewed runner commit before capture; no execution implementation is authorized here.",
+      "evidence": [
+        "results/episode-component-tracking-v2-v2-discrimination-preregistration.json#/fixed_parameters/not_established_by_committed_evidence",
+        "results/episode-component-tracking-v2-v2-discrimination-preregistration.json#/fixed_parameters/pre_acquisition_lock"
+      ],
+      "mandatory": true,
+      "status": "NOT_ESTABLISHED",
+      "value": null
+    },
+    "rf_center_frequency_hz": {
+      "detail": "VFO frequency is established; RF tuner center is not.",
+      "evidence": [
+        "results/episode-component-tracking-v2-v2-discrimination-preregistration.json#/fixed_parameters/not_established_by_committed_evidence",
+        "results/episode-component-tracking-v2-v2-discrimination-preregistration.json#/fixed_parameters/pre_acquisition_lock"
+      ],
+      "mandatory": true,
+      "status": "NOT_ESTABLISHED",
+      "value": null
+    },
+    "rf_if_baseband_bandwidths": {
+      "detail": "RF/IF filters and baseband chain beyond VFO bandwidth unknown; document exact values or hardware-supported non-applicability.",
+      "evidence": [
+        "results/episode-component-tracking-v2-v2-discrimination-preregistration.json#/fixed_parameters/not_established_by_committed_evidence",
+        "results/episode-component-tracking-v2-v2-discrimination-preregistration.json#/fixed_parameters/pre_acquisition_lock"
+      ],
+      "mandatory": true,
+      "status": "NOT_ESTABLISHED",
+      "value": null
+    },
+    "sample_dtype": {
+      "detail": "Raw complex128: two float64 components, 16 bytes per complex sample.",
+      "evidence": [
+        "results/episode-component-tracking-v2-v2-discrimination-preregistration.json#/fixed_parameters/inherited_detector_and_tracking/dtype",
+        "docs/episode-component-tracking-v2-draft1.md"
+      ],
+      "mandatory": true,
+      "status": "PREREGISTERED",
+      "value": "<c16"
+    },
+    "scientific_channel_mapping": {
+      "detail": "VFO 0 to physical channel or combination mapping absent.",
+      "evidence": [
+        "results/episode-component-tracking-v2-v2-discrimination-preregistration.json#/fixed_parameters/not_established_by_committed_evidence",
+        "results/episode-component-tracking-v2-v2-discrimination-preregistration.json#/fixed_parameters/pre_acquisition_lock"
+      ],
+      "mandatory": true,
+      "status": "NOT_ESTABLISHED",
+      "value": null
+    },
+    "slot_duration_seconds": {
+      "detail": "Fixed timing; no adaptive extension.",
+      "evidence": [
+        "results/episode-component-tracking-v2-v2-discrimination-preregistration.json#/acquisition_plan/capture_timing"
+      ],
+      "mandatory": true,
+      "status": "PREREGISTERED",
+      "value": 30
+    },
+    "source_inventory": {
+      "detail": "S1/S2 physical source identities/serials and batteries not locked.",
+      "evidence": [
+        "results/episode-component-tracking-v2-v2-discrimination-preregistration.json#/fixed_parameters/not_established_by_committed_evidence",
+        "results/episode-component-tracking-v2-v2-discrimination-preregistration.json#/fixed_parameters/pre_acquisition_lock"
+      ],
+      "mandatory": true,
+      "status": "NOT_ESTABLISHED",
+      "value": null
+    },
+    "vfo_bw_0": {
+      "detail": "VFO setting only; does not establish unseen frontend settings.",
+      "evidence": [
+        "captures/BETWEEN-DEVICE-REPL-V1-20260919-024341/manifest.json#/settings_at_start/values/vfo_bw_0",
+        "captures/BETWEEN-DEVICE-REPL-V1-20260919-024341/manifest.json#/settings_at_finish/values/vfo_bw_0",
+        "results/episode-component-tracking-v2-v2-discrimination-preregistration.json#/fixed_parameters/acquisition/vfo_bw_0"
+      ],
+      "mandatory": true,
+      "status": "HISTORICAL_AND_PREREGISTERED",
+      "value": 25000
+    },
+    "vfo_freq_0": {
+      "detail": "VFO setting only; does not establish unseen frontend settings.",
+      "evidence": [
+        "captures/BETWEEN-DEVICE-REPL-V1-20260919-024341/manifest.json#/settings_at_start/values/vfo_freq_0",
+        "captures/BETWEEN-DEVICE-REPL-V1-20260919-024341/manifest.json#/settings_at_finish/values/vfo_freq_0",
+        "results/episode-component-tracking-v2-v2-discrimination-preregistration.json#/fixed_parameters/acquisition/vfo_freq_0"
+      ],
+      "mandatory": true,
+      "status": "HISTORICAL_AND_PREREGISTERED",
+      "value": 433868160
+    },
+    "vfo_index": {
+      "detail": "Index from explicit vfo_*_0 fields; not proof of physical channel selection.",
+      "evidence": [
+        "results/episode-component-tracking-v2-v2-discrimination-preregistration.json#/fixed_parameters/acquisition",
+        "docs/episode-component-tracking-v2-draft1.md"
+      ],
+      "mandatory": true,
+      "status": "PREREGISTERED",
+      "value": 0
+    },
+    "vfo_iq_0": {
+      "detail": "VFO setting only; does not establish unseen frontend settings.",
+      "evidence": [
+        "captures/BETWEEN-DEVICE-REPL-V1-20260919-024341/manifest.json#/settings_at_start/values/vfo_iq_0",
+        "captures/BETWEEN-DEVICE-REPL-V1-20260919-024341/manifest.json#/settings_at_finish/values/vfo_iq_0",
+        "results/episode-component-tracking-v2-v2-discrimination-preregistration.json#/fixed_parameters/acquisition/vfo_iq_0"
+      ],
+      "mandatory": true,
+      "status": "HISTORICAL_AND_PREREGISTERED",
+      "value": "True"
+    },
+    "vfo_squelch_0": {
+      "detail": "VFO setting only; does not establish unseen frontend settings.",
+      "evidence": [
+        "captures/BETWEEN-DEVICE-REPL-V1-20260919-024341/manifest.json#/settings_at_start/values/vfo_squelch_0",
+        "captures/BETWEEN-DEVICE-REPL-V1-20260919-024341/manifest.json#/settings_at_finish/values/vfo_squelch_0",
+        "results/episode-component-tracking-v2-v2-discrimination-preregistration.json#/fixed_parameters/acquisition/vfo_squelch_0"
+      ],
+      "mandatory": true,
+      "status": "HISTORICAL_AND_PREREGISTERED",
+      "value": -45
+    },
+    "vfo_squelch_mode_0": {
+      "detail": "VFO setting only; does not establish unseen frontend settings.",
+      "evidence": [
+        "captures/BETWEEN-DEVICE-REPL-V1-20260919-024341/manifest.json#/settings_at_start/values/vfo_squelch_mode_0",
+        "captures/BETWEEN-DEVICE-REPL-V1-20260919-024341/manifest.json#/settings_at_finish/values/vfo_squelch_mode_0",
+        "results/episode-component-tracking-v2-v2-discrimination-preregistration.json#/fixed_parameters/acquisition/vfo_squelch_mode_0"
+      ],
+      "mandatory": true,
+      "status": "HISTORICAL_AND_PREREGISTERED",
+      "value": "Manual"
+    },
+    "vga_baseband_gain": {
+      "detail": "Exact gain or evidence-supported non-applicability absent.",
+      "evidence": [
+        "results/episode-component-tracking-v2-v2-discrimination-preregistration.json#/fixed_parameters/not_established_by_committed_evidence",
+        "results/episode-component-tracking-v2-v2-discrimination-preregistration.json#/fixed_parameters/pre_acquisition_lock"
+      ],
+      "mandatory": true,
+      "status": "NOT_ESTABLISHED",
+      "value": null
+    }
+  },
+  "stage37_decision": "STAGE37_V1_CONFIGURATION_SELECTION_DEFERRED",
+  "state": "BLOCKED_PENDING_ACQUISITION_SETTINGS"
+}

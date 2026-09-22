@@ -1,0 +1,531 @@
+{
+  "$defs": {
+    "capture": {
+      "additionalProperties": false,
+      "properties": {
+        "activations": {
+          "items": {
+            "additionalProperties": false,
+            "properties": {
+              "actual_monotonic_ns": {
+                "type": [
+                  "integer",
+                  "null"
+                ]
+              },
+              "actual_utc": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "failure": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "ordinal": {
+                "maximum": 6,
+                "minimum": 1,
+                "type": "integer"
+              },
+              "scheduled_offset_seconds": {
+                "minimum": 0,
+                "type": "integer"
+              },
+              "slot_id": {
+                "minLength": 1,
+                "type": "string"
+              }
+            },
+            "required": [
+              "slot_id",
+              "ordinal",
+              "scheduled_offset_seconds",
+              "actual_utc",
+              "actual_monotonic_ns",
+              "failure"
+            ],
+            "type": "object"
+          },
+          "maxItems": 6,
+          "minItems": 6,
+          "type": "array"
+        },
+        "authorizing_commit": {
+          "pattern": "^[0-9a-f]{40}$",
+          "type": "string"
+        },
+        "capture_id": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "completeness": {
+          "enum": [
+            "COMPLETE",
+            "INCOMPLETE",
+            "ABORTED",
+            "NOT_STARTED"
+          ]
+        },
+        "dropped_samples": {
+          "type": [
+            "integer",
+            "null"
+          ]
+        },
+        "ended_at": {
+          "pattern": "^\\d{4}-\\d{2}-\\d{2}T\\d{2}:\\d{2}:\\d{2}(?:\\.\\d+)?Z$",
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "ended_monotonic_ns": {
+          "minimum": 0,
+          "type": [
+            "integer",
+            "null"
+          ]
+        },
+        "errors": {
+          "items": {
+            "minLength": 1,
+            "type": "string"
+          },
+          "minItems": 0,
+          "type": "array"
+        },
+        "expected_activation_slots": {
+          "const": 6
+        },
+        "lock_sha256": {
+          "pattern": "^[0-9a-f]{64}$",
+          "type": "string"
+        },
+        "logs": {
+          "items": {
+            "additionalProperties": false,
+            "properties": {
+              "path": {
+                "minLength": 1,
+                "type": "string"
+              },
+              "sha256": {
+                "pattern": "^[0-9a-f]{64}$",
+                "type": "string"
+              }
+            },
+            "required": [
+              "path",
+              "sha256"
+            ],
+            "type": "object"
+          },
+          "minItems": 0,
+          "type": "array"
+        },
+        "operator_notes": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "raw_files": {
+          "items": {
+            "additionalProperties": false,
+            "properties": {
+              "complete": {
+                "type": "boolean"
+              },
+              "mtime_ns": {
+                "minimum": 0,
+                "type": "integer"
+              },
+              "path": {
+                "minLength": 1,
+                "type": "string"
+              },
+              "sha256": {
+                "pattern": "^[0-9a-f]{64}$",
+                "type": "string"
+              },
+              "size_bytes": {
+                "minimum": 0,
+                "type": "integer"
+              }
+            },
+            "required": [
+              "path",
+              "sha256",
+              "size_bytes",
+              "mtime_ns",
+              "complete"
+            ],
+            "type": "object"
+          },
+          "minItems": 0,
+          "type": "array"
+        },
+        "recorder_exit_status": {
+          "type": [
+            "integer",
+            "null"
+          ]
+        },
+        "repetition": {
+          "maximum": 3,
+          "minimum": 1,
+          "type": "integer"
+        },
+        "session_id": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "settings_at_finish": {
+          "type": [
+            "object",
+            "null"
+          ]
+        },
+        "settings_at_start": {
+          "type": [
+            "object",
+            "null"
+          ]
+        },
+        "settings_sha256": {
+          "pattern": "^[0-9a-f]{64}$",
+          "type": "string"
+        },
+        "source_id": {
+          "enum": [
+            "S1",
+            "S2"
+          ]
+        },
+        "started_at": {
+          "pattern": "^\\d{4}-\\d{2}-\\d{2}T\\d{2}:\\d{2}:\\d{2}(?:\\.\\d+)?Z$",
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "started_monotonic_ns": {
+          "minimum": 0,
+          "type": [
+            "integer",
+            "null"
+          ]
+        },
+        "warnings": {
+          "items": {
+            "minLength": 1,
+            "type": "string"
+          },
+          "minItems": 0,
+          "type": "array"
+        }
+      },
+      "required": [
+        "lock_sha256",
+        "authorizing_commit",
+        "settings_sha256",
+        "settings_at_start",
+        "settings_at_finish",
+        "started_at",
+        "ended_at",
+        "errors",
+        "warnings",
+        "completeness",
+        "capture_id",
+        "session_id",
+        "source_id",
+        "repetition",
+        "expected_activation_slots",
+        "started_monotonic_ns",
+        "ended_monotonic_ns",
+        "recorder_exit_status",
+        "dropped_samples",
+        "raw_files",
+        "activations",
+        "logs",
+        "operator_notes"
+      ],
+      "type": "object"
+    },
+    "experiment": {
+      "additionalProperties": false,
+      "properties": {
+        "acquisition_plan": {},
+        "anomaly_policy": {},
+        "artifact_paths": {},
+        "candidates": {},
+        "conflicts": {},
+        "decision": {},
+        "design": {},
+        "episode_segmentation": {},
+        "evidence_sha256": {},
+        "excluded_evidence": {},
+        "format": {},
+        "labels": {},
+        "missing_data_policy": {},
+        "parent_checkpoint": {},
+        "parent_commit": {},
+        "parent_decision": {},
+        "policies": {},
+        "post_commit_binding": {},
+        "schema_sha256": {
+          "pattern": "^[0-9a-f]{64}$",
+          "type": "string"
+        },
+        "scientific_execution": {},
+        "settings": {},
+        "stage37_decision": {},
+        "state": {}
+      },
+      "required": [
+        "format",
+        "parent_checkpoint",
+        "parent_commit",
+        "parent_decision",
+        "stage37_decision",
+        "state",
+        "decision",
+        "scientific_execution",
+        "candidates",
+        "design",
+        "acquisition_plan",
+        "episode_segmentation",
+        "anomaly_policy",
+        "missing_data_policy",
+        "settings",
+        "conflicts",
+        "excluded_evidence",
+        "labels",
+        "artifact_paths",
+        "post_commit_binding",
+        "policies",
+        "evidence_sha256",
+        "schema_sha256"
+      ],
+      "type": "object"
+    },
+    "series": {
+      "additionalProperties": false,
+      "properties": {
+        "authorizing_commit": {
+          "pattern": "^[0-9a-f]{40}$",
+          "type": "string"
+        },
+        "lock_sha256": {
+          "pattern": "^[0-9a-f]{64}$",
+          "type": "string"
+        },
+        "sessions": {
+          "items": {
+            "$ref": "#/$defs/session"
+          },
+          "maxItems": 8,
+          "minItems": 8,
+          "type": "array"
+        }
+      },
+      "required": [
+        "lock_sha256",
+        "authorizing_commit",
+        "sessions"
+      ],
+      "type": "object"
+    },
+    "session": {
+      "additionalProperties": false,
+      "properties": {
+        "authorizing_commit": {
+          "pattern": "^[0-9a-f]{40}$",
+          "type": "string"
+        },
+        "capture_order": {
+          "items": {
+            "minLength": 1,
+            "type": "string"
+          },
+          "maxItems": 6,
+          "minItems": 6,
+          "type": "array"
+        },
+        "captures": {
+          "items": {
+            "$ref": "#/$defs/capture"
+          },
+          "maxItems": 6,
+          "minItems": 6,
+          "type": "array"
+        },
+        "completeness": {
+          "enum": [
+            "COMPLETE",
+            "INCOMPLETE",
+            "ABORTED",
+            "NOT_STARTED"
+          ]
+        },
+        "ended_at": {
+          "pattern": "^\\d{4}-\\d{2}-\\d{2}T\\d{2}:\\d{2}:\\d{2}(?:\\.\\d+)?Z$",
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "errors": {
+          "items": {
+            "minLength": 1,
+            "type": "string"
+          },
+          "minItems": 0,
+          "type": "array"
+        },
+        "lock_sha256": {
+          "pattern": "^[0-9a-f]{64}$",
+          "type": "string"
+        },
+        "metadata": {
+          "additionalProperties": false,
+          "properties": {
+            "ambient_temperature": {
+              "minLength": 1,
+              "type": "string"
+            },
+            "battery_states": {
+              "minLength": 1,
+              "type": "string"
+            },
+            "deviations": {
+              "minLength": 1,
+              "type": "string"
+            },
+            "interference": {
+              "minLength": 1,
+              "type": "string"
+            },
+            "location_geometry_reference": {
+              "minLength": 1,
+              "type": "string"
+            },
+            "operator_id": {
+              "minLength": 1,
+              "type": "string"
+            },
+            "operator_notes": {
+              "minLength": 1,
+              "type": "string"
+            },
+            "source_state": {
+              "minLength": 1,
+              "type": "string"
+            }
+          },
+          "required": [
+            "operator_id",
+            "operator_notes",
+            "ambient_temperature",
+            "battery_states",
+            "interference",
+            "deviations",
+            "location_geometry_reference",
+            "source_state"
+          ],
+          "type": "object"
+        },
+        "ordinal": {
+          "maximum": 8,
+          "minimum": 1,
+          "type": "integer"
+        },
+        "previous_session_id": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "separation_seconds": {
+          "type": [
+            "number",
+            "null"
+          ]
+        },
+        "session_id": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "settings_at_finish": {
+          "type": [
+            "object",
+            "null"
+          ]
+        },
+        "settings_at_start": {
+          "type": [
+            "object",
+            "null"
+          ]
+        },
+        "settings_sha256": {
+          "pattern": "^[0-9a-f]{64}$",
+          "type": "string"
+        },
+        "started_at": {
+          "pattern": "^\\d{4}-\\d{2}-\\d{2}T\\d{2}:\\d{2}:\\d{2}(?:\\.\\d+)?Z$",
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "warnings": {
+          "items": {
+            "minLength": 1,
+            "type": "string"
+          },
+          "minItems": 0,
+          "type": "array"
+        }
+      },
+      "required": [
+        "lock_sha256",
+        "authorizing_commit",
+        "settings_sha256",
+        "settings_at_start",
+        "settings_at_finish",
+        "started_at",
+        "ended_at",
+        "errors",
+        "warnings",
+        "completeness",
+        "session_id",
+        "ordinal",
+        "previous_session_id",
+        "separation_seconds",
+        "metadata",
+        "capture_order",
+        "captures"
+      ],
+      "type": "object"
+    }
+  },
+  "$id": "urn:hardsignal:kraken:v2:acquisition:manifest:v1",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "oneOf": [
+    {
+      "$ref": "#/$defs/experiment"
+    },
+    {
+      "$ref": "#/$defs/session"
+    },
+    {
+      "$ref": "#/$defs/capture"
+    },
+    {
+      "$ref": "#/$defs/series"
+    }
+  ],
+  "title": "Closed metadata schemas; no fabricated session/capture instances. Semantic checks require validator."
+}
