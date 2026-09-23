@@ -25,6 +25,16 @@ TRACK_WINDOW = 5
 TRACK_STABLE_SPREAD_MAX = 5.0
 TRACK_SHIFTING_SPREAD_MIN = 12.0
 
+# Track maturity / ageing.
+# A mature track has earned more tolerance to transient bad RF.
+TRACK_MATURE_BURSTS = 20
+
+TRACK_DEGRADE_REJECTS = 3
+TRACK_LOST_REJECTS = 5
+
+TRACK_MATURE_DEGRADE_REJECTS = 5
+TRACK_MATURE_LOST_REJECTS = 8
+
 last_size = None
 event_rows = []
 last_event_time = None
@@ -34,6 +44,11 @@ stable_burst_bearings = deque(maxlen=TRACK_WINDOW)
 
 previous_track_state = "INSUFFICIENT_DATA"
 last_stable_track_mean = None
+
+previous_track_health = "BUILDING"
+track_support_bursts = 0
+rejected_streak = 0
+track_started_monotonic = None
 
 
 def classify_track(bearings):
@@ -225,6 +240,61 @@ while True:
             "NA" if track_spread is None else f"{track_spread:.1f}"
         )
 
+        # ----------------------------------------------------
+        # Track ageing / maturity
+        # ----------------------------------------------------
+        if quality == "STABLE":
+            rejected_streak = 0
+        else:
+            rejected_streak += 1
+
+        # Start or continue support for an established stable track.
+        if track_state == "TRACK_STABLE":
+            if previous_track_state != "TRACK_STABLE":
+                track_support_bursts = TRACK_WINDOW
+                track_started_monotonic = time.monotonic()
+            elif quality == "STABLE":
+                track_support_bursts += 1
+
+        # A real directional transition starts a new track epoch.
+        elif track_state in ("TRACK_SHIFTING", "TRACK_VARIABLE"):
+            track_support_bursts = 0
+            track_started_monotonic = None
+
+        if track_support_bursts >= TRACK_MATURE_BURSTS:
+            track_maturity = "MATURE"
+            degrade_limit = TRACK_MATURE_DEGRADE_REJECTS
+            lost_limit = TRACK_MATURE_LOST_REJECTS
+
+        elif track_support_bursts >= TRACK_WINDOW:
+            track_maturity = "ESTABLISHED"
+            degrade_limit = TRACK_DEGRADE_REJECTS
+            lost_limit = TRACK_LOST_REJECTS
+
+        else:
+            track_maturity = "BUILDING"
+            degrade_limit = TRACK_DEGRADE_REJECTS
+            lost_limit = TRACK_LOST_REJECTS
+
+        if track_state == "INSUFFICIENT_DATA":
+            track_health = "BUILDING"
+
+        elif rejected_streak >= lost_limit:
+            track_health = "LOST"
+
+        elif rejected_streak >= degrade_limit:
+            track_health = "DEGRADED"
+
+        else:
+            track_health = "HEALTHY"
+
+        if track_started_monotonic is None:
+            track_age_seconds = 0
+        else:
+            track_age_seconds = int(
+                time.monotonic() - track_started_monotonic
+            )
+
         track_event = None
 
         if track_state != previous_track_state:
@@ -250,7 +320,22 @@ while True:
                 track_state == "TRACK_VARIABLE"
                 and previous_track_state == "TRACK_STABLE"
             ):
-                track_event = "TRACK_DEGRADED"
+                track_event = "TRACK_VARIABLE"
+
+        health_event = None
+
+        if track_health != previous_track_health:
+            if track_health == "DEGRADED":
+                health_event = "TRACK_DEGRADED"
+
+            elif track_health == "LOST":
+                health_event = "TRACK_LOST"
+
+            elif (
+                track_health == "HEALTHY"
+                and previous_track_health in ("DEGRADED", "LOST")
+            ):
+                health_event = "TRACK_RECOVERED"
 
         old_track_mean_text = (
             "NA"
@@ -279,6 +364,11 @@ while True:
             f"track_mean={track_mean_text}° | "
             f"track_spread={track_spread_text}° | "
             f"track_count={track_count} | "
+            f"track_health={track_health} | "
+            f"track_maturity={track_maturity} | "
+            f"track_support={track_support_bursts} | "
+            f"rejected_streak={rejected_streak} | "
+            f"track_age_s={track_age_seconds} | "
             f"samples={len(event_rows)}"
         )
 
@@ -303,6 +393,11 @@ while True:
                 f"track_mean={track_mean_text},"
                 f"track_spread={track_spread_text},"
                 f"track_count={track_count},"
+                f"track_health={track_health},"
+                f"track_maturity={track_maturity},"
+                f"track_support={track_support_bursts},"
+                f"rejected_streak={rejected_streak},"
+                f"track_age_s={track_age_seconds},"
                 f"samples={len(event_rows)}\n"
             )
 
@@ -336,10 +431,47 @@ while True:
                     f"track_count={track_count}\n"
                 )
 
+        if health_event is not None:
+            print(
+                f"{timestamp} | "
+                f"PROJECT={PROJECT_NAME} | "
+                f"SESSION={SESSION_ID} | "
+                f"{health_event} | "
+                f"track_health={track_health} | "
+                f"track_maturity={track_maturity} | "
+                f"track_mean={track_mean_text}° | "
+                f"rejected_streak={rejected_streak} | "
+                f"track_support={track_support_bursts} | "
+                f"track_age_s={track_age_seconds}"
+            )
+
+            with TRACK_EVENT_LOG_PATH.open("a") as event_log:
+                event_log.write(
+                    f"time={timestamp},"
+                    f"project={PROJECT_NAME},"
+                    f"session_id={SESSION_ID},"
+                    f"event={health_event},"
+                    f"track_health={track_health},"
+                    f"track_maturity={track_maturity},"
+                    f"track_mean={track_mean_text},"
+                    f"rejected_streak={rejected_streak},"
+                    f"track_support={track_support_bursts},"
+                    f"track_age_s={track_age_seconds}\n"
+                )
+
         previous_track_state = track_state
+        previous_track_health = track_health
 
         if track_state == "TRACK_STABLE" and track_mean is not None:
             last_stable_track_mean = track_mean
+
+        # Once a track is declared lost, discard the stale rolling
+        # bearings. New clean observations must earn a new track.
+        if track_health == "LOST":
+            stable_burst_bearings.clear()
+            track_support_bursts = 0
+            track_started_monotonic = None
+            previous_track_state = "INSUFFICIENT_DATA"
 
         event_active = False
         event_rows = []
