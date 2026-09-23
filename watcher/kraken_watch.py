@@ -14,6 +14,7 @@ from kraken_project import (
 )
 
 LOG_PATH = Path.home() / "kraken_bursts.log"
+TRACK_EVENT_LOG_PATH = Path.home() / "kraken_track_events.log"
 CSV_PATH = Path.home() / "krakensdr_doa" / "mydata.csv"
 
 POWER_THRESHOLD = -45.0
@@ -30,6 +31,9 @@ last_event_time = None
 event_active = False
 
 stable_burst_bearings = deque(maxlen=TRACK_WINDOW)
+
+previous_track_state = "INSUFFICIENT_DATA"
+last_stable_track_mean = None
 
 
 def classify_track(bearings):
@@ -221,6 +225,39 @@ while True:
             "NA" if track_spread is None else f"{track_spread:.1f}"
         )
 
+        track_event = None
+
+        if track_state != previous_track_state:
+            if (
+                track_state == "TRACK_STABLE"
+                and previous_track_state == "INSUFFICIENT_DATA"
+            ):
+                track_event = "TRACK_ACQUIRED"
+
+            elif (
+                track_state == "TRACK_STABLE"
+                and previous_track_state in ("TRACK_SHIFTING", "TRACK_VARIABLE")
+            ):
+                track_event = "TRACK_REACQUIRED"
+
+            elif (
+                track_state == "TRACK_SHIFTING"
+                and last_stable_track_mean is not None
+            ):
+                track_event = "TRACK_SHIFT_DETECTED"
+
+            elif (
+                track_state == "TRACK_VARIABLE"
+                and previous_track_state == "TRACK_STABLE"
+            ):
+                track_event = "TRACK_DEGRADED"
+
+        old_track_mean_text = (
+            "NA"
+            if last_stable_track_mean is None
+            else f"{last_stable_track_mean:.1f}"
+        )
+
         timestamp = datetime.now().isoformat(timespec="seconds")
 
         print(
@@ -268,6 +305,41 @@ while True:
                 f"track_count={track_count},"
                 f"samples={len(event_rows)}\n"
             )
+
+        if track_event is not None:
+            print(
+                f"{timestamp} | "
+                f"PROJECT={PROJECT_NAME} | "
+                f"SESSION={SESSION_ID} | "
+                f"{track_event} | "
+                f"previous_state={previous_track_state} | "
+                f"current_state={track_state} | "
+                f"old_track_mean={old_track_mean_text}° | "
+                f"current_bearing={mean_bearing:.1f}° | "
+                f"track_mean={track_mean_text}° | "
+                f"track_spread={track_spread_text}° | "
+                f"track_count={track_count}"
+            )
+
+            with TRACK_EVENT_LOG_PATH.open("a") as event_log:
+                event_log.write(
+                    f"time={timestamp},"
+                    f"project={PROJECT_NAME},"
+                    f"session_id={SESSION_ID},"
+                    f"event={track_event},"
+                    f"previous_state={previous_track_state},"
+                    f"current_state={track_state},"
+                    f"old_track_mean={old_track_mean_text},"
+                    f"current_bearing={mean_bearing:.1f},"
+                    f"track_mean={track_mean_text},"
+                    f"track_spread={track_spread_text},"
+                    f"track_count={track_count}\n"
+                )
+
+        previous_track_state = track_state
+
+        if track_state == "TRACK_STABLE" and track_mean is not None:
+            last_stable_track_mean = track_mean
 
         event_active = False
         event_rows = []
