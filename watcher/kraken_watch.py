@@ -35,12 +35,25 @@ TRACK_LOST_REJECTS = 5
 TRACK_MATURE_DEGRADE_REJECTS = 5
 TRACK_MATURE_LOST_REJECTS = 8
 
+# Clean observations far from the active track must form a
+# coherent candidate cluster before the active track can move.
+TRACK_SHIFT_CANDIDATE_MIN_DEG = 20.0
+TRACK_CANDIDATE_JOIN_MAX_DEG = 12.0
+TRACK_CANDIDATE_SPREAD_MAX = 5.0
+
+# Mature tracks require more evidence before accepting a shift.
+TRACK_ESTABLISHED_SHIFT_CONFIRM = 5
+TRACK_MATURE_SHIFT_CONFIRM = 7
+
 last_size = None
 event_rows = []
 last_event_time = None
 event_active = False
 
 stable_burst_bearings = deque(maxlen=TRACK_WINDOW)
+shift_candidate_bearings = deque(
+    maxlen=TRACK_MATURE_SHIFT_CONFIRM
+)
 
 previous_track_state = "INSUFFICIENT_DATA"
 last_stable_track_mean = None
@@ -49,6 +62,28 @@ previous_track_health = "BUILDING"
 track_support_bursts = 0
 rejected_streak = 0
 track_started_monotonic = None
+
+
+def angular_distance_deg(a, b):
+    return abs((a - b + 180.0) % 360.0 - 180.0)
+
+
+def circular_summary(bearings):
+    if not bearings:
+        return None, None
+
+    x = statistics.mean(cos(radians(b)) for b in bearings)
+    y = statistics.mean(sin(radians(b)) for b in bearings)
+
+    mean_bearing = degrees(atan2(y, x)) % 360
+
+    circular_r = sqrt(x * x + y * y)
+    circular_r = min(1.0, max(circular_r, 1e-12))
+    circular_std = degrees(
+        sqrt(-2.0 * math_log(circular_r))
+    )
+
+    return mean_bearing, circular_std
 
 
 def classify_track(bearings):
@@ -224,9 +259,98 @@ while True:
             single_peak_ratio=single_peak_ratio,
         )
 
-        # Only high-quality individual bursts contribute to source tracking.
+        # ----------------------------------------------------
+        # Clean-shift hysteresis
+        # ----------------------------------------------------
+        active_track_supported = False
+        shift_confirmed = False
+        shift_candidate_status = "NONE"
+        shift_candidate_count = len(shift_candidate_bearings)
+
+        shift_candidate_required = (
+            TRACK_MATURE_SHIFT_CONFIRM
+            if track_support_bursts >= TRACK_MATURE_BURSTS
+            else TRACK_ESTABLISHED_SHIFT_CONFIRM
+        )
+
         if quality == "STABLE":
-            stable_burst_bearings.append(mean_bearing)
+            active_reference = last_stable_track_mean
+
+            active_established = (
+                active_reference is not None
+                and len(stable_burst_bearings) >= TRACK_WINDOW
+            )
+
+            # No established track yet: build normally.
+            if not active_established:
+                stable_burst_bearings.append(mean_bearing)
+                shift_candidate_bearings.clear()
+                shift_candidate_status = "NONE"
+                shift_candidate_count = 0
+                active_track_supported = True
+
+            else:
+                distance_from_track = angular_distance_deg(
+                    mean_bearing,
+                    active_reference,
+                )
+
+                # Observation agrees with active track.
+                if distance_from_track < TRACK_SHIFT_CANDIDATE_MIN_DEG:
+                    stable_burst_bearings.append(mean_bearing)
+                    shift_candidate_bearings.clear()
+                    shift_candidate_status = "NONE"
+                    shift_candidate_count = 0
+                    active_track_supported = True
+
+                # Clean but far away: build a candidate track.
+                else:
+                    if shift_candidate_bearings:
+                        candidate_mean, _ = circular_summary(
+                            shift_candidate_bearings
+                        )
+
+                        if (
+                            angular_distance_deg(
+                                mean_bearing,
+                                candidate_mean,
+                            )
+                            > TRACK_CANDIDATE_JOIN_MAX_DEG
+                        ):
+                            shift_candidate_bearings.clear()
+
+                    shift_candidate_bearings.append(mean_bearing)
+
+                    candidate_mean, candidate_spread = circular_summary(
+                        shift_candidate_bearings
+                    )
+
+                    shift_candidate_count = len(
+                        shift_candidate_bearings
+                    )
+                    shift_candidate_status = "PENDING"
+
+                    if (
+                        shift_candidate_count
+                        >= shift_candidate_required
+                        and candidate_spread
+                        <= TRACK_CANDIDATE_SPREAD_MAX
+                    ):
+                        # Candidate has earned the active track.
+                        confirmed = list(
+                            shift_candidate_bearings
+                        )
+
+                        stable_burst_bearings.clear()
+                        stable_burst_bearings.extend(
+                            confirmed[-TRACK_WINDOW:]
+                        )
+
+                        shift_candidate_status = "CONFIRMED"
+                        shift_confirmed = True
+                        active_track_supported = True
+
+                        shift_candidate_bearings.clear()
 
         track_state, track_mean, track_spread = classify_track(
             stable_burst_bearings
@@ -250,10 +374,15 @@ while True:
 
         # Start or continue support for an established stable track.
         if track_state == "TRACK_STABLE":
-            if previous_track_state != "TRACK_STABLE":
+            if shift_confirmed:
                 track_support_bursts = TRACK_WINDOW
                 track_started_monotonic = time.monotonic()
-            elif quality == "STABLE":
+
+            elif previous_track_state != "TRACK_STABLE":
+                track_support_bursts = TRACK_WINDOW
+                track_started_monotonic = time.monotonic()
+
+            elif active_track_supported:
                 track_support_bursts += 1
 
         # A real directional transition starts a new track epoch.
@@ -322,6 +451,9 @@ while True:
             ):
                 track_event = "TRACK_VARIABLE"
 
+        if shift_confirmed:
+            track_event = "TRACK_SHIFT_CONFIRMED"
+
         health_event = None
 
         if track_health != previous_track_health:
@@ -369,6 +501,9 @@ while True:
             f"track_support={track_support_bursts} | "
             f"rejected_streak={rejected_streak} | "
             f"track_age_s={track_age_seconds} | "
+            f"shift_candidate={shift_candidate_status} | "
+            f"shift_candidate_count={shift_candidate_count} | "
+            f"shift_candidate_required={shift_candidate_required} | "
             f"samples={len(event_rows)}"
         )
 
@@ -398,6 +533,9 @@ while True:
                 f"track_support={track_support_bursts},"
                 f"rejected_streak={rejected_streak},"
                 f"track_age_s={track_age_seconds},"
+                f"shift_candidate={shift_candidate_status},"
+                f"shift_candidate_count={shift_candidate_count},"
+                f"shift_candidate_required={shift_candidate_required},"
                 f"samples={len(event_rows)}\n"
             )
 
@@ -469,7 +607,9 @@ while True:
         # bearings. New clean observations must earn a new track.
         if track_health == "LOST":
             stable_burst_bearings.clear()
+            shift_candidate_bearings.clear()
             track_support_bursts = 0
+            rejected_streak = 0
             track_started_monotonic = None
             previous_track_state = "INSUFFICIENT_DATA"
 
