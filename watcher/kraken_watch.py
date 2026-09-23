@@ -405,7 +405,10 @@ while True:
             degrade_limit = TRACK_DEGRADE_REJECTS
             lost_limit = TRACK_LOST_REJECTS
 
-        if track_state == "INSUFFICIENT_DATA":
+        # Health degradation/loss only makes sense after a track
+        # has actually been established. BUILDING tracks cannot
+        # become DEGRADED or LOST.
+        if track_support_bursts < TRACK_WINDOW:
             track_health = "BUILDING"
 
         elif rejected_streak >= lost_limit:
