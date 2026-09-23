@@ -15,7 +15,12 @@ from kraken_project import (
 
 LOG_PATH = Path.home() / "kraken_bursts.log"
 TRACK_EVENT_LOG_PATH = Path.home() / "kraken_track_events.log"
+EPISODE_EVENT_LOG_PATH = (
+    Path.home() / "kraken_episode_events.jsonl"
+)
 from watcher.tracker_engine import TrackerEngine
+from watcher.source_episode import SourceEpisodeEngine
+from watcher.episode_summary import episode_event_json
 
 from watcher.tracker_policy import (
     TRACK_MATURE_SHIFT_CONFIRM,
@@ -47,6 +52,8 @@ last_event_time = None
 event_active = False
 
 tracker = TrackerEngine()
+episodes = SourceEpisodeEngine()
+observation_index = 0
 track_started_monotonic = None
 
 
@@ -257,6 +264,13 @@ while True:
             quality,
         )
 
+        observation_index += 1
+
+        episode_result = episodes.process(
+            observation_index,
+            tracker_result,
+        )
+
         track_state = tracker_result["track_state"]
         track_mean = tracker_result["track_mean"]
         track_spread = tracker_result["track_spread"]
@@ -354,6 +368,40 @@ while True:
         )
 
         timestamp = datetime.now().isoformat(timespec="seconds")
+
+        for episode_event in episode_result["events"]:
+            if episode_event["event"] == "EPISODE_CLOSED":
+                episode_object = next(
+                    episode
+                    for episode in reversed(
+                        episodes.completed_episodes
+                    )
+                    if episode["episode_id"]
+                    == episode_event["episode_id"]
+                )
+
+            else:
+                episode_object = episodes.active_episode
+
+            episode_line = episode_event_json(
+                episode_event,
+                episode_object,
+                session_id=SESSION_ID,
+                timestamp=timestamp,
+                project_name=PROJECT_NAME,
+            )
+
+            with EPISODE_EVENT_LOG_PATH.open("a") as episode_log:
+                episode_log.write(episode_line + "\n")
+
+            print(
+                f"{timestamp} | "
+                f"PROJECT={PROJECT_NAME} | "
+                f"SESSION={SESSION_ID} | "
+                f"{episode_event['event']} | "
+                f"episode_id={episode_event['episode_id']} | "
+                f"observation={episode_event['observation_index']}"
+            )
 
         print(
             f"{timestamp} | "

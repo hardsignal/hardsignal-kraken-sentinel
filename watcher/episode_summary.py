@@ -2,6 +2,7 @@ import json
 
 
 EPISODE_SUMMARY_VERSION = 1
+EPISODE_EVENT_VERSION = 1
 
 REQUIRED_FIELDS = (
     "episode_id",
@@ -49,6 +50,61 @@ def build_episode_summary(episode):
 def episode_summary_json(episode):
     return json.dumps(
         build_episode_summary(episode),
+        sort_keys=True,
+        separators=(",", ":"),
+    )
+
+
+def build_episode_event_record(
+    event,
+    episode,
+    *,
+    session_id,
+    timestamp,
+    project_name,
+):
+    event_name = event.get("event")
+
+    if event_name not in (
+        "EPISODE_STARTED",
+        "EPISODE_CLOSED",
+    ):
+        raise ValueError(
+            "unsupported episode event: "
+            + str(event_name)
+        )
+
+    return {
+        "version": EPISODE_EVENT_VERSION,
+        "timestamp": timestamp,
+        "project": project_name,
+        "session_id": session_id,
+        "event": event_name,
+        "episode_id": int(event["episode_id"]),
+        "observation_index": int(
+            event["observation_index"]
+        ),
+        "reason": event.get("reason"),
+        "summary": build_episode_summary(episode),
+    }
+
+
+def episode_event_json(
+    event,
+    episode,
+    *,
+    session_id,
+    timestamp,
+    project_name,
+):
+    return json.dumps(
+        build_episode_event_record(
+            event,
+            episode,
+            session_id=session_id,
+            timestamp=timestamp,
+            project_name=project_name,
+        ),
         sort_keys=True,
         separators=(",", ":"),
     )

@@ -4,7 +4,9 @@ import unittest
 from pathlib import Path
 
 from watcher.episode_summary import (
+    build_episode_event_record,
     build_episode_summary,
+    episode_event_json,
     episode_summary_json,
 )
 from watcher.source_episode import SourceEpisodeEngine
@@ -111,6 +113,63 @@ class EpisodeSummaryTests(unittest.TestCase):
                     "status": "ACTIVE",
                 }
             )
+
+
+    def test_episode_started_event_record(self):
+        episodes = replay_real_rf()
+
+        episode = episodes.active_episode
+
+        event = {
+            "event": "EPISODE_STARTED",
+            "episode_id": 2,
+            "observation_index": 17,
+        }
+
+        record = build_episode_event_record(
+            event,
+            episode,
+            session_id="TEST-SESSION",
+            timestamp="2026-09-23T04:00:00",
+            project_name="KRAKEN RF SENTINEL",
+        )
+
+        self.assertEqual(record["version"], 1)
+        self.assertEqual(record["event"], "EPISODE_STARTED")
+        self.assertEqual(record["episode_id"], 2)
+        self.assertEqual(record["observation_index"], 17)
+        self.assertIsNone(record["reason"])
+        self.assertEqual(record["summary"]["start_mean"], 144.0)
+
+    def test_episode_event_json_is_deterministic(self):
+        episodes = replay_real_rf()
+
+        episode = episodes.completed_episodes[0]
+
+        event = {
+            "event": "EPISODE_CLOSED",
+            "episode_id": 1,
+            "observation_index": 16,
+            "reason": "SHIFT_CONFIRMED",
+        }
+
+        a = episode_event_json(
+            event,
+            episode,
+            session_id="TEST-SESSION",
+            timestamp="2026-09-23T04:00:00",
+            project_name="KRAKEN RF SENTINEL",
+        )
+
+        b = episode_event_json(
+            event,
+            episode,
+            session_id="TEST-SESSION",
+            timestamp="2026-09-23T04:00:00",
+            project_name="KRAKEN RF SENTINEL",
+        )
+
+        self.assertEqual(a, b)
 
 
 if __name__ == "__main__":
