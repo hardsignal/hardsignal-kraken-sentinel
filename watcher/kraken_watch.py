@@ -15,6 +15,8 @@ from kraken_project import (
 
 LOG_PATH = Path.home() / "kraken_bursts.log"
 TRACK_EVENT_LOG_PATH = Path.home() / "kraken_track_events.log"
+from watcher.tracker_engine import TrackerEngine
+
 from watcher.tracker_policy import (
     TRACK_MATURE_SHIFT_CONFIRM,
     TRACK_WINDOW,
@@ -44,17 +46,7 @@ event_rows = []
 last_event_time = None
 event_active = False
 
-stable_burst_bearings = deque(maxlen=TRACK_WINDOW)
-shift_candidate_bearings = deque(
-    maxlen=TRACK_MATURE_SHIFT_CONFIRM
-)
-
-previous_track_state = "INSUFFICIENT_DATA"
-last_stable_track_mean = None
-
-previous_track_health = "BUILDING"
-track_support_bursts = 0
-rejected_streak = 0
+tracker = TrackerEngine()
 track_started_monotonic = None
 
 
@@ -254,100 +246,34 @@ while True:
         )
 
         # ----------------------------------------------------
-        # Clean-shift hysteresis
+        # Shared live/replay tracker engine
         # ----------------------------------------------------
-        active_track_supported = False
-        shift_confirmed = False
-        shift_candidate_status = "NONE"
-        shift_candidate_count = len(shift_candidate_bearings)
+        previous_track_state = tracker.previous_track_state
+        previous_track_health = tracker.previous_track_health
+        last_stable_track_mean = tracker.last_stable_track_mean
 
-        shift_candidate_required = shift_confirm_required(
-            track_support_bursts
+        tracker_result = tracker.process(
+            mean_bearing,
+            quality,
         )
 
-        if quality == "STABLE":
-            active_reference = last_stable_track_mean
+        track_state = tracker_result["track_state"]
+        track_mean = tracker_result["track_mean"]
+        track_spread = tracker_result["track_spread"]
+        track_count = tracker_result["track_count"]
 
-            active_established = (
-                active_reference is not None
-                and len(stable_burst_bearings) >= TRACK_WINDOW
-            )
+        track_health = tracker_result["track_health"]
+        track_maturity = tracker_result["track_maturity"]
+        track_support_bursts = tracker_result["track_support"]
+        rejected_streak = tracker_result["rejected_streak"]
 
-            # No established track yet: build normally.
-            if not active_established:
-                stable_burst_bearings.append(mean_bearing)
-                shift_candidate_bearings.clear()
-                shift_candidate_status = "NONE"
-                shift_candidate_count = 0
-                active_track_supported = True
+        shift_candidate_status = tracker_result["shift_candidate"]
+        shift_candidate_count = tracker_result["shift_candidate_count"]
+        shift_candidate_required = tracker_result[
+            "shift_candidate_required"
+        ]
+        shift_confirmed = tracker_result["shift_confirmed"]
 
-            else:
-                distance_from_track = angular_distance_deg(
-                    mean_bearing,
-                    active_reference,
-                )
-
-                # Observation agrees with active track.
-                if distance_from_track < TRACK_SHIFT_CANDIDATE_MIN_DEG:
-                    stable_burst_bearings.append(mean_bearing)
-                    shift_candidate_bearings.clear()
-                    shift_candidate_status = "NONE"
-                    shift_candidate_count = 0
-                    active_track_supported = True
-
-                # Clean but far away: build a candidate track.
-                else:
-                    if shift_candidate_bearings:
-                        candidate_mean, _ = circular_summary(
-                            shift_candidate_bearings
-                        )
-
-                        if (
-                            angular_distance_deg(
-                                mean_bearing,
-                                candidate_mean,
-                            )
-                            > TRACK_CANDIDATE_JOIN_MAX_DEG
-                        ):
-                            shift_candidate_bearings.clear()
-
-                    shift_candidate_bearings.append(mean_bearing)
-
-                    candidate_mean, candidate_spread = circular_summary(
-                        shift_candidate_bearings
-                    )
-
-                    shift_candidate_count = len(
-                        shift_candidate_bearings
-                    )
-                    shift_candidate_status = "PENDING"
-
-                    if shift_candidate_confirmed(
-                        shift_candidate_count,
-                        candidate_spread,
-                        track_support_bursts,
-                    ):
-                        # Candidate has earned the active track.
-                        confirmed = list(
-                            shift_candidate_bearings
-                        )
-
-                        stable_burst_bearings.clear()
-                        stable_burst_bearings.extend(
-                            confirmed[-TRACK_WINDOW:]
-                        )
-
-                        shift_candidate_status = "CONFIRMED"
-                        shift_confirmed = True
-                        active_track_supported = True
-
-                        shift_candidate_bearings.clear()
-
-        track_state, track_mean, track_spread = classify_track(
-            stable_burst_bearings
-        )
-
-        track_count = len(stable_burst_bearings)
         track_mean_text = (
             "NA" if track_mean is None else f"{track_mean:.1f}"
         )
@@ -355,40 +281,19 @@ while True:
             "NA" if track_spread is None else f"{track_spread:.1f}"
         )
 
-        # ----------------------------------------------------
-        # Track ageing / maturity
-        # ----------------------------------------------------
-        if quality == "STABLE":
-            rejected_streak = 0
-        else:
-            rejected_streak += 1
+        # Track-age timing remains a watcher concern because replay
+        # deliberately has no dependency on wall/monotonic time.
+        if shift_confirmed:
+            track_started_monotonic = time.monotonic()
 
-        # Start or continue support for an established stable track.
-        if track_state == "TRACK_STABLE":
-            if shift_confirmed:
-                track_support_bursts = TRACK_WINDOW
-                track_started_monotonic = time.monotonic()
+        elif (
+            track_state == "TRACK_STABLE"
+            and previous_track_state != "TRACK_STABLE"
+        ):
+            track_started_monotonic = time.monotonic()
 
-            elif previous_track_state != "TRACK_STABLE":
-                track_support_bursts = TRACK_WINDOW
-                track_started_monotonic = time.monotonic()
-
-            elif active_track_supported:
-                track_support_bursts += 1
-
-        # A real directional transition starts a new track epoch.
         elif track_state in ("TRACK_SHIFTING", "TRACK_VARIABLE"):
-            track_support_bursts = 0
             track_started_monotonic = None
-
-        track_maturity, _, _ = maturity_and_limits(
-            track_support_bursts
-        )
-
-        track_health = track_health_for(
-            track_support_bursts,
-            rejected_streak,
-        )
 
         if track_started_monotonic is None:
             track_age_seconds = 0
@@ -570,21 +475,11 @@ while True:
                     f"track_age_s={track_age_seconds}\n"
                 )
 
-        previous_track_state = track_state
-        previous_track_health = track_health
-
-        if track_state == "TRACK_STABLE" and track_mean is not None:
-            last_stable_track_mean = track_mean
-
-        # Once a track is declared lost, discard the stale rolling
-        # bearings. New clean observations must earn a new track.
+        # TrackerEngine already committed state for the next burst.
+        # LOST resets its internal track immediately after producing
+        # the current LOST result; clear watcher-owned age afterward.
         if track_health == "LOST":
-            stable_burst_bearings.clear()
-            shift_candidate_bearings.clear()
-            track_support_bursts = 0
-            rejected_streak = 0
             track_started_monotonic = None
-            previous_track_state = "INSUFFICIENT_DATA"
 
         event_active = False
         event_rows = []
