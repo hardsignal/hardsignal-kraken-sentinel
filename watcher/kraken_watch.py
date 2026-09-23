@@ -1,7 +1,7 @@
 import csv
 import time
 import statistics
-from math import sin, cos, atan2, radians, degrees
+from math import sin, cos, atan2, radians, degrees, sqrt, log as math_log
 from datetime import datetime
 from pathlib import Path
 
@@ -23,6 +23,35 @@ last_size = None
 event_rows = []
 last_event_time = None
 event_active = False
+
+
+def classify_quality(
+    sample_count,
+    circular_std,
+    median_confidence,
+    median_doa_width,
+    single_peak_ratio,
+):
+    # Strong indicators that the DoA solution is being distorted
+    # by multiple paths / competing peaks.
+    if (
+        circular_std >= 12.0
+        or median_doa_width >= 80.0
+        or single_peak_ratio < 0.75
+    ):
+        return "MULTIPATH"
+
+    # Clean, repeatable solution.
+    if (
+        sample_count >= 3
+        and circular_std <= 7.0
+        and median_confidence >= 3.5
+        and median_doa_width <= 70.0
+        and single_peak_ratio >= 0.75
+    ):
+        return "STABLE"
+
+    return "LOW_QUALITY"
 
 
 def get_session_id():
@@ -114,11 +143,16 @@ while True:
         y = statistics.mean(sin(radians(b)) for b in bearings)
         mean_bearing = degrees(atan2(y, x)) % 360
 
+        circular_r = sqrt(x * x + y * y)
+        circular_r = min(1.0, max(circular_r, 1e-12))
+        circular_std = degrees(sqrt(-2.0 * math_log(circular_r)))
+
         powers = [r[1] for r in event_rows]
         peak_power = max(powers)
 
         confidences = [r[2] for r in event_rows]
         max_confidence = max(confidences)
+        median_confidence = statistics.median(confidences)
 
         frequencies = [r[3] for r in event_rows]
         mean_frequency = statistics.mean(frequencies)
@@ -128,6 +162,18 @@ while True:
 
         doa_peaks = [r[5] for r in event_rows]
         median_doa_peaks = statistics.median(doa_peaks)
+
+        single_peak_ratio = (
+            sum(1 for p in doa_peaks if p == 1) / len(doa_peaks)
+        )
+
+        quality = classify_quality(
+            sample_count=len(event_rows),
+            circular_std=circular_std,
+            median_confidence=median_confidence,
+            median_doa_width=median_doa_width,
+            single_peak_ratio=single_peak_ratio,
+        )
 
         timestamp = datetime.now().isoformat(timespec="seconds")
 
@@ -142,6 +188,10 @@ while True:
             f"max_confidence={max_confidence:.2f} | "
             f"doa_width={median_doa_width:.1f}° | "
             f"median_doa_peaks={median_doa_peaks:.1f} | "
+            f"bearing_spread={circular_std:.1f}° | "
+            f"median_confidence={median_confidence:.2f} | "
+            f"single_peak_ratio={single_peak_ratio:.2f} | "
+            f"quality={quality} | "
             f"samples={len(event_rows)}"
         )
 
@@ -158,6 +208,10 @@ while True:
                 f"max_confidence={max_confidence:.2f},"
                 f"doa_width={median_doa_width:.1f},"
                 f"median_doa_peaks={median_doa_peaks:.1f},"
+                f"bearing_spread={circular_std:.1f},"
+                f"median_confidence={median_confidence:.2f},"
+                f"single_peak_ratio={single_peak_ratio:.2f},"
+                f"quality={quality},"
                 f"samples={len(event_rows)}\n"
             )
 
