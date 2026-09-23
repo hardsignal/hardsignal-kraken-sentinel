@@ -4,6 +4,7 @@ import statistics
 from math import sin, cos, atan2, radians, degrees, sqrt, log as math_log
 from datetime import datetime
 from pathlib import Path
+from collections import deque
 
 from kraken_project import (
     PROJECT_LAB,
@@ -19,10 +20,39 @@ POWER_THRESHOLD = -45.0
 POLL_INTERVAL = 1.0
 EVENT_GAP = 3.0
 
+TRACK_WINDOW = 5
+TRACK_STABLE_SPREAD_MAX = 5.0
+TRACK_SHIFTING_SPREAD_MIN = 12.0
+
 last_size = None
 event_rows = []
 last_event_time = None
 event_active = False
+
+stable_burst_bearings = deque(maxlen=TRACK_WINDOW)
+
+
+def classify_track(bearings):
+    if len(bearings) < TRACK_WINDOW:
+        return "INSUFFICIENT_DATA", None, None
+
+    x = statistics.mean(cos(radians(b)) for b in bearings)
+    y = statistics.mean(sin(radians(b)) for b in bearings)
+
+    mean_bearing = degrees(atan2(y, x)) % 360
+
+    circular_r = sqrt(x * x + y * y)
+    circular_r = min(1.0, max(circular_r, 1e-12))
+    circular_std = degrees(sqrt(-2.0 * math_log(circular_r)))
+
+    if circular_std <= TRACK_STABLE_SPREAD_MAX:
+        state = "TRACK_STABLE"
+    elif circular_std >= TRACK_SHIFTING_SPREAD_MIN:
+        state = "TRACK_SHIFTING"
+    else:
+        state = "TRACK_VARIABLE"
+
+    return state, mean_bearing, circular_std
 
 
 def classify_quality(
@@ -175,6 +205,22 @@ while True:
             single_peak_ratio=single_peak_ratio,
         )
 
+        # Only high-quality individual bursts contribute to source tracking.
+        if quality == "STABLE":
+            stable_burst_bearings.append(mean_bearing)
+
+        track_state, track_mean, track_spread = classify_track(
+            stable_burst_bearings
+        )
+
+        track_count = len(stable_burst_bearings)
+        track_mean_text = (
+            "NA" if track_mean is None else f"{track_mean:.1f}"
+        )
+        track_spread_text = (
+            "NA" if track_spread is None else f"{track_spread:.1f}"
+        )
+
         timestamp = datetime.now().isoformat(timespec="seconds")
 
         print(
@@ -192,6 +238,10 @@ while True:
             f"median_confidence={median_confidence:.2f} | "
             f"single_peak_ratio={single_peak_ratio:.2f} | "
             f"quality={quality} | "
+            f"track_state={track_state} | "
+            f"track_mean={track_mean_text}° | "
+            f"track_spread={track_spread_text}° | "
+            f"track_count={track_count} | "
             f"samples={len(event_rows)}"
         )
 
@@ -212,6 +262,10 @@ while True:
                 f"median_confidence={median_confidence:.2f},"
                 f"single_peak_ratio={single_peak_ratio:.2f},"
                 f"quality={quality},"
+                f"track_state={track_state},"
+                f"track_mean={track_mean_text},"
+                f"track_spread={track_spread_text},"
+                f"track_count={track_count},"
                 f"samples={len(event_rows)}\n"
             )
 
