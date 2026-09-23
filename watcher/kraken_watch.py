@@ -15,35 +15,29 @@ from kraken_project import (
 
 LOG_PATH = Path.home() / "kraken_bursts.log"
 TRACK_EVENT_LOG_PATH = Path.home() / "kraken_track_events.log"
+from watcher.tracker_policy import (
+    TRACK_MATURE_SHIFT_CONFIRM,
+    TRACK_WINDOW,
+    maturity_and_limits,
+    shift_candidate_confirmed,
+    shift_confirm_required,
+    track_health_for,
+)
+
+
 CSV_PATH = Path.home() / "krakensdr_doa" / "mydata.csv"
 
 POWER_THRESHOLD = -45.0
 POLL_INTERVAL = 1.0
 EVENT_GAP = 3.0
 
-TRACK_WINDOW = 5
 TRACK_STABLE_SPREAD_MAX = 5.0
 TRACK_SHIFTING_SPREAD_MIN = 12.0
-
-# Track maturity / ageing.
-# A mature track has earned more tolerance to transient bad RF.
-TRACK_MATURE_BURSTS = 20
-
-TRACK_DEGRADE_REJECTS = 3
-TRACK_LOST_REJECTS = 5
-
-TRACK_MATURE_DEGRADE_REJECTS = 5
-TRACK_MATURE_LOST_REJECTS = 8
 
 # Clean observations far from the active track must form a
 # coherent candidate cluster before the active track can move.
 TRACK_SHIFT_CANDIDATE_MIN_DEG = 20.0
 TRACK_CANDIDATE_JOIN_MAX_DEG = 12.0
-TRACK_CANDIDATE_SPREAD_MAX = 5.0
-
-# Mature tracks require more evidence before accepting a shift.
-TRACK_ESTABLISHED_SHIFT_CONFIRM = 5
-TRACK_MATURE_SHIFT_CONFIRM = 7
 
 last_size = None
 event_rows = []
@@ -267,10 +261,8 @@ while True:
         shift_candidate_status = "NONE"
         shift_candidate_count = len(shift_candidate_bearings)
 
-        shift_candidate_required = (
-            TRACK_MATURE_SHIFT_CONFIRM
-            if track_support_bursts >= TRACK_MATURE_BURSTS
-            else TRACK_ESTABLISHED_SHIFT_CONFIRM
+        shift_candidate_required = shift_confirm_required(
+            track_support_bursts
         )
 
         if quality == "STABLE":
@@ -330,11 +322,10 @@ while True:
                     )
                     shift_candidate_status = "PENDING"
 
-                    if (
-                        shift_candidate_count
-                        >= shift_candidate_required
-                        and candidate_spread
-                        <= TRACK_CANDIDATE_SPREAD_MAX
+                    if shift_candidate_confirmed(
+                        shift_candidate_count,
+                        candidate_spread,
+                        track_support_bursts,
                     ):
                         # Candidate has earned the active track.
                         confirmed = list(
@@ -390,35 +381,14 @@ while True:
             track_support_bursts = 0
             track_started_monotonic = None
 
-        if track_support_bursts >= TRACK_MATURE_BURSTS:
-            track_maturity = "MATURE"
-            degrade_limit = TRACK_MATURE_DEGRADE_REJECTS
-            lost_limit = TRACK_MATURE_LOST_REJECTS
+        track_maturity, _, _ = maturity_and_limits(
+            track_support_bursts
+        )
 
-        elif track_support_bursts >= TRACK_WINDOW:
-            track_maturity = "ESTABLISHED"
-            degrade_limit = TRACK_DEGRADE_REJECTS
-            lost_limit = TRACK_LOST_REJECTS
-
-        else:
-            track_maturity = "BUILDING"
-            degrade_limit = TRACK_DEGRADE_REJECTS
-            lost_limit = TRACK_LOST_REJECTS
-
-        # Health degradation/loss only makes sense after a track
-        # has actually been established. BUILDING tracks cannot
-        # become DEGRADED or LOST.
-        if track_support_bursts < TRACK_WINDOW:
-            track_health = "BUILDING"
-
-        elif rejected_streak >= lost_limit:
-            track_health = "LOST"
-
-        elif rejected_streak >= degrade_limit:
-            track_health = "DEGRADED"
-
-        else:
-            track_health = "HEALTHY"
+        track_health = track_health_for(
+            track_support_bursts,
+            rejected_streak,
+        )
 
         if track_started_monotonic is None:
             track_age_seconds = 0
