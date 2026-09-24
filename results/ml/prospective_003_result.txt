@@ -1,0 +1,18 @@
+test_id=003
+session_id=TPMS-PROSPECTIVE-003-20260925-003013
+preregistered_expected_behaviour=directionally_stable_broad_doa
+preregistered_expected_cluster=2
+assigned_cluster=1
+nearest_distance=1.7904
+second_nearest_distance=4.6266
+separation_ratio=2.5841
+distance_vs_training_max=0.5360
+novelty=WITHIN_OBSERVED_TRAINING_RANGE
+
+planned_doa=MUSIC
+planned_decorrelation=Spatial Smoothing
+
+interpretation=TARGET_CONFIGURATION_DID_NOT_REPRODUCE_TARGET_FEATURE_REGIME
+validation_status=INCONCLUSIVE_FOR_CLUSTER_2
+
+note=The prospective session developed broad DoA lobes but also high confidence and predominantly single-peak solutions. The frozen model therefore assigned the observed behaviour to Cluster 1 rather than Cluster 2. Model was not refit.
