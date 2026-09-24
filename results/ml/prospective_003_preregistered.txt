@@ -1,0 +1,10 @@
+test_id=003
+purpose=frozen_model_broad_stable_challenge
+model_version=0.1
+model_commit=49d5661
+expected_behaviour=directionally_stable_broad_doa
+expected_cluster=2
+model_refit_allowed=no
+training_dataset_modification_allowed=no
+planned_doa=MUSIC
+planned_decorrelation=Spatial Smoothing
