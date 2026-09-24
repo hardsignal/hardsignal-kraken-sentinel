@@ -1,0 +1,7 @@
+dropped_family,dropped_features,remaining_features,adjusted_rand_index,overall_retention,cluster_0_retention,cluster_1_retention,cluster_2_retention
+bearing_dynamics,bearing_circular_std_deg|bearing_spread_mean_deg,9,0.8296593186372746,0.9523809523809523,1.0,0.8571428571428571,1.0
+power,peak_power_mean_db|peak_power_std_db,9,0.9079933794177782,0.9523809523809523,1.0,0.8571428571428571,1.0
+sampling,samples_mean,10,0.9079933794177782,0.9523809523809523,1.0,0.8571428571428571,1.0
+confidence,max_confidence_mean|median_confidence_mean,9,1.0,1.0,1.0,1.0,1.0
+doa_width,doa_width_mean_deg|doa_width_std_deg,9,1.0,1.0,1.0,1.0,1.0
+peak_structure,median_doa_peaks_mean|single_peak_ratio_mean,9,1.0,1.0,1.0,1.0,1.0
