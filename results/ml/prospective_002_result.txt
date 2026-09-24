@@ -1,0 +1,19 @@
+test_id=002
+session_id=TPMS-PROSPECTIVE-002-20260925-002549
+preregistered_expected_behaviour=mixed_or_multipath
+preregistered_expected_cluster=0
+assigned_cluster=1
+nearest_distance=1.8078
+second_nearest_distance=4.1400
+separation_ratio=2.2901
+distance_vs_training_max=0.5412
+novelty=WITHIN_OBSERVED_TRAINING_RANGE
+
+observed_bursts=11
+observed_stable=9
+observed_multipath=2
+
+interpretation=PHYSICAL_MANIPULATION_DID_NOT_ACHIEVE_TARGET_REGIME
+validation_status=INCONCLUSIVE_FOR_CLUSTER_0
+
+note=Frozen model was not refit. Observed RF behaviour was predominantly coherent and the Cluster 1 assignment was consistent with those measurements.
