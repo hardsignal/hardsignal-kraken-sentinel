@@ -78,6 +78,9 @@ def suggest_history_experiment(
                 + "Prefer a repeatability experiment comparing the target "
                   "session with its prior same-cluster mean or nearest prior "
                   "sessions.\n"
+                + "Describe a result as reproducibly different from the prior mean "
+                  "rather than distinguishable, discriminative, identifying, or "
+                  "class-separating.\n"
             )
 
     raise RuntimeError("unreachable")
