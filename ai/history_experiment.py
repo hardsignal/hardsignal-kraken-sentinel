@@ -1,6 +1,6 @@
 """History-grounded experiment reasoning for Sentinel AI v0.2."""
 
-from ai.experiment_guard import SentinelExperimentGuardError
+from ai.experiment_guard import EXPERIMENT_BOUNDARY, SentinelExperimentGuardError
 from ai.history_experiment_guard import validate_history_experiment
 from ai.history_report import build_history_report
 from ai.llm_client import generate_text
@@ -33,7 +33,9 @@ def build_history_experiment_prompt(
         "Describe what to repeat or change, what to measure, and what "
         "historical comparison would test the hypothesis.\n"
         "Use 2-4 sentences.\n\n"
-        "DETERMINISTIC HISTORICAL REPORT:\n"
+        + EXPERIMENT_BOUNDARY
+        + "Do not compare against a prior mean or nearest session when none is available.\n"
+        + "DETERMINISTIC HISTORICAL REPORT:\n"
         + report["text"]
     )
 
@@ -50,13 +52,18 @@ def suggest_history_experiment_from_prompt(
     if generate_fn is None:
         generate_fn = generate_text
 
+    # Read only the authoritative report in the original prompt, never a repair
+    # draft. This adds no source reads and leaves the evidence snapshot unchanged.
+    _, marker, history_report = prompt.partition("DETERMINISTIC HISTORICAL REPORT:\n")
     current_prompt = prompt
 
     for attempt in range(1, max_attempts + 1):
         suggestion = generate_fn(current_prompt)
 
         try:
-            return validate_history_experiment(suggestion)
+            return validate_history_experiment(
+                suggestion, history_report=history_report if marker else None,
+            )
         except SentinelExperimentGuardError as exc:
             if attempt == max_attempts:
                 raise

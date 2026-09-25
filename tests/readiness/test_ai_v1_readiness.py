@@ -99,13 +99,11 @@ class ReadinessTests(unittest.TestCase):
         self.assertEqual(report['history']['prior_formal_session_count'], 0)
         self.assertIn('unavailable; no prior same-cluster sessions', report['text'])
 
-    @unittest.expectedFailure
     def test_earliest_suggestion_cannot_invent_prior_mean(self):
         prompt = build_history_experiment_prompt(make_record(5)['session_id'], results_dir=self.root)
         with self.assertRaises(SentinelExperimentGuardError):
             suggest_history_experiment_from_prompt(prompt, generate_fn=lambda _: 'Repeat and compare with the prior C1 mean.')
 
-    @unittest.expectedFailure
     def test_missing_required_prior_record_fails_closed(self):
         self.write(5).unlink()
         with self.assertRaises((ValueError, FileNotFoundError)):
@@ -170,19 +168,15 @@ class ReadinessTests(unittest.TestCase):
             accepted.append(guard.__name__)
         self.assertEqual(accepted, [], f'Unsafe claim accepted by {accepted}')
 
-    @unittest.expectedFailure
     def test_device_identity_rejected(self):
         self.assert_claim_rejected('Repeat the capture. This is device ABC123.')
 
-    @unittest.expectedFailure
     def test_causal_environment_rejected(self):
         self.assert_claim_rejected('Repeat the capture. Interference caused the observed variability.')
 
-    @unittest.expectedFailure
     def test_calibration_claim_rejected(self):
         self.assert_claim_rejected('Repeat the capture. Bearing is calibrated to within 0.1 degrees.')
 
-    @unittest.expectedFailure
     def test_discrimination_claim_rejected(self):
         self.assert_claim_rejected('Repeat and compare to prove reliable device classification.')
 

@@ -3,7 +3,7 @@
 import json
 
 from ai.analyst import analyse_bundle
-from ai.experiment_guard import validate_experiment_suggestion
+from ai.experiment_guard import EXPERIMENT_BOUNDARY, validate_experiment_suggestion
 from ai.llm_client import generate_text
 from ai.schemas import validate_evidence_bundle
 
@@ -35,7 +35,8 @@ def build_experiment_prompt(bundle):
         "absolute direction.\n"
         "Write 2-4 sentences describing what to change or repeat, what "
         "to measure, and what comparison would be useful.\n\n"
-        "AUTHORITATIVE EVIDENCE:\n"
+        + EXPERIMENT_BOUNDARY
+        + "AUTHORITATIVE EVIDENCE:\n"
         + json.dumps(evidence, indent=2, sort_keys=True)
     )
 

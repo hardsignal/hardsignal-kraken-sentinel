@@ -7,6 +7,50 @@ Audited working branch `audit/ai-v1-readiness`, initially clean, at
 tag). Separately reviewed verifier branch `post-release/verify-ai-v0.2` at
 `42ec68e237ee66a7dc199e1b8086969fdd339b79`.
 
+## B3 scientific-output boundary follow-up
+
+Both experiment paths now share explicit, word-bounded claim families for
+transmitter/device/fingerprint identity; unsupported causal RF/environmental
+explanations; true or calibration-grade directional accuracy; demonstrated
+classification/discrimination/class separation; physical-source reliability or
+stability; and physical conclusions drawn from cluster labels. Negation is checked
+at the matched claim, with independent clauses checked separately. The history
+path also rejects references to prior comparisons absent from the deterministic
+report already embedded in the original prompt. No additional source reads or
+changes to deterministic reports/evidence are introduced.
+
+Both experiment prompts state the same scientific limits. The historical
+one-repair/two-attempt loop is unchanged, as is the normal path's single-attempt
+behavior. The legacy `output_guard.py` and `prompts.py` were reviewed: their full
+report path is separate from the current deterministic-report CLI; it is left
+unchanged and its tests still pass. The existing report guard's section handling
+is not used as a substitute for experiment validation.
+
+Allowed examples include “this does not identify a transmitter”, ordinary DoA
+width and confidence measurement, neutral repeatability hypotheses, and
+“reproducibly different from the prior mean” when prior history exists. The new
+17 tests cover both experiment guards, negation scope, whole-word matching,
+unavailable comparisons, and repair/failure behavior. These deterministic lexical
+families enforce the tested contract; they are not a proof of unrestricted
+natural-language entailment. Current Sentinel evidence supplies no authoritative
+causal/physical-identity or calibration conclusions, so there is no generated-text
+bypass for claims that merely say they are supported.
+
+Validation (Python 3.12.3):
+
+- `PYTHONPATH=tests/ai python3.12 -B -m unittest test_experiment_guard test_history_experiment_guard test_scientific_guard test_output_guard test_report test_history_report test_history_experiment`
+  — 49 tests pass.
+- `python3.12 -B -m unittest discover -s tests/ai -p 'test_*.py'`
+  — 114 tests pass, including B1/B2 regressions.
+- `python3.12 -B tests/readiness/test_ai_v1_readiness.py`
+  — 22 probes: 18 pass, 4 expected failures; gate exits 1 (NOT READY).
+- `git diff --check` — clean.
+
+All five B3 readiness probes now pass normally. Remaining expected failures:
+missing required prior records; normal-ML non-object error handling; stale history
+bundle provenance; and historical v0.1 source-change verification. B4/B5, release
+tags, historical artifacts, and Sentinel ML remain unchanged.
+
 ## B2 identity implementation follow-up
 
 The requested filename/identity integrity boundary is now enforced. Consumed
@@ -93,7 +137,7 @@ v0.2 verifier from its exact Git commit, so that object must be available locall
 | --- | --- | --- |
 | B1 | FIXED on development branch | Original finding: strict prior-only isolation fails. `ai/history.py:load_formal_history` parses all matching files; `formal_session_count_total` includes future records and `ai/history_report.py` sends it into the prompt. Future presence changes the prompt; corrupt future JSON blocks an earlier target. Select eligible paths before reading; require complete prompt/bundle invariance under future addition, removal, mutation and corruption. |
 | B2 | Identity fixed; completeness open | Original finding: formal membership was based only on payload session number. Filename/payload mismatch, duplicate numbers, and missing formal prior records are not rejected. A 014 filename carrying a 007 payload becomes a formal 007 target; normal history CLI without saving accepts it. Use the exact frozen formal ID manifest, validate filename/top-level/feature-row identity, exclude 014 by membership and reject missing eligible records. |
-| B3 | BLOCKER | Both CLI experiment guards accept identity, causality, accuracy and discrimination claims. They also accept an invented prior mean when no prior exists. Strengthen shared and history-specific guards, bind referenced quantities/comparisons to supplied evidence, and test publication rejection. Prompt instructions and a measurement verb are not evidence validation. |
+| B3 | Hardened on development branch | Original finding: both CLI experiment guards accepted identity, causality, accuracy and discrimination claims. They also accept an invented prior mean when no prior exists. Strengthen shared and history-specific guards, bind referenced quantities/comparisons to supplied evidence, and test publication rejection. Prompt instructions and a measurement verb are not evidence validation. |
 | B4 | BLOCKER | Artifacts do not prove a consistent evidence snapshot. History/report, prompt, and source hashes are built from separate reads; a changed source can be hashed alongside stale interpretation. Normal ML parse and hash are separate reads too. Read eligible bytes once, parse/hash that snapshot, and derive every artifact/report/prompt field from it. |
 | B5 | BLOCKER | No general saved-artifact verifier or complete v1 schema exists. v0.1 verifier accepts changed source JSON; v0.2 verifier protects one fixed reference only. Core logs and frozen ML binary/preprocessing lineage are not bound by AI artifacts. Define the contract and a read-only verifier for both v1 modes, including source checks, semantic consistency and policy versions. |
 | S1 | SHOULD-FIX | CLI failure precedence, retries, publication/save boundaries and error handling differ by mode; malformed shapes escape as Python exceptions. Define and test a stable CLI contract before freezing v1. |
