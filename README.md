@@ -258,3 +258,25 @@ With v1.0.0 and Sentinel ML 1.0 released, possible next work includes:
 - Development branch: `ml-v0.1`
 - Phase-1 checkpoint tag: `sentinel-ml-v0.1-phase1`
 - Frozen-model commit: `49d5661`
+
+### Verify the Sentinel ML release
+
+Use Python 3.12 with the release verification dependencies:
+
+```bash
+python3.12 -m venv .venv-ml
+.venv-ml/bin/python -m pip install -r scripts/requirements-ml-verification.txt
+.venv-ml/bin/python -B scripts/verify_ml_release.py
+```
+
+The verifier checks required files, the three frozen SHA256 hashes, readable
+manifest provenance, compilation of all `ml/**/*.py` sources, and the focused
+`tests/ml` suite. It prints PASS/FAIL lines and exits non-zero on failure.
+Tests run only after the prerequisite checks pass, since they load the frozen
+model. Compilation happens in memory; verification does not retrain the model
+or regenerate release data. The script resolves the repository from its own
+location, so it can also be invoked by absolute path from another directory.
+
+GitHub Actions runs the same verifier for pushes and pull requests affecting
+`ml/`, `tests/ml/`, `scripts/`, `results/ml/`, or the verification workflow.
+It can also be run manually with `workflow_dispatch`.
