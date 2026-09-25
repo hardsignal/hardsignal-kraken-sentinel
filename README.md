@@ -280,3 +280,40 @@ location, so it can also be invoked by absolute path from another directory.
 GitHub Actions runs the same verifier for pushes and pull requests affecting
 `ml/`, `tests/ml/`, `scripts/`, `results/ml/`, or the verification workflow.
 It can also be run manually with `workflow_dispatch`.
+
+### Sentinel AI v0.1 — hybrid session reporting
+
+Tag `sentinel-ai-v0.1` identifies release commit
+`b11760688cd8f9bbb3f8eacde5261f5223712ac1`. Completed-session facts and report
+composition are deterministic; behavioural regime assignment comes from frozen
+Sentinel ML 1.0. Local Ollama `qwen3:14b` supplies only the next controlled
+experiment suggestion. It does not assign regimes or generate completed-session
+facts. Reports record `report_mode=deterministic_with_ai_experiment` and
+`ai_scope=next_controlled_experiment_only`.
+
+The client locks the model to digest
+`bdbd181c33f2ed1b31c972991882db3cf4d192569092138a7d29e973cd9debe8`
+and rejects a mismatch before generation. Saved artifacts retain the model digest,
+evidence bundle and ML provenance, exact experiment prompt, suggestion, and final
+report. SHA256 hashes bind the three text fields and canonical JSON evidence
+bundle. The retained [reference artifact](results/ai/TPMS-NATURAL-015-20260925-020456/sentinel_ai_v01_2026-09-25T022902.246529_0000.json)
+is preserved as release evidence.
+
+Verify with Python 3.12 (standard library only):
+
+```bash
+python3.12 -B scripts/verify_ai_release.py
+```
+
+Verification checks required modules/tests, compiles all `ai/**/*.py` in memory,
+checks the release tag's commit when locally available (reports a skip otherwise),
+checks model constants and reference artifact provenance including all four hashes,
+and runs `tests/ai`. It prints concise PASS/FAIL output and exits non-zero on
+failure. Tests run after prerequisite checks pass, use mocked Ollama responses,
+and need no live server or model download. Verification leaves repository files
+unchanged; test fixtures use temporary directories. It neither retrains nor
+regenerates frozen ML assets or prospective records.
+
+GitHub Actions runs the same verifier on Python 3.12 for changes to `ai/`,
+`tests/ai/`, `scripts/`, `results/ai/`, or its workflow, and supports manual runs.
+The checkout includes tags so CI also verifies the release commit.
