@@ -55,7 +55,7 @@ This is the focused core release checkpoint, not a claim about the entire resear
 
 ## Sentinel ML 1.0 — Behavioural Regime Analysis
 
-**Status: release candidate on `ml-v0.1`.**
+**Status: Sentinel ML 1.0 release.**
 
 Sentinel ML adds a machine-learning layer above the deterministic Kraken RF
 Sentinel stack. It scores session-level RF/DoA behavioural regimes; it does
@@ -236,7 +236,7 @@ Research is limited to **owned, controlled, authorised, or consented RF sources*
 
 ## Roadmap
 
-With v1.0.0 released and Sentinel ML 1.0 at release-candidate stage, possible next work includes:
+With v1.0.0 and Sentinel ML 1.0 released, possible next work includes:
 
 - Additional natural prospective behavioural validation across independent runtimes.
 - Controlled multi-sensor TPMS datasets with session-level held-out evaluation.
@@ -254,8 +254,7 @@ With v1.0.0 released and Sentinel ML 1.0 at release-candidate stage, possible ne
 
 **Sentinel ML 1.0 — Behavioural Regime Analysis**
 
-- Status: release candidate
+- Git tag: `sentinel-ml-v1.0`
 - Development branch: `ml-v0.1`
 - Phase-1 checkpoint tag: `sentinel-ml-v0.1-phase1`
 - Frozen-model commit: `49d5661`
-- Final tag: `sentinel-ml-v1.0` after final release verification
