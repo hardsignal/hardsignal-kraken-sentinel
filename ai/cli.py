@@ -3,11 +3,15 @@
 import argparse
 import sys
 
+from ai.artifact import build_report_artifact, save_report_artifact
 from ai.evidence_bundle import build_evidence_bundle
-from ai.llm_client import SentinelLLMError
-from ai.output_guard import SentinelOutputGuardError
-from ai.prompts import build_analyst_prompt
-from ai.report import generate_grounded_report
+from ai.llm_client import SentinelLLMError, verify_model_digest
+from ai.experiment import (
+    build_experiment_prompt,
+    suggest_experiment_from_prompt,
+)
+from ai.experiment_guard import SentinelExperimentGuardError
+from ai.final_report import compose_final_report
 
 
 def build_parser():
@@ -19,6 +23,16 @@ def build_parser():
         required=True,
         help="Recorded Sentinel session ID",
     )
+    parser.add_argument(
+        "--save",
+        action="store_true",
+        help="Save an auditable JSON report artifact",
+    )
+    parser.add_argument(
+        "--output-dir",
+        default="results/ai",
+        help="Artifact output directory",
+    )
     return parser
 
 
@@ -27,23 +41,25 @@ def main(argv=None):
 
     try:
         bundle = build_evidence_bundle(args.session)
-        prompt = build_analyst_prompt(bundle)
-        report = generate_grounded_report(prompt)
+        model_digest = verify_model_digest()
+        experiment_prompt = build_experiment_prompt(bundle)
+        experiment = suggest_experiment_from_prompt(experiment_prompt)
+        report = compose_final_report(bundle, experiment)
 
     except FileNotFoundError as exc:
         print(f"SENTINEL_AI_ERROR: {exc}", file=sys.stderr)
         return 2
 
-    except SentinelOutputGuardError as exc:
-        print(
-            f"SENTINEL_AI_FINAL_REJECT: {exc}",
-            file=sys.stderr,
-        )
-        return 3
-
     except SentinelLLMError as exc:
         print(f"SENTINEL_AI_LLM_ERROR: {exc}", file=sys.stderr)
         return 4
+
+    except SentinelExperimentGuardError as exc:
+        print(
+            f"SENTINEL_AI_EXPERIMENT_REJECT: {exc}",
+            file=sys.stderr,
+        )
+        return 6
 
     except ValueError as exc:
         print(f"SENTINEL_AI_EVIDENCE_ERROR: {exc}", file=sys.stderr)
@@ -55,6 +71,22 @@ def main(argv=None):
     print(f"Session: {args.session}")
     print()
     print(report)
+
+    if args.save:
+        artifact = build_report_artifact(
+            session_id=args.session,
+            evidence_bundle=bundle,
+            experiment_prompt=experiment_prompt,
+            experiment_suggestion=experiment,
+            report=report,
+            model_digest=model_digest,
+        )
+        path = save_report_artifact(
+            artifact,
+            output_dir=args.output_dir,
+        )
+        print()
+        print(f"Saved: {path}")
 
     return 0
 

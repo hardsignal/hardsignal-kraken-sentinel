@@ -3,8 +3,11 @@ import unittest
 from unittest.mock import MagicMock, patch
 
 from ai.llm_client import (
+    EXPECTED_MODEL_DIGEST,
     SentinelLLMError,
     generate_report,
+    get_model_digest,
+    verify_model_digest,
 )
 
 
@@ -68,6 +71,34 @@ class LLMClientTests(unittest.TestCase):
             "model unavailable",
         ):
             generate_report("prompt")
+
+    @patch("ai.llm_client.request.urlopen")
+    def test_model_digest_inventory_lookup(self, urlopen):
+        response = MagicMock()
+        response.read.return_value = json.dumps({
+            "models": [{
+                "name": "qwen3:14b",
+                "digest": EXPECTED_MODEL_DIGEST,
+            }]
+        }).encode("utf-8")
+
+        urlopen.return_value.__enter__.return_value = response
+
+        self.assertEqual(
+            get_model_digest(),
+            EXPECTED_MODEL_DIGEST,
+        )
+
+    @patch("ai.llm_client.get_model_digest")
+    def test_model_digest_mismatch_fails(self, get_digest):
+        get_digest.return_value = "wrong-digest"
+
+        with self.assertRaisesRegex(
+            SentinelLLMError,
+            "digest mismatch",
+        ):
+            verify_model_digest()
+
 
     @patch("ai.llm_client.request.urlopen")
     def test_empty_response_fails(self, urlopen):
