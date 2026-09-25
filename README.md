@@ -199,6 +199,8 @@ python3 -m unittest discover -s tests -p 'test_tracker*.py' -v
 ## Project structure
 
 - `watcher/` — live burst/event processing, shared tracking, source episodes, JSONL logging, and episode/session reporting CLIs
+- `ml/` — behavioural dataset construction, clustering experiments, frozen-model scoring, prospective validation, and cross-time evaluation
+- `results/ml/` — frozen model artefacts, prospective evidence, validation reports, and release-readiness records
 - `reporting/` — existing session, persistence, and DoA analysis
 - `fingerprinting/` — experimental RF feature extraction and baselines
 - `capture/` — acquisition provenance, verification, activation logging, and episode grouping
@@ -234,8 +236,10 @@ Research is limited to **owned, controlled, authorised, or consented RF sources*
 
 ## Roadmap
 
-With v1.0.0 released, possible next work includes:
+With v1.0.0 released and Sentinel ML 1.0 at release-candidate stage, possible next work includes:
 
+- Additional natural prospective behavioural validation across independent runtimes.
+- Controlled multi-sensor TPMS datasets with session-level held-out evaluation.
 - Multi-session source history and source correlation.
 - Persistence scoring and richer alerts.
 - Controlled between-device discrimination and independent validation across sources and sessions.
@@ -247,3 +251,11 @@ With v1.0.0 released, possible next work includes:
 
 - Git tag: `v1.0.0`
 - Release commit: `c622e71`
+
+**Sentinel ML 1.0 — Behavioural Regime Analysis**
+
+- Status: release candidate
+- Development branch: `ml-v0.1`
+- Phase-1 checkpoint tag: `sentinel-ml-v0.1-phase1`
+- Frozen-model commit: `49d5661`
+- Final tag: `sentinel-ml-v1.0` after final release verification
