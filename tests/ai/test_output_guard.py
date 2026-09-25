@@ -98,6 +98,23 @@ class OutputGuardTests(unittest.TestCase):
             )
 
 
+    def test_stable_signal_environment_is_rejected(self):
+        with self.assertRaises(SentinelOutputGuardError):
+            validate_generated_report(
+                report(
+                    "The observations suggest a clean and stable signal environment."
+                )
+            )
+
+    def test_does_not_eliminate_unobserved_variation_is_rejected(self):
+        with self.assertRaises(SentinelOutputGuardError):
+            validate_generated_report(
+                report(
+                    "The novelty status does not eliminate the possibility of unobserved variations."
+                )
+            )
+
+
     def test_signal_source_claim_is_rejected(self):
         with self.assertRaises(SentinelOutputGuardError):
             validate_generated_report(

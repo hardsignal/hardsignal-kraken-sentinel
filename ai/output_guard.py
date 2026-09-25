@@ -57,9 +57,15 @@ UNSUPPORTED_CAUSAL_PATTERNS = {
         r"potentially)\b[^.\n]{0,120}\btransient effects?\b"
     ),
     "unsupported unobserved hypothesis": (
-        r"\b(?:does not rule out|cannot rule out|may|might|could|possibly|"
-        r"potentially)\b[^.\n]{0,120}"
+        r"\b(?:does not (?:rule out|exclude|eliminate)|"
+        r"cannot (?:rule out|exclude|eliminate)|"
+        r"may|might|could|possibly|potentially)\b"
+        r"[^.\n]{0,140}"
         r"\b(?:unobserved|unknown|unmeasured)\b"
+    ),
+    "unsupported environment property": (
+        r"\b(?:clean|stable|consistent|quiet|noisy|reliable)\s+"
+        r"(?:signal\s+)?environment\b"
     ),
 }
 
