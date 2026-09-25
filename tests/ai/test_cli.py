@@ -117,7 +117,7 @@ class CLITests(unittest.TestCase):
         )
         suggest_history.assert_called_once_with("HISTORY PROMPT")
         self.assertIn(
-            "SENTINEL AI v0.2 HISTORY",
+            "SENTINEL AI v1.0 HISTORY",
             output.getvalue(),
         )
         self.assertIn(

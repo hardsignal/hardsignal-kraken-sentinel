@@ -12,6 +12,8 @@ import unittest
 from unittest.mock import patch
 
 from ai import cli
+from ai.llm_client import EXPECTED_MODEL_DIGEST
+from ai.v1_artifact import TRAINING_SHA256
 from ai.artifact import canonical_sha256
 from ai.history import HISTORY_FEATURES, build_history_bundle, load_history_snapshot
 from ai.history_artifact import (
@@ -40,7 +42,14 @@ class HistorySnapshotTests(unittest.TestCase):
                 "session_id": identity(number),
                 "assigned_cluster": 1,
                 "novelty": "WITHIN_OBSERVED_TRAINING_RANGE",
-                "feature_row": {key: float(number) for key in HISTORY_FEATURES},
+                "feature_row": {**{key: float(number) for key in HISTORY_FEATURES},
+                                "session_id": identity(number), "burst_count": number},
+                "model_version": "0.1", "record_version": "0.1",
+                "training_dataset_sha256": TRAINING_SHA256,
+                "scientific_scope": "RF/DoA behavioural regime assignment; not transmitter identity",
+                "distances": {"0": 4.0, "1": 1.0, "2": 3.0},
+                "nearest_distance": 1.0, "second_nearest_distance": 3.0,
+                "separation_ratio": 3.0, "distance_vs_training_max": 0.5,
                 "extra": ["retained", {"note": "évidence"}],
             }
             # Deliberately noncanonical formatting: provenance must hash raw bytes.
@@ -89,7 +98,7 @@ class HistorySnapshotTests(unittest.TestCase):
         with (
             patch.object(Path, "open", counted_open),
             patch("ai.cli.load_history_snapshot", side_effect=capture_snapshot),
-            patch("ai.cli.verify_model_digest", return_value="offline"),
+            patch("ai.cli.verify_model_digest", return_value=EXPECTED_MODEL_DIGEST),
             patch("ai.history_experiment.generate_text", side_effect=generate),
             contextlib.redirect_stdout(io.StringIO()),
         ):

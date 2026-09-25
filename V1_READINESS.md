@@ -1,5 +1,16 @@
 # Sentinel AI v1.0 readiness audit
 
+> Update — v1 release-contract implementation: the original audit below is retained
+> as a historical record, not the current verdict. B1–B4, normal ML shape validation,
+> and the v1 contract/generic verifier are now implemented. See
+> [AI_V1_CONTRACT.md](docs/AI_V1_CONTRACT.md) for current guarantees and explicit limits.
+> The historical v0.1 changed-source behavior is an accepted documented legacy
+> limitation; it is not patched or counted as a failing v1 requirement. Current
+> readiness runs all probes plus the full AI suite and rejects any failure, skip,
+> or expected failure. Candidate readiness is distinct from a tagged release:
+> no v1 tag, release commit pin or retained v1 release reference has been created.
+
+
 **Verdict: NOT READY.** Audit date: 2026-09-25; Python 3.12.3; offline.
 
 Audited working branch `audit/ai-v1-readiness`, initially clean, at

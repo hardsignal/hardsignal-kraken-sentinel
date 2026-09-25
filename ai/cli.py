@@ -3,7 +3,12 @@
 import argparse
 import sys
 
-from ai.artifact import build_report_artifact, save_report_artifact
+from ai.v1_artifact import (
+    build_v1_report_artifact as build_report_artifact,
+    build_v1_history_artifact as build_history_artifact,
+    save_v1_artifact as save_report_artifact,
+    save_v1_artifact as save_history_artifact,
+)
 from ai.evidence_bundle import build_evidence_bundle
 from ai.llm_client import SentinelLLMError, verify_model_digest
 from ai.experiment import (
@@ -12,10 +17,6 @@ from ai.experiment import (
 )
 from ai.experiment_guard import SentinelExperimentGuardError
 from ai.final_report import compose_final_report
-from ai.history_artifact import (
-    build_history_artifact,
-    save_history_artifact,
-)
 from ai.history_experiment import (
     build_history_experiment_prompt,
     suggest_history_experiment_from_prompt,
@@ -41,7 +42,7 @@ def build_parser():
     parser.add_argument(
         "--history",
         action="store_true",
-        help="Run Sentinel AI v0.2 prior-session historical reasoning",
+        help="Run Sentinel AI v1.0 prior-session historical reasoning",
     )
     parser.add_argument(
         "--output-dir",
@@ -70,7 +71,7 @@ def main(argv=None):
             )
 
             print("=" * 70)
-            print("HARDSIGNAL LABS — SENTINEL AI v0.2 HISTORY")
+            print("HARDSIGNAL LABS — SENTINEL AI v1.0 HISTORY")
             print("=" * 70)
             print(historical["text"])
             print()
@@ -123,7 +124,7 @@ def main(argv=None):
         return 5
 
     print("=" * 70)
-    print("HARDSIGNAL LABS — SENTINEL AI v0.1")
+    print("HARDSIGNAL LABS — SENTINEL AI v1.0")
     print("=" * 70)
     print(f"Session: {args.session}")
     print()

@@ -317,3 +317,32 @@ regenerates frozen ML assets or prospective records.
 GitHub Actions runs the same verifier on Python 3.12 for changes to `ai/`,
 `tests/ai/`, `scripts/`, `results/ai/`, or its workflow, and supports manual runs.
 The checkout includes tags so CI also verifies the release commit.
+
+### Sentinel AI v1.0 candidate artifact contract
+
+New saves use the [v1 artifact contract](docs/AI_V1_CONTRACT.md) and
+[versioned envelope schema](docs/sentinel-ai-artifact-v1.schema.json). Core and
+frozen ML remain authoritative; local AI supplies only a guarded next experiment.
+No v1 release tag has been created by this work.
+
+```bash
+python3 -m ai.cli --session TPMS-NATURAL-015-20260925-020456 --save
+python3 -m ai.cli --session TPMS-NATURAL-015-20260925-020456 --history --save
+python3 -B scripts/verify_ai_artifact.py /path/to/saved-v1.json
+python3 -B scripts/verify_ai_artifact.py /path/to/saved-v1.json --source-dir results/ml/prospective
+python3 -B tests/readiness/test_ai_v1_readiness.py
+python3 -B scripts/verify_ai_v1_release.py --candidate
+```
+
+Generation requires the locked local Ollama model. Verification is offline and
+read-only. History uses one immutable, prior-only source snapshot, including the
+target and complete formal prefix; 014 is excluded. Default verification checks
+embedded evidence; `--source-dir` additionally detects changed or missing current
+ML JSON sources. The normal artifact hashes the available Core summary, not the
+original hardware/log bytes. See the contract for exact provenance scope,
+scientific non-claims, model lock, exit codes and separate tagged-release checks.
+
+Sentinel AI v0.1 did not bind all source records: its historical verifier does not
+check external ML source changes. That accepted legacy limitation, both historical
+tags and retained artifacts remain unchanged. V1 source-provenance checks are
+separate and required by the v1 readiness gate.

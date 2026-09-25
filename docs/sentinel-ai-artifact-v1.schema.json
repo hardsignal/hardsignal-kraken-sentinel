@@ -1,0 +1,275 @@
+{
+  "$id": "urn:sentinel-ai:artifact:1.0",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "description": "Structural envelope; semantic verification by ai.v1_artifact is mandatory.",
+  "oneOf": [
+    {
+      "additionalProperties": false,
+      "properties": {
+        "ai_scope": {
+          "const": "next_controlled_experiment_only"
+        },
+        "artifact_sha256": {
+          "pattern": "^[0-9a-f]{64}$",
+          "type": "string"
+        },
+        "artifact_version": {
+          "const": "1.0"
+        },
+        "core_evidence_scope": {
+          "const": "embedded_deterministic_summary"
+        },
+        "created_at": {
+          "description": "Must represent UTC; executable verifier enforces offset.",
+          "format": "date-time",
+          "type": "string"
+        },
+        "derivation_version": {
+          "const": "sentinel-ai-deterministic/1.0"
+        },
+        "deterministic_report": {
+          "type": "string"
+        },
+        "deterministic_report_sha256": {
+          "pattern": "^[0-9a-f]{64}$",
+          "type": "string"
+        },
+        "evidence_bundle": {
+          "description": "Additional semantic/type constraints enforced by ai.v1_artifact.validate_v1_artifact.",
+          "type": "object"
+        },
+        "evidence_bundle_sha256": {
+          "pattern": "^[0-9a-f]{64}$",
+          "type": "string"
+        },
+        "experiment_prompt": {
+          "type": "string"
+        },
+        "experiment_prompt_sha256": {
+          "pattern": "^[0-9a-f]{64}$",
+          "type": "string"
+        },
+        "experiment_suggestion": {
+          "type": "string"
+        },
+        "experiment_suggestion_sha256": {
+          "pattern": "^[0-9a-f]{64}$",
+          "type": "string"
+        },
+        "ml_lineage": {
+          "const": {
+            "model_version": "0.1",
+            "record_version": "0.1",
+            "training_dataset_sha256": "e1a63cf6be87d85584a9201e395b1fcdd8251ee7c6cb09ce5eb502886cf76a51"
+          }
+        },
+        "mode": {
+          "const": "normal"
+        },
+        "model": {
+          "const": "qwen3:14b"
+        },
+        "model_digest": {
+          "const": "bdbd181c33f2ed1b31c972991882db3cf4d192569092138a7d29e973cd9debe8"
+        },
+        "report": {
+          "type": "string"
+        },
+        "report_mode": {
+          "const": "deterministic_with_ai_experiment"
+        },
+        "report_sha256": {
+          "pattern": "^[0-9a-f]{64}$",
+          "type": "string"
+        },
+        "schema_version": {
+          "const": "sentinel-ai-artifact/1.0"
+        },
+        "scientific_policy_version": {
+          "const": "sentinel-ai-scientific-policy/1.0"
+        },
+        "session_id": {
+          "pattern": "^[A-Za-z0-9][A-Za-z0-9_-]{0,199}$",
+          "type": "string"
+        },
+        "source_record_manifest_sha256": {
+          "pattern": "^[0-9a-f]{64}$",
+          "type": "string"
+        },
+        "source_record_sha256": {
+          "additionalProperties": {
+            "pattern": "^[0-9a-f]{64}$",
+            "type": "string"
+          },
+          "minProperties": 1,
+          "type": "object"
+        },
+        "source_records_json": {
+          "additionalProperties": {
+            "type": "string"
+          },
+          "minProperties": 1,
+          "type": "object"
+        }
+      },
+      "required": [
+        "ai_scope",
+        "artifact_sha256",
+        "artifact_version",
+        "core_evidence_scope",
+        "created_at",
+        "derivation_version",
+        "deterministic_report",
+        "deterministic_report_sha256",
+        "evidence_bundle",
+        "evidence_bundle_sha256",
+        "experiment_prompt",
+        "experiment_prompt_sha256",
+        "experiment_suggestion",
+        "experiment_suggestion_sha256",
+        "ml_lineage",
+        "mode",
+        "model",
+        "model_digest",
+        "report",
+        "report_mode",
+        "report_sha256",
+        "schema_version",
+        "scientific_policy_version",
+        "session_id",
+        "source_record_manifest_sha256",
+        "source_record_sha256",
+        "source_records_json"
+      ],
+      "type": "object"
+    },
+    {
+      "additionalProperties": false,
+      "properties": {
+        "ai_scope": {
+          "const": "historical_next_controlled_experiment_only"
+        },
+        "artifact_sha256": {
+          "pattern": "^[0-9a-f]{64}$",
+          "type": "string"
+        },
+        "artifact_version": {
+          "const": "1.0"
+        },
+        "created_at": {
+          "description": "Must represent UTC; executable verifier enforces offset.",
+          "format": "date-time",
+          "type": "string"
+        },
+        "derivation_version": {
+          "const": "sentinel-ai-deterministic/1.0"
+        },
+        "experiment_prompt": {
+          "type": "string"
+        },
+        "experiment_prompt_sha256": {
+          "pattern": "^[0-9a-f]{64}$",
+          "type": "string"
+        },
+        "experiment_suggestion": {
+          "type": "string"
+        },
+        "experiment_suggestion_sha256": {
+          "pattern": "^[0-9a-f]{64}$",
+          "type": "string"
+        },
+        "history_bundle": {
+          "description": "Additional semantic/type constraints enforced by ai.v1_artifact.validate_v1_artifact.",
+          "type": "object"
+        },
+        "history_bundle_sha256": {
+          "pattern": "^[0-9a-f]{64}$",
+          "type": "string"
+        },
+        "history_report": {
+          "type": "string"
+        },
+        "history_report_sha256": {
+          "pattern": "^[0-9a-f]{64}$",
+          "type": "string"
+        },
+        "ml_lineage": {
+          "const": {
+            "model_version": "0.1",
+            "record_version": "0.1",
+            "training_dataset_sha256": "e1a63cf6be87d85584a9201e395b1fcdd8251ee7c6cb09ce5eb502886cf76a51"
+          }
+        },
+        "mode": {
+          "const": "history"
+        },
+        "model": {
+          "const": "qwen3:14b"
+        },
+        "model_digest": {
+          "const": "bdbd181c33f2ed1b31c972991882db3cf4d192569092138a7d29e973cd9debe8"
+        },
+        "report_mode": {
+          "const": "deterministic_history_with_ai_experiment"
+        },
+        "schema_version": {
+          "const": "sentinel-ai-artifact/1.0"
+        },
+        "scientific_policy_version": {
+          "const": "sentinel-ai-scientific-policy/1.0"
+        },
+        "session_id": {
+          "pattern": "^[A-Za-z0-9][A-Za-z0-9_-]{0,199}$",
+          "type": "string"
+        },
+        "source_record_manifest_sha256": {
+          "pattern": "^[0-9a-f]{64}$",
+          "type": "string"
+        },
+        "source_record_sha256": {
+          "additionalProperties": {
+            "pattern": "^[0-9a-f]{64}$",
+            "type": "string"
+          },
+          "minProperties": 1,
+          "type": "object"
+        },
+        "source_records_json": {
+          "additionalProperties": {
+            "type": "string"
+          },
+          "minProperties": 1,
+          "type": "object"
+        }
+      },
+      "required": [
+        "ai_scope",
+        "artifact_sha256",
+        "artifact_version",
+        "created_at",
+        "derivation_version",
+        "experiment_prompt",
+        "experiment_prompt_sha256",
+        "experiment_suggestion",
+        "experiment_suggestion_sha256",
+        "history_bundle",
+        "history_bundle_sha256",
+        "history_report",
+        "history_report_sha256",
+        "ml_lineage",
+        "mode",
+        "model",
+        "model_digest",
+        "report_mode",
+        "schema_version",
+        "scientific_policy_version",
+        "session_id",
+        "source_record_manifest_sha256",
+        "source_record_sha256",
+        "source_records_json"
+      ],
+      "type": "object"
+    }
+  ],
+  "title": "Sentinel AI artifact 1.0"
+}

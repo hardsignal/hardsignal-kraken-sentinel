@@ -27,7 +27,7 @@ def sha256_file(path):
     return h.hexdigest()
 
 
-def load_ml_result(session_id, ml_results_dir=DEFAULT_ML_RESULTS):
+def _read_ml_result(session_id, ml_results_dir=DEFAULT_ML_RESULTS):
     path = Path(ml_results_dir) / f"{session_id}.json"
 
     if not path.is_file():
@@ -35,7 +35,8 @@ def load_ml_result(session_id, ml_results_dir=DEFAULT_ML_RESULTS):
             f"ML result not found for session {session_id}: {path}"
         )
 
-    record = json.loads(path.read_text(encoding="utf-8"))
+    source = path.read_bytes()
+    record = json.loads(source.decode("utf-8"))
 
     if not isinstance(record, dict):
         raise ValueError("ML result must be a JSON object")
@@ -43,6 +44,11 @@ def load_ml_result(session_id, ml_results_dir=DEFAULT_ML_RESULTS):
     if record.get("session_id") != session_id:
         raise ValueError("ML result session_id mismatch")
 
+    return path, record, source
+
+
+def load_ml_result(session_id, ml_results_dir=DEFAULT_ML_RESULTS):
+    path, record, _ = _read_ml_result(session_id, ml_results_dir)
     return path, record
 
 
@@ -61,7 +67,7 @@ def build_evidence_bundle(
         episode_log=Path(episode_log),
     )
 
-    ml_path, ml = load_ml_result(
+    ml_path, ml, source = _read_ml_result(
         session_id,
         ml_results_dir=ml_results_dir,
     )
@@ -73,7 +79,8 @@ def build_evidence_bundle(
         "ml": ml,
         "provenance": {
             "ml_result_path": str(ml_path),
-            "ml_result_sha256": sha256_file(ml_path),
+            "ml_result_sha256": hashlib.sha256(source).hexdigest(),
+            "ml_result_json": source.decode("utf-8"),
         },
     }
 
