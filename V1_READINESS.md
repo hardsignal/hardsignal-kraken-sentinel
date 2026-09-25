@@ -7,11 +7,36 @@ Audited working branch `audit/ai-v1-readiness`, initially clean, at
 tag). Separately reviewed verifier branch `post-release/verify-ai-v0.2` at
 `42ec68e237ee66a7dc199e1b8086969fdd339b79`.
 
-This patch adds this report and `tests/readiness/test_ai_v1_readiness.py` only.
-No production fixes, capabilities, broad refactors, model changes, source evidence
-changes, release-artifact regeneration, or tag changes are included. Blocker fixes
-below are **proposed**, not completed. The new tests expose release risks without
-changing historical release expectations.
+## B1 implementation follow-up
+
+Strict prior-only historical isolation is now fixed on this development branch.
+Both history and source-provenance loaders apply the target's numeric filename
+cutoff before reading JSON, and bound accepted payload numbers as well. The
+existing `formal_session_count_total` field now counts available formal records
+through the target (target included): 015 has 10, and 005 alone has 1. No stored
+v0.2 artifact is rewritten or reinterpreted; its historical total remains 12.
+Unbounded `load_formal_history` callers retain the full-history view.
+
+Seven new offline regression tests compare complete bundles, report/prompt UTF-8
+bytes and artifact fields (excluding creation time) under future addition,
+deletion, corruption and mutation; they also reject any attempt to open future
+files and cover 005/014. The two B1 readiness probes are normal passing tests.
+The B2 mismatch probe now uses filename 014 with payload 015, keeping that
+membership test inside the cutoff and independent of B1. B2–B5 remain open.
+No tags, frozen ML files, prospective records or historical artifacts changed.
+
+Validation (Python 3.12.3):
+
+- `python3.12 -B -m unittest discover -s tests/ai -p 'test_history*.py' -v`
+  — 29 tests pass.
+- `python3.12 -B -m unittest discover -s tests/ai -p 'test_*.py'`
+  — 85 tests pass.
+- `python3.12 -B tests/readiness/test_ai_v1_readiness.py`
+  — 22 probes: 12 pass, 10 expected failures; readiness gate still exits 1.
+- `git diff --check` — clean.
+
+The evidence and findings below describe the original audit unless explicitly
+marked fixed; the overall NOT READY verdict still applies.
 
 ## Evidence and test accounting
 
@@ -35,7 +60,7 @@ v0.2 verifier from its exact Git commit, so that object must be available locall
 
 | ID | Priority | Finding and release acceptance condition |
 | --- | --- | --- |
-| B1 | BLOCKER | Strict prior-only isolation fails. `ai/history.py:load_formal_history` parses all matching files; `formal_session_count_total` includes future records and `ai/history_report.py` sends it into the prompt. Future presence changes the prompt; corrupt future JSON blocks an earlier target. Select eligible paths before reading; require complete prompt/bundle invariance under future addition, removal, mutation and corruption. |
+| B1 | FIXED on development branch | Original finding: strict prior-only isolation fails. `ai/history.py:load_formal_history` parses all matching files; `formal_session_count_total` includes future records and `ai/history_report.py` sends it into the prompt. Future presence changes the prompt; corrupt future JSON blocks an earlier target. Select eligible paths before reading; require complete prompt/bundle invariance under future addition, removal, mutation and corruption. |
 | B2 | BLOCKER | Formal membership is based only on payload session number. Filename/payload mismatch, duplicate numbers, and missing formal prior records are not rejected. A 014 filename carrying a 007 payload becomes a formal 007 target; normal history CLI without saving accepts it. Use the exact frozen formal ID manifest, validate filename/top-level/feature-row identity, exclude 014 by membership and reject missing eligible records. |
 | B3 | BLOCKER | Both CLI experiment guards accept identity, causality, accuracy and discrimination claims. They also accept an invented prior mean when no prior exists. Strengthen shared and history-specific guards, bind referenced quantities/comparisons to supplied evidence, and test publication rejection. Prompt instructions and a measurement verb are not evidence validation. |
 | B4 | BLOCKER | Artifacts do not prove a consistent evidence snapshot. History/report, prompt, and source hashes are built from separate reads; a changed source can be hashed alongside stale interpretation. Normal ML parse and hash are separate reads too. Read eligible bytes once, parse/hash that snapshot, and derive every artifact/report/prompt field from it. |
@@ -174,7 +199,7 @@ select `<= target`, appropriately binding target plus prior. 014 is not in
 feature values does not change prior statistics, honest 014 is excluded, and target
 005 has empty counts/neighbors/deltas and an explicit unavailable comparison.
 
-**A proof that N cannot consume later formal sessions is currently impossible.**
+**Original audit finding (B1 fixed by the follow-up above): N could consume later formal sessions.**
 The loader parses those sessions, counts them in a field sent to the LLM, and can
 fail on their corrupt JSON. The frozen 015 artifact itself contains total 12 while
 only 9 prior plus target are in its source manifest; its total depends on 016/017,
@@ -187,7 +212,7 @@ and any timestamp suffix with an allowed numeric prefix is admitted. Duplicate
 numbers/IDs can inflate statistics or overwrite the `by_id` target. A missing prior
 file silently shrinks the sample. A missing history target raises ValueError (5
 through CLI after model verification), unlike normal missing target FileNotFoundError
-(2). Future sessions above 017 are filtered out only after parsing.
+(2). Before the B1 fix, future sessions above 017 were filtered out only after parsing.
 
 Required proof after B1/B2: for every formal target, compare full bundle, report,
 LLM prompt and source manifest against a directory containing only its eligible
@@ -317,8 +342,9 @@ Minimum proposed `scripts/verify_ai_v1_release.py`:
    lock boundary, README usage/contracts and release gate workflow. Add tests only
    for failure/publication behavior and documented guarantees.
 
-No blocker fix is claimed in this audit. The 12 expected-failure probes are initial
-acceptance tests, not a complete test plan or a reason to release with exceptions.
+The original audit had 12 expected-failure probes; the B1 follow-up converts two
+to ordinary passing tests. The remaining 10 document open risks, not a complete
+test plan or a reason to release with exceptions.
 When implementing fixes, remove their decorators and retain direct assertions;
 unexpected successes currently fail unittest so a changed invariant gets reviewed.
 

@@ -33,7 +33,9 @@ def build_source_record_hashes(
 
     records = [
         record
-        for record in load_formal_history(results_dir)
+        for record in load_formal_history(
+            results_dir, through_session_number=target_number,
+        )
         if session_number(record["session_id"]) <= target_number
     ]
 

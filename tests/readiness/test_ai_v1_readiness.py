@@ -1,7 +1,7 @@
 """Offline v1 audit probes. Expected failures are OPEN release risks, not passes.
 
 Run this file directly from the repository root; its gate fails on expected
-failures too. Historical tests/ai remains unchanged.
+failures too. B1 prior-only isolation probes are normal passing tests.
 """
 import contextlib
 import io
@@ -63,7 +63,6 @@ class ReadinessTests(unittest.TestCase):
     def bundle(self):
         return build_history_bundle(self.target, results_dir=self.root)
 
-    @unittest.expectedFailure
     def test_future_presence_cannot_change_prompt(self):
         before = build_history_experiment_prompt(self.target, results_dir=self.root)
         self.write(17)
@@ -77,7 +76,6 @@ class ReadinessTests(unittest.TestCase):
         self.write(17, record)
         self.assertEqual(before, self.bundle())
 
-    @unittest.expectedFailure
     def test_corrupt_future_cannot_block_earlier_target(self):
         before = self.bundle()
         self.write(17).write_text('{', encoding='utf-8')
@@ -85,9 +83,11 @@ class ReadinessTests(unittest.TestCase):
 
     @unittest.expectedFailure
     def test_excluded_filename_cannot_supply_formal_record(self):
-        self.write(14, make_record(7))
+        # Keep this B2 probe inside the target cutoff so it tests membership,
+        # independently of B1 future-file isolation.
+        self.write(14, make_record(15))
         with self.assertRaises(ValueError):
-            build_history_bundle(make_record(7)['session_id'], results_dir=self.root)
+            build_history_bundle(make_record(15)['session_id'], results_dir=self.root)
 
     def test_excluded_target_rejected(self):
         self.write(14)

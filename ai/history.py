@@ -40,19 +40,33 @@ def session_number(session_id):
 
 def load_formal_history(
     results_dir=Path("results/ml/prospective"),
+    *,
+    through_session_number=None,
 ):
+    """Load formal records, optionally bounded by acquisition number.
+
+    Apply the filename cutoff before opening JSON so future bytes cannot
+    affect an earlier target. Unbounded callers retain the full-history view.
+    Exact filename/payload membership validation is a separate concern.
+    """
     records = []
 
     for path in sorted(
         Path(results_dir).glob("TPMS-NATURAL-*.json")
     ):
+        if (through_session_number is not None
+                and session_number(path.stem) > through_session_number):
+            continue
+
         record = json.loads(
             path.read_text(encoding="utf-8")
         )
 
         number = session_number(record["session_id"])
 
-        if number not in FORMAL_SESSION_NUMBERS:
+        if (number not in FORMAL_SESSION_NUMBERS
+                or (through_session_number is not None
+                    and number > through_session_number)):
             continue
 
         records.append(record)
@@ -105,7 +119,10 @@ def build_history_bundle(
     *,
     results_dir=Path("results/ml/prospective"),
 ):
-    records = load_formal_history(results_dir)
+    target_number = session_number(target_session_id)
+    records = load_formal_history(
+        results_dir, through_session_number=target_number,
+    )
 
     by_id = {
         record["session_id"]: record
@@ -118,7 +135,6 @@ def build_history_bundle(
         )
 
     target = by_id[target_session_id]
-    target_number = session_number(target_session_id)
 
     prior = [
         record
@@ -184,6 +200,7 @@ def build_history_bundle(
     return {
         "history_version": "0.1",
         "target_session_id": target_session_id,
+        # Available formal records through the target, including the target.
         "formal_session_count_total": len(records),
         "prior_formal_session_count": len(prior),
         "excluded_session_numbers": [14],
