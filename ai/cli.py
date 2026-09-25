@@ -12,7 +12,14 @@ from ai.experiment import (
 )
 from ai.experiment_guard import SentinelExperimentGuardError
 from ai.final_report import compose_final_report
-from ai.history_experiment import suggest_history_experiment
+from ai.history_artifact import (
+    build_history_artifact,
+    save_history_artifact,
+)
+from ai.history_experiment import (
+    build_history_experiment_prompt,
+    suggest_history_experiment_from_prompt,
+)
 from ai.history_report import build_history_report
 
 
@@ -48,21 +55,16 @@ def main(argv=None):
 
     try:
         if args.history:
-            if args.save:
-                print(
-                    "SENTINEL_AI_HISTORY_SAVE_UNAVAILABLE: "
-                    "v0.2 historical artifact schema is not frozen yet",
-                    file=sys.stderr,
-                )
-                return 7
-
             model_digest = verify_model_digest()
 
             historical = build_history_report(
                 args.session
             )
-            experiment = suggest_history_experiment(
+            history_prompt = build_history_experiment_prompt(
                 args.session
+            )
+            experiment = suggest_history_experiment_from_prompt(
+                history_prompt
             )
 
             print("=" * 70)
@@ -72,6 +74,23 @@ def main(argv=None):
             print()
             print("Next controlled experiment:")
             print(experiment)
+
+            if args.save:
+                artifact = build_history_artifact(
+                    target_session_id=args.session,
+                    history_bundle=historical["history"],
+                    history_report=historical["text"],
+                    experiment_prompt=history_prompt,
+                    experiment_suggestion=experiment,
+                    model_digest=model_digest,
+                )
+                path = save_history_artifact(
+                    artifact,
+                    output_dir=args.output_dir,
+                )
+
+                print()
+                print(f"Saved: {path}")
 
             return 0
 

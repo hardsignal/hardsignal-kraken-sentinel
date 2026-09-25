@@ -1,5 +1,6 @@
 """History-grounded experiment reasoning for Sentinel AI v0.2."""
 
+from ai.experiment_guard import SentinelExperimentGuardError
 from ai.history_experiment_guard import validate_history_experiment
 from ai.history_report import build_history_report
 from ai.llm_client import generate_text
@@ -37,10 +38,9 @@ def build_history_experiment_prompt(
     )
 
 
-def suggest_history_experiment(
-    target_session_id,
+def suggest_history_experiment_from_prompt(
+    prompt,
     *,
-    results_dir="results/ml/prospective",
     max_attempts=2,
     generate_fn=None,
 ):
@@ -50,11 +50,6 @@ def suggest_history_experiment(
     if generate_fn is None:
         generate_fn = generate_text
 
-    prompt = build_history_experiment_prompt(
-        target_session_id,
-        results_dir=results_dir,
-    )
-
     current_prompt = prompt
 
     for attempt in range(1, max_attempts + 1):
@@ -62,7 +57,7 @@ def suggest_history_experiment(
 
         try:
             return validate_history_experiment(suggestion)
-        except Exception as exc:
+        except SentinelExperimentGuardError as exc:
             if attempt == max_attempts:
                 raise
 
@@ -78,9 +73,28 @@ def suggest_history_experiment(
                 + "Prefer a repeatability experiment comparing the target "
                   "session with its prior same-cluster mean or nearest prior "
                   "sessions.\n"
-                + "Describe a result as reproducibly different from the prior mean "
-                  "rather than distinguishable, discriminative, identifying, or "
-                  "class-separating.\n"
+                + "Describe a result as reproducibly different from the prior "
+                  "mean rather than distinguishable, discriminative, identifying, "
+                  "or class-separating.\n"
             )
 
     raise RuntimeError("unreachable")
+
+
+def suggest_history_experiment(
+    target_session_id,
+    *,
+    results_dir="results/ml/prospective",
+    max_attempts=2,
+    generate_fn=None,
+):
+    prompt = build_history_experiment_prompt(
+        target_session_id,
+        results_dir=results_dir,
+    )
+
+    return suggest_history_experiment_from_prompt(
+        prompt,
+        max_attempts=max_attempts,
+        generate_fn=generate_fn,
+    )
