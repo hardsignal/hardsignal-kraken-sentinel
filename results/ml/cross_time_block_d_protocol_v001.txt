@@ -1,0 +1,34 @@
+purpose=fourth_natural_cross_time_validation_block
+frozen_model_version=0.1
+frozen_model_commit=49d5661
+model_refit_allowed=no
+training_dataset_modification_allowed=no
+
+sessions=
+TPMS-NATURAL-014
+TPMS-NATURAL-015
+TPMS-NATURAL-016
+
+reference_configuration=
+frequency_hz=433868160
+doa_method=MUSIC
+decorrelation=Off
+array=UCA
+radius_m=0.21
+squelch_mode=Manual
+squelch_db=-45
+
+procedure=
+fresh Kraken runtime
+verify DAQ health
+verify prospective_session check
+enable Local Data Recording
+verify recorder-check passes
+do not tune array or source in response to model output
+collect 10_to_12 activations per session
+finalize each session against frozen model
+do not inspect assignments until all three sessions are finalized
+do not refit between sessions
+
+question=
+Do C1 C2 or C0 behavioural regimes recur in a fourth independent runtime block?
