@@ -7,7 +7,7 @@ import tempfile
 import unittest
 from unittest.mock import patch
 
-from ai.history import build_history_bundle, load_formal_history
+from ai.history import HISTORY_FEATURES, build_history_bundle, load_formal_history
 from ai.history_artifact import build_history_artifact, build_source_record_hashes
 
 
@@ -125,7 +125,14 @@ class HistoryIdentityTests(unittest.TestCase):
         self.path.unlink()
         self.target = "TPMS-NATURAL-015-20260925-020456"
         self.path = self.root / f"{self.target}.json"
-        self.write(dict(self.record, session_id=self.target))
+        self.write(dict(self.record, session_id=self.target,
+                        feature_row={key: 15.0 for key in HISTORY_FEATURES}))
+        for number in range(5, 14):
+            identity = f"TPMS-NATURAL-{number:03d}-20260925-000000"
+            (self.root / f"{identity}.json").write_text(json.dumps(dict(
+                self.record, session_id=identity,
+                feature_row={key: float(number) for key in HISTORY_FEATURES},
+            )), encoding="utf-8")
         before = self.artifact()
         before.pop("created_at")
         paths = [self.root / f"TPMS-NATURAL-{n}-20260925-020743.json"
@@ -146,7 +153,7 @@ class HistoryIdentityTests(unittest.TestCase):
             after.pop("created_at")
             self.assertEqual(before, after)
             history = build_history_bundle(self.target, results_dir=self.root)
-            self.assertEqual(history["formal_session_count_total"], 1)
+            self.assertEqual(history["formal_session_count_total"], 10)
 
     def test_provenance_rejects_identity_change_before_hashing(self):
         self.write(dict(self.record, session_id="TPMS-NATURAL-006-20260925-005606"))

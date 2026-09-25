@@ -49,7 +49,8 @@ def load_formal_history(
     Apply the filename cutoff before opening JSON so future bytes cannot
     affect an earlier target. Unbounded callers retain the full-history view.
     Consumed records must have an exact, valid filename/payload identity,
-    with at most one record per formal acquisition number.
+    with at most one record per formal acquisition number. A formal target
+    cutoff requires the complete formal prefix, checked after all identities.
     """
     records = []
     seen_numbers = set()
@@ -81,6 +82,20 @@ def load_formal_history(
         seen_numbers.add(number)
 
         records.append(record)
+
+    if through_session_number in FORMAL_SESSION_NUMBERS:
+        if through_session_number not in seen_numbers:
+            raise ValueError("target session is not in the formal prospective set")
+        expected = {
+            number for number in FORMAL_SESSION_NUMBERS
+            if number <= through_session_number
+        }
+        missing = sorted(expected - seen_numbers)
+        if missing:
+            raise ValueError(
+                "incomplete formal session prefix; missing required sessions: "
+                + ", ".join(f"{number:03d}" for number in missing)
+            )
 
     return records
 
