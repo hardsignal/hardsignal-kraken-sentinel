@@ -32,6 +32,7 @@ OUT_MD = Path(
 BLOCKS = {
     "A_same_runtime": {5, 6, 7},
     "B_fresh_runtime": {8, 9, 10},
+    "C_fresh_runtime": {11, 12, 13},
 }
 
 
