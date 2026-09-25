@@ -170,6 +170,7 @@ def main():
         row
         for row in rows
         if row["session_id"].startswith("TPMS-NATURAL-")
+        and not row["session_id"].startswith("TPMS-NATURAL-014-")
     ]
 
     if not rows:

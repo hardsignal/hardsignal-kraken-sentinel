@@ -4,10 +4,10 @@ Frozen behavioural model v0.1; no prospective session is used for refitting.
 
 ## Summary
 
-- Natural prospective sessions: 9
-- Cluster 1: 7 sessions
+- Natural prospective sessions: 12
+- Cluster 1: 10 sessions
 - Cluster 2: 2 sessions
-- Within training envelope: 7
+- Within training envelope: 10
 - Outside training envelope: 2
 
 ## Sessions
@@ -23,10 +23,13 @@ Frozen behavioural model v0.1; no prospective session is used for refitting.
 | TPMS-NATURAL-011-20260925-014556 | 1 | 2.1191 | 1.9254 | 0.6344 | WITHIN_OBSERVED_TRAINING_RANGE |
 | TPMS-NATURAL-012-20260925-014842 | 1 | 1.8110 | 2.5707 | 0.5422 | WITHIN_OBSERVED_TRAINING_RANGE |
 | TPMS-NATURAL-013-20260925-015115 | 1 | 2.2334 | 1.6891 | 0.6686 | WITHIN_OBSERVED_TRAINING_RANGE |
+| TPMS-NATURAL-015-20260925-020456 | 1 | 1.8149 | 2.1600 | 0.5433 | WITHIN_OBSERVED_TRAINING_RANGE |
+| TPMS-NATURAL-016-20260925-020743 | 1 | 2.6379 | 1.6506 | 0.7897 | WITHIN_OBSERVED_TRAINING_RANGE |
+| TPMS-NATURAL-017-20260925-021012 | 1 | 2.3140 | 1.7401 | 0.6927 | WITHIN_OBSERVED_TRAINING_RANGE |
 
 ## Observed cluster transitions
 
-- C1 → C1: 6
+- C1 → C1: 9
 - C2 → C1: 1
 - C2 → C2: 1
 

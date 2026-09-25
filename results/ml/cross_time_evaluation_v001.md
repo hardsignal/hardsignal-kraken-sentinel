@@ -37,6 +37,17 @@ Frozen behavioural model v0.1; no prospective data were used for refitting.
 - Mean separation ratio: 2.0618
 - Mean training-max ratio: 0.6150
 
+### D_fresh_runtime
+
+- Sessions: 3
+- Sequence: C1 → C1 → C1
+- Cluster counts: {1: 3}
+- Within training envelope: 3
+- Outside training envelope: 0
+- Mean nearest distance: 2.2556
+- Mean separation ratio: 1.8502
+- Mean training-max ratio: 0.6753
+
 ## Cross-block recurrence
 
 - Clusters observed in both blocks: C1
@@ -53,10 +64,13 @@ Frozen behavioural model v0.1; no prospective data were used for refitting.
 - Natural 011: C1 | distance=2.1191 | separation=1.9254 | training-max ratio=0.6344 | WITHIN_OBSERVED_TRAINING_RANGE
 - Natural 012: C1 | distance=1.8110 | separation=2.5707 | training-max ratio=0.5422 | WITHIN_OBSERVED_TRAINING_RANGE
 - Natural 013: C1 | distance=2.2334 | separation=1.6891 | training-max ratio=0.6686 | WITHIN_OBSERVED_TRAINING_RANGE
+- Natural 015: C1 | distance=1.8149 | separation=2.1600 | training-max ratio=0.5433 | WITHIN_OBSERVED_TRAINING_RANGE
+- Natural 016: C1 | distance=2.6379 | separation=1.6506 | training-max ratio=0.7897 | WITHIN_OBSERVED_TRAINING_RANGE
+- Natural 017: C1 | distance=2.3140 | separation=1.7401 | training-max ratio=0.6927 | WITHIN_OBSERVED_TRAINING_RANGE
 
 ## Observed transitions
 
-- C1 → C1: 6
+- C1 → C1: 9
 - C2 → C1: 1
 - C2 → C2: 1
 
