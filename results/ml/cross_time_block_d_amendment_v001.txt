@@ -1,0 +1,18 @@
+block=D
+original_sessions=014,015,016
+
+session_014_status=EXCLUDED_FROM_FORMAL_BLOCK_D
+reason=DAQ preflight failed because adc_overdrive was true before acquisition
+raw_session_retained=yes
+frozen_score_retained=yes
+data_deleted=no
+
+replacement_plan=
+015
+016
+017
+
+model_refit_allowed=no
+training_dataset_modification_allowed=no
+
+note=This amendment was recorded before sessions 015-017 were collected.
