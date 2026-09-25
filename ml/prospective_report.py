@@ -166,6 +166,12 @@ def main():
 
     rows = load_rows(args.ledger)
 
+    rows = [
+        row
+        for row in rows
+        if row["session_id"].startswith("TPMS-NATURAL-")
+    ]
+
     if not rows:
         raise SystemExit(
             "Prospective ledger contains no sessions."
