@@ -121,7 +121,6 @@ class ReadinessTests(unittest.TestCase):
         with self.assertRaises(ValueError):
             load_ml_result(self.target, self.root)
 
-    @unittest.expectedFailure
     def test_nonobject_ml_has_evidence_error(self):
         self.write(6, [])
         with self.assertRaises(ValueError):

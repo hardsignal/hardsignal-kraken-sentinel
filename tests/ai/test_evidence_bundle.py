@@ -90,6 +90,21 @@ class EvidenceBundleTests(unittest.TestCase):
         with self.assertRaises(FileNotFoundError):
             load_ml_result(SESSION, self.ml_dir)
 
+    def test_nonobject_ml_results_fail_with_validation_error(self):
+        path = self.ml_dir / f"{SESSION}.json"
+        for record in (None, [], [1], "session", 42, 1.5, True):
+            with self.subTest(record=record):
+                path.write_text(json.dumps(record), encoding="utf-8")
+                with self.assertRaisesRegex(ValueError, "^ML result must be a JSON object$"):
+                    load_ml_result(SESSION, self.ml_dir)
+
+    def test_valid_ml_object_is_preserved(self):
+        record = ml_record()
+        path = self.write_ml(record)
+        original = path.read_bytes()
+        self.assertEqual(load_ml_result(SESSION, self.ml_dir), (path, record))
+        self.assertEqual(path.read_bytes(), original)
+
     def test_ml_session_mismatch_fails(self):
         self.write_ml(ml_record("WRONG-SESSION"))
 

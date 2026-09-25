@@ -37,6 +37,9 @@ def load_ml_result(session_id, ml_results_dir=DEFAULT_ML_RESULTS):
 
     record = json.loads(path.read_text(encoding="utf-8"))
 
+    if not isinstance(record, dict):
+        raise ValueError("ML result must be a JSON object")
+
     if record.get("session_id") != session_id:
         raise ValueError("ML result session_id mismatch")
 

@@ -1,14 +1,54 @@
 import contextlib
 import io
+import json
+from pathlib import Path
+import tempfile
 import unittest
 from unittest.mock import patch
 
 from ai import cli
+from ai.evidence_bundle import build_evidence_bundle
 from ai.experiment_guard import SentinelExperimentGuardError
 from ai.llm_client import SentinelLLMError
 
 
 class CLITests(unittest.TestCase):
+    def test_nonobject_ml_results_exit_five_without_publication(self):
+        with tempfile.TemporaryDirectory() as temporary:
+            root = Path(temporary)
+
+            def build_bundle(session_id):
+                return build_evidence_bundle(
+                    session_id,
+                    bursts_log=root / "bursts.log",
+                    track_log=root / "track.log",
+                    episode_log=root / "episodes.jsonl",
+                    ml_results_dir=root,
+                )
+
+            for record in (None, [], [1], "session", 42, 1.5, True):
+                with self.subTest(record=record):
+                    (root / "TEST.json").write_text(json.dumps(record), encoding="utf-8")
+                    with (
+                        patch("ai.cli.build_evidence_bundle", side_effect=build_bundle),
+                        patch("ai.cli.verify_model_digest") as verify_digest,
+                        patch("ai.cli.suggest_experiment_from_prompt") as suggest,
+                        patch("ai.cli.save_report_artifact") as save,
+                        contextlib.redirect_stdout(io.StringIO()) as output,
+                        contextlib.redirect_stderr(io.StringIO()) as error,
+                    ):
+                        status = cli.main(["--session", "TEST", "--save"])
+
+                    self.assertEqual(status, 5)
+                    self.assertEqual(output.getvalue(), "")
+                    self.assertEqual(
+                        error.getvalue(),
+                        "SENTINEL_AI_EVIDENCE_ERROR: ML result must be a JSON object\n",
+                    )
+                    verify_digest.assert_not_called()
+                    suggest.assert_not_called()
+                    save.assert_not_called()
+
     @patch("ai.cli.compose_final_report")
     @patch("ai.cli.suggest_experiment_from_prompt")
     @patch("ai.cli.build_experiment_prompt")
