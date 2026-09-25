@@ -22,7 +22,7 @@ from ai import cli
 from ai.artifact import canonical_sha256
 from ai.evidence_bundle import load_ml_result
 from ai.experiment_guard import SentinelExperimentGuardError, validate_experiment_suggestion
-from ai.history import build_history_bundle
+from ai.history import build_history_bundle, load_history_snapshot
 from ai.history_artifact import build_history_artifact
 from ai.history_experiment import build_history_experiment_prompt, suggest_history_experiment_from_prompt
 from ai.history_experiment_guard import validate_history_experiment
@@ -126,15 +126,18 @@ class ReadinessTests(unittest.TestCase):
         with self.assertRaises(ValueError):
             load_ml_result(self.target, self.root)
 
-    @unittest.expectedFailure
     def test_history_artifact_rejects_stale_bundle(self):
-        history = self.bundle()
+        old_snapshot = load_history_snapshot(self.target, results_dir=self.root)
+        report = build_history_report(self.target, snapshot=old_snapshot)
+        history = report["history"]
+        prompt = build_history_experiment_prompt(self.target, snapshot=old_snapshot)
         record = make_record(5, cluster=2)
         self.write(5, record)
         with self.assertRaises(ValueError):
             build_history_artifact(target_session_id=self.target, history_bundle=history,
-                history_report='stale', experiment_prompt='stale', experiment_suggestion='Repeat and measure.',
-                model_digest=EXPECTED_MODEL_DIGEST, results_dir=self.root)
+                history_report=report["text"], experiment_prompt=prompt, experiment_suggestion='Repeat and measure.',
+                model_digest=EXPECTED_MODEL_DIGEST,
+                snapshot=load_history_snapshot(self.target, results_dir=self.root))
 
     def test_ollama_unavailable_is_llm_error(self):
         with patch('ai.llm_client.request.urlopen', side_effect=URLError('offline')):
@@ -145,6 +148,7 @@ class ReadinessTests(unittest.TestCase):
     def test_two_history_rejections_exit_six_without_publication(self):
         generate = Mock(return_value='Measure propagation changes.')
         with patch('ai.cli.verify_model_digest', return_value='locked'), \
+             patch('ai.cli.load_history_snapshot'), \
              patch('ai.cli.build_history_report', return_value={'text': 'history', 'history': {}}), \
              patch('ai.cli.build_history_experiment_prompt', return_value='prompt'), \
              patch('ai.history_experiment.generate_text', generate), \

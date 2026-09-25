@@ -3,6 +3,10 @@ from pathlib import Path
 import tempfile
 import unittest
 
+from ai.history import HISTORY_FEATURES, load_history_snapshot
+from ai.history_report import build_history_report
+from ai.history_experiment import build_history_experiment_prompt
+
 from ai.history_artifact import (
     build_history_artifact,
     build_source_record_hashes,
@@ -17,7 +21,7 @@ def write_record(root, number):
         "session_id": session_id,
         "assigned_cluster": 1,
         "novelty": "WITHIN_OBSERVED_TRAINING_RANGE",
-        "feature_row": {},
+        "feature_row": {key: float(number) for key in HISTORY_FEATURES},
     }
 
     path = root / f"{session_id}.json"
@@ -44,6 +48,17 @@ class HistoryArtifactTests(unittest.TestCase):
 
         self.target = "TPMS-NATURAL-015-20260925-000000"
 
+    def artifact(self):
+        snapshot = load_history_snapshot(self.target, results_dir=self.root)
+        report = build_history_report(self.target, snapshot=snapshot)
+        return build_history_artifact(
+            target_session_id=self.target,
+            history_bundle=report["history"], history_report=report["text"],
+            experiment_prompt=build_history_experiment_prompt(self.target, snapshot=snapshot),
+            experiment_suggestion="Repeat and measure.", model_digest="digest123",
+            snapshot=snapshot,
+        )
+
     def test_source_manifest_is_prior_only_plus_target(self):
         hashes = build_source_record_hashes(
             self.target,
@@ -67,17 +82,7 @@ class HistoryArtifactTests(unittest.TestCase):
         self.assertIn(self.target, hashes)
 
     def test_artifact_records_v02_scope(self):
-        artifact = build_history_artifact(
-            target_session_id=self.target,
-            history_bundle={
-                "target_session_id": self.target,
-            },
-            history_report="HISTORY",
-            experiment_prompt="PROMPT",
-            experiment_suggestion="Repeat and measure.",
-            model_digest="digest123",
-            results_dir=self.root,
-        )
+        artifact = self.artifact()
 
         self.assertEqual(
             artifact["artifact_version"],
@@ -114,17 +119,7 @@ class HistoryArtifactTests(unittest.TestCase):
             )
 
     def test_saved_history_artifact_round_trips(self):
-        artifact = build_history_artifact(
-            target_session_id=self.target,
-            history_bundle={
-                "target_session_id": self.target,
-            },
-            history_report="HISTORY",
-            experiment_prompt="PROMPT",
-            experiment_suggestion="Repeat and measure.",
-            model_digest="digest123",
-            results_dir=self.root,
-        )
+        artifact = self.artifact()
 
         with tempfile.TemporaryDirectory() as tmp:
             path = save_history_artifact(

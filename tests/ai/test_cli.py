@@ -104,7 +104,7 @@ class CLITests(unittest.TestCase):
 
         output = io.StringIO()
 
-        with contextlib.redirect_stdout(output):
+        with patch("ai.cli.load_history_snapshot", return_value="SNAPSHOT"), contextlib.redirect_stdout(output):
             status = cli.main([
                 "--session",
                 "TPMS-NATURAL-015-20260925-020456",
@@ -113,7 +113,7 @@ class CLITests(unittest.TestCase):
 
         self.assertEqual(status, 0)
         build_prompt.assert_called_once_with(
-            "TPMS-NATURAL-015-20260925-020456"
+            "TPMS-NATURAL-015-20260925-020456", snapshot="SNAPSHOT",
         )
         suggest_history.assert_called_once_with("HISTORY PROMPT")
         self.assertIn(
@@ -152,7 +152,7 @@ class CLITests(unittest.TestCase):
 
         output = io.StringIO()
 
-        with contextlib.redirect_stdout(output):
+        with patch("ai.cli.load_history_snapshot", return_value="SNAPSHOT"), contextlib.redirect_stdout(output):
             status = cli.main([
                 "--session",
                 "TEST",
@@ -169,6 +169,7 @@ class CLITests(unittest.TestCase):
             experiment_prompt="HISTORY PROMPT",
             experiment_suggestion="REPEAT AND MEASURE",
             model_digest="digest123",
+            snapshot="SNAPSHOT",
         )
 
         self.assertIn(

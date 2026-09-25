@@ -17,10 +17,12 @@ def build_history_report(
     target_session_id,
     *,
     results_dir="results/ml/prospective",
+    snapshot=None,
 ):
     history = build_history_bundle(
         target_session_id,
         results_dir=results_dir,
+        snapshot=snapshot,
     )
 
     lines = [

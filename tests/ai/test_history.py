@@ -8,6 +8,7 @@ from ai.history import (
     FORMAL_SESSION_NUMBERS,
     build_history_bundle,
     load_formal_history,
+    load_history_snapshot,
     session_number,
 )
 
@@ -163,14 +164,15 @@ class PriorOnlyIsolationTests(unittest.TestCase):
         return path
 
     def snapshot(self):
-        bundle = build_history_bundle(self.target, results_dir=self.root)
-        report = build_history_report(self.target, results_dir=self.root)
-        prompt = build_history_experiment_prompt(self.target, results_dir=self.root)
+        snapshot = load_history_snapshot(self.target, results_dir=self.root)
+        bundle = build_history_bundle(self.target, snapshot=snapshot)
+        report = build_history_report(self.target, snapshot=snapshot)
+        prompt = build_history_experiment_prompt(self.target, snapshot=snapshot)
         artifact = build_history_artifact(
             target_session_id=self.target, history_bundle=bundle,
             history_report=report["text"], experiment_prompt=prompt,
             experiment_suggestion="Repeat and measure.", model_digest="offline",
-            results_dir=self.root,
+            snapshot=snapshot,
         )
         # Creation time is not source provenance; everything else must match.
         artifact.pop("created_at")

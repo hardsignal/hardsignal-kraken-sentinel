@@ -10,10 +10,12 @@ def build_history_experiment_prompt(
     target_session_id,
     *,
     results_dir="results/ml/prospective",
+    snapshot=None,
 ):
     report = build_history_report(
         target_session_id,
         results_dir=results_dir,
+        snapshot=snapshot,
     )
 
     return (

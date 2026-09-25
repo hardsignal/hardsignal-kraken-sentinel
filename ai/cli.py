@@ -20,6 +20,7 @@ from ai.history_experiment import (
     build_history_experiment_prompt,
     suggest_history_experiment_from_prompt,
 )
+from ai.history import load_history_snapshot
 from ai.history_report import build_history_report
 
 
@@ -57,11 +58,12 @@ def main(argv=None):
         if args.history:
             model_digest = verify_model_digest()
 
+            snapshot = load_history_snapshot(args.session)
             historical = build_history_report(
-                args.session
+                args.session, snapshot=snapshot,
             )
             history_prompt = build_history_experiment_prompt(
-                args.session
+                args.session, snapshot=snapshot,
             )
             experiment = suggest_history_experiment_from_prompt(
                 history_prompt
@@ -83,6 +85,7 @@ def main(argv=None):
                     experiment_prompt=history_prompt,
                     experiment_suggestion=experiment,
                     model_digest=model_digest,
+                    snapshot=snapshot,
                 )
                 path = save_history_artifact(
                     artifact,

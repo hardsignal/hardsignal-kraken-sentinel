@@ -9,6 +9,9 @@ from unittest.mock import patch
 
 from ai.history import HISTORY_FEATURES, build_history_bundle
 from ai.history_artifact import build_history_artifact, build_source_record_hashes
+from ai.history import load_history_snapshot
+from ai.history_report import build_history_report
+from ai.history_experiment import build_history_experiment_prompt
 
 
 PREFIX_015 = (5, 6, 7, 8, 9, 10, 11, 12, 13, 15)
@@ -44,12 +47,15 @@ class HistoryCompletenessTests(unittest.TestCase):
         return build_source_record_hashes(self.target, results_dir=self.root)
 
     def artifact(self):
+        snapshot = load_history_snapshot(self.target, results_dir=self.root)
+        report = build_history_report(self.target, snapshot=snapshot)
         return build_history_artifact(
             target_session_id=self.target,
-            history_bundle={"target_session_id": self.target},
-            history_report="HISTORY", experiment_prompt="PROMPT",
+            history_bundle=report["history"],
+            history_report=report["text"],
+            experiment_prompt=build_history_experiment_prompt(self.target, snapshot=snapshot),
             experiment_suggestion="Repeat and measure.", model_digest="offline",
-            results_dir=self.root,
+            snapshot=snapshot,
         )
 
     def assert_rejected(self, message):
