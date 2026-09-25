@@ -12,6 +12,8 @@ from ai.experiment import (
 )
 from ai.experiment_guard import SentinelExperimentGuardError
 from ai.final_report import compose_final_report
+from ai.history_experiment import suggest_history_experiment
+from ai.history_report import build_history_report
 
 
 def build_parser():
@@ -29,6 +31,11 @@ def build_parser():
         help="Save an auditable JSON report artifact",
     )
     parser.add_argument(
+        "--history",
+        action="store_true",
+        help="Run Sentinel AI v0.2 prior-session historical reasoning",
+    )
+    parser.add_argument(
         "--output-dir",
         default="results/ai",
         help="Artifact output directory",
@@ -40,6 +47,34 @@ def main(argv=None):
     args = build_parser().parse_args(argv)
 
     try:
+        if args.history:
+            if args.save:
+                print(
+                    "SENTINEL_AI_HISTORY_SAVE_UNAVAILABLE: "
+                    "v0.2 historical artifact schema is not frozen yet",
+                    file=sys.stderr,
+                )
+                return 7
+
+            model_digest = verify_model_digest()
+
+            historical = build_history_report(
+                args.session
+            )
+            experiment = suggest_history_experiment(
+                args.session
+            )
+
+            print("=" * 70)
+            print("HARDSIGNAL LABS — SENTINEL AI v0.2 HISTORY")
+            print("=" * 70)
+            print(historical["text"])
+            print()
+            print("Next controlled experiment:")
+            print(experiment)
+
+            return 0
+
         bundle = build_evidence_bundle(args.session)
         model_digest = verify_model_digest()
         experiment_prompt = build_experiment_prompt(bundle)

@@ -41,6 +41,60 @@ class CLITests(unittest.TestCase):
         compose.assert_called_once_with(bundle, "EXPERIMENT")
         self.assertIn("FINAL REPORT", output.getvalue())
 
+    @patch("ai.cli.suggest_history_experiment")
+    @patch("ai.cli.build_history_report")
+    @patch("ai.cli.verify_model_digest")
+    def test_history_mode(
+        self,
+        verify_digest,
+        build_history,
+        suggest_history,
+    ):
+        verify_digest.return_value = "digest123"
+        build_history.return_value = {
+            "text": "DETERMINISTIC HISTORY"
+        }
+        suggest_history.return_value = (
+            "Repeat the session and measure bearing variability."
+        )
+
+        output = io.StringIO()
+
+        with contextlib.redirect_stdout(output):
+            status = cli.main([
+                "--session",
+                "TPMS-NATURAL-015-20260925-020456",
+                "--history",
+            ])
+
+        self.assertEqual(status, 0)
+        self.assertIn(
+            "SENTINEL AI v0.2 HISTORY",
+            output.getvalue(),
+        )
+        self.assertIn(
+            "DETERMINISTIC HISTORY",
+            output.getvalue(),
+        )
+
+    def test_history_save_is_blocked_until_schema_exists(self):
+        error = io.StringIO()
+
+        with contextlib.redirect_stderr(error):
+            status = cli.main([
+                "--session",
+                "TPMS-NATURAL-015-20260925-020456",
+                "--history",
+                "--save",
+            ])
+
+        self.assertEqual(status, 7)
+        self.assertIn(
+            "HISTORY_SAVE_UNAVAILABLE",
+            error.getvalue(),
+        )
+
+
     @patch("ai.cli.build_evidence_bundle")
     def test_missing_session_fails(self, build_bundle):
         build_bundle.side_effect = FileNotFoundError("missing")
