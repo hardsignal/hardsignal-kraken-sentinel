@@ -1,5 +1,6 @@
 """Deterministic cross-session history for Sentinel AI v0.2."""
 
+from datetime import datetime
 import json
 import math
 import re
@@ -22,19 +23,19 @@ HISTORY_FEATURES = (
     "burst_count",
 )
 
-SESSION_NUMBER_RE = re.compile(
-    r"^TPMS-NATURAL-(\d+)-"
-)
+SESSION_NUMBER_RE = re.compile(r"^TPMS-NATURAL-([0-9]+)-")
+SESSION_ID_RE = re.compile(r"TPMS-NATURAL-([0-9]{3})-([0-9]{8}-[0-9]{6})")
 
 
 def session_number(session_id):
-    match = SESSION_NUMBER_RE.match(session_id)
+    match = SESSION_ID_RE.fullmatch(session_id) if isinstance(session_id, str) else None
 
     if not match:
         raise ValueError(
             f"unsupported natural session id: {session_id}"
         )
 
+    datetime.strptime(match.group(2), "%Y%m%d-%H%M%S")
     return int(match.group(1))
 
 
@@ -47,27 +48,37 @@ def load_formal_history(
 
     Apply the filename cutoff before opening JSON so future bytes cannot
     affect an earlier target. Unbounded callers retain the full-history view.
-    Exact filename/payload membership validation is a separate concern.
+    Consumed records must have an exact, valid filename/payload identity,
+    with at most one record per formal acquisition number.
     """
     records = []
+    seen_numbers = set()
 
     for path in sorted(
         Path(results_dir).glob("TPMS-NATURAL-*.json")
     ):
-        if (through_session_number is not None
-                and session_number(path.stem) > through_session_number):
+        # Use only the numeric prefix for isolation: even a malformed future
+        # filename or payload must not affect an earlier target.
+        prefix = SESSION_NUMBER_RE.match(path.stem)
+        if prefix is None:
+            raise ValueError(f"malformed natural session filename: {path.name}")
+        number = int(prefix.group(1))
+        if through_session_number is not None and number > through_session_number:
+            continue
+        if number not in FORMAL_SESSION_NUMBERS:
             continue
 
-        record = json.loads(
-            path.read_text(encoding="utf-8")
-        )
-
-        number = session_number(record["session_id"])
-
-        if (number not in FORMAL_SESSION_NUMBERS
-                or (through_session_number is not None
-                    and number > through_session_number)):
-            continue
+        session_number(path.stem)
+        record = json.loads(path.read_text(encoding="utf-8"))
+        if not isinstance(record, dict):
+            raise ValueError(f"historical record must be a JSON object: {path.name}")
+        identity = record.get("session_id")
+        session_number(identity)
+        if identity != path.stem:
+            raise ValueError(f"filename/session_id mismatch: {path.name}")
+        if number in seen_numbers:
+            raise ValueError(f"duplicate formal session identity: {number:03d}")
+        seen_numbers.add(number)
 
         records.append(record)
 

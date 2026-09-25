@@ -7,6 +7,37 @@ Audited working branch `audit/ai-v1-readiness`, initially clean, at
 tag). Separately reviewed verifier branch `post-release/verify-ai-v0.2` at
 `42ec68e237ee66a7dc199e1b8086969fdd339b79`.
 
+## B2 identity implementation follow-up
+
+The requested filename/identity integrity boundary is now enforced. Consumed
+formal records must be JSON objects with a string `session_id` of the complete
+`TPMS-NATURAL-NNN-YYYYMMDD-HHMMSS` form and a valid timestamp, exactly equal to
+the filename stem. Two eligible files cannot represent the same formal acquisition
+number, even with distinct timestamps. Nothing is repaired or renamed.
+
+The numeric filename cutoff still runs before JSON parsing or full ID validation,
+so future corrupt/mismatched records (including malformed future suffixes) cannot
+affect earlier targets. Filename numbers outside the formal set, including 014,
+are excluded before parsing. Source hashes use the same validated loader, so
+unchecked payload identities cannot redirect provenance to another filename.
+The snapshot-consistency issue (B4) remains unchanged.
+
+The filename-mismatch readiness probe is now a normal passing test. This patch
+implements the requested identity scope, not the original audit's broader exact
+frozen-ID manifest/completeness proposal: the missing-prior-record probe remains
+an expected failure. B3–B5 remain open. No tags, ML data/models, or historical
+release artifacts changed.
+
+Validation (Python 3.12.3):
+
+- `python3.12 -B -m unittest discover -s tests/ai -p 'test_history*.py' -v`
+  — 41 tests pass, including 12 new identity tests and all B1 regressions.
+- `python3.12 -B -m unittest discover -s tests/ai -p 'test_*.py'`
+  — 97 tests pass.
+- `python3.12 -B tests/readiness/test_ai_v1_readiness.py`
+  — 22 probes: 13 pass, 9 expected failures; gate exits 1 (NOT READY).
+- `git diff --check` — clean.
+
 ## B1 implementation follow-up
 
 Strict prior-only historical isolation is now fixed on this development branch.
@@ -61,7 +92,7 @@ v0.2 verifier from its exact Git commit, so that object must be available locall
 | ID | Priority | Finding and release acceptance condition |
 | --- | --- | --- |
 | B1 | FIXED on development branch | Original finding: strict prior-only isolation fails. `ai/history.py:load_formal_history` parses all matching files; `formal_session_count_total` includes future records and `ai/history_report.py` sends it into the prompt. Future presence changes the prompt; corrupt future JSON blocks an earlier target. Select eligible paths before reading; require complete prompt/bundle invariance under future addition, removal, mutation and corruption. |
-| B2 | BLOCKER | Formal membership is based only on payload session number. Filename/payload mismatch, duplicate numbers, and missing formal prior records are not rejected. A 014 filename carrying a 007 payload becomes a formal 007 target; normal history CLI without saving accepts it. Use the exact frozen formal ID manifest, validate filename/top-level/feature-row identity, exclude 014 by membership and reject missing eligible records. |
+| B2 | Identity fixed; completeness open | Original finding: formal membership was based only on payload session number. Filename/payload mismatch, duplicate numbers, and missing formal prior records are not rejected. A 014 filename carrying a 007 payload becomes a formal 007 target; normal history CLI without saving accepts it. Use the exact frozen formal ID manifest, validate filename/top-level/feature-row identity, exclude 014 by membership and reject missing eligible records. |
 | B3 | BLOCKER | Both CLI experiment guards accept identity, causality, accuracy and discrimination claims. They also accept an invented prior mean when no prior exists. Strengthen shared and history-specific guards, bind referenced quantities/comparisons to supplied evidence, and test publication rejection. Prompt instructions and a measurement verb are not evidence validation. |
 | B4 | BLOCKER | Artifacts do not prove a consistent evidence snapshot. History/report, prompt, and source hashes are built from separate reads; a changed source can be hashed alongside stale interpretation. Normal ML parse and hash are separate reads too. Read eligible bytes once, parse/hash that snapshot, and derive every artifact/report/prompt field from it. |
 | B5 | BLOCKER | No general saved-artifact verifier or complete v1 schema exists. v0.1 verifier accepts changed source JSON; v0.2 verifier protects one fixed reference only. Core logs and frozen ML binary/preprocessing lineage are not bound by AI artifacts. Define the contract and a read-only verifier for both v1 modes, including source checks, semantic consistency and policy versions. |

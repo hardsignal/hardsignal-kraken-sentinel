@@ -81,7 +81,6 @@ class ReadinessTests(unittest.TestCase):
         self.write(17).write_text('{', encoding='utf-8')
         self.assertEqual(before, self.bundle())
 
-    @unittest.expectedFailure
     def test_excluded_filename_cannot_supply_formal_record(self):
         # Keep this B2 probe inside the target cutoff so it tests membership,
         # independently of B1 future-file isolation.
