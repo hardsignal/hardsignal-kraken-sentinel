@@ -53,6 +53,113 @@ This is repeatability and state-machine validation. Replay recomputes transition
 
 This is the focused core release checkpoint, not a claim about the entire research test suite.
 
+## Sentinel ML 1.0 — Behavioural Regime Analysis
+
+**Status: release candidate on `ml-v0.1`.**
+
+Sentinel ML adds a machine-learning layer above the deterministic Kraken RF
+Sentinel stack. It scores session-level RF/DoA behavioural regimes; it does
+not identify physical transmitters.
+
+### Architecture
+
+KrakenSDR
+→ deterministic burst / quality / tracking pipeline
+→ session-level feature dataset
+→ frozen preprocessing
+→ frozen behavioural model
+→ cluster assignment + distance
+→ novelty / training-envelope analysis
+→ prospective validation history
+
+### Frozen model
+
+- 21 historical training sessions
+- 11 continuous RF/DoA features
+- 3 exploratory behavioural clusters
+- Frozen model commit: `49d5661`
+- Frozen dataset SHA-256:
+  `e1a63cf6be87d85584a9201e395b1fcdd8251ee7c6cb09ce5eb502886cf76a51`
+- Prospective sessions are never used to refit model v0.1.
+
+### Validation
+
+Model development includes:
+
+- PCA and agglomerative behavioural clustering
+- 1,000-run perturbation / feature-subsampling stability analysis
+- single-feature ablation
+- feature-family ablation
+- frozen-model regression scoring
+- provenance locking
+
+Formal natural prospective validation currently contains 12 valid sessions
+across four runtime blocks:
+
+Block A: C2 -> C2 -> C1
+Block B: C1 -> C1 -> C1
+Block C: C1 -> C1 -> C1
+Block D: C1 -> C1 -> C1
+
+Cluster status:
+
+- **C1:** prospectively supported; 10/12 formal natural sessions and recurrence
+  across fresh Kraken runtimes.
+- **C2:** exploratory; 2 natural observations, both outside its original
+  training-distance envelope; cross-runtime recurrence not demonstrated.
+- **C0:** not prospectively validated.
+
+Natural 014 is retained as evidence but excluded from formal Block D because
+the DAQ preflight reported `adc_overdrive=True`.
+
+### Prospective workflow
+
+Fresh-runtime validation sequence:
+
+start Kraken
+-> wait for DAQ synchronization
+-> run prospective-session check
+-> enable Kraken Local Data Recording
+-> run recorder-check
+-> collect natural session
+-> finalize against frozen model
+
+Reference configuration:
+
+- Frequency: 433.868160 MHz
+- DoA method: MUSIC
+- Decorrelation: Off
+- Array: UCA
+- Radius: 0.21 m
+- Squelch: Manual / -45 dB
+
+Useful commands:
+
+    python -m ml.prospective_session check
+    python -m ml.prospective_session recorder-check --wait 10
+    python -m ml.prospective_session finalize --session SESSION_ID
+    python -m ml.prospective_report
+    python -m ml.cross_time_evaluation
+
+The recorder check requires one controlled RF activation during its wait
+window and verifies that `mydata.csv` actually advances.
+
+### Release-candidate gate
+
+- ML Python modules compile successfully.
+- Focused ML tests: **5/5 PASS**
+- Frozen training dataset SHA-256 verified.
+- Release-candidate working tree verified clean.
+
+### Limitations
+
+Sentinel ML 1.0 does not establish:
+
+- unique transmitter identification
+- TPMS device fingerprint identification
+- prospective validation of all three frozen clusters
+- calibration-grade absolute DoA
+
 ## Usage
 
 Run from the repository root with Python 3.
