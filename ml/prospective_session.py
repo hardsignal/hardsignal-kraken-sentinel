@@ -22,6 +22,7 @@ import argparse
 import csv
 import hashlib
 import json
+import time
 from datetime import datetime
 from pathlib import Path
 from urllib.request import urlopen
@@ -56,6 +57,9 @@ LEDGER_PATH = Path(
 KRAKEN_SETTINGS_URL = (
     "http://127.0.0.1:8042/settings"
 )
+
+KRAKEN_STATUS_PATH = Path.home() / "krakensdr_doa/_share/status.json"
+KRAKEN_MYDATA_PATH = Path.home() / "krakensdr_doa/mydata.csv"
 
 REFERENCE_SETTINGS = {
     "vfo_freq_0": 433868160,
@@ -324,6 +328,96 @@ def append_ledger(record):
         })
 
 
+
+def check_daq_health():
+    if not KRAKEN_STATUS_PATH.exists():
+        raise RuntimeError(
+            f"Kraken status file missing: {KRAKEN_STATUS_PATH}"
+        )
+
+    status = json.loads(
+        KRAKEN_STATUS_PATH.read_text(encoding="utf-8")
+    )
+
+    daq = status.get("daq_status", {})
+
+    checks = {
+        "frame_sync": daq.get("frame_sync"),
+        "sample_delay_sync": daq.get("sample_delay_sync"),
+        "iq_sync": daq.get("iq_sync"),
+        "adc_overdrive": daq.get("adc_overdrive"),
+        "daq_ok": status.get("daq_ok"),
+        "dropped_frames": status.get("daq_num_dropped_frames"),
+    }
+
+    failures = []
+
+    if checks["frame_sync"] is not True:
+        failures.append("frame_sync")
+    if checks["sample_delay_sync"] is not True:
+        failures.append("sample_delay_sync")
+    if checks["iq_sync"] is not True:
+        failures.append("iq_sync")
+    if checks["adc_overdrive"] is not False:
+        failures.append("adc_overdrive")
+    if checks["daq_ok"] is not True:
+        failures.append("daq_ok")
+    if checks["dropped_frames"] != 0:
+        failures.append("dropped_frames")
+
+    return checks, failures
+
+
+def get_mydata_state():
+    if not KRAKEN_MYDATA_PATH.exists():
+        raise RuntimeError(
+            f"Kraken data file missing: {KRAKEN_MYDATA_PATH}"
+        )
+
+    stat = KRAKEN_MYDATA_PATH.stat()
+
+    return {
+        "mtime_ns": stat.st_mtime_ns,
+        "size": stat.st_size,
+    }
+
+
+
+def command_recorder_check(wait_seconds):
+    before = get_mydata_state()
+
+    print("=" * 70)
+    print("HARDSIGNAL LABS — KRAKEN RECORDER CHECK")
+    print("=" * 70)
+    print(f"path={KRAKEN_MYDATA_PATH}")
+    print(f"before_size={before['size']}")
+    print(f"before_mtime_ns={before['mtime_ns']}")
+    print()
+    print(
+        f"Trigger the controlled RF source once now. "
+        f"Waiting {wait_seconds:.1f} seconds..."
+    )
+
+    time.sleep(wait_seconds)
+
+    after = get_mydata_state()
+
+    size_delta = after["size"] - before["size"]
+    mtime_changed = after["mtime_ns"] > before["mtime_ns"]
+
+    print()
+    print(f"after_size={after['size']}")
+    print(f"after_mtime_ns={after['mtime_ns']}")
+    print(f"size_delta={size_delta}")
+    print(f"mtime_changed={mtime_changed}")
+
+    if size_delta <= 0 or not mtime_changed:
+        print("recorder_active=FAIL")
+        raise SystemExit(4)
+
+    print("recorder_active=OK")
+
+
 def command_check():
     manifest, _ = verify_provenance()
 
@@ -331,6 +425,9 @@ def command_check():
     mismatches = compare_settings(
         settings
     )
+
+    daq_checks, daq_failures = check_daq_health()
+    mydata = get_mydata_state()
 
     print("=" * 70)
     print(
@@ -364,9 +461,7 @@ def command_check():
     if mismatches:
         print("kraken_reference=FAIL")
 
-        for key, expected, actual in (
-            mismatches
-        ):
+        for key, expected, actual in mismatches:
             print(
                 f"mismatch {key}: "
                 f"expected={expected} "
@@ -376,6 +471,25 @@ def command_check():
         raise SystemExit(2)
 
     print("kraken_reference=OK")
+
+    print()
+    print("KRAKEN DAQ HEALTH")
+
+    for key, value in daq_checks.items():
+        print(f"{key}={value}")
+
+    if daq_failures:
+        print("daq_health=FAIL")
+        print("failed=" + ",".join(daq_failures))
+        raise SystemExit(3)
+
+    print("daq_health=OK")
+
+    print()
+    print("KRAKEN DATA FILE")
+    print(f"path={KRAKEN_MYDATA_PATH}")
+    print(f"size={mydata['size']}")
+    print(f"mtime_ns={mydata['mtime_ns']}")
 
 
 def command_finalize(session_id):
@@ -546,9 +660,23 @@ def main():
     sub.add_parser(
         "check",
         help=(
-            "Verify frozen provenance "
-            "and Kraken reference settings."
+            "Verify frozen provenance, Kraken reference settings, "
+            "DAQ health, and data-file presence."
         ),
+    )
+
+    recorder = sub.add_parser(
+        "recorder-check",
+        help=(
+            "Actively verify that mydata.csv advances after "
+            "a controlled RF activation."
+        ),
+    )
+
+    recorder.add_argument(
+        "--wait",
+        type=float,
+        default=8.0,
     )
 
     finalize = sub.add_parser(
@@ -568,6 +696,11 @@ def main():
 
     if args.command == "check":
         command_check()
+
+    elif args.command == "recorder-check":
+        command_recorder_check(
+            args.wait
+        )
 
     elif args.command == "finalize":
         command_finalize(

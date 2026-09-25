@@ -96,3 +96,55 @@ class ProspectiveSessionTests(unittest.TestCase):
 
 if __name__ == "__main__":
     unittest.main()
+
+
+class RecorderCheckTests(unittest.TestCase):
+
+    def test_recorder_check_passes_when_file_advances(self):
+        states = [
+            {
+                "size": 1000,
+                "mtime_ns": 100,
+            },
+            {
+                "size": 1200,
+                "mtime_ns": 200,
+            },
+        ]
+
+        with patch.object(
+            ps,
+            "get_mydata_state",
+            side_effect=states,
+        ), patch.object(
+            ps.time,
+            "sleep",
+            return_value=None,
+        ):
+            ps.command_recorder_check(0)
+
+    def test_recorder_check_fails_when_file_is_stale(self):
+        states = [
+            {
+                "size": 1000,
+                "mtime_ns": 100,
+            },
+            {
+                "size": 1000,
+                "mtime_ns": 100,
+            },
+        ]
+
+        with patch.object(
+            ps,
+            "get_mydata_state",
+            side_effect=states,
+        ), patch.object(
+            ps.time,
+            "sleep",
+            return_value=None,
+        ):
+            with self.assertRaises(SystemExit) as ctx:
+                ps.command_recorder_check(0)
+
+        self.assertEqual(ctx.exception.code, 4)
