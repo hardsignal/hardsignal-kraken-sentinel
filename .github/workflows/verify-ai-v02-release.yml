@@ -1,0 +1,40 @@
+name: Verify Sentinel AI v0.2 release
+
+on:
+  push:
+    paths:
+      - 'ai/**'
+      - 'tests/ai/**'
+      - 'scripts/verify_ai_v02_release.py'
+      - 'results/ai/history/**'
+      - 'results/ml/prospective/**'
+      - '.github/workflows/verify-ai-v02-release.yml'
+  pull_request:
+    paths:
+      - 'ai/**'
+      - 'tests/ai/**'
+      - 'scripts/verify_ai_v02_release.py'
+      - 'results/ai/history/**'
+      - 'results/ml/prospective/**'
+      - '.github/workflows/verify-ai-v02-release.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Verify Sentinel AI v0.2 release offline
+        run: python -B scripts/verify_ai_v02_release.py
