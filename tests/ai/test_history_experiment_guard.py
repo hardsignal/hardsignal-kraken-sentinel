@@ -40,3 +40,30 @@ class HistoryExperimentGuardTests(unittest.TestCase):
 
 if __name__ == "__main__":
     unittest.main()
+
+
+class HistoryBaselineTerminologyTests(unittest.TestCase):
+    def test_target_session_cluster_mean_rejected(self):
+        with self.assertRaises(SentinelExperimentGuardError):
+            validate_history_experiment(
+                "Repeat the measurement and compare against the "
+                "target session's cluster mean."
+            )
+
+    def test_current_session_cluster_mean_rejected(self):
+        with self.assertRaises(SentinelExperimentGuardError):
+            validate_history_experiment(
+                "Repeat the capture and compare against the "
+                "current-session cluster mean."
+            )
+
+    def test_prior_same_cluster_mean_allowed(self):
+        text = (
+            "Repeat the session and measure bearing variability. "
+            "Compare the result with the prior same-cluster mean."
+        )
+
+        self.assertEqual(
+            validate_history_experiment(text),
+            text,
+        )

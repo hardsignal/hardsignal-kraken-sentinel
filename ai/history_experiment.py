@@ -37,6 +37,9 @@ def build_history_experiment_prompt(
         "Use 2-4 sentences.\n\n"
         + EXPERIMENT_BOUNDARY
         + "Do not compare against a prior mean or nearest session when none is available.\n"
+        + "When a same-cluster historical baseline is available, call it the "
+          "prior same-cluster mean or identify the supplied prior sessions. "
+          "Do not invent a target-session or current-session cluster mean.\n"
         + "DETERMINISTIC HISTORICAL REPORT:\n"
         + report["text"]
     )
@@ -85,6 +88,9 @@ def suggest_history_experiment_from_prompt(
                 + "Describe a result as reproducibly different from the prior "
                   "mean rather than distinguishable, discriminative, identifying, "
                   "or class-separating.\n"
+                + "Call the supplied historical baseline the prior same-cluster "
+                  "mean or name the supplied prior sessions. Do not invent a "
+                  "target-session or current-session cluster mean.\n"
             )
 
     raise RuntimeError("unreachable")

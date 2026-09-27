@@ -8,6 +8,10 @@ from ai.experiment_guard import (
 
 
 UNSUPPORTED_HISTORY_PATTERNS = {
+    "invented target/current session cluster mean": (
+        r"\b(?:target|current)[ -]session(?:['’]s)?[ -]+"
+        r"cluster[ -]+(?:mean|average)\b"
+    ),
     "invented reflectivity variable": r"\breflectiv(?:ity|e)\b",
     "directional accuracy claim": r"\bdirectional accuracy\b",
     "absolute accuracy claim": r"\babsolute accuracy\b",
