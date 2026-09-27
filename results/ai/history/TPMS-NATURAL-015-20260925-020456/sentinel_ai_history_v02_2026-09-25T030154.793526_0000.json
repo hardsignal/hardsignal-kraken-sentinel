@@ -1,0 +1,81 @@
+{
+  "ai_scope": "historical_next_controlled_experiment_only",
+  "artifact_version": "0.2",
+  "created_at": "2026-09-25T03:01:54.793526+00:00",
+  "experiment_prompt": "You are Sentinel AI v0.2.\n\nThe historical comparison below is authoritative and was computed deterministically.\nDo not recalculate it, change its values, or introduce future sessions not listed in the report.\n\nPropose exactly ONE next controlled RF experiment based on the historical comparison.\nThe experiment must be non-destructive.\nDo not attempt transmitter identification or calibration-grade absolute direction.\nPrefer repeating or varying only quantities actually present in the deterministic historical report. Do not invent environmental, propagation, reflectivity, interference, or causal variables.\nDescribe what to repeat or change, what to measure, and what historical comparison would test the hypothesis.\nUse 2-4 sentences.\n\nDETERMINISTIC HISTORICAL REPORT:\nTarget session: TPMS-NATURAL-015-20260925-020456\nTarget cluster: C1\nTarget novelty: WITHIN_OBSERVED_TRAINING_RANGE\n\nHistorical scope:\n- prior formal sessions: 9\n- total formal prospective sessions available: 12\n- excluded formal-number record: 014\n\nPrior cluster counts:\n- C1: 7\n- C2: 2\n\nNearest prior sessions:\n- TPMS-NATURAL-012-20260925-014842: C1, WITHIN_OBSERVED_TRAINING_RANGE, normalized feature distance=0.590910\n- TPMS-NATURAL-011-20260925-014556: C1, WITHIN_OBSERVED_TRAINING_RANGE, normalized feature distance=0.717746\n- TPMS-NATURAL-010-20260925-012906: C1, WITHIN_OBSERVED_TRAINING_RANGE, normalized feature distance=0.873532\n\nTarget vs prior same-cluster mean:\n- bearing circular std: -0.997872\n- peak power mean: +0.971667\n- median confidence: +0.214197\n- DoA width mean: +0.172727\n- single-peak ratio mean: -0.034729\n- burst count: +0.285714",
+  "experiment_prompt_sha256": "115aa3f4262c79ba0f0f037db5b0a189e47c204018a74aa897cbbfb989e04e97",
+  "experiment_suggestion": "Repeat the same RF measurement setup used in TPMS-NATURAL-015-20260925-020456, focusing on recording peak power, median confidence, and DoA width. Compare these metrics against the prior same-cluster mean to test whether the observed deviations (+0.971667 in peak power, +0.172727 in DoA width) are reproducibly consistent under identical conditions.",
+  "experiment_suggestion_sha256": "4e68c83374058ea02d06757a4c8dea312b8c753f3f55af270037f92c85ef8503",
+  "history_bundle": {
+    "excluded_session_numbers": [
+      14
+    ],
+    "formal_session_count_total": 12,
+    "history_version": "0.1",
+    "nearest_prior_sessions": [
+      {
+        "cluster": 1,
+        "normalized_feature_distance": 0.59091,
+        "novelty": "WITHIN_OBSERVED_TRAINING_RANGE",
+        "session_id": "TPMS-NATURAL-012-20260925-014842"
+      },
+      {
+        "cluster": 1,
+        "normalized_feature_distance": 0.717746,
+        "novelty": "WITHIN_OBSERVED_TRAINING_RANGE",
+        "session_id": "TPMS-NATURAL-011-20260925-014556"
+      },
+      {
+        "cluster": 1,
+        "normalized_feature_distance": 0.873532,
+        "novelty": "WITHIN_OBSERVED_TRAINING_RANGE",
+        "session_id": "TPMS-NATURAL-010-20260925-012906"
+      }
+    ],
+    "prior_cluster_counts": {
+      "1": 7,
+      "2": 2
+    },
+    "prior_formal_session_count": 9,
+    "same_cluster_prior_count": 7,
+    "same_cluster_prior_feature_means": {
+      "bearing_circular_std_deg": 1.434425404998503,
+      "burst_count": 10.714285714285714,
+      "doa_width_mean_deg": 51.50909090909091,
+      "median_confidence_mean": 3.6658030303030307,
+      "peak_power_mean_db": -25.24439393939394,
+      "single_peak_ratio_mean": 0.9892748917748918
+    },
+    "target_cluster": 1,
+    "target_novelty": "WITHIN_OBSERVED_TRAINING_RANGE",
+    "target_session_id": "TPMS-NATURAL-015-20260925-020456",
+    "target_vs_same_cluster_prior_mean": {
+      "bearing_circular_std_deg": -0.9978724225553024,
+      "burst_count": 0.2857142857142865,
+      "doa_width_mean_deg": 0.17272727272727195,
+      "median_confidence_mean": 0.21419696969696922,
+      "peak_power_mean_db": 0.9716666666666676,
+      "single_peak_ratio_mean": -0.03472943722943722
+    }
+  },
+  "history_bundle_sha256": "47eb8248f276579194663f0ccde17e96d28193b8bd24577ee142efe5360c0300",
+  "history_report": "Target session: TPMS-NATURAL-015-20260925-020456\nTarget cluster: C1\nTarget novelty: WITHIN_OBSERVED_TRAINING_RANGE\n\nHistorical scope:\n- prior formal sessions: 9\n- total formal prospective sessions available: 12\n- excluded formal-number record: 014\n\nPrior cluster counts:\n- C1: 7\n- C2: 2\n\nNearest prior sessions:\n- TPMS-NATURAL-012-20260925-014842: C1, WITHIN_OBSERVED_TRAINING_RANGE, normalized feature distance=0.590910\n- TPMS-NATURAL-011-20260925-014556: C1, WITHIN_OBSERVED_TRAINING_RANGE, normalized feature distance=0.717746\n- TPMS-NATURAL-010-20260925-012906: C1, WITHIN_OBSERVED_TRAINING_RANGE, normalized feature distance=0.873532\n\nTarget vs prior same-cluster mean:\n- bearing circular std: -0.997872\n- peak power mean: +0.971667\n- median confidence: +0.214197\n- DoA width mean: +0.172727\n- single-peak ratio mean: -0.034729\n- burst count: +0.285714",
+  "history_report_sha256": "e367994f830d5dd9d54a85922b6aed856dfa1b9e21f087722a58e0b2515efd80",
+  "model": "qwen3:14b",
+  "model_digest": "bdbd181c33f2ed1b31c972991882db3cf4d192569092138a7d29e973cd9debe8",
+  "report_mode": "deterministic_history_with_ai_experiment",
+  "source_record_manifest_sha256": "d744e840c9323cda6bc8cb0befa1c7b99e1b4508e5da9661c6d5844d22abdb30",
+  "source_record_sha256": {
+    "TPMS-NATURAL-005-20260925-005143": "828fcd23fd96466882d5f694a4d222011326538204f95489a03e4fd7a2a9495e",
+    "TPMS-NATURAL-006-20260925-005606": "cdccf37cd0ade788cc51bcfc1ff798b8408f14655944c0ae39acc6ae928bc6b5",
+    "TPMS-NATURAL-007-20260925-005956": "f561467a342f3f501636150cf2f55f6709582515b0287c0854b58e33d3649f2c",
+    "TPMS-NATURAL-008-20260925-012315": "d163a6c258b5b23fef1f592af8310092073a42d71219360f081abcda3c323f75",
+    "TPMS-NATURAL-009-20260925-012627": "f2cefef8c0e51dd6842be5d0b1d6e20aea99693eca74484f1d073242a19d7e47",
+    "TPMS-NATURAL-010-20260925-012906": "3d8368c461d2bd285bab7790f4d00f3ff91994bc20c48a48cff936b0a742358a",
+    "TPMS-NATURAL-011-20260925-014556": "b649088a30b1e0860841eac156f8b028e8e99b92afe0c4cc676210b1f4f0c2b9",
+    "TPMS-NATURAL-012-20260925-014842": "79f5defa29c0fed8b532c1809961df404e482e0364de4ff1aaf019eb0371280d",
+    "TPMS-NATURAL-013-20260925-015115": "9912c69a34a9ab06e9c19bd666277eb83bb223a85aec9b1291262bd405325e65",
+    "TPMS-NATURAL-015-20260925-020456": "9d6f5225e73546f68688a5c7237557d4ea1d2a5e575244c77b4d566ba29ced27"
+  },
+  "target_session_id": "TPMS-NATURAL-015-20260925-020456"
+}

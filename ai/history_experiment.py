@@ -1,0 +1,115 @@
+"""History-grounded experiment reasoning for Sentinel AI v0.2."""
+
+from ai.experiment_guard import EXPERIMENT_BOUNDARY, SentinelExperimentGuardError
+from ai.history_experiment_guard import validate_history_experiment
+from ai.history_report import build_history_report
+from ai.llm_client import generate_text
+
+
+def build_history_experiment_prompt(
+    target_session_id,
+    *,
+    results_dir="results/ml/prospective",
+    snapshot=None,
+):
+    report = build_history_report(
+        target_session_id,
+        results_dir=results_dir,
+        snapshot=snapshot,
+    )
+
+    return (
+        "You are Sentinel AI v0.2.\n\n"
+        "The historical comparison below is authoritative and was "
+        "computed deterministically.\n"
+        "Do not recalculate it, change its values, or introduce future "
+        "sessions not listed in the report.\n\n"
+        "Propose exactly ONE next controlled RF experiment based on the "
+        "historical comparison.\n"
+        "The experiment must be non-destructive.\n"
+        "Do not attempt transmitter identification or calibration-grade "
+        "absolute direction.\n"
+        "Prefer repeating or varying only quantities actually present in "
+        "the deterministic historical report. Do not invent environmental, "
+        "propagation, reflectivity, interference, or causal variables.\n"
+        "Describe what to repeat or change, what to measure, and what "
+        "historical comparison would test the hypothesis.\n"
+        "Use 2-4 sentences.\n\n"
+        + EXPERIMENT_BOUNDARY
+        + "Do not compare against a prior mean or nearest session when none is available.\n"
+        + "When a same-cluster historical baseline is available, call it the "
+          "prior same-cluster mean or identify the supplied prior sessions. "
+          "Do not invent a target-session or current-session cluster mean.\n"
+        + "DETERMINISTIC HISTORICAL REPORT:\n"
+        + report["text"]
+    )
+
+
+def suggest_history_experiment_from_prompt(
+    prompt,
+    *,
+    max_attempts=2,
+    generate_fn=None,
+):
+    if max_attempts < 1:
+        raise ValueError("max_attempts must be at least 1")
+
+    if generate_fn is None:
+        generate_fn = generate_text
+
+    # Read only the authoritative report in the original prompt, never a repair
+    # draft. This adds no source reads and leaves the evidence snapshot unchanged.
+    _, marker, history_report = prompt.partition("DETERMINISTIC HISTORICAL REPORT:\n")
+    current_prompt = prompt
+
+    for attempt in range(1, max_attempts + 1):
+        suggestion = generate_fn(current_prompt)
+
+        try:
+            return validate_history_experiment(
+                suggestion, history_report=history_report if marker else None,
+            )
+        except SentinelExperimentGuardError as exc:
+            if attempt == max_attempts:
+                raise
+
+            current_prompt = (
+                prompt
+                + "\n\nREPAIR INSTRUCTION:\n"
+                + f"The previous suggestion was rejected: {exc}\n"
+                + "Generate a fresh experiment using only quantities "
+                  "explicitly present in the deterministic historical report.\n"
+                + "Do not introduce propagation, reflection, reflectivity, "
+                  "interference, environmental causes, directional accuracy, "
+                  "or transmitter identity.\n"
+                + "Prefer a repeatability experiment comparing the target "
+                  "session with its prior same-cluster mean or nearest prior "
+                  "sessions.\n"
+                + "Describe a result as reproducibly different from the prior "
+                  "mean rather than distinguishable, discriminative, identifying, "
+                  "or class-separating.\n"
+                + "Call the supplied historical baseline the prior same-cluster "
+                  "mean or name the supplied prior sessions. Do not invent a "
+                  "target-session or current-session cluster mean.\n"
+            )
+
+    raise RuntimeError("unreachable")
+
+
+def suggest_history_experiment(
+    target_session_id,
+    *,
+    results_dir="results/ml/prospective",
+    max_attempts=2,
+    generate_fn=None,
+):
+    prompt = build_history_experiment_prompt(
+        target_session_id,
+        results_dir=results_dir,
+    )
+
+    return suggest_history_experiment_from_prompt(
+        prompt,
+        max_attempts=max_attempts,
+        generate_fn=generate_fn,
+    )

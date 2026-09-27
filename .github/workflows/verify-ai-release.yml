@@ -1,0 +1,35 @@
+name: Verify Sentinel AI release
+
+on:
+  push:
+    paths:
+      - 'ai/**'
+      - 'tests/ai/**'
+      - 'scripts/**'
+      - 'results/ai/**'
+      - '.github/workflows/verify-ai-release.yml'
+  pull_request:
+    paths:
+      - 'ai/**'
+      - 'tests/ai/**'
+      - 'scripts/**'
+      - 'results/ai/**'
+      - '.github/workflows/verify-ai-release.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Verify AI release and run focused tests (offline)
+        run: python -B scripts/verify_ai_release.py

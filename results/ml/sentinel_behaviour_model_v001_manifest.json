@@ -1,0 +1,48 @@
+{
+  "model_version": "0.1",
+  "model_type": "nearest_frozen_behaviour_centroid",
+  "training_sessions": 21,
+  "features": [
+    "bearing_circular_std_deg",
+    "peak_power_mean_db",
+    "peak_power_std_db",
+    "max_confidence_mean",
+    "median_confidence_mean",
+    "doa_width_mean_deg",
+    "doa_width_std_deg",
+    "median_doa_peaks_mean",
+    "bearing_spread_mean_deg",
+    "single_peak_ratio_mean",
+    "samples_mean"
+  ],
+  "cluster_counts": {
+    "0": 11,
+    "1": 7,
+    "2": 3
+  },
+  "distance_reference": {
+    "0": {
+      "count": 11,
+      "mean": 2.2445014277034194,
+      "median": 2.186263768627885,
+      "max": 3.901777092096916
+    },
+    "1": {
+      "count": 7,
+      "mean": 2.1576645402975516,
+      "median": 2.2487752482627292,
+      "max": 3.3403780869731565
+    },
+    "2": {
+      "count": 3,
+      "mean": 1.8361757363280453,
+      "median": 1.9377893536499606,
+      "max": 2.2332619753948655
+    }
+  },
+  "training_dataset": "results/ml/rf_behaviour_dataset_v001.csv",
+  "training_dataset_sha256": "e1a63cf6be87d85584a9201e395b1fcdd8251ee7c6cb09ce5eb502886cf76a51",
+  "assignment_source": "results/ml/experiment_002_assignments.csv",
+  "sklearn_version": "1.9.1",
+  "scientific_scope": "RF/DoA behavioural regime model; not evidence of unique transmitter identity"
+}

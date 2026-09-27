@@ -1,0 +1,30 @@
+purpose=cross_time_behavioural_recurrence
+frozen_model_version=0.1
+frozen_model_commit=49d5661
+model_refit_allowed=no
+training_dataset_modification_allowed=no
+
+reference_configuration=
+frequency_hz=433868160
+doa_method=MUSIC
+decorrelation=Off
+array=UCA
+radius_m=0.21
+squelch_mode=Manual
+squelch_db=-45
+
+next_sessions=
+TPMS-NATURAL-008
+TPMS-NATURAL-009
+TPMS-NATURAL-010
+
+procedure=
+fresh Kraken start
+verify prospective_session check passes
+do not reposition array in response to model output
+collect 10_to_12 activations per session
+finalize each session with frozen model
+do not inspect or tune model between sessions
+
+question=
+Do behavioural regimes observed in sessions 005_to_007 recur after a time gap and fresh Kraken runtime?

@@ -1,0 +1,29 @@
+test_id=004
+session_id=TPMS-PROSPECTIVE-004-20260925-003438
+preregistered_expected_behaviour=directionally_stable_weak_broad_multipath
+preregistered_expected_cluster=2
+
+assigned_cluster=1
+nearest_distance=2.6762
+second_nearest_distance=3.8784
+separation_ratio=1.4493
+distance_vs_training_max=0.8012
+novelty=WITHIN_OBSERVED_TRAINING_RANGE
+
+planned_doa=MUSIC
+planned_decorrelation=Spatial Smoothing
+
+interpretation=PARTIAL_CLUSTER2_SIGNATURE_BUT_OVERALL_CLUSTER1
+validation_status=INCONCLUSIVE_FOR_CLUSTER_2
+
+observed_signature=
+bearing_variance_close_to_cluster2
+power_variation_close_to_cluster2
+doa_width_close_to_cluster2
+confidence_close_to_cluster1
+peak_count_close_to_cluster1
+single_peak_ratio_close_to_cluster1
+mean_power_close_to_cluster1
+doa_width_variation_close_to_cluster1
+
+note=The physical manipulation reproduced several Cluster 2 dimensions but not its lower-confidence multi-peak structure. Frozen model remained unchanged and assigned the resulting multivariate behaviour to Cluster 1.

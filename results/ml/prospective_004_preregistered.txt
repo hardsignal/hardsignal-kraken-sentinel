@@ -1,0 +1,27 @@
+test_id=004
+purpose=frozen_model_cluster2_targeted_challenge
+model_version=0.1
+model_commit=49d5661
+expected_behaviour=directionally_stable_weak_broad_multipath
+expected_cluster=2
+model_refit_allowed=no
+training_dataset_modification_allowed=no
+
+planned_doa=MUSIC
+planned_decorrelation=Spatial Smoothing
+
+physical_manipulation=
+source_farther_from_array
+source_fixed_for_entire_test
+source_near_single_reflective_surface
+source_orientation_fixed
+array_geometry_unchanged
+
+target_signature=
+bearing_circular_std_low
+peak_power_weaker
+peak_power_variation_low
+median_confidence_approximately_2.5_to_3.2
+doa_width_approximately_75_to_90_deg
+median_doa_peaks_greater_than_1
+single_peak_ratio_approximately_0.3_to_0.7

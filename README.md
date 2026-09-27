@@ -1,6 +1,24 @@
 # Hardsignal Kraken RF Sentinel
 
-An RF sensing, direction-finding, and event-analysis platform built around KrakenSDR, with a separate controlled RF fingerprint research programme.
+An RF/DoA research platform built around KrakenSDR. Sentinel Core 1.0,
+Sentinel ML 1.0 and Sentinel AI v1.0 are released, alongside a separate
+controlled RF fingerprint research programme.
+
+```text
+KrakenSDR
+   ↓
+Sentinel Core 1.0
+   ↓
+Sentinel ML 1.0
+   ↓
+Sentinel AI 1.0
+   ↓
+provenance-bound artifacts / offline verification
+```
+
+Core and frozen ML are authoritative. AI cannot modify deterministic evidence
+or ML assignments; it proposes evidence-grounded controlled experiments.
+Historical comparison is available through strictly prior-only history mode.
 
 ## v1.0.0 — Core Analysis Stack
 
@@ -53,6 +71,113 @@ This is repeatability and state-machine validation. Replay recomputes transition
 
 This is the focused core release checkpoint, not a claim about the entire research test suite.
 
+## Sentinel ML 1.0 — Behavioural Regime Analysis
+
+**Status: Sentinel ML 1.0 release.**
+
+Sentinel ML adds a machine-learning layer above the deterministic Kraken RF
+Sentinel stack. It scores session-level RF/DoA behavioural regimes; it does
+not identify physical transmitters.
+
+### Architecture
+
+KrakenSDR
+→ deterministic burst / quality / tracking pipeline
+→ session-level feature dataset
+→ frozen preprocessing
+→ frozen behavioural model
+→ cluster assignment + distance
+→ novelty / training-envelope analysis
+→ prospective validation history
+
+### Frozen model
+
+- 21 historical training sessions
+- 11 continuous RF/DoA features
+- 3 exploratory behavioural clusters
+- Frozen model commit: `49d5661`
+- Frozen dataset SHA-256:
+  `e1a63cf6be87d85584a9201e395b1fcdd8251ee7c6cb09ce5eb502886cf76a51`
+- Prospective sessions are never used to refit model v0.1.
+
+### Validation
+
+Model development includes:
+
+- PCA and agglomerative behavioural clustering
+- 1,000-run perturbation / feature-subsampling stability analysis
+- single-feature ablation
+- feature-family ablation
+- frozen-model regression scoring
+- provenance locking
+
+Formal natural prospective validation currently contains 12 valid sessions
+across four runtime blocks:
+
+Block A: C2 -> C2 -> C1
+Block B: C1 -> C1 -> C1
+Block C: C1 -> C1 -> C1
+Block D: C1 -> C1 -> C1
+
+Cluster status:
+
+- **C1:** prospectively supported; 10/12 formal natural sessions and recurrence
+  across fresh Kraken runtimes.
+- **C2:** exploratory; 2 natural observations, both outside its original
+  training-distance envelope; cross-runtime recurrence not demonstrated.
+- **C0:** not prospectively validated.
+
+Natural 014 is retained as evidence but excluded from formal Block D because
+the DAQ preflight reported `adc_overdrive=True`.
+
+### Prospective workflow
+
+Fresh-runtime validation sequence:
+
+start Kraken
+-> wait for DAQ synchronization
+-> run prospective-session check
+-> enable Kraken Local Data Recording
+-> run recorder-check
+-> collect natural session
+-> finalize against frozen model
+
+Reference configuration:
+
+- Frequency: 433.868160 MHz
+- DoA method: MUSIC
+- Decorrelation: Off
+- Array: UCA
+- Radius: 0.21 m
+- Squelch: Manual / -45 dB
+
+Useful commands:
+
+    python -m ml.prospective_session check
+    python -m ml.prospective_session recorder-check --wait 10
+    python -m ml.prospective_session finalize --session SESSION_ID
+    python -m ml.prospective_report
+    python -m ml.cross_time_evaluation
+
+The recorder check requires one controlled RF activation during its wait
+window and verifies that `mydata.csv` actually advances.
+
+### Release-candidate gate
+
+- ML Python modules compile successfully.
+- Focused ML tests: **5/5 PASS**
+- Frozen training dataset SHA-256 verified.
+- Release-candidate working tree verified clean.
+
+### Limitations
+
+Sentinel ML 1.0 does not establish:
+
+- unique transmitter identification
+- TPMS device fingerprint identification
+- prospective validation of all three frozen clusters
+- calibration-grade absolute DoA
+
 ## Usage
 
 Run from the repository root with Python 3.
@@ -92,6 +217,8 @@ python3 -m unittest discover -s tests -p 'test_tracker*.py' -v
 ## Project structure
 
 - `watcher/` — live burst/event processing, shared tracking, source episodes, JSONL logging, and episode/session reporting CLIs
+- `ml/` — behavioural dataset construction, clustering experiments, frozen-model scoring, prospective validation, and cross-time evaluation
+- `results/ml/` — frozen model artefacts, prospective evidence, validation reports, and release-readiness records
 - `reporting/` — existing session, persistence, and DoA analysis
 - `fingerprinting/` — experimental RF feature extraction and baselines
 - `capture/` — acquisition provenance, verification, activation logging, and episode grouping
@@ -127,9 +254,12 @@ Research is limited to **owned, controlled, authorised, or consented RF sources*
 
 ## Roadmap
 
-With v1.0.0 released, possible next work includes:
+With Core 1.0, ML 1.0 and AI v1.0 released, priorities are further validation
+and operational research:
 
-- Multi-session source history and source correlation.
+- Additional natural prospective behavioural validation across independent runtimes.
+- Controlled multi-sensor TPMS datasets with session-level held-out evaluation.
+- Additional C0/C2 prospective validation, including recurrence across independent runtimes.
 - Persistence scoring and richer alerts.
 - Controlled between-device discrimination and independent validation across sources and sessions.
 - Improved controlled/outdoor DoA validation.
@@ -140,3 +270,148 @@ With v1.0.0 released, possible next work includes:
 
 - Git tag: `v1.0.0`
 - Release commit: `c622e71`
+
+**Sentinel ML 1.0 — Behavioural Regime Analysis**
+
+- Git tag: `sentinel-ml-v1.0`
+- Development branch: `ml-v0.1`
+- Phase-1 checkpoint tag: `sentinel-ml-v0.1-phase1`
+- Frozen-model commit: `49d5661`
+
+### Verify the Sentinel ML release
+
+Use Python 3.12 with the release verification dependencies:
+
+```bash
+python3.12 -m venv .venv-ml
+.venv-ml/bin/python -m pip install -r scripts/requirements-ml-verification.txt
+.venv-ml/bin/python -B scripts/verify_ml_release.py
+```
+
+The verifier checks required files, the three frozen SHA256 hashes, readable
+manifest provenance, compilation of all `ml/**/*.py` sources, and the focused
+`tests/ml` suite. It prints PASS/FAIL lines and exits non-zero on failure.
+Tests run only after the prerequisite checks pass, since they load the frozen
+model. Compilation happens in memory; verification does not retrain the model
+or regenerate release data. The script resolves the repository from its own
+location, so it can also be invoked by absolute path from another directory.
+
+GitHub Actions runs the same verifier for pushes and pull requests affecting
+`ml/`, `tests/ml/`, `scripts/`, `results/ml/`, or the verification workflow.
+It can also be run manually with `workflow_dispatch`.
+
+### Sentinel AI v0.1 — hybrid session reporting
+
+Tag `sentinel-ai-v0.1` identifies release commit
+`b11760688cd8f9bbb3f8eacde5261f5223712ac1`. Completed-session facts and report
+composition are deterministic; behavioural regime assignment comes from frozen
+Sentinel ML 1.0. Local Ollama `qwen3:14b` supplies only the next controlled
+experiment suggestion. It does not assign regimes or generate completed-session
+facts. Reports record `report_mode=deterministic_with_ai_experiment` and
+`ai_scope=next_controlled_experiment_only`.
+
+The client locks the model to digest
+`bdbd181c33f2ed1b31c972991882db3cf4d192569092138a7d29e973cd9debe8`
+and rejects a mismatch before generation. Saved artifacts retain the model digest,
+evidence bundle and ML provenance, exact experiment prompt, suggestion, and final
+report. SHA256 hashes bind the three text fields and canonical JSON evidence
+bundle. The retained [reference artifact](results/ai/TPMS-NATURAL-015-20260925-020456/sentinel_ai_v01_2026-09-25T022902.246529_0000.json)
+is preserved as release evidence.
+
+Verify with Python 3.12 (standard library only):
+
+```bash
+python3.12 -B scripts/verify_ai_release.py
+```
+
+Verification checks required modules/tests, compiles all `ai/**/*.py` in memory,
+checks the release tag's commit when locally available (reports a skip otherwise),
+checks model constants and reference artifact provenance including all four hashes,
+and runs `tests/ai`. It prints concise PASS/FAIL output and exits non-zero on
+failure. Tests run after prerequisite checks pass, use mocked Ollama responses,
+and need no live server or model download. Verification leaves repository files
+unchanged; test fixtures use temporary directories. It neither retrains nor
+regenerates frozen ML assets or prospective records.
+
+GitHub Actions runs the same verifier on Python 3.12 for changes to `ai/`,
+`tests/ai/`, `scripts/`, `results/ai/`, or its workflow, and supports manual runs.
+The checkout includes tags so CI also verifies the release commit.
+
+### Sentinel AI v1.0
+
+**Released.** Tag `sentinel-ai-v1.0` points to commit
+`4e12c8e0a84d80b6a6d747819523ec45e66a0460`.
+The final release checkpoint passed **173 AI tests**, with **0 open contract
+failures** in the readiness gate.
+
+Local generation uses Ollama `qwen3:14b`, locked to digest
+`bdbd181c33f2ed1b31c972991882db3cf4d192569092138a7d29e973cd9debe8`.
+See the [v1 artifact contract](docs/AI_V1_CONTRACT.md),
+[versioned schema](docs/sentinel-ai-artifact-v1.schema.json) and
+[release manifest](results/ai/sentinel_ai_v1_release_manifest.json).
+
+Normal mode reports one session and proposes a controlled experiment grounded
+in that session. It rejects comparisons to unavailable prior-session evidence:
+
+```bash
+python3 -B -m ai.cli \
+  --session TPMS-NATURAL-015-20260925-020456 \
+  --save
+```
+
+History mode compares the target with earlier formal sessions only. For target
+015, the complete source prefix is 005–013 plus 015; 014 remains excluded,
+and future sessions are not read:
+
+```bash
+python3 -B -m ai.cli \
+  --session TPMS-NATURAL-015-20260925-020456 \
+  --history \
+  --save
+```
+
+History uses one immutable evidence snapshot: the exact source bytes supply
+both the parsed records and their hashes, so later file changes cannot mix stale
+analysis with newer provenance. Saved artifacts bind the evidence/history bundle,
+deterministic report, initial AI prompt, accepted suggestion, model lock and
+ML/training lineage through SHA256 hashes and a source manifest. Normal mode
+retains the exact ML source bytes and hashes the available Core summary; it does
+not authenticate the original hardware/log bytes.
+
+Generic artifact verification is offline and read-only. The first command checks
+embedded evidence without requiring the original source files; `--source-dir`
+also detects changed or missing current ML source records. The release verifier
+checks the pinned release references and tag:
+
+```bash
+python3 -B scripts/verify_ai_artifact.py /path/to/artifact.json
+
+python3 -B scripts/verify_ai_artifact.py /path/to/artifact.json \
+  --source-dir results/ml/prospective
+
+python3 -B scripts/verify_ai_v1_release.py \
+  --manifest results/ai/sentinel_ai_v1_release_manifest.json
+```
+
+Canonical release artifacts and their **file SHA256** values:
+
+- Normal: [results/ai/TPMS-NATURAL-015-20260925-020456/sentinel_ai_v1_2026-09-27T161525.618502_0000.json](results/ai/TPMS-NATURAL-015-20260925-020456/sentinel_ai_v1_2026-09-27T161525.618502_0000.json)
+
+  SHA256: `a8ea75636cec58746145cfe3f4bdf86c40123d32caeff46288660e042261d390`
+
+- History: [results/ai/history/TPMS-NATURAL-015-20260925-020456/sentinel_ai_v1_2026-09-27T162524.102674_0000.json](results/ai/history/TPMS-NATURAL-015-20260925-020456/sentinel_ai_v1_2026-09-27T162524.102674_0000.json)
+
+  SHA256: `5224a4d1166f630efe1f4adf78c4d9bf380bead438f916b427f4c53c0be29079`
+
+Sentinel AI does **not** establish:
+
+- transmitter/device identity;
+- RF fingerprint identity;
+- unsupported causal RF or environmental explanations;
+- calibration-grade absolute direction;
+- demonstrated device/source classification capability.
+
+Sentinel AI v0.1 did not bind all external source records; its historical verifier
+does not detect external ML source changes. That release remains frozen and does
+not provide v1 provenance guarantees. Historical tags and retained artifacts remain
+unchanged.
