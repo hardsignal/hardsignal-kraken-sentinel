@@ -1,6 +1,24 @@
 # Hardsignal Kraken RF Sentinel
 
-An RF sensing, direction-finding, and event-analysis platform built around KrakenSDR, with a separate controlled RF fingerprint research programme.
+An RF/DoA research platform built around KrakenSDR. Sentinel Core 1.0,
+Sentinel ML 1.0 and Sentinel AI v1.0 are released, alongside a separate
+controlled RF fingerprint research programme.
+
+```text
+KrakenSDR
+   ↓
+Sentinel Core 1.0
+   ↓
+Sentinel ML 1.0
+   ↓
+Sentinel AI 1.0
+   ↓
+provenance-bound artifacts / offline verification
+```
+
+Core and frozen ML are authoritative. AI cannot modify deterministic evidence
+or ML assignments; it proposes evidence-grounded controlled experiments.
+Historical comparison is available through strictly prior-only history mode.
 
 ## v1.0.0 — Core Analysis Stack
 
@@ -236,11 +254,12 @@ Research is limited to **owned, controlled, authorised, or consented RF sources*
 
 ## Roadmap
 
-With v1.0.0 and Sentinel ML 1.0 released, possible next work includes:
+With Core 1.0, ML 1.0 and AI v1.0 released, priorities are further validation
+and operational research:
 
 - Additional natural prospective behavioural validation across independent runtimes.
 - Controlled multi-sensor TPMS datasets with session-level held-out evaluation.
-- Multi-session source history and source correlation.
+- Additional C0/C2 prospective validation, including recurrence across independent runtimes.
 - Persistence scoring and richer alerts.
 - Controlled between-device discrimination and independent validation across sources and sessions.
 - Improved controlled/outdoor DoA validation.
@@ -318,31 +337,81 @@ GitHub Actions runs the same verifier on Python 3.12 for changes to `ai/`,
 `tests/ai/`, `scripts/`, `results/ai/`, or its workflow, and supports manual runs.
 The checkout includes tags so CI also verifies the release commit.
 
-### Sentinel AI v1.0 candidate artifact contract
+### Sentinel AI v1.0
 
-New saves use the [v1 artifact contract](docs/AI_V1_CONTRACT.md) and
-[versioned envelope schema](docs/sentinel-ai-artifact-v1.schema.json). Core and
-frozen ML remain authoritative; local AI supplies only a guarded next experiment.
-No v1 release tag has been created by this work.
+**Released.** Tag `sentinel-ai-v1.0` points to commit
+`4e12c8e0a84d80b6a6d747819523ec45e66a0460`.
+The final release checkpoint passed **173 AI tests**, with **0 open contract
+failures** in the readiness gate.
+
+Local generation uses Ollama `qwen3:14b`, locked to digest
+`bdbd181c33f2ed1b31c972991882db3cf4d192569092138a7d29e973cd9debe8`.
+See the [v1 artifact contract](docs/AI_V1_CONTRACT.md),
+[versioned schema](docs/sentinel-ai-artifact-v1.schema.json) and
+[release manifest](results/ai/sentinel_ai_v1_release_manifest.json).
+
+Normal mode reports one session and proposes a controlled experiment grounded
+in that session. It rejects comparisons to unavailable prior-session evidence:
 
 ```bash
-python3 -m ai.cli --session TPMS-NATURAL-015-20260925-020456 --save
-python3 -m ai.cli --session TPMS-NATURAL-015-20260925-020456 --history --save
-python3 -B scripts/verify_ai_artifact.py /path/to/saved-v1.json
-python3 -B scripts/verify_ai_artifact.py /path/to/saved-v1.json --source-dir results/ml/prospective
-python3 -B tests/readiness/test_ai_v1_readiness.py
-python3 -B scripts/verify_ai_v1_release.py --candidate
+python3 -B -m ai.cli \
+  --session TPMS-NATURAL-015-20260925-020456 \
+  --save
 ```
 
-Generation requires the locked local Ollama model. Verification is offline and
-read-only. History uses one immutable, prior-only source snapshot, including the
-target and complete formal prefix; 014 is excluded. Default verification checks
-embedded evidence; `--source-dir` additionally detects changed or missing current
-ML JSON sources. The normal artifact hashes the available Core summary, not the
-original hardware/log bytes. See the contract for exact provenance scope,
-scientific non-claims, model lock, exit codes and separate tagged-release checks.
+History mode compares the target with earlier formal sessions only. For target
+015, the complete source prefix is 005–013 plus 015; 014 remains excluded,
+and future sessions are not read:
 
-Sentinel AI v0.1 did not bind all source records: its historical verifier does not
-check external ML source changes. That accepted legacy limitation, both historical
-tags and retained artifacts remain unchanged. V1 source-provenance checks are
-separate and required by the v1 readiness gate.
+```bash
+python3 -B -m ai.cli \
+  --session TPMS-NATURAL-015-20260925-020456 \
+  --history \
+  --save
+```
+
+History uses one immutable evidence snapshot: the exact source bytes supply
+both the parsed records and their hashes, so later file changes cannot mix stale
+analysis with newer provenance. Saved artifacts bind the evidence/history bundle,
+deterministic report, initial AI prompt, accepted suggestion, model lock and
+ML/training lineage through SHA256 hashes and a source manifest. Normal mode
+retains the exact ML source bytes and hashes the available Core summary; it does
+not authenticate the original hardware/log bytes.
+
+Generic artifact verification is offline and read-only. The first command checks
+embedded evidence without requiring the original source files; `--source-dir`
+also detects changed or missing current ML source records. The release verifier
+checks the pinned release references and tag:
+
+```bash
+python3 -B scripts/verify_ai_artifact.py /path/to/artifact.json
+
+python3 -B scripts/verify_ai_artifact.py /path/to/artifact.json \
+  --source-dir results/ml/prospective
+
+python3 -B scripts/verify_ai_v1_release.py \
+  --manifest results/ai/sentinel_ai_v1_release_manifest.json
+```
+
+Canonical release artifacts and their **file SHA256** values:
+
+- Normal: [results/ai/TPMS-NATURAL-015-20260925-020456/sentinel_ai_v1_2026-09-27T161525.618502_0000.json](results/ai/TPMS-NATURAL-015-20260925-020456/sentinel_ai_v1_2026-09-27T161525.618502_0000.json)
+
+  SHA256: `a8ea75636cec58746145cfe3f4bdf86c40123d32caeff46288660e042261d390`
+
+- History: [results/ai/history/TPMS-NATURAL-015-20260925-020456/sentinel_ai_v1_2026-09-27T162524.102674_0000.json](results/ai/history/TPMS-NATURAL-015-20260925-020456/sentinel_ai_v1_2026-09-27T162524.102674_0000.json)
+
+  SHA256: `5224a4d1166f630efe1f4adf78c4d9bf380bead438f916b427f4c53c0be29079`
+
+Sentinel AI does **not** establish:
+
+- transmitter/device identity;
+- RF fingerprint identity;
+- unsupported causal RF or environmental explanations;
+- calibration-grade absolute direction;
+- demonstrated device/source classification capability.
+
+Sentinel AI v0.1 did not bind all external source records; its historical verifier
+does not detect external ML source changes. That release remains frozen and does
+not provide v1 provenance guarantees. Historical tags and retained artifacts remain
+unchanged.
