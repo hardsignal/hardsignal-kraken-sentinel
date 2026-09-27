@@ -13,7 +13,7 @@ import re
 
 from ai.artifact import canonical_sha256, text_sha256
 from ai.experiment import build_experiment_prompt
-from ai.experiment_guard import validate_experiment_suggestion
+from ai.experiment_guard import validate_normal_experiment_suggestion
 from ai.final_report import compose_final_report
 from ai.history import HistoryEvidenceSnapshot, require_history_snapshot
 from ai.history_report import build_history_report
@@ -299,7 +299,7 @@ def _validate_v1_artifact(a, *, source_dir):
         for field in ("deterministic_report", "report"):
             _require(text_sha256(a[field]) == a[field + "_sha256"], f"{field} hash mismatch")
         _require(a["experiment_prompt"] == build_experiment_prompt(bundle), "normal prompt mismatch")
-        validate_experiment_suggestion(a["experiment_suggestion"])
+        validate_normal_experiment_suggestion(a["experiment_suggestion"])
     if source_dir is not None:
         root = Path(source_dir).resolve()
         for session, expected_hash in hashes.items():

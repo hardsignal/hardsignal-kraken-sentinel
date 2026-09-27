@@ -3,7 +3,7 @@
 import json
 
 from ai.analyst import analyse_bundle
-from ai.experiment_guard import EXPERIMENT_BOUNDARY, validate_experiment_suggestion
+from ai.experiment_guard import EXPERIMENT_BOUNDARY, validate_normal_experiment_suggestion
 from ai.llm_client import generate_text
 from ai.schemas import validate_evidence_bundle
 
@@ -34,7 +34,11 @@ def build_experiment_prompt(bundle):
         "Do not infer transmitter identity, environmental causes, or "
         "absolute direction.\n"
         "Write 2-4 sentences describing what to change or repeat, what "
-        "to measure, and what comparison would be useful.\n\n"
+        "to measure, and what comparison would be useful.\n"
+        "This mode contains evidence from ONLY the current session. "
+        "Do not reference prior, previous, earlier, historical, nearest, "
+        "or archived sessions or values. Use the current session's recorded "
+        "measurements as the comparison baseline for a repeatability test.\n\n"
         + EXPERIMENT_BOUNDARY
         + "AUTHORITATIVE EVIDENCE:\n"
         + json.dumps(evidence, indent=2, sort_keys=True)
@@ -43,7 +47,7 @@ def build_experiment_prompt(bundle):
 
 def suggest_experiment_from_prompt(prompt):
     suggestion = generate_text(prompt)
-    return validate_experiment_suggestion(suggestion)
+    return validate_normal_experiment_suggestion(suggestion)
 
 
 def suggest_next_experiment(bundle):

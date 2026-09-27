@@ -227,6 +227,19 @@ class V1ArtifactTests(unittest.TestCase):
                     a[field] = "Repeat the capture. This is device ABC123."
                     self.reject(a)
 
+    def test_historical_comparison_rejected_only_in_normal_artifact(self):
+        text = "Compare these proportions to the prior session's values."
+        normal = copy.deepcopy(self.artifacts["normal"])
+        normal["experiment_suggestion"] = text
+        normal["report"] = compose_final_report(normal["evidence_bundle"], text)
+        resign(normal)
+        with self.assertRaisesRegex(ValueError, "historical comparison unavailable"):
+            validate_v1_artifact(normal)
+        historical = copy.deepcopy(self.artifacts["history"])
+        historical["experiment_suggestion"] = "Repeat and compare with the prior C1 mean."
+        resign(historical)
+        validate_v1_artifact(historical)
+
     def test_source_changes_require_explicit_current_file_check(self):
         for a in self.artifacts.values():
             validate_v1_artifact(a)

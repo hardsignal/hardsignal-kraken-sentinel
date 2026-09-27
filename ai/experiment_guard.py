@@ -141,3 +141,27 @@ def validate_experiment_suggestion(text):
         )
 
     return text
+
+
+# Normal mode has only the selected session, not historical measurements.
+# Keep this separate from the shared scientific guard used by history mode.
+UNAVAILABLE_NORMAL_HISTORY = re.compile(
+    r"\b(?:prior|previous|previously|earlier|preceding|past|last|nearest|closest|archived|"
+    r"historical|historic)[\s-]+(?:[A-Za-z0-9-]+\s+){0,4}"
+    r"(?:sessions?|runs?|captures?|records?|observations?|measurements?|"
+    r"values?|results?|proportions?|means?|averages?|baselines?|neighbou?rs?|data|datasets?|evidence)\b"
+    r"|\b(?:means?|averages?|baselines?|values?|results?|measurements?|proportions?)\b"
+    r"[^.;!?\n]{0,60}\b(?:previously|earlier|in\s+the\s+past|from\s+history)\b"
+    r"|\b(?:session|capture|run)[\s-]+history\b"
+    r"|\b(?:compare|comparison|contrast|benchmark)\b[^.;!?\n]{0,60}\bhistory\b",
+    flags=re.IGNORECASE,
+)
+
+
+def validate_normal_experiment_suggestion(text):
+    text = validate_experiment_suggestion(text)
+    if UNAVAILABLE_NORMAL_HISTORY.search(text):
+        raise SentinelExperimentGuardError(
+            "historical comparison unavailable in normal single-session mode"
+        )
+    return text
