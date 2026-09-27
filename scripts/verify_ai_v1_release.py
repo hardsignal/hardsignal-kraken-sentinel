@@ -33,13 +33,10 @@ def check_frozen_ml(root):
 def check_release_manifest(root, manifest_path):
     root = Path(root).resolve()
     manifest = strict_json_loads(Path(manifest_path).read_text(encoding="utf-8"))
-    if not isinstance(manifest, dict) or set(manifest) != {"schema_version", "tag", "commit", "references"}:
+    if not isinstance(manifest, dict) or set(manifest) != {"schema_version", "tag", "references"}:
         raise ValueError("invalid v1 release manifest fields")
     if manifest["schema_version"] != "sentinel-ai-release/1.0" or manifest["tag"] != "sentinel-ai-v1.0":
         raise ValueError("unsupported release version/tag")
-    commit = manifest["commit"]
-    if not isinstance(commit, str) or not re.fullmatch(r"[0-9a-f]{40}", commit):
-        raise ValueError("release commit must be a full Git SHA1")
     references = manifest["references"]
     if not isinstance(references, dict) or not references:
         raise ValueError("release requires pinned v1 references")
@@ -54,11 +51,22 @@ def check_release_manifest(root, manifest_path):
         modes.add(artifact["mode"])
     if modes != {"normal", "history"}:
         raise ValueError("release references must cover normal and history modes")
-    for ref in ("refs/tags/sentinel-ai-v1.0^{commit}", "HEAD"):
-        result = subprocess.run(["git", "rev-parse", "--verify", ref], cwd=root,
-                                capture_output=True, text=True, timeout=30)
-        if result.returncode or result.stdout.strip() != commit:
-            raise ValueError(f"release commit/tag mismatch or missing: {ref}")
+    tag_result = subprocess.run(
+        ["git", "rev-parse", "--verify", "refs/tags/sentinel-ai-v1.0^{commit}"],
+        cwd=root, capture_output=True, text=True, timeout=30,
+    )
+    if tag_result.returncode:
+        raise ValueError("sentinel-ai-v1.0 tag missing")
+
+    head_result = subprocess.run(
+        ["git", "rev-parse", "--verify", "HEAD"],
+        cwd=root, capture_output=True, text=True, timeout=30,
+    )
+    if head_result.returncode:
+        raise ValueError("cannot resolve HEAD")
+
+    if tag_result.stdout.strip() != head_result.stdout.strip():
+        raise ValueError("release tag does not point to HEAD")
     status = subprocess.run(["git", "status", "--porcelain"], cwd=root,
                             capture_output=True, text=True, timeout=30)
     if status.returncode or status.stdout.strip():

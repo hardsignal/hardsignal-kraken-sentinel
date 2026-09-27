@@ -22,7 +22,7 @@ class V1ReleaseTests(unittest.TestCase):
         shutil.copytree(fixture.sources, self.root / "results/ml/prospective")
         self.manifest = {
             "schema_version": "sentinel-ai-release/1.0", "tag": "sentinel-ai-v1.0",
-            "commit": "a" * 40, "references": {},
+            "references": {},
         }
         for a in fixture.artifacts.values():
             path = save_v1_artifact(a, output_dir=self.root / "references")
@@ -58,20 +58,41 @@ class V1ReleaseTests(unittest.TestCase):
                     release.check_release_manifest(self.root, self.path)
 
     def test_wrong_missing_tag_and_dirty_checkout_fail(self):
-        for result in (subprocess.CompletedProcess([], 1, "", "missing"),
-                       subprocess.CompletedProcess([], 0, "b" * 40, "")):
-            self.run.side_effect = None
-            self.run.return_value = result
-            with self.assertRaises(ValueError):
-                release.check_release_manifest(self.root, self.path)
+        def missing_tag(command, **kwargs):
+            if command[1] == "status":
+                return subprocess.CompletedProcess(command, 0, "", "")
+            if command[-1] == "refs/tags/sentinel-ai-v1.0^{commit}":
+                return subprocess.CompletedProcess(command, 1, "", "missing")
+            return subprocess.CompletedProcess(command, 0, "a" * 40 + "\n", "")
+
+        self.run.side_effect = missing_tag
+        with self.assertRaisesRegex(ValueError, "tag missing"):
+            release.check_release_manifest(self.root, self.path)
+
+        def mismatched_head(command, **kwargs):
+            if command[1] == "status":
+                return subprocess.CompletedProcess(command, 0, "", "")
+            if command[-1] == "HEAD":
+                return subprocess.CompletedProcess(command, 0, "b" * 40 + "\n", "")
+            return subprocess.CompletedProcess(command, 0, "a" * 40 + "\n", "")
+
+        self.run.side_effect = mismatched_head
+        with self.assertRaisesRegex(ValueError, "does not point to HEAD"):
+            release.check_release_manifest(self.root, self.path)
+
         self.run.side_effect = lambda command, **kwargs: subprocess.CompletedProcess(
-            command, 0, " M file" if command[1] == "status" else "a" * 40, "")
+            command, 0, " M file" if command[1] == "status" else "a" * 40 + "\n", "")
         with self.assertRaisesRegex(ValueError, "clean"):
             release.check_release_manifest(self.root, self.path)
 
     def test_path_escape_and_invalid_manifest_fail(self):
-        for value in ([], {}, {**self.manifest, "tag": "sentinel-ai-v0.2"},
-                      {**self.manifest, "references": {"../escape": "0" * 64}}):
+        for value in (
+            [],
+            {},
+            {**self.manifest, "tag": "sentinel-ai-v0.2"},
+            {**self.manifest, "commit": "a" * 40},
+            {**self.manifest, "references": {"../escape": "0" * 64}},
+        ):
             self.write(value)
             with self.assertRaises(ValueError):
                 release.check_release_manifest(self.root, self.path)
